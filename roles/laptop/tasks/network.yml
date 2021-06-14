@@ -1,0 +1,49 @@
+- name: Configure network interfaces
+  vars:
+    grubline: GRUB_CMDLINE_LINUX="audit=0 net.ifnames=0 biosdevname=0"
+  block:
+
+  - name: Install bridge utilities
+    apt:
+      pkg: bridge-utils
+      state: present
+
+  - name: Determine if grub change needed
+    lineinfile:
+      name: /etc/default/grub
+      line: "{{ grubline }}"
+      state: absent
+    check_mode: yes
+    changed_when: false
+    register: grub_state
+
+  - name: Update grub configuration
+    lineinfile:
+      dest: /etc/default/grub
+      regexp: GRUB_CMDLINE_LINUX=
+      line: "{{ grubline }}"
+    when: not grub_state.found
+
+  - name: Configure interfaces
+    copy:
+      dest: /etc/network/interfaces
+      content: |
+        auto lo
+        iface lo inet loopback
+
+        auto br0
+        iface br0 inet dhcp
+          bridge_ports eth0
+          bridge_hw eth0
+          bridge_stp off
+          bridge_fd 0
+          bridge_maxwait 0
+    when: not grub_state.found
+
+  - name: Update grub
+    shell: update-grub
+    when: not grub_state.found
+
+  - name: Reboot
+    reboot:
+    when: not grub_state.found

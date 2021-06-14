@@ -1,0 +1,21 @@
+---
+- hosts: pixie
+  gather_facts: no
+  become : yes
+  become_method: su
+  environment:
+    PATH: /sbin:/usr/sbin:"{{ ansible_env.PATH }}"
+  vars_files:
+    - default.yml
+  vars:
+    - install_laptop_tools: true
+    - install_x11_tools: true
+    - install_intel_driver: true
+    - install_virt_tools: true
+    - ntp_anonymous: true
+    - install_faith: true
+
+  roles:
+    - early
+    - laptop
+    - common

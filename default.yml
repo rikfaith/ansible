@@ -1,0 +1,5 @@
+default:
+  root_password: "$6$FKZypZaYphBmCRBh$ybzYOGbbYEppmkRg6oXjo0MGfBOJpYX7XLrdKICWcZuiHkJ5gRKmxF22v4hyCAUxrVqdmpHXIWUwPA1kY7op5/"
+  faith_password: "$6$hBxOYDhvrPXmy3Eb$5LJQRVY5pWVXb9QGaaOKSL7Zse7zVIXIYh8V5V2.YM4pcpBUV3XYmJWDRv/gUHg8Mtij6AAKp0u9z4a0Rca770"
+  authorized_key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOC9EU/qkmrREnpuhmMeW0lAADMQda7pGqFpRdfsXvZ5 faith@alephnull.com-20200325"
+  nonroot_user: "faith"

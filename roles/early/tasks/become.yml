@@ -1,0 +1,22 @@
+---
+- name: Remove possibly old host key
+  become: true
+  become_user: faith
+  local_action: command ssh-keygen -f /home/faith/.ssh/known_hosts -R pixie
+
+- name: Try sudo
+  set_fact: become_method=sudo
+  set_fact: ansible_become_method=sudo
+
+- name: Test become
+  command: whoami
+  register: command_output
+  ignore_errors: True
+
+- name: Use su
+  set_fact: become_method=su
+  set_fact: ansible_become_method=su
+  when: command_output is not defined or
+        command_output.rc is not defined or
+        command_output.rc != 0
+

@@ -1,0 +1,175 @@
+---
+- name: Upgrade current distribution
+  apt:
+    upgrade: dist
+    update_cache: yes
+    autoremove: yes
+  register: aptcurrent
+
+- name: Reboot
+  reboot:
+  when: aptcurrent.changed
+
+- name: Configure apt source for local sid
+  copy:
+    dest: /etc/apt/sources.list
+    content: |
+      deb http://control0:3142/ftp.us.debian.org/debian/ sid main contrib non-free
+      deb-src http://control0:3142/ftp.us.debian.org/debian/ sid main contrib non-free
+      # For things that are deprecated post-buster
+      deb http://control0:3142/ftp.us.debian.org/debian/ buster main contrib non-free
+      deb-src http://control0:3142/ftp.us.debian.org/debian/ buster main contrib non-free
+
+- name: Use vlc from buster
+  copy:
+    dest: /etc/apt/preferences.d/vlc
+    content: |
+      Package: vlc
+      Pin: release buster
+      Pin-Priority: 1000
+
+      Package: *vlc*
+      Pin: release buster
+      Pin-Priority: 1000
+
+- name: Installing python-is-python3
+  apt:
+    pkg: python-is-python3
+    update-cache: yes
+    autoremove: yes
+  register: aptpython
+
+- name: Upgrade to sid
+  apt:
+    upgrade: dist
+    update_cache: yes
+    autoremove: yes
+  register: aptsid
+
+- name: Reboot
+  reboot:
+  when: aptpython.changed or aptsid.changed
+
+- name: Install (non-X11) tools
+  apt:
+    pkg:
+      - alsa-utils
+      - bc
+      - bind9-utils
+      - calibre
+      - crypt++el
+      - cryptsetup-bin
+      - curl
+      - dc
+      - ddate
+      - dmidecode
+      - elpa-auto-complete
+      - elpa-xcscope
+      - emacs
+      - git
+      - htop
+      - imagemagick
+      - ipmitool
+      - jnettop
+      - lftp
+      - libimage-exiftool-perl
+      - lm-sensors
+      - lshw
+      - lsscsi
+      - lvm2
+      - m4
+      - mdadm
+      - mediainfo
+      - net-tools
+      - nfs-common
+      - nmap
+      - ntpsec
+      - ntpsec-ntpdate
+      - parted
+      - rsync
+      - smartmontools
+      - sysstat
+      - tmux
+      - units
+      - unrar
+      - unzip
+      - vim
+      - vnstat
+      - whois
+      - zsh
+
+- name: Install virt tools
+  apt:
+    pkg:
+      - libvirt-clients
+      - libvirt-daemon
+      - libvirt-daemon-system
+      - virtinst
+      - virt-top
+  when: install_virt_tools is defined
+
+- name: Install X11 server
+  apt:
+    pkg:
+      - xserver-xorg
+  when: install_x11_tools is defined
+
+- name: Install X11 intel driver
+  apt:
+    pkg:
+      - xserver-xorg-video-intel
+  when: install_intel_driver is defined
+
+- name: Install X11 nvidia server
+  apt:
+    pkg:
+      - xserver-xorg-video-nvidia
+  when: install_nvidia_driver is defined
+
+- name: Install X11 tools
+  apt:
+    pkg:
+      - chromium
+      - dclock
+      - evince
+      - firefox-esr
+      - fvwm
+      - ghostscript
+      - gv
+      - hexchat
+      - mesa-utils
+      - mplayer
+      - ssh-askpass-fullscreen
+      - t1-xfree86-nonfree
+      - telegram-desktop
+      - tigervnc-viewer
+      - ttf-xfree86-nonfree
+      - vlc
+      - x11-apps
+      - x11-common
+      - xfonts-100dpi
+      - xfonts-100dpi-transcoded
+      - xfonts-75dpi
+      - xfonts-75dpi-transcoded
+      - xfonts-terminus
+      - xinit
+      - xinput
+      - xpdf
+      - xterm
+  when: install_x11_tools is defined
+
+- name: Install laptop tools
+  apt:
+    pkg:
+      - acpi
+      - acpid
+      - pm-utils
+      - stalonetray
+      - wicd-gtk
+  when: install_laptop_tools is defined
+
+- name: Upgrade current distribution (final upgrade)
+  apt:
+    upgrade: dist
+    update_cache: yes
+    autoremove: yes

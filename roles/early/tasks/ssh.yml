@@ -1,0 +1,44 @@
+- name: Save ssh port
+  set_fact:
+    configured_port: "{{ ansible_port }}"
+
+- name: Check for default ssh port
+  wait_for:
+    port: "22"
+    state: "started"
+    host: "{{ inventory_hostname }}"
+    connect_timeout: "2"
+    timeout: "3"
+  delegate_to: "localhost"
+  ignore_errors: "yes"
+  register: default_ssh
+
+- name: Override ansible_port
+  set_fact:
+    ansible_port: "22"
+  register: ssh_port_set
+  when: default_ssh is defined and
+        default_ssh.state is defined and
+        default_ssh.state == "started"
+
+- name: Check for configured ssh port
+  wait_for:
+    port: "{{ ansible_port }}"
+    state: "started"
+    host: "{{ inventory_hostname }}"
+    connect_timeout: "2"
+    timeout: "3"
+  delegate_to: "localhost"
+  ignore_errors: "yes"
+  register: configured_ssh
+  when: ssh_port_set is not defined
+
+- name: Display ssh port status
+  debug:
+    msg: "The ssh port is configured as {{ ansible_port }}"
+  when: ssh_port_set is defined
+
+- name: Fail if ssh port could not be determined
+  fail:
+    msg: "Could not determine the ssh port"
+  when: ssh_port_set is not defined

@@ -1,0 +1,53 @@
+---
+- name: Check for sysv
+  package:
+    name: sysvinit-core
+    state: present
+  check_mode: true
+  register: sysv_check
+
+- name: Remove dbus
+  apt:
+    name: dbus
+    state: absent
+    purge: yes
+  when: sysv_check.changed
+
+- name: Install sysv
+  apt:
+    pkg:
+    - sysvinit-core
+    - sysvinit-utils
+    - sysv-rc-conf
+  when: sysv_check.changed
+
+- name: Reboot
+  reboot:
+  when: sysv_check.changed
+
+- name: Remove systemd
+  apt:
+    name: systemd
+    state: absent
+    purge: yes
+    autoremove: yes
+  when: sysv_check.changed
+
+- name: Prevent future systemd installation
+  copy:
+    dest: /etc/apt/preferences.d/systemd
+    content: |
+      Package: systemd
+      Pin: release *
+      Pin-Priority: -1
+
+      Package: *systemd*
+      Pin: release *
+      Pin-Priority: -1
+  when: sysv_check.changed
+
+- name: Install elogind
+  apt:
+    name: elogind
+    state: present
+  when: sysv_check.changed

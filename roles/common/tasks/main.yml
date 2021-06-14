@@ -1,0 +1,10 @@
+---
+- include_tasks: sudo.yml
+- include_tasks: systemd.yml
+- include_tasks: bash.yml
+- include_tasks: tools.yml
+- include_tasks: files.yml
+- include_tasks: local.yml
+
+- name: Reboot
+  reboot:
