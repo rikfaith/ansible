@@ -1,7 +1,12 @@
 ---
+- name: Determine local username
+  become: false
+  local_action: command whoami
+  register localuser
+
 - name: Remove possibly old host key
   become: true
-  become_user: faith
+  become_user: "{{ localuser }}"
   local_action: command ssh-keygen -f /home/faith/.ssh/known_hosts -R pixie
 
 - name: Try sudo

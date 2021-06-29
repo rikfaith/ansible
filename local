@@ -1,3 +1,5 @@
 pixie ansible_port=993
 
 ariel ansible_port=993
+
+home2 ansible_port=22 ansible_user=pi
