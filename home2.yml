@@ -1,0 +1,17 @@
+---
+- hosts: home2
+  gather_facts: no
+  become : yes
+  become_method: su
+  environment:
+    PATH: /sbin:/usr/sbin:"{{ ansible_env.PATH }}"
+  vars_files:
+    - default.yml
+  vars:
+    - install_faith: true
+
+  roles:
+    - early
+    - rpi
+#    - laptop
+#    - common
