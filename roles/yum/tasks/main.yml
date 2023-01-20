@@ -1,0 +1,7 @@
+---
+- include_tasks: tools.yml
+- include_tasks: bash.yml
+- include_tasks: localization.yml
+- include_tasks: ssh.yml
+- include_tasks: ubvm.yml
+- include_tasks: faith.yml

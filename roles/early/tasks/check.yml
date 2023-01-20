@@ -1,0 +1,30 @@
+---
+- name: Determine local username
+  become: false
+  local_action: command whoami
+  register: localuser
+
+- name: Remove possibly old host key by name
+  become: true
+  become_user: "{{ localuser.stdout }}"
+  local_action: command ssh-keygen -f ~/.ssh/known_hosts -R {{ inventory_hostname }}
+
+- name: Remove possibly old host key by IP
+  become: true
+  become_user: "{{ localuser.stdout }}"
+  local_action: shell ssh-keygen -f ~/.ssh/known_hosts -R {{ ansible_host }}
+
+- name: Get new host keys
+  become: true
+  become_user: "{{ localuser.stdout }}"
+  local_action: command ssh-keyscan -H {{ ansible_host }}
+  register: hostkeys
+
+- name: Write new host key to known hosts
+  become: true
+  become_user: "{{ localuser.stdout }}"
+  local_action: lineinfile dest="~/.ssh/known_hosts" line="{{ hostkeys.stdout }}"
+
+- name: Test become
+  become: true
+  command: whoami

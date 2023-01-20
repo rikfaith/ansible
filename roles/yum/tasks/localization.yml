@@ -1,0 +1,9 @@
+---
+- name: Link time zone
+  file:
+    src: /usr/share/zoneinfo/America/New_York
+    dest: /etc/localtime
+    owner: root
+    group: root
+    state: link
+

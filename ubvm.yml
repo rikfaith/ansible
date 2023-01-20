@@ -1,0 +1,17 @@
+---
+- hosts: ubvm
+  gather_facts: no
+  become: yes
+  become_method: sudo
+  become_user: root
+  environment:
+    PATH: /sbin:/usr/sbin:"{{ ansible_env.PATH }}"
+  vars_files:
+    - default.yml
+    - passwords.yml
+  vars:
+    - ansible_python_interpreter: auto_silent
+    - install_faith: true
+  roles:
+    - early
+    - yum

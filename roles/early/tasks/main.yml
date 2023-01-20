@@ -1,4 +1,3 @@
 ---
-- include_tasks: ssh.yml
-- include_tasks: become.yml
+- include_tasks: check.yml
 - include_tasks: gather_facts.yml

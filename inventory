@@ -16,3 +16,12 @@ storage:
         ntp1: control0-storage
         ntp2: home
         control0: control0-storage
+
+nutanix:
+    hosts:
+        ubvm:
+            ansible_host: 10.48.215.56 # rickard-faith.ubvm.nutanix.com
+            ansible_user: rickard.faith
+            ansible_password: "{{ passwords.rickard_faith_password }}"
+    vars:
+        ansible_port: 22

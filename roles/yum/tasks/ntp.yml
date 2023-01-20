@@ -1,0 +1,22 @@
+---
+- name: Use anonymous ntp configuration
+  copy:
+    dest: /etc/ntpsec/ntp.conf
+    content: |
+      driftfile /var/lib/ntp/ntp.drift
+      logfile /var/log/ntp.log
+      leapfile /usr/share/zoneinfo/leap-seconds.list
+
+      pool 0.debian.pool.ntp.org iburst
+      pool 1.debian.pool.ntp.org iburst
+      pool 2.debian.pool.ntp.org iburst
+      pool 3.debian.pool.ntp.org iburst
+
+      restrict -4 default kod notrap nomodify nopeer noquery limited
+      restrict -6 default kod notrap nomodify nopeer noquery limited
+      restrict 127.0.0.1
+      restrict ::1
+
+      restrict source notrap nomodify noquery
+      disable monitor
+      discard minimum 0

@@ -1,0 +1,21 @@
+---
+- name: Install common tools
+  yum:
+    name:
+      - bc
+      - bind
+      - htop
+      - ImageMagick
+      - jnettop
+      - lftp
+      - lm_sensors
+      - lsscsi
+      - net-tools
+      - nmap
+      - sysstat
+      - tmux
+      - units
+      - unzip
+      - vnstat
+      - zsh
+    state: latest

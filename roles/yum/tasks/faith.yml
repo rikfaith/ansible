@@ -1,0 +1,49 @@
+---
+- name: Copy .ssh files
+  copy:
+    src: "/home/faith/.ssh/{{ item }}"
+    dest: "/home/{{ default.ubvm_user }}/.ssh"
+    owner: "{{ default.ubvm_user }}"
+    group: Domain.Users
+    mode: 0600
+  with_items:
+    - config
+    - github
+    - github.pub
+    - nutanix-gerrit
+    - nutanix-gerrit.pub
+  when: install_faith is defined
+
+- name: Checkout dotfiles2
+  become: true
+  become_user: "{{ default.ubvm_user }}"
+  git:
+    repo: 'git@rik.github.com:rikfaith/dotfiles2'
+    dest: "/home/{{ default.ubvm_user }}/dotfiles2"
+    key_file: "/home/{{ default.ubvm_user }}/.ssh/github"
+    accept_hostkey: yes
+  when: install_faith is defined
+
+- name: Install dotfiles2
+  become: true
+  become_user: "{{ default.ubvm_user }}"
+  command: "./bootstrap.py"
+  args:
+    chdir: "/home/{{ default.ubvm_user }}/dotfiles2"
+  when: install_faith is defined
+
+- name: Use zsh
+  user:
+    name: "{{ default.ubvm_user }}"
+    shell: /bin/zsh
+    create_home: no
+  when: install_faith is defined
+
+- name: Activate zsh history
+  become: true
+  become_user: "{{ default.ubvm_user }}"
+  file:
+    path: "/home/{{ default.ubvm_user }}/.zhist"
+    state: touch
+    mode: 0600
+  when: install_faith is defined

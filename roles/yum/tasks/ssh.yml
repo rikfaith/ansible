@@ -1,0 +1,5 @@
+---
+- name: Update authorized_keys
+  authorized_key: user='{{ item.user }}' key='{{ item.key }}' state=present
+  with_items:
+  - { user: "{{ default.ubvm_user }}", 'key': "{{ default.authorized_key }}" }
