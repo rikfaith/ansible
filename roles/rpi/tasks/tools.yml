@@ -1,0 +1,60 @@
+---
+- name: Configure apt source for local buster
+  copy:
+    dest: /etc/apt/sources.list
+    content: |
+      deb http://{{ control0 }}:3142/raspbian.raspberrypi.org/raspbian/ buster main contrib non-free rpi
+
+- name: Upgrade current distribution
+  apt:
+    upgrade: dist
+    update_cache: yes
+    autoremove: yes
+  register: aptcurrent
+
+- name: Reboot
+  reboot:
+  when: aptcurrent.changed
+
+- name: Install (non-X11) tools
+  apt:
+    pkg:
+      - acl
+      - bc
+      - bind9utils
+      - cryptsetup-bin
+      - curl
+      - dc
+      - ddate
+      - dmidecode
+      - git
+      - i2c-tools
+      - lftp
+      - lm-sensors
+      - lshw
+      - lsscsi
+      - lvm2
+      - m4
+      - mdadm
+      - net-tools
+      - nfs-common
+      - nmap
+      - ntpsec
+      - ntpsec-ntpdate
+      - parted
+      - rsync
+      - smartmontools
+      - sysstat
+      - tmux
+      - units
+      - unzip
+      - vim
+      - vnstat
+      - whois
+      - zsh
+
+- name: Upgrade current distribution (final upgrade)
+  apt:
+    upgrade: dist
+    update_cache: yes
+    autoremove: yes

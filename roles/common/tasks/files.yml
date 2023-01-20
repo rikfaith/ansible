@@ -44,3 +44,33 @@
       disable monitor
       discard minimum 0
   when: ntp_anonymous is defined
+
+- name: Use local ntp configuration
+  copy:
+    dest: /etc/ntpsec/ntp.conf
+    content: |
+      driftfile /var/lib/ntp/ntp.drift
+      logfile /var/log/ntp.log
+      leapfile /usr/share/zoneinfo/leap-seconds.list
+
+      statsdir /var/log/ntpstats/
+      statistics loopstats peerstats clockstats
+      filegen loopstats file loopstats type day enable
+      filegen peerstats file peerstats type day enable
+      filegen clockstats file clockstats type day enable
+
+      server {{ ntp0 }} iburst
+      server {{ ntp1 }} iburst
+      server {{ ntp2 }} iburst
+      server 127.127.1.0 # local clock
+
+      restrict -4 default kod notrap nomodify nopeer noquery limited
+      restrict -6 default kod notrap nomodify nopeer noquery limited
+      restrict 127.0.0.1
+      restrict ::1
+
+      restrict source notrap nomodify noquery
+      disable monitor
+      discard minimum 0
+  when: ntp_local is defined
+

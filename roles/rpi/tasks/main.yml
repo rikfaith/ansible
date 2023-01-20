@@ -1,2 +1,9 @@
 ---
 - include_tasks: user.yml
+- include_tasks: tools.yml
+
+
+# ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
+# rm /etc/timezone
+# Add to /boot/config.txt:  dtoverlay=i2c-rtc,ds3231
+# /usr/share/mdadm/mkconf | fgrep ARRAY | sed 's,/dev/[^ ]*,<ignore>,' >> /etc/mdadm/mdadm.conf

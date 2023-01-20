@@ -4,15 +4,10 @@
   register: user_exists
   ignore_errors: true
 
-- name: Install zsh
-  apt:
-    pkg:
-      - zsh
-
 - name: Create new user
   user:
     name: "{{ default.nonroot_user }}"
     password: "{{ default.nonroot_password }}"
     groups: "sudo"
-    shell: "/bin/zsh"
+    shell: "/bin/bash"
   when: user_exists != 0

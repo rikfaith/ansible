@@ -1,0 +1,3 @@
+---
+- name: update apt repository while allowing a release-info change
+  command: apt-get update -y --allow-releaseinfo-change

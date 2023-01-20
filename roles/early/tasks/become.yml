@@ -2,14 +2,30 @@
 - name: Determine local username
   become: false
   local_action: command whoami
-  register localuser
+  register: localuser
 
-- name: Remove possibly old host key
+- name: Remove possibly old host key by name
   become: true
-  become_user: "{{ localuser }}"
-  local_action: command ssh-keygen -f /home/faith/.ssh/known_hosts -R pixie
+  become_user: "{{ localuser.stdout }}"
+  local_action: command ssh-keygen -f /home/faith/.ssh/known_hosts -R {{ inventory_hostname }}
 
-- name: Try sudo
+- name: Remove possibly old host key by IP
+  become: true
+  become_user: "{{ localuser.stdout }}"
+  local_action: shell ssh-keygen -f /home/faith/.ssh/known_hosts -R `host {{ inventory_hostname }} | awk '{print $4}'`
+
+- name: Get new host keys
+  become: true
+  become_user: "{{ localuser.stdout }}"
+  local_action: command ssh-keyscan -H {{ inventory_hostname }}
+  register: hostkeys
+
+- name: Write new host key to known hosts
+  become: true
+  become_user: "{{ localuser.stdout }}"
+  local_action: lineinfile dest="~/.ssh/known_hosts" line="{{ hostkeys.stdout }}"
+
+- name: Configure for sudo
   set_fact: become_method=sudo
   set_fact: ansible_become_method=sudo
 
