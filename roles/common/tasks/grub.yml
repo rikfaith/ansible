@@ -1,0 +1,7 @@
+---
+- name: Configure grub defaults
+  lineinfile:
+    line: 'GRUB_DISABLE_OS_PROBER=false'
+    regexp: 'GRUB_DISABLE_OS_PROBER='
+    path: /etc/default/grub
+  notify: update-grub
