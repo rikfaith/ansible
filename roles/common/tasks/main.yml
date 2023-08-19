@@ -1,14 +1,26 @@
 ---
 - include_tasks: update.yml
+
+- include_tasks: network-storage.yml
+  when: eth0_br0_network is defined
+
 - include_tasks: sudo.yml
+
 - include_tasks: systemd.yml
+  when: using_debian is defined
+
 - include_tasks: bash.yml
+
 - include_tasks: ssh.yml
 
 - include_tasks: tools.yml
-  when: not install_rpi
+  when: install_rpi is undefined
+
+- include_tasks: grub.yml
+  when: install_dual_boot
 
 - include_tasks: files.yml
+
 - include_tasks: local.yml
 
 - name: Reboot

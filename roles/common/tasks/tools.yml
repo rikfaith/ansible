@@ -1,8 +1,30 @@
 ---
+- name: Force apt to use IPv4
+  copy:
+    dest: /etc/apt/apt.conf.d/99force-ipv4
+    content: |
+      Acquire::ForceIPv4 "true";
+
+- name: Install gnupg
+  apt:
+    pkg: gnupg
+    state: present
+  when: using_devuan is defined
+
+- name: Install devuan-keyring
+  apt:
+    pkg: devuan-keyring
+    state: present
+  when: using_devuan is defined
+
+# This works around a bug when using update_cache: yes
+- name: Update apt cache for current distribution
+  command: apt-get update
+
 - name: Upgrade current distribution
   apt:
     upgrade: dist
-    update_cache: yes
+    update_cache: no
     autoremove: yes
   register: aptcurrent
 
@@ -14,41 +36,44 @@
   copy:
     dest: /etc/apt/sources.list
     content: |
-      deb http://control0:3142/ftp.us.debian.org/debian/ sid main contrib non-free
-      deb-src http://control0:3142/ftp.us.debian.org/debian/ sid main contrib non-free
-      # For things that are deprecated post-buster
-      deb http://control0:3142/ftp.us.debian.org/debian/ buster main contrib non-free
-      deb-src http://control0:3142/ftp.us.debian.org/debian/ buster main contrib non-free
+      deb http://ftp.us.debian.org/debian/ sid main contrib non-free
+      deb-src http://ftp.us.debian.org/debian/ sid main contrib non-free
+  when: using_debian is defined
 
-- name: Use vlc from buster
+- name: Configure apt source for local ceres
   copy:
-    dest: /etc/apt/preferences.d/vlc
+    dest: /etc/apt/sources.list
     content: |
-      Package: vlc
-      Pin: release buster
-      Pin-Priority: 1000
+      deb http://deb.devuan.org/merged ceres main contrib non-free
+      deb-src http://deb.devuan.org/merged ceres main contrib non-free
+  when: using_devuan is defined
 
-      Package: *vlc*
-      Pin: release buster
-      Pin-Priority: 1000
+# This works around a bug when using update_cache: yes
+- name: Update apt cache for unstable
+  command: apt-get update
 
 - name: Installing python-is-python3
   apt:
     pkg: python-is-python3
-    update-cache: yes
+    update-cache: no
     autoremove: yes
   register: aptpython
 
-- name: Upgrade to sid
+- name: Upgrade to unstable (sid or ceres)
   apt:
     upgrade: dist
-    update_cache: yes
+    update_cache: no
     autoremove: yes
-  register: aptsid
+  register: aptunstable
+
+# We might have been using /usr/bin/python3.9 which was upgraded.
+- name: Change python interpreter
+  set_fact: discovered_interpreter_python="/usr/bin/python3"
+  when: aptpython.changed
 
 - name: Reboot
   reboot:
-  when: aptpython.changed or aptsid.changed
+  when: aptpython.changed or aptunstable.changed
 
 - name: Install (non-X11) tools
   apt:
@@ -73,6 +98,7 @@
       - jnettop
       - lftp
       - libimage-exiftool-perl
+      - libkf5wallet-bin
       - lm-sensors
       - lshw
       - lsscsi
@@ -80,6 +106,7 @@
       - m4
       - mdadm
       - mediainfo
+      - ncal
       - net-tools
       - nfs-common
       - nmap
@@ -138,11 +165,9 @@
       - gv
       - hexchat
       - mesa-utils
-      - mplayer
       - ssh-askpass-fullscreen
       - t1-xfree86-nonfree
       - telegram-desktop
-      - tigervnc-viewer
       - ttf-xfree86-nonfree
       - vlc
       - x11-apps
@@ -156,20 +181,31 @@
       - xinput
       - xpdf
       - xterm
+      - xtightvncviewer
   when: install_x11_tools is defined
+
+- name: Install tools for openconnect
+  apt:
+    pkg:
+      - python3-click
+      - python3-keyring
+      - python3-pip
+      - python3-pyotp
+  when: install_laptop_tools is defined
 
 - name: Install laptop tools
   apt:
     pkg:
       - acpi
       - acpid
+      - network-manager
+      - openconnect
       - pm-utils
       - stalonetray
-      - wicd-gtk
   when: install_laptop_tools is defined
 
 - name: Upgrade current distribution (final upgrade)
   apt:
     upgrade: dist
-    update_cache: yes
+    update_cache: no
     autoremove: yes

@@ -13,8 +13,8 @@
     - { regexp: 'Port', line: 'Port {{ configured_port}}' }
 
 - name: Reload ssh
-  service:
-    name: sshd
+  sysvinit:
+    name: ssh
     state: restarted
   when: ansible_port != configured_port
 

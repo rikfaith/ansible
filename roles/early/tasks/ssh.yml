@@ -3,10 +3,11 @@
     configured_port: "{{ ansible_port }}"
 
 - name: Check for default ssh port
+  become_method: sudo
   wait_for:
     port: "22"
     state: "started"
-    host: "{{ inventory_hostname }}"
+    host: "{{ ansible_host }}"
     connect_timeout: "2"
     timeout: "3"
   delegate_to: "localhost"
@@ -25,7 +26,7 @@
   wait_for:
     port: "{{ ansible_port }}"
     state: "started"
-    host: "{{ inventory_hostname }}"
+    host: "{{ ansible_host }}"
     connect_timeout: "2"
     timeout: "3"
   delegate_to: "localhost"

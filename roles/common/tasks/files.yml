@@ -62,6 +62,7 @@
       server {{ ntp0 }} iburst
       server {{ ntp1 }} iburst
       server {{ ntp2 }} iburst
+      server {{ ntp3 }} iburst
       server 127.127.1.0 # local clock
 
       restrict -4 default kod notrap nomodify nopeer noquery limited

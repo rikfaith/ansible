@@ -16,11 +16,17 @@
       bind '"\M-n": history-search-forward'
       bind '"\en": history-search-forward'
 
+# See "/var/cache/debconf/config.dat"
 - name: Use bash instead of dash for /bin/sh
-  debconf: name=dash
+  debconf: name=dash/sh
            question=dash/sh
            vtype=boolean
            value=false
 
-- name: Reconfigure /bin/sh
+- name: Reconfigure dash
   command: dpkg-reconfigure -f noninteractive dash
+
+- name: Make sure /bin/sh is bash
+  command: /bin/ln -sf bash sh
+  args:
+    chdir: /bin

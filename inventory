@@ -1,21 +1,46 @@
 laptops:
     hosts:
         pixie:
+          br0port: eth0
+
         ariel:
+          br0port: eth0
+
+        puck:
+          ansible_host: 10.42.93.111
+          ansible_password: "{{ passwords.rickard_faith_password }}"
+          ansible_become_password: "{{ passwords.rickard_faith_password }}"
+          br0port: eth
     vars:
         ansible_port: 993
+        install_laptop_ssh: true
 
 storage:
     hosts:
         home2:
             ansible_user: pi
             ansible_password: "{{ passwords.pi_password }}"
+        filer2:
+          ansible_host: 10.42.93.70
+          ansible_password: "{{ default.setup_password }}"
+          ansible_become_password: "{{ default.setup_password }}"
+          eth0ip: 10.42.93.70
+          eth0gw: 10.42.93.1
+          br0ip: 10.42.11.70
+          br0port: eth2
+
     vars:
         ansible_port: 22
-        ntp0: winter-storage
-        ntp1: control0-storage
-        ntp2: home
+        configured_port: 22
+        ntp0: mute
+        ntp1: home2
+        ntp2: ntp.panpedia.org
+        ntp3: ntp.alephnull.com
+#        ntp0: winter-storage
+#        ntp1: control0-storage
+#        ntp2: home
         control0: control0-storage
+        br0port: eth0
 
 nutanix:
     hosts:
@@ -25,3 +50,4 @@ nutanix:
             ansible_password: "{{ passwords.rickard_faith_password }}"
     vars:
         ansible_port: 22
+        br0port: eth0

@@ -51,3 +51,6 @@
     path: /home/faith/.zhist
     state: touch
     mode: 0600
+    owner: faith
+    group: faith
+  when: install_faith is defined
