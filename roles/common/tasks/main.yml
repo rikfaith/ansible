@@ -17,7 +17,7 @@
   when: install_rpi is undefined
 
 - include_tasks: grub.yml
-  when: install_dual_boot
+  when: install_dual_boot is defined
 
 - include_tasks: files.yml
 

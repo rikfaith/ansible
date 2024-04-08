@@ -1,0 +1,20 @@
+---
+- hosts: therm2-compute
+  gather_facts: no
+  become: yes
+  become_method: su
+  environment:
+    PATH: /sbin:/usr/sbin:"{{ ansible_env.PATH }}"
+  vars_files:
+    - default.yml
+    - passwords.yml
+  vars:
+    - host_key_checking: false
+    - install_faith: true
+    - install_rpi: true
+    - ntp_local: true
+
+  roles:
+    - early
+    - rpi
+    - common

@@ -9,21 +9,30 @@
   become_user: "{{ localuser.stdout }}"
   local_action: command ssh-keygen -f ~/.ssh/known_hosts -R {{ inventory_hostname }}
 
+- name: Get IP of remote hose
+  become: true
+  become_user: "{{ localuser.stdout }}"
+  local_action: shell host {{ inventory_hostname }} | gawk '{print $4}'
+  register: remote_ip
+
+- debug: msg="IP of {{ inventory_hostname }} = {{ remote_ip.stdout }}"
+
 - name: Remove possibly old host key by IP
   become: true
   become_user: "{{ localuser.stdout }}"
-  local_action: shell ssh-keygen -f ~/.ssh/known_hosts -R {{ ansible_host }}
+  local_action: command ssh-keygen -f ~/.ssh/known_hosts -R {{ remote_ip.stdout }}
 
 - name: Get new host keys
   become: true
   become_user: "{{ localuser.stdout }}"
-  local_action: command ssh-keyscan -p {{ ansible_port }} -H {{ ansible_host }}
+  local_action: command ssh-keyscan -p {{ ansible_port }} {{ inventory_hostname }}
   register: hostkeys
 
-- name: Write new host key to known hosts
+- name: Write new host keys to known hosts
   become: true
   become_user: "{{ localuser.stdout }}"
-  local_action: lineinfile dest="~/.ssh/known_hosts" line="{{ hostkeys.stdout }}"
+  local_action: lineinfile dest="~/.ssh/known_hosts" line="{{ item }}"
+  with_items: "{{ hostkeys.stdout_lines }}"
 
 - name: Configure for sudo
   set_fact: become_method=sudo

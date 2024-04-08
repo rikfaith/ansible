@@ -1,9 +1,9 @@
 ---
-- name: Configure apt source for local buster
-  copy:
-    dest: /etc/apt/sources.list
-    content: |
-      deb http://{{ control0 }}:3142/raspbian.raspberrypi.org/raspbian/ buster main contrib non-free rpi
+#- name: Configure apt source for local buster
+#  copy:
+#    dest: /etc/apt/sources.list
+#    content: |
+#      deb http://{{ control0 }}:3142/raspbian.raspberrypi.org/raspbian/ buster main contrib non-free rpi
 
 - name: Upgrade current distribution
   apt:
@@ -42,6 +42,10 @@
       - ntpsec
       - ntpsec-ntpdate
       - parted
+      - python3-flask
+      - python3-serial
+      - python3-snappy
+      - python3-waitress
       - rsync
       - smartmontools
       - sysstat

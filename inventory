@@ -15,9 +15,20 @@ laptops:
         ansible_port: 993
         install_laptop_ssh: true
 
+# For pi wifi:
+# nmcli dev wifi connect private password Infinity2021
 storage:
     hosts:
         home2:
+            ansible_user: pi
+            ansible_password: "{{ passwords.pi_password }}"
+        therm0-compute:
+            ansible_user: pi
+            ansible_password: "{{ passwords.pi_password }}"
+        therm1-compute:
+            ansible_user: pi
+            ansible_password: "{{ passwords.pi_password }}"
+        therm2-compute:
             ansible_user: pi
             ansible_password: "{{ passwords.pi_password }}"
         filer2:
