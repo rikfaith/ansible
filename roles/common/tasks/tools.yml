@@ -9,13 +9,13 @@
   apt:
     pkg: gnupg
     state: present
-  when: using_devuan is defined
+  when: using_devuan is defined and using_devuan == True
 
 - name: Install devuan-keyring
   apt:
     pkg: devuan-keyring
     state: present
-  when: using_devuan is defined
+  when: using_devuan is defined and using_devuan == True
 
 # This works around a bug when using update_cache: yes
 - name: Update apt cache for current distribution
@@ -38,7 +38,7 @@
     content: |
       deb http://ftp.us.debian.org/debian/ sid main contrib non-free
       deb-src http://ftp.us.debian.org/debian/ sid main contrib non-free
-  when: using_debian is defined
+  when: using_debian is defined and using_devuan == True
 
 - name: Configure apt source for local ceres
   copy:
@@ -46,10 +46,10 @@
     content: |
       deb http://deb.devuan.org/merged ceres main contrib non-free
       deb-src http://deb.devuan.org/merged ceres main contrib non-free
-  when: using_devuan is defined
+  when: using_devuan is defined and using_devuan == True
 
 # This works around a bug when using update_cache: yes
-- name: Update apt cache for unstable
+- name: Update apt cache before trying to use unstable
   command: apt-get update
 
 - name: Installing python-is-python3
@@ -89,11 +89,13 @@
       - ddate
       - dmidecode
       - elpa-auto-complete
+      - elpa-go-mode
       - elpa-xcscope
       - emacs
       - git
       - htop
       - imagemagick
+      - iperf3
       - ipmitool
       - jnettop
       - lftp
@@ -110,6 +112,7 @@
       - net-tools
       - nfs-common
       - nmap
+      - nvme-cli
       - ntpsec
       - ntpsec-ntpdate
       - parted
@@ -133,25 +136,25 @@
       - libvirt-daemon-system
       - virtinst
       - virt-top
-  when: install_virt_tools is defined
+  when: install_virt_tools is defined and install_virt_tools == True
 
 - name: Install X11 server
   apt:
     pkg:
       - xserver-xorg
-  when: install_x11_tools is defined
+  when: install_x11_tools is defined and install_x11_tools == True
 
 - name: Install X11 intel driver
   apt:
     pkg:
       - xserver-xorg-video-intel
-  when: install_intel_driver is defined
+  when: install_intel_driver is defined and install_intel_driver == True
 
 - name: Install X11 nvidia server
   apt:
     pkg:
       - xserver-xorg-video-nvidia
-  when: install_nvidia_driver is defined
+  when: install_nvidia_driver is defined and install_nvidia_driver == True
 
 - name: Install X11 tools
   apt:
@@ -182,7 +185,38 @@
       - xpdf
       - xterm
       - xtightvncviewer
-  when: install_x11_tools is defined
+  when: install_x11_tools is defined and install_x11_tools == True
+
+- name: Install X11 tools for Ubuntu
+  apt:
+    pkg:
+      - chromium-browser
+      - dclock
+      - evince
+      - firefox
+      - fvwm
+      - ghostscript
+      - gv
+      - hexchat
+      - mesa-utils
+      - ssh-askpass-fullscreen
+      - t1-xfree86-nonfree
+      - telegram-desktop
+      - ttf-xfree86-nonfree
+      - vlc
+      - x11-apps
+      - x11-common
+      - xfonts-100dpi
+      - xfonts-100dpi-transcoded
+      - xfonts-75dpi
+      - xfonts-75dpi-transcoded
+      - xfonts-terminus
+      - xinit
+      - xinput
+      - xpdf
+      - xterm
+      - xtightvncviewer
+  when: install_x11_tools_ubuntu is defined and install_x11_tools_ubuntu == True
 
 - name: Install tools for openconnect
   apt:
@@ -191,7 +225,17 @@
       - python3-keyring
       - python3-pip
       - python3-pyotp
-  when: install_laptop_tools is defined
+  when: using_devuan is defined and using_devuan == True and install_laptop_tools is defined and install_laptop_tools == True
+
+- name: Install tools for openconnect and emacs
+  apt:
+    pkg:
+      - python3-click
+      - python3-pip
+      - python3-pyotp
+      - elpa-editorconfig
+      - elpa-lsp-mode
+  when: using_ubuntu is defined and using_ubuntu == True
 
 - name: Install laptop tools
   apt:
@@ -202,7 +246,17 @@
       - openconnect
       - pm-utils
       - stalonetray
-  when: install_laptop_tools is defined
+  when: install_laptop_tools is defined and install_laptop_tools == True
+
+- name: Install torrent tools
+  apt:
+    pkg:
+      - openvpn
+      - firefox-esr
+      - resolvconf
+      - libtorrent21t64
+      - python3-libtorrent
+  when: install_torrent_tools is defined and install_torrent_tools == True
 
 - name: Upgrade current distribution (final upgrade)
   apt:

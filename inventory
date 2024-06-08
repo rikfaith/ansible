@@ -6,11 +6,16 @@ laptops:
         ariel:
           br0port: eth0
 
-        puck:
+        puck-debian:
           ansible_host: 10.42.93.111
           ansible_password: "{{ passwords.rickard_faith_password }}"
           ansible_become_password: "{{ passwords.rickard_faith_password }}"
           br0port: eth
+        puck-compute:
+          ansible_host: 10.42.93.111
+          br0port: eth
+          ansible_password: "{{ passwords.puck_password }}"
+          ansible_become_password: "{{ passwords.puck_password }}"
     vars:
         ansible_port: 993
         install_laptop_ssh: true
@@ -39,13 +44,21 @@ storage:
           eth0gw: 10.42.93.1
           br0ip: 10.42.11.70
           br0port: eth2
+        beast:
+          ansible_host: 10.42.93.90
+          ansible_password: "{{ default.setup_password }}"
+          ansible_become_password: "{{ default.setup_password }}"
+          eth3ip: 10.42.11.90
+          br0gw: 10.42.93.1
+          br0ip: 10.42.93.90
+          br0port: eth2
 
     vars:
         ansible_port: 22
         configured_port: 22
         ntp0: mute
         ntp1: home2
-        ntp2: ntp.panpedia.org
+        ntp2: silenus
         ntp3: ntp.alephnull.com
 #        ntp0: winter-storage
 #        ntp1: control0-storage

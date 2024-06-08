@@ -2,22 +2,28 @@
 - include_tasks: update.yml
 
 - include_tasks: network-storage.yml
-  when: eth0_br0_network is defined
+  when: eth0_br0_network is defined and eth0_br0_network == True
+
+- include_tasks: network-eth3-br0.yml
+  when: eth3_br0_network is defined and eth3_br0_network == True
 
 - include_tasks: sudo.yml
 
 - include_tasks: systemd.yml
-  when: using_debian is defined
+  when: using_debian is defined and using_debian == True
 
 - include_tasks: bash.yml
 
 - include_tasks: ssh.yml
 
 - include_tasks: tools.yml
-  when: install_rpi is undefined
+  when: install_rpi is undefined or install_rpi == False
 
 - include_tasks: grub.yml
-  when: install_dual_boot is defined
+  when: install_dual_boot is defined and install_dual_boot == True
+
+- include_tasks: ubuntu.yml
+  when: false and using_ubuntu is defined and using_ubuntu == True
 
 - include_tasks: files.yml
 

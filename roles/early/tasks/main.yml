@@ -1,6 +1,6 @@
 ---
 - include_tasks: ssh.yml
-  when: install_laptop_ssh is defined
+  when: install_laptop_ssh is defined and install_laptop_ssh == True
 
 - include_tasks: check.yml
 - include_tasks: gather_facts.yml

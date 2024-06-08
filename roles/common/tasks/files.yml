@@ -15,6 +15,23 @@
     dest: /etc/rc.local
     block: |
       loadkeys /etc/keymap.local
+  when: using_ubuntu is undefined or using_ubuntu == False
+
+- name: Update /etc/rc.local for Ubuntu
+  copy:
+    dest: /etc/rc.local
+    mode: '0755'
+    content: |
+      #!/bin/bash
+      loadkeys /etc/keymap.local
+  when: using_ubuntu is defined and using_ubuntu == True
+
+- name: Update /etc/sysctl.confa
+  blockinfile:
+    dest: /etc/sysctl.conf
+    block: |
+      kernel.dmesg_restrict=0
+      fs.file-max=16384
 
 - name: Update /etc/crontab
   blockinfile:
@@ -43,7 +60,7 @@
       restrict source notrap nomodify noquery
       disable monitor
       discard minimum 0
-  when: ntp_anonymous is defined
+  when: ntp_anonymous is defined and ntp_anonymous == True
 
 - name: Use local ntp configuration
   copy:
@@ -73,5 +90,5 @@
       restrict source notrap nomodify noquery
       disable monitor
       discard minimum 0
-  when: ntp_local is defined
+  when: ntp_local is defined and ntp_local == True
 

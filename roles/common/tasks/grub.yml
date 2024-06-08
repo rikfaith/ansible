@@ -5,3 +5,4 @@
     regexp: 'GRUB_DISABLE_OS_PROBER='
     path: /etc/default/grub
   notify: update-grub
+

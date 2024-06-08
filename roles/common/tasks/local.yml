@@ -19,7 +19,7 @@
   - lukem.pub
   - urwen
   - urwen.pub
-  when: install_faith is defined
+  when: install_faith is defined and install_faith == True
 
 - name: Checkout dotfiles2
   git:
@@ -29,7 +29,7 @@
     accept_hostkey: yes
   become: true
   become_user: faith
-  when: install_faith is defined
+  when: install_faith is defined and install_faith == True
 
 - name: Install dotfiles2
   command: "./bootstrap.py"
@@ -37,14 +37,14 @@
   become_user: faith
   args:
     chdir: /home/faith/dotfiles2
-  when: install_faith is defined
+  when: install_faith is defined and install_faith == True
 
 - name: Use zsh
   user:
     name: faith
     shell: /bin/zsh
     create_home: no
-  when: install_faith is defined
+  when: install_faith is defined and install_faith == True
 
 - name: Activate zsh history
   file:
@@ -53,4 +53,4 @@
     mode: 0600
     owner: faith
     group: faith
-  when: install_faith is defined
+  when: install_faith is defined and install_faith == True

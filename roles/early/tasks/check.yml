@@ -22,10 +22,22 @@
   become_user: "{{ localuser.stdout }}"
   local_action: command ssh-keygen -f ~/.ssh/known_hosts -R {{ remote_ip.stdout }}
 
-- name: Get new host keys
+- name: Get new host keys with hostname
   become: true
   become_user: "{{ localuser.stdout }}"
   local_action: command ssh-keyscan -p {{ ansible_port }} {{ inventory_hostname }}
+  register: hostkeys
+
+- name: Write new host keys to known hosts
+  become: true
+  become_user: "{{ localuser.stdout }}"
+  local_action: lineinfile dest="~/.ssh/known_hosts" line="{{ item }}"
+  with_items: "{{ hostkeys.stdout_lines }}"
+
+- name: Get new host keys with ip
+  become: true
+  become_user: "{{ localuser.stdout }}"
+  local_action: command ssh-keyscan -p {{ ansible_port }} {{ remote_ip.stdout }}
   register: hostkeys
 
 - name: Write new host keys to known hosts
