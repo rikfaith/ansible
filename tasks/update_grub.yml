@@ -1,0 +1,25 @@
+---
+- name: Update grub configuration
+  vars:
+    grubline: GRUB_CMDLINE_LINUX="audit=0"
+  block:
+
+  - name: Determine if grub change needed
+    lineinfile:
+      name: /etc/default/grub
+      line: "{{ grubline }}"
+      state: absent
+    check_mode: yes
+    changed_when: false
+    register: grub_state
+
+  - name: Update grub configuration
+    lineinfile:
+      dest: /etc/default/grub
+      regexp: GRUB_CMDLINE_LINUX=
+      line: "{{ grubline }}"
+    when: not grub_state.found
+
+  - name: Update grub
+    shell: update-grub
+    when: not grub_state.found

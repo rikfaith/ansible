@@ -1,0 +1,19 @@
+---
+- name: Install /etc/keymap.local
+  copy:
+    dest: /etc/keymap.local
+    content: |
+      keymaps 0-127
+      keycode 58 = Control
+      keycode 125 = grave
+      shift keycode 125 = asciitilde
+      keycode 41 = Escape
+      keycode 29 = Alt
+
+- name: Update /etc/rc.local
+  copy:
+    dest: /etc/rc.local
+    mode: '0755'
+    content: |
+      #!/bin/bash
+      loadkeys /etc/keymap.local

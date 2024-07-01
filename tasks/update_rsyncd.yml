@@ -1,0 +1,29 @@
+---
+- name: Enable rsyncd
+  lineinfile:
+    dest: /etc/default/rsync
+    regexp: RSYNC_ENABLE=
+    line: RSYNC_ENABLE=true
+
+- name: Make directory
+  file:
+    path: "/{{ rsyncd_mount }}"
+    state: directory
+    mode: 755
+
+- name: Create /etc/rsyncd.conf
+  copy:
+    dest: /etc/rsyncd.conf
+    content: |
+      uid = root
+      gid = root
+      read only = yes
+      use chroot = yes
+      hosts allow = 10.42.11.0/24
+      hosts deny = *
+
+      [{{ rsyncd_mount }}]
+        path = /{{ rsyncd_mount }}
+
+- name: Run rsyncd by default
+  shell: sysv-rc-conf rsync on

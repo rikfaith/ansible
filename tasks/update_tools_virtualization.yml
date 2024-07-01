@@ -1,0 +1,9 @@
+---
+- name: Install virtualization tools
+  apt:
+    pkg:
+      - libvirt-clients
+      - libvirt-daemon
+      - libvirt-daemon-system-sysv
+      - virt-top
+      - vmdb2

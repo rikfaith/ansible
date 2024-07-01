@@ -1,0 +1,29 @@
+---
+- name: Installing chrony
+  apt:
+    pkg: chrony
+    update-cache: no
+    autoremove: yes
+
+- name: Update chrony configuration
+  copy:
+    dest: /etc/chrony.conf
+    content: |
+      allow 10.42.93.0/24
+      allow 10.42.11.0/24
+
+      server {{ ntp0 }} iburst
+      server {{ ntp1 }} iburst
+      server {{ ntp2 }} iburst
+      server {{ ntp3 }} iburst
+
+      driftfile /var/lib/chrony/chrony.drift
+      rtcfile /var/lib/chrony/rtc
+
+      log tracking measurements statistics
+      logdir /var/log/chrony
+
+      maxupdateskew 100.0
+      makestep 1 3
+      leapsectz right/UTC
+  when: install_local_time_source is defined and install_local_time_source == True

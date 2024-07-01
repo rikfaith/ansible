@@ -24,6 +24,34 @@ laptops:
 # nmcli dev wifi connect private password Infinity2021
 storage:
     hosts:
+        anna0:
+          ansible_host: 10.42.93.73
+          ansible_password: "{{ default.setup_password }}"
+          ansible_become_password: "{{ default.setup_password }}"
+          br0ip: 10.42.93.73
+          br0gw: 10.42.93.1
+          br0port: eth0
+          eth1ip: 10.42.11.73
+          rsyncd_mount: anna0
+        thoth:
+          ansible_host: 10.42.93.91
+          ansible_password: "{{ default.setup_password }}"
+          ansible_become_password: "{{ default.setup_password }}"
+          br0ip: 10.42.93.91
+          br0gw: 10.42.93.1
+          br0port: eth0
+          eth1ip: 10.42.11.91
+          rsyncd_mount: thoth
+        node2:
+          ansible_host: 10.42.93.82
+          ansible_password: "{{ default.setup_password }}"
+          ansible_become_password: "{{ default.setup_password }}"
+          br0ip: 10.42.93.82
+          br0gw: 10.42.93.1
+          br0port: eth4
+          altport: eth5
+          altportip: 10.42.11.82
+          rsyncd_mount: local
         home2:
             ansible_user: pi
             ansible_password: "{{ passwords.pi_password }}"
@@ -56,13 +84,10 @@ storage:
     vars:
         ansible_port: 22
         configured_port: 22
-        ntp0: mute
-        ntp1: home2
-        ntp2: silenus
-        ntp3: ntp.alephnull.com
-#        ntp0: winter-storage
-#        ntp1: control0-storage
-#        ntp2: home
+        ntp0: ntp.alephnull.com
+        ntp1: 10.93.42.1
+        ntp2: silenus.alephnull.com
+        ntp3: control0.alephnull.com
         control0: control0-storage
         br0port: eth0
 

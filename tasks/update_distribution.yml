@@ -1,0 +1,68 @@
+---
+# This works around a bug when using update_cache: yes
+- name: Update apt cache for current distribution
+  command: apt-get update
+
+- name: Installing usrmerge
+  apt:
+    pkg: usrmerge
+    update-cache: no
+    autoremove: yes
+
+- name: Upgrade current distribution
+  apt:
+    upgrade: dist
+    update-cache: no
+    autoremove: yes
+  register: aptcurrent
+
+- name: Installing python-is-python3
+  apt:
+    pkg: python-is-python3
+    update-cache: no
+    autoremove: yes
+  register: aptpython
+
+# We might have been using /usr/bin/python3.* which was upgraded.
+- name: Change python interpreter
+  set_fact: discovered_interpreter_python="/usr/bin/python3"
+  when: aptpython.changed
+
+- name: Reboot
+  reboot:
+  when: aptpython.changed or aptcurrent.changed
+
+- name: Configure apt source for local sid
+  copy:
+    dest: /etc/apt/sources.list
+    content: |
+      deb http://ftp.us.debian.org/debian/ sid main contrib non-free
+      deb-src http://ftp.us.debian.org/debian/ sid main contrib non-free
+  when: using_debian is defined and using_debian == True
+        and install_unstable is defined and install_unstable == True
+
+- name: Configure apt source for local ceres
+  copy:
+    dest: /etc/apt/sources.list
+    content: |
+      deb http://deb.devuan.org/merged ceres main contrib non-free
+      deb-src http://deb.devuan.org/merged ceres main contrib non-free
+  when: using_devuan is defined and using_devuan == True
+        and install_unstable is defined and install_unstable == True
+
+# This works around a bug when using update_cache: yes
+- name: Update apt cache for current distribution
+  command: apt-get update
+  when: install_unstable is defined and install_unstable == True
+
+- name: Upgrade to unstable (sid or ceres)
+  apt:
+    upgrade: dist
+    update_cache: no
+    autoremove: yes
+  register: aptunstable
+  when: install_unstable is defined and install_unstable == True
+
+- name: Reboot
+  reboot:
+  when: aptunstable.changed

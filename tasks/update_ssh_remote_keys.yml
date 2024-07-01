@@ -1,0 +1,24 @@
+---
+- name: Update authorized_keys
+  authorized_key: user='{{ item.user }}' key='{{ item.key }}' state=present
+  with_items:
+  - { user: 'root', 'key': "{{ default.authorized_key }}" }
+  - { user: "{{ default.nonroot_user }}", 'key': "{{ default.authorized_key }}" }
+
+- name: Update sshd_config
+  lineinfile: path=/etc/ssh/sshd_config
+              regexp='{{ item.regexp }}'
+              line='{{ item.line }}'
+  with_items:
+    - { regexp: 'PermitRootLogin', line: 'PermitRootLogin yes' }
+    - { regexp: 'Port', line: 'Port {{ configured_port}}' }
+
+- name: Reload ssh
+  sysvinit:
+    name: ssh
+    state: restarted
+  when: ansible_port != configured_port
+
+- name: Set ansible_port
+  set_fact:
+    ansible_port: "{{ configured_port }}"

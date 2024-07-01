@@ -1,0 +1,9 @@
+---
+- name: Enable sysstat (sar collector)
+  lineinfile:
+    dest: /etc/default/sysstat
+    regexp: ENABLED=
+    line: ENABLED="true"
+
+- name: Run sysstat (sar collector) by default
+  shell: sysv-rc-conf sysstat on

@@ -1,0 +1,18 @@
+---
+- name: Disable Ubuntu GUI login, part 1
+  lineinfile:
+    line: 'GRUB_CMDLINE_LINUX_DEFAULT="text"'
+    regexp: 'GRUB_CMDLINE_LINUX_DEFAULT'
+    path: /etc/default/grub
+  when: using_ubuntu is defined and using_ubuntu == True
+
+- name: Disable Ubuntu GUI login, part 2
+  lineinfile:
+    line: 'GRUB_TERMINAL=console'
+    regexp: 'GRUB_TERMINAL='
+    path: /etc/default/grub
+  when: using_ubuntu is defined and using_ubuntu == True
+
+- name: Configure for non-GUI login
+  shell: update-grub && systemctl set-default multi-user.target
+  when: using_ubuntu is defined and using_ubuntu == True

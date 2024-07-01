@@ -1,0 +1,50 @@
+---
+- name: Copy .ssh files
+  copy:
+    src: "/home/{{ default.nonroot_user }}/.ssh/{{ item }}"
+    dest: "/home/{{ default.nonroot_user }}/.ssh"
+    owner: "{{ default.nonroot_user }}"
+    group: "{{ default.nonroot_user }}"
+    mode: 0600
+  with_items:
+  - config
+  - github
+  - github.pub
+  - gitlab
+  - gitlab.pub
+  - id_ed25519
+  - id_ed25519.pub
+  - lukem
+  - lukem.pub
+  - urwen
+  - urwen.pub
+
+- name: Checkout dotfiles2
+  git:
+    repo: "{{ default.dotfiles_repo }}"
+    dest: "/home/{{ default.nonroot_user }}/dotfiles2"
+    key_file: "/home/{{ default.nonroot_user }}/.ssh/github"
+    accept_hostkey: yes
+  become: true
+  become_user: "{{ default.nonroot_user }}"
+
+- name: Install dotfiles2
+  command: "./bootstrap.py"
+  become: true
+  become_user: "{{ default.nonroot_user }}"
+  args:
+    chdir: "/home/{{ default.nonroot_user }}/dotfiles2"
+
+- name: Use zsh
+  user:
+    name: "{{ default.nonroot_user }}"
+    shell: /bin/zsh
+    create_home: no
+
+- name: Activate zsh history
+  file:
+    path: "/home/{{ default.nonroot_user }}/.zhist"
+    state: touch
+    mode: 0600
+    owner: "{{ default.nonroot_user }}"
+    group: "{{ default.nonroot_user }}"

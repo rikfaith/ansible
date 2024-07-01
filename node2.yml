@@ -1,0 +1,36 @@
+---
+- hosts: node2
+  gather_facts: no
+  become: yes
+  become_method: su
+  environment:
+    PATH: /sbin:/usr/sbin:"{{ ansible_env.PATH }}"
+  vars_files:
+    - default.yml
+    - passwords.yml
+  vars:
+    - using_devuan: true
+    - install_unstable: true
+    - install_local_time_source: true
+
+  tasks:
+    - import_tasks: tasks/get_ssh_port.yml
+    - import_tasks: tasks/update_ssh_local_keys.yml
+    - import_tasks: tasks/get_facts.yml
+    - import_tasks: tasks/update_apt.yml
+    - import_tasks: tasks/update_grub.yml
+    - import_tasks: tasks/update_br0_alt_network.yml
+    - import_tasks: tasks/update_sudo.yml
+    - import_tasks: tasks/update_distribution.yml
+    - import_tasks: tasks/update_chrony.yml
+    - import_tasks: tasks/update_keymap.yml
+    - import_tasks: tasks/update_sysctl.yml
+    - import_tasks: tasks/update_crontab.yml
+    - import_tasks: tasks/update_bashrc.yml
+    - import_tasks: tasks/update_dash.yml
+    - import_tasks: tasks/update_ssh_remote_keys.yml
+    - import_tasks: tasks/update_tools_general.yml
+    - import_tasks: tasks/update_tools_virtualization.yml
+    - import_tasks: tasks/update_rsyncd.yml
+    - import_tasks: tasks/update_ssh_remote_keys.yml
+    - import_tasks: tasks/update_user_login.yml

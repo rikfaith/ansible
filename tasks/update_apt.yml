@@ -1,0 +1,27 @@
+---
+- name: Remove cdroms from /etc/apt/source.list
+  lineinfile:
+    dest: /etc/apt/sources.list
+    state: absent
+    regexp: '^deb cdrom:'
+
+- name: Force apt to use IPv4
+  copy:
+    dest: /etc/apt/apt.conf.d/99force-ipv4
+    content: |
+      Acquire::ForceIPv4 "true";
+
+- name: Install gnupg
+  apt:
+    pkg: gnupg
+    state: present
+  when: using_devuan is defined and using_devuan == True
+
+- name: Install devuan-keyring
+  apt:
+    pkg: devuan-keyring
+    state: present
+  when: using_devuan is defined and using_devuan == True
+
+- name: Update apt repository while allowing a release-info change
+  command: apt-get update -y --allow-releaseinfo-change

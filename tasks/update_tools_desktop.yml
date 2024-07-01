@@ -1,0 +1,45 @@
+---
+- name: Install X11 server
+  apt:
+    pkg:
+      - xserver-xorg
+
+- name: Install X11 driver(s)
+  apt:
+    pkg:
+      - xserver-xorg-video-nvidia
+
+- name: Install desktop (and X11) tools
+      - chromium
+      - firefox-esr
+      - fvwm
+      - ghostscript
+      - gv
+      - hexchat
+      - libjpeg62-turbo-dev
+      - libpng-dev
+      - libreoffice
+      - libtiff-dev
+      - libx11-dev
+      - libxt-dev
+      - mesa-utils
+      - mplayer
+      - ssh-askpass-fullscreen
+      - t1-xfree86-nonfree
+      - telegram-desktop
+      - vlc
+      - x11-apps
+      - x11-common
+      - x11proto-dev
+      - xfonts-100dpi
+      - xfonts-100dpi-transcoded
+      - xfonts-75dpi
+      - xfonts-75dpi-transcoded
+      - xfonts-terminus
+      - xinit
+      - xinput
+      - xpaint
+      - xpdf
+      - xsane
+      - xterm
+      - xtightvncviewer

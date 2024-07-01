@@ -1,0 +1,31 @@
+---
+- name: Install sudo
+  apt:
+    pkg: sudo
+    state: present
+
+- name: Determine if sudoers file needs update
+  lineinfile:
+    name: /etc/sudoers
+    line: '%sudo ALL=(ALL:ALL) NOPASSWD:ALL'
+    state: absent
+  check_mode: yes
+  changed_when: false
+  register: sudoers_state
+
+- name: Configure sudoers file
+  lineinfile:
+    path: /etc/sudoers
+    regexp: '^%sudo'
+    line: '%sudo ALL=(ALL:ALL) NOPASSWD:ALL'
+  when: not sudoers_state.found
+
+- name: Add user to sudo group
+  user:
+    name: "{{ default.nonroot_user }}"
+    groups: sudo
+  when: not sudoers_state.found
+
+- name: Set become_method
+  set_fact:
+    become_method: sudo

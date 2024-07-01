@@ -1,0 +1,6 @@
+---
+- name: Update /etc/crontab
+  blockinfile:
+    dest: /etc/crontab
+    block: |
+      */10 *   * * * root logger "$(uptime)"

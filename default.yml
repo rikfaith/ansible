@@ -6,3 +6,4 @@ default:
   nonroot_user: "faith"
   ubvm_user: "rickard.faith"
   setup_password: "foobar"
+  dotfiles_repo: "git@rik.github.com:rikfaith/dotfiles2"

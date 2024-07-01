@@ -1,0 +1,32 @@
+---
+- hosts: beast
+  gather_facts: no
+  become: yes
+  become_method: su
+  environment:
+    PATH: /sbin:/usr/sbin:"{{ ansible_env.PATH }}"
+  vars_files:
+    - default.yml
+    - passwords.yml
+  vars:
+    - install_laptop_tools: false
+    - install_laptop_ssh: false
+    - install_x11_tools: false
+    - install_x11_tools_ubuntu: false
+    - install_intel_driver: false
+    - install_nvidia_driver: false
+    - install_virt_tools: false
+    - install_dual_boot: false
+    - install_torrent_tools: true
+    - ntp_local: true
+    - install_faith: true
+    - install_rpi: false
+    - install_dual_boot: false
+    - using_debian: false
+    - using_devuan: true
+    - using_ubuntu: false
+    - eth3_br0_network: true
+
+  roles:
+    - early
+    - common

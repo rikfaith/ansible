@@ -1,0 +1,27 @@
+---
+- name: Install bridge utilities
+  apt:
+    pkg: bridge-utils
+    state: present
+
+- name: Configure interfaces
+  copy:
+    dest: /etc/network/interfaces
+    content: |
+      auto lo
+      iface lo inet loopback
+
+      auto br0
+      iface br0 inet static
+        address {{ br0ip }}
+        netmask 255.255.255.0
+        gateway {{ br0gw }}
+        bridge_ports {{ br0port }}
+        bridge_stp off
+        bridge_fd 0
+        bridge_maxwait 0
+
+      auto {{ altport }}
+      iface {{ altport }} inet static
+        address {{ altportip }}
+        netmask 255.255.255.0
