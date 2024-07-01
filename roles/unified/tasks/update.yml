@@ -1,0 +1,9 @@
+---
+- name: Remove cdroms from /etc/apt/source.list
+  lineinfile:
+    dest: /etc/apt/sources.list
+    state: absent
+    regexp: '^deb cdrom:'
+
+- name: Update apt repository while allowing a release-info change
+  command: apt-get update -y --allow-releaseinfo-change

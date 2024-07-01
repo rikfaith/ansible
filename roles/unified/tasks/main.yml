@@ -1,0 +1,20 @@
+---
+- include_tasks: laptop-ssh.yml
+  when: install_laptop_ssh
+
+- include_tasks: check.yml
+- include_tasks: gather_facts.yml
+- include_tasks: update.yml
+- include_tasks: grub.yml
+- include_tasks: network.yml
+- include_tasks: sudo.yml
+- include_tasks: bash.yml
+- include_tasks: ssh.yml
+- include_tasks: tools.yml
+- include_tasks: files.yml
+- include_tasks: local.yml
+
+- name: Make sure /bin/sh is bash
+  command: /bin/ln -sf bash sh
+  args:
+    chdir: /bin

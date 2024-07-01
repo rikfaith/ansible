@@ -1,0 +1,77 @@
+- name: Configure network interfaces
+  block:
+
+  - name: Install bridge utilities
+    apt:
+      pkg: bridge-utils
+      state: present
+
+  - name: Configure interfaces
+    copy:
+      dest: /etc/network/interfaces
+      content: |
+        auto lo
+        iface lo inet loopback
+
+  # Might need:
+  # up ip r add 10.42.3.0/24 via 10.42.93.1 dev br0
+  # down ip r del 10.42.3.0/24 via 10.42.93.1 dev br0
+  - name: Configure br0
+    ansible.builtin.blockinfile:
+      dest: /etc/network/interfaces
+      block: |
+        auto br0
+        iface br0 inet static
+          address {{ br0ip }}
+          netmask 255.255.255.0
+          gateway {{ br0gw }}
+          bridge_ports {{ br0port }}
+          bridge_stp off
+          bridge_fd 0
+          bridge_maxwait 0
+      marker: "# {mark} ANSIBLE MANAGED BLOCK br0"
+    when: br0ip is defined
+
+  - name: Configure eth0
+    ansible.builtin.blockinfile:
+      dest: /etc/network/interfaces
+      block: |
+        auto eth0
+        iface eth0 inet static
+          address {{ eth0ip }}
+          netmask 255.255.255.0
+      marker: "# {mark} ANSIBLE MANAGED BLOCK eth0"
+    when: eth0ip is defined
+
+  - name: Configure eth1
+    ansible.builtin.blockinfile:
+      dest: /etc/network/interfaces
+      block: |
+        auto eth1
+        iface eth1 inet static
+          address {{ eth1ip }}
+          netmask 255.255.255.0
+      marker: "# {mark} ANSIBLE MANAGED BLOCK eth1"
+    when: eth1ip is defined
+
+  - name: Configure eth2
+    ansible.builtin.blockinfile:
+      dest: /etc/network/interfaces
+      block: |
+        auto eth2
+        iface eth2 inet static
+          address {{ eth2ip }}
+          netmask 255.255.255.0
+      marker: "# {mark} ANSIBLE MANAGED BLOCK eth2"
+    when: eth2ip is defined
+
+  - name: Configure eth3
+    ansible.builtin.blockinfile:
+      dest: /etc/network/interfaces
+      block: |
+        auto eth3
+        iface eth3 inet static
+          address {{ eth3ip }}
+          netmask 255.255.255.0
+      marker: "# {mark} ANSIBLE MANAGED BLOCK eth3"
+    when: eth3ip is defined

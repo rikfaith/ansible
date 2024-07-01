@@ -1,0 +1,269 @@
+---
+- name: Force apt to use IPv4
+  copy:
+    dest: /etc/apt/apt.conf.d/99force-ipv4
+    content: |
+      Acquire::ForceIPv4 "true";
+
+- name: Install gnupg
+  apt:
+    pkg: gnupg
+    state: present
+  when: using_devuan
+
+- name: Install devuan-keyring
+  apt:
+    pkg: devuan-keyring
+    state: present
+  when: using_devuan
+
+# This works around a bug when using update_cache: yes
+- name: Update apt cache for current distribution
+  command: apt-get update
+
+- name: Upgrade current distribution
+  apt:
+    upgrade: dist
+    update_cache: no
+    autoremove: yes
+  register: aptcurrent
+
+- name: Reboot
+  reboot:
+  when: aptcurrent.changed
+
+- name: Configure apt source for local sid
+  copy:
+    dest: /etc/apt/sources.list
+    content: |
+      deb http://ftp.us.debian.org/debian/ sid main contrib non-free non-free-firmware
+      deb-src http://ftp.us.debian.org/debian/ sid main contrib non-free non-free-firmware
+  when: using_debian
+
+- name: Configure apt source for local ceres
+  copy:
+    dest: /etc/apt/sources.list
+    content: |
+      deb http://deb.devuan.org/merged ceres main contrib non-free non-free-firmware
+      deb-src http://deb.devuan.org/merged ceres main contrib non-free non-free-firmware
+  when: using_devuan
+
+# This works around a bug when using update_cache: yes
+- name: Update apt cache for unstable
+  command: apt-get update
+
+- name: Installing python-is-python3
+  apt:
+    pkg: python-is-python3
+    update-cache: no
+    autoremove: yes
+  register: aptpython
+
+- name: Upgrade to unstable (sid or ceres)
+  apt:
+    upgrade: dist
+    update_cache: no
+    autoremove: yes
+  register: aptunstable
+
+# We might have been using /usr/bin/python3.9 which was upgraded.
+- name: Change python interpreter
+  set_fact: discovered_interpreter_python="/usr/bin/python3"
+  set_fact: ansible_python_interpreter="/usr/bin/python3"
+  when: aptpython.changed
+
+- name: Reboot
+  reboot:
+  when: aptpython.changed or aptunstable.changed
+
+- name: Install (non-X11) tools
+  apt:
+    pkg:
+      - alsa-utils
+      - bc
+      - bind9-utils
+      - calibre
+      - crypt++el
+      - cryptsetup-bin
+      - curl
+      - dc
+      - ddate
+      - dmidecode
+      - elpa-auto-complete
+      - elpa-jedi
+      - elpa-xcscope
+      - emacs
+      - git
+      - htop
+      - imagemagick
+      - ipmitool
+      - jnettop
+      - lftp
+      - libimage-exiftool-perl
+      - libkf5wallet-bin
+      - lm-sensors
+      - lshw
+      - lsscsi
+      - ltrace
+      - lvm2
+      - m4
+      - mdadm
+      - mediainfo
+      - ncal
+      - net-tools
+      - nfs-common
+      - nmap
+      - ntpsec
+      - ntpsec-ntpdate
+      - parted
+      - python3-poetry
+      - rsync
+      - smartmontools
+      - strace
+      - sysstat
+      - tmux
+      - units
+      - unrar
+      - unzip
+      - vim
+      - vnstat
+      - whois
+      - zsh
+
+- name: Install virt tools
+  apt:
+    pkg:
+      - libvirt-clients
+      - libvirt-daemon
+      - libvirt-daemon-system
+      - virtinst
+      - virt-top
+  when: install_virt_tools
+
+- name: Install X11 server
+  apt:
+    pkg:
+      - xserver-xorg
+  when: install_x11_tools
+
+- name: Install X11 intel driver
+  apt:
+    pkg:
+      - xserver-xorg-video-intel
+  when: install_intel_driver
+
+- name: Install nvidia kernel and X11 drivers
+  apt:
+    pkg:
+      - nvidia-driver
+      - xserver-xorg-video-nvidia
+  ignore_errors: true
+  when: install_nvidia_driver
+  register: nvidia_installation
+
+- name: Remove nvidia-persistenced
+  apt:
+    name: nvidia-persistenced
+    state: absent
+    purge: yes
+  when: nvidia_installation.changed
+
+- name: Reboot to install nvidia driver
+  reboot:
+  when: nvidia_installation.changed
+
+- name: Install nvidia kernel, X11 drivers, and nvidia-persistenced
+  apt:
+    pkg:
+      - nvidia-driver
+      - xserver-xorg-video-nvidia
+      - nvidia-persistenced
+  when: nvidia_installation.changed
+
+- name: Install X11 tools
+  apt:
+    pkg:
+      - chromium
+      - dclock
+      - evince
+      - firefox-esr
+      - fvwm
+      - ghostscript
+      - gv
+      - hexchat
+      - mesa-utils
+      - ssh-askpass-fullscreen
+      - t1-xfree86-nonfree
+      - telegram-desktop
+      - ttf-xfree86-nonfree
+      - vlc
+      - x11-apps
+      - x11-common
+      - xfonts-100dpi
+      - xfonts-100dpi-transcoded
+      - xfonts-75dpi
+      - xfonts-75dpi-transcoded
+      - xfonts-terminus
+      - xinit
+      - xinput
+      - xpdf
+      - xterm
+      - xtightvncviewer
+  when: install_x11_tools
+
+- name: Install Xorg configuration
+  copy:
+    dest: /etc/X11/xorg.conf.d/10-monitor.conf
+    content: |
+      Section "ServerLayout"
+        Identifier "TwinLayout"
+        Screen 0 "metaScreen" 0 0
+      EndSection
+
+      Section "Device"
+        Identifier "Card0"
+        Driver "nvidia"
+        Option "ConnectedMonitor" "DP-3, DP-4, DP-1, HDMI-0"
+
+        # This is the option line for the right hand monitor above the others.
+        #Option "MetaModes" "DP-3: 1600x1200 +0+1200 { Rotation=left }, DP-4: 2560x1600 +1200+1200 , DP-1: 1600x1200 +3760+1200 { Rotation=right }, HDMI-0: 1920x1200 +3040+0"
+
+        # This is the option line for the right hand monitor to the right of the others.
+        #Option "MetaModes" "DP-3: 1600x1200 +0+0 { Rotation=left }, DP-4: 2560x1600 +1200+0 , DP-1: 1600x1200 +3760+0 { Rotation=right }, HDMI-0: 1920x1200 +4960+0"
+
+        Option "MetaModes" "DP-3: 1600x1200 +0+0 { ForceFullCompositionPipeline=On,Rotation=left }, DP-4: 2560x1600 +1200+0 { ForceFullCompositionPipeline=On } , DP-1: 1600x1200 +3760+0 { ForceFullCompositionPipeline=On,Rotation=right }, HDMI-0: 1920x1200 +4960+0 { ForceFullCompositionPipeline=On }"
+      EndSection
+
+      Section "Screen"
+        Identifier "metaScreen"
+        Device "Card0"
+        DefaultDepth 24
+        Option "TwinView" "true"
+      EndSection
+  when: install_x11_tools and install_monitor_config
+
+- name: Install tools for openconnect
+  apt:
+    pkg:
+      - python3-click
+      - python3-keyring
+      - python3-pip
+      - python3-pyotp
+  when: install_openconnect
+
+- name: Install laptop tools
+  apt:
+    pkg:
+      - acpi
+      - acpid
+      - network-manager
+      - openconnect
+      - pm-utils
+      - stalonetray
+  when: install_laptop_tools
+
+- name: Upgrade current distribution (final upgrade)
+  apt:
+    upgrade: dist
+    update_cache: no
+    autoremove: yes

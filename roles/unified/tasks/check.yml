@@ -1,0 +1,48 @@
+---
+- name: Determine local username
+  become: false
+  local_action: command whoami
+  register: localuser
+
+- name: Remove possibly old host key by name
+  become: true
+  become_user: "{{ localuser.stdout }}"
+  local_action: command ssh-keygen -f ~/.ssh/known_hosts -R {{ inventory_hostname }}
+
+- name: Remove possibly old host key by IP
+  become: true
+  become_user: "{{ localuser.stdout }}"
+  local_action: shell ssh-keygen -f ~/.ssh/known_hosts -R {{ ansible_host }}
+
+- name: Get new host keys
+  become: true
+  become_user: "{{ localuser.stdout }}"
+  local_action: command ssh-keyscan -p {{ ansible_port }} -H {{ ansible_host }}
+  register: hostkeys
+
+- name: Write new host key to known hosts
+  become: true
+  become_user: "{{ localuser.stdout }}"
+  local_action: lineinfile dest="~/.ssh/known_hosts" line="{{ hostkeys.stdout }}"
+
+- name: Configure for sudo
+  set_fact: become_method=sudo
+  set_fact: ansible_become_method=sudo
+
+- name: Test become using sudo
+  command: whoami
+  register: command_output
+  ignore_errors: true
+
+- name: Use su
+  set_fact: become_method=su
+  set_fact: ansible_become_method=su
+  when: command_output is not defined or
+        command_output.rc is not defined or
+        command_output.rc != 0
+
+- name: Print methods
+  debug: msg="{{ ansible_host }}:{{ ansible_port }} with {{ ansible_become_method }}"
+
+- name: Test become
+  command: whoami

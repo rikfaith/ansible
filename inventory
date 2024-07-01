@@ -1,3 +1,6 @@
+# For pi wifi:
+# nmcli dev wifi connect private password Infinity2021
+
 laptops:
     hosts:
         pixie:
@@ -20,8 +23,45 @@ laptops:
         ansible_port: 993
         install_laptop_ssh: true
 
-# For pi wifi:
-# nmcli dev wifi connect private password Infinity2021
+desktops:
+    hosts:
+      silenus:
+        ansible_host: 10.42.93.47
+        br0port: eth2
+        br0ip: 10.42.93.47
+        br0gw: 10.42.93.1
+        eth1ip: 10.42.0.147
+        eth3ip: 10.42.11.47
+        install_grub_options: "nomodeset nofb video=vesafb:off"
+        install_laptop_ssh: false
+        using_devuan: true
+        using_debian: false
+        install_virt_tools: true
+        install_x11_tools: true
+        install_monitor_config: true
+        install_intel_driver: false
+        install_nvidia_driver: true
+        install_openconnect: true
+        install_laptop_tools: false
+        install_dual_boot: false
+        ntp_anonymous: false
+        ntp_local: true
+        ntp0: home2
+        ntp1: control0
+        ntp2: ntp.alephnull.com
+        ntp3: ntp.panpedia.org
+        install_faith: true
+        install_nutanix: true
+
+    vars:
+        ansible_port: 22
+        configured_port: 22
+        ansible_password: "{{ default.setup_password }}"
+        ansible_become_password: "{{ default.setup_password }}"
+        install_laptop_ssh: false
+        ntp0: ntp.panpedia.org
+        ntp1: ntp.alephnull.com
+
 storage:
     hosts:
         anna0:

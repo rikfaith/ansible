@@ -1,0 +1,32 @@
+---
+- name: Add custom aliases and bindings to global /etc/bash.bashrc
+  blockinfile:
+    dest: /etc/bash.bashrc
+    block: |
+      unset LC_ALL
+      export LANG=en_US.UTF-8
+      export LC_TIME=C
+      export LESS='diMfX'
+      alias ls='ls -a'
+      alias ll='ls -la'
+      alias df='df -h'
+      alias du='du -h'
+      bind '"\M-p": history-search-backward'
+      bind '"\ep": history-search-backward'
+      bind '"\M-n": history-search-forward'
+      bind '"\en": history-search-forward'
+
+# See "/var/cache/debconf/config.dat"
+- name: Use bash instead of dash for /bin/sh
+  debconf: name=dash/sh
+           question=dash/sh
+           vtype=boolean
+           value=false
+
+- name: Reconfigure dash
+  command: dpkg-reconfigure -f noninteractive dash
+
+- name: Make sure /bin/sh is bash
+  command: /bin/ln -sf bash sh
+  args:
+    chdir: /bin

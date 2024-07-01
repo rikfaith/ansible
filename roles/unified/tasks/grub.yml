@@ -1,0 +1,33 @@
+---
+- name: Configure grub defaults
+  lineinfile:
+    line: 'GRUB_DISABLE_OS_PROBER=false'
+    regexp: 'GRUB_DISABLE_OS_PROBER='
+    path: /etc/default/grub
+  notify: update-grub
+  when: install_dual_boot
+
+- name: Set grub flags
+  vars:
+    grubline: GRUB_CMDLINE_LINUX="audit=0 {{ install_grub_options }}"
+  block:
+
+  - name: Determine if grub change needed
+    lineinfile:
+      name: /etc/default/grub
+      line: "{{ grubline }}"
+      state: absent
+    check_mode: yes
+    changed_when: false
+    register: grub_state
+
+  - name: Update grub configuration
+    lineinfile:
+      dest: /etc/default/grub
+      regexp: GRUB_CMDLINE_LINUX=
+      line: "{{ grubline }}"
+    when: not grub_state.found
+
+  - name: Update grub
+    shell: update-grub
+    when: not grub_state.found

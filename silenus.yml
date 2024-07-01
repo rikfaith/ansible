@@ -1,0 +1,12 @@
+---
+- hosts: silenus
+  gather_facts: no
+  become: yes
+  become_method: su
+  environment:
+    PATH: /sbin:/usr/sbin:/bin:/usr/bin:"{{ ansible_env.PATH }}"
+  vars_files:
+    - default.yml
+    - passwords.yml
+  roles:
+    - unified

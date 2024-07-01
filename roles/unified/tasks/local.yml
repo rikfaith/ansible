@@ -1,0 +1,76 @@
+---
+
+- name: Copy .ssh files
+  copy:
+    src: "/home/faith/.ssh/{{ item }}"
+    dest: /home/faith/.ssh
+    owner: faith
+    group: faith
+    mode: 0600
+  with_items:
+  - config
+  - github
+  - github.pub
+  - gitlab
+  - gitlab.pub
+  - gitlab-trio
+  - gitlab-trio.pub
+  - id_ed25519
+  - id_ed25519.pub
+  - lukem
+  - lukem.pub
+  - urwen
+  - urwen.pub
+  when: install_faith
+
+- name: Copy .ssh files for Nutanix
+  copy:
+    src: "/home/faith/.ssh/{{ item }}"
+    dest: /home/faith/.ssh
+    owner: faith
+    group: faith
+    mode: 0600
+  with_items:
+  - nutanix-gerrit
+  - nutanix-gerrit.pub
+  when: install_faith
+
+- name: Use zsh and update /etc/group
+  user:
+    name: faith
+    shell: /bin/zsh
+    create_home: no
+    append: yes
+    groups: audio,dialout,cdrom,floppy,tape,video,kvm
+  when: install_faith
+
+- name: Activate zsh history
+  file:
+    path: /home/faith/.zhist
+    state: touch
+    mode: 0600
+    owner: faith
+    group: faith
+  when: install_faith
+
+- name: Checkout dotfiles2
+  git:
+    repo: 'git@rik.github.com:rikfaith/dotfiles2'
+    dest: /home/faith/dotfiles2
+    key_file: /home/faith/.ssh/github
+    accept_hostkey: yes
+  become: true
+  become_user: faith
+  when: install_faith
+
+- name: Install dotfiles2
+  command: "./bootstrap.py"
+  become: true
+  become_user: faith
+  args:
+    chdir: /home/faith/dotfiles2
+  when: install_faith
+
+- name: Reboot to get gids correct
+  reboot:
+  when: install_faith
