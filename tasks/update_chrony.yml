@@ -7,7 +7,7 @@
 
 - name: Update chrony configuration
   copy:
-    dest: /etc/chrony.conf
+    dest: /etc/chrony/chrony.conf
     content: |
       allow 10.42.93.0/24
       allow 10.42.11.0/24
@@ -16,6 +16,7 @@
       server {{ ntp1 }} iburst
       server {{ ntp2 }} iburst
       server {{ ntp3 }} iburst
+      local stratum 10 orphan
 
       driftfile /var/lib/chrony/chrony.drift
       rtcfile /var/lib/chrony/rtc

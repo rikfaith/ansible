@@ -8,6 +8,7 @@
       - bind9-utils
       - calibre
       - cmake
+      - cpuid
       - crypt++el
       - cryptsetup-bin
       - cups
@@ -40,7 +41,9 @@
       - imagemagick
       - iperf3
       - ipmitool
+      - jc
       - jnettop
+      - jq
       - lftp
       - libimage-exiftool-perl
       - libkf5wallet-bin
@@ -54,6 +57,7 @@
       - mbw
       - mdadm
       - mediainfo
+      - mt-st
       - mypy
       - ncal
       - netperf
@@ -77,6 +81,7 @@
       - python3-dateparser
       - python3-ephem
       - python3-keyring
+      - python3-pylatex
       - python3-libtorrent
       - python3-opencv
       - python3-paramiko
@@ -93,6 +98,7 @@
       - sshpass
       - smartmontools
       - snmp
+      - stenc
       - strace
       - sysstat
       - sysv-rc-conf

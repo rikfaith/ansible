@@ -1,5 +1,5 @@
 ---
-- hosts: anna0
+- hosts: anna1
   gather_facts: no
   become: yes
   become_method: su
