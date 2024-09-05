@@ -22,39 +22,32 @@ laptops:
     vars:
         ansible_port: 993
         install_laptop_ssh: true
+        grub_options: "audit=0"
 
 desktops:
     hosts:
       silenus:
         ansible_host: 10.42.93.47
+        ansible_password: "{{ default.setup_password }}"
+        ansible_become_password: "{{ default.setup_password }}"
         br0port: eth2
         br0ip: 10.42.93.47
         br0gw: 10.42.93.1
         eth1ip: 10.42.0.147
         eth3ip: 10.42.11.47
-        install_grub_options: "nomodeset nofb video=vesafb:off"
-        install_laptop_ssh: false
-        using_devuan: true
-        using_debian: false
-        install_virt_tools: true
-        install_x11_tools: true
-        install_monitor_config: true
-        install_intel_driver: false
-        install_nvidia_driver: true
-        install_openconnect: true
-        install_laptop_tools: false
-        install_dual_boot: false
-        ntp_anonymous: false
-        ntp_local: true
-        install_faith: true
-        install_nutanix: true
+        grub_options: "audit=0 nomodeset nofb video=vesafb:off"
+        rsyncd_mount: /home
+        dnsmasq_server: 10.42.93.1
+        dnsmasq_forward: alephnull.com
+        dnsmasq_reverse: 42.10.in-addr.arpa
+        dnsmasq_remote0: 10.40.64.16
+        dnsmasq_remote1: 10.22.64.16
+        dnsmasq_domain0: .nutanix.com
+        dnsmasq_domain1: .ntnxdpro.com
 
     vars:
         ansible_port: 22
         configured_port: 22
-        ansible_password: "{{ default.setup_password }}"
-        ansible_become_password: "{{ default.setup_password }}"
-        install_laptop_ssh: false
         ntp0: 10.42.1.3
         ntp1: 10.42.1.33
         ntp2: 10.42.93.1
@@ -137,6 +130,7 @@ storage:
         ntp3: 10.42.0.2
         control0: control0-storage
         br0port: eth0
+        grub_options: "audit=0"
 
 nutanix:
     hosts:
@@ -147,3 +141,4 @@ nutanix:
     vars:
         ansible_port: 22
         br0port: eth0
+        grub_options: "audit=0"

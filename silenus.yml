@@ -8,5 +8,35 @@
   vars_files:
     - default.yml
     - passwords.yml
-  roles:
-    - unified
+  vars:
+    - using_devuan: true
+    - install_unstable: true
+    - install_local_time_source: true
+    - install_silenus_x11_config: true
+    - install_nvidia: true
+
+  tasks:
+    - import_tasks: tasks/get_ssh_port.yml
+    - import_tasks: tasks/update_ssh_local_keys.yml
+    - import_tasks: tasks/get_facts.yml
+    - import_tasks: tasks/update_apt.yml
+    - import_tasks: tasks/update_grub.yml
+    - import_tasks: tasks/update_br0_eth1_eth3_network.yml
+    - import_tasks: tasks/update_sudo.yml
+    - import_tasks: tasks/update_distribution.yml
+    - import_tasks: tasks/update_chrony.yml
+    - import_tasks: tasks/update_keymap.yml
+    - import_tasks: tasks/update_sysctl.yml
+    - import_tasks: tasks/update_crontab.yml
+    - import_tasks: tasks/update_bashrc.yml
+    - import_tasks: tasks/update_dash.yml
+    - import_tasks: tasks/update_ssh_remote_keys.yml
+    - import_tasks: tasks/update_tools_general.yml
+    - import_tasks: tasks/update_tools_desktop.yml
+    - import_tasks: tasks/update_tools_text.yml
+    - import_tasks: tasks/update_tools_virtualization.yml
+    - import_tasks: tasks/update_rsyncd.yml
+    - import_tasks: tasks/update_ssh_remote_keys.yml
+    - import_tasks: tasks/update_user_login.yml
+    - import_tasks: tasks/update_dnsmasq.yml
+    - import_tasks: tasks/update_zoom.yml

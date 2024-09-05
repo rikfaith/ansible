@@ -35,11 +35,13 @@
   args:
     chdir: "/home/{{ default.nonroot_user }}/dotfiles2"
 
-- name: Use zsh
+- name: Use zsh and update /etc/group
   user:
     name: "{{ default.nonroot_user }}"
     shell: /bin/zsh
     create_home: no
+    append: yes
+    groups: audio,dialout,cdrom,floppy,tape,video,kvm
 
 - name: Activate zsh history
   file:

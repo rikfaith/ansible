@@ -1,7 +1,7 @@
 ---
 - name: Update grub configuration
   vars:
-    grubline: GRUB_CMDLINE_LINUX="audit=0"
+    grubline: GRUB_CMDLINE_LINUX="{{ grub_options }}"
   block:
 
   - name: Determine if grub change needed

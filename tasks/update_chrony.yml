@@ -9,8 +9,7 @@
   copy:
     dest: /etc/chrony/chrony.conf
     content: |
-      allow 10.42.93.0/24
-      allow 10.42.11.0/24
+      allow 10.42.0.0/16
 
       server {{ ntp0 }} iburst
       server {{ ntp1 }} iburst

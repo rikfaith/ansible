@@ -1,0 +1,22 @@
+---
+- name: Install dnsmasq
+  apt:
+    pkg:
+      dnsmasq
+
+- name: Install /etc/dnsmasq.d/localhost.conf
+  copy:
+    dest: /etc/dnsmasq.d/localhost.conf
+    content: |
+      server={{ dnsmasq_server }}
+
+- name: Update /etc/dnsmasq.conf
+  blockinfile:
+    dest: /etc/dnsmasq.conf
+    block: |
+      server=/{{ dnsmasq_forward }}/{{ dnsmasq_server }}
+      server=/{{ dnsmasq_reverse }}/{{ dnsmasq_server }}
+      server=/{{ dnsmasq_domain0 }}/{{ dnsmasq_remote0 }}
+      server=/{{ dnsmasq_domain0 }}/{{ dnsmasq_remote1 }}
+      server=/{{ dnsmasq_domain1 }}/{{ dnsmasq_remote0 }}
+      server=/{{ dnsmasq_domain1 }}/{{ dnsmasq_remote1 }}

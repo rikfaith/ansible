@@ -1,0 +1,31 @@
+---
+- name: Install TeX
+  apt:
+    pkg:
+      - texlive-bibtex-extra
+      - texlive-extra-utils
+      - texlive-fonts-extra
+      - texlive-humanities
+      - texlive-lang-all
+      - texlive-lang-other
+      - texlive-xetex
+
+- name: Install extra text and font tools
+  apt:
+    pkg:
+      - t1utils
+      - tesseract-ocr
+      - tesseract-ocr-grc
+      - tesseract-ocr-heb
+
+- name: Install extra fonts
+  apt:
+    pkg:
+      - fonts-dejavu
+      - fonts-liberation
+      - fonts-noto
+      - fonts-sil-ezra
+      - fonts-sil-galatia
+      - fonttools
+      - ttf-bitstream-vera
+      - ttf-xfree86-nonfree
