@@ -5,6 +5,5 @@ default:
   authorized_key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOC9EU/qkmrREnpuhmMeW0lAADMQda7pGqFpRdfsXvZ5 faith@alephnull.com-20200325"
   nonroot_user: "faith"
   ubvm_user: "rickard.faith"
-  setup_password: "foobar"
+  setup_password: "the.red.fox.2024"
   dotfiles_repo: "git@rik.github.com:rikfaith/dotfiles2"
-
