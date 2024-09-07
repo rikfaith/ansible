@@ -8,22 +8,14 @@
     mode: 0600
   with_items:
   - config
-  - github
-  - github.pub
-  - gitlab
-  - gitlab.pub
   - id_ed25519
   - id_ed25519.pub
-  - lukem
-  - lukem.pub
-  - urwen
-  - urwen.pub
 
 - name: Checkout dotfiles2
   git:
     repo: "{{ default.dotfiles_repo }}"
     dest: "/home/{{ default.nonroot_user }}/dotfiles2"
-    key_file: "/home/{{ default.nonroot_user }}/.ssh/github"
+    key_file: "/home/{{ default.nonroot_user }}/.ssh/id_ed25519"
     accept_hostkey: yes
   become: true
   become_user: "{{ default.nonroot_user }}"
