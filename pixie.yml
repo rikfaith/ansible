@@ -6,7 +6,7 @@
   environment:
     PATH: /sbin:/usr/sbin:"{{ ansible_env.PATH }}"
   vars_files:
-    - default.yml
+    - passwords.yml
   vars:
     - install_laptop_tools: true
     - install_x11_tools: true

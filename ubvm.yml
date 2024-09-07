@@ -7,7 +7,6 @@
   environment:
     PATH: /sbin:/usr/sbin:"{{ ansible_env.PATH }}"
   vars_files:
-    - default.yml
     - passwords.yml
   vars:
     - ansible_python_interpreter: auto_silent

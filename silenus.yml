@@ -6,7 +6,6 @@
   environment:
     PATH: /sbin:/usr/sbin:/bin:/usr/bin:"{{ ansible_env.PATH }}"
   vars_files:
-    - default.yml
     - passwords.yml
   vars:
     - using_devuan: true
