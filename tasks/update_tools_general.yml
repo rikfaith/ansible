@@ -72,7 +72,6 @@
       - openvpn
       - parted
       - pdftk
-      - pep8
       - perf-tools-unstable
       - psutils
       - pylama

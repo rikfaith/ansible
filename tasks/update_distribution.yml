@@ -36,8 +36,8 @@
   copy:
     dest: /etc/apt/sources.list
     content: |
-      deb http://ftp.us.debian.org/debian/ sid main contrib non-free
-      deb-src http://ftp.us.debian.org/debian/ sid main contrib non-free
+      deb http://ftp.us.debian.org/debian/ sid main contrib non-free non-free-firmware
+      deb-src http://ftp.us.debian.org/debian/ sid main contrib non-free non-free-firmware
   when: using_debian is defined and using_debian == True
         and install_unstable is defined and install_unstable == True
 
@@ -45,8 +45,9 @@
   copy:
     dest: /etc/apt/sources.list
     content: |
-      deb http://deb.devuan.org/merged ceres main contrib non-free
-      deb-src http://deb.devuan.org/merged ceres main contrib non-free
+      deb http://deb.devuan.org/merged ceres main contrib non-free non-free-firmware
+      deb-src http://deb.devuan.org/merged ceres main contrib non-free non-free-firmware
+      deb http://deb.devuan.org/merged testing main contrib non-free non-free-firmware
   when: using_devuan is defined and using_devuan == True
         and install_unstable is defined and install_unstable == True
 
