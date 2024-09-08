@@ -1,0 +1,45 @@
+---
+- name: Installing iptables
+  apt:
+    pkg: iptables
+    update-cache: no
+    autoremove: yes
+
+- name: Installing sshguard
+  apt:
+    pkg: iptables
+    update-cache: no
+    autoremove: yes
+
+- name: Updating sshguard whitelist
+  copy:
+    dest: /etc/sshguard/whitelist
+    content: |
+      # Address blocks in CIDR notation
+      127.0.0.0/8
+      ::1/128
+      10.0.0.0/8
+      {{ whitelistip0 }}/32
+
+- name: Increase sshguard BLOCK_TIME
+  lineinfile:
+    dest: /etc/sshguard/sshguard.conf
+    regesp: BLOCK_TIME=
+    line: "BLOCK_TIME=600"
+
+- name: Increase sshguard DETECTION_TIME
+  lineinfile:
+    dest: /etc/sshguard/sshguard.conf
+    regesp: DETECTION_TIME=
+    line: "DETECTION_TIME=86400"
+
+- name: Adding sshguard chain
+  shell: iptables -N sshguard
+
+- name: Adding sshguard chain to INPUT table
+  shell: iptables -A INPUT -j sshguard
+
+- name: Restarting sshguard with new configuration files
+  sysvinit:
+    name: sshguard
+    state: restarted

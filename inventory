@@ -38,7 +38,7 @@ desktops:
         alt1port: eth3
         alt1ip: 10.42.11.47
         grub_options: "audit=0 nomodeset nofb video=vesafb:off"
-        rsyncd_mount: /home
+        rsyncd_mount: home
         dnsmasq_server: 10.42.93.1
         dnsmasq_forward: alephnull.com
         dnsmasq_reverse: 42.10.in-addr.arpa
@@ -54,6 +54,7 @@ desktops:
         ntp1: 10.42.1.33
         ntp2: 10.42.93.1
         ntp3: 10.42.0.2
+        whitelistip0: 199.48.130.2
 
 storage:
     hosts:
@@ -76,7 +77,7 @@ storage:
           br0port: eth0
           alt0port: eth1
           alt0ip: 10.42.11.74
-          rsyncd_mount: anna10
+          rsyncd_mount: anna2
         beast:
           ansible_host: 10.42.93.90
           ansible_password: "{{ default.setup_password }}"
@@ -86,6 +87,7 @@ storage:
           br0port: eth2
           alt0port: eth3
           alt0ip: 10.42.11.90
+          rsyncd_mount: stage
         thoth:
           ansible_host: 10.42.93.91
           ansible_password: "{{ default.setup_password }}"
@@ -137,6 +139,7 @@ storage:
         control0: control0-storage
         br0port: eth0
         grub_options: "audit=0"
+        rsyncd_mount: tmp
 
 nutanix:
     hosts:

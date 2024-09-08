@@ -68,6 +68,7 @@
       - oathtool
       - openvpn
       - parted
+      - pcm
       - pdftk
       - perf-tools-unstable
       - psutils
