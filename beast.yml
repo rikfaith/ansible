@@ -7,25 +7,26 @@
     PATH: /sbin:/usr/sbin:"{{ ansible_env.PATH }}"
   vars_files:
     - passwords.yml
-  vars:
-    - install_laptop_tools: false
-    - install_laptop_ssh: false
-    - install_x11_tools: false
-    - install_x11_tools_ubuntu: false
-    - install_intel_driver: false
-    - install_nvidia_driver: false
-    - install_virt_tools: false
-    - install_dual_boot: false
-    - install_torrent_tools: true
-    - ntp_local: true
-    - install_faith: true
-    - install_rpi: false
-    - install_dual_boot: false
-    - using_debian: false
-    - using_devuan: true
-    - using_ubuntu: false
-    - eth3_br0_network: true
-
-  roles:
-    - early
-    - common
+  tasks:
+    - import_tasks: tasks/get_ssh_port.yml
+    - import_tasks: tasks/update_ssh_local_keys.yml
+    - import_tasks: tasks/get_facts.yml
+    - import_tasks: tasks/update_apt.yml
+    - import_tasks: tasks/update_grub.yml
+    - import_tasks: tasks/update_network.yml
+    - import_tasks: tasks/update_sudo.yml
+    - import_tasks: tasks/update_distribution.yml
+    - import_tasks: tasks/update_chrony.yml
+    - import_tasks: tasks/update_keymap.yml
+    - import_tasks: tasks/update_sysctl.yml
+    - import_tasks: tasks/update_crontab.yml
+    - import_tasks: tasks/update_bashrc.yml
+    - import_tasks: tasks/update_dash.yml
+    - import_tasks: tasks/update_ssh_remote_keys.yml
+    - import_tasks: tasks/update_tools_general.yml
+    - import_tasks: tasks/update_tools_virtualization.yml
+    - import_tasks: tasks/update_rsyncd.yml
+    - import_tasks: tasks/update_ssh_remote_keys.yml
+    - import_tasks: tasks/update_user_login.yml
+    - import_tasks: tasks/update_dnsmasq.yml
+    - import_tasks: tasks/update_zoom.yml

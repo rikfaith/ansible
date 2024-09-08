@@ -33,7 +33,7 @@
     shell: /bin/zsh
     create_home: no
     append: yes
-    groups: audio,dialout,cdrom,floppy,tape,video,kvm
+    groups: audio,cdrom,dialout,floppy,kvm,lp,sudo,tape,video
 
 - name: Activate zsh history
   file:
@@ -42,3 +42,22 @@
     mode: 0600
     owner: "{{ default.nonroot_user }}"
     group: "{{ default.nonroot_user }}"
+
+- name: Supply vimrc for root
+  copy:
+    dest: "/root/.vimrc"
+    content: |
+      syntax on
+      if v:version > 720
+        set mouse=r
+      endif
+
+- name: Update non-root user password
+  user:
+    name: "{{ default.nonroot_user }}"
+    password: "{{ default.nonroot_password }}"
+
+- name: Update root user password
+  user:
+    name: "root"
+    password: "{{ default.root_password }}"

@@ -10,14 +10,26 @@
               regexp='{{ item.regexp }}'
               line='{{ item.line }}'
   with_items:
-    - { regexp: 'PermitRootLogin', line: 'PermitRootLogin yes' }
+    - { regexp: 'PermitRootLogin', line: 'PermitRootLogin prohibit-password' }
     - { regexp: 'Port', line: 'Port {{ configured_port}}' }
+  register: statea
+
+- name: Update remote security profile for sshd_config
+  blockinfile:
+    dest: /etc/ssh/sshd_config
+    block: |
+      PermitEmptyPasswords no
+      Match Address *,!10.42.0.0/16,!127.0.0.1,!::1
+        PermitRootLogin no
+        PasswordAuthentication no
+        AllowUsers {{ default.nonroot_user }}
+  register: stateb
 
 - name: Reload ssh
   sysvinit:
     name: ssh
     state: restarted
-  when: ansible_port != configured_port
+  when: statea.changed or stateb.changed
 
 - name: Set ansible_port
   set_fact:

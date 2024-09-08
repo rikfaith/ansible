@@ -1,0 +1,7 @@
+---
+- name: Remove samba
+  apt:
+    state: absent
+    purge: true
+    pkg:
+      - samba

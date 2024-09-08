@@ -20,7 +20,7 @@
     - import_tasks: tasks/get_facts.yml
     - import_tasks: tasks/update_apt.yml
     - import_tasks: tasks/update_grub.yml
-    - import_tasks: tasks/update_br0_eth1_eth3_network.yml
+    - import_tasks: tasks/update_network_silenus.yml
     - import_tasks: tasks/update_sudo.yml
     - import_tasks: tasks/update_distribution.yml
     - import_tasks: tasks/update_chrony.yml
@@ -30,6 +30,7 @@
     - import_tasks: tasks/update_bashrc.yml
     - import_tasks: tasks/update_dash.yml
     - import_tasks: tasks/update_ssh_remote_keys.yml
+    - import_tasks: tasks/remove_unnecessary_tools.yml
     - import_tasks: tasks/update_tools_general.yml
     - import_tasks: tasks/update_tools_desktop.yml
     - import_tasks: tasks/update_tools_text.yml

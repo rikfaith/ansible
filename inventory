@@ -33,8 +33,10 @@ desktops:
         br0port: eth2
         br0ip: 10.42.93.47
         br0gw: 10.42.93.1
-        eth1ip: 10.42.0.147
-        eth3ip: 10.42.11.47
+        alt0port: eth1
+        alt0ip: 10.42.0.147
+        alt1port: eth3
+        alt1ip: 10.42.11.47
         grub_options: "audit=0 nomodeset nofb video=vesafb:off"
         rsyncd_mount: /home
         dnsmasq_server: 10.42.93.1
@@ -51,7 +53,7 @@ desktops:
         ntp0: 10.42.1.3
         ntp1: 10.42.1.33
         ntp2: 10.42.93.1
-        ntp3: 127.127.1.0
+        ntp3: 10.42.0.2
 
 storage:
     hosts:
@@ -62,7 +64,8 @@ storage:
           br0ip: 10.42.93.73
           br0gw: 10.42.93.1
           br0port: eth0
-          eth1ip: 10.42.11.73
+          alt0port: eth1
+          alt0ip: 10.42.11.73
           rsyncd_mount: anna0
         anna1:
           ansible_host: 10.42.93.74
@@ -71,8 +74,18 @@ storage:
           br0ip: 10.42.93.74
           br0gw: 10.42.93.1
           br0port: eth0
-          eth1ip: 10.42.11.74
+          alt0port: eth1
+          alt0ip: 10.42.11.74
           rsyncd_mount: anna10
+        beast:
+          ansible_host: 10.42.93.90
+          ansible_password: "{{ default.setup_password }}"
+          ansible_become_password: "{{ default.setup_password }}"
+          br0gw: 10.42.93.1
+          br0ip: 10.42.93.90
+          br0port: eth2
+          alt0port: eth3
+          alt0ip: 10.42.11.90
         thoth:
           ansible_host: 10.42.93.91
           ansible_password: "{{ default.setup_password }}"
@@ -80,7 +93,8 @@ storage:
           br0ip: 10.42.93.91
           br0gw: 10.42.93.1
           br0port: eth0
-          eth1ip: 10.42.11.91
+          alt0port: eth1
+          eth0ip: 10.42.11.91
           rsyncd_mount: thoth
         node2:
           ansible_host: 10.42.93.82
@@ -89,8 +103,8 @@ storage:
           br0ip: 10.42.93.82
           br0gw: 10.42.93.1
           br0port: eth4
-          altport: eth5
-          altportip: 10.42.11.82
+          alt0port: eth5
+          alt0ip: 10.42.11.82
           rsyncd_mount: local
         home2:
             ansible_user: pi
@@ -111,14 +125,6 @@ storage:
           eth0ip: 10.42.93.70
           eth0gw: 10.42.93.1
           br0ip: 10.42.11.70
-          br0port: eth2
-        beast:
-          ansible_host: 10.42.93.90
-          ansible_password: "{{ default.setup_password }}"
-          ansible_become_password: "{{ default.setup_password }}"
-          eth3ip: 10.42.11.90
-          br0gw: 10.42.93.1
-          br0ip: 10.42.93.90
           br0port: eth2
 
     vars:
