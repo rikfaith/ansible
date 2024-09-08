@@ -25,7 +25,7 @@
 
 # We might have been using /usr/bin/python3.* which was upgraded.
 - name: Change python interpreter
-  set_fact: ansible_interpreter_python="/usr/bin/python3"
+  set_fact: ansible_python_interpreter="/usr/bin/python3"
   when: aptpython.changed
 
 - name: Reboot
@@ -66,7 +66,7 @@
 
 # We might have been using /usr/bin/python3.* which was upgraded.
 - name: Change python interpreter
-  set_fact: ansible_interpreter_python="/usr/bin/python3"
+  set_fact: ansible_python_interpreter="/usr/bin/python3"
   when: aptunstable.changed
 
 - name: Reboot
