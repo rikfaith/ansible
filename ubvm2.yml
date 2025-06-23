@@ -1,0 +1,17 @@
+---
+- hosts: rickard-faith.r8.ubvm.nutanix.com
+  gather_facts: no
+  become: yes
+  become_method: sudo
+  become_user: root
+  environment:
+    PATH: /sbin:/usr/sbin:"{{ ansible_env.PATH }}"
+  vars_files:
+    - passwords.yml
+  vars:
+    ansible_python_interpreter: auto_silent
+
+  tasks:
+    - import_tasks: tasks/get_ssh_port.yml
+    - import_tasks: tasks/update_ssh_local_keys.yml
+    - import_tasks: tasks/get_facts.yml

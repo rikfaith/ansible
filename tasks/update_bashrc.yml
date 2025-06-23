@@ -1,5 +1,5 @@
 ---
-- name: Add custom aliase and bindings to global /etc/bash.bashrc
+- name: Add custom aliases and bindings to global /etc/bash.bashrc
   blockinfile:
     dest: /etc/bash.bashrc
     block: |
@@ -16,5 +16,5 @@
       bind '"\M-n": history-search-forward'
       bind '"\en": history-search-forward'
       HISTTIMEFORMAT="%F %T "
-      HISTFILESIZE=
-      HISTSIZE=
+      HISTFILESIZE=1000000
+      HISTSIZE=1000000

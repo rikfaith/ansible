@@ -1,5 +1,5 @@
 ---
-- name: Install bridge utilities
+- name: Install bridge utilities DEPRECATED USE update_network.yml INSTEAD
   apt:
     pkg: bridge-utils
     state: present

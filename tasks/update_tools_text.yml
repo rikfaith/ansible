@@ -8,6 +8,7 @@
       - texlive-humanities
       - texlive-lang-all
       - texlive-lang-other
+      - texlive-latex-extra
       - texlive-xetex
 
 - name: Install extra text and font tools
@@ -21,9 +22,11 @@
 - name: Install extra fonts
   apt:
     pkg:
+      - fonts-adf-baskervald
       - fonts-dejavu
       - fonts-liberation
       - fonts-noto
+      - fonts-noto-core
       - fonts-sil-ezra
       - fonts-sil-galatia
       - fonttools

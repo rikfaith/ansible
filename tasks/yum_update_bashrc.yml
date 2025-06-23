@@ -1,0 +1,19 @@
+---
+- name: Add custom aliases and bindings to global /etc/bashrc
+  blockinfile:
+    dest: /etc/bashrc
+    block: |
+      unset LC_ALL
+      export LANG=en_US.UTF-8
+      export LC_TIME=C
+      export LESS='diMfX'
+      alias ls='ls -a'
+      alias ll='ls -la'
+      alias df='df -h'
+      alias du='du -h'
+      if ! shopt -oq posix; then
+        bind '"\M-p": history-search-backward'
+        bind '"\ep": history-search-backward'
+        bind '"\M-n": history-search-forward'
+        bind '"\en": history-search-forward'
+      fi

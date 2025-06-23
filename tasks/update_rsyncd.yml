@@ -21,6 +21,7 @@
       use chroot = yes
       hosts allow = 10.42.11.0/24
       hosts deny = *
+      dont compress = *
 
       [{{ rsyncd_mount }}]
         path = /{{ rsyncd_mount }}

@@ -9,7 +9,7 @@
   become_user: "{{ localuser.stdout }}"
   local_action: command ssh-keygen -f ~/.ssh/known_hosts -R {{ inventory_hostname }}
 
-- name: Get IP of remote hose
+- name: Get IP of remote host
   become: true
   become_user: "{{ localuser.stdout }}"
   local_action: shell host {{ inventory_hostname }} | gawk '{print $4}'

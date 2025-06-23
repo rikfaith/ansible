@@ -6,4 +6,5 @@
       - libvirt-daemon
       - libvirt-daemon-system-sysv
       - virt-top
+      - virt-viewer
       - vmdb2

@@ -1,0 +1,37 @@
+---
+- name: Install common tools
+  yum:
+    name:
+      - autoconf
+      - automake
+      - bc
+      - bind
+      - bind-utils
+      - curl
+      - glib-devel
+      - golang
+      - htop
+      - ImageMagick
+      - jq
+      - lftp
+      - libstdc++-devel
+      - libtool
+      - lsscsi
+      - make
+      - net-tools
+      - nmap
+      - pkgconfig
+      - poetry
+      - protoc
+      - python39
+      - python3.11
+      - python3.11-pip
+      - sshpass
+      - sysstat
+      - telnet
+      - tmux
+      - units
+      - unzip
+      - vnstat
+      - zsh
+    state: latest

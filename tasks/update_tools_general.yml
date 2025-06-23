@@ -6,6 +6,7 @@
       - alsa-utils
       - bc
       - bind9-utils
+      - bsdgames
       - calibre
       - cmake
       - cpuid
@@ -24,23 +25,28 @@
       - elpa-editorconfig
       - elpa-f
       - elpa-go-mode
-      - elpa-jedi
       - elpa-lsp-mode
       - elpa-s
       - elpa-xcscope
       - enscript
       - emacs
+      - ethtool
       - evince
       - ffmpeg
       - gawk
+      - gphoto2
       - git
+      - git-lfs
+      - gnuplot
       - htop
       - imagemagick
+      - intel-microcode
       - iperf3
       - ipmitool
       - jc
       - jnettop
       - jq
+      - lbzip2
       - lftp
       - libimage-exiftool-perl
       - libkf5wallet-bin
@@ -52,6 +58,7 @@
       - lvm2
       - m4
       - mbw
+      - mcrypt
       - mdadm
       - mediainfo
       - mt-st
@@ -67,10 +74,13 @@
       - nvme-cli
       - oathtool
       - openvpn
+      - p7zip-full
       - parted
       - pcm
       - pdftk
       - perf-tools-unstable
+      - pipx
+      - printer-driver-postscript-hp
       - psutils
       - pylama
       - pylint
@@ -82,8 +92,8 @@
       - python3-libtorrent
       - python3-opencv
       - python3-paramiko
-      - python3-pep8
       - python3-pip
+      - python3-poetry
       - python3-protobuf
       - python3-pyotp
       - python3-pyzbar
@@ -108,6 +118,7 @@
       - vmdb2
       - vnstat
       - whois
+      - wtmpdb
       - xz-utils
       - zarchive-tools
       - zbar-tools

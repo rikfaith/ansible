@@ -1,0 +1,26 @@
+---
+- hosts: rickard-faith-1.r8.ubvm.nutanix.com
+  gather_facts: no
+  become: yes
+  become_method: sudo
+  become_user: root
+  environment:
+    PATH: /sbin:/usr/sbin:"{{ ansible_env.PATH }}"
+  vars_files:
+    - passwords.yml
+  vars:
+    ansible_python_interpreter: auto_silent
+
+  tasks:
+    - import_tasks: tasks/get_ssh_port.yml
+    - import_tasks: tasks/update_ssh_local_keys.yml
+    - import_tasks: tasks/get_facts.yml
+
+# sudo yum groupinstall 'Development Tools'
+# Edit /etc/yum.repos.d/ and set enabled=1 for:
+# Rocky-PowerTools.repo:enabled=1
+# Rocky-Extras.repo:enabled=1
+# Then manually:
+# sudo pip3 install pipx
+# pipx install poetry
+# sudo yum install autoconf automake bc bind bind-utils curl golang htop ImageMagick jq lftp libstdc++-devel libtool lsscsi make net-tools nmap pkgconfig python39 python3.11 python3.11-pip sshpass sysstat telnet tmux units unzip vnstat zsh

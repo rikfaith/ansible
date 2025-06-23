@@ -1,0 +1,40 @@
+---
+- name: Install .netrc
+  copy:
+    dest: /home/rickard.faith/.netrc
+    content: |
+      # MAKE THIS CONTENT BE A SECRET
+
+- name: Set mode for .netrc
+  file:
+    path: "/home/rickard.faith/.netrc"
+    state: touch
+    mode: 0600
+
+- name: Remove xgear
+  file:
+    path: "/home/{{ default.ubvm_user }}/xgear"
+    state: absent
+
+- name: Make xgear directory
+  become: true
+  become_user: "{{ default.ubvm_user }}"
+  file:
+    path: "/home/{{ default.ubvm_user }}/xgear"
+    state: directory
+    mode: "0755"
+
+- name: Get xgear tarball
+  become: true
+  become_user: "{{ default.ubvm_user }}"
+  get_url:
+    url: "http://artifactory.dyn.nutanix.com:8081/artifactory/xgear-generic-release/latest.tar.gz"
+    dest: "/home/{{ default.ubvm_user }}/xgear"
+
+- name: Unarchive xgear
+  become: true
+  become_user: "{{ default.ubvm_user }}"
+  unarchive:
+    src: "/home/{{ default.ubvm_user }}/xgear/latest.tar.gz"
+    dest: "/home/{{ default.ubvm_user }}/xgear"
+    copy: no

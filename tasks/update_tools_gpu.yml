@@ -1,0 +1,54 @@
+---
+  - name: Get latest kernel version
+    shell: dpkg --list | fgrep linux-image | sed 's,.*linux-image-,,' | sed 's, .*,,' | grep '^[0-9]' | sort -V | tail -1
+    register: kernver
+
+  - name: Install kernel headers
+    apt:
+      pkg: linux-headers-{{ kernver.stdout }}
+      state: present
+
+  - name: Fetch nvidia repo keys
+    shell: wget https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/cuda-keyring_1.1-1_all.deb
+
+  - name: Install nvidia repo keys
+    shell: dpkg -i cuda-keyring_1.1-1_all.deb
+
+  - name: Update repo information
+    command: apt-get update
+
+  - name: Update distribution
+    apt:
+      upgrade: dist
+      update_cache: no
+      autoremove: yes
+
+  - name: Install pahole
+    apt:
+      pkg: pahole
+      state: present
+
+  - name: Install nvidia-driver
+    apt:
+      pkg: nvidia-driver
+      state: present
+
+  - name: Install libnvidia-ml1
+    apt:
+      pkg: libnvidia-ml1
+      state: present
+
+  - name: Install nvidia-driver-cuda
+    apt:
+      pkg: nvidia-driver-cuda
+      state: present
+
+  - name: Install cuda-toolkit
+    apt:
+      pkg: cuda-toolkit
+      state: present
+
+  - name: Install nvtop
+    apt:
+      pkg: nvtop
+      state: present

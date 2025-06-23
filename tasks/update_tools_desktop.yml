@@ -43,6 +43,9 @@
 - name: Install desktop (and X11) tools
   apt:
     pkg:
+      - autoconf
+      - autocutsel
+      - btcheck
       - chromium
       - dclock
       - evince
@@ -56,9 +59,11 @@
       - libreoffice
       - libtiff-dev
       - libx11-dev
+      - libxrandr-dev
       - libxt-dev
       - mesa-utils
       - mplayer
+      - signal-desktop
       - ssh-askpass-fullscreen
       - t1-xfree86-nonfree
       - telegram-desktop

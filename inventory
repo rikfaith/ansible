@@ -56,6 +56,66 @@ desktops:
         ntp3: 10.42.0.2
         whitelistip0: 199.48.130.2
 
+# For pi wifi:
+# nmcli dev wifi connect private password Infinity2021
+
+laptops:
+    hosts:
+        pixie:
+          br0port: eth0
+
+        ariel:
+          br0port: eth0
+
+        puck-debian:
+          ansible_host: 10.42.93.111
+          ansible_password: "{{ passwords.rickard_faith_password }}"
+          ansible_become_password: "{{ passwords.rickard_faith_password }}"
+          br0port: eth
+        puck-compute:
+          ansible_host: 10.42.93.111
+          br0port: eth
+          ansible_password: "{{ passwords.puck_password }}"
+          ansible_become_password: "{{ passwords.puck_password }}"
+    vars:
+        ansible_port: 993
+        install_laptop_ssh: true
+        grub_options: "audit=0"
+
+compute:
+    hosts:
+        thoth:
+          ansible_host: 10.42.93.91
+          ansible_password: "{{ default.setup_password }}"
+          ansible_become_password: "{{ default.setup_password }}"
+          br0ip: 10.42.93.91
+          br0gw: 10.42.93.1
+          br0port: eth0
+          alt0port: eth1
+          alt0ip: 10.42.11.91
+          rsyncd_mount: thoth
+        node0:
+          ansible_host: 10.42.93.80
+          ansible_password: "{{ default.setup_password }}"
+          ansible_become_password: "{{ default.setup_password }}"
+          br0ip: 10.42.93.80
+          br0gw: 10.42.93.1
+          br0port: eth0
+          alt0port: eth1
+          alt0ip: 10.42.11.80
+          rsyncd_mount: node0
+    vars:
+        ansible_port: 22
+        configured_port: 22
+        ntp0: 10.42.1.3
+        ntp1: 10.42.1.33
+        ntp2: 10.42.93.1
+        ntp3: 10.42.0.2
+        control0: control0-storage
+        br0port: eth0
+        grub_options: "audit=0"
+        rsyncd_mount: tmp
+
 storage:
     hosts:
         anna0:
@@ -88,16 +148,6 @@ storage:
           alt0port: eth3
           alt0ip: 10.42.11.90
           rsyncd_mount: stage
-        thoth:
-          ansible_host: 10.42.93.91
-          ansible_password: "{{ default.setup_password }}"
-          ansible_become_password: "{{ default.setup_password }}"
-          br0ip: 10.42.93.91
-          br0gw: 10.42.93.1
-          br0port: eth0
-          alt0port: eth1
-          eth0ip: 10.42.11.91
-          rsyncd_mount: thoth
         node2:
           ansible_host: 10.42.93.82
           ansible_password: "{{ default.setup_password }}"
@@ -108,6 +158,17 @@ storage:
           alt0port: eth5
           alt0ip: 10.42.11.82
           rsyncd_mount: local
+        control0:
+          ansible_host: 10.42.0.2
+          ansible_password: "{{ default.setup_password }}"
+          ansible_become_password: "{{ default.setup_password }}"
+          br0ip: 10.42.0.2
+          br0gw: 10.42.0.1
+          br0port: eth0
+          alt0port: eth1
+          alt0ip: 10.42.1.2
+          rsyncd_mount: logs
+          ntp3: 10.42.93.80
         home2:
             ansible_user: pi
             ansible_password: "{{ passwords.pi_password }}"
@@ -145,6 +206,14 @@ nutanix:
     hosts:
         ubvm:
             ansible_host: 10.48.215.56 # rickard-faith.ubvm.nutanix.com
+            ansible_user: rickard.faith
+            ansible_password: "{{ passwords.rickard_faith_password }}"
+        rickard-faith.r8.ubvm.nutanix.com:
+            ansible_host: 10.41.57.242 # rickard-faith.r8.ubvm.nutanix.com
+            ansible_user: rickard.faith
+            ansible_password: "{{ passwords.rickard_faith_password }}"
+        rickard-faith-1.r8.ubvm.nutanix.com:
+            ansible_host: 10.111.57.99 # rickard-faith-1.r8.ubvm.nutanix.com
             ansible_user: rickard.faith
             ansible_password: "{{ passwords.rickard_faith_password }}"
     vars:
