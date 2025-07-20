@@ -1,0 +1,15 @@
+---
+- name: Install emacs tools
+  apt:
+    pkg:
+      - crypt++el
+      - elpa-auto-complete
+      - elpa-dash
+      - elpa-editorconfig
+      - elpa-f
+      - elpa-go-mode
+      - elpa-lsp-mode
+      - elpa-s
+      - elpa-xcscope
+      - emacs
+

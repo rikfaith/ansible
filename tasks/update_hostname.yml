@@ -1,0 +1,8 @@
+---
+- name: Set hostname
+  copy:
+    dest: /etc/hostname
+    owner: root
+    group: root
+    mode: '0644'
+    content: "{{ vm_hostname }}"

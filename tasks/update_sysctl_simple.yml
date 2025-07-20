@@ -1,0 +1,9 @@
+---
+- name: Update /etc/sysctl.conf
+  blockinfile:
+    dest: /etc/sysctl.conf
+    create: true
+    block: |
+      kernel.dmesg_restrict=0
+      net.ipv6.conf.all.disable_ipv6=1
+      net.ipv6.conf.default.disable_ipv6=1

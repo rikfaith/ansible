@@ -1,0 +1,50 @@
+#!/bin/bash
+# vm-install -*-ksh-*-
+
+if [[ -z $1 ]] ; then
+    echo "usage: $0 host-name"
+    exit 1
+fi
+
+RAM=$((16*1024))
+VCPUS=4
+VARIANT=debiantesting  # closet to devuan ceres
+case $1 in
+    devuan) PAIR="15:01" ;;
+    syslog) PAIR="15:02" ;;
+    timescale) PAIR="15:03"; RAM=$((256*1024)); VCPUS=16 ;;
+    cache) PAIR="15:04" ;;
+    roon) PAIR="15:05" ;;
+    ha) PAIR="15:06" ;;
+    grafana) PAIR="15:07" ;;
+    monitor) PAIR="15:08" ;;
+    *)
+        echo "usage: $0 host-name"
+        echo "       host-name must be in hard-coded list"
+        exit 1
+        ;;
+    esac
+
+virsh -c qemu+ssh://root@node0/system destroy $1
+virsh -c qemu+ssh://root@node0/system undefine $1
+rsync -Pavv /tmp/$1.qcow2 root@node0:/node0/pool
+ssh root@node0 "if [[ ! -d /node0/$1 ]]; then mkdir /node0/$1; else echo /node0/$1 exists; fi"
+
+#    --noautoconsole \
+virt-install \
+    --connect qemu+ssh://root@node0/system \
+    --name $1 \
+    --os-variant=$VARIANT \
+    --ram $RAM \
+    --vcpus $VCPUS \
+    --graphics vnc \
+    --video=vga \
+    --disk path=/node0/pool/$1.qcow2,format=qcow2,bus=virtio \
+    --import \
+    --memorybacking=source.type=memfd,access.mode=shared \
+    --filesystem /node0/$1,$1,driver.type=virtiofs \
+    --network bridge=br0,model=virtio,mac.address=52:54:00:$PAIR:00 \
+    --network bridge=br1,model=virtio,mac.address=52:54:00:$PAIR:01 \
+    --autoconsole none
+
+virsh -c qemu+ssh://root@node0/system autostart $1

@@ -1,0 +1,40 @@
+#!/bin/bash
+# vm-build.sh -*-ksh-*-
+
+TARGET=/tmp
+
+if [[ $1 == "" ]]; then
+    echo "usage: build.sh <VM>"
+    exit 1
+fi
+
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+ansible --version
+
+sudo rm -f $TARGET/$1.img $1.log
+time \
+    sudo \
+    vmdb2 \
+    -v \
+    --rootfs-tarball=$TARGET/$1.tar \
+    --output=$TARGET/$1.img \
+    --log=$1.log \
+    $1.vmdb
+retval=$?
+
+if [[ $retval -eq 0 ]]; then
+    echo "VM image created: $TARGET/$1.img"
+    sudo chown $USER:$USER $TARGET/$1.img
+    sudo chown $USER:$USER $1.log
+    qemu-img convert -f raw -O qcow2 $TARGET/$1.img $TARGET/$1.qcow2
+    echo "***** SUCCESS: VM image converted: $TARGET/$1.img -> $TARGET/$1.qcow2"
+else
+    echo 'ERROR *****************************************************'
+    echo "ERROR     VM IMAGE CREATION FAILED: $TARGET/$1.img"
+    echo "ERROR     SEE LOG: $1.log"
+    echo 'ERROR *****************************************************'
+fi
+
+exit $retval

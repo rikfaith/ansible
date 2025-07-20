@@ -1,0 +1,140 @@
+---
+- name: Add logrotate rules for rsyslogd
+  when: vm_purpose is defined and vm_purpose == "syslog"
+  copy:
+    dest: /etc/logrotate.d/rsyslog-remote
+    content: |
+      /syslog/firewall.log
+      /syslog/switch.log
+      /syslog/control.log
+      /syslog/ntp.log
+      /syslog/iot.log
+      /syslog/ap.log
+      {
+        rotate 10
+        weekly
+        create
+        missingok
+        notifempty
+        dateext
+        sharedscripts
+        postrotate
+          /usr/lib/rsyslog/rsyslog-rotate
+        endscript
+      }
+
+- name: Update rsyslogd.conf
+  when: vm_purpose is defined and vm_purpose == "syslog"
+  copy:
+    dest: /etc/rsyslog.conf
+    content: |
+      #################
+      #### MODULES ####
+      #################
+
+      module(load="imuxsock") # provides support for local system logging
+      module(load="imklog")   # provides kernel logging support
+      #module(load="immark")  # provides --MARK-- message capability
+
+      # Provide UDP syslog reception
+      module(load="imudp")
+      input(type="imudp" port="514")
+
+      # Provide TCP syslog reception
+      module(load="imtcp")
+      input(type="imtcp" port="514")
+
+      # Allow syslog reception
+      $AllowedSender UDP, 127.0.0.1, 10.0.0.0/8
+
+      ###########################
+      #### GLOBAL DIRECTIVES ####
+      ###########################
+
+      # Default permissions
+      $FileOwner root
+      $FileGroup adm
+      $FileCreateMode 0640
+      $DirCreateMode 0755
+      $Umask 0022
+
+      # Spool and state files
+      $WorkDirectory /var/spool/rsyslog
+
+      # Include all config files in /etc/rsyslog.d/
+      $IncludeConfig /etc/rsyslog.d/*.conf
+
+      ###################
+      #### TEMPLATES ####
+      ###################
+
+      template(name="RemoteLogs"
+               type="string"
+               string="/syslog/%$!class%.log"
+              )
+
+      ######################
+      #### REMOTE RULES ####
+      ######################
+
+      if re_match($fromhost-ip, "10\\.42\\.[0-9]{1,3}\\.1\$") then {
+        set $!class = "firewall";
+        action(type="omfile" dynaFile="RemoteLogs")
+        stop
+      }
+
+      if re_match($fromhost-ip, "10\\.42\\.[0-9]{1,3}\\.(4|5|6)\$") then {
+        set $!class = "switch";
+        action(type="omfile" dynaFile="RemoteLogs")
+        stop
+      }
+
+      if re_match($fromhost-ip, "10\\.42\\.0\\.2(7|8|9)\$") then {
+        set $!class = "switch";
+        action(type="omfile" dynaFile="RemoteLogs")
+        stop
+      }
+
+      if re_match($fromhost-ip, "10\\.42\\.0\\.1.\$") then {
+        set $!class = "ups";
+        action(type="omfile" dynaFile="RemoteLogs")
+        stop
+      }
+
+      if re_match($fromhost-ip, "10\\.42\\.0\\.2.$") then {
+        set $!class = "control";
+        action(type="omfile" dynaFile="RemoteLogs")
+        stop
+      }
+
+      if re_match($fromhost-ip, "10\\.42\\.1\\.(3|33)\$") then {
+        set $!class = "ntp";
+        action(type="omfile" dynaFile="RemoteLogs")
+        stop
+      }
+
+      if re_match($fromhost-ip, "10\\.42\\.1\\.") then {
+        set $!class = "iot";
+        action(type="omfile" dynaFile="RemoteLogs")
+        stop
+      }
+
+      if re_match($fromhost-ip, "10\\.42\\.4\\.") then {
+        set $!class = "ap";
+        action(type="omfile" dynaFile="RemoteLogs")
+        stop
+      }
+
+      #####################
+      #### LOCAL RULES ####
+      #####################
+
+      # Log most things to a single log file
+      *.*;auth,authpriv.none          -/var/log/syslog
+
+      # Log commonly used facilities to their own log file
+      auth,authpriv.*                 /var/log/auth.log
+      cron.*                          -/var/log/cron.log
+      kern.*                          -/var/log/kern.log
+      mail.*                          -/var/log/mail.log
+      user.*                          -/var/log/user.log

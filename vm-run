@@ -1,0 +1,14 @@
+#!/bin/bash
+# vm-run -*-ksh-*-
+
+sudo kvm \
+  -drive format=qcow2,file=$1,if=virtio \
+  -vnc 127.0.0.1:5 \
+  -netdev tap,id=network0,ifname=tap0 \
+  -device virtio-net-pci,netdev=network0 \
+  -m $((16*1024)) \
+  -cpu host \
+  -smp 4 \
+  -k en-us \
+  -usbdevice tablet \
+  -vga std

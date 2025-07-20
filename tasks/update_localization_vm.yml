@@ -1,0 +1,20 @@
+---
+- name: Link time zone
+  file:
+    src: /usr/share/zoneinfo/America/New_York
+    dest: /etc/localtime
+    owner: root
+    group: root
+    state: link
+
+# This only works on a live system.
+# - name: Set time zone
+#   command: timedatectl set-timezone America/New_York
+
+- name: Update locale information
+  locale_gen:
+    name: en_US.UTF-8
+    state: present
+
+- name: Set default locale
+  command: update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 LANGUAGE=en_US.UTF-8

@@ -1,0 +1,7 @@
+---
+- name: Install guest VM tools
+  apt:
+    pkg:
+      - prometheus-node-exporter
+      - qemu-guest-agent
+      - virtiofsd

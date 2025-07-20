@@ -1,0 +1,28 @@
+---
+# apt-cacher-ng 3.6.4 works, but 3.7.4 is broken
+- name: Configure apt source for chimera
+  lineinfile: path=/etc/apt/sources.list
+              regexp='chimera'
+              line='deb http://deb.devuan.org/merged chimaera main'
+  when: using_devuan is defined and using_devuan == True
+
+- name: Update apt cache for current distribution
+  command: apt-get update
+
+- name: Install apt-cacher-ng
+  when: vm_purpose is defined and vm_purpose == "cache"
+  apt:
+    name: apt-cacher-ng=3.6.4-1
+    state: present
+
+- name: Configure apt-cacher-ng
+  when: vm_purpose is defined and vm_purpose == "cache"
+  lineinfile: path=/etc/apt-cacher-ng/acng.conf
+              regexp='{{ item.regexp }}'
+              line='{{ item.line }}'
+  with_items:
+    - { regexp: 'CacheDir', line: 'CacheDir: /cache/' }
+    - { regexp: 'LogDir', line: 'LogDir: /cache/log' }
+    - { regexp: 'PassThroughPattern', line: 'PassThroughPattern: ^(.*):443$' }
+    - { regexp: 'ReportPage', line: 'ReportPage: admin' }
+    - { regexp: 'VerboseLog', line: 'VerboseLog: 1' }

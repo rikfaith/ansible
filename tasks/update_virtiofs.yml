@@ -1,0 +1,12 @@
+---
+- name: Make directory for virtiofs mount
+  file:
+    path: "/{{ vm_hostname }}"
+    state: directory
+    mode: "0755"
+
+- name: Update /etc/fstab for virtiofs mount
+  lineinfile:
+    name: /etc/fstab
+    regexp: "{{ vm_hostname }}"
+    line: "{{ vm_hostname }} /{{ vm_hostname }} virtiofs defaults 0 0"
