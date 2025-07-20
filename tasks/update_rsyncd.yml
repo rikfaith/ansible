@@ -10,6 +10,7 @@
     path: "/{{ rsyncd_mount }}"
     state: directory
     mode: 755
+  when: rsyncd_mount is defined
 
 - name: Create /etc/rsyncd.conf
   copy:
@@ -25,6 +26,8 @@
 
       [{{ rsyncd_mount }}]
         path = /{{ rsyncd_mount }}
+  when: rsyncd_mount is defined
 
 - name: Run rsyncd by default
   shell: sysv-rc-conf rsync on
+  when: rsyncd_mount is defined

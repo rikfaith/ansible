@@ -11,6 +11,13 @@
     content: |
       Acquire::ForceIPv4 "true";
 
+- name: Configure cache in /etc/apt/apt.conf.d
+  copy:
+    dest: /etc/apt/apt.conf.d/99cache
+    content: |
+      Acquire::http::Proxy "http://cache.alephnull.com:3142";
+      Acquire::https::Proxy "http://cache.alephnull.com:3142";
+
 - name: Install gnupg
   apt:
     pkg: gnupg

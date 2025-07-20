@@ -4,7 +4,9 @@
     pkg:
       - libvirt-clients
       - libvirt-daemon
-      - libvirt-daemon-system-sysv
+      - libvirt-daemon-system
+      - samba
+      - virtiofsd
       - virt-top
       - virt-viewer
       - vmdb2

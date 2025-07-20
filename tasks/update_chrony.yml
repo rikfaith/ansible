@@ -33,3 +33,9 @@
     name: chrony
     state: restarted
   when: install_local_time_source is defined and install_local_time_source == True
+
+- name: Stop chrony
+  sysvinit:
+    name: chrony
+    state: stopped
+  when: vm_installation is defined and vm_installation == True

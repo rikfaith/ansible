@@ -22,15 +22,16 @@
     update-cache: no
     autoremove: yes
   register: aptpython
+  when: vm_installation is undefined or vm_installation == False
 
 # We might have been using /usr/bin/python3.* which was upgraded.
 - name: Change python interpreter
   set_fact: ansible_python_interpreter="/usr/bin/python3"
-  when: aptpython.changed
+  when: aptpython.changed and (vm_installation is undefined or vm_installation == False)
 
 - name: Reboot
   reboot:
-  when: aptpython.changed or aptcurrent.changed
+  when: (aptpython.changed or aptcurrent.changed) and (vm_installation is undefined or vm_installation == False)
 
 - name: Configure apt source for local sid
   copy:
@@ -67,8 +68,8 @@
 # We might have been using /usr/bin/python3.* which was upgraded.
 - name: Change python interpreter
   set_fact: ansible_python_interpreter="/usr/bin/python3"
-  when: aptunstable.changed
+  when: aptunstable.changed and (vm_installation is undefined or vm_installation == False)
 
 - name: Reboot
   reboot:
-  when: aptunstable.changed
+  when: aptunstable.changed and (vm_installation is undefined or vm_installation == False)

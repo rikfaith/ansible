@@ -43,26 +43,25 @@
 - name: Install desktop (and X11) tools
   apt:
     pkg:
-      - autoconf
+      - alsa-utils
       - autocutsel
       - btcheck
       - chromium
+      - cups
       - dclock
       - evince
       - firefox-esr
       - fvwm
       - ghostscript
+      - gphoto2
       - gv
       - hexchat
-      - libjpeg62-turbo-dev
-      - libpng-dev
       - libreoffice
-      - libtiff-dev
-      - libx11-dev
-      - libxrandr-dev
-      - libxt-dev
       - mesa-utils
       - mplayer
+      - mpv
+      - perf-tools-unstable
+      - printer-driver-postscript-hp
       - signal-desktop
       - ssh-askpass-fullscreen
       - t1-xfree86-nonfree

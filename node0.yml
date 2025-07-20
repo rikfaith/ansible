@@ -31,5 +31,4 @@
     - import_tasks: tasks/update_tools_general.yml
     - import_tasks: tasks/update_tools_virtualization.yml
     - import_tasks: tasks/update_rsyncd.yml
-    - import_tasks: tasks/update_ssh_remote_keys.yml
     - import_tasks: tasks/update_user_login.yml

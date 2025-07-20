@@ -3,38 +3,23 @@
   apt:
     pkg:
       - 7zip
-      - alsa-utils
       - bc
       - bind9-utils
       - bsdgames
       - calibre
       - cmake
       - cpuid
-      - crypt++el
       - cryptsetup-bin
-      - cups
       - curl
       - dc
-      - dclock
       - ddate
       - dict
       - debootstrap
       - dmidecode
-      - elpa-auto-complete
-      - elpa-dash
-      - elpa-editorconfig
-      - elpa-f
-      - elpa-go-mode
-      - elpa-lsp-mode
-      - elpa-s
-      - elpa-xcscope
       - enscript
-      - emacs
       - ethtool
-      - evince
       - ffmpeg
       - gawk
-      - gphoto2
       - git
       - git-lfs
       - gnuplot
@@ -53,6 +38,7 @@
       - libtorrent21t64
       - lm-sensors
       - lshw
+      - lsof
       - lsscsi
       - ltrace
       - lvm2
@@ -62,12 +48,10 @@
       - mdadm
       - mediainfo
       - mt-st
-      - mypy
       - ncal
       - netperf
       - net-tools
       - nfs-common
-      - nfs-kernel-server
       - nmap
       - nodejs
       - npm
@@ -78,30 +62,12 @@
       - parted
       - pcm
       - pdftk
-      - perf-tools-unstable
       - pipx
-      - printer-driver-postscript-hp
       - psutils
-      - pylama
-      - pylint
-      - python3-click
-      - python3-dateparser
-      - python3-ephem
-      - python3-keyring
-      - python3-pylatex
-      - python3-libtorrent
-      - python3-opencv
-      - python3-paramiko
-      - python3-pip
-      - python3-poetry
-      - python3-protobuf
-      - python3-pyotp
-      - python3-pyzbar
-      - python3-tesserocr
       - rclone
+      - ripgrep
       - rpm2cpio
       - rsync
-      - samba
       - sshpass
       - smartmontools
       - snmp
@@ -109,7 +75,9 @@
       - strace
       - sysstat
       - sysv-rc-conf
+      - telnet
       - tmux
+      - traceroute
       - units
       - unrar
       - unzip
