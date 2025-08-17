@@ -1,0 +1,80 @@
+steps:
+  - mkimg: "{{ output }}"
+    size: 64g
+
+  - mklabel: msdos
+    device: "{{ output }}"
+
+  - mkpart: primary
+    device: "{{ output }}"
+    start: 0%
+    end: 100%
+    tag: rootfs
+
+  - kpartx: "{{ output }}"
+
+  - mkfs: ext4
+    partition: rootfs
+
+  - mount: rootfs
+
+  - unpack-rootfs: rootfs
+
+  - debootstrap: ceres
+    mirror: http://us.deb.devuan.org/merged
+    target: rootfs
+    components:
+      - main
+      - contrib
+      - non-free
+      - non-free-firmware
+    unless: rootfs_unpacked
+
+  - virtual-filesystems: rootfs
+
+  - apt: install
+    packages:
+    - build-essential
+    - dnsutils
+    - file
+    - gawk
+    - git
+    - git-lfs
+    - gnupg2
+    - libpam-modules
+    - linux-image-amd64
+    - locales
+    - man-db
+    - openssh-server
+    - pciutils
+    - pkg-config
+    - python3
+    - python-is-python3
+    - sudo
+    - time
+    - tzdata
+    - zip
+    - zsh
+    tag: rootfs
+    unless: rootfs_unpacked
+
+  - cache-rootfs: rootfs
+    unless: rootfs_unpacked
+
+  - fstab: rootfs
+
+  - grub: bios
+    tag: rootfs
+
+  - copy-file: /root/.ansible-vault
+    src: /home/faith/.ansible-vault
+    perm: 0600
+
+  - ansible: rootfs
+    playbook: devuan.yaml
+    config_file: ansible.cfg
+    extra_vars:
+      vm_hostname: "timescale"
+      vm_purpose: "timescale"
+      grub_options: "audit=0"
+      install_unstable: true

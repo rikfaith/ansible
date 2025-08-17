@@ -1,0 +1,17 @@
+---
+- name: Install timescaledb
+  apt:
+    pkg:
+      - postgresql-17
+      - postgresql-17-timescaledb
+      - phppgadmin
+  when: vm_purpose is defined and vm_purpose == "timescale"
+
+- name: Set password for postgre user
+  shell: 'sudo -u postgres psql -c "ALTER USER postgres WITH PASSWORD '{{ postgres.postgres_password }}';"
+
+- name: Create new user
+  shell: 'sudo -u postgres psql -c "CREATE USER {{ postgres.db_user }} WITH PASSWORD '{{ postgres.db_password }}' SUPERUSER;"
+
+- name: Create new database
+  shell: 'sudo -u postgres psql -c "CREATE DATABASE {{ postgres.db_name }} WITH OWNER {{ postgres.db_user }};'
