@@ -48,7 +48,9 @@
       pkg: cuda-toolkit
       state: present
 
-  - name: Install nvtop
+  - name: Install nvtop etc.
     apt:
-      pkg: nvtop
+      pkg:
+        - nvtop
+        - nvidia-settings
       state: present

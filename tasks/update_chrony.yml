@@ -34,7 +34,7 @@
     state: restarted
   when: install_local_time_source is defined and install_local_time_source == True
 
-- name: Stop chrony
+- name: Stop chrony for remainder of ansible installation
   sysvinit:
     name: chrony
     state: stopped
