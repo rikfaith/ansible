@@ -74,7 +74,7 @@ steps:
     playbook: devuan.yaml
     config_file: ansible.cfg
     extra_vars:
-      vm_hostname: "timescale"
-      vm_purpose: "timescale"
+      vm_hostname: "telegraf"
+      vm_purpose: "telegraf"
       grub_options: "audit=0"
       install_unstable: true

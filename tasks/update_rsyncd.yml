@@ -9,7 +9,7 @@
   file:
     path: "/{{ rsyncd_mount }}"
     state: directory
-    mode: 755
+    mode: '0755'
   when: rsyncd_mount is defined
 
 - name: Create /etc/rsyncd.conf

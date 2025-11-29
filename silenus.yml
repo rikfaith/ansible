@@ -40,3 +40,4 @@
     - import_tasks: tasks/update_user_login.yml
     - import_tasks: tasks/update_dnsmasq.yml
     - import_tasks: tasks/update_zoom.yml
+    - import_tasks: tasks/update_rng.yml

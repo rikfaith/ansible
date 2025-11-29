@@ -14,7 +14,7 @@ case $1 in
     syslog) PAIR="15:02" ;;
     timescale) PAIR="15:03"; RAM=$((256*1024)); VCPUS=16 ;;
     cache) PAIR="15:04" ;;
-    roon) PAIR="15:05" ;;
+    telegraf) PAIR="15:05" ;;
     ha) PAIR="15:06" ;;
     grafana) PAIR="15:07" ;;
     monitor) PAIR="15:08" ;;

@@ -3,7 +3,7 @@
   file:
     path: "/{{ vm_hostname }}"
     state: directory
-    mode: "0755"
+    mode: '0755'
 
 - name: Update /etc/fstab for virtiofs mount
   lineinfile:

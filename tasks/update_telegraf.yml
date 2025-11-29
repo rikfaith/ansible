@@ -1,0 +1,52 @@
+---
+- name: Get InfluxData keyring
+  when: vm_purpose is defined and vm_purpose == "telegraf"
+  shell:
+    cmd: |
+      curl -fsSL https://repos.influxdata.com/influxdata-archive_compat.key -o /etc/apt/trusted.gpg.d/includedata-archive.asc
+
+- name: Install InfluxData repo
+  when: vm_purpose is defined and vm_purpose == "telegraf"
+  copy:
+    dest: /etc/apt/sources.list.d/influxdata.list
+    content: |
+      deb [signed-by=/etc/apt/trusted.gpg.d/includedata-archive.asc] https://repos.influxdata.com/debian stable main
+
+- name: Update repo information
+  when: vm_purpose is defined and vm_purpose == "telegraf"
+  command: apt-get update
+
+- name: Install telegraf
+  when: vm_purpose is defined and vm_purpose == "telegraf"
+  apt:
+    pkg:
+      - telegraf
+      - postgresql-client-18
+      - python3-psycopg2
+    state: present
+
+- name: Configure telegraf
+  when: vm_purpose is defined and vm_purpose == "telegraf"
+  copy:
+    dest: /etc/telegraf/telegraf.conf.new
+    content: |
+      {% raw %}
+      [[inputs.prometheus]]
+        urls = [
+          "http://syslog:9100/metrics",
+          "http://cache:9100/metrics",
+          "http://timescale:9100/metrics"
+        ]
+      
+      [[outputs.postgresql]]
+        connection = "host=timescale user=ts password=ts.2025 dbname=metrics sslmode=disable"
+        schema = "metrics"
+        # Telegraf runs each template the first time it creates a measurement table:
+        create_templates = [
+          '''CREATE TABLE {{ .table }} ({{ .columns }})''',
+          '''SELECT create_hypertable({{ .table|quoteLiteral }}, 'time', chunk_time_interval => INTERVAL '7 days', if_not_exists => TRUE)''',
+          '''ALTER TABLE {{ .table }} SET (timescaledb.compress)''',
+          '''SELECT add_compression_policy({{ .table|quoteLiteral }}, INTERVAL '14 days')''',
+          '''SELECT add_retention_policy({{ .table|quoteLiteral }}, INTERVAL '10 years')'''
+        ]
+      {% endraw %}

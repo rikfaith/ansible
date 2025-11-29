@@ -31,6 +31,7 @@
       - jc
       - jnettop
       - jq
+      - kbd
       - lbzip2
       - lftp
       - libimage-exiftool-perl
@@ -57,6 +58,7 @@
       - npm
       - nvme-cli
       - oathtool
+      - openssh-client
       - openvpn
       - p7zip-full
       - parted

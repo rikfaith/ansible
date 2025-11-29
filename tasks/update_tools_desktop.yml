@@ -3,6 +3,13 @@
 - name: Gether facts
   gather_facts:
 
+- name: update udev config for scanner
+  blockinfile:
+    dest: /etc/udev/rules.d/99-scanner.rules
+    block: |
+      SUBSYSTEM=="usb", ATTRS{idVendor}=="04d8", ATTRS{idProduct}=="f5fe", GROUP="scanner", MODE="0660", SYMLINK+="scanner"
+
+
 - name: Install X11 server
   apt:
     pkg:

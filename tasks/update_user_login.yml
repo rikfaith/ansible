@@ -35,7 +35,7 @@
     shell: /bin/zsh
     create_home: no
     append: yes
-    groups: audio,cdrom,dialout,floppy,kvm,lp,sudo,tape,video
+    groups: audio,cdrom,dialout,floppy,kvm,lp,sudo,tape,video,scanner
 
 - name: Activate zsh history
   file:
