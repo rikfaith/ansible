@@ -1,6 +1,9 @@
 #!/bin/bash
 # vm-install -*-ksh-*-
 
+# NOTE: for the timescale VM, copy /var/lib/postgresql from the VM to
+# /node0/timescale/18 on node0
+
 if [[ -z $1 ]] ; then
     echo "usage: $0 host-name"
     exit 1
@@ -14,10 +17,10 @@ case $1 in
     syslog) PAIR="15:02" ;;
     timescale) PAIR="15:03"; RAM=$((256*1024)); VCPUS=16 ;;
     cache) PAIR="15:04" ;;
-    telegraf) PAIR="15:05" ;;
+    grafana) PAIR="15:05" RAM=$((64*1024)); VCPUS=8 ;;
     ha) PAIR="15:06" ;;
-    grafana) PAIR="15:07" ;;
-    monitor) PAIR="15:08" ;;
+    monitor) PAIR="15:07" ;;
+    tbd2) PAIR="15:08" ;;
     *)
         echo "usage: $0 host-name"
         echo "       host-name must be in hard-coded list"

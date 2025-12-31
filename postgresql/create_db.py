@@ -15,9 +15,9 @@ cur = conn.cursor()
 cur.execute("""CREATE EXTENSION IF NOT EXISTS timescaledb;""")
 conn.commit()
 
-cur.execute('DROP TABLE IF NOT EXISTS env;'
+cur.execute('DROP TABLE IF EXISTS env;')
 conn.commit()
-cur.execute('DROP TABLE IF NOT EXISTS metrics;'
+cur.execute('DROP TABLE IF EXISTS metrics;')
 conn.commit()
 
 cur.execute("""

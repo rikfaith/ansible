@@ -8,6 +8,7 @@
       - postgresql-common
       - phppgadmin
       - python3-psycopg2
+      - golang
     state: present
 
 - name: Update Postgres
@@ -84,38 +85,55 @@
   when: vm_purpose is defined and vm_purpose == "timescale"
   command: mv /var/lib/postgresql/18 "/{{ vm_hostname }}/postgresql"
 
-- name: Change database directory
+- name: Update postgresql.conf
   when: vm_purpose is defined and vm_purpose == "timescale"
   become: true
   become_user: postgres
-  lineinfile:
-    path: /etc/postgresql/18/main/postgresql.conf
-    regexp: '^data_directory'
-    line: "data_directory = '/{{ vm_hostname }}/postgresql/18/main'"
+  lineinfile: path=/etc/postgresql/18/main/postgresql.conf
+              regexp='{{ item.regexp }}'
+              line='{{ item.line }}'
+              state=present
+              insertafter=EOF
+  with_items:
+    - { regexp: "shared_preload_libraries", line: "shared_preload_libraries = 'timescaledb'" }
+    - { regexp: "data_directory", line: "/{{ vm_hostname }}/postgresql/18/main'" }
+    - { regexp: "listen_addresses", line: "listen_addresses = '*'" }
+    - { regexp: "shared_buffers", line: "shared_buffers = 64GB" }
+    - { regexp: "effective_cache_size", line: "effective_cache_size = 200GB" }
+    - { regexp: "maintenance_work_mem", line: "maintenance_work_mem = 2GB" }
+    - { regexp: "work_mem", line: "work_mem = 40MB" }
+    - { regexp: "max_worker_processes", line: "max_worker_processes = 35" }
+    - { regexp: "max_parallel_workers_per_gather", line: "max_parallel_workers_per_gather = 8" }
+    - { regexp: "max_parallel_workers", line: "max_parallel_workers = 16" }
+    - { regexp: "wal_buffers", line: "wal_buffers = 16MB" }
+    - { regexp: "min_wal_size", line: "min_wal_size = 512MB" }
+    - { regexp: "default_statistics_target", line: "default_statistics_target = 100" }
+    - { regexp: "random_page_cost", line: "random_page_cost = 1.1" }
+    - { regexp: "checkpoint_completion_target", line: "checkpoint_completion_target = 0.9" }
+    - { regexp: "max_locks_per_transaction", line: "max_locks_per_transaction = 1024" }
+    - { regexp: "autovacuum_max_workers", line: "autovacuum_max_workers = 10" }
+    - { regexp: "autovacuum_naptime", line: "autovacuum_naptime = 10" }
+    - { regexp: "default_toast_compression", line: "default_toast_compression = lz4" }
+    - { regexp: "jit", line: "jit = off" }
+    - { regexp: "effective_io_concurrency", line: "effective_io_concurrency = 256" }
+    - { regexp: "timescaledb.max_background_workers", line: "timescaledb.max_background_workers = 16" }
 
-- name: Listen on all ports
+- name: Configure phppgadmin
   when: vm_purpose is defined and vm_purpose == "timescale"
   become: true
-  become_user: postgres
   lineinfile:
-    path: /etc/postgresql/18/main/postgresql.conf
-    regexp: '^.*listen_addresses'
-    line: "listen_addresses = '*'"
+    path: /etc/phppgadmin/config.inc.php
+    search_string: "$conf['servers'][0]['defaultdb']"
+    line: "       $conf['servers'][0]['defaultdb'] = 'postgres';"
 
-- name: Increase shared buffers
+- name: Make phppgadmin available to all hosts via apache2
   when: vm_purpose is defined and vm_purpose == "timescale"
   become: true
-  become_user: postgres
   lineinfile:
-    path: /etc/postgresql/18/main/postgresql.conf
-    regexp: '^shared_buffers'
-    line: "shared_buffers = 4096MB"
+    path: /etc/apache2/conf-available/phppgadmin.conf
+    regexp: '^Require '
+    line: 'Require all granted'
 
-- name: Preload timescaledb
+- name: Configure apache2 for phppgadmin
   when: vm_purpose is defined and vm_purpose == "timescale"
-  become: true
-  become_user: postgres
-  lineinfile:
-    path: /etc/postgresql/18/main/postgresql.conf
-    regexp: '^.*shared_preload_libraries'
-    line: "shared_preload_libraries = 'timescaledb'"
+  shell: a2enconf phppgadmin

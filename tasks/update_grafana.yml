@@ -1,0 +1,61 @@
+---
+- name: Install grafana prerequisites
+  when: vm_purpose is defined and vm_purpose == "grafana"
+  apt:
+    pkg:
+      - software-properties-common
+      - apt-transport-https
+    state: present
+
+- name: Install grafana repo key
+  when: vm_purpose is defined and vm_purpose == "grafana"
+  become: true
+  shell: wget -q -O - https://apt.grafana.com/gpg-full.key | gpg --dearmor -o /etc/apt/trusted.gpg.d/grafana.gpg
+
+- name: Install grafana repo
+  when: vm_purpose is defined and vm_purpose == "grafana"
+  blockinfile:
+    dest: /etc/apt/sources.list.d/grafana.sources
+    create: true
+    block: |
+      Types: deb
+      URIs: https://packages.grafana.com/oss/deb/
+      Suites: stable
+      Components: main
+      Signed-By: /etc/apt/trusted.gpg.d/grafana.gpg
+
+- name: Update repo information
+  when: vm_purpose is defined and vm_purpose == "grafana"
+  command: apt-get update
+
+- name: Install grafana
+  when: vm_purpose is defined and vm_purpose == "grafana"
+  apt:
+    pkg:
+      - grafana
+    state: present
+
+- name: Create new grafana directory
+  when: vm_purpose is defined and vm_purpose == "grafana"
+  file:
+    path: "/{{ vm_hostname }}/grafana"
+    state: directory
+    owner: grafana
+    group: grafana
+    mode: '0755'
+
+- name: Move directory for grafana
+  when: vm_purpose is defined and vm_purpose == "grafana"
+  command: mv /var/lib/grafana "/{{ vm_hostname }}/grafana"
+
+- name: Change database directory
+  when: vm_purpose is defined and vm_purpose == "grafana"
+  become: true
+  lineinfile:
+    path: /etc/grafana/grafana.ini
+    search_string: 'data = '
+    line: "data = /{{ vm_hostname }}/grafana"
+
+- name: Configure sysvinit to start grafana at boot
+  when: vm_purpose is defined and vm_purpose == "grafana"
+  command: update-rc.d grafana-server defaults

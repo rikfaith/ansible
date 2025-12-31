@@ -28,7 +28,7 @@
     - import_tasks: tasks/update_tools_general.yml
     - import_tasks: tasks/update_tools_guest_vm.yml
     - import_tasks: tasks/update_timescaledb.yml
-    - import_tasks: tasks/update_telegraf.yml
+    - import_tasks: tasks/update_grafana.yml
     - import_tasks: tasks/update_rsyncd.yml
     - import_tasks: tasks/update_user_login.yml
     - import_tasks: tasks/update_localization_vm.yml
