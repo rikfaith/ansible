@@ -75,7 +75,7 @@ steps:
     playbook: devuan.yaml
     config_file: ansible.cfg
     extra_vars:
-      vm_hostname: "monitor"
-      vm_purpose: "monitor"
+      vm_hostname: "pgsql"
+      vm_purpose: "pgsql"
       grub_options: "audit=0"
       install_unstable: true

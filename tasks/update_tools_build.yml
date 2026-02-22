@@ -2,13 +2,14 @@
 - name: Install build tools
   apt:
     pkg:
+      - autoconf
       - cmake
       - gfortran
-      - libopenblas-dev
-      - autoconf
       - libjpeg62-turbo-dev
+      - libopenblas-dev
       - libpng-dev
       - libtiff-dev
+      - libtool-bin
       - libx11-dev
       - libxrandr-dev
       - libxt-dev

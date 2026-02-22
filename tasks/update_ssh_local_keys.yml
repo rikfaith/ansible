@@ -47,7 +47,6 @@
   with_items: "{{ hostkeys.stdout_lines }}"
 
 - name: Configure for sudo
-  set_fact: become_method=sudo
   set_fact: ansible_become_method=sudo
 
 - name: Test become using sudo
@@ -56,7 +55,6 @@
   ignore_errors: true
 
 - name: Use su
-  set_fact: become_method=su
   set_fact: ansible_become_method=su
   when: command_output is not defined or
         command_output.rc is not defined or

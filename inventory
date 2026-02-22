@@ -46,7 +46,8 @@ desktops:
         dnsmasq_remote0: 10.40.64.16
         dnsmasq_remote1: 10.22.64.16
         dnsmasq_domain0: .nutanix.com
-        dnsmasq_domain1: .ntnxdpro.com
+        dnsmasq_domain2: .ntnxdpro.com
+        dnsmasq_domain2: .dpro.phx
 
     vars:
         ansible_port: 22
@@ -57,32 +58,6 @@ desktops:
         ntp3: 10.42.0.2
         whitelistip0: 199.48.130.2
 
-# For pi wifi:
-# nmcli dev wifi connect private password Infinity2021
-
-laptops:
-    hosts:
-        pixie:
-          br0port: eth0
-
-        ariel:
-          br0port: eth0
-
-        puck-debian:
-          ansible_host: 10.42.93.111
-          ansible_password: "{{ passwords.rickard_faith_password }}"
-          ansible_become_password: "{{ passwords.rickard_faith_password }}"
-          br0port: eth
-        puck-compute:
-          ansible_host: 10.42.93.111
-          br0port: eth
-          ansible_password: "{{ passwords.puck_password }}"
-          ansible_become_password: "{{ passwords.puck_password }}"
-    vars:
-        ansible_port: 993
-        install_laptop_ssh: true
-        grub_options: "audit=0"
-
 compute:
     hosts:
         thoth:
@@ -92,8 +67,9 @@ compute:
           br0ip: 10.42.93.91
           br0gw: 10.42.93.1
           br0port: eth0
-          alt0port: eth1
-          alt0ip: 10.42.11.91
+          br1ip: 10.42.11.91
+          br1gw: 10.42.93.1
+          br1port: eth1
           rsyncd_mount: thoth
         node0:
           ansible_host: 10.42.93.80
@@ -102,8 +78,9 @@ compute:
           br0ip: 10.42.93.80
           br0gw: 10.42.93.1
           br0port: eth0
-          alt0port: eth1
-          alt0ip: 10.42.11.80
+          br1ip: 10.42.11.80
+          br1gw: 10.42.93.1
+          br1port: eth1
           rsyncd_mount: node0
     vars:
         ansible_port: 22

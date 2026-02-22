@@ -53,6 +53,7 @@ steps:
     - sudo
     - time
     - tzdata
+    - util-linux-extra
     - zip
     - zsh
     tag: rootfs

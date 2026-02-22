@@ -11,9 +11,10 @@
       - texlive-latex-extra
       - texlive-xetex
 
-- name: Install extra text and font tools
+- name: Install extra tools
   apt:
     pkg:
+      - chktex
       - t1utils
       - tesseract-ocr
       - tesseract-ocr-grc

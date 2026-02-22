@@ -75,7 +75,8 @@ steps:
     playbook: devuan.yaml
     config_file: ansible.cfg
     extra_vars:
-      vm_hostname: "monitor"
-      vm_purpose: "monitor"
+      vm_hostname: "ai0"
+      vm_purpose: "ai"
       grub_options: "audit=0"
       install_unstable: true
+      install_gpu_tools: true

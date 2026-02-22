@@ -5,18 +5,17 @@
     create: true
     block: |
       kernel.dmesg_restrict=0
-      fs.file-max=32768
       dev.raid.speed_limit_max=1000000
 
       # REF 20240302 for win10 guest vm
-      net.bridge.bridge-nf-call-ip6tables=0
-      net.bridge.bridge-nf-call-iptables=0
-      net.bridge.bridge-nf-call-arptables=0
+      #net.bridge.bridge-nf-call-ip6tables=0
+      #net.bridge.bridge-nf-call-iptables=0
+      #net.bridge.bridge-nf-call-arptables=0
 
       # REF 20210303. Tried 1GB and .5GB. These are values from silenus.
       # REF 20220215. Increased dirty_bytes to 80m from 40m. Got nyx->filer
       # transfer up to about 200MB/s sustained. Also increased centiseconds
       # from 200 to 800.
-      vm.dirty_bytes=80000000
-      vm.dirty_background_bytes=80000000
-      vm.dirty_expire_centisecs=800
+      #vm.dirty_bytes=80000000
+      #vm.dirty_background_bytes=80000000
+      #vm.dirty_expire_centisecs=800

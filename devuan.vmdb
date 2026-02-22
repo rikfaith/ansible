@@ -47,12 +47,13 @@ steps:
     - man-db
     - openssh-server
     - pciutils
-    - python-is-python3
-    - python3
     - pkg-config
+    - python3
+    - python-is-python3
     - sudo
     - time
     - tzdata
+    - util-linux-extra
     - zip
     - zsh
     tag: rootfs

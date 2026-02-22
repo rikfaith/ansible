@@ -18,7 +18,7 @@
     - import_tasks: tasks/get_facts.yml
     - import_tasks: tasks/update_apt.yml
     - import_tasks: tasks/update_grub.yml
-    - import_tasks: tasks/update_network.yml
+    - import_tasks: tasks/update_br0_br1_network.yml
     - import_tasks: tasks/update_sudo.yml
     - import_tasks: tasks/update_distribution.yml
     - import_tasks: tasks/update_chrony.yml

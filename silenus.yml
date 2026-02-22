@@ -30,6 +30,7 @@
     - import_tasks: tasks/update_ssh_remote_keys.yml
     - import_tasks: tasks/update_sshguard.yml
     - import_tasks: tasks/update_tools_general.yml
+    - import_tasks: tasks/update_tools_build.yml
     - import_tasks: tasks/update_tools_desktop.yml
     - import_tasks: tasks/update_tools_text.yml
     - import_tasks: tasks/update_tools_emacs.yml

@@ -1,12 +1,13 @@
 ---
 # apt-cacher-ng 3.6.4 works, but 3.7.4 is broken
 - name: Configure apt source for chimera
+  when: vm_purpose is defined and vm_purpose == "cache"
   lineinfile: path=/etc/apt/sources.list
               regexp='chimera'
               line='deb http://deb.devuan.org/merged chimaera main'
-  when: using_devuan is defined and using_devuan == True
 
 - name: Update apt cache for current distribution
+  when: vm_purpose is defined and vm_purpose == "cache"
   command: apt-get update
 
 - name: Install apt-cacher-ng

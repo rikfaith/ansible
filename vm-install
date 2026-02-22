@@ -8,19 +8,56 @@ if [[ -z $1 ]] ; then
     echo "usage: $0 host-name"
     exit 1
 fi
+set -x
+
+HOST=node0
+GPUHOST=thoth
+HAQCOW2=~/Downloads/haos_ova-17.1.qcow2
 
 RAM=$((16*1024))
 VCPUS=4
 VARIANT=debiantesting  # closet to devuan ceres
+EXTRA=""
+QCOW2=/tmp/$1.qcow2
+BASEQCOW2=$(basename $QCOW2 .qcow2).qcow2
+
+BOOTDISK0="--disk path=/$HOST/pool/$BASEQCOW2,format=qcow2,bus=virtio"
+BOOTDISK1=""
+FILESYSTEM0="--memorybacking=source.type=memfd,access.mode=shared"
+FILESYSTEM1="--filesystem /$HOST/$1,$1,driver.type=virtiofs"
+
 case $1 in
+    # NODE0 VMS
     devuan) PAIR="15:01" ;;
     syslog) PAIR="15:02" ;;
     timescale) PAIR="15:03"; RAM=$((256*1024)); VCPUS=16 ;;
     cache) PAIR="15:04" ;;
-    grafana) PAIR="15:05" RAM=$((64*1024)); VCPUS=8 ;;
-    ha) PAIR="15:06" ;;
+    grafana) PAIR="15:05"; RAM=$((64*1024)); VCPUS=8 ;;
+    ha) PAIR="15:06"
+        QCOW2=$HAQCOW2
+        VARIANT=generic
+        RAM=$((4*1024))
+        VCPUS=2
+        EXTRA="--boot uefi"
+        BOOTDISK0="--disk path=/$HOST/pool/$BASEQCOW2,format=qcow2,bus=scsi"
+        BOOTDISK1="--controller type=scsi,model=virtio-scsi"
+        if [[ ! -e $HAQCOW2 && -e $HAQCOW2.xz ]]; then
+            echo "Decompressing $HAQCOW2.xz to $HAQCOW2"
+            unxz -k $HAQCOW2.xz
+        fi
+        ;;
     monitor) PAIR="15:07" ;;
-    tbd2) PAIR="15:08" ;;
+    bt) PAIR="15:08"; RAM=$((64*1024)); VCPUS=16;;
+    samba) PAIR="15:09" ; RAM=$((2*1024)); VCPUS=2 ;;
+    bt2) PAIR="16:00"; RAM=$((64*1024)); VCPUS=16;;
+    web) PAIR="16:01";;
+    pgsql) PAIR="16:02"; RAM=$((256*1024)); VCPUS=16 ;;
+    # THOTH VMS
+    ai0) PAIR="17:00" ;
+         RAM=$((256*1024));
+         VCPUS=16;
+         HOST=$GPUHOST;
+         EXTRA="--host-device pci_0000_af_00_0" ;;
     *)
         echo "usage: $0 host-name"
         echo "       host-name must be in hard-coded list"
@@ -28,26 +65,30 @@ case $1 in
         ;;
     esac
 
-virsh -c qemu+ssh://root@node0/system destroy $1
-virsh -c qemu+ssh://root@node0/system undefine $1
-rsync -Pavv /tmp/$1.qcow2 root@node0:/node0/pool
-ssh root@node0 "if [[ ! -d /node0/$1 ]]; then mkdir /node0/$1; else echo /node0/$1 exists; fi"
+# Total ram (1024 total): 5 * 16 + 2 * 64 + 1 * 256 = 464
+# Total CPU (80 total)  : 5 *  4 + 1 *  8 + 2 *  16 = 60
+
+virsh -c qemu+ssh://root@$HOST/system destroy $1
+virsh -c qemu+ssh://root@$HOST/system undefine $1
+rsync -Pavv $QCOW2 root@$HOST:/$HOST/pool
+ssh root@$HOST "if [[ ! -d /$HOST/$1 ]]; then mkdir /$HOST/$1; else echo /$HOST/$1 exists; fi"
 
 #    --noautoconsole \
 virt-install \
-    --connect qemu+ssh://root@node0/system \
+    --connect qemu+ssh://root@$HOST/system \
     --name $1 \
     --os-variant=$VARIANT \
     --ram $RAM \
     --vcpus $VCPUS \
     --graphics vnc \
     --video=vga \
-    --disk path=/node0/pool/$1.qcow2,format=qcow2,bus=virtio \
+    $BOOTDISK0 \
+    $BOOTDISK1 \
+    $FILESYSTEM0 \
+    $FILESYSTEM1 \
     --import \
-    --memorybacking=source.type=memfd,access.mode=shared \
-    --filesystem /node0/$1,$1,driver.type=virtiofs \
     --network bridge=br0,model=virtio,mac.address=52:54:00:$PAIR:00 \
     --network bridge=br1,model=virtio,mac.address=52:54:00:$PAIR:01 \
-    --autoconsole none
+    --autoconsole none $EXTRA
 
-virsh -c qemu+ssh://root@node0/system autostart $1
+virsh -c qemu+ssh://root@$HOST/system autostart $1

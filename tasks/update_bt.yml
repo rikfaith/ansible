@@ -1,0 +1,10 @@
+---
+- name: Update bt tools
+  when: vm_purpose is defined and vm_purpose == "bt"
+  apt:
+    pkg:
+      - electrum
+      - openresolv
+      - qbittorrent
+      - wireguard
+      - wireguard-tools

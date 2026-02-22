@@ -11,6 +11,7 @@
     using_devuan: true
     install_unstable: true
     install_local_time_source: true
+    install_gpu_tools: true
 
   tasks:
     - import_tasks: tasks/get_ssh_port.yml
@@ -18,7 +19,7 @@
     - import_tasks: tasks/get_facts.yml
     - import_tasks: tasks/update_apt.yml
     - import_tasks: tasks/update_grub.yml
-    - import_tasks: tasks/update_network.yml
+    - import_tasks: tasks/update_br0_br1_network.yml
     - import_tasks: tasks/update_sudo.yml
     - import_tasks: tasks/update_distribution.yml
     - import_tasks: tasks/update_chrony.yml

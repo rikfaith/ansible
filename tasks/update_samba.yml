@@ -1,0 +1,6 @@
+---
+- name: Install samba
+  when: vm_purpose is defined and vm_purpose == "samba"
+  apt:
+    name: samba
+    state: present

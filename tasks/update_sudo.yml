@@ -27,5 +27,4 @@
   when: not sudoers_state.found
 
 - name: Set become_method
-  set_fact:
-    become_method: sudo
+  set_fact: ansible_become_method=sudo

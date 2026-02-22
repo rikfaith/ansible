@@ -12,6 +12,8 @@
   - id_ed25519.pub
   - github-rikfaith
   - github-rikfaith.pub
+  - gitlab-rikfaith
+  - gitlab-rikfaith.pub
 
 - name: Checkout dotfiles2
   git:

@@ -1,56 +1,88 @@
 ---
+  - name: Remove the nouveau driver
+    # only on a live system
+    when: install_gpu_tools is defined and install_gpu_tools and vm_purpose is not defined
+    modprobe:
+      name: nouveau
+      state: absent
+
+  - name: Blacklist the nouveau driver module
+    when: install_gpu_tools is defined and install_gpu_tools
+    # This should already be blacklisted in /etc/modprobe.d/nvidia.conf
+    # Also need to blacklist nvidia nvidia_drm snd_hda_intel
+    community.general.kernel_blacklist:
+      name: nouveau
+      state: present
+
   - name: Get latest kernel version
+    when: install_gpu_tools is defined and install_gpu_tools
     shell: dpkg --list | fgrep linux-image | sed 's,.*linux-image-,,' | sed 's, .*,,' | grep '^[0-9]' | sort -V | tail -1
     register: kernver
 
   - name: Install kernel headers
+    when: install_gpu_tools is defined and install_gpu_tools
     apt:
       pkg: linux-headers-{{ kernver.stdout }}
       state: present
 
   - name: Fetch nvidia repo keys
+    when: install_gpu_tools is defined and install_gpu_tools
     shell: wget https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/cuda-keyring_1.1-1_all.deb
 
   - name: Install nvidia repo keys
+    when: install_gpu_tools is defined and install_gpu_tools
     shell: dpkg -i cuda-keyring_1.1-1_all.deb
 
   - name: Update repo information
+    when: install_gpu_tools is defined and install_gpu_tools
     command: apt-get update
 
   - name: Update distribution
+    when: install_gpu_tools is defined and install_gpu_tools
     apt:
       upgrade: dist
       update_cache: no
       autoremove: yes
 
   - name: Install pahole
+    when: install_gpu_tools is defined and install_gpu_tools
     apt:
       pkg: pahole
       state: present
 
   - name: Install nvidia-driver
+    when: install_gpu_tools is defined and install_gpu_tools
     apt:
       pkg: nvidia-driver
       state: present
 
   - name: Install libnvidia-ml1
+    when: install_gpu_tools is defined and install_gpu_tools
     apt:
       pkg: libnvidia-ml1
       state: present
 
   - name: Install nvidia-driver-cuda
+    when: install_gpu_tools is defined and install_gpu_tools
     apt:
       pkg: nvidia-driver-cuda
       state: present
 
   - name: Install cuda-toolkit
+    when: install_gpu_tools is defined and install_gpu_tools
     apt:
       pkg: cuda-toolkit
       state: present
 
   - name: Install nvtop etc.
+    when: install_gpu_tools is defined and install_gpu_tools
     apt:
       pkg:
-        - nvtop
+        - gpu-burn
+        - libcublas12
         - nvidia-settings
+        - nvtop
       state: present
+
+  - name: Update initramfs
+    command: update-initramfs -k all -u

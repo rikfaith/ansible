@@ -1,7 +1,7 @@
 ---
-# This works around a bug when using update_cache: yes
 - name: Update apt cache for current distribution
   command: apt-get update
+  # This works around a bug when using update_cache: yes
 
 - name: Installing usrmerge
   apt:

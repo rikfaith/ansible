@@ -20,3 +20,5 @@
       server=/{{ dnsmasq_domain0 }}/{{ dnsmasq_remote1 }}
       server=/{{ dnsmasq_domain1 }}/{{ dnsmasq_remote0 }}
       server=/{{ dnsmasq_domain1 }}/{{ dnsmasq_remote1 }}
+      server=/{{ dnsmasq_domain2 }}/{{ dnsmasq_remote0 }}
+      server=/{{ dnsmasq_domain2 }}/{{ dnsmasq_remote1 }}

@@ -14,7 +14,6 @@
       server {{ ntp0 }} iburst
       server {{ ntp1 }} iburst
       server {{ ntp2 }} iburst
-      server {{ ntp3 }} iburst
       local stratum 10 orphan
 
       driftfile /var/lib/chrony/chrony.drift

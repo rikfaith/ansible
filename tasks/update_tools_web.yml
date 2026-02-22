@@ -1,0 +1,165 @@
+---
+- name: Install apache tools
+  when: vm_purpose is defined and vm_purpose == "web"
+  apt:
+    pkg:
+      - apache2
+      - cronolog
+      - gcc
+      - libaugeas-dev
+      - links
+      - nodejs
+      - npm
+      - python3-certbot
+      - python3-certbot-apache
+      - python3-certbot-dns-rfc2136
+      - python3-certbot-dns-digitalocean
+      - python3-dev
+      - python3-virtualenv
+
+- name: Install certbot
+  when: vm_purpose is defined and vm_purpose == "web"
+  pip:
+    name:
+      - certbot
+      - certbot-apache
+    virtualenv: /opt/certbot
+
+- name: Install DigitalOcean credentials for m.panpedia.org
+  when: vm_purpose is defined and vm_purpose == "web"
+  copy:
+    dest: "/root/digitalocean-panpedia.ini"
+    owner: root
+    group: root
+    mode: '0600'
+    content: |
+      dns_digitalocean_token = "{{ default.m_panpedia_org_token }}"
+
+# See https://github.com/certbot/certbot.git
+# And https://ssl-config.mozilla.org
+- name: Install version of options file, since certonly does not
+  when: vm_purpose is defined and vm_purpose == "web"
+  copy:
+    dest: "/etc/letsencrypt/options-ssl-apache.conf"
+    owner: root
+    group: root
+    mode: '0644'
+    content: |
+      SSLEngine on
+      SSLProtocol             -all +TLSv1.2 +TLSv1.3
+      SSLOpenSSLConfCmd       Curves X25519:prime256v1:secp384r1
+      SSLCipherSuite          ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384:DHE-RSA-CHACHA20-POLY1305
+      SSLHonorCipherOrder     off
+      SSLSessionTickets       off
+
+- name: Install RFC-2136 credentials for web.alephnull.com
+  when: vm_purpose is defined and vm_purpose == "web"
+  copy:
+    dest: "/root/rfc2136-alephnull.ini"
+    owner: root
+    group: root
+    mode: '0600'
+    content: |
+      dns_rfc2136_server = "{{ default.web_alephnull_com_server }}"
+      dns_rfc2136_port = 53
+      dns_rfc2136_name = web.alephnull.com
+      dns_rfc2136_secret = "{{ default.web_alephnull_com_secret }}"
+      dns_rfc2136_algorithm = HMAC-SHA512
+
+- name: Get certificate for m.panpedia.org
+  when: vm_purpose is defined and vm_purpose == "web"
+  shell: certbot certonly --agree-tos -n --preferred-challenges dns -d m.panpedia.org,panpedia.org,www.panpedia.org -m rikfaith@gmail.com --dns-digitalocean --dns-digitalocean-credentials /root/digitalocean-panpedia.ini
+
+- name: Get certificate for web.alephnull.com
+  when: vm_purpose is defined and vm_purpose == "web"
+  shell: certbot certonly --agree-tos -n --preferred-challenges dns -d web.alephnull.com,alephnull.com,www.alephnull.com -m rikfaith@gmail.com --dns-rfc2136 --dns-rfc2136-credentials /root/rfc2136-alephnull.ini
+
+- name: Add cert renewal to /etc/crontab
+  when: vm_purpose is defined and vm_purpose == "web"
+  blockinfile:
+    dest: /etc/crontab
+    block: |
+      17   3  10,20 * * root certbot renew --post-hook "apache2ctl graceful"
+
+- name: Add local config to apache
+  when: vm_purpose is defined and vm_purpose == "web"
+  copy:
+    dest: "/etc/apache2/conf-available/local.conf"
+    owner: root
+    group: root
+    mode: '0644'
+    content: |
+      <Directory /web>
+          Options Indexes FollowSymLinks
+          AllowOverride All
+          Require all granted
+      </Directory>
+
+- name: Add default http/https config to apache
+  when: vm_purpose is defined and vm_purpose == "web"
+  copy:
+    dest: "/etc/apache2/sites-available/000-default.conf"
+    owner: root
+    group: root
+    mode: '0644'
+    content: |
+      <VirtualHost *:80>
+        ServerAdmin webmaster@localhost
+        DocumentRoot /web/default/docroot
+
+        TransferLog "|/usr/bin/cronolog /var/log/httpd/default/%Y/%m/access.%Y%m%d.log"
+        ErrorLog "|/usr/bin/cronolog /var/log/httpd/default/%Y/%m/error.%Y%m%d.log"
+      </VirtualHost>
+
+      <VirtualHost *:443>
+        ServerAdmin webmaster@localhost
+        DocumentRoot /web/default/docroot
+
+        SSLEngine on
+        SSLCertificateFile    /etc/letsencrypt/live/web.alephnull.com/fullchain.pem
+        SSLCertificateKeyFile /etc/letsencrypt/live/web.alephnull.com/privkey.pem
+        Include               /etc/letsencrypt/options-ssl-apache.conf
+
+        TransferLog "|/usr/bin/cronolog /var/log/httpd/default/%Y/%m/access.%Y%m%d.log"
+        ErrorLog "|/usr/bin/cronolog /var/log/httpd/default/%Y/%m/error.%Y%m%d.log"
+      </VirtualHost>
+
+- name: Add config to apache
+  when: vm_purpose is defined and vm_purpose == "web"
+  copy:
+    dest: "/etc/apache2/sites-available/m.panpedia.org.conf"
+    owner: root
+    group: root
+    mode: '0644'
+    content: |
+      <VirtualHost m.panpedia.org:443>
+        ServerName m.panpedia.org
+        ServerAdmin webadmin@panpedia.org
+        DocumentRoot /web/m.panpedia.org/docroot
+
+        SSLEngine on
+        SSLCertificateFile    /etc/letsencrypt/live/m.panpedia.org/fullchain.pem
+        SSLCertificateKeyFile /etc/letsencrypt/live/m.panpedia.org/privkey.pem
+        Include               /etc/letsencrypt/options-ssl-apache.conf
+
+        TransferLog "|/usr/bin/cronolog /var/log/httpd/m.panpedia.org/%Y/%m/access.%Y%m%d.log"
+        ErrorLog "|/usr/bin/cronolog /var/log/httpd/m.panpedia.org/%Y/%m/error.%Y%m%d.log"
+        ScriptAlias /bin/ /web/m.panpedia.org/support/
+      </VirtualHost>
+
+      <VirtualHost m.panpedia.org:80>
+        ServerName m.panpedia.org
+        RedirectPermanent / https://m.panpedia.org/
+      </VirtualHost>
+
+- name: Activate SSL module
+  when: vm_purpose is defined and vm_purpose == "web"
+  shell: a2enmod ssl
+
+- name: Activate m.panpedia.org
+  when: vm_purpose is defined and vm_purpose == "web"
+  shell: a2ensite m.panpedia.org
+
+- name: Activate local.conf
+  when: vm_purpose is defined and vm_purpose == "web"
+  shell: a2enconf local

@@ -7,7 +7,7 @@ conn = psycopg2.connect(
     host='10.42.93.153',
     database='ts',
     user='ts',
-    password='ts.2025'
+    password='ts.2025xxx' # Change to allow script to run
 )
 
 cur = conn.cursor()

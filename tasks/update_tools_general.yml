@@ -15,6 +15,7 @@
       - ddate
       - dict
       - debootstrap
+      - diffstat
       - dmidecode
       - enscript
       - ethtool
@@ -65,8 +66,9 @@
       - pcm
       - pdftk
       - pipx
-      - python3-poetry
+      - prometheus-node-exporter
       - psutils
+      - python3-poetry
       - rclone
       - ripgrep
       - rpm2cpio
