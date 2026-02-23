@@ -37,7 +37,8 @@ desktops:
         alt0ip: 10.42.0.147
         alt1port: eth3
         alt1ip: 10.42.11.47
-        grub_options: "audit=0 nomodeset nofb video=vesafb:off"
+        #grub_options: "audit=0 nomodeset nofb video=vesafb:off"
+        grub_options: "audit=0"
         rsyncd_mount: home
         dnsmasq_server: 10.42.93.1
         dnsmasq_forward: alephnull.com

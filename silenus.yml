@@ -8,11 +8,9 @@
   vars_files:
     - passwords.yml
   vars:
-    - using_devuan: true
-    - install_unstable: true
-    - install_local_time_source: true
-    - install_silenus_x11_config: true
-    - install_nvidia: true
+    using_devuan: true
+    install_unstable: true
+    install_local_time_source: true
 
   tasks:
     - import_tasks: tasks/get_ssh_port.yml
@@ -25,7 +23,7 @@
     - import_tasks: tasks/update_distribution.yml
     - import_tasks: tasks/update_chrony.yml
     - import_tasks: tasks/update_keymap.yml
-    - import_tasks: tasks/update_sysctl.yml
+    - import_tasks: tasks/update_sysctl_simple.yml
     - import_tasks: tasks/update_crontab.yml
     - import_tasks: tasks/update_bashrc.yml
     - import_tasks: tasks/update_dash.yml
@@ -34,6 +32,8 @@
     - import_tasks: tasks/update_tools_general.yml
     - import_tasks: tasks/update_tools_desktop.yml
     - import_tasks: tasks/update_tools_text.yml
+    - import_tasks: tasks/update_tools_emacs.yml
+    - import_tasks: tasks/update_tools_gpu_blackwell.yml
     - import_tasks: tasks/update_tools_virtualization.yml
     - import_tasks: tasks/update_rsyncd.yml
     - import_tasks: tasks/update_ssh_remote_keys.yml

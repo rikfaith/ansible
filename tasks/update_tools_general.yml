@@ -65,6 +65,7 @@
       - pcm
       - pdftk
       - pipx
+      - python3-poetry
       - psutils
       - rclone
       - ripgrep

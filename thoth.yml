@@ -23,7 +23,7 @@
     - import_tasks: tasks/update_distribution.yml
     - import_tasks: tasks/update_chrony.yml
     - import_tasks: tasks/update_keymap.yml
-    - import_tasks: tasks/update_sysctl.yml
+    - import_tasks: tasks/update_sysctl_simple.yml
     - import_tasks: tasks/update_crontab.yml
     - import_tasks: tasks/update_bashrc.yml
     - import_tasks: tasks/update_dash.yml

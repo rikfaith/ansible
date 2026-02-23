@@ -7,7 +7,7 @@
 
 - name: Installing sshguard
   apt:
-    pkg: iptables
+    pkg: sshguard
     update-cache: no
     autoremove: yes
 
@@ -24,14 +24,22 @@
 - name: Increase sshguard BLOCK_TIME
   lineinfile:
     dest: /etc/sshguard/sshguard.conf
-    regesp: BLOCK_TIME=
+    regexp: BLOCK_TIME=
     line: "BLOCK_TIME=600"
 
 - name: Increase sshguard DETECTION_TIME
   lineinfile:
     dest: /etc/sshguard/sshguard.conf
-    regesp: DETECTION_TIME=
+    regexp: DETECTION_TIME=
     line: "DETECTION_TIME=86400"
+
+- name: Removing sshguard chain from INPUT table
+  shell: iptables -D INPUT -j sshguard
+  ignore_errors: true
+
+- name: Removig sshguard chain
+  shell: iptables -X sshguard
+  ignore_errors: true
 
 - name: Adding sshguard chain
   shell: iptables -N sshguard

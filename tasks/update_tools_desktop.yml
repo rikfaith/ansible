@@ -1,50 +1,9 @@
 ---
-# Gather facts again to figure out current kernel version (ansible_kernel)
-- name: Gether facts
-  gather_facts:
-
 - name: update udev config for scanner
-  blockinfile:
+  copy:
     dest: /etc/udev/rules.d/99-scanner.rules
-    block: |
+    content: |
       SUBSYSTEM=="usb", ATTRS{idVendor}=="04a9", ATTRS{idProduct}=="1912", GROUP="scanner", MODE="0660", SYMLINK+="scanner"
-
-- name: Install X11 server
-  apt:
-    pkg:
-      - xserver-xorg
-
-- name: Remove the nouveau driver
-  modprobe:
-    name: nouveau
-    state: absent
-
-- name: Remove nvidia-persistenced
-  apt:
-    name: nvidia-persistenced
-    state: absent
-    purge: yes
-
-- name: Install Linux kernel header files
-  apt:
-    name: "linux-headers-{{ ansible_kernel }}"
-
-- name: Install X11 nvidia driver
-  apt:
-    pkg:
-      - nvidia-driver
-      - xserver-xorg-video-nvidia
-      - nvidia-persistenced
-  ignore_errors: true
-
-# Do this again.  The first time it fails on nvidia-persistenced.
-# We might have to ignore_errors and then reboot and try again.
-- name: Install X11 nvidia driver again
-  apt:
-    pkg:
-      - nvidia-driver
-      - xserver-xorg-video-nvidia
-      - nvidia-persistenced
 
 - name: Install desktop (and X11) tools
   apt:
@@ -68,7 +27,7 @@
       - mpv
       - perf-tools-unstable
       - printer-driver-postscript-hp
-      - signal-desktop
+      #- signal-desktop
       - ssh-askpass-fullscreen
       - t1-xfree86-nonfree
       - telegram-desktop
@@ -88,34 +47,3 @@
       - xsane
       - xterm
       - xtightvncviewer
-
-- name: Install Xorg configuration
-  copy:
-    dest: /etc/X11/xorg.conf.d/10-monitor.conf
-    content: |
-      Section "ServerLayout"
-        Identifier "TwinLayout"
-        Screen 0 "metaScreen" 0 0
-      EndSection
-
-      Section "Device"
-        Identifier "Card0"
-        Driver "nvidia"
-        Option "ConnectedMonitor" "DP-3, DP-4, DP-1, HDMI-0"
-
-        # This is the option line for the right hand monitor above the others.
-        #Option "MetaModes" "DP-3: 1600x1200 +0+1200 { Rotation=left }, DP-4: 2560x1600 +1200+1200 , DP-1: 1600x1200 +3760+1200 { Rotation=right }, HDMI-0: 1920x1200 +3040+0"
-
-        # This is the option line for the right hand monitor to the right of the others.
-        #Option "MetaModes" "DP-3: 1600x1200 +0+0 { Rotation=left }, DP-4: 2560x1600 +1200+0 , DP-1: 1600x1200 +3760+0 { Rotation=right }, HDMI-0: 1920x1200 +4960+0"
-
-        Option "MetaModes" "DP-3: 1600x1200 +0+0 { ForceFullCompositionPipeline=On,Rotation=left }, DP-4: 2560x1600 +1200+0 { ForceFullCompositionPipeline=On } , DP-1: 1600x1200 +3760+0 { ForceFullCompositionPipeline=On,Rotation=right }, HDMI-0: 1920x1200 +4960+0 { ForceFullCompositionPipeline=On }"
-      EndSection
-
-      Section "Screen"
-        Identifier "metaScreen"
-        Device "Card0"
-        DefaultDepth 24
-        Option "TwinView" "true"
-      EndSection
-  when: install_silenus_x11_config is defined and install_silenus_x11_config == True
