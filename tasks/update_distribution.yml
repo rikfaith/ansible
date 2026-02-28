@@ -52,6 +52,13 @@
   when: using_devuan is defined and using_devuan == True
         and install_unstable is defined and install_unstable == True
 
+- name: Update debian sources
+  replace:
+    path: /etc/apt/sources.list.d/debian.sources
+    regexp: '^Components:.*'
+    replace: 'Components: main contrib non-free non-free-firmware'
+  when: using_debian is defined and using_debian == True
+
 # This works around a bug when using update_cache: yes
 - name: Update apt cache for current distribution
   command: apt-get update

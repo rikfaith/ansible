@@ -1,5 +1,10 @@
----
-- name: Install general (non-X11) tools
+- name: Install general (non-X11) tools for Devuan
+  apt:
+    pkg:
+      - sysv-rc-conf
+  when: using_devuan is defined and using_devuan == True
+
+- name: Install general (non-X11) tools for Devuan/Debian
   apt:
     pkg:
       - 7zip
@@ -17,6 +22,7 @@
       - debootstrap
       - diffstat
       - dmidecode
+      - emacs
       - enscript
       - ethtool
       - ffmpeg
@@ -29,6 +35,7 @@
       - intel-microcode
       - iperf3
       - ipmitool
+      - iputils-tracepath
       - jc
       - jnettop
       - jq
@@ -79,7 +86,6 @@
       - stenc
       - strace
       - sysstat
-      - sysv-rc-conf
       - telnet
       - tmux
       - traceroute

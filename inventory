@@ -1,6 +1,14 @@
 # For pi wifi:
 # nmcli dev wifi connect private password Infinity2021
 
+cloud:
+    hosts:
+        panpedia.org:
+          ansible_host: 129.212.135.231
+          ansible_port: 22
+          # ansible_user: root
+          configured_port: 22
+
 laptops:
     hosts:
         pixie:
@@ -179,6 +187,9 @@ storage:
         br0port: eth0
         grub_options: "audit=0"
         rsyncd_mount: tmp
+
+# For pi wifi:
+# nmcli dev wifi connect private password Infinity2021
 
 nutanix:
     hosts:

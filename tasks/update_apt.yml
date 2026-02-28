@@ -6,12 +6,14 @@
     regexp: '^deb cdrom:'
 
 - name: Force apt to use IPv4
+  when: remote_vm is not defined or remote_vm == False
   copy:
-    dest: /etc/apt/apt.conf.d/99force-ipv4
+    dest: /etc/apt/apt.conf.d/98force-ipv4
     content: |
       Acquire::ForceIPv4 "true";
 
 - name: Configure cache in /etc/apt/apt.conf.d
+  when: remote_vm is not defined or remote_vm == False
   copy:
     dest: /etc/apt/apt.conf.d/99cache
     content: |

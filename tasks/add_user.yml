@@ -1,0 +1,17 @@
+---
+  - name: Install zsh
+    apt:
+      pkg: zsh
+      state: present
+
+  - name: Add user {{ default.nonroot_user }}
+    become: true
+    user:
+      name: "{{ default.nonroot_user }}"
+      comment: ""
+      uid: 1000
+      groups: sudo
+      append: yes
+      shell: /bin/zsh
+      create_home: yes
+      password: "{{ default.nonroot_password }}"

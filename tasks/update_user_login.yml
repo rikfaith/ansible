@@ -31,7 +31,6 @@
   args:
     chdir: "/home/{{ default.nonroot_user }}/dotfiles2"
 
-# Need to add group "scanner" for desktop install.
 - name: Use zsh and update /etc/group
   user:
     name: "{{ default.nonroot_user }}"
@@ -39,6 +38,14 @@
     create_home: no
     append: yes
     groups: audio,cdrom,dialout,floppy,kvm,lp,sudo,tape,video
+
+- name: Add to scanner group
+  user:
+    name: "{{ default.nonroot_user }}"
+    create_home: no
+    append: yes
+    groups: scanner
+  when: scanner_group is defined and scanner_group == True
 
 - name: Activate zsh history
   file:

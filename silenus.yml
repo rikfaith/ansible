@@ -11,6 +11,8 @@
     using_devuan: true
     install_unstable: true
     install_local_time_source: true
+    scanner_group: true
+    install_silenus: true
 
   tasks:
     - import_tasks: tasks/get_ssh_port.yml
@@ -32,12 +34,11 @@
     - import_tasks: tasks/update_tools_general.yml
     - import_tasks: tasks/update_tools_build.yml
     - import_tasks: tasks/update_tools_desktop.yml
+    - import_tasks: tasks/update_tools_build.yml
     - import_tasks: tasks/update_tools_text.yml
-    - import_tasks: tasks/update_tools_emacs.yml
     - import_tasks: tasks/update_tools_gpu_blackwell.yml
     - import_tasks: tasks/update_tools_virtualization.yml
     - import_tasks: tasks/update_rsyncd.yml
-    - import_tasks: tasks/update_ssh_remote_keys.yml
     - import_tasks: tasks/update_user_login.yml
     - import_tasks: tasks/update_dnsmasq.yml
     - import_tasks: tasks/update_zoom.yml

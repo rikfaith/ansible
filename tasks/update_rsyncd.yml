@@ -26,7 +26,30 @@
 
       [{{ rsyncd_mount }}]
         path = /{{ rsyncd_mount }}
-  when: rsyncd_mount is defined
+  when: rsyncd_mount is defined and (install_silenus is not defined or install_silenus == False)
+
+- name: Create /etc/rsyncd.conf for silenus
+  copy:
+    dest: /etc/rsyncd.conf
+    content: |
+      uid = root
+      gid = root
+      read only = yes
+      use chroot = yes
+      hosts allow = 10.42.11.0/24
+      hosts deny = *
+      dont compress = *
+      
+      [{{ rsyncd_mount }}]
+        path = /{{ rsyncd_mount }}
+      
+      [etc]
+        path = /etc
+      
+      [root]
+        path = /root
+
+  when: rsyncd_mount is defined and install_silenus is defined and install_silenus == True
 
 - name: Run rsyncd by default
   shell: sysv-rc-conf rsync on
