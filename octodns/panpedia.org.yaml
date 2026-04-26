@@ -1,0 +1,40 @@
+---
+? ''
+: - ttl: 900
+    type: A
+    value: 129.212.135.231
+  - ttl: 3600
+    type: CAA
+    value:
+      flags: 0
+      tag: issue
+      value: letsencrypt.org.
+  - ttl: 900
+    type: MX
+    value:
+      exchange: mx-caprica.easydns.com.
+      preference: 0
+  - ttl: 1800
+    type: NS
+    values:
+    - ns1.digitalocean.com.
+    - ns2.digitalocean.com.
+    - ns3.digitalocean.com.
+em464438:
+  type: CNAME
+  value: return.smtp2go.net.
+m:
+  ttl: 43200
+  type: CNAME
+  value: mute.panpedia.org.
+mute:
+  ttl: 900
+  type: A
+  value: 173.244.238.236
+s464438._domainkey:
+  type: CNAME
+  value: dkim.smtp2go.net.
+winter:
+  ttl: 900
+  type: A
+  value: 174.109.66.74

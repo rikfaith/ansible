@@ -5,6 +5,7 @@
       - autoconf
       - cmake
       - gfortran
+      - libicu-dev
       - libjpeg62-turbo-dev
       - libopenblas-dev
       - libpng-dev
@@ -13,3 +14,4 @@
       - libx11-dev
       - libxrandr-dev
       - libxt-dev
+      - pkg-config

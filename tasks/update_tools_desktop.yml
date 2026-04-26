@@ -9,12 +9,14 @@
   apt:
     pkg:
       - alsa-utils
+      - apt-file
       - autocutsel
       - btcheck
       - chromium
       - cups
       - dclock
       - evince
+      - feh
       - firefox-esr
       - fvwm
       - ghostscript

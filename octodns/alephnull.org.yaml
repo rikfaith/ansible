@@ -1,0 +1,95 @@
+---
+? ''
+: - ttl: 3600
+    type: A
+    value: 199.48.130.3
+  - ttl: 3600
+    type: CAA
+    value:
+      flags: 0
+      tag: issue
+      value: letsencrypt.org.
+  - ttl: 3600
+    type: MX
+    values:
+    - exchange: aspmx.l.google.com.
+      preference: 1
+    - exchange: alt1.aspmx.l.google.com.
+      preference: 5
+    - exchange: alt2.aspmx.l.google.com.
+      preference: 5
+    - exchange: alt3.aspmx.l.google.com.
+      preference: 10
+    - exchange: alt4.aspmx.l.google.com.
+      preference: 10
+  - ttl: 1800
+    type: NS
+    values:
+    - ns1.digitalocean.com.
+    - ns2.digitalocean.com.
+    - ns3.digitalocean.com.
+  - ttl: 3600
+    type: TXT
+    value: v=spf1include:_spf.google.com~all
+'*':
+  ttl: 3600
+  type: MX
+  value:
+    exchange: alt4.aspmx.l.google.com.
+    preference: 20
+_xmpp-client._tcp:
+  ttl: 3600
+  type: SRV
+  value:
+    port: 5222
+    priority: 0
+    target: raven.toroid.org.
+    weight: 0
+_xmpp-server._tcp:
+  ttl: 3600
+  type: SRV
+  value:
+    port: 5269
+    priority: 0
+    target: raven.toroid.org.
+    weight: 0
+alephnull:
+  ttl: 3600
+  type: A
+  value: 199.48.130.3
+em464438:
+  ttl: 3600
+  type: CNAME
+  value: return.smtp2go.net.
+mute:
+  ttl: 90
+  type: A
+  value: 173.244.238.236
+ns2:
+  ttl: 3600
+  type: A
+  value: 199.48.130.2
+ntp:
+  ttl: 3600
+  type: A
+  value: 199.48.130.2
+s464438._domainkey:
+  ttl: 3600
+  type: CNAME
+  value: dkim.smtp2go.net.
+shadow:
+  ttl: 3600
+  type: A
+  value: 199.48.130.2
+shadow-i:
+  ttl: 3600
+  type: A
+  value: 104.225.0.186
+winter:
+  ttl: 900
+  type: A
+  value: 174.109.66.74
+www:
+  ttl: 3600
+  type: A
+  value: 199.48.130.3

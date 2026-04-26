@@ -1,0 +1,30 @@
+---
+? ''
+: - ttl: 3600
+    type: A
+    value: 199.48.130.3
+  - ttl: 3600
+    type: CAA
+    value:
+      flags: 0
+      tag: issue
+      value: letsencrypt.org.
+  - ttl: 3600
+    type: MX
+    value:
+      exchange: mx-caprica.easydns.com.
+      preference: 0
+  - ttl: 1800
+    type: NS
+    values:
+    - ns1.digitalocean.com.
+    - ns2.digitalocean.com.
+    - ns3.digitalocean.com.
+so:
+  ttl: 900
+  type: A
+  value: 199.48.130.2
+www:
+  ttl: 900
+  type: A
+  value: 199.48.130.3

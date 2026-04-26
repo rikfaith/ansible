@@ -10,6 +10,7 @@ if [[ -z $1 ]] ; then
 fi
 set -x
 
+TARGET=$1
 HOST=node0
 GPUHOST=thoth
 HAQCOW2=~/Downloads/haos_ova-17.1.qcow2
@@ -18,15 +19,15 @@ RAM=$((16*1024))
 VCPUS=4
 VARIANT=debiantesting  # closet to devuan ceres
 EXTRA=""
-QCOW2=/tmp/$1.qcow2
+QCOW2=/tmp/$TARGET.qcow2
 BASEQCOW2=$(basename $QCOW2 .qcow2).qcow2
 
 BOOTDISK0="--disk path=/$HOST/pool/$BASEQCOW2,format=qcow2,bus=virtio"
 BOOTDISK1=""
 FILESYSTEM0="--memorybacking=source.type=memfd,access.mode=shared"
-FILESYSTEM1="--filesystem /$HOST/$1,$1,driver.type=virtiofs"
+FILESYSTEM1="--filesystem /$HOST/$TARGET,$TARGET,driver.type=virtiofs"
 
-case $1 in
+case $TARGET in
     # NODE0 VMS
     devuan) PAIR="15:01" ;;
     syslog) PAIR="15:02" ;;
@@ -41,6 +42,8 @@ case $1 in
         EXTRA="--boot uefi"
         BOOTDISK0="--disk path=/$HOST/pool/$BASEQCOW2,format=qcow2,bus=scsi"
         BOOTDISK1="--controller type=scsi,model=virtio-scsi"
+        FILESYSTEM0=""
+        FILESYSTEM1=""
         if [[ ! -e $HAQCOW2 && -e $HAQCOW2.xz ]]; then
             echo "Decompressing $HAQCOW2.xz to $HAQCOW2"
             unxz -k $HAQCOW2.xz
@@ -68,15 +71,16 @@ case $1 in
 # Total ram (1024 total): 5 * 16 + 2 * 64 + 1 * 256 = 464
 # Total CPU (80 total)  : 5 *  4 + 1 *  8 + 2 *  16 = 60
 
-virsh -c qemu+ssh://root@$HOST/system destroy $1
-virsh -c qemu+ssh://root@$HOST/system undefine $1
-rsync -Pavv $QCOW2 root@$HOST:/$HOST/pool
-ssh root@$HOST "if [[ ! -d /$HOST/$1 ]]; then mkdir /$HOST/$1; else echo /$HOST/$1 exists; fi"
+virsh -c qemu+ssh://root@$HOST/system destroy $TARGET
+virsh -c qemu+ssh://root@$HOST/system undefine $TARGET
+rsync -Pavv $QCOW2 root@$HOST:/$HOST/pool/$TARGET.qcow2
+
+ssh root@$HOST "if [[ ! -d /$HOST/$TARGET ]]; then mkdir /$HOST/$TARGET; else echo /$HOST/$TARGET exists; fi"
 
 #    --noautoconsole \
 virt-install \
     --connect qemu+ssh://root@$HOST/system \
-    --name $1 \
+    --name $TARGET \
     --os-variant=$VARIANT \
     --ram $RAM \
     --vcpus $VCPUS \
@@ -91,4 +95,4 @@ virt-install \
     --network bridge=br1,model=virtio,mac.address=52:54:00:$PAIR:01 \
     --autoconsole none $EXTRA
 
-virsh -c qemu+ssh://root@$HOST/system autostart $1
+virsh -c qemu+ssh://root@$HOST/system autostart $TARGET

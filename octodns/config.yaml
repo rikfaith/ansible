@@ -1,0 +1,89 @@
+providers:
+  config:
+    class: octodns.provider.yaml.YamlProvider
+    directory: .
+  bind:
+    class: octodns_bind.Rfc2136Provider
+    host: ns2.alephnull.com
+    port: 53
+    ipv6: False
+    timeout: 10
+    key_name: mute.alephnull.com
+    key_secret: !include /home/faith/.mute-bind-key
+    key_algorithm: hmac-sha512
+  digitalocean:
+    class: octodns_digitalocean.DigitalOceanProvider
+    token: !include /home/faith/.digital-ocean-token
+
+
+zones:
+  alephnull.com.:
+    sources:
+      - config
+    targets:
+      - digitalocean
+  alephnull.org.:
+    sources:
+      - config
+    targets:
+      - digitalocean
+  bogus.org.:
+    sources:
+      - config
+    targets:
+      - digitalocean
+  clepperfaith.com.:
+    sources:
+      - config
+    targets:
+      - digitalocean
+  clepper-faith.com.:
+    sources:
+      - config
+    targets:
+      - digitalocean
+  dict.org.:
+    sources:
+      - config
+    targets:
+      - digitalocean
+  hybridsky.org.:
+    sources:
+      - config
+    targets:
+      - digitalocean
+  hillsboroughpeds.com.:
+    sources:
+      - config
+    targets:
+      - digitalocean
+  panpedia.com.:
+    sources:
+      - config
+    targets:
+      - digitalocean
+  panpedia.org.:
+    sources:
+      - config
+    targets:
+      - digitalocean
+  panpedia.net.:
+    sources:
+      - config
+    targets:
+      - digitalocean
+  pineview82.org.:
+    sources:
+      - config
+    targets:
+      - digitalocean
+  tarball.org.:
+    sources:
+      - config
+    targets:
+      - digitalocean
+  urmp.org.:
+    sources:
+      - config
+    targets:
+      - digitalocean

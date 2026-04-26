@@ -22,6 +22,6 @@
 - name: Add local machine name to /etc/hosts
   lineinfile: path=/etc/hosts
               regexp='127.0.1.1'
-              line='127.0.1.1       {{ vm_hostname }}.{{ default.domain }} {{ vm_hostname}}'
+              line='127.0.1.1       {{ vm_hostname }}.{{ default.domain }} {{ vm_hostname }}'
               state=present
               insertafter='127.0.0.1'
