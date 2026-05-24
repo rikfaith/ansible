@@ -1,0 +1,11 @@
+---
+- name: Populate resolv.conf
+  copy:
+    dest: /etc/resolv.conf
+    owner: root
+    group: root
+    mode: '0644'
+    content: |
+      search alephnull.com dict.org panpedia.org
+      nameserver 1.1.1.1
+      nameserver 9.9.9.9

@@ -51,3 +51,7 @@
   sysvinit:
     name: sshguard
     state: restarted
+
+- name: Stopping sshguard because we are configuring a VM
+  shell: /etc/init.d/sshguard stop
+  when: vm_installation is defined and vm_installation

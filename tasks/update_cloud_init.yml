@@ -1,0 +1,7 @@
+---
+- name: Configure cloud-init
+  when: configure_cloud_init is defined and configure_cloud_init
+  copy:
+    dest: /etc/cloud/cloud.cfg.d/00-init.cfg
+    content: |
+      datasource_list: [ ConfigDrive, OpenNebula, DigitalOcean, Azure, AltCloud, OVF, MAAS, GCE, OpenStack, CloudSigma, SmartOS, None, NoCloud ]

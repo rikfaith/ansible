@@ -5,6 +5,7 @@
       - autoconf
       - cmake
       - gfortran
+      - golang
       - libicu-dev
       - libjpeg62-turbo-dev
       - libopenblas-dev

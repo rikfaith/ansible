@@ -3,12 +3,11 @@
 : - ttl: 900
     type: A
     value: 129.212.135.231
-  - ttl: 3600
-    type: CAA
+  - type: CAA
     value:
       flags: 0
       tag: issue
-      value: letsencrypt.org.
+      value: letsencrypt.org
   - ttl: 900
     type: MX
     value:

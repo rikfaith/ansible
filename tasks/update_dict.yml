@@ -1,0 +1,221 @@
+- name: Install dict server support
+  apt:
+    pkg:
+    - dict
+    - dictd
+    - dictzip
+    - dict-cc-cedict
+    - dict-de-en
+    - dict-devil
+    - dict-elements
+    - dict-foldoc
+    - dict-gcide
+    - dict-jargon
+    - dict-vera
+    - dict-wn
+
+- name: "get list of freedict packages"
+  shell: apt-cache search dict-freedict | cut -d' ' -f1
+  register: freedict
+
+- name: "install freedict packages"
+  apt:
+    name: "{{ freedict.stdout_lines }}"
+
+- name: "copy legacy databases"
+  copy:
+    src: "{{ item }}"
+    dest: "/usr/share/dictd"
+    owner: root
+    group: root
+    mode: 0644
+  with_fileglob:
+    - "dict/db/*"
+
+- name: "create log directory"
+  file:
+    path: /var/log/dictd
+    state: directory
+    owner: dictd
+    group: dictd
+
+- name: "configure defaults"
+  copy:
+    dest: /etc/default/dictd
+    backup: yes
+    content: |
+      RUN_MODE="daemon"
+      DICTD_ARGS="--locale=en_US.UTF-8"
+      DICTD_ARGS="$DICTD_ARGS -L /var/log/dictd/%Y/%m/dictd-shadow.%Y%m%d.log"
+      DICTD_ARGS="$DICTD_ARGS -l none -l found -l notfound -l host -l client -l timestamp"
+      DICTD_ARGS="$DICTD_ARGS -m60 --limit 800"
+
+- name: "create dictd.order file"
+  copy:
+    dest: /etc/dictd/dictd.order
+    backup: yes
+    content: |
+      web1913 gcide wn moby-thesaurus elements vera jargon foldoc
+      easton hitchcock bouvier devil world02 gazetteer
+      gazetteer2k-counties gazetteer2k-places gazetteer2k-zips
+      gaz2k-counties gaz2k-places gaz2k-zips
+      database_exit
+      /usr/share/dictd/
+      english
+      trans
+      all
+
+- name: "get list of freedict files"
+  shell: |
+    ls -1 /usr/share/dictd | \
+    fgrep freedict- | \
+    sed 's,freedict-,fd-,' | \
+    sed 's,\..*$,,' | \
+    tr '\n' ',' | \
+    sed 's/,$//'
+  register: freedict_files
+
+- debug: msg='{{ item }}'
+  with_items: "{{ freedict_files.stdout_lines }}"
+
+- name: "create dictd.conf"
+  copy:
+    dest: /etc/dictd/dictd.conf
+    backup: yes
+    content: |
+      access {
+          allow *
+      }
+
+      include /var/lib/dictd/db.list
+
+      database_virtual english {
+          name "English Monolingual Dictionaries"
+          database_list
+          "gcide,wn,moby-thesaurus,elements,vera,jargon,foldoc,easton,hitchcock,bouvier,devil,world02,gaz2k-counties,gaz2k-places,gaz2k-zips"
+      }
+
+      database_virtual trans {
+          name "Translating Dictionaries"
+          database_list
+          "german-english,english-german,cc-cedict,{{ freedict_files.stdout }}"
+      }
+
+      database_virtual all {
+          name "All Dictionaries (English-Only and Translating)"
+          database_list
+          "gcide,wn,moby-thesaurus,elements,vera,jargon,foldoc,easton,hitchcock,bouvier,devil,world02,gaz2k-counties,gaz2k-places,gaz2k-zips,german-english,english-german,cc-cedict,{{ freedict_files.stdout }}"
+      }
+- name: "update database to include legacy databases"
+  command: dictdconfig -w
+
+- name: "create directories"
+  file: path='{{ item }}' state=directory owner=root group=root
+  with_items:
+  - /www/dict.org/support
+  - /www/dict.org/docroot
+  - /www/dict.org/docroot/gifs
+  - /var/log/httpd/dict.org
+
+- name: "copy support files"
+  copy:
+    src: "{{ item }}"
+    dest: "/www/dict.org/support"
+    owner: root
+    group: root
+    mode: 0755
+  with_fileglob:
+    - "dict/support/*"
+
+- name: "copy docroot files"
+  copy:
+    src: "{{ item }}"
+    dest: "/www/dict.org/docroot"
+    owner: root
+    group: root
+    mode: 0644
+  with_fileglob:
+    - "dict/docroot/*"
+
+- name: "copy docroot/gifs files"
+  copy:
+    src: "{{ item }}"
+    dest: "/www/dict.org/docroot/gifs"
+    owner: root
+    group: root
+    mode: 0644
+  with_fileglob:
+    - "dict/docroot/gifs/*"
+
+- name: Add local config to apache
+  copy:
+    dest: "/etc/apache2/conf-available/local.conf"
+    owner: root
+    group: root
+    mode: '0644'
+    content: |
+      <Directory /www>
+          Options FollowSymLinks
+          AllowOverride All
+          Require all granted
+      </Directory>
+
+- name: Add default http/https config to apache
+  copy:
+    dest: "/etc/apache2/sites-available/000-default.conf"
+    owner: root
+    group: root
+    mode: '0644'
+    content: |
+      <VirtualHost *:443>
+        ServerName dict.org
+        ServerAdmin webadmin@dict.org
+        DocumentRoot /www/dict.org/docroot
+        ScriptAlias /bin/ /www/dict.org/support/
+        Redirect /index.html /bin/Dict
+
+        SSLEngine on
+        SSLCertificateFile    /etc/letsencrypt/live/dict.org/fullchain.pem
+        SSLCertificateKeyFile /etc/letsencrypt/live/dict.org/privkey.pem
+        Include               /etc/letsencrypt/options-ssl-apache.conf
+
+        TransferLog "|/usr/bin/cronolog /var/log/httpd/dict.org/%Y/%m/access.%Y%m%d.log"
+        ErrorLog "|/usr/bin/cronolog /var/log/httpd/dict.org/%Y/%m/error.%Y%m%d.log"
+      </VirtualHost>
+
+      <VirtualHost *:80>
+        RewriteEngine On
+        RewriteCond %{HTTPS} off
+        RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+      </VirtualHost>
+
+- name: Add config to apache
+  copy:
+    dest: "/etc/apache2/sites-available/dict.org.conf"
+    owner: root
+    group: root
+    mode: '0644'
+    content: |
+      <VirtualHost dict.org:443>
+        ServerName dict.org
+        ServerAdmin webadmin@dict.org
+        DocumentRoot /www/dict.org/docroot
+        ScriptAlias /bin/ /www/dict.org/support/
+        Redirect /index.html /bin/Dict
+
+        SSLEngine on
+        SSLCertificateFile    /etc/letsencrypt/live/dict.org/fullchain.pem
+        SSLCertificateKeyFile /etc/letsencrypt/live/dict.org/privkey.pem
+        Include               /etc/letsencrypt/options-ssl-apache.conf
+
+        TransferLog "|/usr/bin/cronolog /var/log/httpd/dict.org/%Y/%m/access.%Y%m%d.log"
+        ErrorLog "|/usr/bin/cronolog /var/log/httpd/dict.org/%Y/%m/error.%Y%m%d.log"
+      </VirtualHost>
+
+      <VirtualHost dict.org:80>
+        ServerName dict.org
+        RedirectPermanent / https://dict.org/
+      </VirtualHost>
+
+- name: Activate dict.org
+  shell: a2ensite dict.org

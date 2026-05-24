@@ -6,7 +6,7 @@
       unset LC_ALL
       export LANG=en_US.UTF-8
       export LC_TIME=C
-      export LESS='diMfX'
+      export LESS='diMfXR'
       alias ls='ls -a'
       alias ll='ls -la'
       alias df='df -h'

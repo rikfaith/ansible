@@ -1,6 +1,6 @@
 steps:
   - mkimg: "{{ output }}"
-    size: 64g
+    size: 25g
 
   - mklabel: msdos
     device: "{{ output }}"
@@ -20,7 +20,7 @@ steps:
 
   - unpack-rootfs: rootfs
 
-  - debootstrap: ceres
+  - debootstrap: excalibur
     mirror: http://us.deb.devuan.org/merged
     target: rootfs
     components:
@@ -34,26 +34,49 @@ steps:
 
   - apt: install
     packages:
-    - build-essential
+    - bc
+    - cloud-init
+    - curl
+    - dc
+    - dict
+    - dmidecode
     - dnsutils
     - file
     - gawk
     - git
     - git-lfs
     - gnupg2
+    - htop
+    - jq
     - libpam-modules
     - linux-image-amd64
     - locales
+    - lshw
+    - lsof
+    - lsscsi
+    - m4
     - man-db
+    - net-tools
+    - openssh-client
     - openssh-server
     - pciutils
     - pkg-config
+    - psutils
     - python3
     - python-is-python3
+    - ripgrep
+    - rsync
+    - strace
+    - sysv-rc-conf
     - sudo
     - time
+    - tmux
+    - traceroute
     - tzdata
     - util-linux-extra
+    - vim
+    - vnstat
+    - whois
     - zip
     - zsh
     tag: rootfs
@@ -72,8 +95,11 @@ steps:
     perm: 0600
 
   - ansible: rootfs
-    playbook: devuan.yaml
+    playbook: dict.yaml
     config_file: ansible.cfg
     extra_vars:
-      vm_hostname: "devuan"
+      vm_hostname: "alt0"
+      vm_purpose: "dict"
       grub_options: "audit=0"
+      vm_domain: "dict.org"
+      vm_domain_list: "dict.org alephnull.com panpedia.org"

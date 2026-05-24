@@ -1,0 +1,79 @@
+- hosts: image
+  vars_files:
+    - passwords.yml
+  vars:
+    vm_installation: true
+    using_devuan: true
+    install_unstable: false
+    install_local_time_source: false
+    configure_cloud_init: true
+    configured_port: 22
+    whitelistip0: 129.212.135.231
+
+  tasks:
+    - import_tasks: tasks/update_apt.yml
+    - import_tasks: tasks/update_network_vm.yml
+    - import_tasks: tasks/update_sudo.yml
+    - import_tasks: tasks/update_chrony.yml
+    - import_tasks: tasks/update_keymap.yml
+    - import_tasks: tasks/update_sysctl_simple.yml
+    - import_tasks: tasks/update_crontab.yml
+    - import_tasks: tasks/update_bashrc.yml
+    - import_tasks: tasks/update_dash.yml
+    - import_tasks: tasks/update_ssh_remote_keys.yml
+    - import_tasks: tasks/update_tools_web.yml
+    - import_tasks: tasks/update_user_login.yml
+    - import_tasks: tasks/update_localization.yml
+    - import_tasks: tasks/update_grub.yml
+    - import_tasks: tasks/update_virtiofs.yml
+    - import_tasks: tasks/update_cloud_init.yml
+    - import_tasks: tasks/update_sshguard.yml
+    - import_tasks: tasks/update_dict.yml
+
+    - name: Set hostname
+      copy:
+        dest: /etc/hostname
+        owner: root
+        group: root
+        mode: '0644'
+        content: "{{ vm_hostname }}"
+
+    - name: Populate domainname
+      copy:
+        dest: /etc/domainname
+        owner: root
+        group: root
+        mode: '0644'
+        content: |
+          {{ vm_domain }}
+
+    - name: Populate resolv.conf
+      copy:
+        dest: /etc/resolv.conf
+        owner: root
+        group: root
+        mode: '0644'
+        content: |
+          domain {{ vm_domain }}
+          search {{ vm_domain_list }}
+          nameserver 1.1.1.1
+          nameserver 9.9.9.9
+
+    - name: Add local machine name to /etc/hosts
+      lineinfile: path=/etc/hosts
+                  regexp='127.0.1.1'
+                  line='127.0.1.1       {{ vm_hostname }}.{{ vm_domain }} {{ vm_hostname }}'
+                  state=present
+                  insertafter='127.0.0.1'
+
+    - name: Remove pcscd
+      apt:
+        name: pcscd
+        state: absent
+
+    - name: Disable rpcbind
+      shell: sysv-rc-conf --del rpcbind
+
+    - name: Disable nfs-common
+      shell: sysv-rc-conf --del nfs-common
+
