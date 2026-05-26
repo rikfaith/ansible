@@ -1,0 +1,61 @@
+We have created a set of credentials for you to use with our sandbox API
+environment. Your live DNS settings have been copied over to the sandbox
+so you can develop and test your implementation safely without risking
+any changes to your production zone data while still working with
+realistic copies of your zones.
+
+You can refresh this sandbox data at any time using the populate page in
+the control panel:
+
+https://cp.easydns.com/manage/security/api/populate.php
+
+We now provide interactive API documentation using the Swagger UI (based
+on the OpenAPI 3.0 specification). You can access it here:
+
+https://sandbox.rest.easydns.net:3001/
+
+This interface also lets you make test calls directly to the sandbox
+environment right from your browser (after authenticating with your
+credentials).
+
+Sandbox Credentials (these will not work on the live/production API):
+
+Hostname: sandbox.rest.easydns.net
+Token: u69ecda4d341282.10267175
+Key: api69ecda4d3411d0.01523647
+
+(These values must be included in every request to the easyDNS API.)
+
+Important notes on using the API:
+
+- All requests must include a valid User-Agent header (e.g., identifying
+your application or library). Requests without a User-Agent header will be
+blocked.
+
+Rate limits apply: maximum of 1 request per second and 500 requests per day.
+Exceeding these will result in errors (typically a 420 response) until the
+rate resets (daily limit resets at 12:00 AM EST).
+
+- You can regenerate or refresh your sandbox credentials at any time here:
+
+https://cp.easydns.com/manage/security/api/sandbox_info.php
+
+- When you are ready to use the production (live) API, generate your
+production credentials yourself here:
+
+https://cp.easydns.com/manage/security/api/production_info.php
+
+(Production credentials are separate from sandbox credentials and will not
+work in the sandbox environment.)
+
+- Many open-source libraries and tools refer to these credentials as "User"
+(which should be the Token) and "Password" (which should be the Key). Do
+not enter your easyDNS Caprica control panel username in the "User" field,
+and do not use your account password anywhereâ€”these are not the same as the
+API Token and Key. Using incorrect values in these fields will always fail
+authentication.
+
+Please feel free to contact us at easyapi@easydns.com with any issues, questions,
+or comments while implementing the API.
+
+easyDNS Technologies Inc.

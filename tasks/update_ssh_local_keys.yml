@@ -12,7 +12,7 @@
 - name: Get IP of remote host
   become: true
   become_user: "{{ localuser.stdout }}"
-  local_action: shell host {{ inventory_hostname }} | gawk '{print $4}'
+  local_action: shell host {{ inventory_hostname }} | head -1 | gawk '{print $4}'
   register: remote_ip
 
 - debug: msg="IP of {{ inventory_hostname }} = {{ remote_ip.stdout }}"

@@ -1,0 +1,10 @@
+- name: Install laptop-specific tools
+  apt:
+    pkg:
+      - acpi
+      - acpid
+      - network-manager
+      - network-manager-applet
+      - openconnect
+      - pm-utils
+      - stalonetray

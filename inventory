@@ -11,11 +11,19 @@ cloud:
 
 laptops:
     hosts:
-        pixie:
+        pixie-compute:
           br0port: eth0
+          ansible_host: 10.42.93.100
+          ansible_port: 993
+          ansible_password: "{{ default.setup_password }}"
+          ansible_become_password: "{{ default.setup_password }}"
 
-        ariel:
+        ariel-compute:
           br0port: eth0
+          ansible_host: 10.42.93.110
+          ansible_port: 993
+          ansible_password: "{{ default.setup_password }}"
+          ansible_become_password: "{{ default.setup_password }}"
 
         puck-debian:
           ansible_host: 10.42.93.111
@@ -31,6 +39,7 @@ laptops:
         ansible_port: 993
         install_laptop_ssh: true
         grub_options: "audit=0"
+        whitelistip0: 174.138.108.162
 
 desktops:
     hosts:
@@ -55,7 +64,7 @@ desktops:
         dnsmasq_remote1: 10.22.64.16
         dnsmasq_domain0: .nutanix.com
         dnsmasq_domain2: .ntnxdpro.com
-        dnsmasq_domain2: .dpro.phx
+        dnsmasq_domain3: .dpro.phx
 
     vars:
         ansible_port: 22
@@ -90,6 +99,10 @@ compute:
           br1gw: 10.42.93.1
           br1port: eth1
           rsyncd_mount: node0
+        hp0:
+          ansible_host: 10.42.93.123
+          ansible_password: "{{ default.setup_password }}"
+          ansible_become_password: "{{ default.setup_password }}"
     vars:
         ansible_port: 22
         configured_port: 22

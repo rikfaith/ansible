@@ -1,0 +1,41 @@
+---
+- hosts: ariel-compute
+  gather_facts: no
+  become: yes
+  become_method: su
+  environment:
+    PATH: /sbin:/usr/sbin:/bin:/usr/bin:"{{ ansible_env.PATH }}"
+  vars_files:
+    - passwords.yml
+  vars:
+    using_devuan: true
+    install_unstable: true
+
+  tasks:
+    - import_tasks: tasks/get_ssh_port.yml
+    - import_tasks: tasks/update_ssh_local_keys.yml
+    - import_tasks: tasks/get_facts.yml
+    - import_tasks: tasks/update_apt.yml
+    - import_tasks: tasks/update_grub.yml
+    - import_tasks: tasks/update_network_dhcp.yml
+    - import_tasks: tasks/update_sudo.yml
+    - import_tasks: tasks/update_distribution.yml
+    - import_tasks: tasks/update_chrony.yml
+    - import_tasks: tasks/update_keymap.yml
+    - import_tasks: tasks/update_sysctl_simple.yml
+    - import_tasks: tasks/update_crontab.yml
+    - import_tasks: tasks/update_bashrc.yml
+    - import_tasks: tasks/update_dash.yml
+    - import_tasks: tasks/update_ssh_remote_keys.yml
+    - import_tasks: tasks/update_sshguard.yml
+    - import_tasks: tasks/update_tools_general.yml
+    - import_tasks: tasks/update_tools_build.yml
+    - import_tasks: tasks/update_tools_desktop.yml
+    - import_tasks: tasks/update_tools_build.yml
+    - import_tasks: tasks/update_tools_text.yml
+    - import_tasks: tasks/update_tools_gpu.yml
+    - import_tasks: tasks/update_tools_virtualization.yml
+    - import_tasks: tasks/update_tools_laptop.yml
+    - import_tasks: tasks/update_rsyncd.yml
+#    - import_tasks: tasks/update_user_login.yml
+    - import_tasks: tasks/update_zoom.yml

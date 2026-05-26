@@ -1,9 +1,18 @@
-  - name: Install DHCP networking
-    copy:
-      dest: /etc/network/interfaces
-      content: |
-        auto lo
-        iface lo inet loopback
+- name: Install bridge utilities
+  apt:
+    pkg: bridge-utils
+    state: present
 
-        allow-hotplug eth0
-        iface eth0 inet dhcp
+- name: Install DHCP networking
+  copy:
+    dest: /etc/network/interfaces
+    content: |
+      auto lo
+      iface lo inet loopback
+
+      auto br0
+      iface br0 inet dhcp
+      bridge_ports {{ br0port }}
+      bridge_stp off
+      bridge_fd 0
+      bridge_maxwait 0

@@ -20,6 +20,9 @@
       Acquire::http::Proxy "http://cache.alephnull.com:3142";
       Acquire::https::Proxy "http://cache.alephnull.com:3142";
 
+- name: Update apt repository while allowing a release-info change
+  command: apt-get update -y --allow-releaseinfo-change
+
 - name: Install gnupg
   apt:
     pkg: gnupg

@@ -28,3 +28,7 @@
 
 - name: Set become_method
   set_fact: ansible_become_method=sudo
+
+# Reset the connection so that the session has sudo access.
+- name: Reset connection so docker group is picked up
+  meta: reset_connection
