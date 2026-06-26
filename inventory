@@ -103,6 +103,10 @@ compute:
           ansible_host: 10.42.93.123
           ansible_password: "{{ default.setup_password }}"
           ansible_become_password: "{{ default.setup_password }}"
+        upsmon0-compute:
+          ansible_user: devuan
+          ansible_password: "{{ passwords.pi_password_devuan }}"
+          ansible_host: 10.42.93.139
     vars:
         ansible_port: 22
         configured_port: 22

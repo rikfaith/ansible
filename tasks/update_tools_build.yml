@@ -16,3 +16,4 @@
       - libxrandr-dev
       - libxt-dev
       - pkg-config
+      - python3-dev

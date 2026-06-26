@@ -1,4 +1,19 @@
 ---
+- name: Check if {{ default.nonroot_user }} exists
+  become: true
+  shell: id -u {{ default.nonroot_user }}
+  register: user_exists
+  ignore_errors: true
+
+- name: Create new user
+  when: user_exists != 0
+  become: true
+  user:
+    name: "{{ default.nonroot_user }}"
+    password: "{{ default.nonroot_password }}"
+    groups: "sudo"
+    shell: "/bin/bash"
+
 - name: Copy .ssh files
   copy:
     src: "/home/{{ default.nonroot_user }}/.ssh/{{ item }}"
