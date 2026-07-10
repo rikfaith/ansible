@@ -61,6 +61,11 @@ case $TARGET in
          VCPUS=16;
          HOST=$GPUHOST;
          EXTRA="--host-device pci_0000_af_00_0" ;;
+    ai1) PAIR="17:01" ;
+         RAM=$((256*1024));
+         VCPUS=16;
+         HOST=$GPUHOST;
+         EXTRA="--host-device pci_0000_af_00_0" ;;
     *)
         echo "usage: $0 host-name"
         echo "       host-name must be in hard-coded list"

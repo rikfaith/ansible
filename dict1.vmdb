@@ -1,0 +1,105 @@
+steps:
+  - mkimg: "{{ output }}"
+    size: 25g
+
+  - mklabel: msdos
+    device: "{{ output }}"
+
+  - mkpart: primary
+    device: "{{ output }}"
+    start: 0%
+    end: 100%
+    tag: rootfs
+
+  - kpartx: "{{ output }}"
+
+  - mkfs: ext4
+    partition: rootfs
+
+  - mount: rootfs
+
+  - unpack-rootfs: rootfs
+
+  - debootstrap: excalibur
+    mirror: http://us.deb.devuan.org/merged
+    target: rootfs
+    components:
+      - main
+      - contrib
+      - non-free
+      - non-free-firmware
+    unless: rootfs_unpacked
+
+  - virtual-filesystems: rootfs
+
+  - apt: install
+    packages:
+    - bc
+    - cloud-init
+    - curl
+    - dc
+    - dict
+    - dmidecode
+    - dnsutils
+    - file
+    - gawk
+    - git
+    - git-lfs
+    - gnupg2
+    - htop
+    - jq
+    - libpam-modules
+    - linux-image-amd64
+    - locales
+    - lshw
+    - lsof
+    - lsscsi
+    - m4
+    - man-db
+    - net-tools
+    - openssh-client
+    - openssh-server
+    - pciutils
+    - pkg-config
+    - psutils
+    - python3
+    - python-is-python3
+    - ripgrep
+    - rsync
+    - strace
+    - sysv-rc-conf
+    - sudo
+    - time
+    - tmux
+    - traceroute
+    - tzdata
+    - util-linux-extra
+    - vim
+    - vnstat
+    - whois
+    - zip
+    - zsh
+    tag: rootfs
+    unless: rootfs_unpacked
+
+  - cache-rootfs: rootfs
+    unless: rootfs_unpacked
+
+  - fstab: rootfs
+
+  - grub: bios
+    tag: rootfs
+
+  - copy-file: /root/.ansible-vault
+    src: /home/faith/.ansible-vault
+    perm: 0600
+
+  - ansible: rootfs
+    playbook: dict.yaml
+    config_file: ansible.cfg
+    extra_vars:
+      vm_hostname: "alt1"
+      vm_purpose: "dict"
+      grub_options: "audit=0"
+      vm_domain: "dict.org"
+      vm_domain_list: "dict.org alephnull.com panpedia.org"

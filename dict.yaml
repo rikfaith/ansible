@@ -72,8 +72,8 @@
         state: absent
 
     - name: Disable rpcbind
-      shell: sysv-rc-conf --del rpcbind
+      shell: update-rc.d -f rpcbind remove
 
     - name: Disable nfs-common
-      shell: sysv-rc-conf --del nfs-common
+      shell: update-rc.d -f nfs-common remove
 

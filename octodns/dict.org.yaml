@@ -2,7 +2,9 @@
 ? ''
 : - ttl: 900
     type: A
-    value: 199.48.130.6
+    values:
+    - 24.199.74.115
+    - 174.138.108.162
   - ttl: 900
     type: CAA
     value:
@@ -23,20 +25,20 @@
 alt0:
   ttl: 900
   type: A
-  value: 199.48.130.6
+  value: 174.138.108.162
 alt1:
   ttl: 900
   type: A
-  value: 199.48.130.6
+  value: 24.199.74.115
 dict:
   ttl: 900
-  type: A
-  value: 199.48.130.6
+  type: CNAME
+  value: alt0.dict.org.
 test:
   ttl: 900
-  type: A
-  value: 199.48.130.6
+  type: CNAME
+  value: alt1.dict.org.
 www:
   ttl: 900
-  type: A
-  value: 199.48.130.6
+  type: CNAME
+  value: alt0.dict.org.

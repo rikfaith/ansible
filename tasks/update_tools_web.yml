@@ -1,4 +1,20 @@
 ---
+- name: Install testing repository (for python3-certbot-dns-digitalocean)
+  when: vm_purpose is defined and (vm_purpose == "web" or vm_purpose == "dict")
+  copy:
+    dest: /etc/apt/sources.list.d/devuan-testing.sources
+    content: |
+      Types: deb
+      URIs: http://deb.devuan.org/merged/
+      Suites: testing
+      Components: main contrib non-free non-free-firmware
+      Signed-By: /usr/share/keyrings/devuan-archive-keyring.gpg
+
+# This works around a bug when using update_cache: yes
+- name: Update apt cache for current distribution
+  when: vm_purpose is defined and (vm_purpose == "web" or vm_purpose == "dict")
+  command: apt-get update
+
 - name: Install apache tools
   when: vm_purpose is defined and (vm_purpose == "web" or vm_purpose == "dict")
   apt:
