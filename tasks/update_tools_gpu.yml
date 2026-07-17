@@ -35,6 +35,9 @@
   - name: Install nvidia repo keys
     shell: dpkg -i cuda-keyring_1.1-1_all.deb
 
+  - name: Allow SHA1 from Debian 12
+    shell: echo 'APT::Key::GPGVCommand "/usr/bin/gpgv";' | sudo tee /etc/apt/apt.conf.d/99disable-sequoia
+
   - name: Update repo information
     command: apt-get update
 
@@ -72,12 +75,12 @@
   - name: Install nvtop etc.
     apt:
       pkg:
+        - docker.io
         - gpu-burn
         - libcublas12
+        - numactl
         - nvidia-settings
         - nvtop
-        - ninja-build
-        - python3-dev
         - python3-pip
       state: present
 

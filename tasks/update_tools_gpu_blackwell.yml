@@ -1,47 +1,111 @@
----
-  - name: Get latest kernel version
-    shell: dpkg --list | fgrep linux-image | sed 's,.*linux-image-,,' | sed 's, .*,,' | grep '^[0-9]' | sort -V | tail -1
-    register: kernver
+- name: Get latest kernel version
+  shell: dpkg --list | fgrep linux-image | sed 's,.*linux-image-,,' | sed 's, .*,,' | grep '^[0-9]' | sort -V | tail -1
+  register: kernver
 
-  - name: Install kernel headers
-    apt:
-      pkg: linux-headers-{{ kernver.stdout }}
-      state: present
+- name: Install kernel headers
+  apt:
+    pkg: linux-headers-{{ kernver.stdout }}
+    state: present
 
-  - name: Install build tools
-    apt:
-      pkg:
-        - python3-dev
-        - ninja-build
-      state: present
+- name: Install build tools
+  apt:
+    pkg:
+      - python3-dev
+      - ninja-build
+    state: present
 
-  - name: Fetch nvidia repo keys
-    shell: wget https://developer.download.nvidia.com/compute/cuda/repos/debian13/x86_64/cuda-keyring_1.1-1_all.deb
+- name: Fetch nvidia repo keys
+  shell: wget https://developer.download.nvidia.com/compute/cuda/repos/debian13/x86_64/cuda-keyring_1.1-1_all.deb
 
-  - name: Install nvidia repo keys
-    shell: dpkg -i cuda-keyring_1.1-1_all.deb
+- name: Install nvidia repo keys
+  shell: dpkg -i cuda-keyring_1.1-1_all.deb
 
-  - name: Update repo information
-    command: apt-get update
+- name: Update repo information
+  command: apt-get update
 
-  - name: Update distribution
-    apt:
-      upgrade: dist
-      update_cache: no
-      autoremove: yes
+- name: Update distribution
+  apt:
+    upgrade: dist
+    update_cache: no
+    autoremove: yes
 
-  - name: Install pahole
-    apt:
-      pkg: pahole
-      state: present
+- name: Install pahole
+  apt:
+    pkg: pahole
+    state: present
 
-  - name: Install nvidia-open
-    apt:
-      pkg: nvidia-open
-      state: present
+- name: Install nvidia-open
+  apt:
+    pkg: nvidia-open
+    state: present
 
-  - name: Install nvtop etc.
-    apt:
-      pkg:
-        - nvtop
-      state: present
+- name: Install nvtop etc.
+  apt:
+    pkg:
+      - cuda-nvcc-13-3
+      - docker.io
+      - gpu-burn
+      - numactl
+      - nvbandwidth
+      - nvidia-cuda-dev
+      - nvidia-settings
+      - nvitop
+      - nvtop
+    state: present
+
+- name: Add user to docker group
+  user:
+  name: "{{ default.nonroot_user }}"
+  create_home: no
+  append: yes
+  groups: docker
+
+- name: Install uv
+  become: true  # Required for global installations
+  tasks:
+    - name: Download and execute the official uv installer
+      ansible.builtin.shell:
+        cmd: curl -LsSf https://astral.sh/uv/install.sh | bash
+      environment:
+        # Installs uv to /usr/local/bin for all system users
+        UV_INSTALL_DIR: "/usr/local/bin"
+      register: uv_install_result
+      changed_when: "'Installing uv' in uv_install_result.stderr or 'downloading uv' in uv_install_result.stdout"
+
+    - name: Verify uv installation
+      ansible.builtin.command: uv --version
+      register: uv_version
+      changed_when: false
+
+    - name: Display installed uv version
+      ansible.builtin.debug:
+        msg: "Successfully installed {{ uv_version.stdout }}"
+
+- name: Add HuggingFace token
+  copy:
+    dest: "/home/{{ default.nonroot_user }}/.hf-token"
+    content: "{{ default.hf_token }}"
+
+- name: Create vllm directory
+  file:
+    path: "/home/{{ default.nonroot_user }}/vllm"
+    state: directory
+    owner: '{{ default.nonroot_user }}
+    group: '{{ default.nonroot_user }}
+
+- name: Installing vllm
+  become: true
+  become_user: "{{ default.nonroot_user }}"
+  shell: |
+    set -euo pipefail
+    cd "/home/{{ default.nonroot_user }}/vllm"
+    uv venv --python 3.12
+    source .venv/bin/activate
+    # uv pip uninstall vllm torch torchvision torchaudio
+    uv pip install torch --extra-index-url https://pytorch.org
+    uv pip install vllm --extra-index-url https://vllm.ai
+
+- name: Copy vllm scripts
+  ansible.posix.synchronize:
+    src: scripts-ai/*
+    dest: "/home/{{ default.nonroot_user }}/vllm"

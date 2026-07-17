@@ -22,10 +22,13 @@ EXTRA=""
 QCOW2=/tmp/$TARGET.qcow2
 BASEQCOW2=$(basename $QCOW2 .qcow2).qcow2
 
-BOOTDISK0="--disk path=/$HOST/pool/$BASEQCOW2,format=qcow2,bus=virtio"
-BOOTDISK1=""
-FILESYSTEM0="--memorybacking=source.type=memfd,access.mode=shared"
-FILESYSTEM1="--filesystem /$HOST/$TARGET,$TARGET,driver.type=virtiofs"
+bindvars() {
+    BOOTDISK0="--disk path=/$HOST/pool/$BASEQCOW2,format=qcow2,bus=virtio"
+    BOOTDISK1=""
+    FILESYSTEM0="--memorybacking=source.type=memfd,access.mode=shared"
+    FILESYSTEM1="--filesystem /$HOST/$TARGET,$TARGET,driver.type=virtiofs"
+}
+bindvars
 
 case $TARGET in
     # NODE0 VMS
@@ -60,12 +63,16 @@ case $TARGET in
          RAM=$((256*1024));
          VCPUS=16;
          HOST=$GPUHOST;
-         EXTRA="--host-device pci_0000_af_00_0" ;;
+         EXTRA="--host-device pci_0000_af_00_0";
+         bindvars;
+         ;;
     ai1) PAIR="17:01" ;
          RAM=$((256*1024));
          VCPUS=16;
          HOST=$GPUHOST;
-         EXTRA="--host-device pci_0000_af_00_0" ;;
+         EXTRA="--host-device pci_0000_af_00_0";
+         bindvars;
+         ;;
     *)
         echo "usage: $0 host-name"
         echo "       host-name must be in hard-coded list"

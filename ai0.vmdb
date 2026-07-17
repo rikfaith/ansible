@@ -1,6 +1,6 @@
 steps:
   - mkimg: "{{ output }}"
-    size: 64g
+    size: 512g
 
   - mklabel: msdos
     device: "{{ output }}"
