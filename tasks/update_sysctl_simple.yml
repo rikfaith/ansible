@@ -7,3 +7,10 @@
       kernel.dmesg_restrict=0
       net.ipv6.conf.all.disable_ipv6=1
       net.ipv6.conf.default.disable_ipv6=1
+
+- name: update /etc/security/limits.conf
+  blockinfile:
+    dest: /etc/security/limits.conf
+    block: |
+      * soft nofile 65535
+      * hard nofile 65535

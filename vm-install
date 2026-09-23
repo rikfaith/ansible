@@ -60,15 +60,15 @@ case $TARGET in
     pgsql) PAIR="16:02"; RAM=$((256*1024)); VCPUS=16 ;;
     # THOTH VMS
     ai0) PAIR="17:00" ;
-         RAM=$((256*1024));
-         VCPUS=16;
+         RAM=$((384*1024));
+         VCPUS=32;
          HOST=$GPUHOST;
          EXTRA="--host-device pci_0000_af_00_0";
          bindvars;
          ;;
     ai1) PAIR="17:01" ;
-         RAM=$((256*1024));
-         VCPUS=16;
+         RAM=$((384*1024));
+         VCPUS=32;
          HOST=$GPUHOST;
          EXTRA="--host-device pci_0000_af_00_0";
          bindvars;

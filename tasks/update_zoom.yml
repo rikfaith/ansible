@@ -1,4 +1,51 @@
 ---
-- name: Install zoom
-  apt:
-    deb: https://zoom.us/client/5.16.6.382/zoom_amd64.deb
+- name: Install Zoom on Debian
+  become: true
+  gather_facts: true
+
+  vars:
+    zoom_key_url: "https://mirror.mwt.me/zoom/gpgkey"
+    zoom_keyring: "/etc/apt/keyrings/mwt-zoom.asc"
+    zoom_repo_file: "/etc/apt/sources.list.d/mwt-zoom.list"
+    zoom_repo: >-
+      deb [arch=amd64 signed-by={{ zoom_keyring }} by-hash=force]
+      https://mirror.mwt.me/zoom/deb any main
+
+  tasks:
+    - name: Install packages required to manage the repository
+      ansible.builtin.apt:
+        name:
+          - ca-certificates
+          - gnupg
+        state: present
+        update_cache: true
+        cache_valid_time: 3600
+
+    - name: Create APT keyrings directory
+      ansible.builtin.file:
+        path: /etc/apt/keyrings
+        state: directory
+        owner: root
+        group: root
+        mode: "0755"
+
+    - name: Download Zoom repository signing key
+      ansible.builtin.get_url:
+        url: "{{ zoom_key_url }}"
+        dest: "{{ zoom_keyring }}"
+        owner: root
+        group: root
+        mode: "0644"
+        force: true
+
+    - name: Configure Zoom APT repository
+      ansible.builtin.apt_repository:
+        repo: "{{ zoom_repo }}"
+        filename: mwt-zoom
+        state: present
+        update_cache: true
+
+    - name: Install Zoom
+      ansible.builtin.apt:
+        name: zoom
+        state: present

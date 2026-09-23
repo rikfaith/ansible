@@ -25,7 +25,7 @@
     - import_tasks: tasks/update_dash.yml
     - import_tasks: tasks/update_ssh_remote_keys.yml
     - import_tasks: tasks/update_tools_general.yml
-    - import_tasks: tasks/update_tools_gpu.yml
+    - import_tasks: tasks/update_tools_gpu_blackwell.yml
     - import_tasks: tasks/update_tools_guest_vm.yml
     - import_tasks: tasks/update_tools_web.yml
     - import_tasks: tasks/update_timescaledb.yml

@@ -1,3 +1,4 @@
+---
 - name: Get latest kernel version
   shell: dpkg --list | fgrep linux-image | sed 's,.*linux-image-,,' | sed 's, .*,,' | grep '^[0-9]' | sort -V | tail -1
   register: kernver
@@ -45,6 +46,7 @@
       - cuda-nvcc-13-3
       - docker.io
       - gpu-burn
+      - libcurand-dev-13-3
       - numactl
       - nvbandwidth
       - nvidia-cuda-dev
@@ -55,31 +57,28 @@
 
 - name: Add user to docker group
   user:
-  name: "{{ default.nonroot_user }}"
-  create_home: no
-  append: yes
-  groups: docker
+    name: "{{ default.nonroot_user }}"
+    create_home: no
+    append: yes
+    groups: "docker"
 
-- name: Install uv
-  become: true  # Required for global installations
-  tasks:
-    - name: Download and execute the official uv installer
-      ansible.builtin.shell:
-        cmd: curl -LsSf https://astral.sh/uv/install.sh | bash
-      environment:
-        # Installs uv to /usr/local/bin for all system users
-        UV_INSTALL_DIR: "/usr/local/bin"
-      register: uv_install_result
-      changed_when: "'Installing uv' in uv_install_result.stderr or 'downloading uv' in uv_install_result.stdout"
+- name: Download and execute the official uv installer
+  ansible.builtin.shell:
+    cmd: curl -LsSf https://astral.sh/uv/install.sh | bash
+  environment:
+    # Installs uv to /usr/local/bin for all system users
+    UV_INSTALL_DIR: "/usr/local/bin"
+  register: uv_install_result
+  changed_when: "'Installing uv' in uv_install_result.stderr or 'downloading uv' in uv_install_result.stdout"
 
-    - name: Verify uv installation
-      ansible.builtin.command: uv --version
-      register: uv_version
-      changed_when: false
+- name: Verify uv installation
+  ansible.builtin.command: uv --version
+  register: uv_version
+  changed_when: false
 
-    - name: Display installed uv version
-      ansible.builtin.debug:
-        msg: "Successfully installed {{ uv_version.stdout }}"
+- name: Display installed uv version
+  ansible.builtin.debug:
+    msg: "Successfully installed {{ uv_version.stdout }}"
 
 - name: Add HuggingFace token
   copy:
@@ -90,8 +89,8 @@
   file:
     path: "/home/{{ default.nonroot_user }}/vllm"
     state: directory
-    owner: '{{ default.nonroot_user }}
-    group: '{{ default.nonroot_user }}
+    owner: "{{ default.nonroot_user }}"
+    group: "{{ default.nonroot_user }}"
 
 - name: Installing vllm
   become: true
@@ -109,3 +108,6 @@
   ansible.posix.synchronize:
     src: scripts-ai/*
     dest: "/home/{{ default.nonroot_user }}/vllm"
+
+- name: Install nvidia-gpu-exporter
+  fixme:

@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+from datetime import datetime
 import itertools
 import json
 import subprocess
@@ -9,19 +10,17 @@ import pandas as pd
 IOSL_LIST = [
   (200, 200),
   (1000, 1000),
-  (500, 2000),
-  (5000, 500),
-  (6000, 100),
-  (16000, 100),
+  (5000, 200),
+  (200, 5000)
 ]
-CONCURRENCIES = [1, 2, 50, 100, 150, 200]
+CONCURRENCIES = [1, 2, 4, 8, 16, 32]
 NUM_PROMPTS_MULTIPLIER = 4  # Ensure total requests > max_concurrency
 
 RESULTS_DIR = Path("./vllm-bench-results")
 RESULTS_DIR.mkdir(exist_ok=True)
 
-model_name = "gemma"
-base_url = "http://10.42.93.170:8000"
+model_name = "gemma4-31B"
+base_url = "http://ai0:8000"
 
 results_summary = []
 
@@ -29,8 +28,9 @@ results_summary = []
 for (isl, osl), concurrency in itertools.product(IOSL_LIST, CONCURRENCIES):
     print(f"Running: ISL={isl} | OSL={osl} | Concurrency={concurrency}")
 
-    num_prompts = max(concurrency * NUM_PROMPTS_MULTIPLIER, 1000)
-    json_output_path = RESULTS_DIR / f"bench_isl{isl}_osl{osl}_c{concurrency}.json"
+    num_prompts = max(concurrency * NUM_PROMPTS_MULTIPLIER, 200)
+    date_string = datetime.now().strftime("%Y%m%d-%H%M%S")
+    json_output_path = RESULTS_DIR / f"{model_name}5000-bis_isl{isl}_osl{osl}_c{concurrency}_{date_string}.json"
 
     cmd = [
         "vllm-bench",
