@@ -1,0 +1,118 @@
+#!/usr/bin/python3
+"""Stub of the dict client for testing the Dict CGI.
+
+Emits canned, realistic dictd-style output and appends its argv to the
+file named by FAKE_DICT_LOG (one \x1f-separated record per invocation).
+
+Environment knobs:
+  FAKE_DICT_LOG   file to append argv records to
+  FAKE_DICT_SLEEP seconds to sleep before responding
+  FAKE_DICT_FAIL  if "1", exit 3 with no output (simulates a dead server)
+"""
+import os
+import sys
+import time
+
+if os.environ.get("FAKE_DICT_SLEEP"):
+    time.sleep(float(os.environ["FAKE_DICT_SLEEP"]))
+if os.environ.get("FAKE_DICT_FAIL") == "1":
+    sys.exit(3)
+
+args = sys.argv[1:]
+log = os.environ.get("FAKE_DICT_LOG")
+if log:
+    with open(log, "a") as f:
+        f.write("\x1f".join(args) + "\n")
+
+if len(args) >= 2 and args[1] == "badhost":
+    sys.exit(3)  # simulate a dead server
+
+optval = {"-h": None, "--client": None, "-d": None, "-s": None, "-i": None}
+flags = set()
+words = []
+i = 0
+while i < len(args):
+    a = args[i]
+    if a in optval:
+        optval[a] = args[i + 1]
+        i += 2
+    elif a in ("-I", "-DS", "-m"):
+        flags.add(a)
+        i += 1
+    else:
+        words.append(a)
+        i += 1
+
+DS = """Databases available:
+ alpha           Alpha test dictionary v1.0
+ beta            Beta test dictionary v2.0
+ english         English Monolingual Dictionaries
+Strategies available:
+ exact           Match headwords exactly
+ prefix          Match prefixes
+"""
+
+DEFINITION = """1 definition found
+
+From Alpha test dictionary v1.0 [alpha]:
+
+  Hello \\Hel*lo"\\, interj. & n.
+     An exclamation {Halloo} and {Holloo} used as a greeting, to call
+     attention, as an exclamation of surprise, or to encourage one.
+     See {programming language} or {development
+     environment}.  The program prints "hello, world" to {standard
+     output} and (http://example.org/doc)}.
+     (2026-10-02)
+"""
+
+WORDLIST = """alpha:  hello  Hello  -head  "Head and ears"  "Head and shoulders"
+  "head earing"  Headache  K&R
+"""
+
+SERVERINFO = """  dictd 1.14/test-stub
+  On fakeserver: up 1+00:00:00, 1 forks (1.0/hour)
+
+  Database      Headwords
+  alpha               10
+  beta                20
+"""
+
+def dbinfo(db):
+    return ("  ============ %s ============\n"
+            "  00-database-info\n"
+            "     Stub information for %s.\n"
+            "     Source: ftp://ftp.example.org/dict/%s\n"
+            % (db, db, db))
+
+
+if "-DS" in flags:
+    sys.stdout.write(DS)
+    sys.exit(0)
+if "-I" in flags:
+    sys.stdout.write(SERVERINFO)
+    sys.exit(0)
+if optval["-i"] is not None:
+    sys.stdout.write(dbinfo(optval["-i"]))
+    sys.exit(0)
+
+word = words[0] if words else ""
+if word == "hello":
+    sys.stdout.write(DEFINITION)
+    sys.exit(0)
+if word == "nomatch":
+    sys.stderr.write('No definitions found for "%s"\n' % word)
+    sys.exit(20)
+if word == "list":
+    if "-m" in flags:
+        sys.stdout.write(WORDLIST)
+        sys.exit(0)
+    sys.stderr.write('No definitions found for "%s"\n' % word)
+    sys.exit(20)
+if word == "nolist":
+    if "-m" in flags:
+        sys.stderr.write('No matches found for "%s"\n' % word)
+        sys.exit(20)
+    sys.stderr.write('No definitions found for "%s"\n' % word)
+    sys.exit(20)
+sys.stdout.write(DEFINITION.replace("Hello", "Generic").replace("hello", "generic"))
+sys.exit(0)

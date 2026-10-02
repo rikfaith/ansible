@@ -1,660 +1,625 @@
-#!/usr/bin/perl
+#!/usr/bin/python3
 #
 # Name   : Dict
-# Purpose: perl script cgi program to submit dict queries.
-# Author : Doug L. Hoffman (hoffman@shopthenet.net)
-# Created: Thu Aug 14 09:51:28 1997 by hoffman
-# Revised: Sun Nov 13 14:26:24 2011 by faith@acm.org
+# Purpose: dict.org CGI program to submit dict queries.
 #
-# This perl script both generates the www-browser form and accepts the results
-# of submitting the form. The search is transmitted to a central machine
-# and the results are interpreted and reposted for the user.
+# Secure Python rewrite of the original Perl CGI (1997-2011,
+# D. L. Hoffman / R. Faith). The URL interface is unchanged, but the
+# shell-injection and HTML-injection holes of the original are closed:
 #
-#  $Log: Dict,v $
-#  Revision 1.11  1998/03/30 17:33:26  hoffman
-#  added text of query to the web page title line.
+#   * No shell is ever invoked. The dict client runs with an explicit
+#     argument vector, so user input is never parsed by a shell.
+#   * Database and strategy values are validated against the dict
+#     server's own -DS list before use.
+#   * All dynamic output is HTML-escaped; generated URLs are
+#     percent-encoded.
+#   * POST bodies are size-limited; dict invocations are
+#     time-limited.
+#   * Security headers: Content-Security-Policy (nonce-based),
+#     X-Content-Type-Options, X-Frame-Options, Referrer-Policy.
 #
-#  Revision 1.10  1998/02/23 17:46:04  hoffman
-#  Fixed problem with word list anchors caused by changes to the "exact"
-#  resopnse.
-#
-#  Revision 1.9  1998/02/23 16:41:30  hoffman
-#  Made "exact" return list of words, not definitions.
-#
-#  Revision 1.8  1998/02/20 16:00:01  hoffman
-#  gave the generated page(s) a general facelift, changed internal processing
-#  to use the short database name, not the description, and then spent time
-#  fixing various bugs that the name change caused. The server calls to fetch
-#  the search and database options have been combined into one.
-#
-#  Revision 1.7  1998/02/19 15:10:26  hoffman
-#  Rik's updated version.
-#
-#  Revision 1.6  1997/11/12 16:07:50  hoffman
-#  Added link to copyright info.
-#
-#  Revision 1.5  1997/10/01 17:50:58  hoffman
-#  Fixed some of the field edits for Rik.
-#
-#  Revision 1.4  1997/10/01 13:56:52  hoffman
-#  fixed problem with ()'s
-#
-#  Revision 1.3  1997/08/17 20:48:04  hoffman
-#  added link to dict.org home page
-#
-#  Revision 1.2  1997/08/17 20:07:37  hoffman
-#  Fixed imbedded blank sequence query scanning.
-#
+# Configuration overrides (environment):
+#   DICT_BIN      path to the dict client (default /usr/bin/dict)
+#   DICT_SERVERS  comma-separated dictd hosts (default localhost)
+#   DICT_TIMEOUT  per-invocation timeout in seconds (default 10)
+#   DICT_DEBUG    if set, log each dict invocation to stderr
 #
 
-# Setup is minimal.
-#
-#	You have to redefine at most the first few lines below
-#
-#	$ReturnUrl is the url of this file. It should be changed to reflect
-#		the new location.
+import base64
+import html
+import ipaddress
+import os
+import re
+import secrets
+import subprocess
+import sys
+import urllib.parse
 
-# DENY LIST
+PGM = "Dict"
 
-$remote_ip = $ENV{'REMOTE_ADDR'};
-$user_agent = $ENV{'HTTP_USER_AGENT'};
-if ($remote_ip eq "62.128.56.41" || $user_agent =~ /bsalsa.com/) {
-  print &PrintHeader();
-  print "Access from $remote_ip denied";
-  exit;
+DICT_BIN = os.environ.get("DICT_BIN", "/usr/bin/dict")
+SERVERS = [s for s in os.environ.get("DICT_SERVERS", "localhost").split(",")
+           if s]
+try:
+    DICT_TIMEOUT = float(os.environ.get("DICT_TIMEOUT", "10"))
+except ValueError:
+    DICT_TIMEOUT = 10.0
+DEBUG = bool(os.environ.get("DICT_DEBUG"))
+
+MAX_POST_BYTES = 64 * 1024   # POST body limit
+MAX_QUERY_LEN = 200          # query length limit
+MAX_CLIENT_LEN = 255         # client string length limit
+
+RETURN_URL = "/bin/Dict"
+COPYRIGHT_INFO_URL = (RETURN_URL +
+                      "?Form=Dict1&Query=00-database-info"
+                      "&Strategy=*&Database=*")
+SERVER_INFO_URL = RETURN_URL + "?Form=Dict4"
+
+BUILTIN_DATABASES = {"*": "Any", "!": "First match"}
+BUILTIN_STRATEGIES = {"*": "Return Definitions"}
+
+BACKEND_DOWN = "Backend database engine error: please try again later"
+
+CONTROL_RE = re.compile(r"[\x00-\x1f\x7f]")
+WS_RE = re.compile(r"\s+")
+FROM_RE = re.compile(r"^From\s*(.*)\s*\[(.*)\]\s*:(.*)$")
+COUNT_RE = re.compile(r"^\d+ ")
+WORDLIST_HEAD_RE = re.compile(r"^(\S+) ")
+WORDLIST_MORE_RE = re.compile(r"^  (\S+) ")
+URL_RE = re.compile(r"(ftp|http)://[^\s\)\}]*")
+BRACE_RE = re.compile(r"(\s)\{([^}\s][^}]*)\}")
+BRACE_OPEN_RE = re.compile(r"(\s)\{([^}\s][^}]*)$")
+
+
+def esc(text):
+    return html.escape(text, quote=True)
+
+
+def q(text):
+    return urllib.parse.quote_plus(text)
+
+
+def log(message):
+    if DEBUG:
+        sys.stderr.write("Dict: %s\n" % message)
+
+
+class HttpError(Exception):
+    def __init__(self, status, reason):
+        super().__init__(reason)
+        self.status = status
+        self.reason = reason
+
+
+def drain_stdin(limit):
+    """Discard up to `limit` bytes of the request body so the client
+    connection can be closed cleanly after an error response."""
+    remaining = limit
+    while remaining > 0:
+        chunk = sys.stdin.buffer.read(min(65536, remaining))
+        if not chunk:
+            break
+        remaining -= len(chunk)
+
+
+DRAIN_CAP = MAX_POST_BYTES + 1024 * 1024
+
+
+def declared_length():
+    """Return the declared request body length, or None if malformed."""
+    raw = os.environ.get("CONTENT_LENGTH", "")
+    if not raw:
+        return 0
+    try:
+        length = int(raw)
+    except ValueError:
+        return None
+    return length if length >= 0 else None
+
+
+def read_request():
+    """Read the CGI request. Return a dict of first-seen parameters.
+
+    On early errors the (possibly unread) request body is drained so
+    the client connection can be closed cleanly."""
+    method = os.environ.get("REQUEST_METHOD", "")
+    length = declared_length()
+    if method == "GET":
+        body = os.environ.get("QUERY_STRING", "")
+    elif method == "POST":
+        if length is None:
+            drain_stdin(DRAIN_CAP)
+            raise HttpError(400, "Malformed Content-Length header")
+        if length > MAX_POST_BYTES:
+            # Cap the drain: a client may claim more than it sends.
+            drain_stdin(min(length, DRAIN_CAP))
+            raise HttpError(413, "Request entity too large")
+        data = sys.stdin.buffer.read(length)
+        body = data.decode("utf-8", "replace")
+    else:
+        if length:
+            drain_stdin(min(length, DRAIN_CAP))
+        raise HttpError(405, "Only GET and POST are allowed")
+    params = urllib.parse.parse_qs(body, keep_blank_values=True)
+    return {key: values[0] for key, values in params.items()}
+
+
+def clean_query(value):
+    """Normalize a query value: drop control characters, apply the
+    legacy compatibility mappings, collapse whitespace, cap length."""
+    value = CONTROL_RE.sub(" ", value)
+    value = value.replace("{", "(").replace("}", ")")
+    value = value.replace(";", " ").replace("'", "")
+    value = WS_RE.sub(" ", value).strip()
+    return value[:MAX_QUERY_LEN]
+
+
+def client_string():
+    """Build the --client logging string from REMOTE_ADDR and the
+    User-Agent. Both are validated/sanitized; neither can carry shell
+    syntax because it is passed as a single argv element."""
+    parts = []
+    addr = os.environ.get("REMOTE_ADDR", "")
+    if addr:
+        try:
+            ipaddress.ip_address(addr)
+        except ValueError:
+            addr = ""
+    if addr:
+        parts.append(addr)
+    ua = os.environ.get("HTTP_USER_AGENT", "")
+    if ua:
+        ua = "".join(ch for ch in ua if 0x20 <= ord(ch) <= 0x7e)
+        parts.append(ua[:MAX_CLIENT_LEN])
+    return " ".join(parts)
+
+
+def run_dict(server, args):
+    """Run the dict client against a server.
+
+    Return (text, ok). ok is False if the client could not be run,
+    timed out, or produced no output at all."""
+    argv = [DICT_BIN, "-h", server] + args
+    log("argv: " + " ".join(repr(a) for a in argv))
+    try:
+        proc = subprocess.run(
+            argv, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+            timeout=DICT_TIMEOUT)
+    except (OSError, subprocess.SubprocessError):
+        return "", False
+    out = proc.stdout.decode("utf-8", "replace")
+    err = proc.stderr.decode("utf-8", "replace")
+    if err.strip():
+        text = (out + "\n" if out.strip() else "") + err
+    else:
+        text = out
+    return text, bool(text.strip())
+
+
+def enumerate_server(server):
+    """Return (databases, strategies) name->description dicts from the
+    server's -DS response, or (None, None) on failure."""
+    text, ok = run_dict(server, ["-DS"])
+    if not ok:
+        return None, None
+    databases = dict(BUILTIN_DATABASES)
+    strategies = dict(BUILTIN_STRATEGIES)
+    section = None
+    for line in text.splitlines():
+        if line.startswith("Strategies"):
+            section = strategies
+        elif line.startswith("Databases") or line.startswith("Database"):
+            section = databases
+        elif section is not None and line.strip():
+            parts = line.split(None, 1)
+            section[parts[0]] = parts[1] if len(parts) > 1 else parts[0]
+    return databases, strategies
+
+
+def build_query_args(form, database, strategy, query):
+    """Build the dict client argument vector for a query.
+
+    Strategy "*" is the plain define form; other strategies use the
+    match form (word lists)."""
+    if form == "Dict3":
+        return ["-i", database]
+    if form == "Dict4":
+        return ["-I"]
+    if strategy == "*":
+        return ["-d", database, query]
+    return ["-d", database, "-s", strategy, "-m", query]
+
+
+def run_query(args):
+    """Run the query against each server in order.
+
+    Return (text, used_backup) or (None, False)."""
+    client = client_string()
+    prefix = ["--client", client] if client else []
+    for i, server in enumerate(SERVERS):
+        text, ok = run_dict(server, prefix + args)
+        if ok:
+            return text, i > 0
+    return None, False
+
+
+#
+# ---------- Result rendering
+#
+# The dict client's output is rendered into HTML, preserving the
+# historical look: <pre> blocks, bold "From" and count lines, search
+# links for definition cross-references ({word}), quoted phrases and
+# bare URLs. Everything is escaped before any tag is inserted.
+
+def urls_in(text):
+    """Escape text, turning bare URLs into anchors."""
+    out = []
+    pos = 0
+    for m in URL_RE.finditer(text):
+        out.append(esc(text[pos:m.start()]))
+        url = m.group(0)
+        out.append('<a href="%s">%s</a>' % (esc(url), esc(url)))
+        pos = m.end()
+    out.append(esc(text[pos:]))
+    return "".join(out)
+
+
+def scan_inline(line):
+    """Escape a line of text, anchoring bare URLs and single-line
+    {word} cross-references."""
+    out = []
+    pos = 0
+    while pos < len(line):
+        url_m = URL_RE.search(line, pos)
+        br_m = BRACE_RE.search(line, pos)
+        if url_m is None and br_m is None:
+            out.append(esc(line[pos:]))
+            break
+        if br_m is not None and (url_m is None or br_m.start() < url_m.start()):
+            m = br_m
+        else:
+            m = url_m
+        out.append(esc(line[pos:m.start()]))
+        if m is url_m:
+            url = m.group(0)
+            out.append('<a href="%s">%s</a>' % (esc(url), esc(url)))
+        else:
+            word = m.group(2)
+            out.append(m.group(1))
+            out.append('<a href="%s?Form=Dict2&Database=*&Query=%s">%s</a>'
+                       % (esc(RETURN_URL), q(word), esc(word)))
+        pos = m.end()
+    return "".join(out)
+
+
+def scan_text(line):
+    """Process a definition line. Return (html, pending), where
+    pending is the first part of an unclosed {word} cross-reference
+    at end of line, or None."""
+    open_m = BRACE_OPEN_RE.search(line)
+    if open_m:
+        head = line[:open_m.start(1)]
+        word = open_m.group(2)
+        return (scan_inline(head) + open_m.group(1) +
+                '<a href="%s?Form=Dict2&Database=*&Query=%s">%s\n</a>'
+                % (esc(RETURN_URL), q(word), esc(word))), word
+    return scan_inline(line), None
+
+
+def text_line(line, pending):
+    """Render a plain definition line, tracking {word} cross-references
+    that span line breaks. Return (html, pending_after)."""
+    if pending is not None:
+        idx = line.find("}")
+        if idx >= 0:
+            stripped = line.lstrip()
+            lead_ws = line[:len(line) - len(stripped)]
+            core = line[len(lead_ws):idx]
+            rest = line[idx + 1:]
+            word = (pending + " " + core.strip()).strip()
+            frag = (lead_ws +
+                    '<a href="%s?Form=Dict2&Database=*&Query=%s">%s</a>'
+                    % (esc(RETURN_URL), q(word), esc(core)))
+            html_rest, new_pending = scan_text(rest)
+            if new_pending is not None:
+                # The line's newline lives inside the opening anchor.
+                return frag + html_rest, new_pending
+            return frag + html_rest + "\n", new_pending
+        return scan_inline(line) + "\n", pending
+    html, pending = scan_text(line)
+    if pending is not None:
+        # The line's newline lives inside the opening anchor.
+        return html, pending
+    return html + "\n", pending
+
+
+def anchor_line(dbname, text):
+    """Link-ify a word-list line: every whitespace-delimited token
+    outside double quotes becomes a search link; quoted phrases become
+    phrase-search links (with literal single quotes, as before)."""
+    db = q(dbname)
+    parts = []
+    odd = True
+    for seg in text.split('"'):
+        if odd:
+            def repl(m):
+                tok = m.group(1)
+                return (' <a href="%s?Form=Dict2&Database=%s&Query=%s">%s</a>'
+                        % (esc(RETURN_URL), db, q(tok), esc(tok)))
+            parts.append(re.sub(r" (\S+)", repl, seg))
+        else:
+            phrase = seg
+            parts.append('<a href="%s?Form=Dict2&Database=%s&Query=\'%s\'">'
+                         '"%s"</a>'
+                         % (esc(RETURN_URL), db, q(phrase), esc(phrase)))
+        odd = not odd
+    return "".join(parts)
+
+
+def render_line(line, state, db, query):
+    """Render one line of dict client output. Return (html, state)."""
+    m = FROM_RE.match(line)
+    if m:
+        name, desc = m.group(2), m.group(1)
+        return ("</pre><b>From <a href=\"%s?Form=Dict3&Database=%s\">%s"
+                "</a>:\n</b><pre>\n" % (esc(RETURN_URL), q(name), esc(desc))), state
+    if line.startswith("From"):
+        return "</pre><b>%s\n</b><pre>\n" % esc(line), state
+    if COUNT_RE.match(line):
+        return ("</pre><b>%s\n for <a href=\"%s?Form=Dict2&Database=%s"
+                "&Query=%s\">%s</a></b><pre>"
+                % (esc(line), esc(RETURN_URL), q(db), q(query), esc(query))), state
+    if line.startswith("No definitions") or line.startswith("No matches"):
+        return "</pre><b>%s\n</b><pre>\n" % esc(line), state
+    m = WORDLIST_HEAD_RE.match(line)
+    if m:
+        if ":" in line:
+            dbn, rest = line.split(":", 1)
+            frag = "<b>%s:</b>%s\n" % (esc(dbn), anchor_line(dbn, rest))
+        else:
+            dbn, frag = m.group(1), "<b>%s:</b>\n" % esc(line)
+        state = dict(state)
+        state["wordlist"] = dbn
+        return frag, state
+    if state["wordlist"] is not None and WORDLIST_MORE_RE.match(line):
+        return anchor_line(state["wordlist"], line) + "\n", state
+    html, pending = text_line(line, state["pending"])
+    state = dict(state)
+    state["pending"] = pending
+    return html, state
+
+
+def render_result(text, db, query, used_backup):
+    """Render the full dict client output."""
+    parts = ["<pre>"]
+    if used_backup:
+        parts.append("</pre><b>Using backup server...</b>\n<hr><p><pre>\n")
+    state = {"wordlist": None, "pending": None}
+    for line in text.splitlines():
+        frag, state = render_line(line, state, db, query)
+        parts.append(frag)
+    parts.append("</pre>\n<hr>\n")
+    return "".join(parts)
+
+
+#
+# ---------- Page assembly
+#
+
+def render_form(query, strategy, database, strategy_opts, database_opts):
+    s_opts = "".join(
+        "        <option value=\"%s\"%s>%s\n"
+        % (esc(name), " selected" if name == strategy else "", esc(desc))
+        for name, desc in strategy_opts)
+    d_opts = "".join(
+        "        <option value=\"%s\"%s>%s\n"
+        % (esc(name), " selected" if name == database else "", esc(desc))
+        for name, desc in database_opts)
+    return (
+        "<form name=\"DICT\" method=\"POST\" action=\"%s\">\n"
+        "    <input type=\"hidden\" name=\"Form\" value=\"Dict1\">\n"
+        "    <center>\n"
+        "\t<table><tr><td align=\"right\">\n"
+        "\t<b>Search for:</b></td><td>\n"
+        "\t<input type=\"text\" name=\"Query\" size=40 value=\"%s\">\n"
+        "        <br></td></tr><td align=\"right\">\n"
+        "        <b>Search type:</b></td><td align=\"left\">\n"
+        "        <select name=\"Strategy\">\n"
+        "%s        </select>\n"
+        "\t<br></td></tr><td align=\"right\">\n"
+        "        <b>Database:</b></td><td>\n"
+        "        <select name=\"Database\">\n"
+        "%s        </select>\n"
+        "\t</td></tr></table>\n"
+        "        <input type=\"submit\" name=\"submit\" value=\"Submit query\">\n"
+        "        <input type=\"reset\" value=\"Reset form\">\n"
+        "\t<p>\n"
+        "\t<a href=\"%s\">Database copyright information</a>\n"
+        "\t<br>\n"
+        "\t<a href=\"%s\">Server information</a>\n"
+        "    </center>\n"
+        "</form>\n"
+        "<hr>\n"
+        % (esc(RETURN_URL), esc(query), s_opts, d_opts,
+           esc(COPYRIGHT_INFO_URL), esc(SERVER_INFO_URL)))
+
+
+def option_list(builtins, server_map):
+    items = list(builtins.items())
+    seen = set(builtins)
+    for name, desc in server_map.items():
+        if name not in seen:
+            seen.add(name)
+            items.append((name, desc))
+    return items
+
+
+def page_html(nonce, title, error_html, form_html, result_html):
+    return (
+        "<!DOCTYPE html>\n"
+        "<html>\n"
+        "<head>\n"
+        "<meta charset=\"utf-8\">\n"
+        "<title>%s</title>\n"
+        "<link rel=\"icon\" href=\"/favicon.ico\" type=\"image/x-icon\">\n"
+        "</head>\n"
+        "<body bgcolor=\"#ffffff\" text=\"#000000\">\n"
+        "<center>\n"
+        "<a href=\"https://www.dict.org/\"><img src=\"/gifs/dict.org-300x83.gif\"\n"
+        "width=\"300\" height=\"83\" alt=\"dict.org\"></a>\n"
+        "<br>\n"
+        "<H1>The DICT Development Group</H1>\n"
+        "</center>\n"
+        "<br>\n"
+        "%s"
+        "%s"
+        "<script nonce=\"%s\">document.DICT.Query.focus()</script>\n"
+        "%s"
+        "    <center>\n"
+        "    <font size=\"-1\">\n"
+        "\tContact=<a href=\"mailto:webmaster@dict.org\">webmaster@dict.org</a>"
+        " Specification=<a href=\"https://tools.ietf.org/html/rfc2229\">RFC 2229</a>\n"
+        "\t<br>\n"
+        "    </font>\n"
+        "</center>\n"
+        "</body>\n"
+        "</html>\n"
+        % (esc(title), error_html, form_html, nonce, result_html))
+
+
+REASON_PHRASES = {
+    400: "Bad Request",
+    405: "Method Not Allowed",
+    413: "Request Entity Too Large",
+    500: "Internal Server Error",
 }
 
 
-# ---------- Configuration variables
-
-$Debug        = 0;
-
-$Pgm          = "Dict";
-#$hostUrl      = "http://www.dict.org";
-$hostUrl      = "";
-$cgiPath      = "$hostUrl/bin";
-$ReturnUrl    = "$cgiPath/$Pgm";
-$bin          = "/data/httpd/html/bin";
-
-$CRInfo   = "$ReturnUrl?Form=$Pgm".
-    "1&Query=00-database-info&Strategy=*&Database=*";
-$SInfo   = "$ReturnUrl?Form=$Pgm". "4";
-$DictInfo= "$hostUrl/links.html";
-$DictOld = "$hostUrl/oldindex.html";
-$DictWiki= "$hostUrl/w/";
-
-$Dict    = "/usr/bin/dict -h localhost";
-$DictAlt = "/usr/bin/dict -h localhost";
-#$Dict    = "/usr/local/bin/dict -h pilatus.med.harvard.edu";
-#$DictAlt = "/usr/local/bin/dict -h dega.cs.unc.edu";
-$Counter = "/usr/local/etc/Counter/data/$Pgm.dat";
-$Count   = "$cgiPath/Count.cgi";
-$Background = "/gifs/grayback.jpg";
-$Heading1= "dict.org";
-$Heading2= "<a href=\"http://www.dict.org/\">The DICT Development Group</a>: Online&nbsp;Dictionary&nbsp;Query";
-$Heading2= "The DICT Development Group";
-$Heading2= "dict.org";
-$Counter1= "<img src=\"$Count?sh=0|df=$Pgm.dat\" alt=\"\">";
-$Counter2= "<img src=\"$Count?sh=0|df=total.dat\" alt=\"\">";
-# $Counter1= "";
-# $Counter2= "";
-$WebMaster="<a href=\"mailto:webmaster\@dict.org\">webmaster\@dict.org</a>";
-
-# --- display stuff
-
-##########################################################################
-#
-# Driving Program
-#
-#########################################################################
-
-&init;			# init globals
-&ReadParse;		# read stdin
+def send(status, nonce, body, allow=False):
+    out = []
+    if status != 200:
+        out.append("Status: %d %s"
+                   % (status, REASON_PHRASES.get(status, "Error")))
+    out.append("Content-Type: text/html; charset=utf-8")
+    out.append(
+        "Content-Security-Policy: "
+        "default-src 'self'; img-src 'self' data:; style-src 'self'; "
+        "script-src 'nonce-%s'; base-uri 'self'; form-action 'self'; "
+        "frame-ancestors 'self'" % nonce)
+    out.append("X-Content-Type-Options: nosniff")
+    out.append("X-Frame-Options: SAMEORIGIN")
+    out.append("Referrer-Policy: strict-origin-when-cross-origin")
+    if allow:
+        out.append("Allow: GET, POST")
+    out.append("Cache-Control: no-store")
+    sys.stdout.write("\r\n".join(out) + "\r\n\r\n" + body)
+    sys.stdout.flush()
 
 
-#
-#
-# If there is no standard input, this the the users first request to see
-# the page. Return a decent looking page. Otherwise, you have work to do.
-#
+def main():
+    nonce = base64.b64encode(secrets.token_bytes(16)).decode("ascii")
+    try:
+        params = read_request()
+    except HttpError as exc:
+        body = ("<!DOCTYPE html>\n<html><head><meta charset=\"utf-8\">"
+                "<title>dict.org</title></head><body><h1>%d %s</h1><p>%s</p>"
+                "</body></html>\n"
+                % (exc.status, esc(REASON_PHRASES.get(exc.status, "Error")),
+                   esc(exc.reason)))
+        send(exc.status, nonce, body, allow=(exc.status == 405))
+        return
 
-if ($in{"Form"} eq "") {
-    $in{"Database"} = "*";
-    $in{"Strategy"} = "*";
-    print &PrintHeader();
-    &SendBeginning;
-    &SendForm1;
-    &SendEnding;
-}
-elsif ($in{"Form"} eq ($Pgm . '1')) {
-    print &PrintHeader();
-    &SendBeginning;
-    &StripFields;		# clean up user entered data.
-    &CheckFields;		# Make sure all required data are there.
-    &SendForm1;
-    if ($Error eq "") {
-	&SendListing;
-    }
-    &SendEnding;
-}
-elsif ($in{"Form"} eq ($Pgm . '2')) {
-    $in{"Strategy"} = "*";
-    print &PrintHeader();
-    &SendBeginning;
-    &StripFields;		# clean up user entered data.
-    &CheckFields;		# Make sure all required data are there.
-    &SendForm1;
-    if ($Error eq "") {
-	&SendListing;
-    }
-    &SendEnding;
-}
-elsif ($in{"Form"} eq ($Pgm . '3')) {
-    $in{"Strategy"} = "";
-    $in{"Query"} = "";
-    print &PrintHeader();
-    &SendBeginning;
-    &StripFields;		# clean up user entered data.
-#    &CheckFields;		# Make sure all required data are there.
-    &SendForm1;
-    if ($Error eq "") {
-	&SendListing;
-    }
-    &SendEnding;
-}
-elsif ($in{"Form"} eq ($Pgm . '4')) {
-    $in{"Strategy"} = "";
-    $in{"Query"} = "";
-    print &PrintHeader();
-    &SendBeginning;
-    &StripFields;		# clean up user entered data.
-#    &CheckFields;		# Make sure all required data are there.
-    &SendForm1;
-    if ($Error eq "") {
-	$in{"Query"} = "Server";
-	&SendListing;
-    }
-    &SendEnding;
-}
-else {
-    print &PrintHeader();
-    &SendBeginning;
-    print "<br><hr>Error, invalid syntax: $in<hr><br>\n";
-    &SendForm1;			# wtfo? send form anyway.
-    &SendEnding;
-}	
+    form = params.get("Form", "")
+    raw_query = params.get("Query", "")
+    raw_db = params.get("Database", "")
+    raw_st = params.get("Strategy", "")
+    query = clean_query(raw_query)
 
-#############################################################################
-#
-# --------------- Init global variables 
-#
+    databases, strategies = None, None
+    for server in SERVERS:
+        databases, strategies = enumerate_server(server)
+        if databases is not None:
+            break
 
-sub init {
-    local( $name, $desc);
-    local( $flag = 0 );
-    local( $triedbackup = 0 );
-#
-# ----- List of  database and search strategy options
-#
-# For each option, a comma separated string of the acceptable values
-#
-    $Choices{"Database"} = "Any\tFirst match";
-    
-    %Db = ("Any", "*",
-	   "First match","!"
-	   );
-    
-    %Dbr = ("*", "Any",
-	   "!","First match"
-	   );
-    
-    $Choices{"Strategy"} = "Return Definitions";
-    
-    %St = ("Return Definitions", "*");
+    error = None
+    result = None
+    used_backup = False
+    show_q, show_st, show_db = "", "", "*"
 
-    # ----- suck in the database/strategy names from the server
+    if form == "":
+        show_q, show_st, show_db = "", "*", "*"
+    elif form == "Dict1":
+        show_q, show_st, show_db = query, raw_st, raw_db
+        if not query:
+            error = "Query is required."
+        elif databases is None:
+            error = BACKEND_DOWN
+        elif raw_db not in databases:
+            error = "Unknown database: %s" % esc(raw_db)
+        elif raw_st not in strategies:
+            error = "Unknown strategy: %s" % esc(raw_st)
+        else:
+            result, used_backup = run_query(
+                build_query_args(form, raw_db, raw_st, query))
+            if result is None:
+                error = BACKEND_DOWN
+    elif form == "Dict2":
+        show_q, show_st, show_db = query, "*", raw_db
+        if not query:
+            error = "Query is required."
+        elif databases is None:
+            error = BACKEND_DOWN
+        elif raw_db not in databases:
+            error = "Unknown database: %s" % esc(raw_db)
+        else:
+            result, used_backup = run_query(
+                build_query_args(form, raw_db, "*", query))
+            if result is None:
+                error = BACKEND_DOWN
+    elif form == "Dict3":
+        show_q, show_st, show_db = "", "", raw_db
+        db = raw_db or "*"
+        if db not in (databases or {}):
+            error = BACKEND_DOWN if databases is None \
+                else "Unknown database: %s" % esc(db)
+        else:
+            result, used_backup = run_query(build_query_args(form, db, "", ""))
+            if result is None:
+                error = BACKEND_DOWN
+    elif form == "Dict4":
+        show_q, show_st, show_db = "", "", raw_db
+        result, used_backup = run_query(build_query_args(form, "", "", ""))
+        if result is None:
+            error = BACKEND_DOWN
+    else:
+        error = "Error, invalid syntax: %s" % esc(form)
+        show_q, show_st, show_db = "", "*", "*"
 
-    open(IN,"$Dict -DS |") || die "$Pgm: can't execute /usr/bin/dict\n";
-restartopen:
-    <IN>;
-LOOP: while (<IN>) {
-	++$flag;
-	chop;
-	last LOOP if  /^Strategies/;
-	my @a = split /\s+/, $_;
-	$name = @a[1];
-	$desc = $_;
-	$desc =~ s/^ \S+\s+//;
-	$Choices{"Database"} .= "\t$desc";
-	$Db{$desc} = $name;
-	($Dbr{$name} = $desc) =~ tr/ /+/; # reverse lookup index
-    }
-    while (<IN>) {
-	++$flag;
-	chop;
-	my @a = split /\s+/, $_;
-	$name = @a[1];
-	$desc = $_;
-	$desc =~ s/^ \S+\s+//;
-	$Choices{"Strategy"} .= "\t$desc";
-	$St{$desc} = $name;
-    }
-    close( IN );
-    if (!$flag) {
-    	if (!$triedbackup) {
-		++$triedbackup;
-    		open(IN,"$DictAlt -DS |") || die "$Pgm: can't execute /usr/bin/dict\n";
-		goto restartopen;
-	}
-    }
+    title = "dict.org"
+    if query and form in ("Dict1", "Dict2"):
+        title += "- " + query
 
-#
-# The regular expression contraints:
-#    
-    @Fields = ("Query", "Database", "Strategy", "Server");
-    
-    @ReqFields =  ("Query");
-}
+    strategy_opts = option_list(BUILTIN_STRATEGIES,
+                                strategies or {})
+    database_opts = option_list(BUILTIN_DATABASES, databases or {})
 
-# ---------- Update the counter
-#
-sub UpdateCounter {
-    local ($count);
-    if ($Counter ne "") {
-	if (!(open(CT,"<$Counter"))) {
-	    print "$Pgm: Couldn't open $Counter<p>\n";
-	    return;
-	}
-	$count = <CT>;
-	close CT;
-	$count++;
-	if (!(open(CT,">$Counter"))) {
-	    print "Couldn't write $Counter<p>\n";
-	    return;
-	}
-	print CT $count;
-	close CT;
-    }
-}
+    error_html = "<p><b>%s</b></p>\n" % error if error else ""
+    result_html = ""
+    if result is not None:
+        result_html = render_result(result, show_db or "*", query,
+                                    used_backup)
+
+    form_html = render_form(show_q, show_st, show_db,
+                            strategy_opts, database_opts)
+    send(200, nonce, page_html(nonce, title, error_html, form_html,
+                               result_html))
 
 
-# ---------- Strip fields
-#
-# change tabs and stuff to blanks, strip any leading/trailing blanks.
-#
-
-sub StripFields {
-    foreach $x (@Fields) {
-	$in{$x} =~ y/{};/() /;        #  ensure no {, },",", or ";".
-	$in{$x} =~ y/\n\r\f\t\e/     /s;  # ensure newlines or cr's.
-	$in{$x} =~ s/\'/\'\'/g;	
-	$in{$x} =~ s/^\s*//;	
-	$in{$x} =~ s/\s*$//;	
-	$in{$x} =~ s/\s+/ /g;	
-    }
-}
-
-#
-# ---------- Check that the required fields are all present.
-#
-
-sub CheckFields {
-    $Error = "";
-    foreach $x (@ReqFields) {
-	if ($in{$x} eq "") {
-	    $Error = $x;
-	    return;
-	}
-    }
-}
-
-
-#############################################################################
-#
-# ---------- Send the html form for the editing of a record
-#
-
-sub SendForm1 {
-
-# ----- send the header
-#
-    local($q) = $in{"Query"};
-#<!-- hidden counter -->
-#$Counter1
-#<!-- hidden counter -->
-#$Counter2
-
-    print <<EOF;
-<form name="DICT" method="POST" action="$ReturnUrl">
-    <input type="hidden" name="Form" value="${Pgm}1">
-    <center>
-	<table><tr><td align="right">
-	<b>Search for:</b></td><td>
-	<input type="text" name="Query" size=40 value="$q">
-        <br></td></tr><td align="right">
-        <b>Search type:</b></td><td align="left">
-        <select name="Strategy">
-EOF
-    foreach $x (split(/\t/,$Choices{"Strategy"})) {
-	print "        <option value=\"$St{$x}\"";
-	if ($in{"Strategy"} eq $St{$x}) {
-	    print " selected";
-	}
-	print ">$x\n";
-    }
-    print <<EOF2;
-        </select>
-	<br></td></tr><td align="right">
-        <b>Database:</b></td><td>
-        <select name="Database">
-EOF2
-    foreach $x (split(/\t/,$Choices{"Database"})) { 
-	print "        <option value=\"$Db{$x}\"";    
-	if ($in{"Database"} eq $Db{$x}) {
-	    print " selected";
-	}
-	print ">$x\n";
-    }
-    print <<EOF3;
-        </select>
-	</td></tr></table>
-        <input type="submit" name="submit" value="Submit query">
-        <input type="reset" value="Reset form">
-	<p>
-	<a href="$CRInfo">Database copyright information</a>
-	<br>
-	<a href="$SInfo">Server information</a>
-    </center>
-</form>
-<hr>
-EOF3
-}  
-#        <a href="$DictInfo">Resources, links, and other information</a> (<a href="$DictOld">old home page</a>)
-#        <br>
-#        <a href="$hostUrl/changes.html">Notes on Recent Changes (last updated March 2005)</a>
-
-
-#############################################################################
-#
-# ---------- Send the html form for the search listing results
-#
-
-sub SendListing {
-    local( $command, $d, $s, $q);
-    local( $i, $x );
-    local( $flag=0 );
-    local( $triedbackup = 0 );
-
-    # ----- add the hidden counter.
-
-#    print "\n<!-- hidden counter -->\n";
-#    print "<img src=\"/bin/Count.cgi?sh=0|df=$Pgm.dat\">\n";
-    
-#    &UpdateCounter;
-    
-    # ---------- report
-
-    $d = $in{"Database"};
-    $d = $in{"Database"} if ($d eq "");
-    $s = $in{"Strategy"};
-    $q = $in{"Query"};
-    $command = "--client \"$ENV{'REMOTE_HOST'} $ENV{'HTTP_USER_AGENT'}\" ";
-    if ($s eq "" && $q eq "") {
-	$command .= "-i '$d'";
-    } elsif ($s eq "" && $q eq "Server") {
-	$command .= "-I";
-    } else {
-	$command .= "-d '$d'";
-	$wordlist = 0;
-	if ($s eq '*') {
-	    $command .= " \'". $q . "\'";
-	}
-#	elsif ($s eq 'exact') {
-#	    $command .= " -s exact \'". $q ."\'";
-#	}
-	else {
-	    $command .= " -s $s -m \'". $q ."\'";
-	}
-    }
-
-    print "$Dict $command <p>\n" if ($Debug);
-    #open(LOG,">>/tmp/Dict.log");
-    #print LOG scalar localtime;
-    #print LOG " $Dict $command\n";
-    #close(LOG);
-
-    if (!open(IN,"$Dict $command 2>&1 |")) {
-        print "<hr><p>\n";
-    	print "<b>Backend database engine temporarily unavailable:\n";
-	print " please try again later</b>\n";
-	print "<p><hr>\n";
-	return;
-    }
-    if ($s eq "" && $q eq "") {
-	local($tmp) = &lx($Dbr{$d});
-	print "<b>From <a href=\"$ReturnUrl?Form=${Pgm}3&Database=$d\">$tmp<\/a>:</b>\n";
-    }
-    print "<pre>";
-    restart: 
-    while(<IN>) {
-        ++$flag;
-	if (/^From/) {
-	    if (/\[.*\]/) {
-		s/^From\s*(.*)\s*\[(.*)\]\s*:.*$/From <a href=\"$ReturnUrl?Form=${Pgm}3&Database=$2\">$1<\/a>:/; # " 
-	    }
-	    print "</pre><b>$_</b><pre>\n";
-	}
-	elsif (/^\d+ /) {
-	    local($tmp) = &xl($q);
-	    print "</pre><b>$_ for <a href=\"$ReturnUrl?Form=${Pgm}2&Database=$d&Query=$tmp\">$q</a></b><pre>";
-	}
-	elsif (/^No definitions/) {
-	    print "</pre><b>$_</b><pre>\n";
-	}
-	elsif (/^No matches/) {
-	    print "</pre><b>$_</b><pre>\n";
-	}
-	elsif (/^(\S+) /) {
-	    $x = $1;
-	    ($x, $line) = split(/:/, $_, 2);
-	    $line = &anchor( $x, $line);
-	    print "<b>$x:</b>$line";
-	    $wordlist = 1;
-	}
-	elsif ($wordlist && (/^  (\S+) /)) {
-	    $line = &anchor( $x, $_);
-	    print $line;
-	}
-	else {
-	    if (/(ftp|http):\/\/[^\s\)\}]*\}/) {
-		s,((ftp|http)://[^\s\)\}]*)\},}<a href="$1">$1</a>,g;
-	    } else {
-		s,((ftp|http)://[^\s\)\}]*),<a href="$1">$1</a>,g;
-	    }
-	    s,(\s)\{([^}\s][^}]*)},$1.'<a href="'.$ReturnUrl.'?Form='.$Pgm.'2&Database=*&Query='.&xl($2).'">'.$2.'</a>',ge;
-            if (/(\s)\{([^}\s][^}]*)(\n)$/) {
-                $savefirst = $2;
-            }
-	    s,(\s)\{([^}\s][^}]*)(\n)$,$1.'<a href="'.$ReturnUrl.'?Form='.$Pgm.'2&Database=*&Query='.&xl($2).'">'.$2.$3.'</a>',se;
-	    s,^(\s*)([^}]*)},$1.'<a href="'.$ReturnUrl.'?Form='.$Pgm.'2&Database=*&Query='.&xl($savefirst).&xl(' ').&xl($2).'">'.$2.'</a>',e;
-            print;
-	}
-    }
-    print "</pre>\n";
-    close( IN );
-    if (!$flag) {
-        if (!$triedbackup) {
-		++$triedbackup;
-    		print "$DictAlt $command <p>\n" if ($Debug);
-    		if (open(IN,"$DictAlt $command 2>&1 |")) {
-			print "</pre><b>Using backup server...</b>\n";
-			print "<hr><p><pre>\n";
-			goto restart;
-		}
-	}
-        print "<b>\n";
-        print "Backend database engine error: please try again later\n";
-        print "</b><p>";
-    }
-    print "<hr>\n";
-}
-
-sub xl { local($tmp) = $_[0]; $tmp =~ tr/ /+/; $tmp; }
-sub lx { local($tmp) = $_[0]; $tmp =~ tr/+/ /; $tmp; }
-
-sub anchor {
-    local( $dbname, $line) = @_;
-    local( $x, $y, $db, $new_line);
-
-    $odd = 1;
-    $db = $Dbr{$dbname};
-    $db = $dbname;
-    foreach $x  (split("\"", $line)) {
-	if ($odd) {
-	    $x =~ s/ (\S+)/ <a href="$ReturnUrl?Form=${Pgm}2&Database=$db&Query=$1">$1<\/a>/g;
-	    $new_line .= $x;
-	    $odd = 0;
-	}
-	else {
-	    ($y = $x) =~ tr/ /+/;
-	    $new_line .= "<a href=\"$ReturnUrl?Form=${Pgm}2&Database=$db&Query='$y'\">\"$x\"<\/a>";
-	    $odd = 1;
-	}
-    }
-
-    return $new_line;
-}
-
-#
-# ----- Common beginning.
-#
-sub SendBeginning {
-    local ($title);
-    
-    $title = $Heading1;
-    if ($in{'Query'}) {
-	$title .= "- $in{'Query'}";
-    }
-    
-    print <<EOF;
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
-<html>
-<head>
-<title>$title</title>
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-</head>
-<body bgcolor=#ffffff text=#000000 onLoad="document.DICT.Query.focus()">
-<center>
-<!--
-<a style="width:260px;height:30px;vertical-align:middle;text-align:center;background-color:#000;position:absolute;z-index:5555;top:35px;left:520px;background-image:url(http://americancensorship.org/images/stop-censorship-small.png);background-position:center center;background-repeat:no-repeat;" href="http://americancensorship.org/"></a> -->
-<script type="text/javascript">var a=new Date,b=a.getHours()+a.getTimezoneOffset()/60;if(18==a.getDate()&&0==a.getMonth()&&2012==a.getFullYear()&&10<=b&&24>=b)window.location="http://sopastrike.com/strike";</script>
-<a href="http://www.dict.org/"><img src="/gifs/dict.org-300x83.gif"
-width="300" height="83" border="0" alt="$Heading2"></a>
-<br>
-<H1>The DICT Development Group</H1>
-</center>
-<br>
-EOF
-}
-
-#
-# ----- Common ending.
-#
-sub SendEnding {
-    print <<EOF;
-    <center>
-    <font size="-1">
-	Contact=$WebMaster Specification=<a href="https://tools.ietf.org/html/rfc2229">RFC 2229</a>
-	<br>
-    </font>
-</center>
-</body>
-</html>
-EOF
-}
-
-# --------------- Numeric sort function
-
-sub bynumber { $a <=> $b; }
-  
-
-#############################################################################
-#
-# --------------- Library Stuff
-#
-
-# Perl Routines to Manipulate CGI input
-# S.E.Brenner@bioc.cam.ac.uk
-# $Header: /data/httpd/html/Internal/bin/RCS/Dict,v 1.11 1998/03/30 17:33:26 hoffman Exp $ #
-# Copyright 1993 Steven E. Brenner  
-# Unpublished work.
-# Permission granted to use and modify this library so long as the
-# copyright above is maintained, modifications are documented, and
-# credit is given for any use of the library.
-
-# ReadParse
-# Reads in GET or POST data, converts it to unescaped text, and puts
-# one key=value in each member of the list "@in"
-# Also creates key/value pairs in %in, using '\0' to separate multiple
-# selections
-
-# If a variable-glob parameter (e.g., *cgi_input) is passed to ReadParse,
-# information is stored there, rather than in $in, @in, and %in.
-sub ReadParse {
-  if (@_) {
-    local (*in) = @_;
-  }
-
-  local ($i, $loc, $key, $val);
-	local ($fp);
-  # Read in text
-  if ($ENV{'REQUEST_METHOD'} eq "GET") {
-    $in = $ENV{'QUERY_STRING'};
-  } elsif ($ENV{'REQUEST_METHOD'} eq "POST") {
-    #for ($i = 0; $i < $ENV{'CONTENT_LENGTH'}; $i++) {
-    #  $in .= getc;
-    #}
-	$ntoread = $ENV{'CONTENT_LENGTH'};
-	$in = "";
-	$n = 60;
-	if ($ntoread < $n) {
-		$n = $ntoread;
-	}
-	while ($ntoread) {
-		$x = read(STDIN,$inn,$n);
-		$in = $in . $inn;
-		$ntoread = $ntoread - $x;
-		if ($ntoread < $n) {
-			$n = $ntoread;
-		}
-	}
-	#read(STDIN,$in,$ENV{'CONTENT_LENGTH'});
-  } 
-
-  @in = split(/&/,$in);
-
-  foreach $i (0 .. $#in) {
-    # Convert plus's to spaces
-    $in[$i] =~ s/\+/ /g;
-
-    # Convert %XX from hex numbers to alphanumeric
-    $in[$i] =~ s/%(..)/pack("c",hex($1))/ge;
-
-    # Split into key and value.
-    $loc = index($in[$i],"=");
-    $key = substr($in[$i],0,$loc);
-    $val = substr($in[$i],$loc+1);
-    $in{$key} .= '\0' if (defined($in{$key})); # \0 is the multiple separator
-    $in{$key} .= $val;
-  }
-  return 1; # just for fun
-}
-
-# PrintHeader
-# Returns the magic line which tells WWW that we're an HTML document
-
-sub PrintHeader {
-  return "Content-type: text/html; charset=utf-8\n\n";
-}
-
+if __name__ == "__main__":
+    try:
+        main()
+    except Exception:
+        import traceback
+        traceback.print_exc(file=sys.stderr)
+        sys.stderr.write("Dict: %s\n" % PGM)

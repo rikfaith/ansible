@@ -167,6 +167,10 @@
     group: root
     mode: '0644'
     content: |
+      <Directory /www/dict.org/support>
+        LimitRequestBody 65536
+      </Directory>
+
       <VirtualHost *:443>
         ServerName dict.org
         ServerAdmin webadmin@dict.org
@@ -196,6 +200,10 @@
     group: root
     mode: '0644'
     content: |
+      <Directory /www/dict.org/support>
+        LimitRequestBody 65536
+      </Directory>
+
       <VirtualHost dict.org:443>
         ServerName dict.org
         ServerAdmin webadmin@dict.org
