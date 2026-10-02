@@ -39,6 +39,32 @@
     owner: dictd
     group: dictd
 
+- name: "create logrotate config for cronolog logs"
+  copy:
+    dest: /etc/logrotate.d/dict-logs
+    owner: root
+    group: root
+    mode: '0644'
+    content: |
+      /var/log/httpd/dict.org/*/*/*.log {
+          daily
+          rotate 30
+          compress
+          delaycompress
+          missingok
+          notifempty
+      }
+
+      /var/log/dictd/*/*/*.log {
+          su dictd dictd
+          daily
+          rotate 30
+          compress
+          delaycompress
+          missingok
+          notifempty
+      }
+
 - name: "configure defaults"
   copy:
     dest: /etc/default/dictd
@@ -183,6 +209,8 @@
         SSLCertificateKeyFile /etc/letsencrypt/live/dict.org/privkey.pem
         Include               /etc/letsencrypt/options-ssl-apache.conf
 
+        Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+
         TransferLog "|/usr/bin/cronolog /var/log/httpd/dict.org/%Y/%m/access.%Y%m%d.log"
         ErrorLog "|/usr/bin/cronolog /var/log/httpd/dict.org/%Y/%m/error.%Y%m%d.log"
       </VirtualHost>
@@ -216,6 +244,8 @@
         SSLCertificateKeyFile /etc/letsencrypt/live/dict.org/privkey.pem
         Include               /etc/letsencrypt/options-ssl-apache.conf
 
+        Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+
         TransferLog "|/usr/bin/cronolog /var/log/httpd/dict.org/%Y/%m/access.%Y%m%d.log"
         ErrorLog "|/usr/bin/cronolog /var/log/httpd/dict.org/%Y/%m/error.%Y%m%d.log"
       </VirtualHost>
@@ -227,3 +257,20 @@
 
 - name: Activate dict.org
   shell: a2ensite dict.org
+
+- name: enable mod_headers for HSTS
+  shell: a2enmod headers
+
+- name: reduce server version disclosure
+  lineinfile:
+    path: /etc/apache2/conf-available/security.conf
+    regexp: '^ServerTokens'
+    line: 'ServerTokens Prod'
+    state: present
+
+- name: turn off server signature
+  lineinfile:
+    path: /etc/apache2/conf-available/security.conf
+    regexp: '^ServerSignature'
+    line: 'ServerSignature Off'
+    state: present
