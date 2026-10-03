@@ -1,0 +1,29 @@
+====== EMR ======
+===== OpenEMR =====
+  * Open source
+  * [[http://www.oemr.org/ | OpenEMR]]
+
+===== FreeMED =====
+  * Open source; web-based; online demo
+  * not mature; no billing?
+  * [[http://www.freemedsoftware.org/ | FreeMED ]]
+===== ClearHealth =====
+  * Open source (ClearHealth) with commercial offerings (database, VA Vista, etc.)
+  * [[http://www.clear-health.com/ | ClearHealth]]
+
+===== EncounterPRO =====
+
+  * [[http://www.jmjtech.com/ | EncounterPRO web site (JMJ)]]
+  * [[http://www.wifi-med.com/ | Alternate website (wifi-med)]]
+  * [[http://www.wifmholdings.com/ | Parent company (WifiMed Holdings, OTCBB:WIFM)]]
+  * [[http://www.cybermedx.com/ | Sister company (CyberMedx Medical Systems)]]
+
+==== Press Releases ====
+
+  * [[http://findarticles.com/p/articles/mi_m0EIN/is_2008_July_2/ai_n27878850 | July 2008: 3 new clients ]]
+  ** [[http://lafayettepediatrics.net/ | Lafayette Pediatric Clinic in Oxford, MS]]
+  ** Faugot Pediatrics in Iberia, LA (Maurice B Faugot, MD), in business since at least 2005
+  ** [[http://www.manta.com/coms2/dnbcompany_ckf9l8 | Pediatric and Adolescent Center in Lewes, DE]]
+
+==== Certifications ====
+  * [[http://www.cchit.org/choose/ambulatory/2006/EncounterPRO-EHR.asp | CCHIT]]

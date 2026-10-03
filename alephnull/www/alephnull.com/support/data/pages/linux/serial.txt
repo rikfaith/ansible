@@ -1,0 +1,73 @@
+====== Cable Pinouts ======
+
+===== Ethernet =====
+
+The house ethernet standard is T568B:
+
+^ RJ45 Pin ^ Color        ^ Pair ^
+^ 1        | White/orange | 2 |
+^ 2        | Orange       | 2 |
+^ 3        | White/Green  | 3 |
+^ 4        | Blue         | 1 |
+^ 5        | White/Blue   | 1 |
+^ 6        | Green        | 3 |
+^ 7        | White/Brown  | 4 |
+^ 8        | Brown        | 4 |
+
+===== Serial =====
+
+
+==== NULL ====
+
+This mapping is the same for male and female connectors.
+
+^ DB9 Pin ^ DTE Function ^ Adapter Color  ^ RJ45 Pin ^ 
+^ 1       | CD           |        |   |
+^ 2       | Rx           | Yellow | 6 |
+^ 3       | Tx           | Green  | 5 |
+^ 4       | DTR          | Blue   | 1 |
+^ 5       | GND          | Red    | 4 |
+^ 6       | DSR          | Black  | 3 |
+^ 7       | RTS          | Brown  | 7 |
+^ 8       | CTS          | Gray   | 8 |
+^ 9       | RI           |        |   |
+^         |              | Orange | 2 |
+
+^ DB25 Pin ^ PM Function ^ Adapter Color  ^ RJ45 Pin ^ 
+^ 2       | Tx           | Green  | 5 |
+^ 3       | Rx           | Yellow | 6 |
+^ 4       | RTS          | Brown  | 7 |
+^ 5       | CTS          | Gray   | 8 |
+^ 6       | DSR          | Black  | 3 |
+^ 7       | GND          | Red    | 4 |
+^ 20      | DTR          | Blue   | 1 |
+^         |              | Orange | 2 |
+
+==== STD (Straight-Through) ====
+
+^ DB25 Pin ^ Adapter Color ^
+^ 2        | Yellow |
+^ 3        | Green  | 
+^ 4        | Gray   |
+^ 5        | Brown  |
+^ 6        | Blue   |
+^ 7        | Red    |
+^ 20       | Black  |
+^          | Orange |
+
+==== INTEL ====
+
+There are two standards for IDC-to-DB9, one is the standard straight-through method, mapping pin n on the IDC to pin n on the DB-9.  The other is "Intel" format, which does a completely daft mapping.  This is explained [[http://www.scantips.com/serial-db9.html | here]].
+
+You can detect this by measuring the voltage between pin 5 and pins 2 and 3, one of which should be positive and one negative.  In the Intel configuration, pin 5 isn't ground, and the voltage on pins 2 and 3 will have the same sign.
+
+^ DB9 Pin ^ Color ^
+^ 1       | |
+^ 2       | Green |
+^ 3       | Red   |
+^ 4       | Brown |
+^ 5       | |
+^ 6       | Yellow |
+^ 7       | Blue   |
+^ 8       | Black  |
+^ 9       | Gray   |

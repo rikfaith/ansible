@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Breakout box parts</title>
+<style type="text/css">
+<!--
+li {
+	font-family: Arial, Helvetica, sans-serif;
+}
+td {
+	font-family: Arial, Helvetica, sans-serif;
+}
+-->
+</style>
+<link href="../styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<table width="1024">
+  <tr>
+    <td colspan="2"><a href="../index.html"><img src="../hybridsky.png" width="499" height="112" border="0" /></a> </td>
+  </tr>
+  <tr>
+    <td  align="center"><h3> <a href="../p1/index.html">P1</a>: Nitrous at Balls in '08</h3>
+      <h2><a href="control.html">Hybrid Launch Control</a></h2>
+      <p>Last Update, 8/23/07 by Stephen Daniel </p></td>
+  </tr>
+  <tr>
+    <td><h2>Breakout Box Parts</h2>
+      <p>This section describes the parts we are using to build the break-out box. Most of these parts we bought from <a href="www.digikey.com">Digikey</a>. Others were purchased from specialty suppliers or at surplus. Quantities listed are the minimum requirements for the break-out box. We recommend buying more than you think you need. </p>
+      <table width="750" border="1" cellpadding="2">
+        <tr>
+          <th colspan="4" scope="col">Active Electronics </th>
+        </tr>
+        <tr>
+          <th width="101" scope="col">Part</th>
+          <th width="17" scope="col">Qty</th>
+          <th width="256" scope="col">Digikey Part Number </th>
+          <th width="196" scope="col">Discussion</th>
+        </tr>
+        <tr>
+          <td>Diode 1N4004 </td>
+          <td>8</td>
+          <td width="256">1N4004-TPMSCT-ND</td>
+          <td>Used for freewheel diodes to handle inductive loads and to protect the regulator when input power is removed </td>
+        </tr>
+        <tr>
+          <td>Cap 100 uF </td>
+          <td>2</td>
+          <td width="256">P12392-ND</td>
+          <td>Voltage regulator input and output capacitor </td>
+        </tr>
+        <tr>
+          <td>Regulator LM7808 </td>
+          <td>1</td>
+          <td>296-21620-5-ND</td>
+          <td>8 volt regulator -- supplies power to the LEDs and the MOSFET gates </td>
+        </tr>
+        <tr>
+          <td>Diode 1N4148 </td>
+          <td>21</td>
+          <td>&nbsp;</td>
+          <td>Used to protect the MOSFET gate and the indicator LEDs </td>
+        </tr>
+        <tr>
+          <td>10K resistor </td>
+          <td>7</td>
+          <td>10KQBK-ND</td>
+          <td>MOSFET gate pull-down resistor </td>
+        </tr>
+        <tr>
+          <td>100 Ohm resistor </td>
+          <td>7</td>
+          <td>100QBK-ND</td>
+          <td>MOSFET gate current limiter </td>
+        </tr>
+        <tr>
+          <td>200 Ohm resistor </td>
+          <td>7</td>
+          <td>200QBK-ND</td>
+          <td>Indicator LED current limiter </td>
+        </tr>
+        <tr>
+          <td>Power MOSFET </td>
+          <td>7</td>
+          <td>IRF3709PBF-ND</td>
+          <td>Power MOSFET. Controls the output load's connection to negative power supply. </td>
+        </tr>
+        <tr>
+          <td>LED</td>
+          <td>8</td>
+          <td>N/A </td>
+          <td>not a Digikey part. Use LSDiode's 5mm 20ma diodes. </td>
+        </tr>
+        <tr>
+          <td>Fuse</td>
+          <td>1</td>
+          <td>F2765-ND</td>
+          <td>20A fast-blow fuse. Protects against most abuse. Won't help you if you connect the power up backwards. </td>
+        </tr>
+      </table>
+      eu
+      <p>&nbsp;</p>
+      <table width="750" border="1" cellpadding="2">
+        <tr>
+          <th colspan="4" scope="col">Box, Connectors, and Mechanicals </th>
+        </tr>
+        <tr>
+          <th width="101" scope="col">Part</th>
+          <th width="17" scope="col">Qty</th>
+          <th width="256" scope="col">Digikey Part Number </th>
+          <th width="196" scope="col">Discussion</th>
+        </tr>
+        <tr>
+          <td>12 x 8 x 2 Chassis </td>
+          <td>1</td>
+          <td width="256">HM267-ND</td>
+          <td>This chassis provides the bottom and sides of the enclosure. The top is a custom fabricated front-panel. </td>
+        </tr>
+        <tr>
+          <td>Connector </td>
+          <td>7</td>
+          <td width="256">A1360-ND</td>
+          <td>This is the panel mount AMD connector that we use for medium current applications. Power comes in on one of these and all of the outputs except for the igition circuit use this connector </td>
+        </tr>
+        <tr>
+          <td>Connector</td>
+          <td>7</td>
+          <td>A1357-ND</td>
+          <td>This is the other portion of the connector that goes on the wires that will connect to the box </td>
+        </tr>
+        <tr>
+          <td>Cable Clamp </td>
+          <td>7</td>
+          <td>A32515-ND</td>
+          <td>This cable clamp provides strain-relief for the connectors </td>
+        </tr>
+        <tr>
+          <td>Pin</td>
+          <td>14</td>
+          <td>A31987-ND</td>
+          <td>These are the male pins, used on the ouput wire connectorss and the power input recepticle. </td>
+        </tr>
+        <tr>
+          <td>Socket</td>
+          <td>14</td>
+          <td>A31988-ND</td>
+          <td>These are the female pins that mate with the above </td>
+        </tr>
+        <tr>
+          <td>Connector</td>
+          <td>1</td>
+          <td>A1303-ND</td>
+          <td>This is the 9-pin version of the AMD connector, used for the control wire that runs to the control panel. </td>
+        </tr>
+        <tr>
+          <td>Connector </td>
+          <td>1</td>
+          <td>A1302-ND</td>
+          <td>The mating 9-pin connector for the control wire </td>
+        </tr>
+        <tr>
+          <td>Cable clamp` </td>
+          <td>1</td>
+          <td>A32519-ND</td>
+          <td>9-pin version of the cable clamp for strain relief </td>
+        </tr>
+        <tr>
+          <td>Pin</td>
+          <td>9</td>
+          <td>A31989-ND</td>
+          <td>Pins for the 9-pin connector, sized for smaller write (i.e. CAT-5) </td>
+        </tr>
+        <tr>
+          <td>Socket</td>
+          <td>9</td>
+          <td>A31990-ND</td>
+          <td>Mating sockets </td>
+        </tr>
+        <tr>
+          <td>Dual banana jack</td>
+          <td>1</td>
+          <td>&nbsp;</td>
+          <td>The ignition circuit comes out on a dual banana jack/socket. </td>
+        </tr>
+        <tr>
+          <td>Dual banana plug </td>
+          <td>1</td>
+          <td>&nbsp;</td>
+          <td>Provides test points even when connected </td>
+        </tr>
+        <tr>
+          <td>LED spacer </td>
+          <td>8</td>
+          <td>RP507-ND</td>
+          <td>Mounts the LEDs 0.5&quot; below the board so they can protrude into the holes in the front panel. </td>
+        </tr>
+        <tr>
+          <td>Terminal block </td>
+          <td>7</td>
+          <td>281-1870-ND</td>
+          <td>The output connectors are connected to the PCB through these blocks. </td>
+        </tr>
+        <tr>
+          <td>Terminal block </td>
+          <td>1</td>
+          <td>ED2231-ND</td>
+          <td>The control wire connector is connected to the PCB through this block </td>
+        </tr>
+        <tr>
+          <td>Ring terminals </td>
+          <td>2</td>
+          <td>WM18279-ND</td>
+          <td>Power is connected to the PCB by screwing these ring terminals to the board </td>
+        </tr>
+        <tr>
+          <td>Heatsinks</td>
+          <td>8</td>
+          <td>345-1026-ND</td>
+          <td>Used for both the power MOSFETs and the 8v regulator </td>
+        </tr>
+        <tr>
+          <td>Fuse holder </td>
+          <td>1</td>
+          <td>F005-ND</td>
+          <td>Panel mount fuse holder </td>
+        </tr>
+        <tr>
+          <td>Crimp tool </td>
+          <td>1</td>
+          <td>A9920-ND</td>
+          <td>The AMP connectors are very nice, but they require this extravagantly expensive crimp tool. Or you can use very expensive solder pins. Sigh. </td>
+        </tr>
+        <tr>
+          <td>Pin extractor </td>
+          <td>1</td>
+          <td>A1329-ND</td>
+          <td>You'll also (eventually) need this pin extractor tool </td>
+        </tr>
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>

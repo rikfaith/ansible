@@ -1,0 +1,75 @@
+
+You may distribute these notes under the terms of the OpenContent
+License (http://opencontent.org/opl.shtml).
+
+Please remember to remove the headers if you forward outside the
+company!
+
+UNIX TOOLS
+
+    Shelley Powers
+    Jerry Peek
+    Tim O'Reilly
+    Mike Loukides
+    Unix Power Tools
+
+        This thick volume covers most of the common Unix tools and the
+        recent editions (e.g., the 3rd) have special coverage of Linux.
+        I don't own this book, but so many people that I respect have
+        recommended it that I feel obligated to recommend it as the
+        first and best choice in this category.
+
+    Gary V. Vaughan
+    Ben Elliston
+    Ton Tromey
+    Ian Lance Taylor
+    GNU Autoconf, Automake, and Libtool
+
+        Modern Open Source software invariably uses the GNU autoconf
+        family of tools for configuration and building.  This is the
+        definitive book on how to use these tools effectively.  Even if
+        you're been using them for years, you need to get this book and
+        read it so that you can take advantage of modern standards and
+        features.
+
+    Alfred V. Aho
+    Brian W. Kernighan
+    Peter J. Weinberger
+    The AWK Programming Language
+
+        This is the classic book on AWK programming, mentioned here for
+        completeness in case anyone still writes large programs in AWK.
+        If you're buying your first book on AWK, you'll probably want an
+        O'Reilly book -- see below.
+
+    Books published by O'Reilly & Associates (www.ora.com)
+
+        O'Reilly has a number of books on fundamental Unix tools (e.g.,
+        sed, awk, lex, yacc, perl, php, vi, emacs, bash, etc.).  These
+        books are generally well written, well bound, and will serve you
+        well for years to come.  The Unix Power Tools book is also from
+        O'Reilly, but if you need more information about a specific
+        tool, continue to look at their offerings.  [They also have a
+        number of good books on programming and other topics.  For
+        example, if you program X11, you probably already own their 6
+        volume set on X11.]
+
+
+
+PREVIOUS TOPICS
+
+    C Programming Basics
+    Programming Practice (Style)
+    Algorithms
+    Unix Programming
+
+FUTURE TOPICS
+    Software Engineering
+    Security and Testing
+    C++ Programming (?)
+    Design Patterns (?)
+    Database and Information Retrieval (?)
+    Compilers and Little Languages (?)
+    Threads (?)
+    Linux Kernel Programming (?)
+    ? -- send me email and suggest a topic...

@@ -1,0 +1,14 @@
+====== Linux ======
+  * Summary of my [[http://alephnull.com/linux.html | Linux Work]]
+  * C code for printing a symbolic stack [[http://alephnull.com/backtrace.html | backtrace]] inside a program (i.e., at runtime)
+    * Download [[http://alephnull.com/backtrace.c | backtrace.c]]
+    * See also HP's [[http://www.hpl.hp.com/research/linux/libunwind/ | libunwind]]
+  * [[perf | Linux Software Development and Performance Analysis Tools]]
+  * [[ur | The ur library]]
+  * [[evo | The Compaq Evo T30]]
+  * [[axim | The Dell Axim X5]]
+  * [[serial | Serial Cable Pinouts]]
+  * Other Pinouts
+    * [[http://www.allpinouts.com/]]
+    * [[http://www.hardwarebook.info/]]
+    * [[http://pinouts.ru/]]

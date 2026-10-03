@@ -1,0 +1,20 @@
+fuel PVC
+tankheight 900 mm
+ullageheight 50 mm
+tankdia 100 mm
+ventdia 1 mm
+ventcd 0.25 
+grainlength 400 mm
+graindiameter 90 mm
+graincore 50 mm
+cstaradj 0.95 
+injectordia 1.25 mm
+injectorcount 6 
+injectorcd 0.7 
+nozzlethroat 25 mm
+nozzleexit 40.64 mm
+nozcfadj 0.9 
+fillpress 600 psi
+filltemp 25 C
+drymass 4 kg
+ambientpressure 1 atm

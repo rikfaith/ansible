@@ -1,0 +1,16 @@
+{{:private:crosshair.jpg|}}
+
+====== Drives ======
+
+Hitachi P/N 0F12460, 3TB, 5400RPM, 5V 430mA, 12V 400mA, SATA 6.0Gb/s, FEB 2011
+  * YNG0YS9A
+  * YNG150SA
+  * YNG0Z1RA
+  * YNG17P1A
+  * YNG13YAA
+  * YNG0J3LA
+  * YNG14LSA
+  * YNG17L7A
+  * YNG0YRTA
+  * YNG17N3A
+

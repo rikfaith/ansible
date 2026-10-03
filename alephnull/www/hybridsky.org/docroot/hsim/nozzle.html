@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Nitrous Hybrid Simulator -- Tank Geometry</title>
+<link href="../styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<table width="998">
+  <tr>
+    <td colspan="2"><a href="../index.html"><img src="../hybridsky.png" width="499" height="112" border="0" /></a> </td>
+  </tr>
+  <tr>
+    <td colspan="2"><h3 align="center">HSIM -- An Open Source Simulator for Amateur Nitrous Hybrid Rocket Motors</h3>
+    <hr/>
+    </td>
+  </tr>
+  <tr>
+    <td height="64" colspan="2" class="ParameterName"><blockquote>
+        <h3>Nozzle  Parameters</h3>
+    </blockquote></td>
+  </tr>
+  <tr>
+    <td width="16">&nbsp;</td>
+    <td><table width="512" border="1" cellpadding="5" cellspacing="0">
+        <tr>
+          <td width="128" valign="top" class="ParameterName"><a name="ThroatDiameter" id="ThroatDiameter"></a>Throat Diameter </td>
+          <td><p class="Normal">Specifies the nozzle throat diameter.</p></td>
+        </tr>
+        <tr>
+          <td valign="top" class="ParameterName"><a name="ExitDiameter" id="ExitDiameter"></a>Exit Diameter </td>
+          <td class="Normal"><p>Specifies the nozzle's exit diameter. </p></td>
+        </tr>
+        <tr>
+          <td valign="top" class="ParameterName"><a name="AreaExpansionRatio" id="AreaExpansionRatio"></a>Area Expansion Ratio </td>
+          <td class="Normal"><p>Specifies the ratio of the throat area to the exit area. This number must be in the range 1.1 to 8.0.</p>
+            <p>You may input either the nozzle exit diameter or the area expansion ratio, but not both. The web page will compute the other value. </p></td>
+        </tr>
+        <tr>
+          <td valign="top" class="ParameterName"><a name="HalfAngle" id="HalfAngle"></a>Half Angle </td>
+          <td class="Normal"><p>Specifies the angle at which the sides of the nozzle diverge at the nozzle exit. If the nozzle is straight-sided, as are most amatuer nozzles, the half-angle is the angle between a line running straight through the throat and the edge of the nozzle cone.</p>
+            <p>Values greater than zero reduce the motor's effective thrust because some of the exhaust gasses generate off-axis thrust which does not contribute to overall thrust. </p>
+            <p>Most amatuer nozzles use a 15 degree half-angle. </p></td>
+        </tr>
+        <tr>
+          <td valign="top" class="ParameterName"><a name="CfAdjust" id="CfAdjust"></a>Cf Fudge Factor </td>
+          <td class="Normal"><p>This parameter adjusts the nozzle's characteristic efficiency. A value of 1 describes a perfect nozzle. Smaller values describe less perfect nozzles.</p>
+            <p>Lacking an instrumented test stand I do not know what values to use for this. I believe that a value in the range 0.85 to 0.95 is reasonable. </p></td>
+        </tr>
+        <tr>
+          <td valign="top" class="ParameterName"><a name="AmbientAirPressure" id="AmbientAirPressure"></a>Ambient Air Pressure </td>
+          <td class="Normal">Specifies the pressure of air around the motor. The motor's thrust is reduced by the ambient air pressure times the area of the nozzle exit. Future versions of the simulator may allow for an airpressure model that changes during the run of the motor. </td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+</body>
+</html>

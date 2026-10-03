@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="https://alephnull.com/w/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://alephnull.com/w/feed.php">
+        <title>alephnull.com</title>
+        <description></description>
+        <link>https://alephnull.com/w/</link>
+        <image rdf:resource="https://alephnull.com/w/lib/tpl/alephnull/images/favicon.ico" />
+       <dc:date>2026-10-02T09:15:19-0400</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://alephnull.com/w/garden/plantings?rev=1739744245&amp;do=diff"/>
+                <rdf:li rdf:resource="https://alephnull.com/w/garden/garden?rev=1739726169&amp;do=diff"/>
+                <rdf:li rdf:resource="https://alephnull.com/w/recipes/sunken_berry_almond_cake?rev=1734280192&amp;do=diff"/>
+                <rdf:li rdf:resource="https://alephnull.com/w/recipes/start?rev=1734279959&amp;do=diff"/>
+                <rdf:li rdf:resource="https://alephnull.com/w/recipes/einkorn_chocolate_chip_cookies?rev=1730553350&amp;do=diff"/>
+                <rdf:li rdf:resource="https://alephnull.com/w/recipes/chocolate_chip_cookies?rev=1730553156&amp;do=diff"/>
+                <rdf:li rdf:resource="https://alephnull.com/w/recipes/el_s_chocolate_chip_cookies?rev=1730552819&amp;do=diff"/>
+                <rdf:li rdf:resource="https://alephnull.com/w/?image=recipes%3Asignal-2023-08-11-17-13-18-927_720.jpg&amp;ns=recipes&amp;rev=1691770698&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://alephnull.com/w/?image=photos%3Acallicarpa%3A20091005-133034.jpg&amp;ns=photos%3Acallicarpa&amp;rev=1254784858&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://alephnull.com/w/?image=photos%3Acallicarpa%3A20091005-133022.jpg&amp;ns=photos%3Acallicarpa&amp;rev=1254784816&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://alephnull.com/w/?image=photos%3Acallicarpa%3A20091005-133008.jpg&amp;ns=photos%3Acallicarpa&amp;rev=1254784763&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://alephnull.com/w/?image=photos%3Acallicarpa%3A20091003-063802.jpg&amp;ns=photos%3Acallicarpa&amp;rev=1254784707&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://alephnull.com/w/?image=photos%3Acallicarpa%3A20091003-063730.jpg&amp;ns=photos%3Acallicarpa&amp;rev=1254784567&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://alephnull.com/w/?image=photos%3Acallicarpa%3A20091003-063710.jpg&amp;ns=photos%3Acallicarpa&amp;rev=1254784514&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://alephnull.com/w/?image=photos%3Aeuonymus%3A20091005-132928.jpg&amp;ns=photos%3Aeuonymus&amp;rev=1254783854&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://alephnull.com/w/?image=photos%3Aeuonymus%3A20091005-132906.jpg&amp;ns=photos%3Aeuonymus&amp;rev=1254783784&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://alephnull.com/w/?image=photos%3Aeuonymus%3A20091005-132830.jpg&amp;ns=photos%3Aeuonymus&amp;rev=1254783641&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://alephnull.com/w/?image=photos%3Aeuonymus%3A20091003-065018.jpg&amp;ns=photos%3Aeuonymus&amp;rev=1254783557&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://alephnull.com/w/?image=photos%3Aeuonymus%3A20091003-064938.jpg&amp;ns=photos%3Aeuonymus&amp;rev=1254783472&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://alephnull.com/w/lib/tpl/alephnull/images/favicon.ico">
+        <title>alephnull.com</title>
+        <link>https://alephnull.com/w/</link>
+        <url>https://alephnull.com/w/lib/tpl/alephnull/images/favicon.ico</url>
+    </image>
+    <item rdf:about="https://alephnull.com/w/garden/plantings?rev=1739744245&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2025-02-16T17:17:25-0400</dc:date>
+        <dc:creator>mcf (mcf@undisclosed.example.com)</dc:creator>
+        <title>garden:plantings - [2025] </title>
+        <link>https://alephnull.com/w/garden/plantings?rev=1739744245&amp;do=diff</link>
+        <description>Strike-through Text
+
+Garden: Plantings 2008
+
+2007 or 2008: Corylus avellana 'contorted', “Harry lauder's Walking stick”, by garage, next to walkway to garden.
+2007 or 2008, planted 2 Honeysuckle,“halls”, on either side of back porch stairs. (Direct Gardening). By 2009, they are covering the trellises there and are cold hardy. Many perfumed flowers in Spring.</description>
+    </item>
+    <item rdf:about="https://alephnull.com/w/garden/garden?rev=1739726169&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2025-02-16T12:16:09-0400</dc:date>
+        <dc:creator>mcf (mcf@undisclosed.example.com)</dc:creator>
+        <title>garden:garden - [Garden 2024] </title>
+        <link>https://alephnull.com/w/garden/garden?rev=1739726169&amp;do=diff</link>
+        <description>Garden 2007
+
+Raised Beds 2007:
+Bed 1, near garage, near house:
+Tomatoes Brandywine, (Seeds of Change). Grew well, many tomatoes initially, then with drought, had problems with decreased production and blossom end rot. Note:  leave more room for plants and stake them well.</description>
+    </item>
+    <item rdf:about="https://alephnull.com/w/recipes/sunken_berry_almond_cake?rev=1734280192&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2024-12-15T11:29:52-0400</dc:date>
+        <dc:creator>mcf (mcf@undisclosed.example.com)</dc:creator>
+        <title>recipes:sunken_berry_almond_cake - created</title>
+        <link>https://alephnull.com/w/recipes/sunken_berry_almond_cake?rev=1734280192&amp;do=diff</link>
+        <description>King Arthur Baking Company
+
+Sunken Berry Almond Cake
+
+PREP
+10 mins -BAKE 35 to 40 mins
+
+YIELD
+one 8“ cake
+
+Ingredients
+
+	*  2 cups (192g) King Arthur Almond Flour
+	*  2 tablespoons (14g) cornstarch
+	*  2 teaspoons baking powder
+	*  1/4 teaspoon table salt</description>
+    </item>
+    <item rdf:about="https://alephnull.com/w/recipes/start?rev=1734279959&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2024-12-15T11:25:59-0400</dc:date>
+        <dc:creator>mcf (mcf@undisclosed.example.com)</dc:creator>
+        <title>recipes:start</title>
+        <link>https://alephnull.com/w/recipes/start?rev=1734279959&amp;do=diff</link>
+        <description>Recipes
+
+Selena Go-to:
+
+	*   Chinese brown sauce
+	*  Tzatziki sauce
+	*   Arugula salad dressing
+
+	*   Zucchini lasagna
+	*  Broccoli cheddar soup
+	*  Oyster mushroom pasta
+	*  Miso salmon
+	*   Pan fried tofu
+	*   BA Veggie Burger
+	*   Butter Chicken/vegetarian
+
+	*   Camp Celo harvest bars
+	*   Granola
+
+	*  Naan bread
+	*   No-Knead Crusty White Bread
+
+	*   Coconut cream pie
+	*   Cream cheese frosting
+	*   1/2 birthday cake 2022
+	*   Earl Grey Cookies
+
+Main Dishes: Chicken
+
+	*   Daddy Chicken
+	*   …</description>
+    </item>
+    <item rdf:about="https://alephnull.com/w/recipes/einkorn_chocolate_chip_cookies?rev=1730553350&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2024-11-02T09:15:50-0400</dc:date>
+        <dc:creator>faith (faith@undisclosed.example.com)</dc:creator>
+        <title>recipes:einkorn_chocolate_chip_cookies - created</title>
+        <link>https://alephnull.com/w/recipes/einkorn_chocolate_chip_cookies?rev=1730553350&amp;do=diff</link>
+        <description>Einkorn Chocolate Chip Cookies
+
+From Live Simply
+
+Ingredients
+
+	*  8 TB (= 1 stick) unsalted butter, room temp
+	*  1/2 cup brown sugar, packed
+	*  1/4 cup granulated sugar
+	*  2 eggs
+	*  1 1/2 tsp vanilla extract
+	*  2 1/2 cups einkorn flour
+	*  1 tsp salt
+	*  1/2 tsp baking soda</description>
+    </item>
+    <item rdf:about="https://alephnull.com/w/recipes/chocolate_chip_cookies?rev=1730553156&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2024-11-02T09:12:36-0400</dc:date>
+        <dc:creator>faith (faith@undisclosed.example.com)</dc:creator>
+        <title>recipes:chocolate_chip_cookies</title>
+        <link>https://alephnull.com/w/recipes/chocolate_chip_cookies?rev=1730553156&amp;do=diff</link>
+        <description>Chocolate Chip Cookies (Reconstructed)
+
+When I was a kid, we used to make Toll House Cookies, but with a variation of the recipe that was then on the back of each package of Toll House chocolate chips.  I was never able to find that recipe, but this is a close reconstruction.</description>
+    </item>
+    <item rdf:about="https://alephnull.com/w/recipes/el_s_chocolate_chip_cookies?rev=1730552819&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2024-11-02T09:06:59-0400</dc:date>
+        <dc:creator>faith (faith@undisclosed.example.com)</dc:creator>
+        <title>recipes:el_s_chocolate_chip_cookies - [Preparation] </title>
+        <link>https://alephnull.com/w/recipes/el_s_chocolate_chip_cookies?rev=1730552819&amp;do=diff</link>
+        <description>El's Chocolate Chip Cookies
+
+This is the closest recipe I've found that produces the same thick Toll House Cookies I remember as child.
+
+Ingredients
+
+	*  1/2 cup unsalted butter
+	*  1/2 cup brown sugar
+	*  1/4 cup granulated sugar
+	*  1 tsp vanilla
+	*</description>
+    </item>
+    <item rdf:about="https://alephnull.com/w/?image=recipes%3Asignal-2023-08-11-17-13-18-927_720.jpg&amp;ns=recipes&amp;rev=1691770698&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-08-11T12:18:18-0400</dc:date>
+        <dc:creator>faith (faith@undisclosed.example.com)</dc:creator>
+        <title>recipes:signal-2023-08-11-17-13-18-927_720.jpg - created</title>
+        <link>https://alephnull.com/w/?image=recipes%3Asignal-2023-08-11-17-13-18-927_720.jpg&amp;ns=recipes&amp;rev=1691770698&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;https://alephnull.com/w/_media/recipes/signal-2023-08-11-17-13-18-927_720.jpg?w=284&amp;h=500&amp;t=1691770698&amp;amp;tok=ed19a3&quot; alt=&quot;recipes:signal-2023-08-11-17-13-18-927_720.jpg&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://alephnull.com/w/?image=photos%3Acallicarpa%3A20091005-133034.jpg&amp;ns=photos%3Acallicarpa&amp;rev=1254784858&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-10-05T19:20:58-0400</dc:date>
+        <dc:creator>faith (faith@undisclosed.example.com)</dc:creator>
+        <title>photos:callicarpa:20091005-133034.jpg</title>
+        <link>https://alephnull.com/w/?image=photos%3Acallicarpa%3A20091005-133034.jpg&amp;ns=photos%3Acallicarpa&amp;rev=1254784858&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;https://alephnull.com/w/_media/photos/callicarpa/20091005-133034.jpg?w=500&amp;h=375&amp;t=1254784858&amp;amp;tok=e4f1d6&quot; alt=&quot;photos:callicarpa:20091005-133034.jpg&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://alephnull.com/w/?image=photos%3Acallicarpa%3A20091005-133022.jpg&amp;ns=photos%3Acallicarpa&amp;rev=1254784816&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-10-05T19:20:16-0400</dc:date>
+        <dc:creator>faith (faith@undisclosed.example.com)</dc:creator>
+        <title>photos:callicarpa:20091005-133022.jpg</title>
+        <link>https://alephnull.com/w/?image=photos%3Acallicarpa%3A20091005-133022.jpg&amp;ns=photos%3Acallicarpa&amp;rev=1254784816&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;https://alephnull.com/w/_media/photos/callicarpa/20091005-133022.jpg?w=500&amp;h=375&amp;t=1254784816&amp;amp;tok=a7f6fd&quot; alt=&quot;photos:callicarpa:20091005-133022.jpg&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://alephnull.com/w/?image=photos%3Acallicarpa%3A20091005-133008.jpg&amp;ns=photos%3Acallicarpa&amp;rev=1254784763&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-10-05T19:19:23-0400</dc:date>
+        <dc:creator>faith (faith@undisclosed.example.com)</dc:creator>
+        <title>photos:callicarpa:20091005-133008.jpg</title>
+        <link>https://alephnull.com/w/?image=photos%3Acallicarpa%3A20091005-133008.jpg&amp;ns=photos%3Acallicarpa&amp;rev=1254784763&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;https://alephnull.com/w/_media/photos/callicarpa/20091005-133008.jpg?w=500&amp;h=375&amp;t=1254784763&amp;amp;tok=2000b6&quot; alt=&quot;photos:callicarpa:20091005-133008.jpg&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://alephnull.com/w/?image=photos%3Acallicarpa%3A20091003-063802.jpg&amp;ns=photos%3Acallicarpa&amp;rev=1254784707&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-10-05T19:18:27-0400</dc:date>
+        <dc:creator>faith (faith@undisclosed.example.com)</dc:creator>
+        <title>photos:callicarpa:20091003-063802.jpg</title>
+        <link>https://alephnull.com/w/?image=photos%3Acallicarpa%3A20091003-063802.jpg&amp;ns=photos%3Acallicarpa&amp;rev=1254784707&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;https://alephnull.com/w/_media/photos/callicarpa/20091003-063802.jpg?w=500&amp;h=375&amp;t=1254784707&amp;amp;tok=735a5f&quot; alt=&quot;photos:callicarpa:20091003-063802.jpg&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://alephnull.com/w/?image=photos%3Acallicarpa%3A20091003-063730.jpg&amp;ns=photos%3Acallicarpa&amp;rev=1254784567&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-10-05T19:16:07-0400</dc:date>
+        <dc:creator>faith (faith@undisclosed.example.com)</dc:creator>
+        <title>photos:callicarpa:20091003-063730.jpg</title>
+        <link>https://alephnull.com/w/?image=photos%3Acallicarpa%3A20091003-063730.jpg&amp;ns=photos%3Acallicarpa&amp;rev=1254784567&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;https://alephnull.com/w/_media/photos/callicarpa/20091003-063730.jpg?w=500&amp;h=375&amp;t=1254784567&amp;amp;tok=15e784&quot; alt=&quot;photos:callicarpa:20091003-063730.jpg&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://alephnull.com/w/?image=photos%3Acallicarpa%3A20091003-063710.jpg&amp;ns=photos%3Acallicarpa&amp;rev=1254784514&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-10-05T19:15:14-0400</dc:date>
+        <dc:creator>faith (faith@undisclosed.example.com)</dc:creator>
+        <title>photos:callicarpa:20091003-063710.jpg</title>
+        <link>https://alephnull.com/w/?image=photos%3Acallicarpa%3A20091003-063710.jpg&amp;ns=photos%3Acallicarpa&amp;rev=1254784514&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;https://alephnull.com/w/_media/photos/callicarpa/20091003-063710.jpg?w=500&amp;h=375&amp;t=1254784514&amp;amp;tok=c37e24&quot; alt=&quot;photos:callicarpa:20091003-063710.jpg&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://alephnull.com/w/?image=photos%3Aeuonymus%3A20091005-132928.jpg&amp;ns=photos%3Aeuonymus&amp;rev=1254783854&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-10-05T19:04:14-0400</dc:date>
+        <dc:creator>faith (faith@undisclosed.example.com)</dc:creator>
+        <title>photos:euonymus:20091005-132928.jpg</title>
+        <link>https://alephnull.com/w/?image=photos%3Aeuonymus%3A20091005-132928.jpg&amp;ns=photos%3Aeuonymus&amp;rev=1254783854&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;https://alephnull.com/w/_media/photos/euonymus/20091005-132928.jpg?w=500&amp;h=375&amp;t=1254783854&amp;amp;tok=9c4bfb&quot; alt=&quot;photos:euonymus:20091005-132928.jpg&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://alephnull.com/w/?image=photos%3Aeuonymus%3A20091005-132906.jpg&amp;ns=photos%3Aeuonymus&amp;rev=1254783784&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-10-05T19:03:04-0400</dc:date>
+        <dc:creator>faith (faith@undisclosed.example.com)</dc:creator>
+        <title>photos:euonymus:20091005-132906.jpg</title>
+        <link>https://alephnull.com/w/?image=photos%3Aeuonymus%3A20091005-132906.jpg&amp;ns=photos%3Aeuonymus&amp;rev=1254783784&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;https://alephnull.com/w/_media/photos/euonymus/20091005-132906.jpg?w=500&amp;h=375&amp;t=1254783784&amp;amp;tok=8fa539&quot; alt=&quot;photos:euonymus:20091005-132906.jpg&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://alephnull.com/w/?image=photos%3Aeuonymus%3A20091005-132830.jpg&amp;ns=photos%3Aeuonymus&amp;rev=1254783641&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-10-05T19:00:41-0400</dc:date>
+        <dc:creator>faith (faith@undisclosed.example.com)</dc:creator>
+        <title>photos:euonymus:20091005-132830.jpg</title>
+        <link>https://alephnull.com/w/?image=photos%3Aeuonymus%3A20091005-132830.jpg&amp;ns=photos%3Aeuonymus&amp;rev=1254783641&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;https://alephnull.com/w/_media/photos/euonymus/20091005-132830.jpg?w=500&amp;h=375&amp;t=1254783641&amp;amp;tok=530fce&quot; alt=&quot;photos:euonymus:20091005-132830.jpg&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://alephnull.com/w/?image=photos%3Aeuonymus%3A20091003-065018.jpg&amp;ns=photos%3Aeuonymus&amp;rev=1254783557&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-10-05T18:59:17-0400</dc:date>
+        <dc:creator>faith (faith@undisclosed.example.com)</dc:creator>
+        <title>photos:euonymus:20091003-065018.jpg</title>
+        <link>https://alephnull.com/w/?image=photos%3Aeuonymus%3A20091003-065018.jpg&amp;ns=photos%3Aeuonymus&amp;rev=1254783557&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;https://alephnull.com/w/_media/photos/euonymus/20091003-065018.jpg?w=500&amp;h=375&amp;t=1254783557&amp;amp;tok=261693&quot; alt=&quot;photos:euonymus:20091003-065018.jpg&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://alephnull.com/w/?image=photos%3Aeuonymus%3A20091003-064938.jpg&amp;ns=photos%3Aeuonymus&amp;rev=1254783472&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-10-05T18:57:52-0400</dc:date>
+        <dc:creator>faith (faith@undisclosed.example.com)</dc:creator>
+        <title>photos:euonymus:20091003-064938.jpg</title>
+        <link>https://alephnull.com/w/?image=photos%3Aeuonymus%3A20091003-064938.jpg&amp;ns=photos%3Aeuonymus&amp;rev=1254783472&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;https://alephnull.com/w/_media/photos/euonymus/20091003-064938.jpg?w=500&amp;h=375&amp;t=1254783472&amp;amp;tok=44f839&quot; alt=&quot;photos:euonymus:20091003-064938.jpg&quot; /&gt;</description>
+    </item>
+</rdf:RDF>

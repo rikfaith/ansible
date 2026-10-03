@@ -1,0 +1,16 @@
+====== Halloween Projects ======
+
+===== Halloween 2003 =====
+  * [[http://alephnull.com/halloween/cauldron.html | Bubbling Cauldron]]
+  * [[http://alephnull.com/halloween/chiller.html | Fog Chiller]]
+
+===== Halloween 2004 =====
+  * [[http://alephnull.com/halloween/web.html | Glowing Spider Web]]
+  * [[http://alephnull.com/halloween/ghosts.html | Flying Ghosts]]
+
+===== Halloween 2005 =====
+  * [[http://alephnull.com/halloween/box.html | Ghost Box]]
+  * [[http://alephnull.com/halloween/dragon.html | Fire-Breathing Dragon]]
+  * [[http://alephnull.com/halloween/fogger.html | notes on the Lite F/X fogger controller pinout]]
+
+

@@ -1,0 +1,189 @@
+
+
+
+<h1><a name="nut" id="nut">Nut</a></h1>
+<div class="level1">
+<table class="inline">
+	<tr class="row0">
+		<th class="col0"> Machine </th><th class="col1 leftalign"> UPS       </th><th class="col2"> Voltage </th><th class="col3"> upslogger </th><th class="col4"> upsshutdown </th><th class="col5"> raid-control </th>
+	</tr>
+	<tr class="row1">
+		<td class="col0 leftalign"> home    </td><td class="col1 leftalign"> apcups1   </td><td class="col2 leftalign"> Yes     </td><td class="col3 leftalign"> Yes       </td><td class="col4"> No (server) </td><td class="col5 leftalign">              </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 leftalign"> char    </td><td class="col1 leftalign"> apcups1   </td><td class="col2 leftalign"> Yes     </td><td class="col3 leftalign"> Yes       </td><td class="col4 leftalign"> Yes         </td><td class="col5 leftalign">              </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 leftalign"> hydra   </td><td class="col1 leftalign"> apcups1   </td><td class="col2 leftalign"> Yes     </td><td class="col3 leftalign"> Yes       </td><td class="col4"> No (server) </td><td class="col5 leftalign"> Yes          </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0 leftalign"> charts  </td><td class="col1"> localhost </td><td class="col2 leftalign"> Yes     </td><td class="col3 leftalign"> Yes       </td><td class="col4 leftalign"> Yes         </td><td class="col5 leftalign"> Yes          </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0"> phoebus </td><td class="col1"> localhost </td><td class="col2 leftalign"> Yes     </td><td class="col3 leftalign"> Yes       </td><td class="col4"> No (server) </td><td class="col5"> </td>
+	</tr>
+</table>
+
+</div>
+<!-- SECTION "Nut" [1-459] -->
+<h2><a name="installation" id="installation">Installation</a></h2>
+<div class="level2">
+<pre class="code">apt-get install nut</pre>
+
+</div>
+<!-- SECTION "Installation" [460-510] -->
+<h2><a name="changes_to_etcnut_configuration_files" id="changes_to_etcnut_configuration_files">Changes to /etc/nut configuration files</a></h2>
+<div class="level2">
+
+</div>
+<!-- SECTION "Changes to /etc/nut configuration files" [511-562] -->
+<h3><a name="nutconf" id="nutconf">nut.conf</a></h3>
+<div class="level3">
+
+<p>
+
+  MODE=standalone
+</p>
+
+</div>
+<!-- SECTION "nut.conf" [563-604] -->
+<h3><a name="upsconf" id="upsconf">ups.conf</a></h3>
+<div class="level3">
+
+</div>
+
+<h4><a name="serial" id="serial">Serial</a></h4>
+<div class="level4">
+
+<p>
+
+This is used on phoebus:
+
+</p>
+<pre class="code">[phoebus]
+      driver = apcsmart
+      port = /dev/ttyS0</pre>
+
+<p>
+
+In this case, we also need /etc/udev/rules.d/99_nut-serialups.rules:
+
+</p>
+<pre class="code">KERNEL==&quot;ttyS0&quot;, GROUP=&quot;nut&quot;</pre>
+
+</div>
+
+<h4><a name="usb" id="usb">USB</a></h4>
+<div class="level4">
+
+<p>
+
+This is used on charts, mnemosyne:
+
+</p>
+<pre class="code">[localhost]
+      driver = usbhid-ups
+      port = auto
+      vendorid = 051d
+      </pre>
+
+</div>
+
+<h4><a name="snmp" id="snmp">SNMP</a></h4>
+<div class="level4">
+
+<p>
+
+This is used on char, home:
+
+</p>
+<pre class="code">[apcups1]
+      driver = snmp-ups
+      port = apcups1
+      mibs = apcc
+      community = public</pre>
+
+</div>
+<!-- SECTION "ups.conf" [605-1129] -->
+<h3><a name="upsdconf" id="upsdconf">upsd.conf</a></h3>
+<div class="level3">
+
+<p>
+
+This is used on UPS servers mnemosyne, charts, phoebus:
+</p>
+<pre class="code">LISTEN 0.0.0.0</pre>
+
+<p>
+
+This is used on UPS clients, but isn&#039;t required:
+</p>
+<pre class="code">LISTEN 127.0.0.1</pre>
+
+</div>
+<!-- SECTION "upsd.conf" [1130-1293] -->
+<h3><a name="upsdusers" id="upsdusers">upsd.users</a></h3>
+<div class="level3">
+
+<p>
+
+This is used on char, charts, home, phoebus:
+
+</p>
+<pre class="code">[upsmon]
+      password  = upsmon
+      upsmon master
+      actions = ALL
+      instcmds = ALL</pre>
+
+</div>
+<!-- SECTION "upsd.users" [1294-1467] -->
+<h3><a name="upsmonconf" id="upsmonconf">upsmon.conf</a></h3>
+<div class="level3">
+
+<p>
+
+This is used on charts, home:
+
+</p>
+<pre class="code">MONITOR localhost@localhost 1 upsmon upsmon master
+SHUTDOWNCMD &quot;/sbin/halt&quot;
+NOTIFYCMD &quot;/etc/nut/upslogger&quot;
+NOTIFYFLAG ONLINE       EXEC
+NOTIFYFLAG ONBATT       EXEC
+NOTIFYFLAG LOWBATT      EXEC
+NOTIFYFLAG FSD  EXEC
+NOTIFYFLAG COMMOK       EXEC
+NOTIFYFLAG COMMBAD      EXEC
+NOTIFYFLAG SHUTDOWN     EXEC
+NOTIFYFLAG REPLBATT     EXEC
+NOTIFYFLAG NOCOMM       EXEC
+NOTIFYFLAG NOPARENT     EXEC</pre>
+
+<p>
+
+defaults are:
+
+</p>
+<pre class="code">MINSUPPLIES 1
+POLLFREQ 5
+POLLFREQALERT 5
+HOSTSYNC 15
+DEADTIME 15
+POWERDOWNFLAG /etc/killpower
+NOTIFYMSG ONLINE        &quot;UPS %s on line power&quot;
+NOTIFYMSG ONBATT        &quot;UPS %s on battery&quot;
+NOTIFYMSG LOWBATT       &quot;UPS %s battery is low&quot;
+NOTIFYMSG FSD           &quot;UPS %s: forced shutdown in progress&quot;
+NOTIFYMSG COMMOK        &quot;Communications with UPS %s established&quot;
+NOTIFYMSG COMMBAD       &quot;Communications with UPS %s lost&quot;
+NOTIFYMSG SHUTDOWN      &quot;Auto logout and shutdown proceeding&quot;
+NOTIFYMSG REPLBATT      &quot;UPS %s battery needs to be replaced&quot;
+NOTIFYMSG NOCOMM        &quot;UPS %s is unavailable&quot;
+NOTIFYMSG NOPARENT      &quot;upsmon parent process died - shutdown impossible&quot;
+RBWARNTIME 43200
+NOCOMMWARNTIME 300
+FINALDELAY 5</pre>
+
+</div>
+<!-- SECTION "upsmon.conf" [1468-] -->

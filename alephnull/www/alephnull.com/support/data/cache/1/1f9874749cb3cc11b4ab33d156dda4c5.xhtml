@@ -1,0 +1,172 @@
+
+<h1 class="sectionedit1" id="nut">Nut</h1>
+<div class="level1">
+<div class="table sectionedit2"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0"> Machine </th><th class="col1 leftalign"> UPS       </th><th class="col2"> Voltage </th><th class="col3"> upslogger </th><th class="col4"> upsshutdown </th><th class="col5"> raid-control </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0 leftalign"> home    </td><td class="col1 leftalign"> apcups1   </td><td class="col2 leftalign"> Yes     </td><td class="col3 leftalign"> Yes       </td><td class="col4"> No (server) </td><td class="col5 leftalign">              </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 leftalign"> char    </td><td class="col1 leftalign"> apcups1   </td><td class="col2 leftalign"> Yes     </td><td class="col3 leftalign"> Yes       </td><td class="col4 leftalign"> Yes         </td><td class="col5 leftalign">              </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 leftalign"> hydra   </td><td class="col1 leftalign"> apcups1   </td><td class="col2 leftalign"> Yes     </td><td class="col3 leftalign"> Yes       </td><td class="col4"> No (server) </td><td class="col5 leftalign"> Yes          </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0 leftalign"> charts  </td><td class="col1"> localhost </td><td class="col2 leftalign"> Yes     </td><td class="col3 leftalign"> Yes       </td><td class="col4 leftalign"> Yes         </td><td class="col5 leftalign"> Yes          </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0"> phoebus </td><td class="col1"> localhost </td><td class="col2 leftalign"> Yes     </td><td class="col3 leftalign"> Yes       </td><td class="col4"> No (server) </td><td class="col5"> </td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table&quot;,&quot;secid&quot;:2,&quot;range&quot;:&quot;20-456&quot;} -->
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Nut&quot;,&quot;hid&quot;:&quot;nut&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-459&quot;} -->
+<h2 class="sectionedit3" id="installation">Installation</h2>
+<div class="level2">
+<pre class="code">apt-get install nut</pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Installation&quot;,&quot;hid&quot;:&quot;installation&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;460-510&quot;} -->
+<h2 class="sectionedit4" id="changes_toetcnut_configuration_files">Changes to /etc/nut configuration files</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Changes to \/etc\/nut configuration files&quot;,&quot;hid&quot;:&quot;changes_toetcnut_configuration_files&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;511-562&quot;} -->
+<h3 class="sectionedit5" id="nutconf">nut.conf</h3>
+<div class="level3">
+
+<p>
+  MODE=standalone
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;nut.conf&quot;,&quot;hid&quot;:&quot;nutconf&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;563-604&quot;} -->
+<h3 class="sectionedit6" id="upsconf">ups.conf</h3>
+<div class="level3">
+
+</div>
+
+<h4 id="serial">Serial</h4>
+<div class="level4">
+
+<p>
+This is used on phoebus:
+</p>
+<pre class="code">[phoebus]
+      driver = apcsmart
+      port = /dev/ttyS0</pre>
+
+<p>
+In this case, we also need /etc/udev/rules.d/99_nut-serialups.rules:
+</p>
+<pre class="code">KERNEL==&quot;ttyS0&quot;, GROUP=&quot;nut&quot;</pre>
+
+</div>
+
+<h4 id="usb">USB</h4>
+<div class="level4">
+
+<p>
+This is used on charts, mnemosyne:
+</p>
+<pre class="code">[localhost]
+      driver = usbhid-ups
+      port = auto
+      vendorid = 051d
+      </pre>
+
+</div>
+
+<h4 id="snmp">SNMP</h4>
+<div class="level4">
+
+<p>
+This is used on char, home:
+</p>
+<pre class="code">[apcups1]
+      driver = snmp-ups
+      port = apcups1
+      mibs = apcc
+      community = public</pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;ups.conf&quot;,&quot;hid&quot;:&quot;upsconf&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:6,&quot;range&quot;:&quot;605-1129&quot;} -->
+<h3 class="sectionedit7" id="upsdconf">upsd.conf</h3>
+<div class="level3">
+
+<p>
+This is used on UPS servers mnemosyne, charts, phoebus:
+</p>
+<pre class="code">LISTEN 0.0.0.0</pre>
+
+<p>
+This is used on UPS clients, but isn&#039;t required:
+</p>
+<pre class="code">LISTEN 127.0.0.1</pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;upsd.conf&quot;,&quot;hid&quot;:&quot;upsdconf&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:7,&quot;range&quot;:&quot;1130-1293&quot;} -->
+<h3 class="sectionedit8" id="upsdusers">upsd.users</h3>
+<div class="level3">
+
+<p>
+This is used on char, charts, home, phoebus:
+</p>
+<pre class="code">[upsmon]
+      password  = upsmon
+      upsmon master
+      actions = ALL
+      instcmds = ALL</pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;upsd.users&quot;,&quot;hid&quot;:&quot;upsdusers&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:8,&quot;range&quot;:&quot;1294-1467&quot;} -->
+<h3 class="sectionedit9" id="upsmonconf">upsmon.conf</h3>
+<div class="level3">
+
+<p>
+This is used on charts, home:
+</p>
+<pre class="code">MONITOR localhost@localhost 1 upsmon upsmon master
+SHUTDOWNCMD &quot;/sbin/halt&quot;
+NOTIFYCMD &quot;/etc/nut/upslogger&quot;
+NOTIFYFLAG ONLINE       EXEC
+NOTIFYFLAG ONBATT       EXEC
+NOTIFYFLAG LOWBATT      EXEC
+NOTIFYFLAG FSD  EXEC
+NOTIFYFLAG COMMOK       EXEC
+NOTIFYFLAG COMMBAD      EXEC
+NOTIFYFLAG SHUTDOWN     EXEC
+NOTIFYFLAG REPLBATT     EXEC
+NOTIFYFLAG NOCOMM       EXEC
+NOTIFYFLAG NOPARENT     EXEC</pre>
+
+<p>
+defaults are:
+</p>
+<pre class="code">MINSUPPLIES 1
+POLLFREQ 5
+POLLFREQALERT 5
+HOSTSYNC 15
+DEADTIME 15
+POWERDOWNFLAG /etc/killpower
+NOTIFYMSG ONLINE        &quot;UPS %s on line power&quot;
+NOTIFYMSG ONBATT        &quot;UPS %s on battery&quot;
+NOTIFYMSG LOWBATT       &quot;UPS %s battery is low&quot;
+NOTIFYMSG FSD           &quot;UPS %s: forced shutdown in progress&quot;
+NOTIFYMSG COMMOK        &quot;Communications with UPS %s established&quot;
+NOTIFYMSG COMMBAD       &quot;Communications with UPS %s lost&quot;
+NOTIFYMSG SHUTDOWN      &quot;Auto logout and shutdown proceeding&quot;
+NOTIFYMSG REPLBATT      &quot;UPS %s battery needs to be replaced&quot;
+NOTIFYMSG NOCOMM        &quot;UPS %s is unavailable&quot;
+NOTIFYMSG NOPARENT      &quot;upsmon parent process died - shutdown impossible&quot;
+RBWARNTIME 43200
+NOCOMMWARNTIME 300
+FINALDELAY 5</pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;upsmon.conf&quot;,&quot;hid&quot;:&quot;upsmonconf&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:9,&quot;range&quot;:&quot;1468-&quot;} -->

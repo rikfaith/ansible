@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Nitrous Hybrid Simulator -- Tank Geometry</title>
+<link href="../styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<table width="998">
+  <tr>
+    <td colspan="2"><a href="../index.html"><img src="../hybridsky.png" width="499" height="112" border="0" /></a> </td>
+  </tr>
+  <tr>
+    <td colspan="2"><h3 align="center">HSIM -- An Open Source Simulator for Amateur Nitrous Hybrid Rocket Motors</h3>
+    <hr/>
+    </td>
+  </tr>
+  <tr>
+    <td height="64" colspan="2" class="ParameterName"><blockquote>
+        <h3>Combustion Chamber and Fuel  Parameters</h3>
+    </blockquote></td>
+  </tr>
+  <tr>
+    <td width="16">&nbsp;</td>
+    <td><table width="512" border="1" cellpadding="5" cellspacing="0">
+        <tr>
+          <td width="128" valign="top" class="ParameterName"><a name="Fuel" id="Fuel"></a>Fuel</td>
+          <td><p class="Normal">In order to simulate a fuel, hsim needs two things. First, it needs a chemical formula. This is used by the cpropep program to simulate combustion. Second, hsim needs to know a fuel regression model. This model describes how the fuel vaporizes and burns as a function of the chamber conditions.</p>
+            <p class="Normal">Presently hsim has two fuel models, PVC pipe and PBAN. The cpropep models for these fuels are readily available. The fuel regression models come from Todd Moore's HDAS simulator.</p>
+            <p class="Normal">Other fuels can be added as desired, provided the fuel model data is available. If you'd like another fuel please <a href="opensource.html#Contributing">contact me</a> to discuss. </p></td>
+        </tr>
+        <tr>
+          <td valign="top" class="ParameterName"><a name="GrainLength" id="GrainLength"></a>Grain Length </td>
+          <td class="Normal"><p>The simulated fuel grain is a cylinder of fuel with a hole, the core, drilled down the middle. This parameter specifies the length of this cylinder.</p>
+            <p>At present this simulator is restricted to this simple model of a fuel grain. </p></td>
+        </tr>
+        <tr>
+          <td valign="top" class="ParameterName"><a name="GrainOuterDiameter" id="GrainOuterDiameter"></a>Grain Outer Diameter </td>
+          <td class="Normal">This parameter specifies the outer diameter of the fuel grain. For many types of amateur-class nitrous hybrids this will be the same as the interior diameter of the flight tank. </td>
+        </tr>
+        <tr>
+          <td valign="top" class="ParameterName"><a name="GrainInitialCore" id="GrainInitialCore"></a>Grain Initial Core Diameter </td>
+          <td class="Normal"><p>This parameter specifies the initial diameter of the hole through the center of the fuel grain. As the fuel burns this diameter increases.</p>
+            <p>Conventional wisdom says that the area of the fuel grain core must be at least 3 times the area of the nozzle throat. Successful engines need not obey this rule; however, this simulator can not be trusted to model such engines. </p></td>
+        </tr>
+        <tr>
+          <td valign="top" class="ParameterName"><a name="CstarAdjust" id="CstarAdjust"></a>C* Efficiency </td>
+          <td class="Normal"><p>This unitless parameter controls an adjustment designed to model incomplete combustion. A value of 1 models complete combustion. Smaller values model incomplete combustion.</p>
+            <p>Until I get an instrumented test stand running I do not know an appropriate value for this parameter. For now I use 0.95 in my simulations. </p></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+</body>
+</html>

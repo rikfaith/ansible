@@ -1,0 +1,7 @@
+====== Syn0 ======
+
+* Synology 411j
+* Installed January 22, 2010
+* Drives
+  * bottom bay: Western Digital AV-GP (GreenPower) WD20EURS-63S48Y0 SN WCAZA2231732 06NOV2010 5VDC 0.70A 12VDC 0.55A
+  * next bay up: Western Digital AV-GP (GreenPower) WD20EURS-63S48Y0 SN WCAZA2231071 06NOV2010 5VDC 0.70A 12VDC 0.55A

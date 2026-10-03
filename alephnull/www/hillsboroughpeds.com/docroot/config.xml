@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site
+  base_url="http://hillsboroughpeds.com/"
+  store_into="/www/hillsboroughpeds.com/docroot/sitemap.xml"
+  verbose="1"
+  >
+
+  <directory
+    path="/www/hillsboroughpeds.com/docroot"
+    url="http://hillsboroughpeds.com/" />
+
+  <filter  action="drop"  type="wildcard"  pattern="*~" />
+  <filter  action="drop"  type="regexp"    pattern="/\.[^/]*" />
+  <filter  action="drop"  type="wildcard"  pattern="*.pdf" />
+  <filter  action="drop"  type="wildcard"  pattern="*.txt" />
+  <filter  action="drop"  type="wildcard"  pattern="*.xml" />
+  <filter  action="drop"  type="regexp"    pattern="/new/" />
+  <filter  action="drop"  type="regexp"    pattern="/old/" />
+  <filter  action="drop"  type="regexp"    pattern="/images/" />
+
+</site>

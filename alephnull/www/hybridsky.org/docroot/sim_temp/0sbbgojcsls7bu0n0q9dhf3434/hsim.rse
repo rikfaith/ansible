@@ -1,0 +1,84 @@
+<engine-database>
+  <engine-list>
+    <engine mfg="Evan Daniel"
+      code="H431"
+      Type="hybrid"
+      dia="54"
+      len="900"
+      initWt="3256.4"
+      propWt="256.4"
+      delays="0"
+      auto-calc-mass="1"
+      auto-calc-cg="1"
+      avgThrust="431.37"
+      peakThrust="452.40"
+      throatDia="9.0"
+      exitDia="15.0"
+      Itot="181.2"
+      burn-time="0.4"
+      massFrac="2.8"
+      Isp="206.2"
+      tDiv="10"
+      tStep="-1."
+      tFix="1"
+      FDiv="10"
+      FStep="-1."
+      FFix="1"
+      mDiv="10"
+      mStep="-1."
+      mFix="1"
+      cgDiv="10"
+      cgStep="-1."
+      cgFix="1"
+    >
+    <comments>
+Simulated by HSim Version 0.3.
+    </comments>
+    <data>
+      <eng-data  t="0.000"  f="452.403"  m="256.4"  cg="0.0"/>
+      <eng-data  t="0.005"  f="451.723"  m="255.2"  cg="0.0"/>
+      <eng-data  t="0.015"  f="450.733"  m="252.9"  cg="0.0"/>
+      <eng-data  t="0.026"  f="449.792"  m="250.7"  cg="0.0"/>
+      <eng-data  t="0.035"  f="448.860"  m="248.5"  cg="0.0"/>
+      <eng-data  t="0.045"  f="447.936"  m="246.3"  cg="0.0"/>
+      <eng-data  t="0.055"  f="446.998"  m="244.1"  cg="0.0"/>
+      <eng-data  t="0.066"  f="445.872"  m="241.9"  cg="0.0"/>
+      <eng-data  t="0.075"  f="444.936"  m="239.7"  cg="0.0"/>
+      <eng-data  t="0.085"  f="444.008"  m="237.5"  cg="0.0"/>
+      <eng-data  t="0.095"  f="443.087"  m="235.3"  cg="0.0"/>
+      <eng-data  t="0.105"  f="442.174"  m="233.1"  cg="0.0"/>
+      <eng-data  t="0.116"  f="441.192"  m="230.9"  cg="0.0"/>
+      <eng-data  t="0.126"  f="440.157"  m="228.7"  cg="0.0"/>
+      <eng-data  t="0.136"  f="439.235"  m="226.6"  cg="0.0"/>
+      <eng-data  t="0.145"  f="438.320"  m="224.4"  cg="0.0"/>
+      <eng-data  t="0.155"  f="437.412"  m="222.2"  cg="0.0"/>
+      <eng-data  t="0.166"  f="436.512"  m="220.1"  cg="0.0"/>
+      <eng-data  t="0.175"  f="434.913"  m="217.9"  cg="0.0"/>
+      <eng-data  t="0.185"  f="433.488"  m="215.8"  cg="0.0"/>
+      <eng-data  t="0.196"  f="432.524"  m="213.6"  cg="0.0"/>
+      <eng-data  t="0.206"  f="431.567"  m="211.5"  cg="0.0"/>
+      <eng-data  t="0.216"  f="430.618"  m="209.4"  cg="0.0"/>
+      <eng-data  t="0.225"  f="429.655"  m="207.2"  cg="0.0"/>
+      <eng-data  t="0.235"  f="428.512"  m="205.1"  cg="0.0"/>
+      <eng-data  t="0.245"  f="427.550"  m="203.0"  cg="0.0"/>
+      <eng-data  t="0.255"  f="426.596"  m="200.9"  cg="0.0"/>
+      <eng-data  t="0.265"  f="425.649"  m="198.8"  cg="0.0"/>
+      <eng-data  t="0.275"  f="424.708"  m="196.7"  cg="0.0"/>
+      <eng-data  t="0.285"  f="423.737"  m="194.6"  cg="0.0"/>
+      <eng-data  t="0.295"  f="422.642"  m="192.5"  cg="0.0"/>
+      <eng-data  t="0.305"  f="421.692"  m="190.4"  cg="0.0"/>
+      <eng-data  t="0.316"  f="420.749"  m="188.3"  cg="0.0"/>
+      <eng-data  t="0.326"  f="419.812"  m="186.2"  cg="0.0"/>
+      <eng-data  t="0.336"  f="418.880"  m="184.1"  cg="0.0"/>
+      <eng-data  t="0.345"  f="417.935"  m="182.1"  cg="0.0"/>
+      <eng-data  t="0.355"  f="416.774"  m="180.0"  cg="0.0"/>
+      <eng-data  t="0.365"  f="415.472"  m="177.9"  cg="0.0"/>
+      <eng-data  t="0.376"  f="414.512"  m="175.9"  cg="0.0"/>
+      <eng-data  t="0.386"  f="413.558"  m="173.8"  cg="0.0"/>
+      <eng-data  t="0.396"  f="412.611"  m="171.8"  cg="0.0"/>
+      <eng-data  t="0.405"  f="411.670"  m="169.7"  cg="0.0"/>
+      <eng-data  t="0.416"  f="410.572"  m="167.7"  cg="0.0"/>
+    </data>
+  </engine>
+  </engine-list>
+</engine-database>

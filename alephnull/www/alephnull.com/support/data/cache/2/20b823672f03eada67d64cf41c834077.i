@@ -1,0 +1,25 @@
+a:8:{i:0;a:3:{i:0;s:14:"document_start";i:1;a:0:{}i:2;i:0;}i:1;a:3:{i:0;s:6:"p_open";i:1;a:0:{}i:2;i:0;}i:2;a:3:{i:0;s:5:"cdata";i:1;a:1:{i:0;s:24:"Lima Beans with ham hock";}i:2;i:1;}i:3;a:3:{i:0;s:7:"p_close";i:1;a:0:{}i:2;i:25;}i:4;a:3:{i:0;s:6:"p_open";i:1;a:0:{}i:2;i:25;}i:5;a:3:{i:0;s:5:"cdata";i:1;a:1:{i:0;s:1542:"Instant Pot Southern Large Limas with Ham Hocks
+4 stars37
+rate this recipeprint this recipe
+Ingredients:
+1 (1-pound) package Camellia Brand Large Limas (large butter beans), rinsed and sorted
+2 tablespoons olive oil
+3 medium onions, chopped, about 3 cups
+1 stalk celery, leaves removed, chopped, about 1/2 cup
+6 cloves garlic, minced
+1 large ham hock, meat scored
+2 bay leaves
+6 cups water
+2 tablespoons hot sauce
+2 teaspoons kosher salt
+1/2 teaspoon ground black pepper
+Chopped fresh parsley, for garnish
+Cornbread, for serving
+Total time:50 minutesPrep time:20 minutesCook time:30 minutesYield:6 (1 cup)
+Directions:
+Select SAUTE feature on Instant Pot. Add oil and heat until hot. Add onion and celery; cook, stirring frequently, until tender and lightly browned, 5 to 8 minutes. Add garlic and cook 1 minute more.
+Stir in beans, ham hock, bay leaves and 6 cups water. Select CANCEL feature.
+Cover, lock and seal lid. Select MANUAL feature. Pressure cook on HIGH for 25 minutes. Let pressure release naturally for 10 minutes. Using the handle of a wooden spoon or long tongs, carefully release remaining pressure. Uncover; select CANCEL feature.
+Remove bay leaves. Remove ham hock and chop meat. Return chopped ham to Instant Pot. Stir in hot sauce, salt and pepper.
+Garnish with parsley and serve with cornbread.
+This recipe is courtesy of Taste of the South magazine and was tested by the Taste of the South test kitchen. Camellia Brand is the official dry bean of Taste of the South. For more recipes from Taste of the South, click here.";}i:2;i:27;}i:6;a:3:{i:0;s:7:"p_close";i:1;a:0:{}i:2;i:27;}i:7;a:3:{i:0;s:12:"document_end";i:1;a:0:{}i:2;i:27;}}

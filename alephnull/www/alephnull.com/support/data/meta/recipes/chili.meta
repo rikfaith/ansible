@@ -1,0 +1,16 @@
+a:2:{s:7:"current";a:8:{s:4:"date";a:2:{s:7:"created";i:1605883659;s:8:"modified";i:1605883659;}s:7:"creator";s:9:"Rik Faith";s:4:"user";s:5:"faith";s:11:"last_change";a:7:{s:4:"date";i:1605883659;s:2:"ip";s:13:"71.210.63.248";s:4:"type";s:1:"C";s:2:"id";s:13:"recipes:chili";s:4:"user";s:5:"faith";s:3:"sum";s:7:"created";s:5:"extra";s:0:"";}s:5:"title";s:5:"Chili";s:11:"description";a:2:{s:15:"tableofcontents";a:6:{i:0;a:4:{s:3:"hid";s:5:"chili";s:5:"title";s:5:"Chili";s:4:"type";s:2:"ul";s:5:"level";i:1;}i:1;a:4:{s:3:"hid";s:8:"original";s:5:"title";s:8:"Original";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:2;a:4:{s:3:"hid";s:19:"melissa_s_variation";s:5:"title";s:19:"Melissa's Variation";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:3;a:4:{s:3:"hid";s:15:"rik_s_variation";s:5:"title";s:15:"Rik's Variation";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:4;a:4:{s:3:"hid";s:22:"rik_s_later_variations";s:5:"title";s:22:"Rik's Later Variations";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:5;a:4:{s:3:"hid";s:20:"vegetarian_variation";s:5:"title";s:20:"Vegetarian Variation";s:4:"type";s:2:"ul";s:5:"level";i:2;}}s:8:"abstract";s:254:"Chili
+
+These recipes are all based on Rik's Mom's Chili recipe.
+
+Original
+
+
+
+	*  1/2 pound, ground chuck
+	*  chopped onion
+	*  8oz tomato sauce
+	*  1 can tomato soup
+	*  15oz red kidney beans
+	*  1 tsp flour
+	*  2-3 tsp chili powder
+	*  1 tsp brown sugar";}s:8:"relation";a:3:{s:5:"media";a:2:{s:36:"recipes:mom-chili-recipe-cropped.jpg";b:1;s:27:"recipes:20080309-124618.jpg";b:1;}s:10:"references";a:1:{s:13:"recipes:herbs";b:1;}s:10:"firstimage";s:36:"recipes:mom-chili-recipe-cropped.jpg";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}}s:10:"persistent";a:4:{s:4:"date";a:1:{s:7:"created";i:1605883659;}s:7:"creator";s:9:"Rik Faith";s:4:"user";s:5:"faith";s:11:"last_change";a:7:{s:4:"date";i:1605883659;s:2:"ip";s:13:"71.210.63.248";s:4:"type";s:1:"C";s:2:"id";s:13:"recipes:chili";s:4:"user";s:5:"faith";s:3:"sum";s:7:"created";s:5:"extra";s:0:"";}}}

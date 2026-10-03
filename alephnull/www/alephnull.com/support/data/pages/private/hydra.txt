@@ -1,0 +1,189 @@
+====== Hydra ======
+
+{{:private:crosshair.jpg|}}
+
+===== Drives =====
+
+New drives (March 2013):
+  * Seagate Barracuda 3000GB ST3000DM001 5V 0.75A 12V 0.75A
+  * SN Z1F1HELH PN 1CH166-301 FW CC24 Date 13165 Site TK DOM 10/2012 [Warranty Expiration 05-Mar-2015]
+  * SN Z1F1HEGA PN 1CH166-301 FW CC24 Date 13165 Site TK DOM 10/2012
+  * SN Z1F1HK17 PN 1CH166-301 FW CC24 Date 13165 Site TK DOM 10/2012
+  * SN Z1F1HVGX PN 1CH166-301 FW CC24 Date 13165 Site TK DOM 10/2012
+  * SN Z1F1HK45 PN 1CH166-301 FW CC24 Date 13165 Site TK DOM 10/2012
+
+
+Hitachi P/N 0F12460, 3TB, 5400RPM, 5V 430mA, 12V 400mA, SATA 6.0Gb/s, FEB 2011
+  * YNG0YS9A
+  * YNG150SA
+  * YNG0Z1RA
+  * YNG17P1A
+  * YNG13YAA
+  * YNG0J3LA
+  * YNG14LSA
+  * YNG17L7A
+  * YNG0YRTA
+  * YNG17N3A
+
+Returned to Amazon because 2 don't spin up and 1 spins up and then down:
+  * Seagate 4000GB Z300EP95 ST4000DM000 1F2168-300 CC52 13401 TK 
+  * Seagate 4000GB Z300EPWM ST4000DM000 1F2168-300 CC52 13401 TK
+  * Seagate 4000GB W3006A6V ST4000DM000 1F2168-300 CC52 13395 WU
+
+===== Setup =====
+  apt-get update
+  apt-get upgrade
+  apt-get dist-upgrade
+  apt-get install lftp sysstat iotop curl bc cpufrequtils
+  apt-get install nfs-common nfs-kernel-server
+  apt-get install cryptsetup mdadm lvm2 smartmontools
+  apt-get autoremove
+
+===== Kernel Recompile =====
+
+  apt-get install linux-image-2.6.38-8-server
+  reboot
+  apt-get install linux-headers-`uname -r`
+
+  apt-get install build-essential autoconf automake libtool flex bison gdb
+  apt-get build-dep linux
+  apt-get build-dep --no-install-recommends linux-image-$(uname -r)
+  apt-get install libncurses5 libncurses5-dev
+  cd
+  apt-get source linux-image-$(uname -r)
+  cd linux-2.6.38
+  patch -p1 < ../mvsas.diff
+  cp /boot/config-$(uname -r) .config
+  make oldconfig
+  cd drivers/scsi/mvsas
+  make -C /usr/src/linux-headers-`uname -r` M=`pwd`
+  mv /lib/modules/$(uname -r)/kernel/drivers/scsi/mvsas/mvsas.ko /lib/modules/$(uname -r)/kernel/drivers/scsi/mvsas/mvsas_old.ko
+  cp mvsas.ko /lib/modules/$(uname -r)/kernel/drivers/scsi/mvsas/mvsas.ko
+  cd ../libsas
+  make -C /usr/src/linux-headers-`uname -r` M=`pwd`
+  mv /lib/modules/$(uname -r)/kernel/drivers/scsi/libsas/libsas.ko /lib/modules/$(uname -r)/kernel/drivers/scsi/libsas/libsas_old.ko
+  cp libsas.ko /lib/modules/$(uname -r)/kernel/drivers/scsi/libsas/libsas.ko
+  update-initramfs -u -k $(uname -r)
+  update-grub
+
+See [[https://bugzilla.redhat.com/attachment.cgi?id=505977 | patch ]] (not used with 8 kernel).
+
+===== sio tests =====
+
+  sio_linux64 50 100 8k 1g 100g 20 10 /dev/sdc -direct
+  Computed IOPS = 116.95
+  Computed KB/s = 935.64
+
+  
+  
+=====setup=====
+  for i in b c d e f g h i j k; do parted /dev/sd$i unit kib mkpart primary ext2 28 2930266567 ; done
+  for i in b c d e f g h i j k; do parted /dev/sd$i set 1 raid on; done
+  for i in b c d e f g h i j k; do parted /dev/sd$i unit kib print; done
+  mdadm -C /dev/md0 /dev/sd[bcdef]1 -c 128 -n 5 -l 5
+  mdadm -C /dev/md1 /dev/sd[ghijk]1 -c 128 -n 5 -l 5
+  cryptsetup -c aes-cbc-essiv:sha256 -s 128 -h sha256 --align-payload=1024 luksFormat /dev/md0
+  cryptsetup -c aes-cbc-essiv:sha256 -s 128 -h sha256 --align-payload=1024 luksFormat /dev/md1
+  cryptsetup luksOpen /dev/md0 r0
+  cryptsetup luksOpen /dev/md1 r1
+  pvcreate --metadatasize 506k /dev/mapper/r0
+  pvs /dev/mapper/r0 -o+pe_start
+  vgcreate -s 1g v0 /dev/mapper/r0
+  pvcreate --metadatasize 506k /dev/mapper/r1
+  pvs /dev/mapper/r1 -o+pe_start
+  vgcreate -s 1g v1 /dev/mapper/r1
+  
+# /tv
+  * lvcreate -L 8t -n tv v0
+  * mke2fs -t ext4 -i1048576 -m0 -E stride=32,stripe-width=128 /dev/mapper/v0-tv
+  * mkdir /tv
+  * mount -o noatime,nodiratime /dev/mapper/v0-tv /tv
+
+# /video
+  * lvcreate -L 4t -n video v1
+  * mke2fs -t ext4 -i1048576 -m0 -E stride=32,stripe-width=128 /dev/mapper/v1-video
+  * mkdir /video
+  * mount -o noatime,nodiratime /dev/mapper/v1-video /video
+
+
+===== Legacy (old hydra in rack-mount chassis) =====
+
+
+==== Drives ====
+
+  * Hitachi PN 0F10311 2TB 5V@400mA 12V@850mA SATA3.0Gb/s 7200RPM Oct-2009 FW 20N
+    * SN YAGM5BRT Warranty expires 2012-11-13
+    * SN YAGL1HYT
+    * SN YAGLG4GT
+    * SN YAGK7RNT
+    * SN YAGMGYUT
+  * Western Digital WD20EURS WD AV-GP MDL WD20EURS-63S48Y0 2.0TB 5VDC@0.70A 12VDC@0.55A
+    * SN WCAZA3449153 08JAN2011 badblocks failed < 10% twice. RMA
+    * SN WCAZA3519420 O8JAN2011 DOA RMA
+    * SN WCAZA3531785 08JAN2011
+    * SN WCAZA3531987 08JAN2011 > 400m bad blocks.  RMA.
+    * SN WCAZA3519368 08JAN2011
+    * SN WCAZA3624918 13JAN2011 (replaced RMA drive)
+    * SN WCAZA3604669 13JAN2011 (replaced RMA drive; rma'd to WD in June)
+    * SN WCAZA3604878 13JAN2011 (replaced RMA drive)
+    * SN WCAVY6819200 05MAY2011 (replaced RMA drive from WD)
+
+=== Setup ===
+
+  * Using fdisk -H 224 -S 56, make one partition on each drive.
+  * fdisk -lu /dev/sdf
+
+  Disk /dev/sdf: 2000.3 GB, 2000398934016 bytes
+  224 heads, 56 sectors/track, 311465 cylinders, total 3907029168 sectors
+  Units = sectors of 1 * 512 = 512 bytes
+  Disk identifier: 0x95d56811
+  
+     Device Boot      Start         End      Blocks   Id  System
+  /dev/sdf1              56  3907016959  1953508452   83  Linux
+
+  * Run badblocks -b 4096 -s -v -w -c 1024 -t random on each partition.
+  * Using mvsas version 0.8.9: mdadm -C /dev/md_d0 /dev/sd[bcdef]1 -c 128 -n 5 -l 5
+  * cryptsetup -c aes-cbc-essiv:sha256 -s 128 -h sha256 --align-payload=1024 luksFormat /dev/md_d0
+  * cryptsetup luksOpen /dev/md_d0 r0
+  * pvcreate --metadatasize 506k /dev/mapper/r0 
+  * pvs /dev/mapper/r0 -o+pe_start
+
+  PV             VG   Fmt  Attr PSize PFree 1st PE 
+  /dev/mapper/r0      lvm2 --   7.28T 7.28T 512.00K
+
+  * vgcreate -s 1g v0 /dev/mapper/r0
+  * /video
+    * lvcreate -L 2t -n video v0
+    * mke2fs -t ext4 -i1048576 -m0 -E stride=32,stripe-width=128 /dev/mapper/v0-video
+    * mkdir /video
+    * mount -o noatime,nodiratime /dev/mapper/v0-video /video
+  * /audio
+    * lvcreate -L 500g -n audio v0
+    * mke2fs -t ext4 -i1048576 -m0 -E stride=32,stripe-width=128 /dev/mapper/v0-audio
+    * mkdir /audio
+    * mount -o noatime,nodiratime /dev/mapper/v0-audio /audio
+    * lvresize -L +200g /dev/v0/audio /dev/mapper/r0
+    * resize2fs /dev/v0/audio
+  * /text
+    * lvcreate -L 200g -n text v0
+    * mke2fs -t ext4 -i65536 -m0 -E stride=32,stripe-width=128 /dev/mapper/v0-text
+    * mkdir /text
+    * mount -o noatime,nodiratime /dev/mapper/v0-text /text
+  * /playpen
+    * lvcreate -L 400g -n playpen v0
+    * mke2fs -t ext4 -i65536 -m0 -E stride=32,stripe-width=128 /dev/mapper/v0-playpen
+    * mkdir /playpen
+    * mount -o noatime,nodiratime /dev/mapper/v0-playpen /playpen
+  * /misc
+    * lvcreate -L 300g -n misc v0
+    * mke2fs -t ext4 -i65536 -m0 -E stride=32,stripe-width=128 /dev/mapper/v0-misc
+    * mkdir /misc
+    * mount -o noatime,nodiratime /dev/mapper/v0-misc /misc
+
+==== Copy ====
+  rsync -Pavv lethe:/video/video /video
+  rsync -Pavv lethe:/video/other /video
+  rsync -Pavv --exclude 'text/' lethe:/audio/ /audio
+  rsync -Pavv lethe:/audio/text/ /text
+  rsync -Pavv lethe:/playpen/ /playpen
+  rsync -Pavv --exclude 'video/' --exclude 'other/' lethe:/video/ /misc

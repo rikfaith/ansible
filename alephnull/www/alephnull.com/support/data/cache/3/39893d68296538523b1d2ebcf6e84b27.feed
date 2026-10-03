@@ -1,0 +1,1414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="https://www.hybridsky.org/w/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://www.hybridsky.org/w/feed.php">
+        <title>alephnull.com recipes</title>
+        <description></description>
+        <link>https://www.hybridsky.org/w/</link>
+        <image rdf:resource="https://www.hybridsky.org/w/lib/tpl/alephnull/images/favicon.ico" />
+       <dc:date>2021-07-28T06:22:02-0400</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/almond_crescent_cookies?rev=1609088535&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/beefy_mushroom_barley_soup?rev=1607802014&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/beet_salad_with_feta?rev=1607803448&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/bell_pepper_fettuccine?rev=1282484739&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/best_low-carb_coleslaw?rev=1605745239&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/bisquick_substitute?rev=1599346828&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/black_beans_and_rice?rev=1236715267&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/broccoli_with_asian_garlic_sauce?rev=1521305396&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/brownies?rev=1239890630&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/butter_lettuce_with_nuts_sherry_vinaigrette?rev=1434474312&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/cherry-pecan_brie?rev=1551474986&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/chicken_with_tarragon?rev=1262912178&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/chili?rev=1605883659&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/chilli?rev=1205104683&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/chocolate_chip_cookies?rev=1336443667&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/chocolate_peanut_butter_cake?rev=1620488428&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/classic_blueberry_pie?rev=1620489118&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/classic_sweet_potato_casserole?rev=1434057348&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/collard_greens_in_olive_oil_slow-cooked?rev=1614443127&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/coquilles_st_jacques?rev=1614865664&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/cornell_triple_rich_formula_for_bread?rev=1588123877&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/crab_cakes?rev=1239638841&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/cranberry_sauce_with_orange?rev=1259275704&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/daddychicken?rev=1205111031&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/deviled_eggs?rev=1605823750&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/fettuccine_al_barese?rev=1329701412&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/flaherty_s_maple_pecan_scones?rev=1329699636&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/flan?rev=1262359485&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/gado_gado?rev=1625791090&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/goat_cheese_pasta_salad?rev=1497913187&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/greens_and_chicken_with_peanuts?rev=1243466744&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/habas_verdes_con_queso_lima_bean_dip?rev=1589408582&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/herbs?rev=1205104822&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/italian_pesto_chicken_salad?rev=1518035307&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/katherine_hepburn_s_brownies?rev=1341260681&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/lambburgers?rev=1205703880&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/macaroni_and_cheese?rev=1546818153&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/magic_cookie_bars?rev=1262359847&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/maryland_crab_cakes?rev=1271008025&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/meatloaf?rev=1259275306&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/mediterranean_lentil_salad?rev=1519341864&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/merlin_s_magic_sourdough_bread?rev=1589293831&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/minty_garlic_potatoes?rev=1416264481&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/mozzarella_with_charred_radicchio_and_salsa_verde?rev=1614655623&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/new-style_old-fashioned_chocolate_pudding?rev=1620835947&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/not_deep-fried_fish?rev=1614531740&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/one-pan_coconut_milk-braised_chicken?rev=1613009149&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/pancakes?rev=1240009454&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/peach_and_blueberry_crisp?rev=1434055957&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/penne_with_greens_olives_and_feta?rev=1328386711&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/pumpkin_pie?rev=1240929093&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/rigatoni_al_forno?rev=1614656127&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/roasted_cauliflower_gratin_with_goat_cheese?rev=1614289108&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/roasted_cauliflower_with_olives?rev=1593626771&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/roasted_red_bell_pepper_and_bean_soup?rev=1434056465&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/saffron_orzo?rev=1262995222&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/salmon_marinades?rev=1499275186&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/scottish_oatcakes?rev=1434056845&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/selena_s_stir_fry?rev=1278183407&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/sizzling_szechuan_chicken?rev=1442573595&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/sliced_sirloin_with_shallots_and_chive_sauce?rev=1416264192&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/slow_cooker_chinese_beef_and_bok_choy?rev=1434058012&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/southern_black-eyed_peas?rev=1588127683&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/spagetti_sauce?rev=1537577994&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/start?rev=1626876388&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/stir_fry_shrimp_with_basil?rev=1256409385&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/stuffed_zucchini_squash?rev=1593646161&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/thai_curry_chicken?rev=1626877414&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/tossed_greens_and_grapes_salad?rev=1551475266&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/turkey_pot_pie?rev=1262563907&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/vegan_bulgogi?rev=1620489381&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/verzada?rev=1236783234&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/white_bean_soup?rev=1240929679&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/recipes/wilted_spinach_salad?rev=1595172366&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://www.hybridsky.org/w/lib/tpl/alephnull/images/favicon.ico">
+        <title>alephnull.com</title>
+        <link>https://www.hybridsky.org/w/</link>
+        <url>https://www.hybridsky.org/w/lib/tpl/alephnull/images/favicon.ico</url>
+    </image>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/almond_crescent_cookies?rev=1609088535&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-12-27T12:02:15-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:almond_crescent_cookies</title>
+        <link>https://www.hybridsky.org/w/recipes/almond_crescent_cookies?rev=1609088535&amp;do=diff</link>
+        <description>Almond Crescent Cookies (Christmas Cookies)- Rosemary Molloy
+(Makes about 40 cookies). 
+
+Ingredients
+
+	*  1 cup butter, softened
+	*  3/4 cup sugar
+	*  1 pinch salt (if you use unsalted butter, use 1/4 teaspoon salt)
+	*  3/4 cup finely chopped fresh almonds(or walnuts or pecans)</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/beefy_mushroom_barley_soup?rev=1607802014&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-12-12T14:40:14-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:beefy_mushroom_barley_soup</title>
+        <link>https://www.hybridsky.org/w/recipes/beefy_mushroom_barley_soup?rev=1607802014&amp;do=diff</link>
+        <description>Beefy Mushroom Barley Soup
+from: Penzey's Spices
+
+Ingredients:
+
+	*  1 lb lean beef chuck (beef stew meat), cut into 1 inch cubes
+	*  2 tablespoons olive oil
+	*  3 medium or 2 large onions, coarsely chopped
+	*  10 oz fresh mushrooms, sliced
+	*  3 large carrots, sliced</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/beet_salad_with_feta?rev=1607803448&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-12-12T15:04:08-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:beet_salad_with_feta</title>
+        <link>https://www.hybridsky.org/w/recipes/beet_salad_with_feta?rev=1607803448&amp;do=diff</link>
+        <description>Beet salad with Feta, from William Sonoma's “Mediterranean Cooking”,1997; recipes by Joyce Goldstein.
+
+Ingredients:
+
+	*  4 large or 8 small beets
+	*  1/2 cup extra-virgin olive oil
+	*  3 tablespoons red wine vinegar (or 1.4 cup fresh lemon juice)</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/bell_pepper_fettuccine?rev=1282484739&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-08-22T09:45:39-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:bell_pepper_fettuccine</title>
+        <link>https://www.hybridsky.org/w/recipes/bell_pepper_fettuccine?rev=1282484739&amp;do=diff</link>
+        <description>Bell Pepper Fettuccine “Confetti Fettuccine”, from Elaine Tait, Knight-Ridder Newspapers (Tampa Tribune?)
+
+	*  1/4 cup olive oil
+	*  1 large chicken breast, skinned, boned, cut into thin strips
+	*  1 large onion, coarsely chopped, or in rings if preferred</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/best_low-carb_coleslaw?rev=1605745239&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-11-18T19:20:39-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:best_low-carb_coleslaw</title>
+        <link>https://www.hybridsky.org/w/recipes/best_low-carb_coleslaw?rev=1605745239&amp;do=diff</link>
+        <description>Best Low-carb Coleslaw (Food.com)
+
+	*  16 ounces shredded cabbage (about 1 small to medium cabbage)
+	*  1 small onion, thinly sliced
+	*  1/4 cup Splenda
+	*  1/2 teaspoon salt
+	*  1/2 teaspoon fresh ground black pepper
+	*  1/2 cup mayonnaise
+	*  1/2 cup whipping cream OR half-and-half OR buttermilk OR plain kefir</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/bisquick_substitute?rev=1599346828&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-09-05T19:00:28-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:bisquick_substitute</title>
+        <link>https://www.hybridsky.org/w/recipes/bisquick_substitute?rev=1599346828&amp;do=diff</link>
+        <description>Bisquick® Substitute
+Yield: 1 cup
+
+INGREDIENTS
+1 cup all-purpose flour
+1 ½ teaspoons baking powder
+¼ teaspoon salt
+1 tablespoon butter
+
+Step 1
+Sift flour into a bowl; add baking powder and salt and whisk until fully incorporated. Cut butter into flour mixture using a pastry cutter until evenly combined.
+Shortening or oil can be used in place of the butter, if desired. If using melted butter, be sure to evenly disperse the butter as much as possible.</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/black_beans_and_rice?rev=1236715267&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-03-10T16:01:07-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:black_beans_and_rice</title>
+        <link>https://www.hybridsky.org/w/recipes/black_beans_and_rice?rev=1236715267&amp;do=diff</link>
+        <description>Black Beans and Rice
+ from “A Taste of Old Cuba”, by Maria Josefa LLuria de O'Higgins.
+
+8 Servings
+
+Ingredients: 
+1. For cooking the beans:
+
+	*  1 pound dry black beans
+	*  2.5 quarts water
+	*  1 green bell pepper, cored, seeded and cut into strips</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/broccoli_with_asian_garlic_sauce?rev=1521305396&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2018-03-17T12:49:56-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:broccoli_with_asian_garlic_sauce</title>
+        <link>https://www.hybridsky.org/w/recipes/broccoli_with_asian_garlic_sauce?rev=1521305396&amp;do=diff</link>
+        <description>Broccoli with Asian Garlic Sauce
+
+Serves 4 as side serving
+
+Ingredients
+
+	*  4 cups broccoli florets and peeled stem slices
+		*  3 garlic cloves, minced
+		*  2 tablespoons sesame oil
+		*  2 tablespoons soy sauce
+		*  1/2 cup vegetable or chicken broth</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/brownies?rev=1239890630&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-16T10:03:50-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:brownies</title>
+        <link>https://www.hybridsky.org/w/recipes/brownies?rev=1239890630&amp;do=diff</link>
+        <description>Katherine Hepburn's Brownies
+
+Temp:325 degrees
+
+Ingredients:
+
+	*  2 squares unsweetened chocolate
+	*  1/4 pound butter
+	*  1 cup granulated sugar
+	*  2 eggs
+	*  1/2 teaspoon vanilla extract
+	*  1/4 cup flour
+	*  1 cup walnuts, chopped
+	*  1/4 teaspoon</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/butter_lettuce_with_nuts_sherry_vinaigrette?rev=1434474312&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-06-16T13:05:12-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:butter_lettuce_with_nuts_sherry_vinaigrette</title>
+        <link>https://www.hybridsky.org/w/recipes/butter_lettuce_with_nuts_sherry_vinaigrette?rev=1434474312&amp;do=diff</link>
+        <description>Butter Lettuce with nuts, bacon, cheese, egg and sherry vinaigrette
+
+LAtimes.com 10-19-2011
+
+Ingredients:
+
+	*  2 tablespoons minced shallots
+	*  2 tablespoons Spanish sherry vinegar
+	*  1 1/2 teaspoons lemon juice
+	*  1/2 teaspoon salt
+	*  1/4 teaspoon freshly ground black pepper</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/cherry-pecan_brie?rev=1551474986&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2019-03-01T16:16:26-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:cherry-pecan_brie</title>
+        <link>https://www.hybridsky.org/w/recipes/cherry-pecan_brie?rev=1551474986&amp;do=diff</link>
+        <description>Cherry-Pecan Baked Brie
+
+	*  1/3 cup cherry preserves
+	*  1 tablespoon balsamic vinegar
+	*  1/8 teaspoon black pepper, ground
+	*  1/8 teaspoon salt
+	*  16 ounce round Brie cheese
+	*  1/3 to 1/2 cup chopped pecans
+
+	*  Remove top layer from the brie.</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/chicken_with_tarragon?rev=1262912178&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-01-07T19:56:18-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:chicken_with_tarragon</title>
+        <link>https://www.hybridsky.org/w/recipes/chicken_with_tarragon?rev=1262912178&amp;do=diff</link>
+        <description>Chicken with Tarragon (Poulet a l'estragon) 
+from 60 minute gourmet
+
+	*  2 to 3 lb chicken in pieces, or legs and thighs
+	*  salt and pepper
+	*  1 tablespoon butter or olive oil
+	*  2 tablespoon finely chopped shallots, or 1 teaspoon dried onion
+	*  2 teaspoon finely chopped fresh tarragon, or 1 teaspoon dried tarragon</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/chili?rev=1605883659&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-11-20T09:47:39-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:chili</title>
+        <link>https://www.hybridsky.org/w/recipes/chili?rev=1605883659&amp;do=diff</link>
+        <description>Chili
+
+These recipes are all based on Rik's Mom's Chili recipe.
+
+Original
+
+
+
+	*  1/2 pound, ground chuck
+	*  chopped onion
+	*  8oz tomato sauce
+	*  1 can tomato soup
+	*  15oz red kidney beans
+	*  1 tsp flour
+	*  2-3 tsp chili powder
+	*  1 tsp brown sugar</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/chilli?rev=1205104683&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-03-09T19:18:03-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:chilli</title>
+        <link>https://www.hybridsky.org/w/recipes/chilli?rev=1205104683&amp;do=diff</link>
+        <description>Chili
+
+These recipes are all based on Rik's Mom's Chili recipe.
+
+Original
+
+
+
+	*  1/2 pound, ground chuck
+	*  chopped onion
+	*  8oz tomato sauce
+	*  1 can tomato soup
+	*  15oz red kidney beans
+	*  1 tsp flour
+	*  2-3 tsp chili powder
+	*  1 tsp brown sugar</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/chocolate_chip_cookies?rev=1336443667&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2012-05-07T22:21:07-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:chocolate_chip_cookies</title>
+        <link>https://www.hybridsky.org/w/recipes/chocolate_chip_cookies?rev=1336443667&amp;do=diff</link>
+        <description>Chocolate Chip Cookies
+
+When I was a kid, we used to make Toll House Cookies, but with a variation of the recipe that was then on the back of each package of Toll House chocolate chips.  I was never able to find that recipe, but this is a close reconstruction.</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/chocolate_peanut_butter_cake?rev=1620488428&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-05-08T11:40:28-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:chocolate_peanut_butter_cake</title>
+        <link>https://www.hybridsky.org/w/recipes/chocolate_peanut_butter_cake?rev=1620488428&amp;do=diff</link>
+        <description>Chocolate Peanut Butter Cake
+(Epicurious)
+
+YIELDMakes 16 servings
+
+INGREDIENTS
+
+Chocolate cake:
+
+	*  Nonstick vegetable oil spray
+	*  1 1/4 cups all-purpose flour
+	*  1 cup sugar
+	*  3/4 cup natural unsweetened cocoa powder
+	*  1 1/2 teaspoons kosher salt</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/classic_blueberry_pie?rev=1620489118&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-05-08T11:51:58-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:classic_blueberry_pie</title>
+        <link>https://www.hybridsky.org/w/recipes/classic_blueberry_pie?rev=1620489118&amp;do=diff</link>
+        <description>Classic Blueberry Pie 
+(Betty Crocker.com)
+
+Ingredients
+
+Pastry
+
+	*  2 cups all-purpose flour
+	*  1 teaspoon salt
+	*  2/3 cup shortening (cold butter or margarine)
+	*  4 to 6 tablespoons cold water
+
+Filling
+
+	*  3/4 cup sugar
+	*  1/2 cup Gold Medal™ all-purpose flour</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/classic_sweet_potato_casserole?rev=1434057348&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-06-11T17:15:48-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:classic_sweet_potato_casserole</title>
+        <link>https://www.hybridsky.org/w/recipes/classic_sweet_potato_casserole?rev=1434057348&amp;do=diff</link>
+        <description>Classic Sweet Potato Casserole (Thanksgiving)
+
+Southern Living December 2009
+
+Ingredients:
+
+	*  4 1/2 pounds sweet potatoes
+	*  1 cup granulated sugar
+	*  1/2 cup butter,softened
+	*  1/4 cup milk
+	*  2 large eggs
+	*  1 teaspoon vanilla extract
+	*  1/4 teaspoon salt</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/collard_greens_in_olive_oil_slow-cooked?rev=1614443127&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-02-27T11:25:27-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:collard_greens_in_olive_oil_slow-cooked</title>
+        <link>https://www.hybridsky.org/w/recipes/collard_greens_in_olive_oil_slow-cooked?rev=1614443127&amp;do=diff</link>
+        <description>Slow-cooked Collard Greens in Olive Oil 
+by Claire Saffitz (Epicurious, from Bon Appetit, November 2017)
+
+YIELD:4 servings
+
+INGREDIENTS
+
+	*  1/2 cup extra-virgin olive oil, plus more for drizzling
+	*  8 garlic cloves, thinly sliced
+	*  1/2 teaspoon crushed red pepper flakes</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/coquilles_st_jacques?rev=1614865664&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-03-04T08:47:44-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:coquilles_st_jacques</title>
+        <link>https://www.hybridsky.org/w/recipes/coquilles_st_jacques?rev=1614865664&amp;do=diff</link>
+        <description>Coquilles St Jacques
+
+To serve 2:
+
+	*  1 cup sliced mushrooms
+
+	* 2 tablespoons finely chopped shallot or green onion
+	* 3 tablespoons butter
+	* 1 pound scallops
+	* 1/2 cup dry white wine
+	* 1 tablespoon lemon juice
+	* 1/8 teaspoon dried crushed thyme</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/cornell_triple_rich_formula_for_bread?rev=1588123877&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-04-28T21:31:17-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:cornell_triple_rich_formula_for_bread</title>
+        <link>https://www.hybridsky.org/w/recipes/cornell_triple_rich_formula_for_bread?rev=1588123877&amp;do=diff</link>
+        <description>Cornell triple-Rich Formula for bread supplementation
+(to increase nutrient value of bread)
+
+Ingredients:
+
+	*  1 tablespoon soy flour
+	*  1 tablespoon nonfat dry milk
+	*  1 teaspoon raw wheat germ
+
+Place these ingredients in the bottom of the measuring cup before adding flour. Then add flour to make one cup.</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/crab_cakes?rev=1239638841&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-13T12:07:21-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:crab_cakes</title>
+        <link>https://www.hybridsky.org/w/recipes/crab_cakes?rev=1239638841&amp;do=diff</link>
+        <description>Maryland Crab Cakes, recipe from Whole Foods
+
+Serves 4
+
+Ingredients:
+
+	*  1 pound jumbo lump crabmeat
+	*  2/3 cup dry plain breadcrumbs
+	*  2 teaspoons Old Bay seasoning or other seafood seasoning
+	*  1/3 cup finely diced red pepper (optional)
+	*  1/4 cup  finely sliced scallion</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/cranberry_sauce_with_orange?rev=1259275704&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-11-26T17:48:24-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:cranberry_sauce_with_orange</title>
+        <link>https://www.hybridsky.org/w/recipes/cranberry_sauce_with_orange?rev=1259275704&amp;do=diff</link>
+        <description>Cranberry Sauce with Orange
+
+(Bon Appetit, November 1997, pg. 164.)
+
+	*  3/4 cup water
+	*  1/2 cup packed golden brown sugar
+	*  1 12 ounce package cranberries, about 3 cups
+	*  2 teaspoons grated orange peel, or 2/3 teaspoons dried orange peel
+1. Stir water and sugar in heavy saucepan over medium heat until sugar dissolves. Bring mixture to a boil.</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/daddychicken?rev=1205111031&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-03-09T21:03:51-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:daddychicken</title>
+        <link>https://www.hybridsky.org/w/recipes/daddychicken?rev=1205111031&amp;do=diff</link>
+        <description>Daddy Chicken
+
+	*  Preheat oven to 360°F
+	*  Obtain 4 whole chicken legs, cut in half
+	*  Place legs and thighs in pan, removing excess skin where possible
+	*  Drizzle olive oil over chicken
+	*  Cover first side of chicken with salt, pepper,  Fines Herbes, and basil (resist all temptation to add additional herbs)</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/deviled_eggs?rev=1605823750&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-11-19T17:09:10-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:deviled_eggs</title>
+        <link>https://www.hybridsky.org/w/recipes/deviled_eggs?rev=1605823750&amp;do=diff</link>
+        <description>Deviled eggs, variations.
+
+1.Cover 1 dozen eggs with water and bring to a boil. Turn to low and let sit for 15 minutes. Turn off heat, let sit for 10 minutes, then drain water.
+2. Peel eggs, cut in half lengthwise and remove all yolks.
+3. Add yolks to bowl along with 1/4 cup mayonnaise.</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/fettuccine_al_barese?rev=1329701412&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2012-02-19T20:30:12-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:fettuccine_al_barese</title>
+        <link>https://www.hybridsky.org/w/recipes/fettuccine_al_barese?rev=1329701412&amp;do=diff</link>
+        <description>Fettuccine al Barese
+from: The Mediterranean Kitchen (Joyce Goldstein)
+
+	*  3/4 pound medium shrimp, shelled and deveined
+	*  freshly ground pepper
+	*  1/4 cup(or less) olive oil
+	*  4 teaspoons finely minced garlic
+	*  1 teaspoon (or to taste) red pepper flakes</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/flaherty_s_maple_pecan_scones?rev=1329699636&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2012-02-19T20:00:36-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:flaherty_s_maple_pecan_scones</title>
+        <link>https://www.hybridsky.org/w/recipes/flaherty_s_maple_pecan_scones?rev=1329699636&amp;do=diff</link>
+        <description>Flaherty's Maple Pecan Scones
+
+ from: Sheila Lukin's “USA Cookbook”
+
+Oven: 425 degrees
+
+Ingredients:
+* 3 1/2 cups all purpose or white whole wheat flour
+* 4 teaspoons baking powder
+* 1 teaspoon salt
+* 2/3 cup butter
+* 1 cup plus 1 tablespoon milk
+* 1/2 cup maple syrup</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/flan?rev=1262359485&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-01-01T10:24:45-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:flan</title>
+        <link>https://www.hybridsky.org/w/recipes/flan?rev=1262359485&amp;do=diff</link>
+        <description>Flan
+
+Oven 350 degrees
+
+	*  6 eggs
+	*  2 cups milk
+	*  1 teaspoon vanilla extract
+	*  1.5 cups sugar
+
+	*  Caramelize half cup sugar in nonstick skillet, stirring constantly. When melted, pour into the bottom of a Pyrex dish.
+		*  Beat 6 eggs, or mix in blender. Add milk, vanilla and 1 cup sugar. Beat thoroughly; pour into dish on top of caramelized sugar.</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/gado_gado?rev=1625791090&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-07-08T20:38:10-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:gado_gado</title>
+        <link>https://www.hybridsky.org/w/recipes/gado_gado?rev=1625791090&amp;do=diff</link>
+        <description>Gado-Gado
+
+By Hetty McKinnon (in NYT) 7-8-21
+YIELD6 to 8 servings
+TIME45 minutes
+
+Gado-gado is a beloved dish across Indonesia. Each region has a different spin: In Jakarta, it is a “double-carb” dish, featuring both potato and lontong (rice cakes). In West Java, it is known as lotek atah or karedok and served with raw vegetables. At the heart of any gado-gado is the spicy peanut sauce: Some versions call for tamarind, lime, terasi (shrimp paste) or coconut milk. Others use peanut butter instead…</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/goat_cheese_pasta_salad?rev=1497913187&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-06-19T18:59:47-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:goat_cheese_pasta_salad</title>
+        <link>https://www.hybridsky.org/w/recipes/goat_cheese_pasta_salad?rev=1497913187&amp;do=diff</link>
+        <description>Ingredients
+
+	*  8 ounces fusilli pasta
+	*  8 tablespoons olive oil
+	*  4 tablespoons Sherry wine vinegar
+	*  2 tablespoons balsalmic or red wine vinegar
+	*  4 plum tomatoes (seeded, chopped, chilled)
+	*  2 green onions (sliced very thin, chilled)
+	*</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/greens_and_chicken_with_peanuts?rev=1243466744&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-05-27T19:25:44-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:greens_and_chicken_with_peanuts</title>
+        <link>https://www.hybridsky.org/w/recipes/greens_and_chicken_with_peanuts?rev=1243466744&amp;do=diff</link>
+        <description>Stir-fried Greens and Chicken with Peanuts
+
+Bon Appetit, April 2008
+
+Ingredients:
+
+	*  2 to 3 tablespoons soy sauce, divided
+	*  2 tablespoons dry sherry, divided
+	*  3 teaspoons sesame oil, divided
+	*  2 teaspoons brown sugar, divided
+	*  1 1/2 pounds skinless boneless chicken breast, cut crosswise into thin strips</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/habas_verdes_con_queso_lima_bean_dip?rev=1589408582&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-05-13T18:23:02-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:habas_verdes_con_queso_lima_bean_dip</title>
+        <link>https://www.hybridsky.org/w/recipes/habas_verdes_con_queso_lima_bean_dip?rev=1589408582&amp;do=diff</link>
+        <description>Habas Verdes con Queso (Lima Bean Dip)
+from New Recipes from Moosewood Restaurant
+
+Ingredients
+
+	*  6 cups cooked lima beans
+	*  8 ounces cream cheese
+	*  2 tablespoons vegetable oil 
+	*  2 cups chopped onions
+	*  2 large garlic cloves, minced
+	*  2 or 3 bell peppers(red or green), chopped</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/herbs?rev=1205104822&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-03-09T19:20:22-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:herbs</title>
+        <link>https://www.hybridsky.org/w/recipes/herbs?rev=1205104822&amp;do=diff</link>
+        <description>Herbs
+
+Basil
+
+California Sweet Basil from  Penzeys Spices.
+
+Chipotle
+
+Ground Red Chipotle from  Penzeys Spices.
+
+Fines Herbes
+
+From  Penzeys Spices, containing chervil, parsley, tarragon, and chives.
+
+Southwest Seasoning
+
+From  Penzeys Spices, containing salt, several kinds ofpepper, garlic, oregano, cumin, chipotle, and cilantro.</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/italian_pesto_chicken_salad?rev=1518035307&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2018-02-07T15:28:27-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:italian_pesto_chicken_salad</title>
+        <link>https://www.hybridsky.org/w/recipes/italian_pesto_chicken_salad?rev=1518035307&amp;do=diff</link>
+        <description>Italian Pesto Chicken Salad
+From: “Eating Well” Magazine 6-2016
+
+Ingredients:
+
+	*  1/2 cup nonfat plain Greek yogurt
+	*  1/3 cup mayonnaise
+	*  2 tablespoons minced shallot
+	*  2 tablespoons pesto
+	*  2 teaspoons lemon juice
+	*  1/2 teaspoon salt</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/katherine_hepburn_s_brownies?rev=1341260681&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2012-07-02T16:24:41-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:katherine_hepburn_s_brownies</title>
+        <link>https://www.hybridsky.org/w/recipes/katherine_hepburn_s_brownies?rev=1341260681&amp;do=diff</link>
+        <description>Katherine Hepburn's Brownies: (12 squares)
+
+Preheat Oven to 325°
+
+•2 squares unsweetened chocolate (
+•¼ lb. butter
+•1 cup granulated sugar
+•2 eggs
+•½ tsp. vanilla
+•¼ cup flour 
+•¼ tsp. salt
+•1 cup chopped walnuts (optional)
+
+Melt chocolate with butter in saucepan over very low heat. Remove from heat and stir in sugar. Beat in eggs and vanilla. Quickly stir in flour, salt, and walnuts. Spread batter in a well-greased</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/lambburgers?rev=1205703880&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-03-16T17:44:40-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:lambburgers</title>
+        <link>https://www.hybridsky.org/w/recipes/lambburgers?rev=1205703880&amp;do=diff</link>
+        <description>Spicy Lamb Burgers
+
+	*  1 lb. ground lamb
+	*  1 tbsp. soy sauce
+	*  1 HEAPING tbsp.  Lan Chi Chili Paste with Garlic (Chili, Salt, Soy Bean Oil, Garlic):
+
+
+
+	*  Mix well.  Form in to 4 patties.  Grill.</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/macaroni_and_cheese?rev=1546818153&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2019-01-06T18:42:33-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:macaroni_and_cheese</title>
+        <link>https://www.hybridsky.org/w/recipes/macaroni_and_cheese?rev=1546818153&amp;do=diff</link>
+        <description>Macaroni and Cheese
+
+ Ingredients:
+
+	*  1/2 lb macaroni or fusilli pasta
+	*  1/4 lb butter= 1 stick
+	*  2 -2 1/2 cups milk
+	*  8 ounces cheddar cheese, grated
+	*  6 tablespoons flour
+	*  1 tablespoon Grey Poupon mustard
+
+Preheat oven to 350 degrees.</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/magic_cookie_bars?rev=1262359847&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-01-01T10:30:47-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:magic_cookie_bars</title>
+        <link>https://www.hybridsky.org/w/recipes/magic_cookie_bars?rev=1262359847&amp;do=diff</link>
+        <description>Magic Cookie Bars
+
+Oven: 350 degrees
+
+	*  1/2 cup (1 stick) butter
+	*  1 1/2 cups graham cracker crumbs
+	*  1  (14) oz can sweetened condensed milk
+	*  2 cups (12 oz) semi sweet chocolate chips, or butterscotch chips
+	*  1 1/3 cups flaked coconut
+	*</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/maryland_crab_cakes?rev=1271008025&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-04-11T13:47:05-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:maryland_crab_cakes</title>
+        <link>https://www.hybridsky.org/w/recipes/maryland_crab_cakes?rev=1271008025&amp;do=diff</link>
+        <description>Maryland Crab Cakes
+
+	*  1 lb lump crab meat
+	*  2/3  cup dry plain breadcrumbs
+	*  2 teaspoon Old bay seasoning or other seafood seasoning
+	*  (1/3 cup finely diced red pepper)
+	*  1/4 cup finely sliced scallion or green onion
+	*  (1/4 cup finely chopped parsley)</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/meatloaf?rev=1259275306&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-11-26T17:41:46-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:meatloaf</title>
+        <link>https://www.hybridsky.org/w/recipes/meatloaf?rev=1259275306&amp;do=diff</link>
+        <description>Meatloaf
+
+350 degrees
+
+	*  1 pound ground turkey thigh
+	*  1/2 pound ground beef
+	*  1 cup tomato or V8 juice
+	*  3/4 cup oatmeal, uncooked
+	*  1 egg, beaten
+	*  1/4 cup chopped onion
+	*  1 and 1/2  teaspoons Southwest seasoning, or salt/pepper to taste</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/mediterranean_lentil_salad?rev=1519341864&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2018-02-22T18:24:24-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:mediterranean_lentil_salad</title>
+        <link>https://www.hybridsky.org/w/recipes/mediterranean_lentil_salad?rev=1519341864&amp;do=diff</link>
+        <description>Mediterranean Lentil Salad, from “Moosewood Restaurant Cooks at Home”
+1994
+
+Serves 4.
+
+Ingredients:
+
+	*  1 cup brown or green lentils
+	*  4 cups water
+	*  2 bay leaves
+	*  1 teaspoon fresh thyme or 1/2 teaspoon dried
+	*  2 garlic cloves, peeled</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/merlin_s_magic_sourdough_bread?rev=1589293831&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-05-12T10:30:31-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:merlin_s_magic_sourdough_bread</title>
+        <link>https://www.hybridsky.org/w/recipes/merlin_s_magic_sourdough_bread?rev=1589293831&amp;do=diff</link>
+        <description>Merlin's Magic Sourdough Bread
+(2 large loaves)
+
+Ingredients
+
+	*  1 cup (227 gm) sourdough starter, ripe (fed)
+	*  1 2/3 cups (379 gm) warm water
+	*  5 1/2 cups (659 gm) King Arthur Unbleached All-Purpose flour (or mixture of all-purpose and bread flour)</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/minty_garlic_potatoes?rev=1416264481&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-11-17T17:48:01-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:minty_garlic_potatoes</title>
+        <link>https://www.hybridsky.org/w/recipes/minty_garlic_potatoes?rev=1416264481&amp;do=diff</link>
+        <description>Minty Garlic Potatoes
+
+from: Parade Magazine 2-28-1988
+
+# 8 to 12 red-skinned new potatoes, washed
+# 1/4 cup olive oil
+# Coarse salt to taste
+# Black pepper to taste
+# 4 cloves of garlic, peeled and finely chopped
+# (2 tablespoons coarsely chopped mint leaves or Italian parsley)</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/mozzarella_with_charred_radicchio_and_salsa_verde?rev=1614655623&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-03-01T22:27:03-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:mozzarella_with_charred_radicchio_and_salsa_verde</title>
+        <link>https://www.hybridsky.org/w/recipes/mozzarella_with_charred_radicchio_and_salsa_verde?rev=1614655623&amp;do=diff</link>
+        <description>Mozzarella With Charred Radicchio and Salsa Verde
+By David Tanis
+YIELD:4 to 6 servings
+TIME:20 minutes
+
+Mozzarella With Charred Radicchio and Salsa Verde
+David Malosh for The New York Times. 
+
+INGREDIENTS
+
+	*  2 radicchio heads, outer leaves removed</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/new-style_old-fashioned_chocolate_pudding?rev=1620835947&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-05-12T12:12:27-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:new-style_old-fashioned_chocolate_pudding</title>
+        <link>https://www.hybridsky.org/w/recipes/new-style_old-fashioned_chocolate_pudding?rev=1620835947&amp;do=diff</link>
+        <description>New-Style Old-Fashioned Chocolate Pudding
+Bon Appetit, April 1997
+
+Ingredients 
+
+	*  1/2 cup sugar
+	*  1/3 cup unsweetened cocoa powder
+	*  2 tablespoons (packed) cornstarch
+	*  1 teaspoon all purpose flour
+	*  Pinch of salt
+	*  2 cups low-fat (1%) milk OR: 11/2 cups evaporated milk + 1/2 cup half and half or water or milk</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/not_deep-fried_fish?rev=1614531740&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-02-28T12:02:20-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:not_deep-fried_fish</title>
+        <link>https://www.hybridsky.org/w/recipes/not_deep-fried_fish?rev=1614531740&amp;do=diff</link>
+        <description>Not Deep-fried Fish
+by Gretchen Lang
+
+Ingredients
+
+	*  4 catfish, tilapia or other white fish fillets
+	*  2 tablespoons cornmeal
+	*  2 tablespoons flour
+	*  Cayenne or other pepper to taste
+	*  1/2 teaspoon dried thyme, or 1 teaspoon minced fresh
+	*</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/one-pan_coconut_milk-braised_chicken?rev=1613009149&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-02-10T21:05:49-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:one-pan_coconut_milk-braised_chicken</title>
+        <link>https://www.hybridsky.org/w/recipes/one-pan_coconut_milk-braised_chicken?rev=1613009149&amp;do=diff</link>
+        <description>One-Pan Coconut Milk-Braised Chicken
+
+Yield: Serves 4
+Prep Time: 20 minutes
+Cook Time: 25 minutes to 30 minutes
+
+Ingredients
+
+	*  2 cloves garlic
+	*  1 (3-inch) piece fresh ginger
+	*  2 pounds bone-in, skin-on chicken thighs (4 to 6)
+	*  1 1/2 teaspoons kosher salt, divided</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/pancakes?rev=1240009454&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-17T19:04:14-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:pancakes</title>
+        <link>https://www.hybridsky.org/w/recipes/pancakes?rev=1240009454&amp;do=diff</link>
+        <description>Blueberry  Buttermilk Pancakes (revised by Elaine Magee, Recipe Doctor)
+4 Servings
+
+Ingredients:
+
+	*  1 cup flour
+	*  1 teaspoon baking powder
+	*  1/2 teaspoon baking soda
+	*  1/4 teaspoon salt
+	*  1 tablespoon sugar
+	*  1 large beaten egg
+	*  1 and 1/4 cup buttermilk</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/peach_and_blueberry_crisp?rev=1434055957&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-06-11T16:52:37-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:peach_and_blueberry_crisp</title>
+        <link>https://www.hybridsky.org/w/recipes/peach_and_blueberry_crisp?rev=1434055957&amp;do=diff</link>
+        <description>Peach and Blueberry Crisp
+
+Bon Appetit, June 1993
+
+350 degrees oven
+
+Topping:
+
+	*  3/4 cup firmly packed brown sugar
+	*  3/4 cup all purpose flour
+	*  1/2 cup (1 stick) unsalted butter,cold, cut into pieces
+	*  1 cup old-fashioned oats(oatmeal)
+	*  3/4 cup chopped toasted pecans or walnuts</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/penne_with_greens_olives_and_feta?rev=1328386711&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2012-02-04T15:18:31-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:penne_with_greens_olives_and_feta</title>
+        <link>https://www.hybridsky.org/w/recipes/penne_with_greens_olives_and_feta?rev=1328386711&amp;do=diff</link>
+        <description>Penne with Greens, Olives and Feta
+
+	* from: bon Appetit April 2008.
+	* 4 to 6 servings.
+
+Ingredients:
+
+	* (1/4 cup chopped fresh Italian parsley)
+	* 1 teaspoon finely grated lemon peel, or splash of lemon juice
+	* 1 to 2 garlic cloves, minced
+	* 1 large bunch greens (spinach, mustards, kale, broccoli raab, young collards, about 1 pound), thick stems removed; washed; cut into 1 inch strips.</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/pumpkin_pie?rev=1240929093&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-28T10:31:33-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:pumpkin_pie</title>
+        <link>https://www.hybridsky.org/w/recipes/pumpkin_pie?rev=1240929093&amp;do=diff</link>
+        <description>Libby's famous Pumpkin Pie
+8 servings
+
+Ingredients:
+
+	*  3/4 cup sugar
+	*  1/2 teaspoon salt
+	*  1 teaspoon ground cinnamon
+	*  1/2 teaspoon ground ginger
+	*  1/4 teaspoon ground cloves
+	*  2 large eggs
+	*  1 can (15 oz) pumpkin
+	*  1 can (12 fl oz) evaporated milk</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/rigatoni_al_forno?rev=1614656127&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-03-01T22:35:27-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:rigatoni_al_forno</title>
+        <link>https://www.hybridsky.org/w/recipes/rigatoni_al_forno?rev=1614656127&amp;do=diff</link>
+        <description>Rigatoni al Forno With Cauliflower and Broccoli Rabe
+By David Tanis
+YIELD:6 servings
+TIME:1 1/2 hours
+David Malosh for The New York Times. 
+
+INGREDIENTS
+
+FOR THE BÉCHAMEL:
+
+	*  3 tablespoons extra-virgin olive oil
+	*  3 tablespoons all-purpose flour</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/roasted_cauliflower_gratin_with_goat_cheese?rev=1614289108&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-02-25T16:38:28-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:roasted_cauliflower_gratin_with_goat_cheese</title>
+        <link>https://www.hybridsky.org/w/recipes/roasted_cauliflower_gratin_with_goat_cheese?rev=1614289108&amp;do=diff</link>
+        <description>Roasted Cauliflower Gratin with Tomatoes and Goat Cheese
+by Martha Rose Shulman (NYT, 2-21)
+
+Yield: serves 4-6
+
+Time: about 1 hour 10 minutes, plus 10 minutes cooling time
+
+Ingredients
+
+	*  1 medium sized head of cauliflower
+	*  Salt and freshly ground black pepper</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/roasted_cauliflower_with_olives?rev=1593626771&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-07-01T14:06:11-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:roasted_cauliflower_with_olives</title>
+        <link>https://www.hybridsky.org/w/recipes/roasted_cauliflower_with_olives?rev=1593626771&amp;do=diff</link>
+        <description>Roasted Cauliflower with Olives
+
+Ingredients:
+
+	*  3 pounds (1 large) cauliflower, cut in small flowerettes or slices
+	*  4 tablespoons olive oil
+	*  pinch of salt
+	*  1/2 teaspoon freshly grated black pepper
+	*  2 or 3 garlic cloves, minced
+	*  1/3 to 1/2 cup Kalamata olives, pitted and chopped</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/roasted_red_bell_pepper_and_bean_soup?rev=1434056465&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-06-11T17:01:05-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:roasted_red_bell_pepper_and_bean_soup</title>
+        <link>https://www.hybridsky.org/w/recipes/roasted_red_bell_pepper_and_bean_soup?rev=1434056465&amp;do=diff</link>
+        <description>Roasted Red Bell Pepper and Bean Soup
+
+Bon Appetit July 1994
+
+Ingredients:
+
+	*  3 yellow, orange or red bell peppers (can buy already roasted)
+	*  1 tablespoon olive oil
+	*  1 small onion, chopped
+	*  1/8 teaspoon dried crushed red pepper
+	*  2 cans low salt chicken broth; 14 1/2 oz each,(equals 29 oz total)</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/saffron_orzo?rev=1262995222&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-01-08T19:00:22-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:saffron_orzo</title>
+        <link>https://www.hybridsky.org/w/recipes/saffron_orzo?rev=1262995222&amp;do=diff</link>
+        <description>Saffron Orzo, from “Moosewood Restaurant Cooks at Home”
+
+	*  Generous pinch of saffron, crumbled (about 1/2 teaspoon)
+	*  1/2 pound orzo
+	*  1/2 cup grated Parmesan or Pecorino cheese
+	*  salt and ground black pepper to taste
+
+	*  Bring 3 quarts water to boil in a big pot. Crumble the saffron into a small bowl and add about 3 tablespoons of the hot water, stirring well.</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/salmon_marinades?rev=1499275186&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-07-05T13:19:46-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:salmon_marinades</title>
+        <link>https://www.hybridsky.org/w/recipes/salmon_marinades?rev=1499275186&amp;do=diff</link>
+        <description>Salmon Marinades:
+
+1. Sesame marinade:
+
+	*  4 tablespoons sesami oil
+	*  2 tablespoons tamari or soy sauce
+	*  2 tablespoons lime juice
+	*  1 clove garlic, minced
+	*  3 green onions (scallions), chopped
+
+Blend all ingredients and pour over salmon fillets or steaks to marinade.</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/scottish_oatcakes?rev=1434056845&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-06-11T17:07:25-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:scottish_oatcakes</title>
+        <link>https://www.hybridsky.org/w/recipes/scottish_oatcakes?rev=1434056845&amp;do=diff</link>
+        <description>Scottish Oatcakes
+
+Bon Appetit, November 1998
+
+Ingredients:
+
+	*  1 1/2 cups old-fashioned oats
+	*  1 cup all purpose flour
+	*  1/2 cup sugar
+	*  1/2 teaspoon baking soda
+	*  1/4 teaspoon salt
+	*  1/2 cup chilled butter, cut into pieces
+	*  1/4 cup buttermilk</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/selena_s_stir_fry?rev=1278183407&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-07-03T14:56:47-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:selena_s_stir_fry</title>
+        <link>https://www.hybridsky.org/w/recipes/selena_s_stir_fry?rev=1278183407&amp;do=diff</link>
+        <description>Selena's Stir fry chicken (aka Sizzlin' Szechuan Chicken)
+from: “A Guy's Guide to great eating” by Don Mauer
+  Marinade and chicken
+* 1 tablespoon soy sauce
+* 1 tablespoon cornstarch
+* 1/2 teaspoon sugar
+* 1 garlic clove, minced
+* 1 whole skinless boneless chicken breast, cut into thin strips (or 1 pound shrimp, peeled and deveined)</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/sizzling_szechuan_chicken?rev=1442573595&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-09-18T06:53:15-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:sizzling_szechuan_chicken</title>
+        <link>https://www.hybridsky.org/w/recipes/sizzling_szechuan_chicken?rev=1442573595&amp;do=diff</link>
+        <description>Sizzling Szechuan Chicken
+
+From : Don Mauer, “A Guy's Guide to Great Eating”
+
+4 servings
+
+Ingredients:
+ Marinade and chicken: 
+ 
+* 1 tablespoon soy sauce
+* 1 tablespoon cornstarch
+* 1/2 teaspoon sugar
+* 1 garlic clove, minced
+* 1 whole skinless boneless chicken breast, cut into thin strips or pieces</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/sliced_sirloin_with_shallots_and_chive_sauce?rev=1416264192&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-11-17T17:43:12-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:sliced_sirloin_with_shallots_and_chive_sauce</title>
+        <link>https://www.hybridsky.org/w/recipes/sliced_sirloin_with_shallots_and_chive_sauce?rev=1416264192&amp;do=diff</link>
+        <description>Sliced Sirloin with Shallots and Chive Sauce 
+
+from Parade magazine: 2-28-1988
+
+ # 3 tablespoons unsalted butter 
+ # 2 tablespoons olive oil
+ # 1 Sirloin or London Broil steak, 2 lbs, trimmed
+ # 1/2 cup peeled and chopped shallots
+ # 1/4 cup chopped chives (save some for garnish)
+ # 1 tablespoon red wine vinegar
+ # 3/4 cup dry red wine
+ # salt and pepper to taste</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/slow_cooker_chinese_beef_and_bok_choy?rev=1434058012&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-06-11T17:26:52-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:slow_cooker_chinese_beef_and_bok_choy</title>
+        <link>https://www.hybridsky.org/w/recipes/slow_cooker_chinese_beef_and_bok_choy?rev=1434058012&amp;do=diff</link>
+        <description>Slow Cooker Chinese Beef and Bok Choy
+
+Food Network Magazine 2015
+
+Ingredients:
+
+	*  4 leeks; use the white and light green parts. Trim them, cut in half lengthwise, rinse very well! then chop into 1 inch pieces.
+	*  6 cloves garlic, unpeeled, washed</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/southern_black-eyed_peas?rev=1588127683&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-04-28T22:34:43-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:southern_black-eyed_peas</title>
+        <link>https://www.hybridsky.org/w/recipes/southern_black-eyed_peas?rev=1588127683&amp;do=diff</link>
+        <description>Southern Black-eyed Peas
+Ingredients:
+
+	*  1 pound (453 gms) dry black-eyed peas
+	*  4-5 thick slices of (turkey) bacon
+	*  1 cup smoked sausage or turkey, diced
+	*  1 large onion, diced
+	*  2-3 teaspoons minced garlic
+	*  1 jalapeno, minced, or replace with cayenne pepper (optional)</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/spagetti_sauce?rev=1537577994&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2018-09-21T20:59:54-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:spagetti_sauce</title>
+        <link>https://www.hybridsky.org/w/recipes/spagetti_sauce?rev=1537577994&amp;do=diff</link>
+        <description>Spagetti Sauce
+
+Ingredients
+
+	*  1 yellow onion, diced
+	*  1 green or red bell pepper, diced
+	*  garlic, 2 to 3 cloves, crushed and peeled
+	*  Carrots, 2 medium, diced
+	*  Olive oil
+	*  28 ounce can tomato sauce
+	*  28 ounce can tomato puree
+	*  dried basil (a spoonful or two0</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/start?rev=1626876388&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-07-21T10:06:28-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:start</title>
+        <link>https://www.hybridsky.org/w/recipes/start?rev=1626876388&amp;do=diff</link>
+        <description>Recipes
+
+Main Dishes: Chicken
+
+	*   Daddy Chicken
+	*   Stir-fried chicken and greens with peanuts
+	*   Turkey Pot Pie
+	*   Chicken with Tarragon
+	*    Sizzling Szechuan Chicken
+	*    Italian Pesto Chicken Salad
+	*    Spagetti Sauce
+	*     Macaroni and Cheese 
+	*    Tandoori Chicken
+	*    One-Pan Coconut Milk-Braised Chicken
+	*   Thai Curry Chicken
+
+Main Dishes: Beef and/or Lamb
+
+	*   Spicy Lamb Burgers
+	*   Meatloaf
+	*   Sliced Sirloin with Shallots and Chive Sauce
+	*   Slow Cooker Chinese Beef …</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/stir_fry_shrimp_with_basil?rev=1256409385&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-10-24T14:36:25-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:stir_fry_shrimp_with_basil</title>
+        <link>https://www.hybridsky.org/w/recipes/stir_fry_shrimp_with_basil?rev=1256409385&amp;do=diff</link>
+        <description>Stir-fried Shrimp with Basil
+
+	* from: News and Observer, April 2000
+
+	* 2 tablespoons peanut or other oil, divided
+	* 1 pound large shrimp, shelled and deveined
+	* 1 small onion, halved and thinly sliced
+	* 2 tablespoons red curry paste
+	* 1 medium red bell pepper, cut into thin strips</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/stuffed_zucchini_squash?rev=1593646161&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-07-01T19:29:21-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:stuffed_zucchini_squash</title>
+        <link>https://www.hybridsky.org/w/recipes/stuffed_zucchini_squash?rev=1593646161&amp;do=diff</link>
+        <description>Stuffed Zucchini Squash
+
+Ingredients:
+
+	*  4 medium  zucchini squash (about 1.5 pounds)
+	*  1/2 cup water
+	*  1/2 teaspoon salt
+	*  2 tablespoons butter
+	*  1 tomato, diced
+	*  1/2 cup soft bread crumbs
+	*  1/2 cup cottage cheese
+	*  1 egg, beaten
+	*</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/thai_curry_chicken?rev=1626877414&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-07-21T10:23:34-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:thai_curry_chicken</title>
+        <link>https://www.hybridsky.org/w/recipes/thai_curry_chicken?rev=1626877414&amp;do=diff</link>
+        <description>Thai Curry Chicken
+
+(This is based on Thira's recipe from the late 1980's.)
+
+Ingredients
+
+	*  4 potatoes, diced
+	*  2 sweet onions, diced
+	*  1 pound boneless skinless chicken breast, diced
+	*  1 head of garlic, minced
+	*  1 4oz can curry (e.g., Maesri brand panang, or other)</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/tossed_greens_and_grapes_salad?rev=1551475266&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2019-03-01T16:21:06-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:tossed_greens_and_grapes_salad</title>
+        <link>https://www.hybridsky.org/w/recipes/tossed_greens_and_grapes_salad?rev=1551475266&amp;do=diff</link>
+        <description>Tossed Greens and Grapes Salad
+
+	*  3/4 cup olive oil
+	*  1/4 cup red wine vinegar
+	*  1 1/2 tablespoon Dijon mustard
+	*  1 1/2 teaspoon honey
+	*  1/8 teaspoon salt
+	*  1/8 teaspoon pepper
+	*  1 (5 ounce) package Spring greens or baby greens
+	*  2 cups seedless red grapes, halved and rinsed well</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/turkey_pot_pie?rev=1262563907&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-01-03T19:11:47-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:turkey_pot_pie</title>
+        <link>https://www.hybridsky.org/w/recipes/turkey_pot_pie?rev=1262563907&amp;do=diff</link>
+        <description>Turkey Pot Pie
+
+ Bon Appetit, November 2009
+
+Oven 400F.
+
+	*  2 tablespoons olive oil
+	*  1 cup chopped onion
+	*  6-8 oz sliced mushrooms
+	*  1 cup thinly sliced peeled carrots, about 3 
+	*  1/2 cup diced leftover cooked veges
+	*  1 1/2 cups cubed cooked turkey</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/vegan_bulgogi?rev=1620489381&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-05-08T11:56:21-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:vegan_bulgogi</title>
+        <link>https://www.hybridsky.org/w/recipes/vegan_bulgogi?rev=1620489381&amp;do=diff</link>
+        <description>Vegan Bulgogi
+(The Guardian 5-8-21)
+
+Ingredients
+
+	*  280g extra-ﬁrm tofu
+	*  4 tbsp light soy sauce
+	*  1½ tbsp brown rice syrup
+	*  5 garlic cloves, peeled and crushed
+	*  3cm piece fresh ginger, peeled and grated
+	*  1 pear, coarsely grated
+	*</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/verzada?rev=1236783234&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-03-11T10:53:54-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:verzada</title>
+        <link>https://www.hybridsky.org/w/recipes/verzada?rev=1236783234&amp;do=diff</link>
+        <description>Verzada Asturiana
+
+from“Clarita's Cocina”
+ by Clarita del Palacio Valdes de Garcia
+
+Ingredients:
+
+	*  1 small ham hock (optional)
+	*  2 chorizo sausages
+	*  Quarter pound  slab smoked bacon (optional) 
+	*  2 morzillas(pork blood sausage, optional)</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/white_bean_soup?rev=1240929679&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-28T10:41:19-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:white_bean_soup</title>
+        <link>https://www.hybridsky.org/w/recipes/white_bean_soup?rev=1240929679&amp;do=diff</link>
+        <description>White Bean Soup with Bacon
+from:“Not your mother's Slow Cooker Cookbook” by Beth Hensperger and Julie Kaufmann
+
+Ingredients:
+
+	*  2 cups dried navy or Great Northern beans, rinsed, picked over
+	*  2 to 3 strips bacon, fried and dried on towels, crumbled; or 1 sausage, or ham bone.</description>
+    </item>
+    <item rdf:about="https://www.hybridsky.org/w/recipes/wilted_spinach_salad?rev=1595172366&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-07-19T11:26:06-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:wilted_spinach_salad</title>
+        <link>https://www.hybridsky.org/w/recipes/wilted_spinach_salad?rev=1595172366&amp;do=diff</link>
+        <description>Wilted spinach salad
+
+This salad has been on the menu since the restaurant opened and is still a
+favourite we make every day. The spinach is tossed with very hot olive oil, which
+cooks it slightly, sweetening and softening the leaves. As the feta cheese and the
+olives are both salty, no additional salt is needed.</description>
+    </item>
+</rdf:RDF>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="https://hybridsky.org/w/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://hybridsky.org/w/feed.php">
+        <title>alephnull.com photos</title>
+        <description></description>
+        <link>https://hybridsky.org/w/</link>
+        <image rdf:resource="https://hybridsky.org/w/lib/tpl/alephnull/images/favicon.ico" />
+       <dc:date>2021-08-04T20:57:15-0400</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://hybridsky.org/w/photos/start?rev=1254785552&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://hybridsky.org/w/lib/tpl/alephnull/images/favicon.ico">
+        <title>alephnull.com</title>
+        <link>https://hybridsky.org/w/</link>
+        <url>https://hybridsky.org/w/lib/tpl/alephnull/images/favicon.ico</url>
+    </image>
+    <item rdf:about="https://hybridsky.org/w/photos/start?rev=1254785552&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-10-05T19:32:32-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>photos:start</title>
+        <link>https://hybridsky.org/w/photos/start?rev=1254785552&amp;do=diff</link>
+        <description>Photos
+
+Strawberry bush
+
+Along the trails at  Medoc Mountain, we were stuck by the Euonymus_americanus bush, with orange berries that apparently had burst from a strawberry-like structure.  These evergreen shrubs are in the Celastraceae family and very different from eatable stawberries (which are in the</description>
+    </item>
+</rdf:RDF>

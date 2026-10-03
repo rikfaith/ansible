@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="https://alephnull.com/w/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://alephnull.com/w/feed.php">
+        <title>alephnull.com</title>
+        <description></description>
+        <link>https://alephnull.com/w/</link>
+        <image rdf:resource="https://alephnull.com/w/lib/tpl/alephnull/images/favicon.ico" />
+       <dc:date>2025-04-27T18:59:53-0400</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://alephnull.com/w/garden/garden?rev=1739726169&amp;do=diff"/>
+                <rdf:li rdf:resource="https://alephnull.com/w/garden/plantings?rev=1739744245&amp;do=diff"/>
+                <rdf:li rdf:resource="https://alephnull.com/w/recipes/christmas_stollen?rev=1639688645&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://alephnull.com/w/lib/tpl/alephnull/images/favicon.ico">
+        <title>alephnull.com</title>
+        <link>https://alephnull.com/w/</link>
+        <url>https://alephnull.com/w/lib/tpl/alephnull/images/favicon.ico</url>
+    </image>
+    <item rdf:about="https://alephnull.com/w/garden/garden?rev=1739726169&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2025-02-16T12:16:09-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>garden:garden</title>
+        <link>https://alephnull.com/w/garden/garden?rev=1739726169&amp;do=diff</link>
+        <description>Garden 2007
+
+Raised Beds 2007:
+Bed 1, near garage, near house:
+Tomatoes Brandywine, (Seeds of Change). Grew well, many tomatoes initially, then with drought, had problems with decreased production and blossom end rot. Note:  leave more room for plants and stake them well.</description>
+    </item>
+    <item rdf:about="https://alephnull.com/w/garden/plantings?rev=1739744245&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2025-02-16T17:17:25-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>garden:plantings</title>
+        <link>https://alephnull.com/w/garden/plantings?rev=1739744245&amp;do=diff</link>
+        <description>Strike-through Text
+
+Garden: Plantings 2008
+
+2007 or 2008: Corylus avellana 'contorted', “Harry lauder's Walking stick”, by garage, next to walkway to garden.
+2007 or 2008, planted 2 Honeysuckle,“halls”, on either side of back porch stairs. (Direct Gardening). By 2009, they are covering the trellises there and are cold hardy. Many perfumed flowers in Spring.</description>
+    </item>
+    <item rdf:about="https://alephnull.com/w/recipes/christmas_stollen?rev=1639688645&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-12-16T16:04:05-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:christmas_stollen</title>
+        <link>https://alephnull.com/w/recipes/christmas_stollen?rev=1639688645&amp;do=diff</link>
+        <description>Christmas Stollen, (from Bon Appetit, 12-20-2012)
+
+ Hot Bread Kitchen Head Baker Ben Hershberger's Stollen
+Makes 2 loaves
+
+INGREDIENTS
+
+FRUIT MIX (Make three days ahead of time)
+
+1 cup raisins
+1/2 cup dried cherries
+1/4 cup candied lemon peel
+1/4 cup candied orange peel
+1 teaspoon vanilla extract
+1/2 cup Meyers Rum
+1/2 cup brandy
+Enough hot water to cover mixture</description>
+    </item>
+</rdf:RDF>

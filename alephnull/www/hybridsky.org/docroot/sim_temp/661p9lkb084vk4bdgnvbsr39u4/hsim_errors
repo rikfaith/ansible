@@ -1,0 +1,3 @@
+Error: N2O Flux (1.4) is higher than threshold (0.8)
+Warning: Core to Throat area ratio (2.9) less than threshold (3.0)
+Error: Injector pressure drop (41.4) less than 0.3 times chamber pressure (386.4)

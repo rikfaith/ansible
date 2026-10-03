@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="https://alephnull.org/w/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://alephnull.org/w/feed.php">
+        <title>alephnull.com dict</title>
+        <description></description>
+        <link>https://alephnull.org/w/</link>
+        <image rdf:resource="https://alephnull.org/w/lib/tpl/alephnull/images/favicon.ico" />
+       <dc:date>2026-09-02T15:57:39-0400</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://alephnull.org/w/dict/start?rev=1203253793&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://alephnull.org/w/lib/tpl/alephnull/images/favicon.ico">
+        <title>alephnull.com</title>
+        <link>https://alephnull.org/w/</link>
+        <url>https://alephnull.org/w/lib/tpl/alephnull/images/favicon.ico</url>
+    </image>
+    <item rdf:about="https://alephnull.org/w/dict/start?rev=1203253793&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-02-17T08:09:53-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>dict:start</title>
+        <link>https://alephnull.org/w/dict/start?rev=1203253793&amp;do=diff</link>
+        <description>Notes on Dictionaries and Public Domain Works
+
+	*   The DICT Development Group
+	*   Subverted Public Domain List
+	*   How Can I Tell Whether a Book Can Go Online?
+	*   Copyright Term and the Public Domain in the United States</description>
+    </item>
+</rdf:RDF>

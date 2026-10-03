@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Break Out Box Notes</title>
+<style type="text/css">
+<!--
+li {
+	font-family: Arial, Helvetica, sans-serif;
+}
+td {
+	font-family: Arial, Helvetica, sans-serif;
+}
+-->
+</style>
+<link href="../styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<table width="1024">
+  <tr>
+    <td colspan="2"><a href="../index.html"><img src="../hybridsky.png" width="499" height="112" border="0" /></a> </td>
+  </tr>
+  <tr>
+    <td  align="center"><h3> <a href="../p1/index.html">P1</a>: Nitrous at Balls in '08</h3>
+      <h2><a href="control.html">Hybrid Launch Control</a></h2>
+      <p>Last Update, 11/3/07 by Stephen Daniel </p></td>
+  </tr>
+  <tr>
+    <td><h3>Break Out Box Design Notes</h3>
+      <p>This page contains random notes we wanted to save on the design of the break-out box. </p>
+      <h4>Notes on the Schematics </h4>
+      <ul>
+        <li>LED channel indicator
+          <ul>
+            <li> LSDiodes 5mm T1-3/4 Green</li>
+            <li>3.3V 20mA nominal</li>
+          </ul>
+        </li>
+        <li>Calculating the limiting resistor for the indicator diode:
+          <ul>
+            <li>1N4148 @ 20mA has a 1.0V forward drop</li>
+            <li>8V supply</li>
+            <li>MOSFET = IRF3709 has a
+              negligible on-voltage drop</li>
+            <li>LED + diode have 4.3V forward drop</li>
+            <li>need 3.7V resistor drop<br />
+              R=V/I  R = 3.7/0.020 = 185 Ohm<br />
+              Using actual 200 Ohm</li>
+          </ul>
+        </li>
+        <li>Jumper wires are 12 gauge (These are used for a number of high-current internal connections on the PCB) </li>
+        <li>16AWG wire for high-current connectors (Wires from the PCB to the high-current connectors.) </li>
+      </ul>
+      <h4>Cable and Connector Pinouts</h4>
+      <ul>
+        <li>Signal Cable Pinout<br />
+          <blockquote>The signal cable connector is designed for a 9-wire cable.
+            We've wired it with a cat-5 cable (4 twisted pairs).
+            We've left channel 5 unwired as a result.
+            <blockquote>
+              <table>
+                <tr>
+                  <th>Pin</th>
+                  <th>Signal</th>
+                  <th>Color</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>+8 V</td>
+                  <td>blue/w</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>ch 0</td>
+                  <td>blue</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>ch 1</td>
+                  <td>o/w</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>ch 2 </td>
+                  <td>o</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>ch 3 </td>
+                  <td>br/w</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>ch 4 </td>
+                  <td>br</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>ch 5 </td>
+                  <td>N/C</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>ch 6 </td>
+                  <td>g/w</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>gnd</td>
+                  <td>g</td>
+                </tr>
+              </table>
+            </blockquote>
+          </blockquote>
+        </li>
+        <li>Solenoid Cable Pinout
+          <blockquote>The solenoid cable is a simple two-wire power cable.
+            The + wire is connected (through a fuse) to the positive supply voltage.  The Vsw signal is switched by a power MOSFET to ground.
+            <blockquote>
+              <table>
+                <tr>
+                  <th>Pin</th>
+                  <th>Signal</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>V+</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Vsw</td>
+                </tr>
+              </table>
+            </blockquote>
+          </blockquote>
+        </li>
+        <li>Power Cable Pinout
+          <blockquote>The power cable is designed to conform to the solenoid cables.  Thus solenoids can be tested by simply connecting the power cable to a solenoid cable, bypassing the break-out box.
+            <blockquote>
+              <table>
+                <tr>
+                  <th>Pin</th>
+                  <th>Signal</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>V+</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>gnd</td>
+                </tr>
+              </table>
+            </blockquote>
+          </blockquote>
+        </li>
+      </ul></td>
+  </tr>
+</table>
+</body>
+</html>

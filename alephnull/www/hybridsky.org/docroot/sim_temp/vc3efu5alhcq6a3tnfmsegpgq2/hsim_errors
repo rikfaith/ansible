@@ -1,0 +1,4 @@
+./hsim: Warning: Creating Nozzle Ratio data for 4.2178 (./cpropepdata/PVC.Nzr.4218)
+./createNzr: Using PVC as the fuel
+Warning: Core to Throat area ratio (2.2) less than threshold (3.0)
+WARNING: Supply tank to flight tank pressure drop (-93 psi) is less than 100 psi

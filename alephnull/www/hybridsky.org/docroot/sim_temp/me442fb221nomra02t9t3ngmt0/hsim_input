@@ -1,0 +1,20 @@
+fuel PBAN
+tankheight 24 in
+ullageheight 0.5 in
+tankdia 196 mm
+ventdia 25 mm
+ventcd 0.25 
+grainlength 24 in
+graindiameter 190 mm
+graincore 114 mm
+cstaradj 0.95 
+injectordia 2 mm
+injectorcount 1 
+injectorcd 0.7 
+nozzlethroat 38 mm
+nozzleexit 54 mm
+nozcfadj 0.9 
+filldrop 95 psi
+filltemp 65 F
+drymass 5 kg
+ambientpressure 1 atm

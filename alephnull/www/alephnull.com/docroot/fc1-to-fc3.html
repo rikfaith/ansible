@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+    <head>
+        <title>Fedora Core 1 to 3 Upgrade (fc1-to-fc3)</title>
+      </head>
+
+    <body>
+    
+
+    <p>
+There isn't much on the web regarding Fedora Core 1 to 3 upgrades using
+yum.  Below is what I did to move a system from FC1 to FC3.  YMMV.
+
+      <p>
+See also <a href="https://www.olen.net/node/194">Ola Thoresen's FC1 to
+FC3 notes</a>
+
+<pre>
+
+# Download some stuff you'll need
+# FROM FC2
+kernel-2.6.5-1.358.i686.rpm
+
+# FROM FC3
+fedora-release-3-8.i386.rpm
+RPM-GPG-KEY
+RPM-GPG-KEY-beta
+RPM-GPG-KEY-fedora
+RPM-GPG-KEY-fedora-rawhide
+RPM-GPG-KEY-fedora-test
+RPM-GPG-KEY-rawhide
+yum-2.1.11-3.noarch.rpm
+yum-2.1.11-3.src.rpm
+
+# FROM OTHER PLACES (if you intend to create your own yum repository)
+createrepo-0.4.2-1.noarch.rpm
+
+# GET NEW KEYS
+rpm --import RPM-GPG-KEY*
+
+# INSTALL fedora-release.rpm
+rpm -Uvh --force fedora-release-3-8.i386.rpm
+
+# UPGRADE yum, temporarily
+rm -f /usr/src/redhat/RPMS/noarch/yum-2.1.11-3.noarch.rpm
+rpmbuild --rebuild yum-2.1.11-3.src.rpm
+rpm -e yum
+rm -rf /usr/share/yum-cli/
+rpm -Uvh /usr/src/redhat/RPMS/noarch/yum-2.1.11-3.noarch.rpm
+
+# EDIT yum.conf
+# Fix up /etc/yum.conf and /etc/yum.repo.d/*
+# I moved the files in repo and put this in yum.conf:
+# You probably don't need all these excludes
+
+exclude=am-utils amanda* anacron arpwatch autofs bootparamd dbskkd-cdb
+ddskk dovecot epiphany firstboot freeradius gnome-kerberos *hpoj*
+hwcrypto inn* ipchains irda-utils iscsi isdn4k-utils* isicom
+kernel-BOOT kernel-pcmcia-cs kernel-smp *krb5* mailman mars-nwe mc
+mozplugger mysql-server netatalk netdump* ntsysv openldap-servers
+pidentd pump-devel radvd rarpd rhn-applet routed rsh-server
+rusers-server rwall-server rwho skkinput talk* telnet-server tux
+xisdnload xojpanel yp-tools ypbind ypserv ytalk php-manual lilo flim*
+w3m* wl*
+
+[base]
+name=Fedora Core $releasever - $basearch - Base
+baseurl=file:/ftp/FC3/i386/
+enabled=1
+gpgcheck=1
+
+# TEST yum
+yum list updates
+
+# UPGRADE rpm python and libxml2.  This is a slow, tedious process of
+# eliminating failed dependencies and dealing with a yum that cores.
+# Here is approximately what I ended up doing, but this isn't exact,
+# since I was distracted by conflicts -- don't be (and, especially,
+# don't erase shadow-utils, mkinitrd, or initscripts).  Whatever you do,
+# do NOT upgrade rpm or python without using yum!  (Note that Ola says
+# you don't have to replace the kernel until after this step.)
+
+yum erase nscd
+yum erase cups
+yum erase qemu
+yum erase evolution
+rpm -e --nodeps `rpm -qa | fgrep XFree`
+yum erase postgresql-python
+rpm -e --nodeps tcsh
+
+rpm -e redhat-config-network
+rpm -e redhat-config-network-tui
+rpm -e redhat-config-date
+rpm -e redhat-config-samba
+rpm -e redhat-config-nfs
+rpm -e redhat-config-xfree86
+rpm -e redhat-config-mouse
+rpm -e redhat-config-soundcard
+rpm -e redhat-config-securitylevel
+rpm -e redhat-config-bind
+rpm -e redhat-config-rootpassword
+rpm -e redhat-config-kickstart
+rpm -e redhat-config-language
+rpm -e redhat-config-users
+rpm -e redhat-config-keyboard
+rpm -e authconfig-gtk
+rpm -e glibc-debug
+rpm -e kinput2-canna-wnn6
+
+rpm -ivh kernel-2.6.5-1.358.i686.rpm
+rpm -e kernel-2.4.22
+rpm -e kernel-2.4.22
+rpm -e --nodeps lvm
+
+yum erase libwpd
+rpm -e --nodeps gnome-libs-1.4.1.2.90
+rpm -e --nodeps gnome-vfs2-extras-0.99.10
+rpm -e --nodeps libgnome-2.4.0-1
+
+yum --obsoletes update rpm python libxml2
+
+# UPGRADE yum
+rpm -e yum
+rpm -Uvh yum-2.1.11-3.noarch.rpm
+
+# Upgrade everything
+# Edit your yum.conf again, and make sure yum can has no exclusions.
+# Add exclude=*gimp*
+yum --obsoletes update
+yum erase kernel-2.6.5
+
+yum erase `yum list extras | sed 's,\..*,,' | fgrep -v ' ' | fgrep -v Finished`
+# check to see if we got them all
+yum list extras
+# You may need to reinstall the GPG keys after this step, since we just
+# removed them :)
+# see what we're missing
+yum list available
+
+# See if we might be able to reboot
+cat /etc/grub.conf
+cat /etc/sysconfig/network-scripts/ifcfg-eth0
+
+# REBOOT
+reboot
+
+# Edit yum.conf to remove excluded gimp, if you want.  Maybe reboot first.
+yum upgrade
+</pre>
+</body>

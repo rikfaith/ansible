@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Project P1: Avionics and Recovery</title>
+<style type="text/css">
+<!--
+li {
+	font-family: Arial, Helvetica, sans-serif;
+}
+td {
+	font-family: Arial, Helvetica, sans-serif;
+}
+-->
+    </style>
+<link href="../../styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<table width="640">
+  <tr>
+    <td><a href="../../index.html"> <img src="../../hybridsky.png" width="499" height="112"
+                  border="0" /></a></td>
+  </tr>
+  <tr>
+    <td  align="center"><h3><a href="../index.html">P1</a>: Nitrous at Balls in '08</h3>
+      <h2>Avionics and Recovery Project</h2>
+      <p>Last Update: </p></td>
+  </tr>
+  <tr>
+    <td><h3>Altitude Measurement and Deployment</h3>
+      Currently, I'm thinking of using a commercial altimeter.
+      <h3>Telemetry</h3>
+      <h4>Radiometrix</h4>
+      <p> Our current (pre-BALLS) beacon uses a <a
+                  href="http://www.radiometrix.co.uk/">Radiometrix</a> <a
+                  href="specs/tx2rx2.pdf">TX2-433-40-5V and RX2-433-40-5V</a> transmitter and receiver, sold by <a
+                  href="http://www.lemosint.com/scripts/tx2.asp">Lemos
+        International</a> (for $24 and $40, respectively, in
+        May 2006). </p>
+      <p> The transmitter is 10mW at 433.92MHz.  We used a
+        hand-made <a
+                href="http://www.tfs.net/~petek/rockets/RDF/70ant.html">yagi</a> antenna for the receiver. </p>
+      <p> Radiometrix offers a 100mW version, tunable from 458.5-459.1MHz or
+        433.05-434.79MHz, the <a
+                  href="specs/tx2mrx2m.pdf">TX2M-458-5/RX2M-458-5 and
+        X2M-433-5/RX2M-433-5</a>.  The Lumos International price on these
+        was about $130 and $185, in quantities under 10. </p>
+      <h4>Aerocomm</h4>
+      <p> While at <a href="http://www.halted.com/">HSC</a>, I picked up a
+        pair of <a href="http://www.aerocomm.com/">Aerocomm</a> transceivers
+        for $65 each: <a
+                  href="specs/Datasheet_AC4424_HI.pdf">AC4424-200-01</a> (also with a <a href="specs/User_Manual_AC4424.pdf">user manual</a>).  These
+        are 200mW 2.4GHz frequency hopping spread spectrum radios with a 2
+        mile range.
+        These are listed on <a
+                  href="http://www.mouser.com/">Mouser's</a> <a
+                  href="specs/6.pdf">catalog page 6</a>. </p>
+      <p> More exciting is Aerocomm's 900MHz offering (<a
+                  href="specs/atasheet_AC4790.pdf">AC4790</a>), with 200mW rated to
+        4 miles, and 1W rated to 20 miles.
+        These are listed on <a
+                  href="http://www.mouser.com/">Mouser's</a> <a
+                  href="specs/5.pdf">catalog page 5</a>.  These are under $100 with
+        an antenna. </p>
+      <h3>HAC</h3>
+      <p> <a
+                  href="http://www.sparkfun.com/commerce/product_info.php?products_id=559">Sparkfun
+        Electronics</a> offers <a
+                  href="http://www.haccom.com/en.htm">SHENZHEN HAC TELECOM
+        TECHNOLOGY's</a> <a href="specs/HAC-LN96.pdf">HAC-LN96</a>, a 915MHz
+        500mW FSK-modulated transceiver rated to 1.5km for $90. </p>
+      <h3>Garmin</h3>
+      <p> We have been using the <a
+                  href="https://buy.garmin.com/shop/shop.do?pID=223&pvID=796">Garmin</a> <a href="specs/425_TechnicalSpecification.pdf">GPS 18
+        LVC</a>, available from <a
+                href="http://www.provantage.com/">Provantage</a> for $66
+        (2007) to $73 (2005).  These units have a built-in
+        antenna inside a plastic case with mounted magnets.  If
+        you pop the case open, and remove the plastic and the
+        magnets, the actual GPS unit is fairly small.  (The OEM
+        version has PPS output.)  Specs report velocity accurate
+        to 1000 knots (515 meters/s) below 60k feet (18000
+        meters). </p>
+      <p> The <a href="specs/GPS15_TechnicalSpecification.pdf">GPS
+        15</a> does not have an antenna, but lists for under $45
+        and may be a smaller and lighter-weight solution (10
+        grams). </p>
+      <h3>GPS Notes</h3>
+      <p> Unconfirmed claims on the net are that operational
+        limits for GPS units are restricted by law to:</p>
+      <ul>
+        <li> Acceleration: &lt; 4g (39.2m/s^2)</li>
+        <li> Motional Jerk: &lt; 20m/s^3</li>
+        <li> Altitude: 60000 feet (18000m)</li>
+        <li> Velocity: 1000 knots (515m/s)</li>
+      </ul>
+      <p> Unfortunately, no one seems to know what happens if you
+        exceeed a limit, or if the units continue to function
+        after exceeding a limit and then returning to a state that
+        is below all of the limits.  Apparently, either the
+        altitude <b>or</b> the velocity limit may be exceeded --
+        just not both simultaneously.  Of course, how any one
+        manufacturer meets these requirements could vary.  The
+        Garmin manual implies that, at high altitude, the velocity
+        will not be accurate, but doesn't discuss the possibility
+        of the unit disabling itself. </p></td>
+  </tr>
+</table>
+</body>
+</html>

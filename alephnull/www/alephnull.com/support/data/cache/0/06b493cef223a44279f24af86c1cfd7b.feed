@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://alephnull.com/w/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://alephnull.com/w/feed.php">
+        <title>alephnull.com</title>
+        <description></description>
+        <link>http://alephnull.com/w/</link>
+        <image rdf:resource="http://alephnull.com/w/lib/tpl/alephnull/images/favicon.ico" />
+       <dc:date>2020-12-13T14:32:19-05:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://alephnull.com/w/recipes/beet_salad_with_feta?rev=1607803448&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/recipes/start?rev=1607802062&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/recipes/beefy_mushroom_barley_soup?rev=1607802014&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/recipes/chili?rev=1605883659&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/recipes/deviled_eggs?rev=1605823750&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/recipes/best_low-carb_coleslaw?rev=1605745239&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/garden/plantings?rev=1604797852&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/garden/garden?rev=1602175124&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/garden/orchard?rev=1600655808&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/recipes/bisquick_substitute?rev=1599346828&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://alephnull.com/w/lib/tpl/alephnull/images/favicon.ico">
+        <title>alephnull.com</title>
+        <link>http://alephnull.com/w/</link>
+        <url>http://alephnull.com/w/lib/tpl/alephnull/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://alephnull.com/w/recipes/beet_salad_with_feta?rev=1607803448&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-12-12T15:04:08-05:00</dc:date>
+        <dc:creator>mcf</dc:creator>
+        <title>recipes:beet_salad_with_feta - created</title>
+        <link>http://alephnull.com/w/recipes/beet_salad_with_feta?rev=1607803448&amp;do=diff</link>
+        <description>Beet salad with Feta, from William Sonoma's “Mediterranean Cooking”,1997; recipes by Joyce Goldstein.
+
+Ingredients:
+
+	*  4 large or 8 small beets
+	*  1/2 cup extra-virgin olive oil
+	*  3 tablespoons red wine vinegar (or 1.4 cup fresh lemon juice)
+	*  1 clove garlic, minced
+	*  [1/2 cup chopped fresh mint, for vinaigrette]
+	*  1/2 teaspoon ground allspice
+	*  1 red onion, thinly sliced
+	*  6-7 oz watercress or lettuce mix or spinach, washed and stemmed
+	*  1 cup crumbled feta cheese</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/recipes/start?rev=1607802062&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-12-12T14:41:02-05:00</dc:date>
+        <dc:creator>mcf</dc:creator>
+        <title>recipes:start</title>
+        <link>http://alephnull.com/w/recipes/start?rev=1607802062&amp;do=diff</link>
+        <description>Main Dishes: Chicken
+
+	*   Daddy Chicken
+	*   Stir-fried chicken and greens with peanuts
+	*   Turkey Pot Pie
+	*   Chicken with Tarragon
+	*    Sizzling Szechuan Chicken
+	*    Italian Pesto Chicken Salad
+	*    Spagetti Sauce
+	*     Macaroni and Cheese 
+	*    Tandoori Chicken</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/recipes/beefy_mushroom_barley_soup?rev=1607802014&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-12-12T14:40:14-05:00</dc:date>
+        <dc:creator>mcf</dc:creator>
+        <title>recipes:beefy_mushroom_barley_soup - created</title>
+        <link>http://alephnull.com/w/recipes/beefy_mushroom_barley_soup?rev=1607802014&amp;do=diff</link>
+        <description>Beefy Mushroom Barley Soup
+from: Penzey's Spices
+
+Ingredients:
+
+	*  1 lb lean beef chuck (beef stew meat), cut into 1 inch cubes
+	*  2 tablespoons olive oil
+	*  3 medium or 2 large onions, coarsely chopped
+	*  10 oz fresh mushrooms, sliced
+	*  3 large carrots, sliced
+	*  1/2 cup pearl barley
+	*  7 cups beef broth (I used 1 4 cup container of beef brother and 3 cups water mixed with Penzey's beef base for 1 cup)
+	*  1 cup dry red wine (or tomato juice)
+	*  Salt and pepper to taste (instead, I use…</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/recipes/chili?rev=1605883659&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-11-20T09:47:39-05:00</dc:date>
+        <dc:creator>faith</dc:creator>
+        <title>recipes:chili - created</title>
+        <link>http://alephnull.com/w/recipes/chili?rev=1605883659&amp;do=diff</link>
+        <description>These recipes are all based on Rik's Mom's Chili recipe.
+
+Original
+
+
+
+	*  1/2 pound, ground chuck
+	*  chopped onion
+	*  8oz tomato sauce
+	*  1 can tomato soup
+	*  15oz red kidney beans
+	*  1 tsp flour
+	*  2-3 tsp chili powder
+	*  1 tsp brown sugar
+	*  cook 25 minutes</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/recipes/deviled_eggs?rev=1605823750&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-11-19T17:09:10-05:00</dc:date>
+        <dc:creator>mcf</dc:creator>
+        <title>recipes:deviled_eggs</title>
+        <link>http://alephnull.com/w/recipes/deviled_eggs?rev=1605823750&amp;do=diff</link>
+        <description>Deviled eggs, variations.
+
+1.Cover 1 dozen eggs with water and bring to a boil. Turn to low and let sit for 15 minutes. Turn off heat, let sit for 10 minutes, then drain water.
+2. Peel eggs, cut in half lengthwise and remove all yolks.
+3. Add yolks to bowl along with 1/4 cup mayonnaise.</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/recipes/best_low-carb_coleslaw?rev=1605745239&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-11-18T19:20:39-05:00</dc:date>
+        <dc:creator>mcf</dc:creator>
+        <title>recipes:best_low-carb_coleslaw - created</title>
+        <link>http://alephnull.com/w/recipes/best_low-carb_coleslaw?rev=1605745239&amp;do=diff</link>
+        <description>Best Low-carb Coleslaw (Food.com)
+
+	*  16 ounces shredded cabbage (about 1 small to medium cabbage)
+	*  1 small onion, thinly sliced
+	*  1/4 cup Splenda
+	*  1/2 teaspoon salt
+	*  1/2 teaspoon fresh ground black pepper
+	*  1/2 cup mayonnaise
+	*  1/2 cup whipping cream OR half-and-half OR buttermilk OR plain kefir
+	*  1 1/2 tablespoons white vinegar
+	*  2 1/2 tablespoons lemon juice</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/garden/plantings?rev=1604797852&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-11-07T20:10:52-05:00</dc:date>
+        <dc:creator>mcf</dc:creator>
+        <title>garden:plantings - [2019] </title>
+        <link>http://alephnull.com/w/garden/plantings?rev=1604797852&amp;do=diff</link>
+        <description>2007 or 2008: Corylus avellana 'contorted', “Harry lauder's Walking stick”, by garage, next to walkway to garden.
+2007 or 2008, planted 2 Honeysuckle,”halls”, on either side of back porch stairs. (Direct Gardening). By 2009, they are covering the trellises there and are cold hardy. Many perfumed flowers in Spring.</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/garden/garden?rev=1602175124&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-10-08T12:38:44-05:00</dc:date>
+        <dc:creator>mcf</dc:creator>
+        <title>garden:garden - [GARDEN 2018] </title>
+        <link>http://alephnull.com/w/garden/garden?rev=1602175124&amp;do=diff</link>
+        <description>Raised Beds 2007:
+Bed 1, near garage, near house:
+Tomatoes Brandywine, (Seeds of Change). Grew well, many tomatoes initially, then with drought, had problems with decreased production and blossom end rot. Note:  leave more room for plants and stake them well.</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/garden/orchard?rev=1600655808&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-09-20T22:36:48-05:00</dc:date>
+        <dc:creator>mcf</dc:creator>
+        <title>garden:orchard</title>
+        <link>http://alephnull.com/w/garden/orchard?rev=1600655808&amp;do=diff</link>
+        <description>04-07  planted Dwarf Patio Peach in contained round bed by garage, surrounded by mints.
+( Peach: dwarf ornamental form with double pink flowers; fruit is red/gold with small white-fleshed freestone. Leaves are long slender brilliant reddish purple throughout the season. Deciduous. Useful as accent or container plant. Hardiness zone 5-9. grown by Holland Nursery, Franklin, VA 23851.  Bought at Harris teeter, Chapel Hill, $29.99.)</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/recipes/bisquick_substitute?rev=1599346828&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-09-05T19:00:28-05:00</dc:date>
+        <dc:creator>mcf</dc:creator>
+        <title>recipes:bisquick_substitute - created</title>
+        <link>http://alephnull.com/w/recipes/bisquick_substitute?rev=1599346828&amp;do=diff</link>
+        <description>Bisquick® Substitute
+Yield: 1 cup
+
+INGREDIENTS
+1 cup all-purpose flour
+1 ½ teaspoons baking powder
+¼ teaspoon salt
+1 tablespoon butter
+
+Step 1
+Sift flour into a bowl; add baking powder and salt and whisk until fully incorporated. Cut butter into flour mixture using a pastry cutter until evenly combined.
+Shortening or oil can be used in place of the butter, if desired. If using melted butter, be sure to evenly disperse the butter as much as possible.</description>
+    </item>
+</rdf:RDF>

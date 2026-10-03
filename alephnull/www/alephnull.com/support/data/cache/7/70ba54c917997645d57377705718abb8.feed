@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="https://www.alephnull.org/w/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://www.alephnull.org/w/feed.php">
+        <title>alephnull.com 1</title>
+        <description></description>
+        <link>https://www.alephnull.org/w/</link>
+        <image rdf:resource="https://www.alephnull.org/w/lib/tpl/alephnull/images/favicon.ico" />
+       <dc:date>2026-08-18T07:16:57-0400</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/1/2_birthday_cake_2022?rev=1644463776&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://www.alephnull.org/w/lib/tpl/alephnull/images/favicon.ico">
+        <title>alephnull.com</title>
+        <link>https://www.alephnull.org/w/</link>
+        <url>https://www.alephnull.org/w/lib/tpl/alephnull/images/favicon.ico</url>
+    </image>
+    <item rdf:about="https://www.alephnull.org/w/1/2_birthday_cake_2022?rev=1644463776&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-02-09T22:29:36-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>1:2_birthday_cake_2022</title>
+        <link>https://www.alephnull.org/w/1/2_birthday_cake_2022?rev=1644463776&amp;do=diff</link>
+        <description>Ideas for 1/2 birthday cake 2022 in Atlanta:
+
+&lt;https://www.livewellbakeoften.com/red-velvet-cupcakes/#wprm-recipe-container-18093&gt;
+
+&lt;https://www.cookingclassy.com/red-velvet-cake/&gt;
+
+Cake flour contains the perfect amount of protein to give your cake structure and create the texture you're after.
+Cake flour will result in lighter, fluffy cupcake. AP flour will be denser.</description>
+    </item>
+</rdf:RDF>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="https://urmp.org/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://urmp.org/feed.php">
+        <title>urmp: the ur music player</title>
+        <description></description>
+        <link>https://urmp.org/</link>
+        <image rdf:resource="https://urmp.org/lib/tpl/urmp/images/favicon.ico" />
+       <dc:date>2026-10-02T15:50:07-0400</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://urmp.org/docs?rev=1241065194&amp;do=diff"/>
+                <rdf:li rdf:resource="https://urmp.org/sidebar?rev=1248269512&amp;do=diff"/>
+                <rdf:li rdf:resource="https://urmp.org/start?rev=1241543164&amp;do=diff"/>
+                <rdf:li rdf:resource="https://urmp.org/urmp?rev=1241125403&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://urmp.org/lib/tpl/urmp/images/favicon.ico">
+        <title>urmp: the ur music player</title>
+        <link>https://urmp.org/</link>
+        <url>https://urmp.org/lib/tpl/urmp/images/favicon.ico</url>
+    </image>
+    <item rdf:about="https://urmp.org/docs?rev=1241065194&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-30T00:19:54-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>docs</title>
+        <link>https://urmp.org/docs?rev=1241065194&amp;do=diff</link>
+        <description>Documentation
+
+Building
+./bootstrap
+./configure
+make
+Required Packages
+
+To build, it may be necessary to install additional software:
+apt-get install autoconf automake pkg-config libtool
+apt-get install libgtk2.0-dev
+apt-get install libpcre3-dev
+urmp will not build on an Ubuntu 7.10 (Gutsy Gibbon), or earlier, system.</description>
+    </item>
+    <item rdf:about="https://urmp.org/sidebar?rev=1248269512&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-07-22T09:31:52-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>sidebar</title>
+        <link>https://urmp.org/sidebar?rev=1248269512&amp;do=diff</link>
+        <description>Downloading and Compiling
+
+ Documentation
+
+ Screenshots
+
+ Todo List
+
+ Known Bugs
+
+ Notes
+
+
+
+
+
+ Help with wiki syntax</description>
+    </item>
+    <item rdf:about="https://urmp.org/start?rev=1241543164&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-05-05T13:06:04-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>start</title>
+        <link>https://urmp.org/start?rev=1241543164&amp;do=diff</link>
+        <description>urmp: The Ur Music Player
+
+The goals of urmp are to provide an MP3 music player that can do the following:
+
+	*  incrementally search a 60k song playlist in under 50ms per keystroke;
+	*  process mp3 files, extracting ID3 and MP3 data, at a rate of thousands of songs per minute;</description>
+    </item>
+    <item rdf:about="https://urmp.org/urmp?rev=1241125403&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-30T17:03:23-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>urmp</title>
+        <link>https://urmp.org/urmp?rev=1241125403&amp;do=diff</link>
+        <description>urmp: The Ur Music Player
+
+The goals of urmp are to provide an MP3 music player that can do the following:
+
+	*  incrementally search a 60k song playlist in under 50ms per keystroke;
+	*  process mp3 files, extracting ID3 and MP3 data, at a rate of thousands of songs per minute;</description>
+    </item>
+</rdf:RDF>

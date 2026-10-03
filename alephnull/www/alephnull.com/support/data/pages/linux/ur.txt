@@ -1,0 +1,5 @@
+====== The ur library ======
+The ur library of data structures and algorithms is now hosted at the web site for [[http://urmp.org/|urmp: The Ur Music Player]].
+
+===== Notes and Resources =====
+  * BSD-licensed [[http://www.ouah.org/ogay/sha2/ | SHA-2 implementation]]

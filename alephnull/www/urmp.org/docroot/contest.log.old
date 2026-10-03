@@ -1,0 +1,859 @@
+s=1248029029 time="Sun Jul 19 14:43:49 2009" host=sol pid=25427 status=exit words=1000 key="exit" elapsed=0 rate=0
+s=1248029250 time="Sun Jul 19 14:47:30 2009" host=lg-dell2650-6 pid=22236 status=exit words=1000 key="exit" elapsed=0 rate=0
+s=1248116567 time="Mon Jul 20 15:02:47 2009" host=char pid=15863 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0 rate=0
+s=1248116567 time="Mon Jul 20 15:02:47 2009" host=char pid=15863 status=nphr phrase="h1 id ci db n Rb h3 aR iO IS h2 vi " elapsed=0 rate=0
+s=1248116567 time="Mon Jul 20 15:02:47 2009" host=char pid=15863 status=goal dist=77 phrase="h1 id ci db n Rb h3 aR iO IS h2 vi AAAAA" elapsed=0 rate=0
+s=1248116567 time="Mon Jul 20 15:02:47 2009" host=char pid=15863 status=goal dist=75 phrase="h1 id ci db n Rb h3 aR iO IS h2 vi AAAAC" elapsed=0 rate=0
+s=1248116568 time="Mon Jul 20 15:02:48 2009" host=char pid=15863 status=goal dist=73 phrase="h1 id ci db n Rb h3 aR iO IS h2 vi AAAAE" elapsed=1 rate=0
+s=1248116568 time="Mon Jul 20 15:02:48 2009" host=char pid=15863 status=goal dist=72 phrase="h1 id ci db n Rb h3 aR iO IS h2 vi AAAAI" elapsed=1 rate=0
+s=1248116568 time="Mon Jul 20 15:02:48 2009" host=char pid=15863 status=goal dist=67 phrase="h1 id ci db n Rb h3 aR iO IS h2 vi AAAAa" elapsed=1 rate=0
+s=1248116569 time="Mon Jul 20 15:02:49 2009" host=char pid=15863 status=goal dist=63 phrase="h1 id ci db n Rb h3 aR iO IS h2 vi AAAA4" elapsed=1 rate=0
+s=1248116569 time="Mon Jul 20 15:02:49 2009" host=char pid=15863 status=goal dist=60 phrase="h1 id ci db n Rb h3 aR iO IS h2 vi AAAdE" elapsed=2 rate=0
+s=1248116569 time="Mon Jul 20 15:02:49 2009" host=char pid=15863 status=goal dist=59 phrase="h1 id ci db n Rb h3 aR iO IS h2 vi AAA5R" elapsed=2 rate=0
+s=1248116569 time="Mon Jul 20 15:02:49 2009" host=char pid=15863 status=goal dist=56 phrase="h1 id ci db n Rb h3 aR iO IS h2 vi AABmy" elapsed=2 rate=0
+s=1248116569 time="Mon Jul 20 15:02:49 2009" host=char pid=15863 status=goal dist=55 phrase="h1 id ci db n Rb h3 aR iO IS h2 vi AACL6" elapsed=2 rate=0
+s=1248116570 time="Mon Jul 20 15:02:50 2009" host=char pid=15863 status=goal dist=52 phrase="h1 id ci db n Rb h3 aR iO IS h2 vi AAKWI" elapsed=2 rate=0
+s=1248116570 time="Mon Jul 20 15:02:50 2009" host=char pid=15863 status=goal dist=50 phrase="h1 id ci db n Rb h3 aR iO IS h2 vi AB9qn" elapsed=3 rate=0
+s=1248116570 time="Mon Jul 20 15:02:50 2009" host=char pid=15863 status=goal dist=49 phrase="h1 id ci db n Rb h3 aR iO IS h2 vi ACIly" elapsed=3 rate=0
+s=1248116572 time="Mon Jul 20 15:02:52 2009" host=char pid=15863 status=goal dist=48 phrase="h1 id ci db n Rb h3 aR iO IS h2 vi AP8cF" elapsed=5 rate=835944
+s=1248116588 time="Mon Jul 20 15:03:08 2009" host=char pid=15863 status=goal dist=46 phrase="h1 id ci db n Rb h3 aR iO IS h2 vi Bh5ms" elapsed=21 rate=1222091
+s=1248116603 time="Mon Jul 20 15:03:23 2009" host=char pid=15863 status=goal dist=45 phrase="h1 id ci db n Rb h3 aR iO IS h2 vi D5v7I" elapsed=36 rate=1818615
+s=1248116616 time="Mon Jul 20 15:03:36 2009" host=char pid=16350 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0 rate=0
+s=1248116616 time="Mon Jul 20 15:03:36 2009" host=char pid=16350 status=nphr phrase="n h2 cI Db h1 vi h3 id iO AR Rb Is " elapsed=0 rate=0
+s=1248116616 time="Mon Jul 20 15:03:36 2009" host=char pid=16350 status=goal dist=86 phrase="n h2 cI Db h1 vi h3 id iO AR Rb Is AAAAA" elapsed=0 rate=0
+s=1248116616 time="Mon Jul 20 15:03:36 2009" host=char pid=16350 status=goal dist=83 phrase="n h2 cI Db h1 vi h3 id iO AR Rb Is AAAAB" elapsed=0 rate=0
+s=1248116617 time="Mon Jul 20 15:03:37 2009" host=char pid=16350 status=goal dist=81 phrase="n h2 cI Db h1 vi h3 id iO AR Rb Is AAAAC" elapsed=0 rate=0
+s=1248116617 time="Mon Jul 20 15:03:37 2009" host=char pid=16350 status=goal dist=78 phrase="n h2 cI Db h1 vi h3 id iO AR Rb Is AAAAE" elapsed=1 rate=0
+s=1248116617 time="Mon Jul 20 15:03:37 2009" host=char pid=16350 status=goal dist=71 phrase="n h2 cI Db h1 vi h3 id iO AR Rb Is AAAAF" elapsed=1 rate=0
+s=1248116617 time="Mon Jul 20 15:03:37 2009" host=char pid=16350 status=goal dist=69 phrase="n h2 cI Db h1 vi h3 id iO AR Rb Is AAAAR" elapsed=1 rate=0
+s=1248116617 time="Mon Jul 20 15:03:37 2009" host=char pid=16350 status=goal dist=65 phrase="n h2 cI Db h1 vi h3 id iO AR Rb Is AAAAh" elapsed=1 rate=0
+s=1248116618 time="Mon Jul 20 15:03:38 2009" host=char pid=16350 status=goal dist=61 phrase="n h2 cI Db h1 vi h3 id iO AR Rb Is AAAA8" elapsed=2 rate=0
+s=1248116618 time="Mon Jul 20 15:03:38 2009" host=char pid=16350 status=goal dist=60 phrase="n h2 cI Db h1 vi h3 id iO AR Rb Is AAAFz" elapsed=2 rate=0
+s=1248116618 time="Mon Jul 20 15:03:38 2009" host=char pid=16350 status=goal dist=59 phrase="n h2 cI Db h1 vi h3 id iO AR Rb Is AAAiB" elapsed=2 rate=0
+s=1248116618 time="Mon Jul 20 15:03:38 2009" host=char pid=16350 status=goal dist=58 phrase="n h2 cI Db h1 vi h3 id iO AR Rb Is AABc0" elapsed=2 rate=0
+s=1248116619 time="Mon Jul 20 15:03:39 2009" host=char pid=16350 status=goal dist=55 phrase="n h2 cI Db h1 vi h3 id iO AR Rb Is AAESd" elapsed=2 rate=0
+s=1248116619 time="Mon Jul 20 15:03:39 2009" host=char pid=16351 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0 rate=0
+s=1248116619 time="Mon Jul 20 15:03:39 2009" host=char pid=16351 status=nphr phrase="N H2 Ci Vi is ID h3 aR io db Rb h1 " elapsed=0 rate=0
+s=1248116619 time="Mon Jul 20 15:03:39 2009" host=char pid=16350 status=goal dist=52 phrase="n h2 cI Db h1 vi h3 id iO AR Rb Is AAbHY" elapsed=3 rate=0
+s=1248116619 time="Mon Jul 20 15:03:39 2009" host=char pid=16351 status=goal dist=81 phrase="N H2 Ci Vi is ID h3 aR io db Rb h1 AAAAA" elapsed=0 rate=0
+s=1248116619 time="Mon Jul 20 15:03:39 2009" host=char pid=16350 status=goal dist=49 phrase="n h2 cI Db h1 vi h3 id iO AR Rb Is AA6Be" elapsed=3 rate=0
+s=1248116619 time="Mon Jul 20 15:03:39 2009" host=char pid=16351 status=goal dist=72 phrase="N H2 Ci Vi is ID h3 aR io db Rb h1 AAAAB" elapsed=0 rate=0
+s=1248116619 time="Mon Jul 20 15:03:39 2009" host=char pid=16351 status=goal dist=64 phrase="N H2 Ci Vi is ID h3 aR io db Rb h1 AAAAJ" elapsed=0 rate=0
+s=1248116620 time="Mon Jul 20 15:03:40 2009" host=char pid=16351 status=goal dist=63 phrase="N H2 Ci Vi is ID h3 aR io db Rb h1 AAAAN" elapsed=0 rate=0
+s=1248116620 time="Mon Jul 20 15:03:40 2009" host=char pid=16351 status=goal dist=62 phrase="N H2 Ci Vi is ID h3 aR io db Rb h1 AAAE/" elapsed=1 rate=0
+s=1248116620 time="Mon Jul 20 15:03:40 2009" host=char pid=16351 status=goal dist=56 phrase="N H2 Ci Vi is ID h3 aR io db Rb h1 AAATG" elapsed=1 rate=0
+s=1248116620 time="Mon Jul 20 15:03:40 2009" host=char pid=16351 status=goal dist=54 phrase="N H2 Ci Vi is ID h3 aR io db Rb h1 AADOB" elapsed=1 rate=0
+s=1248116621 time="Mon Jul 20 15:03:41 2009" host=char pid=16351 status=goal dist=53 phrase="N H2 Ci Vi is ID h3 aR io db Rb h1 AAXRP" elapsed=1 rate=0
+s=1248116621 time="Mon Jul 20 15:03:41 2009" host=char pid=16351 status=goal dist=51 phrase="N H2 Ci Vi is ID h3 aR io db Rb h1 AAr02" elapsed=2 rate=0
+s=1248116621 time="Mon Jul 20 15:03:41 2009" host=char pid=16351 status=goal dist=48 phrase="N H2 Ci Vi is ID h3 aR io db Rb h1 AC8CS" elapsed=2 rate=0
+s=1248116622 time="Mon Jul 20 15:03:42 2009" host=char pid=16353 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0 rate=0
+s=1248116622 time="Mon Jul 20 15:03:42 2009" host=char pid=16350 status=goal dist=47 phrase="n h2 cI Db h1 vi h3 id iO AR Rb Is AUzQG" elapsed=5 rate=1090561
+s=1248116622 time="Mon Jul 20 15:03:42 2009" host=char pid=16351 status=goal dist=45 phrase="N H2 Ci Vi is ID h3 aR io db Rb h1 ADrWj" elapsed=2 rate=0
+s=1248116622 time="Mon Jul 20 15:03:42 2009" host=char pid=16353 status=nphr phrase="rB aR ci VI h1 id n h2 Io is h3 dB " elapsed=0 rate=0
+s=1248116622 time="Mon Jul 20 15:03:42 2009" host=char pid=16353 status=goal dist=91 phrase="rB aR ci VI h1 id n h2 Io is h3 dB AAAAA" elapsed=0 rate=0
+s=1248116622 time="Mon Jul 20 15:03:42 2009" host=char pid=16353 status=goal dist=78 phrase="rB aR ci VI h1 id n h2 Io is h3 dB AAAAB" elapsed=0 rate=0
+s=1248116622 time="Mon Jul 20 15:03:42 2009" host=char pid=16353 status=goal dist=68 phrase="rB aR ci VI h1 id n h2 Io is h3 dB AAAAD" elapsed=0 rate=0
+s=1248116623 time="Mon Jul 20 15:03:43 2009" host=char pid=16353 status=goal dist=67 phrase="rB aR ci VI h1 id n h2 Io is h3 dB AAAAF" elapsed=0 rate=0
+s=1248116623 time="Mon Jul 20 15:03:43 2009" host=char pid=16353 status=goal dist=64 phrase="rB aR ci VI h1 id n h2 Io is h3 dB AAAAr" elapsed=1 rate=0
+s=1248116623 time="Mon Jul 20 15:03:43 2009" host=char pid=16353 status=goal dist=58 phrase="rB aR ci VI h1 id n h2 Io is h3 dB AAABj" elapsed=1 rate=0
+s=1248116623 time="Mon Jul 20 15:03:43 2009" host=char pid=16353 status=goal dist=55 phrase="rB aR ci VI h1 id n h2 Io is h3 dB AACTI" elapsed=1 rate=0
+s=1248116624 time="Mon Jul 20 15:03:44 2009" host=char pid=16353 status=goal dist=53 phrase="rB aR ci VI h1 id n h2 Io is h3 dB AALQl" elapsed=1 rate=0
+s=1248116624 time="Mon Jul 20 15:03:44 2009" host=char pid=16353 status=goal dist=52 phrase="rB aR ci VI h1 id n h2 Io is h3 dB AAYYy" elapsed=2 rate=0
+s=1248116624 time="Mon Jul 20 15:03:44 2009" host=char pid=16353 status=goal dist=50 phrase="rB aR ci VI h1 id n h2 Io is h3 dB AByq5" elapsed=2 rate=0
+s=1248116625 time="Mon Jul 20 15:03:45 2009" host=char pid=16353 status=goal dist=49 phrase="rB aR ci VI h1 id n h2 Io is h3 dB ACqyC" elapsed=2 rate=0
+s=1248116625 time="Mon Jul 20 15:03:45 2009" host=mnemosyne pid=4620 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0 rate=0
+s=1248116626 time="Mon Jul 20 15:03:46 2009" host=mnemosyne pid=4620 status=nphr phrase="n ar id h3 h1 IS IO dB Ci vi rb H2 " elapsed=0 rate=0
+s=1248116626 time="Mon Jul 20 15:03:46 2009" host=mnemosyne pid=4620 status=goal dist=81 phrase="n ar id h3 h1 IS IO dB Ci vi rb H2 AAAAA" elapsed=0 rate=0
+s=1248116626 time="Mon Jul 20 15:03:46 2009" host=mnemosyne pid=4620 status=goal dist=71 phrase="n ar id h3 h1 IS IO dB Ci vi rb H2 AAAAE" elapsed=0 rate=0
+s=1248116626 time="Mon Jul 20 15:03:46 2009" host=mnemosyne pid=4620 status=goal dist=69 phrase="n ar id h3 h1 IS IO dB Ci vi rb H2 AAAAf" elapsed=0 rate=0
+s=1248116627 time="Mon Jul 20 15:03:47 2009" host=mnemosyne pid=4620 status=goal dist=68 phrase="n ar id h3 h1 IS IO dB Ci vi rb H2 AAABF" elapsed=1 rate=0
+s=1248116627 time="Mon Jul 20 15:03:47 2009" host=mnemosyne pid=4620 status=goal dist=67 phrase="n ar id h3 h1 IS IO dB Ci vi rb H2 AAABR" elapsed=1 rate=0
+s=1248116627 time="Mon Jul 20 15:03:47 2009" host=mnemosyne pid=4620 status=goal dist=65 phrase="n ar id h3 h1 IS IO dB Ci vi rb H2 AAABa" elapsed=1 rate=0
+s=1248116627 time="Mon Jul 20 15:03:47 2009" host=mnemosyne pid=4620 status=goal dist=64 phrase="n ar id h3 h1 IS IO dB Ci vi rb H2 AAAEU" elapsed=1 rate=0
+s=1248116628 time="Mon Jul 20 15:03:48 2009" host=mnemosyne pid=4620 status=goal dist=63 phrase="n ar id h3 h1 IS IO dB Ci vi rb H2 AAAOl" elapsed=2 rate=0
+s=1248116628 time="Mon Jul 20 15:03:48 2009" host=mnemosyne pid=4620 status=goal dist=61 phrase="n ar id h3 h1 IS IO dB Ci vi rb H2 AAATA" elapsed=2 rate=0
+s=1248116628 time="Mon Jul 20 15:03:48 2009" host=mnemosyne pid=4620 status=goal dist=56 phrase="n ar id h3 h1 IS IO dB Ci vi rb H2 AAAio" elapsed=2 rate=0
+s=1248116628 time="Mon Jul 20 15:03:48 2009" host=mnemosyne pid=4620 status=goal dist=55 phrase="n ar id h3 h1 IS IO dB Ci vi rb H2 AANXR" elapsed=2 rate=0
+s=1248116629 time="Mon Jul 20 15:03:49 2009" host=mnemosyne pid=4620 status=goal dist=54 phrase="n ar id h3 h1 IS IO dB Ci vi rb H2 AAOY3" elapsed=2 rate=0
+s=1248116629 time="Mon Jul 20 15:03:49 2009" host=mnemosyne pid=4620 status=goal dist=51 phrase="n ar id h3 h1 IS IO dB Ci vi rb H2 AAhLN" elapsed=3 rate=0
+s=1248116629 time="Mon Jul 20 15:03:49 2009" host=mnemosyne pid=4765 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0 rate=0
+s=1248116629 time="Mon Jul 20 15:03:49 2009" host=mnemosyne pid=4765 status=nphr phrase="db is n cI ar h2 vi id IO h1 rb H3 " elapsed=0 rate=0
+s=1248116630 time="Mon Jul 20 15:03:50 2009" host=mnemosyne pid=4765 status=goal dist=73 phrase="db is n cI ar h2 vi id IO h1 rb H3 AAAAA" elapsed=1 rate=0
+s=1248116630 time="Mon Jul 20 15:03:50 2009" host=char pid=16353 status=goal dist=48 phrase="rB aR ci VI h1 id n h2 Io is h3 dB AjQdA" elapsed=8 rate=1155304
+s=1248116630 time="Mon Jul 20 15:03:50 2009" host=mnemosyne pid=4765 status=goal dist=68 phrase="db is n cI ar h2 vi id IO h1 rb H3 AAAAB" elapsed=1 rate=0
+s=1248116630 time="Mon Jul 20 15:03:50 2009" host=mnemosyne pid=4765 status=goal dist=62 phrase="db is n cI ar h2 vi id IO h1 rb H3 AAAAK" elapsed=1 rate=0
+s=1248116630 time="Mon Jul 20 15:03:50 2009" host=mnemosyne pid=4620 status=goal dist=50 phrase="n ar id h3 h1 IS IO dB Ci vi rb H2 AE0qZ" elapsed=4 rate=0
+s=1248116630 time="Mon Jul 20 15:03:50 2009" host=mnemosyne pid=4765 status=goal dist=58 phrase="db is n cI ar h2 vi id IO h1 rb H3 AAADK" elapsed=1 rate=0
+s=1248116631 time="Mon Jul 20 15:03:51 2009" host=mnemosyne pid=4765 status=goal dist=57 phrase="db is n cI ar h2 vi id IO h1 rb H3 AABBJ" elapsed=2 rate=0
+s=1248116631 time="Mon Jul 20 15:03:51 2009" host=char pid=16353 status=goal dist=47 phrase="rB aR ci VI h1 id n h2 Io is h3 dB Am2zk" elapsed=8 rate=1273245
+s=1248116631 time="Mon Jul 20 15:03:51 2009" host=mnemosyne pid=4765 status=goal dist=55 phrase="db is n cI ar h2 vi id IO h1 rb H3 AAH1B" elapsed=2 rate=0
+s=1248116631 time="Mon Jul 20 15:03:51 2009" host=mnemosyne pid=4765 status=goal dist=51 phrase="db is n cI ar h2 vi id IO h1 rb H3 AAM+8" elapsed=2 rate=0
+s=1248116631 time="Mon Jul 20 15:03:51 2009" host=mnemosyne pid=4620 status=goal dist=49 phrase="n ar id h3 h1 IS IO dB Ci vi rb H2 AHj2g" elapsed=5 rate=396371
+s=1248116631 time="Mon Jul 20 15:03:51 2009" host=mnemosyne pid=4765 status=goal dist=49 phrase="db is n cI ar h2 vi id IO h1 rb H3 AAmIO" elapsed=2 rate=0
+s=1248116633 time="Mon Jul 20 15:03:53 2009" host=mnemosyne pid=4765 status=goal dist=48 phrase="db is n cI ar h2 vi id IO h1 rb H3 AJ+I9" elapsed=4 rate=0
+s=1248116633 time="Mon Jul 20 15:03:53 2009" host=mnemosyne pid=4765 status=goal dist=47 phrase="db is n cI ar h2 vi id IO h1 rb H3 ANCxe" elapsed=4 rate=0
+s=1248116636 time="Mon Jul 20 15:03:56 2009" host=lethe pid=13600 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0 rate=0
+s=1248116636 time="Mon Jul 20 15:03:56 2009" host=mnemosyne pid=4620 status=goal dist=47 phrase="n ar id h3 h1 IS IO dB Ci vi rb H2 AtWLs" elapsed=10 rate=1188734
+s=1248116636 time="Mon Jul 20 15:03:56 2009" host=lethe pid=13600 status=nphr phrase="H1 Ar CI dB N h2 iD h3 Io iS rB vI " elapsed=0 rate=0
+s=1248116636 time="Mon Jul 20 15:03:56 2009" host=lethe pid=13600 status=goal dist=80 phrase="H1 Ar CI dB N h2 iD h3 Io iS rB vI AAAAA" elapsed=1 rate=0
+s=1248116637 time="Mon Jul 20 15:03:57 2009" host=lethe pid=13600 status=goal dist=79 phrase="H1 Ar CI dB N h2 iD h3 Io iS rB vI AAAAB" elapsed=1 rate=0
+s=1248116637 time="Mon Jul 20 15:03:57 2009" host=lethe pid=13600 status=goal dist=75 phrase="H1 Ar CI dB N h2 iD h3 Io iS rB vI AAAAC" elapsed=1 rate=0
+s=1248116637 time="Mon Jul 20 15:03:57 2009" host=lethe pid=13600 status=goal dist=73 phrase="H1 Ar CI dB N h2 iD h3 Io iS rB vI AAAAI" elapsed=1 rate=0
+s=1248116637 time="Mon Jul 20 15:03:57 2009" host=lethe pid=13600 status=goal dist=70 phrase="H1 Ar CI dB N h2 iD h3 Io iS rB vI AAAAK" elapsed=2 rate=0
+s=1248116638 time="Mon Jul 20 15:03:58 2009" host=lethe pid=13600 status=goal dist=69 phrase="H1 Ar CI dB N h2 iD h3 Io iS rB vI AAAAm" elapsed=2 rate=0
+s=1248116638 time="Mon Jul 20 15:03:58 2009" host=mnemosyne pid=4620 status=goal dist=46 phrase="n ar id h3 h1 IS IO dB Ci vi rb H2 A4U2W" elapsed=12 rate=1230455
+s=1248116638 time="Mon Jul 20 15:03:58 2009" host=lethe pid=13600 status=goal dist=66 phrase="H1 Ar CI dB N h2 iD h3 Io iS rB vI AAAAw" elapsed=2 rate=0
+s=1248116638 time="Mon Jul 20 15:03:58 2009" host=lethe pid=13600 status=goal dist=59 phrase="H1 Ar CI dB N h2 iD h3 Io iS rB vI AAABi" elapsed=2 rate=0
+s=1248116638 time="Mon Jul 20 15:03:58 2009" host=lethe pid=13600 status=goal dist=58 phrase="H1 Ar CI dB N h2 iD h3 Io iS rB vI AACLO" elapsed=3 rate=0
+s=1248116639 time="Mon Jul 20 15:03:59 2009" host=lethe pid=13600 status=goal dist=57 phrase="H1 Ar CI dB N h2 iD h3 Io iS rB vI AACYT" elapsed=3 rate=0
+s=1248116639 time="Mon Jul 20 15:03:59 2009" host=lethe pid=13600 status=goal dist=56 phrase="H1 Ar CI dB N h2 iD h3 Io iS rB vI AACru" elapsed=3 rate=0
+s=1248116639 time="Mon Jul 20 15:03:59 2009" host=lethe pid=13600 status=goal dist=55 phrase="H1 Ar CI dB N h2 iD h3 Io iS rB vI AAFYH" elapsed=3 rate=0
+s=1248116639 time="Mon Jul 20 15:03:59 2009" host=lethe pid=13600 status=goal dist=53 phrase="H1 Ar CI dB N h2 iD h3 Io iS rB vI AAJZ7" elapsed=4 rate=0
+s=1248116640 time="Mon Jul 20 15:04:00 2009" host=dho pid=25321 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0 rate=0
+s=1248116640 time="Mon Jul 20 15:04:00 2009" host=lethe pid=13600 status=goal dist=49 phrase="H1 Ar CI dB N h2 iD h3 Io iS rB vI AAwo1" elapsed=4 rate=0
+s=1248116640 time="Mon Jul 20 15:04:00 2009" host=dho pid=25321 status=nphr phrase="n aR H3 ci h1 dB id h2 io is rb vi " elapsed=0 rate=0
+s=1248116640 time="Mon Jul 20 15:04:00 2009" host=dho pid=25321 status=goal dist=85 phrase="n aR H3 ci h1 dB id h2 io is rb vi AAAAA" elapsed=0 rate=0
+s=1248116640 time="Mon Jul 20 15:04:00 2009" host=lethe pid=13600 status=goal dist=47 phrase="H1 Ar CI dB N h2 iD h3 Io iS rB vI AD3xU" elapsed=4 rate=0
+s=1248116640 time="Mon Jul 20 15:04:00 2009" host=dho pid=25321 status=goal dist=82 phrase="n aR H3 ci h1 dB id h2 io is rb vi AAAAC" elapsed=0 rate=0
+s=1248116640 time="Mon Jul 20 15:04:00 2009" host=dho pid=25321 status=goal dist=77 phrase="n aR H3 ci h1 dB id h2 io is rb vi AAAAE" elapsed=0 rate=0
+s=1248116641 time="Mon Jul 20 15:04:01 2009" host=dho pid=25321 status=goal dist=70 phrase="n aR H3 ci h1 dB id h2 io is rb vi AAAAF" elapsed=0 rate=0
+s=1248116641 time="Mon Jul 20 15:04:01 2009" host=dho pid=25321 status=goal dist=69 phrase="n aR H3 ci h1 dB id h2 io is rb vi AAABF" elapsed=1 rate=0
+s=1248116641 time="Mon Jul 20 15:04:01 2009" host=dho pid=25321 status=goal dist=67 phrase="n aR H3 ci h1 dB id h2 io is rb vi AAABU" elapsed=1 rate=0
+s=1248116642 time="Mon Jul 20 15:04:02 2009" host=dho pid=25321 status=goal dist=64 phrase="n aR H3 ci h1 dB id h2 io is rb vi AAACH" elapsed=1 rate=0
+s=1248116642 time="Mon Jul 20 15:04:02 2009" host=mnemosyne pid=4620 status=goal dist=44 phrase="n ar id h3 h1 IS IO dB Ci vi rb H2 BY6l+" elapsed=16 rate=1456792
+s=1248116642 time="Mon Jul 20 15:04:02 2009" host=char pid=16353 status=goal dist=46 phrase="rB aR ci VI h1 id n h2 Io is h3 dB BexQ1" elapsed=20 rate=1242166
+s=1248116642 time="Mon Jul 20 15:04:02 2009" host=dho pid=25321 status=goal dist=63 phrase="n aR H3 ci h1 dB id h2 io is rb vi AAAL2" elapsed=2 rate=0
+s=1248116642 time="Mon Jul 20 15:04:02 2009" host=dho pid=25321 status=goal dist=60 phrase="n aR H3 ci h1 dB id h2 io is rb vi AAANx" elapsed=2 rate=0
+s=1248116643 time="Mon Jul 20 15:04:03 2009" host=dho pid=25321 status=goal dist=59 phrase="n aR H3 ci h1 dB id h2 io is rb vi AAAQq" elapsed=2 rate=0
+s=1248116643 time="Mon Jul 20 15:04:03 2009" host=lethe pid=13600 status=goal dist=45 phrase="H1 Ar CI dB N h2 iD h3 Io iS rB vI AVjIV" elapsed=7 rate=806988
+s=1248116643 time="Mon Jul 20 15:04:03 2009" host=dho pid=25321 status=goal dist=57 phrase="n aR H3 ci h1 dB id h2 io is rb vi AAC2y" elapsed=3 rate=0
+s=1248116643 time="Mon Jul 20 15:04:03 2009" host=dho pid=25321 status=goal dist=54 phrase="n aR H3 ci h1 dB id h2 io is rb vi AADCC" elapsed=3 rate=0
+s=1248116643 time="Mon Jul 20 15:04:03 2009" host=mnemosyne pid=4765 status=goal dist=46 phrase="db is n cI ar h2 vi id IO h1 rb H3 BbhEO" elapsed=14 rate=1713610
+s=1248116643 time="Mon Jul 20 15:04:03 2009" host=dho pid=25321 status=goal dist=53 phrase="n aR H3 ci h1 dB id h2 io is rb vi AAF5W" elapsed=3 rate=0
+s=1248116644 time="Mon Jul 20 15:04:04 2009" host=dho pid=25321 status=goal dist=48 phrase="n aR H3 ci h1 dB id h2 io is rb vi AAU+p" elapsed=3 rate=0
+s=1248116647 time="Mon Jul 20 15:04:07 2009" host=dho pid=25413 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0 rate=0
+s=1248116647 time="Mon Jul 20 15:04:07 2009" host=dho pid=25413 status=nphr phrase="N h2 h3 db h1 Is id Vi io cI rB AR " elapsed=0 rate=0
+s=1248116648 time="Mon Jul 20 15:04:08 2009" host=dho pid=25413 status=goal dist=66 phrase="N h2 h3 db h1 Is id Vi io cI rB AR AAAAA" elapsed=0 rate=0
+s=1248116648 time="Mon Jul 20 15:04:08 2009" host=dho pid=25413 status=goal dist=59 phrase="N h2 h3 db h1 Is id Vi io cI rB AR AAAAI" elapsed=1 rate=0
+s=1248116648 time="Mon Jul 20 15:04:08 2009" host=dho pid=25413 status=goal dist=57 phrase="N h2 h3 db h1 Is id Vi io cI rB AR AABGB" elapsed=1 rate=0
+s=1248116648 time="Mon Jul 20 15:04:08 2009" host=dho pid=25413 status=goal dist=55 phrase="N h2 h3 db h1 Is id Vi io cI rB AR AAJe8" elapsed=1 rate=0
+s=1248116648 time="Mon Jul 20 15:04:08 2009" host=dho pid=25413 status=goal dist=54 phrase="N h2 h3 db h1 Is id Vi io cI rB AR AASLZ" elapsed=1 rate=0
+s=1248116649 time="Mon Jul 20 15:04:09 2009" host=dho pid=25413 status=goal dist=53 phrase="N h2 h3 db h1 Is id Vi io cI rB AR AAX13" elapsed=2 rate=0
+s=1248116649 time="Mon Jul 20 15:04:09 2009" host=dho pid=25413 status=goal dist=49 phrase="N h2 h3 db h1 Is id Vi io cI rB AR AA+u2" elapsed=2 rate=0
+s=1248116650 time="Mon Jul 20 15:04:10 2009" host=dho pid=25321 status=goal dist=47 phrase="n aR H3 ci h1 dB id h2 io is rb vi AttBN" elapsed=9 rate=1331209
+s=1248116650 time="Mon Jul 20 15:04:10 2009" host=dho pid=25414 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0 rate=0
+s=1248116650 time="Mon Jul 20 15:04:10 2009" host=dho pid=25414 status=nphr phrase="n ar ci h3 rb IS db io iD h2 H1 Vi " elapsed=0 rate=0
+s=1248116651 time="Mon Jul 20 15:04:11 2009" host=dho pid=25414 status=goal dist=84 phrase="n ar ci h3 rb IS db io iD h2 H1 Vi AAAAA" elapsed=0 rate=0
+s=1248116651 time="Mon Jul 20 15:04:11 2009" host=dho pid=25414 status=goal dist=72 phrase="n ar ci h3 rb IS db io iD h2 H1 Vi AAAAB" elapsed=1 rate=0
+s=1248116651 time="Mon Jul 20 15:04:11 2009" host=dho pid=25414 status=goal dist=70 phrase="n ar ci h3 rb IS db io iD h2 H1 Vi AAAAC" elapsed=1 rate=0
+s=1248116651 time="Mon Jul 20 15:04:11 2009" host=dho pid=25414 status=goal dist=67 phrase="n ar ci h3 rb IS db io iD h2 H1 Vi AAAAM" elapsed=1 rate=0
+s=1248116652 time="Mon Jul 20 15:04:12 2009" host=dho pid=25414 status=goal dist=63 phrase="n ar ci h3 rb IS db io iD h2 H1 Vi AAAA4" elapsed=1 rate=0
+s=1248116652 time="Mon Jul 20 15:04:12 2009" host=dho pid=25414 status=goal dist=62 phrase="n ar ci h3 rb IS db io iD h2 H1 Vi AAANi" elapsed=2 rate=0
+s=1248116652 time="Mon Jul 20 15:04:12 2009" host=dho pid=25413 status=goal dist=48 phrase="N h2 h3 db h1 Is id Vi io cI rB AR AUTjH" elapsed=5 rate=1064590
+s=1248116652 time="Mon Jul 20 15:04:12 2009" host=dho pid=25414 status=goal dist=61 phrase="n ar ci h3 rb IS db io iD h2 H1 Vi AAAPN" elapsed=2 rate=0
+s=1248116652 time="Mon Jul 20 15:04:12 2009" host=dho pid=25414 status=goal dist=59 phrase="n ar ci h3 rb IS db io iD h2 H1 Vi AAA05" elapsed=2 rate=0
+s=1248116653 time="Mon Jul 20 15:04:13 2009" host=dho pid=25414 status=goal dist=52 phrase="n ar ci h3 rb IS db io iD h2 H1 Vi AABcQ" elapsed=2 rate=0
+s=1248116653 time="Mon Jul 20 15:04:13 2009" host=dho pid=25415 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0 rate=0
+s=1248116653 time="Mon Jul 20 15:04:13 2009" host=dho pid=25415 status=nphr phrase="rb ar ci dB n h3 H2 h1 io is id vi " elapsed=0 rate=0
+s=1248116653 time="Mon Jul 20 15:04:13 2009" host=dho pid=25415 status=goal dist=76 phrase="rb ar ci dB n h3 H2 h1 io is id vi AAAAA" elapsed=0 rate=0
+s=1248116654 time="Mon Jul 20 15:04:14 2009" host=dho pid=25415 status=goal dist=73 phrase="rb ar ci dB n h3 H2 h1 io is id vi AAAAG" elapsed=0 rate=0
+s=1248116654 time="Mon Jul 20 15:04:14 2009" host=dho pid=25415 status=goal dist=70 phrase="rb ar ci dB n h3 H2 h1 io is id vi AAAAM" elapsed=1 rate=0
+s=1248116654 time="Mon Jul 20 15:04:14 2009" host=dho pid=25414 status=goal dist=50 phrase="n ar ci h3 rb IS db io iD h2 H1 Vi AIZLD" elapsed=4 rate=0
+s=1248116654 time="Mon Jul 20 15:04:14 2009" host=dho pid=25413 status=goal dist=43 phrase="N h2 h3 db h1 Is id Vi io cI rB AR AgOmM" elapsed=7 rate=1206914
+s=1248116654 time="Mon Jul 20 15:04:14 2009" host=dho pid=25415 status=goal dist=69 phrase="rb ar ci dB n h3 H2 h1 io is id vi AAAAd" elapsed=1 rate=0
+s=1248116655 time="Mon Jul 20 15:04:15 2009" host=dho pid=25415 status=goal dist=68 phrase="rb ar ci dB n h3 H2 h1 io is id vi AAAA+" elapsed=1 rate=0
+s=1248116655 time="Mon Jul 20 15:04:15 2009" host=dho pid=25415 status=goal dist=67 phrase="rb ar ci dB n h3 H2 h1 io is id vi AAABL" elapsed=2 rate=0
+s=1248116655 time="Mon Jul 20 15:04:15 2009" host=dho pid=25414 status=goal dist=47 phrase="n ar ci h3 rb IS db io iD h2 H1 Vi AJTvL" elapsed=5 rate=488028
+s=1248116655 time="Mon Jul 20 15:04:15 2009" host=dho pid=25415 status=goal dist=66 phrase="rb ar ci dB n h3 H2 h1 io is id vi AAACr" elapsed=2 rate=0
+s=1248116655 time="Mon Jul 20 15:04:15 2009" host=dho pid=25414 status=goal dist=46 phrase="n ar ci h3 rb IS db io iD h2 H1 Vi AK7Yj" elapsed=5 rate=572935
+s=1248116655 time="Mon Jul 20 15:04:15 2009" host=dho pid=25415 status=goal dist=63 phrase="rb ar ci dB n h3 H2 h1 io is id vi AAADu" elapsed=2 rate=0
+s=1248116656 time="Mon Jul 20 15:04:16 2009" host=dho pid=25415 status=goal dist=60 phrase="rb ar ci dB n h3 H2 h1 io is id vi AAAMs" elapsed=2 rate=0
+s=1248116656 time="Mon Jul 20 15:04:16 2009" host=dho pid=25415 status=goal dist=59 phrase="rb ar ci dB n h3 H2 h1 io is id vi AAANs" elapsed=3 rate=0
+s=1248116656 time="Mon Jul 20 15:04:16 2009" host=dho pid=25415 status=goal dist=58 phrase="rb ar ci dB n h3 H2 h1 io is id vi AAAyb" elapsed=3 rate=0
+s=1248116656 time="Mon Jul 20 15:04:16 2009" host=dho pid=25415 status=goal dist=56 phrase="rb ar ci dB n h3 H2 h1 io is id vi AABC7" elapsed=3 rate=0
+s=1248116656 time="Mon Jul 20 15:04:16 2009" host=dho pid=25415 status=goal dist=55 phrase="rb ar ci dB n h3 H2 h1 io is id vi AAChK" elapsed=3 rate=0
+s=1248116657 time="Mon Jul 20 15:04:17 2009" host=dho pid=25321 status=goal dist=44 phrase="n aR H3 ci h1 dB id h2 io is rb vi Bpwse" elapsed=16 rate=1732786
+s=1248116657 time="Mon Jul 20 15:04:17 2009" host=dho pid=25415 status=goal dist=54 phrase="rb ar ci dB n h3 H2 h1 io is id vi AASCR" elapsed=3 rate=0
+s=1248116657 time="Mon Jul 20 15:04:17 2009" host=phel pid=16994 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0 rate=0
+s=1248116657 time="Mon Jul 20 15:04:17 2009" host=dho pid=25415 status=goal dist=51 phrase="rb ar ci dB n h3 H2 h1 io is id vi AAVJh" elapsed=4 rate=0
+s=1248116657 time="Mon Jul 20 15:04:17 2009" host=phel pid=16994 status=nphr phrase="N rb vi H1 Db h3 ar ci iO is H2 id " elapsed=0 rate=0
+s=1248116657 time="Mon Jul 20 15:04:17 2009" host=dho pid=25415 status=goal dist=50 phrase="rb ar ci dB n h3 H2 h1 io is id vi AAxQ0" elapsed=4 rate=0
+s=1248116657 time="Mon Jul 20 15:04:17 2009" host=phel pid=16994 status=goal dist=68 phrase="N rb vi H1 Db h3 ar ci iO is H2 id AAAAA" elapsed=0 rate=0
+s=1248116657 time="Mon Jul 20 15:04:17 2009" host=phel pid=16994 status=goal dist=66 phrase="N rb vi H1 Db h3 ar ci iO is H2 id AAAAI" elapsed=1 rate=0
+s=1248116658 time="Mon Jul 20 15:04:18 2009" host=phel pid=16994 status=goal dist=65 phrase="N rb vi H1 Db h3 ar ci iO is H2 id AAAAb" elapsed=1 rate=0
+s=1248116658 time="Mon Jul 20 15:04:18 2009" host=phel pid=16994 status=goal dist=60 phrase="N rb vi H1 Db h3 ar ci iO is H2 id AAAA3" elapsed=1 rate=0
+s=1248116658 time="Mon Jul 20 15:04:18 2009" host=phel pid=16994 status=goal dist=58 phrase="N rb vi H1 Db h3 ar ci iO is H2 id AAALV" elapsed=1 rate=0
+s=1248116658 time="Mon Jul 20 15:04:18 2009" host=dho pid=25415 status=goal dist=49 phrase="rb ar ci dB n h3 H2 h1 io is id vi AIg5N" elapsed=5 rate=446377
+s=1248116658 time="Mon Jul 20 15:04:18 2009" host=phel pid=16994 status=goal dist=57 phrase="N rb vi H1 Db h3 ar ci iO is H2 id AABN3" elapsed=1 rate=0
+s=1248116659 time="Mon Jul 20 15:04:19 2009" host=phel pid=16994 status=goal dist=55 phrase="N rb vi H1 Db h3 ar ci iO is H2 id AAGn2" elapsed=2 rate=0
+s=1248116659 time="Mon Jul 20 15:04:19 2009" host=phel pid=16994 status=goal dist=46 phrase="N rb vi H1 Db h3 ar ci iO is H2 id AAIs9" elapsed=2 rate=0
+s=1248116660 time="Mon Jul 20 15:04:20 2009" host=dho pid=25415 status=goal dist=45 phrase="rb ar ci dB n h3 H2 h1 io is id vi ARoT7" elapsed=6 rate=770261
+s=1248116661 time="Mon Jul 20 15:04:21 2009" host=phoebus pid=6443 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0 rate=0
+s=1248116661 time="Mon Jul 20 15:04:21 2009" host=phoebus pid=6443 status=nphr phrase="N ID ci is Vi h2 h3 h1 io aR Rb dB " elapsed=0 rate=0
+s=1248116661 time="Mon Jul 20 15:04:21 2009" host=phoebus pid=6443 status=goal dist=76 phrase="N ID ci is Vi h2 h3 h1 io aR Rb dB AAAAA" elapsed=0 rate=0
+s=1248116662 time="Mon Jul 20 15:04:22 2009" host=phoebus pid=6443 status=goal dist=75 phrase="N ID ci is Vi h2 h3 h1 io aR Rb dB AAAAC" elapsed=0 rate=0
+s=1248116662 time="Mon Jul 20 15:04:22 2009" host=phoebus pid=6443 status=goal dist=74 phrase="N ID ci is Vi h2 h3 h1 io aR Rb dB AAAAH" elapsed=1 rate=0
+s=1248116662 time="Mon Jul 20 15:04:22 2009" host=phoebus pid=6443 status=goal dist=73 phrase="N ID ci is Vi h2 h3 h1 io aR Rb dB AAAAX" elapsed=1 rate=0
+s=1248116662 time="Mon Jul 20 15:04:22 2009" host=phoebus pid=6443 status=goal dist=72 phrase="N ID ci is Vi h2 h3 h1 io aR Rb dB AAAAb" elapsed=1 rate=0
+s=1248116662 time="Mon Jul 20 15:04:22 2009" host=phoebus pid=6443 status=goal dist=70 phrase="N ID ci is Vi h2 h3 h1 io aR Rb dB AAAAl" elapsed=1 rate=0
+s=1248116663 time="Mon Jul 20 15:04:23 2009" host=phoebus pid=6443 status=goal dist=68 phrase="N ID ci is Vi h2 h3 h1 io aR Rb dB AAAAs" elapsed=1 rate=0
+s=1248116663 time="Mon Jul 20 15:04:23 2009" host=phoebus pid=6443 status=goal dist=67 phrase="N ID ci is Vi h2 h3 h1 io aR Rb dB AAABc" elapsed=2 rate=0
+s=1248116663 time="Mon Jul 20 15:04:23 2009" host=phoebus pid=6443 status=goal dist=65 phrase="N ID ci is Vi h2 h3 h1 io aR Rb dB AAAC2" elapsed=2 rate=0
+s=1248116663 time="Mon Jul 20 15:04:23 2009" host=phoebus pid=6443 status=goal dist=64 phrase="N ID ci is Vi h2 h3 h1 io aR Rb dB AAAEM" elapsed=2 rate=0
+s=1248116663 time="Mon Jul 20 15:04:23 2009" host=pallas pid=29182 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0 rate=0
+s=1248116663 time="Mon Jul 20 15:04:23 2009" host=phoebus pid=6443 status=goal dist=60 phrase="N ID ci is Vi h2 h3 h1 io aR Rb dB AAAHj" elapsed=2 rate=0
+s=1248116664 time="Mon Jul 20 15:04:24 2009" host=pallas pid=29182 status=nphr phrase="n ar id db Io H2 H3 ci h1 iS rB vI " elapsed=0 rate=0
+s=1248116664 time="Mon Jul 20 15:04:24 2009" host=phoebus pid=6443 status=goal dist=59 phrase="N ID ci is Vi h2 h3 h1 io aR Rb dB AAAav" elapsed=2 rate=0
+s=1248116664 time="Mon Jul 20 15:04:24 2009" host=pallas pid=29182 status=goal dist=74 phrase="n ar id db Io H2 H3 ci h1 iS rB vI AAAAA" elapsed=1 rate=0
+s=1248116664 time="Mon Jul 20 15:04:24 2009" host=phoebus pid=6443 status=goal dist=58 phrase="N ID ci is Vi h2 h3 h1 io aR Rb dB AAD85" elapsed=3 rate=0
+s=1248116664 time="Mon Jul 20 15:04:24 2009" host=phoebus pid=6443 status=goal dist=56 phrase="N ID ci is Vi h2 h3 h1 io aR Rb dB AAEM4" elapsed=3 rate=0
+s=1248116664 time="Mon Jul 20 15:04:24 2009" host=pallas pid=29182 status=goal dist=71 phrase="n ar id db Io H2 H3 ci h1 iS rB vI AAAAM" elapsed=1 rate=0
+s=1248116664 time="Mon Jul 20 15:04:24 2009" host=phoebus pid=6443 status=goal dist=54 phrase="N ID ci is Vi h2 h3 h1 io aR Rb dB AAOoC" elapsed=3 rate=0
+s=1248116664 time="Mon Jul 20 15:04:24 2009" host=pallas pid=29182 status=goal dist=70 phrase="n ar id db Io H2 H3 ci h1 iS rB vI AAAAS" elapsed=1 rate=0
+s=1248116664 time="Mon Jul 20 15:04:24 2009" host=phoebus pid=6443 status=goal dist=53 phrase="N ID ci is Vi h2 h3 h1 io aR Rb dB AAbXb" elapsed=3 rate=0
+s=1248116665 time="Mon Jul 20 15:04:25 2009" host=pallas pid=29182 status=goal dist=68 phrase="n ar id db Io H2 H3 ci h1 iS rB vI AAAAy" elapsed=1 rate=0
+s=1248116665 time="Mon Jul 20 15:04:25 2009" host=pallas pid=29182 status=goal dist=66 phrase="n ar id db Io H2 H3 ci h1 iS rB vI AAABC" elapsed=2 rate=0
+s=1248116665 time="Mon Jul 20 15:04:25 2009" host=phoebus pid=6443 status=goal dist=52 phrase="N ID ci is Vi h2 h3 h1 io aR Rb dB ABiKi" elapsed=4 rate=0
+s=1248116665 time="Mon Jul 20 15:04:25 2009" host=pallas pid=29182 status=goal dist=65 phrase="n ar id db Io H2 H3 ci h1 iS rB vI AAABg" elapsed=2 rate=0
+s=1248116665 time="Mon Jul 20 15:04:25 2009" host=phoebus pid=6443 status=goal dist=48 phrase="N ID ci is Vi h2 h3 h1 io aR Rb dB ABi4B" elapsed=4 rate=0
+s=1248116665 time="Mon Jul 20 15:04:25 2009" host=pallas pid=29182 status=goal dist=63 phrase="n ar id db Io H2 H3 ci h1 iS rB vI AAAB5" elapsed=2 rate=0
+s=1248116665 time="Mon Jul 20 15:04:25 2009" host=pallas pid=29182 status=goal dist=59 phrase="n ar id db Io H2 H3 ci h1 iS rB vI AAAGi" elapsed=2 rate=0
+s=1248116666 time="Mon Jul 20 15:04:26 2009" host=pallas pid=29182 status=goal dist=58 phrase="n ar id db Io H2 H3 ci h1 iS rB vI AABEO" elapsed=3 rate=0
+s=1248116666 time="Mon Jul 20 15:04:26 2009" host=pallas pid=29182 status=goal dist=52 phrase="n ar id db Io H2 H3 ci h1 iS rB vI AADG6" elapsed=3 rate=0
+s=1248116667 time="Mon Jul 20 15:04:27 2009" host=alpha pid=12475 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0 rate=0
+s=1248116667 time="Mon Jul 20 15:04:27 2009" host=pallas pid=29182 status=goal dist=46 phrase="n ar id db Io H2 H3 ci h1 iS rB vI AC4xA" elapsed=4 rate=0
+s=1248116667 time="Mon Jul 20 15:04:27 2009" host=alpha pid=12475 status=nphr phrase="Vi io H1 rb ci h2 h3 ID ar is N db " elapsed=0 rate=0
+s=1248116667 time="Mon Jul 20 15:04:27 2009" host=alpha pid=12475 status=goal dist=75 phrase="Vi io H1 rb ci h2 h3 ID ar is N db AAAAA" elapsed=0 rate=0
+s=1248116668 time="Mon Jul 20 15:04:28 2009" host=alpha pid=12475 status=goal dist=68 phrase="Vi io H1 rb ci h2 h3 ID ar is N db AAAAB" elapsed=0 rate=0
+s=1248116668 time="Mon Jul 20 15:04:28 2009" host=mnemosyne pid=4765 status=goal dist=45 phrase="db is n cI ar h2 vi id IO h1 rb H3 EgR6t" elapsed=39 rate=1937714
+s=1248116668 time="Mon Jul 20 15:04:28 2009" host=alpha pid=12475 status=goal dist=67 phrase="Vi io H1 rb ci h2 h3 ID ar is N db AAAA1" elapsed=1 rate=0
+s=1248116668 time="Mon Jul 20 15:04:28 2009" host=alpha pid=12475 status=goal dist=63 phrase="Vi io H1 rb ci h2 h3 ID ar is N db AAACH" elapsed=1 rate=0
+s=1248116668 time="Mon Jul 20 15:04:28 2009" host=alpha pid=12475 status=goal dist=62 phrase="Vi io H1 rb ci h2 h3 ID ar is N db AAAJn" elapsed=1 rate=0
+s=1248116669 time="Mon Jul 20 15:04:29 2009" host=alpha pid=12475 status=goal dist=61 phrase="Vi io H1 rb ci h2 h3 ID ar is N db AAAnH" elapsed=1 rate=0
+s=1248116669 time="Mon Jul 20 15:04:29 2009" host=alpha pid=12475 status=goal dist=60 phrase="Vi io H1 rb ci h2 h3 ID ar is N db AABRZ" elapsed=2 rate=0
+s=1248116669 time="Mon Jul 20 15:04:29 2009" host=alpha pid=12475 status=goal dist=59 phrase="Vi io H1 rb ci h2 h3 ID ar is N db AABy5" elapsed=2 rate=0
+s=1248116669 time="Mon Jul 20 15:04:29 2009" host=alpha pid=12475 status=goal dist=51 phrase="Vi io H1 rb ci h2 h3 ID ar is N db AAC0v" elapsed=2 rate=0
+s=1248116670 time="Mon Jul 20 15:04:30 2009" host=char pid=16350 status=goal dist=46 phrase="n h2 cI Db h1 vi h3 id iO AR Rb Is EwCjF" elapsed=54 rate=1475967
+s=1248116671 time="Mon Jul 20 15:04:31 2009" host=alpha pid=12475 status=goal dist=50 phrase="Vi io H1 rb ci h2 h3 ID ar is N db ACcW9" elapsed=4 rate=0
+s=1248116671 time="Mon Jul 20 15:04:31 2009" host=alpha pid=12475 status=goal dist=49 phrase="Vi io H1 rb ci h2 h3 ID ar is N db ADbrZ" elapsed=4 rate=0
+s=1248116673 time="Mon Jul 20 15:04:33 2009" host=phoebus pid=6443 status=goal dist=47 phrase="N ID ci is Vi h2 h3 h1 io aR Rb dB BEJ9F" elapsed=12 rate=1488880
+s=1248116677 time="Mon Jul 20 15:04:37 2009" host=phoebus pid=6443 status=goal dist=46 phrase="N ID ci is Vi h2 h3 h1 io aR Rb dB BqHyI" elapsed=16 rate=1738697
+s=1248116679 time="Mon Jul 20 15:04:39 2009" host=phoebus pid=6443 status=goal dist=45 phrase="N ID ci is Vi h2 h3 h1 io aR Rb dB B5FbK" elapsed=18 rate=1763425
+s=1248116682 time="Mon Jul 20 15:04:42 2009" host=kei pid=4989 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0 rate=0
+s=1248116682 time="Mon Jul 20 15:04:42 2009" host=kei pid=4989 status=nphr phrase="rB cI db IO H1 H2 iD h3 n is ar VI " elapsed=0 rate=0
+s=1248116683 time="Mon Jul 20 15:04:43 2009" host=kei pid=4989 status=goal dist=87 phrase="rB cI db IO H1 H2 iD h3 n is ar VI AAAAA" elapsed=0 rate=0
+s=1248116683 time="Mon Jul 20 15:04:43 2009" host=kei pid=4989 status=goal dist=77 phrase="rB cI db IO H1 H2 iD h3 n is ar VI AAAAB" elapsed=0 rate=0
+s=1248116683 time="Mon Jul 20 15:04:43 2009" host=kei pid=4989 status=goal dist=71 phrase="rB cI db IO H1 H2 iD h3 n is ar VI AAAAC" elapsed=0 rate=0
+s=1248116683 time="Mon Jul 20 15:04:43 2009" host=phoebus pid=6443 status=goal dist=44 phrase="N ID ci is Vi h2 h3 h1 io aR Rb dB CXCqL" elapsed=22 rate=1799756
+s=1248116683 time="Mon Jul 20 15:04:43 2009" host=kei pid=4989 status=goal dist=67 phrase="rB cI db IO H1 H2 iD h3 n is ar VI AAABM" elapsed=0 rate=0
+s=1248116683 time="Mon Jul 20 15:04:43 2009" host=kei pid=4989 status=goal dist=60 phrase="rB cI db IO H1 H2 iD h3 n is ar VI AAACu" elapsed=1 rate=0
+s=1248116683 time="Mon Jul 20 15:04:43 2009" host=kei pid=4989 status=goal dist=59 phrase="rB cI db IO H1 H2 iD h3 n is ar VI AABU2" elapsed=1 rate=0
+s=1248116684 time="Mon Jul 20 15:04:44 2009" host=kei pid=4989 status=goal dist=54 phrase="rB cI db IO H1 H2 iD h3 n is ar VI AACue" elapsed=1 rate=0
+s=1248116684 time="Mon Jul 20 15:04:44 2009" host=kei pid=4989 status=goal dist=53 phrase="rB cI db IO H1 H2 iD h3 n is ar VI AAFvl" elapsed=1 rate=0
+s=1248116684 time="Mon Jul 20 15:04:44 2009" host=kei pid=4989 status=goal dist=50 phrase="rB cI db IO H1 H2 iD h3 n is ar VI AA1lz" elapsed=1 rate=0
+s=1248116684 time="Mon Jul 20 15:04:44 2009" host=kei pid=4989 status=goal dist=49 phrase="rB cI db IO H1 H2 iD h3 n is ar VI ABQkS" elapsed=2 rate=0
+s=1248116687 time="Mon Jul 20 15:04:47 2009" host=kei pid=5119 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0 rate=0
+s=1248116687 time="Mon Jul 20 15:04:47 2009" host=kei pid=4989 status=goal dist=48 phrase="rB cI db IO H1 H2 iD h3 n is ar VI ASadi" elapsed=4 rate=0
+s=1248116687 time="Mon Jul 20 15:04:47 2009" host=kei pid=5119 status=nphr phrase="H3 n vI dB id h2 ci h1 Io AR rb Is " elapsed=0 rate=0
+s=1248116687 time="Mon Jul 20 15:04:47 2009" host=kei pid=5119 status=goal dist=82 phrase="H3 n vI dB id h2 ci h1 Io AR rb Is AAAAA" elapsed=0 rate=0
+s=1248116688 time="Mon Jul 20 15:04:48 2009" host=kei pid=5119 status=goal dist=70 phrase="H3 n vI dB id h2 ci h1 Io AR rb Is AAAAB" elapsed=0 rate=0
+s=1248116688 time="Mon Jul 20 15:04:48 2009" host=kei pid=5119 status=goal dist=63 phrase="H3 n vI dB id h2 ci h1 Io AR rb Is AAAAd" elapsed=0 rate=0
+s=1248116688 time="Mon Jul 20 15:04:48 2009" host=kei pid=5119 status=goal dist=61 phrase="H3 n vI dB id h2 ci h1 Io AR rb Is AAAGl" elapsed=0 rate=0
+s=1248116688 time="Mon Jul 20 15:04:48 2009" host=kei pid=5119 status=goal dist=59 phrase="H3 n vI dB id h2 ci h1 Io AR rb Is AAAK/" elapsed=0 rate=0
+s=1248116688 time="Mon Jul 20 15:04:48 2009" host=char pid=16353 status=goal dist=45 phrase="rB aR ci VI h1 id n h2 Io is h3 dB GZlzJ" elapsed=66 rate=1626844
+s=1248116688 time="Mon Jul 20 15:04:48 2009" host=kei pid=5119 status=goal dist=57 phrase="H3 n vI dB id h2 ci h1 Io AR rb Is AAAf/" elapsed=1 rate=0
+s=1248116688 time="Mon Jul 20 15:04:48 2009" host=kei pid=5119 status=goal dist=56 phrase="H3 n vI dB id h2 ci h1 Io AR rb Is AAHco" elapsed=1 rate=0
+s=1248116689 time="Mon Jul 20 15:04:49 2009" host=kei pid=5119 status=goal dist=53 phrase="H3 n vI dB id h2 ci h1 Io AR rb Is AAH8c" elapsed=1 rate=0
+s=1248116689 time="Mon Jul 20 15:04:49 2009" host=kei pid=4989 status=goal dist=46 phrase="rB cI db IO H1 H2 iD h3 n is ar VI AcZUo" elapsed=6 rate=1240626
+s=1248116689 time="Mon Jul 20 15:04:49 2009" host=kei pid=5119 status=goal dist=52 phrase="H3 n vI dB id h2 ci h1 Io AR rb Is ACDUq" elapsed=2 rate=0
+s=1248116689 time="Mon Jul 20 15:04:49 2009" host=kei pid=5119 status=goal dist=49 phrase="H3 n vI dB id h2 ci h1 Io AR rb Is ADBnW" elapsed=2 rate=0
+s=1248116690 time="Mon Jul 20 15:04:50 2009" host=kei pid=5139 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0 rate=0
+s=1248116690 time="Mon Jul 20 15:04:50 2009" host=kei pid=5139 status=nphr phrase="n rb ci io ar h2 Is Id vi db H1 H3 " elapsed=0 rate=0
+s=1248116690 time="Mon Jul 20 15:04:50 2009" host=kei pid=5139 status=goal dist=75 phrase="n rb ci io ar h2 Is Id vi db H1 H3 AAAAA" elapsed=1 rate=0
+s=1248116690 time="Mon Jul 20 15:04:50 2009" host=kei pid=5139 status=goal dist=64 phrase="n rb ci io ar h2 Is Id vi db H1 H3 AAAAF" elapsed=1 rate=0
+s=1248116691 time="Mon Jul 20 15:04:51 2009" host=kei pid=5139 status=goal dist=62 phrase="n rb ci io ar h2 Is Id vi db H1 H3 AAAEJ" elapsed=1 rate=0
+s=1248116691 time="Mon Jul 20 15:04:51 2009" host=kei pid=5139 status=goal dist=60 phrase="n rb ci io ar h2 Is Id vi db H1 H3 AAAOF" elapsed=1 rate=0
+s=1248116691 time="Mon Jul 20 15:04:51 2009" host=kei pid=5139 status=goal dist=59 phrase="n rb ci io ar h2 Is Id vi db H1 H3 AABHW" elapsed=1 rate=0
+s=1248116691 time="Mon Jul 20 15:04:51 2009" host=kei pid=5139 status=goal dist=58 phrase="n rb ci io ar h2 Is Id vi db H1 H3 AABIh" elapsed=1 rate=0
+s=1248116691 time="Mon Jul 20 15:04:51 2009" host=kei pid=5139 status=goal dist=56 phrase="n rb ci io ar h2 Is Id vi db H1 H3 AABbV" elapsed=2 rate=0
+s=1248116691 time="Mon Jul 20 15:04:51 2009" host=kei pid=5139 status=goal dist=54 phrase="n rb ci io ar h2 Is Id vi db H1 H3 AAD6O" elapsed=2 rate=0
+s=1248116692 time="Mon Jul 20 15:04:52 2009" host=kei pid=5139 status=goal dist=53 phrase="n rb ci io ar h2 Is Id vi db H1 H3 AAIeA" elapsed=2 rate=0
+s=1248116692 time="Mon Jul 20 15:04:52 2009" host=kei pid=5139 status=goal dist=50 phrase="n rb ci io ar h2 Is Id vi db H1 H3 AA6nU" elapsed=2 rate=0
+s=1248116692 time="Mon Jul 20 15:04:52 2009" host=kei pid=5160 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0 rate=0
+s=1248116693 time="Mon Jul 20 15:04:53 2009" host=kei pid=5139 status=goal dist=49 phrase="n rb ci io ar h2 Is Id vi db H1 H3 AByq6" elapsed=3 rate=0
+s=1248116693 time="Mon Jul 20 15:04:53 2009" host=kei pid=5160 status=nphr phrase="Rb N h2 Db h3 Ci h1 Id Io Is ar vI " elapsed=0 rate=0
+s=1248116693 time="Mon Jul 20 15:04:53 2009" host=kei pid=5160 status=goal dist=70 phrase="Rb N h2 Db h3 Ci h1 Id Io Is ar vI AAAAA" elapsed=0 rate=0
+s=1248116693 time="Mon Jul 20 15:04:53 2009" host=kei pid=5160 status=goal dist=62 phrase="Rb N h2 Db h3 Ci h1 Id Io Is ar vI AAAAU" elapsed=0 rate=0
+s=1248116693 time="Mon Jul 20 15:04:53 2009" host=kei pid=5160 status=goal dist=61 phrase="Rb N h2 Db h3 Ci h1 Id Io Is ar vI AAAIB" elapsed=1 rate=0
+s=1248116693 time="Mon Jul 20 15:04:53 2009" host=kei pid=5160 status=goal dist=60 phrase="Rb N h2 Db h3 Ci h1 Id Io Is ar vI AAARh" elapsed=1 rate=0
+s=1248116694 time="Mon Jul 20 15:04:54 2009" host=kei pid=5160 status=goal dist=58 phrase="Rb N h2 Db h3 Ci h1 Id Io Is ar vI AAASJ" elapsed=1 rate=0
+s=1248116694 time="Mon Jul 20 15:04:54 2009" host=kei pid=5160 status=goal dist=56 phrase="Rb N h2 Db h3 Ci h1 Id Io Is ar vI AAArm" elapsed=1 rate=0
+s=1248116694 time="Mon Jul 20 15:04:54 2009" host=kei pid=5160 status=goal dist=55 phrase="Rb N h2 Db h3 Ci h1 Id Io Is ar vI AAHNK" elapsed=1 rate=0
+s=1248116694 time="Mon Jul 20 15:04:54 2009" host=kei pid=5160 status=goal dist=53 phrase="Rb N h2 Db h3 Ci h1 Id Io Is ar vI AARKy" elapsed=2 rate=0
+s=1248116695 time="Mon Jul 20 15:04:55 2009" host=kei pid=5160 status=goal dist=48 phrase="Rb N h2 Db h3 Ci h1 Id Io Is ar vI ABA75" elapsed=2 rate=0
+s=1248116695 time="Mon Jul 20 15:04:55 2009" host=kei pid=5139 status=goal dist=48 phrase="n rb ci io ar h2 Is Id vi db H1 H3 AH+wd" elapsed=5 rate=418412
+s=1248116695 time="Mon Jul 20 15:04:55 2009" host=alpha pid=12475 status=goal dist=46 phrase="Vi io H1 rb ci h2 h3 ID ar is N db AzO5B" elapsed=28 rate=479655
+s=1248116696 time="Mon Jul 20 15:04:56 2009" host=mnemosyne pid=4765 status=goal dist=43 phrase="db is n cI ar h2 vi id IO h1 rb H3 H9fB4" elapsed=67 rate=1993409
+s=1248116698 time="Mon Jul 20 15:04:58 2009" host=faith pid=5039 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0 rate=0
+s=1248116699 time="Mon Jul 20 15:04:59 2009" host=faith pid=5039 status=nphr phrase="iO Db h3 RB h1 Vi H2 iD N iS ar cI " elapsed=0 rate=0
+s=1248116699 time="Mon Jul 20 15:04:59 2009" host=faith pid=5039 status=goal dist=76 phrase="iO Db h3 RB h1 Vi H2 iD N iS ar cI AAAAA" elapsed=1 rate=0
+s=1248116699 time="Mon Jul 20 15:04:59 2009" host=kei pid=4989 status=goal dist=43 phrase="rB cI db IO H1 H2 iD h3 n is ar VI BLMcE" elapsed=17 rate=1159515
+s=1248116700 time="Mon Jul 20 15:05:00 2009" host=faith pid=5039 status=goal dist=71 phrase="iO Db h3 RB h1 Vi H2 iD N iS ar cI AAAAN" elapsed=1 rate=0
+s=1248116700 time="Mon Jul 20 15:05:00 2009" host=faith pid=5039 status=goal dist=67 phrase="iO Db h3 RB h1 Vi H2 iD N iS ar cI AAAAW" elapsed=2 rate=0
+s=1248116700 time="Mon Jul 20 15:05:00 2009" host=faith pid=5039 status=goal dist=65 phrase="iO Db h3 RB h1 Vi H2 iD N iS ar cI AAABu" elapsed=2 rate=0
+s=1248116700 time="Mon Jul 20 15:05:00 2009" host=faith pid=5039 status=goal dist=63 phrase="iO Db h3 RB h1 Vi H2 iD N iS ar cI AAADI" elapsed=2 rate=0
+s=1248116700 time="Mon Jul 20 15:05:00 2009" host=faith pid=5039 status=goal dist=60 phrase="iO Db h3 RB h1 Vi H2 iD N iS ar cI AAAHt" elapsed=2 rate=0
+s=1248116701 time="Mon Jul 20 15:05:01 2009" host=faith pid=5039 status=goal dist=59 phrase="iO Db h3 RB h1 Vi H2 iD N iS ar cI AAAI3" elapsed=2 rate=0
+s=1248116701 time="Mon Jul 20 15:05:01 2009" host=faith pid=5039 status=goal dist=58 phrase="iO Db h3 RB h1 Vi H2 iD N iS ar cI AAAuK" elapsed=3 rate=0
+s=1248116701 time="Mon Jul 20 15:05:01 2009" host=faith pid=5040 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0 rate=0
+s=1248116701 time="Mon Jul 20 15:05:01 2009" host=faith pid=5039 status=goal dist=56 phrase="iO Db h3 RB h1 Vi H2 iD N iS ar cI AADek" elapsed=3 rate=0
+s=1248116701 time="Mon Jul 20 15:05:01 2009" host=faith pid=5040 status=nphr phrase="H1 vi ci Is N iD h3 h2 Ar dB Rb io " elapsed=0 rate=0
+s=1248116701 time="Mon Jul 20 15:05:01 2009" host=faith pid=5040 status=goal dist=78 phrase="H1 vi ci Is N iD h3 h2 Ar dB Rb io AAAAA" elapsed=0 rate=0
+s=1248116701 time="Mon Jul 20 15:05:01 2009" host=dho pid=25414 status=goal dist=45 phrase="n ar ci h3 rb IS db io iD h2 H1 Vi Gi8aW" elapsed=51 rate=2153405
+s=1248116702 time="Mon Jul 20 15:05:02 2009" host=faith pid=5039 status=goal dist=55 phrase="iO Db h3 RB h1 Vi H2 iD N iS ar cI AAHNR" elapsed=3 rate=0
+s=1248116702 time="Mon Jul 20 15:05:02 2009" host=kei pid=5119 status=goal dist=46 phrase="H3 n vI dB id h2 ci h1 Io AR rb Is Av9ui" elapsed=14 rate=898114
+s=1248116702 time="Mon Jul 20 15:05:02 2009" host=faith pid=5040 status=goal dist=65 phrase="H1 vi ci Is N iD h3 h2 Ar dB Rb io AAAAB" elapsed=0 rate=0
+s=1248116702 time="Mon Jul 20 15:05:02 2009" host=faith pid=5039 status=goal dist=50 phrase="iO Db h3 RB h1 Vi H2 iD N iS ar cI AAlfR" elapsed=4 rate=0
+s=1248116702 time="Mon Jul 20 15:05:02 2009" host=faith pid=5040 status=goal dist=61 phrase="H1 vi ci Is N iD h3 h2 Ar dB Rb io AAADE" elapsed=1 rate=0
+s=1248116703 time="Mon Jul 20 15:05:03 2009" host=faith pid=5040 status=goal dist=59 phrase="H1 vi ci Is N iD h3 h2 Ar dB Rb io AAAOC" elapsed=1 rate=0
+s=1248116703 time="Mon Jul 20 15:05:03 2009" host=faith pid=5039 status=goal dist=48 phrase="iO Db h3 RB h1 Vi H2 iD N iS ar cI AHVjQ" elapsed=5 rate=384656
+s=1248116703 time="Mon Jul 20 15:05:03 2009" host=faith pid=5040 status=goal dist=58 phrase="H1 vi ci Is N iD h3 h2 Ar dB Rb io AAAtI" elapsed=2 rate=0
+s=1248116703 time="Mon Jul 20 15:05:03 2009" host=faith pid=5040 status=goal dist=57 phrase="H1 vi ci Is N iD h3 h2 Ar dB Rb io AABj6" elapsed=2 rate=0
+s=1248116704 time="Mon Jul 20 15:05:04 2009" host=faith pid=5040 status=goal dist=56 phrase="H1 vi ci Is N iD h3 h2 Ar dB Rb io AAFse" elapsed=2 rate=0
+s=1248116704 time="Mon Jul 20 15:05:04 2009" host=faith pid=5040 status=goal dist=52 phrase="H1 vi ci Is N iD h3 h2 Ar dB Rb io AAGOv" elapsed=3 rate=0
+s=1248116704 time="Mon Jul 20 15:05:04 2009" host=straumli pid=717 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0 rate=0
+s=1248116704 time="Mon Jul 20 15:05:04 2009" host=faith pid=5040 status=goal dist=51 phrase="H1 vi ci Is N iD h3 h2 Ar dB Rb io AATOA" elapsed=3 rate=0
+s=1248116704 time="Mon Jul 20 15:05:04 2009" host=straumli pid=717 status=nphr phrase="Id ar cI H2 h3 db is RB Io H1 N Vi " elapsed=0 rate=0
+s=1248116705 time="Mon Jul 20 15:05:05 2009" host=faith pid=5040 status=goal dist=50 phrase="H1 vi ci Is N iD h3 h2 Ar dB Rb io AAlVR" elapsed=3 rate=0
+s=1248116705 time="Mon Jul 20 15:05:05 2009" host=straumli pid=717 status=goal dist=81 phrase="Id ar cI H2 h3 db is RB Io H1 N Vi AAAAA" elapsed=0 rate=0
+s=1248116705 time="Mon Jul 20 15:05:05 2009" host=straumli pid=717 status=goal dist=77 phrase="Id ar cI H2 h3 db is RB Io H1 N Vi AAAAB" elapsed=0 rate=0
+s=1248116705 time="Mon Jul 20 15:05:05 2009" host=straumli pid=717 status=goal dist=75 phrase="Id ar cI H2 h3 db is RB Io H1 N Vi AAAAC" elapsed=1 rate=0
+s=1248116705 time="Mon Jul 20 15:05:05 2009" host=faith pid=5040 status=goal dist=49 phrase="H1 vi ci Is N iD h3 h2 Ar dB Rb io AESbF" elapsed=4 rate=0
+s=1248116705 time="Mon Jul 20 15:05:05 2009" host=straumli pid=717 status=goal dist=74 phrase="Id ar cI H2 h3 db is RB Io H1 N Vi AAAAE" elapsed=1 rate=0
+s=1248116706 time="Mon Jul 20 15:05:06 2009" host=straumli pid=717 status=goal dist=72 phrase="Id ar cI H2 h3 db is RB Io H1 N Vi AAAAS" elapsed=1 rate=0
+s=1248116706 time="Mon Jul 20 15:05:06 2009" host=straumli pid=717 status=goal dist=62 phrase="Id ar cI H2 h3 db is RB Io H1 N Vi AAAAV" elapsed=1 rate=0
+s=1248116706 time="Mon Jul 20 15:05:06 2009" host=straumli pid=717 status=goal dist=57 phrase="Id ar cI H2 h3 db is RB Io H1 N Vi AAASk" elapsed=2 rate=0
+s=1248116706 time="Mon Jul 20 15:05:06 2009" host=straumli pid=717 status=goal dist=56 phrase="Id ar cI H2 h3 db is RB Io H1 N Vi AABaJ" elapsed=2 rate=0
+s=1248116707 time="Mon Jul 20 15:05:07 2009" host=straumli pid=717 status=goal dist=54 phrase="Id ar cI H2 h3 db is RB Io H1 N Vi AAJhy" elapsed=2 rate=0
+s=1248116707 time="Mon Jul 20 15:05:07 2009" host=straumli pid=717 status=goal dist=50 phrase="Id ar cI H2 h3 db is RB Io H1 N Vi AAKCB" elapsed=2 rate=0
+s=1248116707 time="Mon Jul 20 15:05:07 2009" host=straumli pid=718 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0 rate=0
+s=1248116707 time="Mon Jul 20 15:05:07 2009" host=straumli pid=718 status=nphr phrase="id IS Vi dB h1 h2 h3 ci n rB ar io " elapsed=0 rate=0
+s=1248116707 time="Mon Jul 20 15:05:07 2009" host=faith pid=5040 status=goal dist=47 phrase="H1 vi ci Is N iD h3 h2 Ar dB Rb io AU0ft" elapsed=6 rate=909650
+s=1248116707 time="Mon Jul 20 15:05:07 2009" host=straumli pid=717 status=goal dist=47 phrase="Id ar cI H2 h3 db is RB Io H1 N Vi ADE0i" elapsed=3 rate=0
+s=1248116707 time="Mon Jul 20 15:05:07 2009" host=straumli pid=718 status=goal dist=82 phrase="id IS Vi dB h1 h2 h3 ci n rB ar io AAAAA" elapsed=0 rate=0
+s=1248116708 time="Mon Jul 20 15:05:08 2009" host=straumli pid=718 status=goal dist=71 phrase="id IS Vi dB h1 h2 h3 ci n rB ar io AAAAE" elapsed=0 rate=0
+s=1248116708 time="Mon Jul 20 15:05:08 2009" host=straumli pid=718 status=goal dist=64 phrase="id IS Vi dB h1 h2 h3 ci n rB ar io AAAAX" elapsed=0 rate=0
+s=1248116708 time="Mon Jul 20 15:05:08 2009" host=faith pid=5039 status=goal dist=46 phrase="iO Db h3 RB h1 Vi H2 iD N iS ar cI AwD71" elapsed=10 rate=1259903
+s=1248116708 time="Mon Jul 20 15:05:08 2009" host=straumli pid=718 status=goal dist=63 phrase="id IS Vi dB h1 h2 h3 ci n rB ar io AAABq" elapsed=1 rate=0
+s=1248116708 time="Mon Jul 20 15:05:08 2009" host=straumli pid=718 status=goal dist=62 phrase="id IS Vi dB h1 h2 h3 ci n rB ar io AAAFC" elapsed=1 rate=0
+s=1248116708 time="Mon Jul 20 15:05:08 2009" host=straumli pid=718 status=goal dist=57 phrase="id IS Vi dB h1 h2 h3 ci n rB ar io AAAJI" elapsed=1 rate=0
+s=1248116709 time="Mon Jul 20 15:05:09 2009" host=straumli pid=718 status=goal dist=52 phrase="id IS Vi dB h1 h2 h3 ci n rB ar io AADzN" elapsed=1 rate=0
+s=1248116709 time="Mon Jul 20 15:05:09 2009" host=straumli pid=718 status=goal dist=50 phrase="id IS Vi dB h1 h2 h3 ci n rB ar io ABi3E" elapsed=2 rate=0
+s=1248116709 time="Mon Jul 20 15:05:09 2009" host=straumli pid=725 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0 rate=0
+s=1248116709 time="Mon Jul 20 15:05:09 2009" host=straumli pid=725 status=nphr phrase="id aR h3 is h1 h2 N IO ci Rb dB Vi " elapsed=0 rate=0
+s=1248116710 time="Mon Jul 20 15:05:10 2009" host=straumli pid=725 status=goal dist=101 phrase="id aR h3 is h1 h2 N IO ci Rb dB Vi AAAAA" elapsed=0 rate=0
+s=1248116710 time="Mon Jul 20 15:05:10 2009" host=straumli pid=725 status=goal dist=83 phrase="id aR h3 is h1 h2 N IO ci Rb dB Vi AAAAB" elapsed=0 rate=0
+s=1248116710 time="Mon Jul 20 15:05:10 2009" host=straumli pid=718 status=goal dist=47 phrase="id IS Vi dB h1 h2 h3 ci n rB ar io AGLeO" elapsed=2 rate=0
+s=1248116710 time="Mon Jul 20 15:05:10 2009" host=straumli pid=725 status=goal dist=75 phrase="id aR h3 is h1 h2 N IO ci Rb dB Vi AAAAD" elapsed=1 rate=0
+s=1248116710 time="Mon Jul 20 15:05:10 2009" host=faith pid=5040 status=goal dist=46 phrase="H1 vi ci Is N iD h3 h2 Ar dB Rb io Atwg1" elapsed=9 rate=1332799
+s=1248116710 time="Mon Jul 20 15:05:10 2009" host=straumli pid=725 status=goal dist=70 phrase="id aR h3 is h1 h2 N IO ci Rb dB Vi AAAAF" elapsed=1 rate=0
+s=1248116711 time="Mon Jul 20 15:05:11 2009" host=straumli pid=725 status=goal dist=64 phrase="id aR h3 is h1 h2 N IO ci Rb dB Vi AAAAu" elapsed=1 rate=0
+s=1248116711 time="Mon Jul 20 15:05:11 2009" host=straumli pid=725 status=goal dist=63 phrase="id aR h3 is h1 h2 N IO ci Rb dB Vi AAAA1" elapsed=1 rate=0
+s=1248116711 time="Mon Jul 20 15:05:11 2009" host=straumli pid=725 status=goal dist=60 phrase="id aR h3 is h1 h2 N IO ci Rb dB Vi AAAMi" elapsed=1 rate=0
+s=1248116711 time="Mon Jul 20 15:05:11 2009" host=straumli pid=725 status=goal dist=55 phrase="id aR h3 is h1 h2 N IO ci Rb dB Vi AABCf" elapsed=2 rate=0
+s=1248116712 time="Mon Jul 20 15:05:12 2009" host=straumli pid=725 status=goal dist=54 phrase="id aR h3 is h1 h2 N IO ci Rb dB Vi AAFHK" elapsed=2 rate=0
+s=1248116712 time="Mon Jul 20 15:05:12 2009" host=straumli pid=718 status=goal dist=46 phrase="id IS Vi dB h1 h2 h3 ci n rB ar io ARf2l" elapsed=4 rate=0
+s=1248116712 time="Mon Jul 20 15:05:12 2009" host=straumli pid=727 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0 rate=0
+s=1248116712 time="Mon Jul 20 15:05:12 2009" host=straumli pid=725 status=goal dist=53 phrase="id aR h3 is h1 h2 N IO ci Rb dB Vi AAjrw" elapsed=2 rate=0
+s=1248116712 time="Mon Jul 20 15:05:12 2009" host=straumli pid=727 status=nphr phrase="id aR h3 is h1 h2 N IO ci Rb dB Vi " elapsed=0 rate=0
+s=1248116712 time="Mon Jul 20 15:05:12 2009" host=straumli pid=727 status=goal dist=101 phrase="id aR h3 is h1 h2 N IO ci Rb dB Vi AAAAA" elapsed=0 rate=0
+s=1248116712 time="Mon Jul 20 15:05:12 2009" host=straumli pid=725 status=goal dist=51 phrase="id aR h3 is h1 h2 N IO ci Rb dB Vi AA0ls" elapsed=3 rate=0
+s=1248116712 time="Mon Jul 20 15:05:12 2009" host=straumli pid=727 status=goal dist=83 phrase="id aR h3 is h1 h2 N IO ci Rb dB Vi AAAAB" elapsed=0 rate=0
+s=1248116713 time="Mon Jul 20 15:05:13 2009" host=straumli pid=727 status=goal dist=75 phrase="id aR h3 is h1 h2 N IO ci Rb dB Vi AAAAD" elapsed=0 rate=0
+s=1248116713 time="Mon Jul 20 15:05:13 2009" host=straumli pid=727 status=goal dist=70 phrase="id aR h3 is h1 h2 N IO ci Rb dB Vi AAAAF" elapsed=0 rate=0
+s=1248116713 time="Mon Jul 20 15:05:13 2009" host=straumli pid=727 status=goal dist=64 phrase="id aR h3 is h1 h2 N IO ci Rb dB Vi AAAAu" elapsed=0 rate=0
+s=1248116713 time="Mon Jul 20 15:05:13 2009" host=straumli pid=727 status=goal dist=63 phrase="id aR h3 is h1 h2 N IO ci Rb dB Vi AAAA1" elapsed=1 rate=0
+s=1248116713 time="Mon Jul 20 15:05:13 2009" host=straumli pid=727 status=goal dist=60 phrase="id aR h3 is h1 h2 N IO ci Rb dB Vi AAAMi" elapsed=1 rate=0
+s=1248116713 time="Mon Jul 20 15:05:13 2009" host=kei pid=5160 status=goal dist=47 phrase="Rb N h2 Db h3 Ci h1 Id Io Is ar vI AxWln" elapsed=21 rate=616075
+s=1248116713 time="Mon Jul 20 15:05:13 2009" host=straumli pid=727 status=goal dist=55 phrase="id aR h3 is h1 h2 N IO ci Rb dB Vi AABCf" elapsed=1 rate=0
+s=1248116714 time="Mon Jul 20 15:05:14 2009" host=straumli pid=727 status=goal dist=54 phrase="id aR h3 is h1 h2 N IO ci Rb dB Vi AAFHK" elapsed=1 rate=0
+s=1248116714 time="Mon Jul 20 15:05:14 2009" host=straumli pid=725 status=goal dist=48 phrase="id aR h3 is h1 h2 N IO ci Rb dB Vi AIK6R" elapsed=4 rate=0
+s=1248116714 time="Mon Jul 20 15:05:14 2009" host=straumli pid=727 status=goal dist=53 phrase="id aR h3 is h1 h2 N IO ci Rb dB Vi AAjrw" elapsed=1 rate=0
+s=1248116714 time="Mon Jul 20 15:05:14 2009" host=straumli pid=727 status=goal dist=51 phrase="id aR h3 is h1 h2 N IO ci Rb dB Vi AA0ls" elapsed=2 rate=0
+s=1248116715 time="Mon Jul 20 15:05:15 2009" host=tetrakis pid=13991 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0 rate=0
+s=1248116715 time="Mon Jul 20 15:05:15 2009" host=tetrakis pid=13991 status=nphr phrase="N ar Ci rb vI is h3 id iO h2 db H1 " elapsed=0 rate=0
+s=1248116715 time="Mon Jul 20 15:05:15 2009" host=tetrakis pid=13991 status=goal dist=74 phrase="N ar Ci rb vI is h3 id iO h2 db H1 AAAAA" elapsed=0 rate=0
+s=1248116715 time="Mon Jul 20 15:05:15 2009" host=tetrakis pid=13991 status=goal dist=69 phrase="N ar Ci rb vI is h3 id iO h2 db H1 AAAAG" elapsed=0 rate=0
+s=1248116716 time="Mon Jul 20 15:05:16 2009" host=tetrakis pid=13991 status=goal dist=68 phrase="N ar Ci rb vI is h3 id iO h2 db H1 AAAAl" elapsed=0 rate=0
+s=1248116716 time="Mon Jul 20 15:05:16 2009" host=tetrakis pid=13991 status=goal dist=66 phrase="N ar Ci rb vI is h3 id iO h2 db H1 AAABc" elapsed=1 rate=0
+s=1248116716 time="Mon Jul 20 15:05:16 2009" host=tetrakis pid=13991 status=goal dist=62 phrase="N ar Ci rb vI is h3 id iO h2 db H1 AAACQ" elapsed=1 rate=0
+s=1248116716 time="Mon Jul 20 15:05:16 2009" host=tetrakis pid=13991 status=goal dist=60 phrase="N ar Ci rb vI is h3 id iO h2 db H1 AAACo" elapsed=1 rate=0
+s=1248116716 time="Mon Jul 20 15:05:16 2009" host=straumli pid=718 status=goal dist=45 phrase="id IS Vi dB h1 h2 h3 ci n rB ar io AgyJw" elapsed=9 rate=954893
+s=1248116716 time="Mon Jul 20 15:05:16 2009" host=tetrakis pid=13991 status=goal dist=59 phrase="N ar Ci rb vI is h3 id iO h2 db H1 AAAQ7" elapsed=1 rate=0
+s=1248116716 time="Mon Jul 20 15:05:16 2009" host=tetrakis pid=13991 status=goal dist=58 phrase="N ar Ci rb vI is h3 id iO h2 db H1 AABXr" elapsed=1 rate=0
+s=1248116717 time="Mon Jul 20 15:05:17 2009" host=tetrakis pid=13991 status=goal dist=57 phrase="N ar Ci rb vI is h3 id iO h2 db H1 AAChn" elapsed=2 rate=0
+s=1248116717 time="Mon Jul 20 15:05:17 2009" host=straumli pid=725 status=goal dist=46 phrase="id aR h3 is h1 h2 N IO ci Rb dB Vi AQ8rV" elapsed=7 rate=634691
+s=1248116717 time="Mon Jul 20 15:05:17 2009" host=tetrakis pid=13991 status=goal dist=55 phrase="N ar Ci rb vI is h3 id iO h2 db H1 AAImq" elapsed=2 rate=0
+s=1248116717 time="Mon Jul 20 15:05:17 2009" host=straumli pid=727 status=goal dist=48 phrase="id aR h3 is h1 h2 N IO ci Rb dB Vi AIK6R" elapsed=5 rate=428368
+s=1248116717 time="Mon Jul 20 15:05:17 2009" host=tetrakis pid=13991 status=goal dist=53 phrase="N ar Ci rb vI is h3 id iO h2 db H1 AAIwV" elapsed=2 rate=0
+s=1248116717 time="Mon Jul 20 15:05:17 2009" host=tetrakis pid=13991 status=goal dist=50 phrase="N ar Ci rb vI is h3 id iO h2 db H1 AALb0" elapsed=2 rate=0
+s=1248116718 time="Mon Jul 20 15:05:18 2009" host=tetrakis pid=13993 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0 rate=0
+s=1248116718 time="Mon Jul 20 15:05:18 2009" host=tetrakis pid=13993 status=nphr phrase="N h2 cI vi h1 is Io Id aR rb h3 db " elapsed=0 rate=0
+s=1248116718 time="Mon Jul 20 15:05:18 2009" host=tetrakis pid=13993 status=goal dist=83 phrase="N h2 cI vi h1 is Io Id aR rb h3 db AAAAA" elapsed=0 rate=0
+s=1248116718 time="Mon Jul 20 15:05:18 2009" host=tetrakis pid=13993 status=goal dist=75 phrase="N h2 cI vi h1 is Io Id aR rb h3 db AAAAB" elapsed=0 rate=0
+s=1248116718 time="Mon Jul 20 15:05:18 2009" host=tetrakis pid=13993 status=goal dist=73 phrase="N h2 cI vi h1 is Io Id aR rb h3 db AAAAF" elapsed=0 rate=0
+s=1248116719 time="Mon Jul 20 15:05:19 2009" host=tetrakis pid=13993 status=goal dist=71 phrase="N h2 cI vi h1 is Io Id aR rb h3 db AAAAU" elapsed=0 rate=0
+s=1248116719 time="Mon Jul 20 15:05:19 2009" host=tetrakis pid=13993 status=goal dist=62 phrase="N h2 cI vi h1 is Io Id aR rb h3 db AAAAn" elapsed=1 rate=0
+s=1248116719 time="Mon Jul 20 15:05:19 2009" host=tetrakis pid=13993 status=goal dist=61 phrase="N h2 cI vi h1 is Io Id aR rb h3 db AAARo" elapsed=1 rate=0
+s=1248116719 time="Mon Jul 20 15:05:19 2009" host=tetrakis pid=13993 status=goal dist=57 phrase="N h2 cI vi h1 is Io Id aR rb h3 db AAAaJ" elapsed=1 rate=0
+s=1248116719 time="Mon Jul 20 15:05:19 2009" host=tetrakis pid=13993 status=goal dist=54 phrase="N h2 cI vi h1 is Io Id aR rb h3 db AABRF" elapsed=1 rate=0
+s=1248116719 time="Mon Jul 20 15:05:19 2009" host=tetrakis pid=13993 status=goal dist=53 phrase="N h2 cI vi h1 is Io Id aR rb h3 db AADdl" elapsed=1 rate=0
+s=1248116720 time="Mon Jul 20 15:05:20 2009" host=tetrakis pid=13993 status=goal dist=52 phrase="N h2 cI vi h1 is Io Id aR rb h3 db AAZq9" elapsed=2 rate=0
+s=1248116720 time="Mon Jul 20 15:05:20 2009" host=tetrakis pid=13994 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0 rate=0
+s=1248116720 time="Mon Jul 20 15:05:20 2009" host=tetrakis pid=13994 status=nphr phrase="n VI rB db h1 ar h3 Id h2 iS ci io " elapsed=0 rate=0
+s=1248116721 time="Mon Jul 20 15:05:21 2009" host=tetrakis pid=13994 status=goal dist=86 phrase="n VI rB db h1 ar h3 Id h2 iS ci io AAAAA" elapsed=0 rate=0
+s=1248116721 time="Mon Jul 20 15:05:21 2009" host=straumli pid=727 status=goal dist=46 phrase="id aR h3 is h1 h2 N IO ci Rb dB Vi AQ8rV" elapsed=8 rate=555355
+s=1248116721 time="Mon Jul 20 15:05:21 2009" host=tetrakis pid=13994 status=goal dist=85 phrase="n VI rB db h1 ar h3 Id h2 iS ci io AAAAC" elapsed=1 rate=0
+s=1248116721 time="Mon Jul 20 15:05:21 2009" host=tetrakis pid=13993 status=goal dist=47 phrase="N h2 cI vi h1 is Io Id aR rb h3 db ADZm7" elapsed=3 rate=0
+s=1248116721 time="Mon Jul 20 15:05:21 2009" host=tetrakis pid=13994 status=goal dist=80 phrase="n VI rB db h1 ar h3 Id h2 iS ci io AAAAD" elapsed=1 rate=0
+s=1248116721 time="Mon Jul 20 15:05:21 2009" host=tetrakis pid=13994 status=goal dist=79 phrase="n VI rB db h1 ar h3 Id h2 iS ci io AAAAE" elapsed=1 rate=0
+s=1248116721 time="Mon Jul 20 15:05:21 2009" host=tetrakis pid=13994 status=goal dist=65 phrase="n VI rB db h1 ar h3 Id h2 iS ci io AAAAJ" elapsed=1 rate=0
+s=1248116722 time="Mon Jul 20 15:05:22 2009" host=tetrakis pid=13994 status=goal dist=62 phrase="n VI rB db h1 ar h3 Id h2 iS ci io AAABB" elapsed=1 rate=0
+s=1248116722 time="Mon Jul 20 15:05:22 2009" host=tetrakis pid=13994 status=goal dist=59 phrase="n VI rB db h1 ar h3 Id h2 iS ci io AAAEJ" elapsed=2 rate=0
+s=1248116722 time="Mon Jul 20 15:05:22 2009" host=tetrakis pid=13994 status=goal dist=55 phrase="n VI rB db h1 ar h3 Id h2 iS ci io AAAfs" elapsed=2 rate=0
+s=1248116722 time="Mon Jul 20 15:05:22 2009" host=tetrakis pid=13994 status=goal dist=54 phrase="n VI rB db h1 ar h3 Id h2 iS ci io AABAW" elapsed=2 rate=0
+s=1248116722 time="Mon Jul 20 15:05:22 2009" host=tetrakis pid=13994 status=goal dist=52 phrase="n VI rB db h1 ar h3 Id h2 iS ci io AACdd" elapsed=2 rate=0
+s=1248116723 time="Mon Jul 20 15:05:23 2009" host=tetrakis pid=13995 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0 rate=0
+s=1248116723 time="Mon Jul 20 15:05:23 2009" host=tetrakis pid=13995 status=nphr phrase="H2 ar ci iD h1 N db vi rb Is io H3 " elapsed=0 rate=0
+s=1248116723 time="Mon Jul 20 15:05:23 2009" host=tetrakis pid=13995 status=goal dist=86 phrase="H2 ar ci iD h1 N db vi rb Is io H3 AAAAA" elapsed=0 rate=0
+s=1248116723 time="Mon Jul 20 15:05:23 2009" host=tetrakis pid=13994 status=goal dist=51 phrase="n VI rB db h1 ar h3 Id h2 iS ci io ACc+k" elapsed=3 rate=0
+s=1248116723 time="Mon Jul 20 15:05:23 2009" host=tetrakis pid=13995 status=goal dist=79 phrase="H2 ar ci iD h1 N db vi rb Is io H3 AAAAD" elapsed=0 rate=0
+s=1248116724 time="Mon Jul 20 15:05:24 2009" host=tetrakis pid=13995 status=goal dist=73 phrase="H2 ar ci iD h1 N db vi rb Is io H3 AAAAE" elapsed=0 rate=0
+s=1248116724 time="Mon Jul 20 15:05:24 2009" host=tetrakis pid=13995 status=goal dist=69 phrase="H2 ar ci iD h1 N db vi rb Is io H3 AAAAI" elapsed=1 rate=0
+s=1248116724 time="Mon Jul 20 15:05:24 2009" host=tetrakis pid=13995 status=goal dist=63 phrase="H2 ar ci iD h1 N db vi rb Is io H3 AAAAK" elapsed=1 rate=0
+s=1248116724 time="Mon Jul 20 15:05:24 2009" host=tetrakis pid=13995 status=goal dist=62 phrase="H2 ar ci iD h1 N db vi rb Is io H3 AAAKs" elapsed=1 rate=0
+s=1248116725 time="Mon Jul 20 15:05:25 2009" host=tetrakis pid=13995 status=goal dist=58 phrase="H2 ar ci iD h1 N db vi rb Is io H3 AAAZC" elapsed=1 rate=0
+s=1248116725 time="Mon Jul 20 15:05:25 2009" host=faith pid=5039 status=goal dist=45 phrase="iO Db h3 RB h1 Vi H2 iD N iS ar cI DGU9o" elapsed=27 rate=1925570
+s=1248116725 time="Mon Jul 20 15:05:25 2009" host=tetrakis pid=13995 status=goal dist=57 phrase="H2 ar ci iD h1 N db vi rb Is io H3 AABzX" elapsed=2 rate=0
+s=1248116725 time="Mon Jul 20 15:05:25 2009" host=tetrakis pid=13995 status=goal dist=56 phrase="H2 ar ci iD h1 N db vi rb Is io H3 AAFRP" elapsed=2 rate=0
+s=1248116726 time="Mon Jul 20 15:05:26 2009" host=tetrakis pid=13995 status=goal dist=54 phrase="H2 ar ci iD h1 N db vi rb Is io H3 AALv7" elapsed=2 rate=0
+s=1248116726 time="Mon Jul 20 15:05:26 2009" host=phel pid=16994 status=goal dist=44 phrase="N rb vi H1 Db h3 ar ci iO is H2 id FR/B8" elapsed=69 rate=1284068
+s=1248116726 time="Mon Jul 20 15:05:26 2009" host=tetrakis pid=13995 status=goal dist=53 phrase="H2 ar ci iD h1 N db vi rb Is io H3 AAdlD" elapsed=3 rate=0
+s=1248116727 time="Mon Jul 20 15:05:27 2009" host=tetrakis pid=13991 status=goal dist=48 phrase="N ar Ci rb vI is h3 id iO h2 db H1 AhnEj" elapsed=11 rate=800981
+s=1248116727 time="Mon Jul 20 15:05:27 2009" host=tetrakis pid=13995 status=goal dist=51 phrase="H2 ar ci iD h1 N db vi rb Is io H3 ADG5S" elapsed=4 rate=0
+s=1248116727 time="Mon Jul 20 15:05:27 2009" host=dho pid=25415 status=goal dist=43 phrase="rb ar ci dB n h3 H2 h1 io is id vi Jsc6p" elapsed=74 rate=2197942
+s=1248116728 time="Mon Jul 20 15:05:28 2009" host=tetrakis pid=13995 status=goal dist=50 phrase="H2 ar ci iD h1 N db vi rb Is io H3 AFFWh" elapsed=4 rate=0
+s=1248116728 time="Mon Jul 20 15:05:28 2009" host=tetrakis pid=13994 status=goal dist=49 phrase="n VI rB db h1 ar h3 Id h2 iS ci io AVPd8" elapsed=8 rate=696048
+s=1248116730 time="Mon Jul 20 15:05:30 2009" host=tetrakis pid=13995 status=goal dist=49 phrase="H2 ar ci iD h1 N db vi rb Is io H3 AOO2C" elapsed=7 rate=532974
+s=1248116732 time="Mon Jul 20 15:05:32 2009" host=lethe pid=13600 status=goal dist=44 phrase="H1 Ar CI dB N h2 iD h3 Io iS rB vI Lsd9i" elapsed=96 rate=2043817
+s=1248116732 time="Mon Jul 20 15:05:32 2009" host=tetrakis pid=13994 status=goal dist=47 phrase="n VI rB db h1 ar h3 Id h2 iS ci io AjqIh" elapsed=12 rate=778968
+s=1248116736 time="Mon Jul 20 15:05:36 2009" host=kei pid=5160 status=goal dist=46 phrase="Rb N h2 Db h3 Ci h1 Id Io Is ar vI BsMVE" elapsed=43 rate=659583
+s=1248116736 time="Mon Jul 20 15:05:36 2009" host=tetrakis pid=13993 status=goal dist=46 phrase="N h2 cI vi h1 is Io Id aR rb h3 db A/Y/B" elapsed=18 rate=923189
+s=1248116739 time="Mon Jul 20 15:05:39 2009" host=tetrakis pid=13991 status=goal dist=47 phrase="N ar Ci rb vI is h3 id iO h2 db H1 BN1W5" elapsed=23 rate=887115
+s=1248116739 time="Mon Jul 20 15:05:39 2009" host=tetrakis pid=13995 status=goal dist=47 phrase="H2 ar ci iD h1 N db vi rb Is io H3 AwIxr" elapsed=16 rate=788679
+s=1248116740 time="Mon Jul 20 15:05:40 2009" host=pallas pid=29182 status=goal dist=44 phrase="n ar id db Io H2 H3 ci h1 iS rB vI EVcSD" elapsed=76 rate=956970
+s=1248116743 time="Mon Jul 20 15:05:43 2009" host=char pid=16350 status=goal dist=43 phrase="n h2 cI Db h1 vi h3 id iO AR Rb Is L++W9" elapsed=126 rate=1595696
+s=1248116744 time="Mon Jul 20 15:05:44 2009" host=dho pid=25414 status=goal dist=42 phrase="n ar ci h3 rb IS db io iD h2 H1 Vi Mcehz" elapsed=94 rate=2221188
+s=1248116751 time="Mon Jul 20 15:05:51 2009" host=char pid=16350 status=goal dist=41 phrase="n h2 cI Db h1 vi h3 id iO AR Rb Is Myqwu" elapsed=134 rate=1601559
+s=1248116756 time="Mon Jul 20 15:05:56 2009" host=tetrakis pid=13994 status=goal dist=46 phrase="n VI rB db h1 ar h3 Id h2 iS ci io B8bSw" elapsed=36 rate=906046
+s=1248116757 time="Mon Jul 20 15:05:57 2009" host=kei pid=5139 status=goal dist=47 phrase="n rb ci io ar h2 Is Id vi db H1 H3 DISBJ" elapsed=68 rate=772097
+s=1248116759 time="Mon Jul 20 15:05:59 2009" host=faith pid=5040 status=goal dist=45 phrase="H1 vi ci Is N iD h3 h2 Ar dB Rb io HnxgO" elapsed=58 rate=2204602
+s=1248116760 time="Mon Jul 20 15:06:00 2009" host=faith pid=5040 status=goal dist=42 phrase="H1 vi ci Is N iD h3 h2 Ar dB Rb io HvEHB" elapsed=59 rate=2199629
+s=1248116763 time="Mon Jul 20 15:06:03 2009" host=kei pid=5119 status=goal dist=44 phrase="H3 n vI dB id h2 ci h1 Io AR rb Is Dm2G6" elapsed=75 rate=806863
+s=1248116777 time="Mon Jul 20 15:06:17 2009" host=straumli pid=717 status=goal dist=46 phrase="Id ar cI H2 h3 db is RB Io H1 N Vi Dgclv" elapsed=73 rate=805991
+s=1248116779 time="Mon Jul 20 15:06:19 2009" host=tetrakis pid=13991 status=goal dist=45 phrase="N ar Ci rb vI is h3 id iO h2 db H1 Djl3g" elapsed=64 rate=932216
+s=1248116780 time="Mon Jul 20 15:06:20 2009" host=mnemosyne pid=4620 status=goal dist=43 phrase="n ar id h3 h1 IS IO dB Ci vi rb H2 S4qLr" elapsed=154 rate=2057420
+s=1248116780 time="Mon Jul 20 15:06:20 2009" host=lethe pid=13600 status=goal dist=43 phrase="H1 Ar CI dB N h2 iD h3 Io iS rB vI R4QV/" elapsed=144 rate=2083053
+s=1248116795 time="Mon Jul 20 15:06:35 2009" host=tetrakis pid=13995 status=goal dist=46 phrase="H2 ar ci iD h1 N db vi rb Is io H3 EAAti" elapsed=71 rate=945236
+s=1248116809 time="Mon Jul 20 15:06:49 2009" host=tetrakis pid=13995 status=goal dist=45 phrase="H2 ar ci iD h1 N db vi rb Is io H3 E3tcs" elapsed=86 rate=950150
+s=1248116819 time="Mon Jul 20 15:06:59 2009" host=tetrakis pid=13991 status=goal dist=43 phrase="N ar Ci rb vI is h3 id iO h2 db H1 F1WG9" elapsed=104 rate=941060
+s=1248116836 time="Mon Jul 20 15:07:16 2009" host=kei pid=5139 status=goal dist=46 phrase="n rb ci io ar h2 Is Id vi db H1 H3 G87bT" elapsed=147 rate=793438
+s=1248116846 time="Mon Jul 20 15:07:26 2009" host=tetrakis pid=13993 status=goal dist=44 phrase="N h2 cI vi h1 is Io Id aR rb h3 db HcPjE" elapsed=128 rate=975346
+s=1248116847 time="Mon Jul 20 15:07:27 2009" host=tetrakis pid=13994 status=goal dist=44 phrase="n VI rB db h1 ar h3 Id h2 iS ci io HYZw3" elapsed=127 rate=975098
+s=1248116860 time="Mon Jul 20 15:07:40 2009" host=tetrakis pid=13995 status=goal dist=43 phrase="H2 ar ci iD h1 N db vi rb Is io H3 H2TyI" elapsed=137 rate=961148
+s=1248116871 time="Mon Jul 20 15:07:51 2009" host=dho pid=25321 status=goal dist=43 phrase="n aR H3 ci h1 dB id h2 io is rb vi fnDro" elapsed=230 rate=2305793
+s=1248116879 time="Mon Jul 20 15:07:59 2009" host=kei pid=5160 status=goal dist=45 phrase="Rb N h2 Db h3 Ci h1 Id Io Is ar vI He4CP" elapsed=187 rate=671307
+s=1248116895 time="Mon Jul 20 15:08:15 2009" host=kei pid=5139 status=goal dist=45 phrase="n rb ci io ar h2 Is Id vi db H1 H3 JyybX" elapsed=205 rate=801506
+s=1248116896 time="Mon Jul 20 15:08:16 2009" host=phoebus pid=6443 status=goal dist=43 phrase="N ID ci is Vi h2 h3 h1 io aR Rb dB flX41" elapsed=235 rate=2254855
+s=1248116896 time="Mon Jul 20 15:08:16 2009" host=straumli pid=725 status=goal dist=45 phrase="id aR h3 is h1 h2 N IO ci Rb dB Vi H9LEb" elapsed=187 rate=713779
+s=1248116900 time="Mon Jul 20 15:08:20 2009" host=straumli pid=727 status=goal dist=45 phrase="id aR h3 is h1 h2 N IO ci Rb dB Vi H9LEb" elapsed=187 rate=713779
+s=1248116909 time="Mon Jul 20 15:08:29 2009" host=sol pid=1598 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0.000 rate=0
+s=1248116909 time="Mon Jul 20 15:08:29 2009" host=sol pid=1598 status=nphr phrase="H3 ci Id h1 Db ar N rB io iS h2 vi " elapsed=0.000 rate=0
+s=1248116910 time="Mon Jul 20 15:08:30 2009" host=sol pid=1598 status=goal dist=75 phrase="H3 ci Id h1 Db ar N rB io iS h2 vi AAAAA" elapsed=0.261 rate=4
+s=1248116910 time="Mon Jul 20 15:08:30 2009" host=sol pid=1598 status=goal dist=69 phrase="H3 ci Id h1 Db ar N rB io iS h2 vi AAAAB" elapsed=0.487 rate=4
+s=1248116910 time="Mon Jul 20 15:08:30 2009" host=sol pid=1598 status=goal dist=66 phrase="H3 ci Id h1 Db ar N rB io iS h2 vi AAAAi" elapsed=0.732 rate=48
+s=1248116910 time="Mon Jul 20 15:08:30 2009" host=sol pid=1598 status=goal dist=62 phrase="H3 ci Id h1 Db ar N rB io iS h2 vi AAAAj" elapsed=0.913 rate=39
+s=1248116911 time="Mon Jul 20 15:08:31 2009" host=sol pid=1598 status=goal dist=60 phrase="H3 ci Id h1 Db ar N rB io iS h2 vi AAAF8" elapsed=1.142 rate=334
+s=1248116911 time="Mon Jul 20 15:08:31 2009" host=sol pid=1598 status=goal dist=59 phrase="H3 ci Id h1 Db ar N rB io iS h2 vi AAASX" elapsed=1.335 rate=881
+s=1248116911 time="Mon Jul 20 15:08:31 2009" host=sol pid=1598 status=goal dist=56 phrase="H3 ci Id h1 Db ar N rB io iS h2 vi AABSK" elapsed=1.572 rate=3346
+s=1248116911 time="Mon Jul 20 15:08:31 2009" host=sol pid=1598 status=goal dist=55 phrase="H3 ci Id h1 Db ar N rB io iS h2 vi AAIFc" elapsed=1.951 rate=16978
+s=1248116911 time="Mon Jul 20 15:08:31 2009" host=sol pid=1598 status=goal dist=54 phrase="H3 ci Id h1 Db ar N rB io iS h2 vi AAIr9" elapsed=2.105 rate=16902
+s=1248116912 time="Mon Jul 20 15:08:32 2009" host=sol pid=1598 status=goal dist=50 phrase="H3 ci Id h1 Db ar N rB io iS h2 vi AALa3" elapsed=2.257 rate=20721
+s=1248116912 time="Mon Jul 20 15:08:32 2009" host=sol pid=1598 status=goal dist=48 phrase="H3 ci Id h1 Db ar N rB io iS h2 vi ABxNV" elapsed=2.767 rate=167583
+s=1248116914 time="Mon Jul 20 15:08:34 2009" host=char pid=15863 status=goal dist=43 phrase="h1 id ci db n Rb h3 aR iO IS h2 vi kjYW7" elapsed=346 rate=1772412
+s=1248116919 time="Mon Jul 20 15:08:39 2009" host=sol pid=1598 status=goal dist=47 phrase="H3 ci Id h1 Db ar N rB io iS h2 vi AjR9z" elapsed=9.639 rate=959533
+s=1248116926 time="Mon Jul 20 15:08:46 2009" host=sol pid=1598 status=goal dist=45 phrase="H3 ci Id h1 Db ar N rB io iS h2 vi BHIfH" elapsed=16.951 rate=1100054
+s=1248116927 time="Mon Jul 20 15:08:47 2009" host=char pid=16351 status=goal dist=43 phrase="N H2 Ci Vi is ID h3 aR io db Rb h1 dtWDh" elapsed=308 rate=1618266
+s=1248116939 time="Mon Jul 20 15:08:59 2009" host=faith pid=5039 status=goal dist=44 phrase="iO Db h3 RB h1 Vi H2 iD N iS ar cI hYY8Y" elapsed=241 rate=2323825
+s=1248116956 time="Mon Jul 20 15:09:16 2009" host=kei pid=5119 status=goal dist=42 phrase="H3 n vI dB id h2 ci h1 Io AR rb Is My9Q4" elapsed=268 rate=801062
+s=1248116957 time="Mon Jul 20 15:09:17 2009" host=mnemosyne pid=4620 status=goal dist=42 phrase="n ar id h3 h1 IS IO dB Ci vi rb H2 pdA2s" elapsed=331 rate=2101122
+s=1248116961 time="Mon Jul 20 15:09:21 2009" host=char pid=16353 status=goal dist=44 phrase="rB aR ci VI h1 id n h2 Io is h3 dB iHvVL" elapsed=338 rate=1693652
+s=1248116962 time="Mon Jul 20 15:09:22 2009" host=kei pid=5139 status=goal dist=44 phrase="n rb ci io ar h2 Is Id vi db H1 H3 NGlnu" elapsed=273 rate=805241
+s=1248116969 time="Mon Jul 20 15:09:29 2009" host=straumli pid=717 status=goal dist=45 phrase="Id ar cI H2 h3 db is RB Io H1 N Vi L89wI" elapsed=264 rate=759587
+s=1248116970 time="Mon Jul 20 15:09:30 2009" host=alpha pid=12475 status=goal dist=44 phrase="Vi io H1 rb ci h2 h3 ID ar is N db JilNa" elapsed=303 rate=528252
+s=1248116976 time="Mon Jul 20 15:09:36 2009" host=tetrakis pid=13995 status=goal dist=42 phrase="H2 ar ci iD h1 N db vi rb Is io H3 OvpY2" elapsed=253 rate=977752
+s=1248116976 time="Mon Jul 20 15:09:36 2009" host=sol pid=1620 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0.000 rate=0
+s=1248116976 time="Mon Jul 20 15:09:36 2009" host=sol pid=1620 status=nphr phrase="N aR ci db h2 rb io H1 h3 is id Vi " elapsed=0.000 rate=0
+s=1248116976 time="Mon Jul 20 15:09:36 2009" host=sol pid=1620 status=goal dist=80 phrase="N aR ci db h2 rb io H1 h3 is id Vi AAAAA" elapsed=0.152 rate=7
+s=1248116977 time="Mon Jul 20 15:09:37 2009" host=sol pid=1620 status=goal dist=72 phrase="N aR ci db h2 rb io H1 h3 is id Vi AAAAJ" elapsed=0.294 rate=34
+s=1248116977 time="Mon Jul 20 15:09:37 2009" host=sol pid=1620 status=goal dist=69 phrase="N aR ci db h2 rb io H1 h3 is id Vi AAAAm" elapsed=0.466 rate=84
+s=1248116977 time="Mon Jul 20 15:09:37 2009" host=sol pid=1620 status=goal dist=65 phrase="N aR ci db h2 rb io H1 h3 is id Vi AAAB/" elapsed=0.677 rate=189
+s=1248116977 time="Mon Jul 20 15:09:37 2009" host=sol pid=1620 status=goal dist=63 phrase="N aR ci db h2 rb io H1 h3 is id Vi AAAEC" elapsed=0.825 rate=314
+s=1248116977 time="Mon Jul 20 15:09:37 2009" host=sol pid=1620 status=goal dist=62 phrase="N aR ci db h2 rb io H1 h3 is id Vi AAAEG" elapsed=0.980 rate=268
+s=1248116977 time="Mon Jul 20 15:09:37 2009" host=sol pid=1620 status=goal dist=60 phrase="N aR ci db h2 rb io H1 h3 is id Vi AAAF3" elapsed=1.122 rate=335
+s=1248116978 time="Mon Jul 20 15:09:38 2009" host=sol pid=1620 status=goal dist=59 phrase="N aR ci db h2 rb io H1 h3 is id Vi AAAJl" elapsed=1.279 rate=480
+s=1248116978 time="Mon Jul 20 15:09:38 2009" host=sol pid=1620 status=goal dist=58 phrase="N aR ci db h2 rb io H1 h3 is id Vi AAAQD" elapsed=1.460 rate=704
+s=1248116978 time="Mon Jul 20 15:09:38 2009" host=sol pid=1620 status=goal dist=57 phrase="N aR ci db h2 rb io H1 h3 is id Vi AAATa" elapsed=1.635 rate=760
+s=1248116978 time="Mon Jul 20 15:09:38 2009" host=sol pid=1620 status=goal dist=55 phrase="N aR ci db h2 rb io H1 h3 is id Vi AAFFl" elapsed=1.898 rate=10982
+s=1248116978 time="Mon Jul 20 15:09:38 2009" host=sol pid=1620 status=goal dist=53 phrase="N aR ci db h2 rb io H1 h3 is id Vi AAK6w" elapsed=2.120 rate=21099
+s=1248116979 time="Mon Jul 20 15:09:39 2009" host=sol pid=1620 status=goal dist=52 phrase="N aR ci db h2 rb io H1 h3 is id Vi AAxpm" elapsed=2.504 rate=81220
+s=1248116979 time="Mon Jul 20 15:09:39 2009" host=sol pid=1620 status=goal dist=51 phrase="N aR ci db h2 rb io H1 h3 is id Vi ABHjn" elapsed=2.793 rate=104935
+s=1248116983 time="Mon Jul 20 15:09:43 2009" host=char pid=16351 status=goal dist=42 phrase="N H2 Ci Vi is ID h3 aR io db Rb h1 jaTgz" elapsed=364 rate=1632138
+s=1248116983 time="Mon Jul 20 15:09:43 2009" host=sol pid=1620 status=goal dist=49 phrase="N aR ci db h2 rb io H1 h3 is id Vi AL9pd" elapsed=6.818 rate=459977
+s=1248117003 time="Mon Jul 20 15:10:03 2009" host=sol pid=1620 status=goal dist=47 phrase="N aR ci db h2 rb io H1 h3 is id Vi BCDFJ" elapsed=26.163 rate=661767
+s=1248117007 time="Mon Jul 20 15:10:07 2009" host=sol pid=1620 status=goal dist=46 phrase="N aR ci db h2 rb io H1 h3 is id Vi BM11w" elapsed=30.620 rate=657856
+s=1248117010 time="Mon Jul 20 15:10:10 2009" host=pallas pid=29182 status=goal dist=43 phrase="n ar id db Io H2 H3 ci h1 iS rB vI UcqaJ" elapsed=347 rate=988640
+s=1248117060 time="Mon Jul 20 15:11:00 2009" host=sol pid=1620 status=goal dist=45 phrase="N aR ci db h2 rb io H1 h3 is id Vi Dijrg" elapsed=83.564 rate=710721
+s=1248117068 time="Mon Jul 20 15:11:08 2009" host=faith pid=5039 status=goal dist=43 phrase="iO Db h3 RB h1 Vi H2 iD N iS ar cI zmiI9" elapsed=369 rate=2346177
+s=1248117074 time="Mon Jul 20 15:11:14 2009" host=lg-dell2650-7 pid=11932 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0.000 rate=0
+s=1248117075 time="Mon Jul 20 15:11:15 2009" host=lg-dell2650-7 pid=11932 status=nphr phrase="n H3 Ar DB H1 vi is iD io ci Rb H2 " elapsed=0.000 rate=0
+s=1248117075 time="Mon Jul 20 15:11:15 2009" host=lg-dell2650-7 pid=11932 status=goal dist=66 phrase="n H3 Ar DB H1 vi is iD io ci Rb H2 AAAAA" elapsed=0.247 rate=4
+s=1248117075 time="Mon Jul 20 15:11:15 2009" host=lg-dell2650-7 pid=11932 status=goal dist=60 phrase="n H3 Ar DB H1 vi is iD io ci Rb H2 AAAIC" elapsed=0.441 rate=1168
+s=1248117075 time="Mon Jul 20 15:11:15 2009" host=lg-dell2650-7 pid=11932 status=goal dist=56 phrase="n H3 Ar DB H1 vi is iD io ci Rb H2 AAAMT" elapsed=0.673 rate=1170
+s=1248117076 time="Mon Jul 20 15:11:16 2009" host=lg-dell2650-7 pid=11932 status=goal dist=55 phrase="n H3 Ar DB H1 vi is iD io ci Rb H2 AAAZB" elapsed=0.842 rate=1902
+s=1248117076 time="Mon Jul 20 15:11:16 2009" host=lg-dell2650-7 pid=11932 status=goal dist=51 phrase="n H3 Ar DB H1 vi is iD io ci Rb H2 AAX5I" elapsed=1.172 rate=83536
+s=1248117077 time="Mon Jul 20 15:11:17 2009" host=lg-dell2650-7 pid=11932 status=goal dist=50 phrase="n H3 Ar DB H1 vi is iD io ci Rb H2 AB/qc" elapsed=1.896 rate=275840
+s=1248117079 time="Mon Jul 20 15:11:19 2009" host=lg-dell2650-7 pid=11932 status=goal dist=49 phrase="n H3 Ar DB H1 vi is iD io ci Rb H2 AJVbj" elapsed=4.693 rate=521400
+s=1248117089 time="Mon Jul 20 15:11:29 2009" host=lg-dell2650-7 pid=11935 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0.000 rate=0
+s=1248117089 time="Mon Jul 20 15:11:29 2009" host=lg-dell2650-7 pid=11935 status=nphr phrase="db n h3 iD h1 h2 RB is IO Ar Ci VI " elapsed=0.000 rate=0
+s=1248117089 time="Mon Jul 20 15:11:29 2009" host=lg-dell2650-7 pid=11935 status=goal dist=91 phrase="db n h3 iD h1 h2 RB is IO Ar Ci VI AAAAA" elapsed=0.253 rate=4
+s=1248117089 time="Mon Jul 20 15:11:29 2009" host=lg-dell2650-7 pid=11935 status=goal dist=86 phrase="db n h3 iD h1 h2 RB is IO Ar Ci VI AAAAB" elapsed=0.445 rate=4
+s=1248117090 time="Mon Jul 20 15:11:30 2009" host=lg-dell2650-7 pid=11935 status=goal dist=73 phrase="db n h3 iD h1 h2 RB is IO Ar Ci VI AAAAC" elapsed=0.658 rate=5
+s=1248117090 time="Mon Jul 20 15:11:30 2009" host=lg-dell2650-7 pid=11935 status=goal dist=68 phrase="db n h3 iD h1 h2 RB is IO Ar Ci VI AAAAH" elapsed=0.902 rate=9
+s=1248117090 time="Mon Jul 20 15:11:30 2009" host=lg-dell2650-7 pid=11935 status=goal dist=63 phrase="db n h3 iD h1 h2 RB is IO Ar Ci VI AAABC" elapsed=1.072 rate=62
+s=1248117090 time="Mon Jul 20 15:11:30 2009" host=lg-dell2650-7 pid=11935 status=goal dist=55 phrase="db n h3 iD h1 h2 RB is IO Ar Ci VI AAAHm" elapsed=1.256 rate=388
+s=1248117090 time="Mon Jul 20 15:11:30 2009" host=lg-dell2650-7 pid=11935 status=goal dist=53 phrase="db n h3 iD h1 h2 RB is IO Ar Ci VI AACo8" elapsed=1.461 rate=7403
+s=1248117091 time="Mon Jul 20 15:11:31 2009" host=lg-dell2650-7 pid=11935 status=goal dist=52 phrase="db n h3 iD h1 h2 RB is IO Ar Ci VI AATcn" elapsed=1.733 rate=45970
+s=1248117092 time="Mon Jul 20 15:11:32 2009" host=lg-dell2650-7 pid=11932 status=goal dist=48 phrase="n H3 Ar DB H1 vi is iD io ci Rb H2 AtUZ7" elapsed=17.788 rate=667872
+s=1248117093 time="Mon Jul 20 15:11:33 2009" host=lg-dell2650-7 pid=11935 status=goal dist=51 phrase="db n h3 iD h1 h2 RB is IO Ar Ci VI AFeod" elapsed=4.536 rate=316655
+s=1248117094 time="Mon Jul 20 15:11:34 2009" host=lg-dell2650-7 pid=11935 status=goal dist=49 phrase="db n h3 iD h1 h2 RB is IO Ar Ci VI AF4Q0" elapsed=4.921 rate=313155
+s=1248117094 time="Mon Jul 20 15:11:34 2009" host=lg-dell2650-7 pid=11932 status=goal dist=47 phrase="n H3 Ar DB H1 vi is iD io ci Rb H2 AxAxK" elapsed=19.679 rate=652872
+s=1248117097 time="Mon Jul 20 15:11:37 2009" host=phel pid=16994 status=goal dist=43 phrase="N rb vi H1 Db h3 ar ci iO is H2 id ikByX" elapsed=440 rate=1317886
+s=1248117101 time="Mon Jul 20 15:11:41 2009" host=lg-dell2650-7 pid=11935 status=goal dist=47 phrase="db n h3 iD h1 h2 RB is IO Ar Ci VI AUjPJ" elapsed=12.496 rate=431120
+s=1248117103 time="Mon Jul 20 15:11:43 2009" host=dho pid=25321 status=nphr phrase="ar n RB is vi h1 H3 id Io Db ci h2 " elapsed=462 rate=2324117
+s=1248117106 time="Mon Jul 20 15:11:46 2009" host=dho pid=25413 status=nphr phrase="iO is iD vi h1 Ci h3 db n Ar rb h2 " elapsed=459 rate=2339307
+s=1248117111 time="Mon Jul 20 15:11:51 2009" host=dho pid=25414 status=nphr phrase="vi Db Ci n h1 Ar RB id h2 is h3 io " elapsed=460 rate=2334221
+s=1248117114 time="Mon Jul 20 15:11:54 2009" host=dho pid=25415 status=nphr phrase="iD H3 Io Db Ar CI h1 h2 N is rB vi " elapsed=461 rate=2329158
+s=1248117116 time="Mon Jul 20 15:11:56 2009" host=lg-dell2650-7 pid=11935 status=goal dist=46 phrase="db n h3 iD h1 h2 RB is IO Ar Ci VI AxsfM" elapsed=27.544 rate=472965
+s=1248117122 time="Mon Jul 20 15:12:02 2009" host=tetrakis pid=13991 status=goal dist=42 phrase="N ar Ci rb vI is h3 id iO h2 db H1 Xb58D" elapsed=406 rate=968451
+s=1248117131 time="Mon Jul 20 15:12:11 2009" host=phoebus pid=6443 status=nphr phrase="Is aR ci Io H3 h2 db iD n Vi rb H1 " elapsed=470 rate=2284557
+s=1248117134 time="Mon Jul 20 15:12:14 2009" host=mnemosyne pid=4620 status=nphr phrase="n Ar Vi h2 h1 DB h3 Ci rb Is iO ID " elapsed=507 rate=2117834
+s=1248117136 time="Mon Jul 20 15:12:16 2009" host=mnemosyne pid=4765 status=nphr phrase="vi Ar Ci N h1 Id h3 h2 io is rb Db " elapsed=507 rate=2117834
+s=1248117139 time="Mon Jul 20 15:12:19 2009" host=lethe pid=13600 status=nphr phrase="db ar h3 N h1 cI h2 iS id iO RB Vi " elapsed=503 rate=2134676
+s=1248117147 time="Mon Jul 20 15:12:27 2009" host=faith pid=5040 status=nphr phrase="Db Ar n H3 h1 H2 Rb id iO Is ci Vi " elapsed=446 rate=2407493
+s=1248117149 time="Mon Jul 20 15:12:29 2009" host=sol pid=1598 status=goal dist=42 phrase="H3 ci Id h1 Db ar N rB io iS h2 vi MwzCR" elapsed=239.036 rate=895757
+s=1248117149 time="Mon Jul 20 15:12:29 2009" host=lg-dell2650-7 pid=11932 status=goal dist=46 phrase="n H3 Ar DB H1 vi is iD io ci Rb H2 CbZ5D" elapsed=74.131 rate=549546
+s=1248117151 time="Mon Jul 20 15:12:31 2009" host=lg-dell2650-6 pid=2351 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0.000 rate=0
+s=1248117152 time="Mon Jul 20 15:12:32 2009" host=lg-dell2650-6 pid=2351 status=nphr phrase="io AR Ci n h1 h2 H3 db Id is Rb vI " elapsed=0.000 rate=0
+s=1248117152 time="Mon Jul 20 15:12:32 2009" host=lg-dell2650-6 pid=2351 status=goal dist=85 phrase="io AR Ci n h1 h2 H3 db Id is Rb vI AAAAA" elapsed=0.171 rate=6
+s=1248117152 time="Mon Jul 20 15:12:32 2009" host=lg-dell2650-6 pid=2351 status=goal dist=75 phrase="io AR Ci n h1 h2 H3 db Id is Rb vI AAAAB" elapsed=0.362 rate=6
+s=1248117152 time="Mon Jul 20 15:12:32 2009" host=lg-dell2650-6 pid=2351 status=goal dist=71 phrase="io AR Ci n h1 h2 H3 db Id is Rb vI AAAAC" elapsed=0.514 rate=6
+s=1248117152 time="Mon Jul 20 15:12:32 2009" host=lg-dell2650-6 pid=2351 status=goal dist=68 phrase="io AR Ci n h1 h2 H3 db Id is Rb vI AAAAH" elapsed=0.711 rate=11
+s=1248117152 time="Mon Jul 20 15:12:32 2009" host=lg-dell2650-6 pid=2351 status=goal dist=65 phrase="io AR Ci n h1 h2 H3 db Id is Rb vI AAAA3" elapsed=0.850 rate=66
+s=1248117153 time="Mon Jul 20 15:12:33 2009" host=lg-dell2650-6 pid=2351 status=goal dist=61 phrase="io AR Ci n h1 h2 H3 db Id is Rb vI AAADR" elapsed=0.988 rate=213
+s=1248117153 time="Mon Jul 20 15:12:33 2009" host=lg-dell2650-6 pid=2351 status=goal dist=58 phrase="io AR Ci n h1 h2 H3 db Id is Rb vI AAAKS" elapsed=1.177 rate=560
+s=1248117153 time="Mon Jul 20 15:12:33 2009" host=lg-dell2650-6 pid=2351 status=goal dist=55 phrase="io AR Ci n h1 h2 H3 db Id is Rb vI AABfi" elapsed=1.380 rate=4432
+s=1248117153 time="Mon Jul 20 15:12:33 2009" host=lg-dell2650-6 pid=2351 status=goal dist=54 phrase="io AR Ci n h1 h2 H3 db Id is Rb vI AAH5h" elapsed=1.570 rate=20613
+s=1248117153 time="Mon Jul 20 15:12:33 2009" host=lg-dell2650-6 pid=2351 status=goal dist=53 phrase="io AR Ci n h1 h2 H3 db Id is Rb vI AAS2p" elapsed=1.774 rate=43527
+s=1248117154 time="Mon Jul 20 15:12:34 2009" host=lg-dell2650-6 pid=2351 status=goal dist=50 phrase="io AR Ci n h1 h2 H3 db Id is Rb vI AAhSt" elapsed=2.078 rate=65621
+s=1248117155 time="Mon Jul 20 15:12:35 2009" host=faith pid=5039 status=nphr phrase="h3 Db Ci Ar h1 h2 rb id N iS iO vi " elapsed=457 rate=2349544
+s=1248117156 time="Mon Jul 20 15:12:36 2009" host=lg-dell2650-6 pid=2351 status=goal dist=49 phrase="io AR Ci n h1 h2 H3 db Id is Rb vI AIeq2" elapsed=4.054 rate=548278
+s=1248117157 time="Mon Jul 20 15:12:37 2009" host=lg-dell2650-7 pid=11932 status=goal dist=45 phrase="n H3 Ar DB H1 vi is iD io ci Rb H2 Crfy/" elapsed=82.577 rate=544421
+s=1248117158 time="Mon Jul 20 15:12:38 2009" host=lg-dell2650-6 pid=2351 status=goal dist=48 phrase="io AR Ci n h1 h2 H3 db Id is Rb vI AQtTv" elapsed=6.169 rate=709987
+s=1248117161 time="Mon Jul 20 15:12:41 2009" host=lg-dell2650-6 pid=2352 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0.000 rate=0
+s=1248117161 time="Mon Jul 20 15:12:41 2009" host=lg-dell2650-6 pid=2352 status=nphr phrase="Ar DB cI n h1 h2 rb id h3 Is io vi " elapsed=0.000 rate=0
+s=1248117161 time="Mon Jul 20 15:12:41 2009" host=lg-dell2650-6 pid=2352 status=goal dist=74 phrase="Ar DB cI n h1 h2 rb id h3 Is io vi AAAAA" elapsed=0.139 rate=7
+s=1248117162 time="Mon Jul 20 15:12:42 2009" host=lg-dell2650-6 pid=2352 status=goal dist=65 phrase="Ar DB cI n h1 h2 rb id h3 Is io vi AAAAB" elapsed=0.359 rate=6
+s=1248117162 time="Mon Jul 20 15:12:42 2009" host=lg-dell2650-6 pid=2352 status=goal dist=64 phrase="Ar DB cI n h1 h2 rb id h3 Is io vi AAACG" elapsed=0.499 rate=271
+s=1248117162 time="Mon Jul 20 15:12:42 2009" host=lg-dell2650-6 pid=2352 status=goal dist=62 phrase="Ar DB cI n h1 h2 rb id h3 Is io vi AAAGL" elapsed=0.637 rate=622
+s=1248117162 time="Mon Jul 20 15:12:42 2009" host=lg-dell2650-6 pid=2352 status=goal dist=61 phrase="Ar DB cI n h1 h2 rb id h3 Is io vi AAAdH" elapsed=0.784 rate=2377
+s=1248117162 time="Mon Jul 20 15:12:42 2009" host=lg-dell2650-6 pid=2352 status=goal dist=59 phrase="Ar DB cI n h1 h2 rb id h3 Is io vi AAAkI" elapsed=0.987 rate=2343
+s=1248117162 time="Mon Jul 20 15:12:42 2009" host=lg-dell2650-6 pid=2352 status=goal dist=58 phrase="Ar DB cI n h1 h2 rb id h3 Is io vi AAA6D" elapsed=1.160 rate=3202
+s=1248117163 time="Mon Jul 20 15:12:43 2009" host=lg-dell2650-6 pid=2352 status=goal dist=54 phrase="Ar DB cI n h1 h2 rb id h3 Is io vi AABLb" elapsed=1.308 rate=3690
+s=1248117163 time="Mon Jul 20 15:12:43 2009" host=lg-dell2650-6 pid=2352 status=goal dist=52 phrase="Ar DB cI n h1 h2 rb id h3 Is io vi AAbhi" elapsed=1.560 rate=72248
+s=1248117163 time="Mon Jul 20 15:12:43 2009" host=lg-dell2650-6 pid=2352 status=goal dist=50 phrase="Ar DB cI n h1 h2 rb id h3 Is io vi AAjGj" elapsed=1.730 rate=83106
+s=1248117164 time="Mon Jul 20 15:12:44 2009" host=lg-dell2650-6 pid=2352 status=goal dist=49 phrase="Ar DB cI n h1 h2 rb id h3 Is io vi ADIFQ" elapsed=2.470 rate=331809
+s=1248117165 time="Mon Jul 20 15:12:45 2009" host=phoebus pid=6443 status=goal dist=42 phrase="Is aR ci Io H3 h2 db iD n Vi rb H1 EkgUc" elapsed=504 rate=2282580
+s=1248117167 time="Mon Jul 20 15:12:47 2009" host=char pid=15863 status=nphr phrase="iD db ci aR H2 h3 IS n iO rB H1 vi " elapsed=600 rate=1789570
+s=1248117172 time="Mon Jul 20 15:12:52 2009" host=lg-dell2650-6 pid=2351 status=goal dist=47 phrase="io AR Ci n h1 h2 H3 db Id is Rb vI BOkro" elapsed=20.419 rate=1008734
+s=1248117175 time="Mon Jul 20 15:12:55 2009" host=lg-dell2650-6 pid=2351 status=goal dist=46 phrase="io AR Ci n h1 h2 H3 db Id is Rb vI BbzyU" elapsed=23.569 rate=1021159
+s=1248117177 time="Mon Jul 20 15:12:57 2009" host=lg-dell2650-6 pid=2352 status=goal dist=48 phrase="Ar DB cI n h1 h2 rb id h3 Is io vi A9fSx" elapsed=16.067 rate=1003231
+s=1248117185 time="Mon Jul 20 15:13:05 2009" host=straumli pid=718 status=goal dist=44 phrase="id IS Vi dB h1 h2 h3 ci n rB ar io Uqwcc" elapsed=478 rate=725424
+s=1248117187 time="Mon Jul 20 15:13:07 2009" host=lg-dell2650-6 pid=2352 status=goal dist=46 phrase="Ar DB cI n h1 h2 rb id h3 Is io vi Bk1Gf" elapsed=25.213 rate=1048346
+s=1248117208 time="Mon Jul 20 15:13:28 2009" host=hpa-control pid=22973 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0.000 rate=0
+s=1248117208 time="Mon Jul 20 15:13:28 2009" host=hpa-control pid=22973 status=nphr phrase="CI ar db h1 iS H2 H3 n io Vi rb iD " elapsed=0.000 rate=0
+s=1248117208 time="Mon Jul 20 15:13:28 2009" host=hpa-control pid=22973 status=goal dist=75 phrase="CI ar db h1 iS H2 H3 n io Vi rb iD AAAAA" elapsed=0.242 rate=4
+s=1248117208 time="Mon Jul 20 15:13:28 2009" host=hpa-control pid=22973 status=goal dist=72 phrase="CI ar db h1 iS H2 H3 n io Vi rb iD AAAAN" elapsed=0.422 rate=33
+s=1248117209 time="Mon Jul 20 15:13:29 2009" host=hpa-control pid=22973 status=goal dist=68 phrase="CI ar db h1 iS H2 H3 n io Vi rb iD AAAAg" elapsed=0.572 rate=58
+s=1248117209 time="Mon Jul 20 15:13:29 2009" host=hpa-control pid=22973 status=goal dist=64 phrase="CI ar db h1 iS H2 H3 n io Vi rb iD AAAA1" elapsed=0.918 rate=59
+s=1248117209 time="Mon Jul 20 15:13:29 2009" host=hpa-control pid=22973 status=goal dist=63 phrase="CI ar db h1 iS H2 H3 n io Vi rb iD AAADH" elapsed=1.097 rate=182
+s=1248117209 time="Mon Jul 20 15:13:29 2009" host=hpa-control pid=22973 status=goal dist=62 phrase="CI ar db h1 iS H2 H3 n io Vi rb iD AAAEE" elapsed=1.273 rate=205
+s=1248117209 time="Mon Jul 20 15:13:29 2009" host=hpa-control pid=22973 status=goal dist=61 phrase="CI ar db h1 iS H2 H3 n io Vi rb iD AAAI2" elapsed=1.461 rate=388
+s=1248117210 time="Mon Jul 20 15:13:30 2009" host=hpa-control pid=22973 status=goal dist=58 phrase="CI ar db h1 iS H2 H3 n io Vi rb iD AAAkp" elapsed=1.616 rate=1452
+s=1248117210 time="Mon Jul 20 15:13:30 2009" host=hpa-control pid=22973 status=goal dist=56 phrase="CI ar db h1 iS H2 H3 n io Vi rb iD AAEsk" elapsed=1.828 rate=10524
+s=1248117210 time="Mon Jul 20 15:13:30 2009" host=hpa-control pid=22973 status=goal dist=51 phrase="CI ar db h1 iS H2 H3 n io Vi rb iD AAF60" elapsed=2.026 rate=11969
+s=1248117210 time="Mon Jul 20 15:13:30 2009" host=hpa-control pid=22973 status=goal dist=50 phrase="CI ar db h1 iS H2 H3 n io Vi rb iD AAXcl" elapsed=2.253 rate=42632
+s=1248117211 time="Mon Jul 20 15:13:31 2009" host=hpa-control pid=22973 status=goal dist=47 phrase="CI ar db h1 iS H2 H3 n io Vi rb iD ABhwv" elapsed=2.761 rate=145043
+s=1248117228 time="Mon Jul 20 15:13:48 2009" host=lg-dell2650-7 pid=11935 status=goal dist=45 phrase="db n h3 iD h1 h2 RB is IO Ar Ci VI EMSJ0" elapsed=138.725 rate=506967
+s=1248117230 time="Mon Jul 20 15:13:50 2009" host=hpa-linwin5 pid=10308 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0.000 rate=0
+s=1248117230 time="Mon Jul 20 15:13:50 2009" host=hpa-linwin5 pid=10308 status=nphr phrase="CI aR vi dB id h3 h2 H1 io iS rb n " elapsed=0.000 rate=0
+s=1248117230 time="Mon Jul 20 15:13:50 2009" host=hpa-linwin5 pid=10308 status=goal dist=87 phrase="CI aR vi dB id h3 h2 H1 io iS rb n AAAAA" elapsed=0.245 rate=4
+s=1248117231 time="Mon Jul 20 15:13:51 2009" host=hpa-linwin5 pid=10308 status=goal dist=84 phrase="CI aR vi dB id h3 h2 H1 io iS rb n AAAAB" elapsed=0.463 rate=4
+s=1248117231 time="Mon Jul 20 15:13:51 2009" host=hpa-linwin5 pid=10308 status=goal dist=68 phrase="CI aR vi dB id h3 h2 H1 io iS rb n AAAAD" elapsed=0.703 rate=6
+s=1248117231 time="Mon Jul 20 15:13:51 2009" host=hpa-linwin5 pid=10308 status=goal dist=65 phrase="CI aR vi dB id h3 h2 H1 io iS rb n AAABC" elapsed=0.915 rate=73
+s=1248117231 time="Mon Jul 20 15:13:51 2009" host=hpa-linwin5 pid=10308 status=goal dist=64 phrase="CI aR vi dB id h3 h2 H1 io iS rb n AAACQ" elapsed=1.146 rate=127
+s=1248117232 time="Mon Jul 20 15:13:52 2009" host=hpa-linwin5 pid=10308 status=goal dist=63 phrase="CI aR vi dB id h3 h2 H1 io iS rb n AAAHj" elapsed=1.383 rate=350
+s=1248117232 time="Mon Jul 20 15:13:52 2009" host=hpa-linwin5 pid=10308 status=goal dist=61 phrase="CI aR vi dB id h3 h2 H1 io iS rb n AAANy" elapsed=1.546 rate=571
+s=1248117232 time="Mon Jul 20 15:13:52 2009" host=hpa-linwin5 pid=10308 status=goal dist=60 phrase="CI aR vi dB id h3 h2 H1 io iS rb n AAAQo" elapsed=1.731 rate=615
+s=1248117232 time="Mon Jul 20 15:13:52 2009" host=hpa-linwin5 pid=10308 status=goal dist=58 phrase="CI aR vi dB id h3 h2 H1 io iS rb n AAATD" elapsed=2.006 rate=608
+s=1248117232 time="Mon Jul 20 15:13:52 2009" host=hpa-linwin5 pid=10308 status=goal dist=57 phrase="CI aR vi dB id h3 h2 H1 io iS rb n AABpS" elapsed=2.229 rate=3023
+s=1248117233 time="Mon Jul 20 15:13:53 2009" host=hpa-linwin5 pid=10308 status=goal dist=54 phrase="CI aR vi dB id h3 h2 H1 io iS rb n AAB9F" elapsed=2.457 rate=3259
+s=1248117233 time="Mon Jul 20 15:13:53 2009" host=hpa-linwin5 pid=10308 status=goal dist=53 phrase="CI aR vi dB id h3 h2 H1 io iS rb n AAfAU" elapsed=2.815 rate=45107
+s=1248117233 time="Mon Jul 20 15:13:53 2009" host=hpa-linwin5 pid=10308 status=goal dist=52 phrase="CI aR vi dB id h3 h2 H1 io iS rb n AAjqT" elapsed=3.067 rate=47627
+s=1248117234 time="Mon Jul 20 15:13:54 2009" host=hpa-linwin5 pid=10308 status=goal dist=50 phrase="CI aR vi dB id h3 h2 H1 io iS rb n AAo66" elapsed=3.340 rate=50180
+s=1248117235 time="Mon Jul 20 15:13:55 2009" host=hpa-linwin5 pid=10308 status=goal dist=49 phrase="CI aR vi dB id h3 h2 H1 io iS rb n AEGBC" elapsed=4.412 rate=243254
+s=1248117237 time="Mon Jul 20 15:13:57 2009" host=lg-dell2650-6 pid=2352 status=goal dist=45 phrase="Ar DB cI n h1 h2 rb id h3 Is io vi FATci" elapsed=75.528 rate=1111721
+s=1248117240 time="Mon Jul 20 15:14:00 2009" host=hpa-linwin5 pid=10308 status=goal dist=47 phrase="CI aR vi dB id h3 h2 H1 io iS rb n AaCsj" elapsed=9.857 rate=692560
+s=1248117245 time="Mon Jul 20 15:14:05 2009" host=hpa-control pid=22973 status=goal dist=45 phrase="CI ar db h1 iS H2 H3 n io Vi rb iD CDiU3" elapsed=37.223 rate=926354
+s=1248117249 time="Mon Jul 20 15:14:09 2009" host=tetrakis pid=13994 status=goal dist=43 phrase="n VI rB db h1 ar h3 Id h2 iS ci io fXC4B" elapsed=529 rate=994584
+s=1248117249 time="Mon Jul 20 15:14:09 2009" host=char pid=16353 status=nphr phrase="vI Ar rb h2 H1 Id H3 n iO ci Is Db " elapsed=627 rate=1712507
+s=1248117254 time="Mon Jul 20 15:14:14 2009" host=char pid=16351 status=nphr phrase="vi io cI dB n h2 rb iD H1 is h3 Ar " elapsed=635 rate=1690932
+s=1248117255 time="Mon Jul 20 15:14:15 2009" host=hpa-linwin5 pid=10338 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0.000 rate=0
+s=1248117255 time="Mon Jul 20 15:14:15 2009" host=hpa-linwin5 pid=10338 status=nphr phrase="Is Ar ci db h1 H2 io rB n h3 id vi " elapsed=0.000 rate=0
+s=1248117255 time="Mon Jul 20 15:14:15 2009" host=hpa-linwin5 pid=10338 status=goal dist=83 phrase="Is Ar ci db h1 H2 io rB n h3 id vi AAAAA" elapsed=0.160 rate=6
+s=1248117255 time="Mon Jul 20 15:14:15 2009" host=hpa-linwin5 pid=10338 status=goal dist=76 phrase="Is Ar ci db h1 H2 io rB n h3 id vi AAAAC" elapsed=0.321 rate=9
+s=1248117256 time="Mon Jul 20 15:14:16 2009" host=hpa-linwin5 pid=10338 status=goal dist=75 phrase="Is Ar ci db h1 H2 io rB n h3 id vi AAAAD" elapsed=0.472 rate=8
+s=1248117256 time="Mon Jul 20 15:14:16 2009" host=hpa-linwin5 pid=10338 status=goal dist=71 phrase="Is Ar ci db h1 H2 io rB n h3 id vi AAAAG" elapsed=0.647 rate=11
+s=1248117256 time="Mon Jul 20 15:14:16 2009" host=hpa-linwin5 pid=10338 status=goal dist=65 phrase="Is Ar ci db h1 H2 io rB n h3 id vi AAAAJ" elapsed=0.826 rate=12
+s=1248117256 time="Mon Jul 20 15:14:16 2009" host=hpa-linwin5 pid=10338 status=goal dist=64 phrase="Is Ar ci db h1 H2 io rB n h3 id vi AAAAx" elapsed=0.997 rate=50
+s=1248117256 time="Mon Jul 20 15:14:16 2009" host=hpa-linwin5 pid=10338 status=goal dist=63 phrase="Is Ar ci db h1 H2 io rB n h3 id vi AAAKU" elapsed=1.148 rate=576
+s=1248117256 time="Mon Jul 20 15:14:16 2009" host=hpa-linwin5 pid=10338 status=goal dist=59 phrase="Is Ar ci db h1 H2 io rB n h3 id vi AAAR1" elapsed=1.293 rate=883
+s=1248117257 time="Mon Jul 20 15:14:17 2009" host=hpa-linwin5 pid=10338 status=goal dist=57 phrase="Is Ar ci db h1 H2 io rB n h3 id vi AAAa5" elapsed=1.472 rate=1169
+s=1248117257 time="Mon Jul 20 15:14:17 2009" host=hpa-linwin5 pid=10338 status=goal dist=56 phrase="Is Ar ci db h1 H2 io rB n h3 id vi AABON" elapsed=1.724 rate=2904
+s=1248117257 time="Mon Jul 20 15:14:17 2009" host=hpa-linwin5 pid=10338 status=goal dist=54 phrase="Is Ar ci db h1 H2 io rB n h3 id vi AABd0" elapsed=1.880 rate=3194
+s=1248117257 time="Mon Jul 20 15:14:17 2009" host=hpa-linwin5 pid=10338 status=goal dist=52 phrase="Is Ar ci db h1 H2 io rB n h3 id vi AAQTN" elapsed=2.118 rate=31517
+s=1248117258 time="Mon Jul 20 15:14:18 2009" host=hpa-linwin5 pid=10338 status=goal dist=51 phrase="Is Ar ci db h1 H2 io rB n h3 id vi ABXfy" elapsed=2.714 rate=132043
+s=1248117258 time="Mon Jul 20 15:14:18 2009" host=hpa-linwin5 pid=10338 status=goal dist=49 phrase="Is Ar ci db h1 H2 io rB n h3 id vi ABaBt" elapsed=2.885 rate=127833
+s=1248117258 time="Mon Jul 20 15:14:18 2009" host=hpa-linwin5 pid=10338 status=goal dist=48 phrase="Is Ar ci db h1 H2 io rB n h3 id vi ABaMZ" elapsed=3.043 rate=121388
+s=1248117261 time="Mon Jul 20 15:14:21 2009" host=hpa-linwin5 pid=10338 status=goal dist=44 phrase="Is Ar ci db h1 H2 io rB n h3 id vi AIvvg" elapsed=5.790 rate=395951
+s=1248117266 time="Mon Jul 20 15:14:26 2009" host=hpa-linwin5 pid=10308 status=goal dist=46 phrase="CI aR vi dB id h3 h2 H1 io iS rb n B6cPV" elapsed=35.500 rate=904157
+s=1248117268 time="Mon Jul 20 15:14:28 2009" host=tetrakis pid=13993 status=goal dist=43 phrase="N h2 cI vi h1 is Io Id aR rb h3 db gVmKY" elapsed=550 rate=986422
+s=1248117270 time="Mon Jul 20 15:14:30 2009" host=char pid=16350 status=nphr phrase="rb is vI db id Ar h3 H1 h2 iO n cI " elapsed=654 rate=1641807
+s=1248117272 time="Mon Jul 20 15:14:32 2009" host=straumli pid=727 status=goal dist=43 phrase="id aR h3 is h1 h2 N IO ci Rb dB Vi YMv6y" elapsed=560 rate=724991
+s=1248117274 time="Mon Jul 20 15:14:34 2009" host=straumli pid=725 status=goal dist=43 phrase="id aR h3 is h1 h2 N IO ci Rb dB Vi YMv6y" elapsed=564 rate=719850
+s=1248117280 time="Mon Jul 20 15:14:40 2009" host=lg-dell2650-7 pid=11935 status=goal dist=44 phrase="db n h3 iD h1 h2 RB is IO Ar Ci VI Fzjvg" elapsed=191.384 rate=508933
+s=1248117281 time="Mon Jul 20 15:14:41 2009" host=kei pid=5139 status=goal dist=42 phrase="n rb ci io ar h2 Is Id vi db H1 H3 cxkqj" elapsed=591 rate=816848
+s=1248117341 time="Mon Jul 20 15:15:41 2009" host=dho pid=25415 status=goal dist=42 phrase="iD H3 Io Db Ar CI h1 h2 N is rB vi f0F/d" elapsed=688 rate=2336470
+s=1248117346 time="Mon Jul 20 15:15:46 2009" host=kei pid=5160 status=goal dist=44 phrase="Rb N h2 Db h3 Ci h1 Id Io Is ar vI ZqYvK" elapsed=653 rate=659329
+s=1248117349 time="Mon Jul 20 15:15:49 2009" host=hpa-linwin5 pid=10308 status=goal dist=45 phrase="CI aR vi dB id h3 h2 H1 io iS rb n Fjap+" elapsed=118.842 rate=783986
+s=1248117418 time="Mon Jul 20 15:16:58 2009" host=straumli pid=727 status=goal dist=42 phrase="id aR h3 is h1 h2 N IO ci Rb dB Vi e9LkN" elapsed=706 rate=735630
+s=1248117420 time="Mon Jul 20 15:17:00 2009" host=lg-dell2650-6 pid=2352 status=goal dist=44 phrase="Ar DB cI n h1 h2 rb id h3 Is io vi RkBxQ" elapsed=258.888 rate=1138163
+s=1248117428 time="Mon Jul 20 15:17:08 2009" host=straumli pid=725 status=goal dist=42 phrase="id aR h3 is h1 h2 N IO ci Rb dB Vi e9LkN" elapsed=718 rate=723335
+s=1248117444 time="Mon Jul 20 15:17:24 2009" host=lg-dell2650-7 pid=11932 status=goal dist=44 phrase="n H3 Ar DB H1 vi is iD io ci Rb H2 LdvhO" elapsed=368.829 rate=521505
+s=1248117444 time="Mon Jul 20 15:17:24 2009" host=dho pid=25321 status=goal dist=42 phrase="ar n RB is vi h1 H3 id Io Db ci h2 veeCF" elapsed=804 rate=2326192
+s=1248117458 time="Mon Jul 20 15:17:38 2009" host=straumli pid=717 status=goal dist=44 phrase="Id ar cI H2 h3 db is RB Io H1 N Vi hqwrH" elapsed=753 rate=750143
+s=1248117470 time="Mon Jul 20 15:17:50 2009" host=phel pid=16994 status=nphr phrase="dB h1 h3 N h2 rb ar id io Is cI vi " elapsed=813 rate=1320716
+s=1248117479 time="Mon Jul 20 15:17:59 2009" host=lg-dell2650-6 pid=2351 status=goal dist=44 phrase="io AR Ci n h1 h2 H3 db Id is Rb vI WSa7H" elapsed=326.888 rate=1143901
+s=1248117481 time="Mon Jul 20 15:18:01 2009" host=hpa-linwin5 pid=10308 status=goal dist=44 phrase="CI aR vi dB id h3 h2 H1 io iS rb n LV2Q4" elapsed=251.042 rate=757946
+s=1248117484 time="Mon Jul 20 15:18:04 2009" host=hpa-linwin5 pid=10308 status=goal dist=43 phrase="CI aR vi dB id h3 h2 H1 io iS rb n LeHeO" elapsed=254.125 rate=757283
+s=1248117498 time="Mon Jul 20 15:18:18 2009" host=char pid=16353 status=goal dist=42 phrase="vI Ar rb h2 H1 Id H3 n iO ci Is Db Zhetp" elapsed=876 rate=1714553
+s=1248117504 time="Mon Jul 20 15:18:24 2009" host=lg-dell2650-6 pid=2352 status=goal dist=43 phrase="Ar DB cI n h1 h2 rb id h3 Is io vi XTFSC" elapsed=342.617 rate=1140859
+s=1248117504 time="Mon Jul 20 15:18:24 2009" host=phel pid=16994 status=goal dist=42 phrase="dB h1 h3 N h2 rb ar id io Is cI vi CuSWy" elapsed=848 rate=1320083
+s=1248117514 time="Mon Jul 20 15:18:34 2009" host=hpa-control pid=22973 status=goal dist=42 phrase="CI ar db h1 iS H2 H3 n io Vi rb iD R/OoG" elapsed=305.905 rate=986541
+s=1248117522 time="Mon Jul 20 15:18:42 2009" host=lg-dell2650-6 pid=2351 status=goal dist=42 phrase="io AR Ci n h1 h2 H3 db Id is Rb vI ZTLpH" elapsed=370.735 rate=1144913
+s=1248117562 time="Mon Jul 20 15:19:22 2009" host=dho pid=25321 status=nphr phrase="rB aR cI Io id h2 db h1 n is vi h3 " elapsed=921 rate=2331687
+s=1248117566 time="Mon Jul 20 15:19:26 2009" host=dho pid=25414 status=nphr phrase="h2 iD ar dB h1 iS h3 ci io n Rb vi " elapsed=916 rate=2344414
+s=1248117568 time="Mon Jul 20 15:19:28 2009" host=dho pid=25413 status=nphr phrase="H1 Ci N aR id h2 rb DB io iS h3 vi " elapsed=921 rate=2331687
+s=1248117571 time="Mon Jul 20 15:19:31 2009" host=dho pid=25415 status=nphr phrase="H2 aR ci iS H1 IO vi rB n H3 Id Db " elapsed=917 rate=2341858
+s=1248117575 time="Mon Jul 20 15:19:35 2009" host=lg-dell2650-6 pid=2352 status=goal dist=41 phrase="Ar DB cI n h1 h2 rb id h3 Is io vi cJeQS" elapsed=413.274 rate=1142692
+s=1248117588 time="Mon Jul 20 15:19:48 2009" host=faith pid=5040 status=nphr phrase="h1 db Ci H2 Ar io h3 id n rb is vI " elapsed=887 rate=2421064
+s=1248117588 time="Mon Jul 20 15:19:48 2009" host=mnemosyne pid=4765 status=goal dist=41 phrase="vi Ar Ci N h1 Id h3 h2 io is rb Db 5m1I+" elapsed=959 rate=2127448
+s=1248117595 time="Mon Jul 20 15:19:55 2009" host=phoebus pid=6443 status=nphr phrase="n is ci io H1 h2 Rb ar H3 dB Id vi " elapsed=934 rate=2299233
+s=1248117604 time="Mon Jul 20 15:20:04 2009" host=faith pid=5039 status=nphr phrase="is N h3 Ar H1 h2 cI Io rb db Id Vi " elapsed=906 rate=2370291
+s=1248117606 time="Mon Jul 20 15:20:06 2009" host=dho pid=25415 status=goal dist=40 phrase="H2 aR ci iS H1 IO vi rB n H3 Id Db FAvgS" elapsed=953 rate=2341620
+s=1248117608 time="Mon Jul 20 15:20:08 2009" host=dho pid=25413 status=goal dist=40 phrase="H1 Ci N aR id h2 rb DB io iS h3 vi Fd4pr" elapsed=961 rate=2330077
+s=1248117634 time="Mon Jul 20 15:20:34 2009" host=mnemosyne pid=4620 status=nphr phrase="n id ci h1 io h2 db ar RB h3 is vi " elapsed=1008 rate=2130440
+s=1248117637 time="Mon Jul 20 15:20:37 2009" host=lethe pid=13600 status=nphr phrase="n ar io Db h1 H2 h3 is rB ci id vi " elapsed=1001 rate=2145338
+s=1248117639 time="Mon Jul 20 15:20:39 2009" host=mnemosyne pid=4765 status=nphr phrase="h2 ar id DB rb cI h3 H1 Io IS n Vi " elapsed=1010 rate=2126221
+s=1248117650 time="Mon Jul 20 15:20:50 2009" host=phoebus pid=6443 status=goal dist=40 phrase="n is ci io H1 h2 Rb ar H3 dB Id vi HcZYB" elapsed=988 rate=2299968
+s=1248117685 time="Mon Jul 20 15:21:25 2009" host=sol pid=1620 status=goal dist=42 phrase="N aR ci db h2 rb io H1 h3 is id Vi fYIoN" elapsed=708.750 rate=742745
+s=1248117736 time="Mon Jul 20 15:22:16 2009" host=tetrakis pid=13995 status=goal dist=41 phrase="H2 ar ci iD h1 N db vi rb Is io H3 7xpip" elapsed=1013 rate=990001
+s=1248117740 time="Mon Jul 20 15:22:20 2009" host=pallas pid=29182 status=nphr phrase="n h2 ci rb h1 ar h3 id io is db vI " elapsed=1077 rate=996975
+s=1248117792 time="Mon Jul 20 15:23:12 2009" host=tetrakis pid=13993 status=nphr phrase="iO ID ci h1 H3 h2 DB vI n is rB ar " elapsed=1074 rate=999760
+s=1248117796 time="Mon Jul 20 15:23:16 2009" host=hpa-linwin5 pid=10338 status=goal dist=43 phrase="Is Ar ci db h1 H2 io rB n h3 id vi X+rUc" elapsed=540.403 rate=744457
+s=1248117796 time="Mon Jul 20 15:23:16 2009" host=tetrakis pid=13994 status=nphr phrase="cI aR n H1 db RB Is id iO vi h3 H2 " elapsed=1076 rate=997901
+s=1248117807 time="Mon Jul 20 15:23:27 2009" host=tetrakis pid=13995 status=nphr phrase="n Id H3 h2 h1 cI io ar Db Is RB vi " elapsed=1084 rate=990537
+s=1248117810 time="Mon Jul 20 15:23:30 2009" host=char pid=15863 status=nphr phrase="n iD H3 Db h1 Ci vi h2 iO ar rb Is " elapsed=1243 rate=1727662
+s=1248117823 time="Mon Jul 20 15:23:43 2009" host=tetrakis pid=13991 status=nphr phrase="N Ar H1 rB Io h2 Is Id ci h3 dB vi " elapsed=1108 rate=969081
+s=1248117876 time="Mon Jul 20 15:24:36 2009" host=lg-dell2650-6 pid=2351 status=goal dist=41 phrase="io AR Ci n h1 h2 H3 db Id is Rb vI xz0Q/" elapsed=724.881 rate=1152833
+s=1248117881 time="Mon Jul 20 15:24:41 2009" host=char pid=16353 status=nphr phrase="N ar DB io h1 ci Rb id h2 Vi IS h3 " elapsed=1258 rate=1707062
+s=1248117893 time="Mon Jul 20 15:24:53 2009" host=char pid=16351 status=nphr phrase="h2 AR iD Rb db Vi h3 is iO ci h1 n " elapsed=1274 rate=1685623
+s=1248117894 time="Mon Jul 20 15:24:54 2009" host=straumli pid=717 status=goal dist=43 phrase="Id ar cI H2 h3 db is RB Io H1 N Vi 1Eb8T" elapsed=1190 rate=748198
+s=1248117897 time="Mon Jul 20 15:24:57 2009" host=alpha pid=12475 status=goal dist=42 phrase="Vi io H1 rb ci h2 h3 ID ar is N db m9yY8" elapsed=1230 rate=531489
+s=1248117901 time="Mon Jul 20 15:25:01 2009" host=faith pid=5039 status=goal dist=42 phrase="is N h3 Ar H1 h2 cI Io rb db Id Vi oFyBa" elapsed=1202 rate=2346163
+s=1248117910 time="Mon Jul 20 15:25:10 2009" host=char pid=16350 status=nphr phrase="n Ar db id Is h2 H3 ci h1 iO rb VI " elapsed=1294 rate=1659570
+s=1248117931 time="Mon Jul 20 15:25:31 2009" host=tetrakis pid=13993 status=goal dist=42 phrase="iO ID ci h1 H3 h2 DB vI n is rB ar IGxeo" elapsed=1212 rate=998131
+s=1248117936 time="Mon Jul 20 15:25:36 2009" host=kei pid=5119 status=goal dist=41 phrase="H3 n vI dB id h2 ci h1 Io AR rb Is 77QAr" elapsed=1248 rate=805599
+s=1248117966 time="Mon Jul 20 15:26:06 2009" host=dho pid=25321 status=goal dist=40 phrase="rB aR cI Io id h2 db h1 n is vi h3 4JcQf" elapsed=1326 rate=2329927
+s=1248117993 time="Mon Jul 20 15:26:33 2009" host=kei pid=5139 status=nphr phrase="IO ar ci vi is h3 H2 id n H1 rb dB " elapsed=1303 rate=824054
+s=1248118021 time="Mon Jul 20 15:27:01 2009" host=kei pid=5119 status=nphr phrase="H1 ar cI DB H2 vI H3 n id iS Rb io " elapsed=1334 rate=804904
+s=1248118023 time="Mon Jul 20 15:27:03 2009" host=dho pid=25414 status=nphr phrase="n AR H3 db h1 vi H2 rb iO CI is id " elapsed=1372 rate=2347832
+s=1248118023 time="Mon Jul 20 15:27:03 2009" host=dho pid=25413 status=nphr phrase="N Rb cI iD h1 db IO h2 h3 is vi aR " elapsed=1375 rate=2342709
+s=1248118023 time="Mon Jul 20 15:27:03 2009" host=dho pid=25321 status=nphr phrase="Ci aR IO vI is h2 h3 id n rB h1 db " elapsed=1383 rate=2329158
+s=1248118027 time="Mon Jul 20 15:27:07 2009" host=dho pid=25415 status=nphr phrase="id aR ci h2 h3 db N h1 io vI Rb is " elapsed=1374 rate=2344414
+s=1248118044 time="Mon Jul 20 15:27:24 2009" host=faith pid=5040 status=goal dist=38 phrase="h1 db Ci H2 Ar io h3 id n rb is vI +nd4h" elapsed=1343 rate=2381249
+s=1248118054 time="Mon Jul 20 15:27:34 2009" host=faith pid=5040 status=nphr phrase="vI ar cI n iD h3 H2 Is io rb h1 db " elapsed=1353 rate=2380802
+s=1248118058 time="Mon Jul 20 15:27:38 2009" host=phoebus pid=6443 status=nphr phrase="n H1 h3 aR vi h2 io iD Db Is Rb ci " elapsed=1397 rate=2305816
+s=1248118076 time="Mon Jul 20 15:27:56 2009" host=faith pid=5039 status=nphr phrase="is vI Rb ar h1 h2 h3 id N ci IO Db " elapsed=1378 rate=2337609
+s=1248118081 time="Mon Jul 20 15:28:01 2009" host=lg-dell2650-6 pid=2351 status=nphr phrase="h2 id H3 Db H1 Ci N ar io Rb is vi " elapsed=929.860 rate=1154734
+s=1248118095 time="Mon Jul 20 15:28:15 2009" host=lg-dell2650-6 pid=2352 status=nphr phrase="H2 Ar rb dB H1 N H3 iD io vi cI Is " elapsed=934.194 rate=1149378
+s=1248118098 time="Mon Jul 20 15:28:18 2009" host=straumli pid=727 status=nphr phrase="n Ar h3 db vi H2 cI Id io H1 rb is " elapsed=1385 rate=775265
+s=1248118119 time="Mon Jul 20 15:28:39 2009" host=char pid=16350 status=goal dist=40 phrase="n Ar db id Is h2 H3 ci h1 iO rb VI VaSaU" elapsed=1502 rate=1668906
+s=1248118135 time="Mon Jul 20 15:28:55 2009" host=mnemosyne pid=4620 status=nphr phrase="N ci h2 Is h1 ar iO h3 id rb db vi " elapsed=1509 rate=2134676
+s=1248118135 time="Mon Jul 20 15:28:55 2009" host=lethe pid=13600 status=nphr phrase="dB aR cI Id H3 H2 h1 is iO n rB Vi " elapsed=1499 rate=2148916
+s=1248118136 time="Mon Jul 20 15:28:56 2009" host=straumli pid=717 status=nphr phrase="n io Ci dB H1 ar h3 h2 RB is id vi " elapsed=1431 rate=750344
+s=1248118140 time="Mon Jul 20 15:29:00 2009" host=mnemosyne pid=4765 status=nphr phrase="iO ar n rB is H1 h3 id ci H2 db vi " elapsed=1511 rate=2131850
+s=1248118152 time="Mon Jul 20 15:29:12 2009" host=straumli pid=718 status=nphr phrase="n H2 vi db rB h3 aR iD io IS h1 CI " elapsed=1445 rate=743074
+s=1248118159 time="Mon Jul 20 15:29:19 2009" host=straumli pid=725 status=nphr phrase="n Ar h3 db vi H2 cI Id io H1 rb is " elapsed=1449 rate=741023
+s=1248118187 time="Mon Jul 20 15:29:47 2009" host=hpa-linwin5 pid=10338 status=goal dist=38 phrase="Is Ar ci db h1 H2 io rB n h3 id vi pZ7fc" elapsed=931.088 rate=746076
+s=1248118203 time="Mon Jul 20 15:30:03 2009" host=lg-dell2650-7 pid=11932 status=goal dist=42 phrase="n H3 Ar DB H1 vi is iD io ci Rb H2 i0nTH" elapsed=1128.980 rate=517474
+s=1248118280 time="Mon Jul 20 15:31:20 2009" host=phel pid=16994 status=nphr phrase="n db ar h1 Rb h2 h3 is io ci id vI " elapsed=1622 rate=1323973
+s=1248118290 time="Mon Jul 20 15:31:30 2009" host=hpa-control pid=22973 status=nphr phrase="n is CI h3 H1 Vi rb Id io H2 dB aR " elapsed=1081.845 rate=992510
+s=1248118318 time="Mon Jul 20 15:31:58 2009" host=kei pid=4989 status=nphr phrase="io id Ci vI rb H2 h3 ar Is n H1 db " elapsed=1636 rate=656321
+s=1248118323 time="Mon Jul 20 15:32:03 2009" host=sol pid=1598 status=nphr phrase="n ci Rb iD h1 H2 h3 io is db Vi ar " elapsed=1413.825 rate=759459
+s=1248118355 time="Mon Jul 20 15:32:35 2009" host=kei pid=5160 status=nphr phrase="id aR n Is vI h2 H3 Rb Io db ci h1 " elapsed=1663 rate=645666
+s=1248118433 time="Mon Jul 20 15:33:53 2009" host=char pid=15863 status=nphr phrase="N iO h3 vi aR is h2 ID h1 ci rb db " elapsed=1865 rate=1727199
+s=1248118444 time="Mon Jul 20 15:34:04 2009" host=sol pid=1620 status=nphr phrase="h1 Rb ar cI iS h2 h3 iD io n dB vi " elapsed=1467.712 rate=731575
+s=1248118469 time="Mon Jul 20 15:34:29 2009" host=tetrakis pid=13993 status=goal dist=41 phrase="iO ID ci h1 H3 h2 DB vI n is rB ar oupxZ" elapsed=1751 rate=1003461
+s=1248118476 time="Mon Jul 20 15:34:36 2009" host=dho pid=25413 status=nphr phrase="Rb Ci vi aR h1 Io h3 ID h2 iS n db " elapsed=1828 rate=2349544
+s=1248118479 time="Mon Jul 20 15:34:39 2009" host=dho pid=25321 status=nphr phrase="n Id ci db aR h2 H3 h1 rB is io VI " elapsed=1839 rate=2335491
+s=1248118481 time="Mon Jul 20 15:34:41 2009" host=char pid=16353 status=nphr phrase="db h1 Ci n Io h2 vi Id is ar Rb h3 " elapsed=1858 rate=1733706
+s=1248118481 time="Mon Jul 20 15:34:41 2009" host=dho pid=25415 status=nphr phrase="n ci ar h1 iO H2 H3 iD vI rb is db " elapsed=1828 rate=2349544
+s=1248118482 time="Mon Jul 20 15:34:42 2009" host=dho pid=25414 status=nphr phrase="Id ar N db h1 h2 h3 io rb Is cI vi " elapsed=1832 rate=2344414
+s=1248118493 time="Mon Jul 20 15:34:53 2009" host=lethe pid=13600 status=goal dist=42 phrase="dB aR cI Id H3 H2 h1 is iO n rB Vi t+nIg" elapsed=1857 rate=2150034
+s=1248118521 time="Mon Jul 20 15:35:21 2009" host=phoebus pid=6443 status=nphr phrase="io db H1 aR Ci h3 N VI H2 is rB iD " elapsed=1860 rate=2309122
+s=1248118536 time="Mon Jul 20 15:35:36 2009" host=char pid=16351 status=nphr phrase="n aR Io H1 dB is H2 id ci rb H3 vi " elapsed=1917 rate=1680347
+s=1248118538 time="Mon Jul 20 15:35:38 2009" host=char pid=16350 status=nphr phrase="vI n is Ci h1 h2 h3 iO id DB rB ar " elapsed=1921 rate=1676848
+s=1248118539 time="Mon Jul 20 15:35:39 2009" host=faith pid=5040 status=nphr phrase="h2 Vi n Db Id h1 h3 rb iO is CI ar " elapsed=1838 rate=2336761
+s=1248118570 time="Mon Jul 20 15:36:10 2009" host=faith pid=5039 status=nphr phrase="dB aR cI id h1 h3 H2 io is n Vi rb " elapsed=1872 rate=2294320
+s=1248118592 time="Mon Jul 20 15:36:32 2009" host=char pid=15863 status=goal dist=42 phrase="N iO h3 vi aR is h2 ID h1 ci rb db QCZHI" elapsed=2024 rate=1724451
+s=1248118636 time="Mon Jul 20 15:37:16 2009" host=mnemosyne pid=4620 status=nphr phrase="N AR CI is iD rb vi h1 io db H2 h3 " elapsed=2010 rate=2136800
+s=1248118636 time="Mon Jul 20 15:37:16 2009" host=lethe pid=13600 status=nphr phrase="h3 N db Ci H2 aR h1 id vi is rb io " elapsed=2001 rate=2146410
+s=1248118641 time="Mon Jul 20 15:37:21 2009" host=mnemosyne pid=4765 status=nphr phrase="N Ar io h3 H1 vi iD db rb iS ci H2 " elapsed=2013 rate=2133615
+s=1248118663 time="Mon Jul 20 15:37:43 2009" host=dho pid=25414 status=goal dist=40 phrase="Id ar N db h1 h2 h3 io rb Is cI vi ZUlEA" elapsed=2013 rate=2344656
+s=1248118678 time="Mon Jul 20 15:37:58 2009" host=hpa-linwin5 pid=10308 status=nphr phrase="N aR cI db h1 H2 h3 id io Is vI rb " elapsed=1448.131 rate=741468
+s=1248118682 time="Mon Jul 20 15:38:02 2009" host=alpha pid=12475 status=nphr phrase="N ar h2 id H1 Vi iS db io rb h3 CI " elapsed=2014 rate=533139
+s=1248118684 time="Mon Jul 20 15:38:04 2009" host=kei pid=5160 status=goal dist=43 phrase="id aR n Is vI h2 H3 Rb Io db ci h1 McNBr" elapsed=1991 rate=644129
+s=1248118692 time="Mon Jul 20 15:38:12 2009" host=hpa-linwin5 pid=10338 status=nphr phrase="n ar h3 id h1 Is rb Ci io vi db H2 " elapsed=1436.814 rate=747307
+s=1248118705 time="Mon Jul 20 15:38:25 2009" host=pallas pid=29182 status=goal dist=42 phrase="n h2 ci rb h1 ar h3 id io is db vI 5okPL" elapsed=2041 rate=999842
+s=1248118770 time="Mon Jul 20 15:39:30 2009" host=faith pid=5039 status=goal dist=41 phrase="dB aR cI id h1 h3 H2 io is n Vi rb WjcBq" elapsed=2072 rate=2255481
+s=1248118812 time="Mon Jul 20 15:40:12 2009" host=pallas pid=29182 status=nphr phrase="n aR ci Rb H2 io Db is id h1 h3 vi " elapsed=2149 rate=999294
+s=1248118848 time="Mon Jul 20 15:40:48 2009" host=kei pid=5139 status=goal dist=40 phrase="IO ar ci vi is h3 H2 id n H1 rb dB qTgRB" elapsed=2158 rate=826459
+s=1248118852 time="Mon Jul 20 15:40:52 2009" host=tetrakis pid=13993 status=nphr phrase="n ar cI DB id iS vI h3 iO H2 rb h1 " elapsed=2134 rate=1006318
+s=1248118867 time="Mon Jul 20 15:41:07 2009" host=tetrakis pid=13994 status=nphr phrase="N io ci h3 h1 VI DB id rb is ar h2 " elapsed=2147 rate=1000225
+s=1248118886 time="Mon Jul 20 15:41:26 2009" host=tetrakis pid=13995 status=nphr phrase="id ar db H3 is h2 Ci n io H1 RB Vi " elapsed=2163 rate=992826
+s=1248118898 time="Mon Jul 20 15:41:38 2009" host=lg-dell2650-7 pid=11935 status=goal dist=43 phrase="db n h3 iD h1 h2 RB is IO Ar Ci VI 3rWxI" elapsed=1809.320 rate=516278
+s=1248118925 time="Mon Jul 20 15:42:05 2009" host=tetrakis pid=13991 status=nphr phrase="iO rb Ci Vi h2 h1 Id h3 Db is Ar n " elapsed=2210 rate=971712
+s=1248118929 time="Mon Jul 20 15:42:09 2009" host=dho pid=25413 status=nphr phrase="Is db cI Ar h2 iD H3 h1 vi Io rb n " elapsed=2281 rate=2353665
+s=1248118937 time="Mon Jul 20 15:42:17 2009" host=dho pid=25321 status=nphr phrase="H2 Ar id db Io RB H3 Ci h1 iS n Vi " elapsed=2296 rate=2338288
+s=1248118938 time="Mon Jul 20 15:42:18 2009" host=dho pid=25414 status=nphr phrase="db aR cI n IS Id rb H1 io VI H3 H2 " elapsed=2288 rate=2346464
+s=1248118940 time="Mon Jul 20 15:42:20 2009" host=dho pid=25415 status=nphr phrase="Io Is db n H1 h2 H3 aR Rb iD cI vi " elapsed=2287 rate=2347490
+s=1248118954 time="Mon Jul 20 15:42:34 2009" host=lg-dell2650-1 pid=1170 status=nkey words=998 key="I would much rather hear more about your whittling project" elapsed=0.000 rate=0
+s=1248118955 time="Mon Jul 20 15:42:35 2009" host=lg-dell2650-1 pid=1170 status=nphr phrase="iO Id ci rb vi h2 n aR h3 db iS h1 " elapsed=0.000 rate=0
+s=1248118955 time="Mon Jul 20 15:42:35 2009" host=lg-dell2650-1 pid=1170 status=goal dist=90 phrase="iO Id ci rb vi h2 n aR h3 db iS h1 AAAAA" elapsed=0.270 rate=4
+s=1248118955 time="Mon Jul 20 15:42:35 2009" host=lg-dell2650-1 pid=1170 status=goal dist=67 phrase="iO Id ci rb vi h2 n aR h3 db iS h1 AAAAB" elapsed=0.484 rate=4
+s=1248118955 time="Mon Jul 20 15:42:35 2009" host=lg-dell2650-1 pid=1170 status=goal dist=63 phrase="iO Id ci rb vi h2 n aR h3 db iS h1 AAAAa" elapsed=0.745 rate=36
+s=1248118955 time="Mon Jul 20 15:42:35 2009" host=lg-dell2650-1 pid=1170 status=goal dist=61 phrase="iO Id ci rb vi h2 n aR h3 db iS h1 AAAId" elapsed=0.931 rate=582
+s=1248118956 time="Mon Jul 20 15:42:36 2009" host=lg-dell2650-1 pid=1170 status=goal dist=60 phrase="iO Id ci rb vi h2 n aR h3 db iS h1 AAAWP" elapsed=1.138 rate=1251
+s=1248118956 time="Mon Jul 20 15:42:36 2009" host=lg-dell2650-1 pid=1170 status=goal dist=57 phrase="iO Id ci rb vi h2 n aR h3 db iS h1 AAAZ9" elapsed=1.303 rate=1276
+s=1248118956 time="Mon Jul 20 15:42:36 2009" host=lg-dell2650-1 pid=1170 status=goal dist=56 phrase="iO Id ci rb vi h2 n aR h3 db iS h1 AACbi" elapsed=1.462 rate=6807
+s=1248118956 time="Mon Jul 20 15:42:36 2009" host=lg-dell2650-1 pid=1170 status=goal dist=55 phrase="iO Id ci rb vi h2 n aR h3 db iS h1 AAIhH" elapsed=1.626 rate=21459
+s=1248118956 time="Mon Jul 20 15:42:36 2009" host=lg-dell2650-1 pid=1170 status=goal dist=52 phrase="iO Id ci rb vi h2 n aR h3 db iS h1 AAOrF" elapsed=1.837 rate=32724
+s=1248118957 time="Mon Jul 20 15:42:37 2009" host=lg-dell2650-1 pid=1170 status=goal dist=51 phrase="iO Id ci rb vi h2 n aR h3 db iS h1 ADN0w" elapsed=2.827 rate=298243
+s=1248118958 time="Mon Jul 20 15:42:38 2009" host=lg-dell2650-1 pid=1170 status=goal dist=48 phrase="iO Id ci rb vi h2 n aR h3 db iS h1 AEuAh" elapsed=3.376 rate=366447
+s=1248118968 time="Mon Jul 20 15:42:48 2009" host=lg-dell2650-1 pid=1170 status=goal dist=47 phrase="iO Id ci rb vi h2 n aR h3 db iS h1 AptBb" elapsed=13.379 rate=817137
+s=1248118970 time="Mon Jul 20 15:42:50 2009" host=lg-dell2650-1 pid=1170 status=goal dist=44 phrase="iO Id ci rb vi h2 n aR h3 db iS h1 Axe/u" elapsed=15.621 rate=830443
+s=1248118987 time="Mon Jul 20 15:43:07 2009" host=phoebus pid=6443 status=nphr phrase="H1 h3 Ci h2 n AR iS iD IO db rB vI " elapsed=2326 rate=2308129
+s=1248119005 time="Mon Jul 20 15:43:25 2009" host=lg-dell2650-6 pid=2351 status=nphr phrase="io AR n rB cI h2 H1 iD h3 is db VI " elapsed=1853.598 rate=1158549
+s=1248119025 time="Mon Jul 20 15:43:45 2009" host=lg-dell2650-6 pid=2352 status=nphr phrase="Io N db ci h1 H2 h3 id Rb is vi Ar " elapsed=1864.107 rate=1152017
+s=1248119063 time="Mon Jul 20 15:44:23 2009" host=char pid=15863 status=nphr phrase="N ar ci rb h1 iO Is Id h3 h2 Db Vi " elapsed=2495 rate=1721430
+s=1248119088 time="Mon Jul 20 15:44:48 2009" host=phel pid=16994 status=nphr phrase="rb aR IS db h1 h2 vi Id IO cI n H3 " elapsed=2431 rate=1325062
+s=1248119094 time="Mon Jul 20 15:44:54 2009" host=straumli pid=718 status=goal dist=43 phrase="n H2 vi db rB h3 aR iD io IS h1 CI qJxOR" elapsed=2386 rate=746415
+s=1248119101 time="Mon Jul 20 15:45:01 2009" host=char pid=16353 status=nphr phrase="CI Ar io vi h1 n h3 iD H2 is rB Db " elapsed=2479 rate=1732540
+s=1248119133 time="Mon Jul 20 15:45:33 2009" host=lethe pid=13600 status=nphr phrase="Id is iO db h1 rb Ar n cI h3 vI H2 " elapsed=2497 rate=2150064
+s=1248119137 time="Mon Jul 20 15:45:37 2009" host=mnemosyne pid=4620 status=nphr phrase="io H3 n db h1 h2 rb ID cI is ar vI " elapsed=2511 rate=2138076
+s=1248119142 time="Mon Jul 20 15:45:42 2009" host=mnemosyne pid=4765 status=nphr phrase="db Io N H1 ci H2 h3 ar Is id Rb VI " elapsed=2514 rate=2135525
+s=1248119148 time="Mon Jul 20 15:45:48 2009" host=char pid=16350 status=nphr phrase="n ar h1 vi h2 io db iD ci is RB h3 " elapsed=2532 rate=1696275
+s=1248119151 time="Mon Jul 20 15:45:51 2009" host=lg-dell2650-7 pid=11932 status=nphr phrase="n id cI h1 H2 DB h3 Ar iO is vi rb " elapsed=2077.009 rate=516965
+s=1248119154 time="Mon Jul 20 15:45:54 2009" host=char pid=16351 status=nphr phrase="n ar Id DB h1 iS h3 vI Ci h2 RB io " elapsed=2535 rate=1694267
+s=1248119168 time="Mon Jul 20 15:46:08 2009" host=lg-dell2650-7 pid=11935 status=nphr phrase="io is id H2 Ar h3 db cI N h1 rB VI " elapsed=2079.036 rate=516461
+s=1248119169 time="Mon Jul 20 15:46:09 2009" host=faith pid=5040 status=nphr phrase="rB h2 ci Vi H1 Ar h3 id iS db n io " elapsed=2468 rate=2175328
+s=1248119179 time="Mon Jul 20 15:46:19 2009" host=faith pid=5039 status=nphr phrase="n AR H3 is H1 h2 Io ID db Rb vi Ci " elapsed=2481 rate=2163930
+s=1248119220 time="Mon Jul 20 15:47:00 2009" host=char pid=16353 status=goal dist=41 phrase="CI Ar io vi h1 n h3 iD H2 is rB Db RKOFL" elapsed=2598 rate=1763995
+s=1248119286 time="Mon Jul 20 15:48:06 2009" host=kei pid=5139 status=nphr phrase="io Ar ci dB h1 h2 h3 vI n id Is RB " elapsed=2597 rate=826909
+s=1248119352 time="Mon Jul 20 15:49:12 2009" host=kei pid=5119 status=nphr phrase="n H1 ci H2 Db Ar is h3 iO id rB vi " elapsed=2665 rate=805810
+s=1248119368 time="Mon Jul 20 15:49:28 2009" host=hpa-control pid=22973 status=nphr phrase="n aR H2 iO rB ci H3 id Db is vi h1 " elapsed=2160.340 rate=994049
+s=1248119380 time="Mon Jul 20 15:49:40 2009" host=dho pid=25413 status=nphr phrase="N ar io db H3 ci iS id rB h2 H1 Vi " elapsed=2733 rate=2357282
+s=1248119393 time="Mon Jul 20 15:49:53 2009" host=dho pid=25321 status=nphr phrase="Is IO N rB h1 H2 h3 CI iD ar dB vi " elapsed=2753 rate=2340157
+s=1248119394 time="Mon Jul 20 15:49:54 2009" host=dho pid=25414 status=nphr phrase="n h2 cI Db vI aR is id Io H1 rb h3 " elapsed=2744 rate=2347832
+s=1248119395 time="Mon Jul 20 15:49:55 2009" host=dho pid=25415 status=nphr phrase="n ar ci h1 dB RB id Io H3 is h2 vi " elapsed=2742 rate=2349544
+s=1248119452 time="Mon Jul 20 15:50:52 2009" host=phoebus pid=6443 status=nphr phrase="H3 n h2 dB iO h1 id aR Ci Is Rb vI " elapsed=2791 rate=2308295
+s=1248119467 time="Mon Jul 20 15:51:07 2009" host=straumli pid=718 status=goal dist=42 phrase="n H2 vi db rB h3 aR iD io IS h1 CI 6Yp5o" elapsed=2759 rate=744213
+s=1248119493 time="Mon Jul 20 15:51:33 2009" host=straumli pid=717 status=goal dist=40 phrase="n io Ci dB H1 ar h3 h2 RB is id vi 75pZO" elapsed=2788 rate=745592
+s=1248119504 time="Mon Jul 20 15:51:44 2009" host=char pid=15863 status=nphr phrase="io ar Rb N db h2 cI iD Vi is h3 H1 " elapsed=2936 rate=1828579
+s=1248119513 time="Mon Jul 20 15:51:53 2009" host=tetrakis pid=13991 status=goal dist=40 phrase="iO rb Ci Vi h2 h1 Id h3 Db is Ar n iMuIb" elapsed=2797 rate=972915
+s=1248119521 time="Mon Jul 20 15:52:01 2009" host=char pid=16353 status=nphr phrase="H1 aR ci db N id H3 is io vI Rb h2 " elapsed=2899 rate=1851918
+s=1248119546 time="Mon Jul 20 15:52:26 2009" host=straumli pid=727 status=nphr phrase="ID h2 Rb ci iS ar H3 n Io h1 Db vi " elapsed=2833 rate=758025
+s=1248119558 time="Mon Jul 20 15:52:38 2009" host=char pid=16350 status=nphr phrase="n Ci is db Id h3 H1 h2 Io aR vi rb " elapsed=2942 rate=1824850
+s=1248119567 time="Mon Jul 20 15:52:47 2009" host=char pid=16351 status=nphr phrase="n Ar h3 IS H1 ci h2 id iO db VI rb " elapsed=2947 rate=1821754
+s=1248119586 time="Mon Jul 20 15:53:06 2009" host=straumli pid=717 status=nphr phrase="N iD cI h1 io H2 h3 db ar is vi rB " elapsed=2882 rate=745137
+s=1248119597 time="Mon Jul 20 15:53:17 2009" host=straumli pid=718 status=nphr phrase="io h3 ci dB h1 aR h2 iD Rb iS n vi " elapsed=2890 rate=743074
+s=1248119603 time="Mon Jul 20 15:53:23 2009" host=straumli pid=725 status=nphr phrase="ID h2 Rb ci iS ar H3 n Io h1 Db vi " elapsed=2893 rate=742303
+s=1248119611 time="Mon Jul 20 15:53:31 2009" host=mnemosyne pid=4765 status=goal dist=40 phrase="db Io N H1 ci H2 h3 ar Is id Rb VI 71kg1" elapsed=2982 rate=2137025
+s=1248119630 time="Mon Jul 20 15:53:50 2009" host=lethe pid=13600 status=nphr phrase="Is H1 ci io iD h2 h3 ar dB N rb VI " elapsed=2994 rate=2151787
+s=1248119638 time="Mon Jul 20 15:53:58 2009" host=mnemosyne pid=4620 status=nphr phrase="n Ci h3 h1 vI ar iD h2 iO is rb Db " elapsed=3012 rate=2138928
+s=1248119644 time="Mon Jul 20 15:54:04 2009" host=mnemosyne pid=4765 status=nphr phrase="DB iD ci n H2 h3 H1 iO ar is rb vI " elapsed=3016 rate=2136091
+s=1248119737 time="Mon Jul 20 15:55:37 2009" host=faith pid=5040 status=nphr phrase="n ar h1 db h3 rb is id Io cI H2 vi " elapsed=3036 rate=2122019
+s=1248119744 time="Mon Jul 20 15:55:44 2009" host=faith pid=5039 status=nphr phrase="db ar ci vi id is h3 h1 iO H2 rb N " elapsed=3046 rate=2115053
+s=1248119801 time="Mon Jul 20 15:56:41 2009" host=pallas pid=29182 status=goal dist=41 phrase="n aR ci Rb H2 io Db is id h1 h3 vi 7HMPw" elapsed=3137 rate=1000709
+s=1248119817 time="Mon Jul 20 15:56:57 2009" host=straumli pid=727 status=goal dist=41 phrase="ID h2 Rb ci iS ar H3 n Io h1 Db vi LeFA3" elapsed=3104 rate=753840
+s=1248119831 time="Mon Jul 20 15:57:11 2009" host=dho pid=25413 status=nphr phrase="Ci rb h2 db H1 IO h3 id n Is Vi ar " elapsed=3184 rate=2360613
+s=1248119832 time="Mon Jul 20 15:57:12 2009" host=sol pid=1598 status=nphr phrase="n aR CI vI h3 Db rb io id h1 is H2 " elapsed=2922.938 rate=734700
+s=1248119847 time="Mon Jul 20 15:57:27 2009" host=dho pid=25321 status=nphr phrase="n rb ci db h1 ar vi id iO H3 is H2 " elapsed=3207 rate=2343683
+s=1248119848 time="Mon Jul 20 15:57:28 2009" host=dho pid=25414 status=nphr phrase="Is ar n H3 H2 H1 vI id IO cI rB db " elapsed=3198 rate=2350279
+s=1248119849 time="Mon Jul 20 15:57:29 2009" host=dho pid=25415 status=nphr phrase="io H2 ci n vI Ar H3 dB Id iS Rb h1 " elapsed=3196 rate=2351750
+s=1248119869 time="Mon Jul 20 15:57:49 2009" host=straumli pid=725 status=goal dist=41 phrase="ID h2 Rb ci iS ar H3 n Io h1 Db vi LeFA3" elapsed=3159 rate=740715
+s=1248119883 time="Mon Jul 20 15:58:03 2009" host=pallas pid=29182 status=nphr phrase="N DB Ci ar Rb h2 id vi Io h3 is h1 " elapsed=3220 rate=1000381
+s=1248119895 time="Mon Jul 20 15:58:15 2009" host=phel pid=16994 status=nphr phrase="iS Ar Rb db h1 n h3 id h2 io CI Vi " elapsed=3238 rate=0
+s=1248119905 time="Mon Jul 20 15:58:25 2009" host=tetrakis pid=13993 status=nphr phrase="ci n ar is ID H1 h3 h2 IO DB Rb vI " elapsed=3187 rate=1010739
+s=1248119913 time="Mon Jul 20 15:58:33 2009" host=char pid=15863 status=nphr phrase="rb db iS vi h1 h2 H3 ci iD io n Ar " elapsed=3346 rate=1925419
+s=1248119914 time="Mon Jul 20 15:58:34 2009" host=phoebus pid=6443 status=nphr phrase="dB VI Io n is h2 h3 Id aR cI rB H1 " elapsed=3253 rate=2310542
+s=1248120038 time="Mon Jul 20 16:00:38 2009" host=char pid=14245 status=nkey words=13 key="I would much rather hear more about your whittling project" elapsed=0 rate=0
+s=1248120038 time="Mon Jul 20 16:00:38 2009" host=char pid=14245 status=nphr phrase="id vM io db h3 h2 aR h1 Ci rb VI iS " elapsed=0 rate=0
+s=1248120038 time="Mon Jul 20 16:00:38 2009" host=char pid=14245 status=goal dist=77 phrase="id vM io db h3 h2 aR h1 Ci rb VI iS AAAAA" elapsed=0 rate=0
+s=1248120039 time="Mon Jul 20 16:00:39 2009" host=char pid=14245 status=goal dist=74 phrase="id vM io db h3 h2 aR h1 Ci rb VI iS AAAAF" elapsed=1 rate=0
+s=1248120039 time="Mon Jul 20 16:00:39 2009" host=char pid=14245 status=goal dist=71 phrase="id vM io db h3 h2 aR h1 Ci rb VI iS AAAAM" elapsed=1 rate=0
+s=1248120040 time="Mon Jul 20 16:00:40 2009" host=char pid=14245 status=goal dist=67 phrase="id vM io db h3 h2 aR h1 Ci rb VI iS AAAAi" elapsed=1 rate=0
+s=1248120040 time="Mon Jul 20 16:00:40 2009" host=char pid=14245 status=goal dist=66 phrase="id vM io db h3 h2 aR h1 Ci rb VI iS AAAAp" elapsed=2 rate=0
+s=1248120040 time="Mon Jul 20 16:00:40 2009" host=char pid=14245 status=goal dist=65 phrase="id vM io db h3 h2 aR h1 Ci rb VI iS AAABv" elapsed=2 rate=0
+s=1248120040 time="Mon Jul 20 16:00:40 2009" host=char pid=14245 status=goal dist=64 phrase="id vM io db h3 h2 aR h1 Ci rb VI iS AAAIb" elapsed=2 rate=0

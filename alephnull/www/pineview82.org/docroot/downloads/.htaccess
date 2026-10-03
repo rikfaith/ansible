@@ -1,0 +1,4 @@
+AuthUserFile /www/pineview82.org/support/passwords
+AuthName "Enter Password"
+AuthType Basic
+Require valid-user

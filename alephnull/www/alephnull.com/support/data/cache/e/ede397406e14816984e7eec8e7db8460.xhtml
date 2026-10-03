@@ -1,0 +1,148 @@
+
+<h1 class="sectionedit1"><a name="compaq_evo_t30" id="compaq_evo_t30">Compaq Evo T30</a></h1>
+<div class="level1">
+
+</div>
+<!-- EDIT1 SECTION "Compaq Evo T30" [1-33] -->
+<h2 class="sectionedit2"><a name="introduction" id="introduction">Introduction</a></h2>
+<div class="level2">
+
+<p>
+The  Compaq Evo T30 is a thin client.  One day, while shopping at  Weird Stuff, I happened to pick up several of these for a great price.  About half didn&#039;t boot, but I think this is because they don&#039;t have a plugin memory card.  My goal is to install Linux on them.
+</p>
+
+<p>
+The ones I have don&#039;t appear to be a standard version:
+</p>
+<ul>
+<li class="level1"><div class="li"> Model No.: T30</div>
+</li>
+<li class="level1"><div class="li"> Part No.: 238622-001</div>
+</li>
+<li class="level1"><div class="li"> Spare No.: 292238-001</div>
+</li>
+<li class="level1"><div class="li"> Date Manufactured: November 2002</div>
+</li>
+<li class="level1"><div class="li"> Licenced for Windows CE.NET v4.0</div>
+</li>
+</ul>
+
+<p>
+From powering up into the <acronym title="Operating System">OS</acronym>:
+</p>
+<ul>
+<li class="level1"><div class="li"> RAM: 64MB</div>
+</li>
+<li class="level1"><div class="li"> Flash Memory, Device 1: 32MB</div>
+</li>
+</ul>
+
+<p>
+From cracking the case:
+</p>
+<ul>
+<li class="level1"><div class="li"> National Geode CS5530A-UCE (this is the southbridge, now made by AMD)</div>
+</li>
+<li class="level1"><div class="li"> Geode processor under heat sink on bottom of board</div>
+</li>
+</ul>
+
+<p>
+This suggests the model I have is similar to the 238617-xxx (DK408A)
+</p>
+<table class="gallery gallery_center" align="center"><tr><td><a href="/w/_detail/linux/evo/11058_ov.png?id=linux%3Aevo" title="11058_ov.png"><img src="/w/_media/linux/evo/11058_ov.png?w=120&amp;h=97" width="120" height="97" border="0" alt="11058_ov.png" class="tn" /></a></td><td><a href="/w/_detail/linux/evo/screen1.png?id=linux%3Aevo" title="screen1.png"><img src="/w/_media/linux/evo/screen1.png?w=120&amp;h=90" width="120" height="90" border="0" alt="screen1.png" class="tn" /></a></td><td><a href="/w/_detail/linux/evo/screen4.png?id=linux%3Aevo" title="screen4.png"><img src="/w/_media/linux/evo/screen4.png?w=120&amp;h=95" width="120" height="95" border="0" alt="screen4.png" class="tn" /></a></td><td><a href="/w/_detail/linux/evo/screen5.png?id=linux%3Aevo" title="screen5.png"><img src="/w/_media/linux/evo/screen5.png?w=120&amp;h=95" width="120" height="95" border="0" alt="screen5.png" class="tn" /></a></td><td><a href="/w/_detail/linux/evo/screen6.png?id=linux%3Aevo" title="screen6.png"><img src="/w/_media/linux/evo/screen6.png?w=120&amp;h=89" width="120" height="89" border="0" alt="screen6.png" class="tn" /></a></td></tr><tr><td><a href="/w/_detail/linux/evo/screen7.png?id=linux%3Aevo" title="screen7.png"><img src="/w/_media/linux/evo/screen7.png?w=120&amp;h=89" width="120" height="89" border="0" alt="screen7.png" class="tn" /></a></td><td><a href="/w/_detail/linux/evo/screen9.png?id=linux%3Aevo" title="screen9.png"><img src="/w/_media/linux/evo/screen9.png?w=120&amp;h=90" width="120" height="90" border="0" alt="screen9.png" class="tn" /></a></td><td></td><td></td><td></td></tr></table>
+</div>
+<!-- EDIT2 SECTION "Introduction" [34-954] -->
+<h2 class="sectionedit3"><a name="power_up_sequence" id="power_up_sequence">Power Up Sequence</a></h2>
+<div class="level2">
+
+<p>
+Using a 12V power supply, 500mA is drawn after applying power.  The LED is orange and will flash once before turning off.  After a short period, the LED turns off and current draw drops to 300mA.  Pressing the button for about 3 seconds will make the LED green and will return the current draw to 500mA.
+</p>
+
+</div>
+<!-- EDIT3 SECTION "Power Up Sequence" [955-1290] -->
+<h2 class="sectionedit4"><a name="resources" id="resources">Resources</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Booting Linux from the 44-pin IDE connector on versions with 4MBit of flash (not the kind I have): http:<em>www.bastianello.it/en_evo_t30.php
+  * Booting DSL on WinNT-based T20s (not the kind I have): http:</em>mowson.org/karl/evo_t20/</div>
+</li>
+<li class="level1"><div class="li"> Booting Linux on WinCE.NET-based T20s (close to what I have): http:<em>thunderlord.net.pl/evo/
+  *  SourceForge T20 Resources
+  *  Evo T30 with WinCE.NET support site
+
+
+
+
+
+
+
+===== Actual Steps =====
+==== Preparation ====
+
+Using the  WinCE.NET T20 instructions I prepared as follows:
+  * Got the <a href="http://alephnull.com/evo%2Fsp22454.exe" class="interwiki iw_an" title="http://alephnull.com/evo%2Fsp22454.exe"> Evo T20 and T30 Netxfer Tool for Loading Firmware 2.18 A 9 Oct 2002</a> from  HP &ndash; this isn&#039;t needed.
+  * Got <a href="http://alephnull.com/evo%2Fnetxfer.sh" class="interwiki iw_an" title="http://alephnull.com/evo%2Fnetxfer.sh">evo/netxfer.sh</a> from http:</em>thunderlord.net.pl/evo/files/netxfer.sh</div>
+</li>
+<li class="level1"><div class="li"> Got the <a href="http://alephnull.com/evo%2Fsp27933.exe" class="interwiki iw_an" title="http://alephnull.com/evo%2Fsp27933.exe"> Evo T30 32/64 Rapport Package to Add CE.NET Firmware 4.0 B472.6 29 Apr 2004</a> from  HP</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT4 SECTION "Resources" [1291-2854] -->
+<h3 class="sectionedit5"><a name="initial_firmware_download" id="initial_firmware_download">Initial Firmware Download</a></h3>
+<div class="level3">
+
+<p>
+Set up for initial transfer of standard firmware:
+</p>
+<ul>
+<li class="level1"><div class="li"> Make /tmp/evo and chmod 777.</div>
+</li>
+<li class="level1"><div class="li"> Execute sp27933.exe (under vmware) and copy <code>Rapport_4.X/Push_472-6-14-6Cme7D_T30_CEN/P472_6_14_6_Cme7D.bin</code> to /tmp/evo/bootp.bin</div>
+</li>
+<li class="level1"><div class="li"> <code>/etc/init.d/tftpd stop</code></div>
+</li>
+<li class="level1"><div class="li"> <code>apt-get install dhcp3-server</code></div>
+</li>
+<li class="level1"><div class="li"> Edit <code>netxfer.sh</code> to change all /home/blah to /tmp/evo.</div>
+</li>
+<li class="level1"><div class="li"> Power up the Evo T30 while pressing the &#039;p&#039; key (while the LED is orange), getting to the screen shown above.</div>
+</li>
+<li class="level1"><div class="li"> sh <code>netxfer.sh</code> (I tried with my normal dhcpd and tftp setup, but that&#039;s not good enough.  We need to be running on special ports for the Evo to communicate &ndash; these ports are set up by this script.  I did not have to configure any special IP addresses.)</div>
+</li>
+<li class="level1"><div class="li"> After the servers started and a few seconds passed, the T30 started printing stuff.</div>
+<ul>
+<li class="level2"><div class="li"> If you get the “error: not a tagged image” error, you might have used sp27933.exe directly instead of extracting its contents.</div>
+</li>
+<li class="level2"><div class="li"> If you get errors about how the file cannot be read, perhaps you didn&#039;t chmod the file.</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> The T30 printed a lot of stuff and rebooted itself.  It ended up in a configuration utility, and I played around and set up a 1024&times;768 mode.  It then rebooted itself again.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT5 SECTION "Initial Firmware Download" [2855-4109] -->
+<h3 class="sectionedit6"><a name="generate_a_new_firmware" id="generate_a_new_firmware">Generate a new firmware</a></h3>
+<div class="level3">
+
+<p>
+This section follows the  preparing new firmware instructions noted above:
+</p>
+<ul>
+<li class="level1"><div class="li"> Get <a href="http://alephnull.com/evo%2Ffw_builder.tar.gz" class="interwiki iw_an" title="http://alephnull.com/evo%2Ffw_builder.tar.gz">evo/fw_builder.tar.gz</a> from http:<em>thunderlord.net.pl/evo/files/fw_builder.tar.gz
+  * Untar and put the original firmware from the last step into the <code>fw_builder</code>.  Name it <code>orig.bin</code>
+  * <code>apt-get install bin86</code>
+  * <code>./createfw</code>
+  * Note the new file <code>../bootp.bin</code>
+  * Then power up while pressing &#039;p&#039;, as above.  This time, the process has different messages and goes faster, almost immediately rebooting into Linux.
+
+</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT6 SECTION "Generate a new firmware" [4110-] -->

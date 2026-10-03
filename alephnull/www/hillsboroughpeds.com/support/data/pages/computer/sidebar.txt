@@ -1,0 +1,5 @@
+====== Computer ======
+[[computer:emr | EMR, Billing, Scheduling]]\\
+[[computer:phone | Telephone]]\\
+[[computer:internet | Internet]]\\
+[[computer:hardware | Hardware]]\\

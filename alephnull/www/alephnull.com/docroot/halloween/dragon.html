@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>Halloween 2005: The Fire-Breathing Dragon</title>
+  </head>
+
+  <body>
+    <h1>Halloween 2005: The Fire-Breathing Dragon</h1>
+    <h3>The Fire-Breathing Dragon</h3>
+    <p>
+      The fire-breathing dragon is an animetronic piece my neighbor
+      built.  I did the electronics.  The mechanical piece is a long
+      neck with a conduit for fog and electonics.  The head has
+      high-output orange LEDs in the eyes and several high-output red
+      LEDs in the throat to illuminate the fog exiting the mounth (i.e.,
+      "fire-breathing").
+    </p>
+    <hr>
+      <h3>Electronic Notes</h3>
+      <p>
+        The controller has 4 120V outlets available externally.  One is
+        powered all the time (for the fog machine).  The other three are
+        switched using a relay in the main controller box.  These are
+        for the blower fan and the two compressed air switches.  A power
+        strip inside the main controller box is also always powered --
+        for the 12V wall-wart power supply.
+      </p>
+      <p>
+        The circuit board in the main control box has a 555 timer with
+        independently controlled timing:
+        <ul>
+          <li>R1: 470k in parallell with 1m (equivalent to about 320k)</li>
+          <li>R2a: 470k in series with 1m pot ("on" time from about 5 to
+          20 seconds)</li>
+          <li>R2b: 1m pot ("off" time from about 8 to 22 seconds)</li>
+          <li>C1: 47uF</li>
+        </ul>
+        <img src="555.png">
+      </p>
+      <p>
+        Also on board is a voice chip and an amplifier, identical to
+        those used in the <a href="ghosts.html">Flying Ghosts</a>.
+      </p>
+      <p>
+        The pinout from the IDC connector is as follows:
+        <ul>
+          <li>Pin 1: V+ from 12V wall wart</li>
+          <li>Pin 2: V- from 12V wall wart</li>
+          <li>Pin 3: power to relay (+)</li>
+          <li>Pin 4: power to relay (-)</li>
+          <li>Pin 5: R2a</li>
+          <li>Pin 6: R2a</li>
+          <li>Pin 7: R2b</li>
+          <li>Pin 8: R2b</li>
+          <li>Pin 9: power to LEDs (+)</li>
+          <li>Pin 10: power to LEDs (-)</li>
+          <li>Pin 11: ground</li>
+          <li>Pin 12: ground</li>
+          <li>Pin 13: ground</li>
+          <li>Pin 14: ground</li>
+          <li>Pin 15: To speaker (+)</li>
+          <li>Pin 16: To speaker (-)</li>
+        </ul>
+      </p>
+      <p>
+        28 pin .3" DIP socket:
+        <ul>
+          <li>Left: 555 timer</li>
+          <li>Far right: pin 14 ground and pin 15 12V+</li>
+          <li>Middle: 14 pin DIP header:</li>
+          <ul>
+            <li>Pin 1 & 14: R1a</li>
+            <li>Pin 2 & 13: R1b</li>
+            <li>Pin 3 & 12: D1</li>
+            <li>Pin 4 & 11: 470K for R2a</li>
+            <li>Pin 5 & 10: D2</li>
+            <li>Pin 6 & 9:</li>
+            <li>Pin 7 & 8: C1</li>
+          </ul>
+        </ul>
+      </p>
+      <p>
+        16 pin .3" DIP socket (per <a href="ghosts.html">Flying
+        Ghosts</a> wiring diagrm):
+        <ul>
+          <li>Pin 1, 2, 3: VR1 = 10k pot</li>
+          <li>Pin 15 & 16: C1 = 0.1uF</li>
+          <li>Pin 4 & 13: R1 = 10k</li>
+          <li>Pin 5 & 12: C2 = 0.05uF</li>
+          <li>Pin 6 & 11: C3 = 47uF (+ on 11)</li>
+          <li>Pin 7 & 10: to speaker</li>
+          <li>Pin 8 & 9: input supply (no connection for the dragon)</li>
+        </ul>
+      </p>
+      <p>
+        Terminal strip:
+        <ul>
+          <li>Pin 7: Lid (-).</li>
+          <li>Pin 8: Lid (+).</li>
+          <li>Pin 9: +5V 4A from <a
+          href="http://jameco.com/webapp/wcs/stores/servlet/ProductDisplay?langId=-1&storeId=10001&catalogId=10001&productId=190650&searchValue=sw300">AULT GVP #SW300</a> (orange wire on 4 pin connector)</li>
+          <li>Pin 10: 5V ground from <a
+          href="http://jameco.com/webapp/wcs/stores/servlet/ProductDisplay?langId=-1&storeId=10001&catalogId=10001&productId=190650&searchValue=sw300">AULT GVP #SW300</a> (brown wire on 4 pin connector)</li>
+        </ul>
+      </p>
+
+      <p>
+        Relays and transistors that switch relays are protected using a diode, as shown
+        below: <br><img src="relay.png">
+      </p>
+      <p>
+        At one point, we hit some cycling problems.  It turned out to be
+        related to a long power run and the operation of the fog machine
+        off the same run (or same circuit -- as yet undetermined).  But
+        in trying to fix the problem, I added 0.1uF caps on pin 5 of the
+        555, across pins 1 and 8 of the 555, across the 12V entry point
+        onto the card, and across the relay power exit point.  I also
+        added a heat sink to the LM7812 I put on the wall wart (it had
+        votage varying between 16 and 19 volts, and the 555 timing was
+        fuzzy because of that, but that's unrelated to the last cycling
+        problem).
+      </p>
+
+
+  </body>
+</html>

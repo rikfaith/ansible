@@ -1,0 +1,14 @@
+====== home ======
+{{private:m2n-vm.jpg|m2n-vm dvi}}
+
+* Setup of new RAID-1
+  * badblocks -b 4096 -s -v -w -p 1 -t random
+  * fdisk -H 224 -S 56
+  * mdadm -C /dev/md_d1 /dev/sd[cd]1 -c 128 -n 2 -l 1
+  * cryptsetup -c aes-cbc-essiv:sha256 -s 128 -h sha256 --align-payload=256 luksFormat /dev/md_d1
+  * cryptsetup luksOpen /dev/md_d1 r1
+  * pvcreate --metadatasize 506k /dev/mapper/r1
+  * pvs /dev/mapper/r1 -o+pe_start
+  * vgcreate -s 1g v1 /dev/mapper/r1
+  * lvcreate -L 500g -n home v1
+  * mke2fs -t ext4 -m0 -E stride=32,stripe-width=128 /dev/mapper/v1-home

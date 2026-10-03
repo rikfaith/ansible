@@ -1,0 +1,308 @@
+
+
+
+<h1><a name="hydra" id="hydra">Hydra</a></h1>
+<div class="level1">
+
+<p>
+
+<a href="/w/_detail/private/crosshair.jpg?id=private%3Ahydra" class="media" title="private:crosshair.jpg"><img src="/w/_media/private/crosshair.jpg" class="media" alt="" /></a>
+</p>
+
+</div>
+<!-- SECTION "Hydra" [1-50] -->
+<h2><a name="drives" id="drives">Drives</a></h2>
+<div class="level2">
+
+<p>
+
+Hitachi P/N 0F12460, 3TB, 5400RPM, 5V 430mA, 12V 400mA, SATA 6.0Gb/s, FEB 2011
+</p>
+<ul>
+<li class="level1"><div class="li"> YNG0YS9A</div>
+</li>
+<li class="level1"><div class="li"> YNG150SA</div>
+</li>
+<li class="level1"><div class="li"> YNG0Z1RA</div>
+</li>
+<li class="level1"><div class="li"> YNG17P1A</div>
+</li>
+<li class="level1"><div class="li"> YNG13YAA</div>
+</li>
+<li class="level1"><div class="li"> YNG0J3LA</div>
+</li>
+<li class="level1"><div class="li"> YNG14LSA</div>
+</li>
+<li class="level1"><div class="li"> YNG17L7A</div>
+</li>
+<li class="level1"><div class="li"> YNG0YRTA</div>
+</li>
+<li class="level1"><div class="li"> YNG17N3A</div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Drives" [51-280] -->
+<h2><a name="setup" id="setup">Setup</a></h2>
+<div class="level2">
+<pre class="code">apt-get update
+apt-get upgrade
+apt-get dist-upgrade
+apt-get install lftp sysstat iotop curl bc cpufrequtils
+apt-get install nfs-common nfs-kernel-server
+apt-get install cryptsetup mdadm lvm2 smartmontools
+apt-get autoremove</pre>
+
+</div>
+<!-- SECTION "Setup" [281-537] -->
+<h2><a name="kernel_recompile" id="kernel_recompile">Kernel Recompile</a></h2>
+<div class="level2">
+<pre class="code">apt-get install linux-image-2.6.38-8-server
+reboot
+apt-get install linux-headers-`uname -r`</pre>
+<pre class="code">apt-get install build-essential autoconf automake libtool flex bison gdb
+apt-get build-dep linux
+apt-get build-dep --no-install-recommends linux-image-$(uname -r)
+apt-get install libncurses5 libncurses5-dev
+cd
+apt-get source linux-image-$(uname -r)
+cd linux-2.6.38
+patch -p1 &lt; ../mvsas.diff
+cp /boot/config-$(uname -r) .config
+make oldconfig
+cd drivers/scsi/mvsas
+make -C /usr/src/linux-headers-`uname -r` M=`pwd`
+mv /lib/modules/$(uname -r)/kernel/drivers/scsi/mvsas/mvsas.ko /lib/modules/$(uname -r)/kernel/drivers/scsi/mvsas/mvsas_old.ko
+cp mvsas.ko /lib/modules/$(uname -r)/kernel/drivers/scsi/mvsas/mvsas.ko
+cd ../libsas
+make -C /usr/src/linux-headers-`uname -r` M=`pwd`
+mv /lib/modules/$(uname -r)/kernel/drivers/scsi/libsas/libsas.ko /lib/modules/$(uname -r)/kernel/drivers/scsi/libsas/libsas_old.ko
+cp libsas.ko /lib/modules/$(uname -r)/kernel/drivers/scsi/libsas/libsas.ko
+update-initramfs -u -k $(uname -r)
+update-grub</pre>
+
+<p>
+
+See <a href="https://bugzilla.redhat.com/attachment.cgi?id=505977" class="urlextern" title="https://bugzilla.redhat.com/attachment.cgi?id=505977"  rel="nofollow"> patch </a> (not used with 8 kernel).
+</p>
+
+</div>
+<!-- SECTION "Kernel Recompile" [538-1733] -->
+<h2><a name="sio_tests" id="sio_tests">sio tests</a></h2>
+<div class="level2">
+<pre class="code">sio_linux64 50 100 8k 1g 100g 20 10 /dev/sdc -direct
+Computed IOPS = 116.95
+Computed KB/s = 935.64</pre>
+
+</div>
+<!-- SECTION "sio tests" [1734-1868] -->
+<h2><a name="setup1" id="setup1">setup</a></h2>
+<div class="level2">
+<pre class="code">for i in b c d e f g h i j k; do parted /dev/sd$i unit kib mkpart primary ext2 28 2930266567 ; done
+for i in b c d e f g h i j k; do parted /dev/sd$i set 1 raid on; done
+for i in b c d e f g h i j k; do parted /dev/sd$i unit kib print; done
+mdadm -C /dev/md0 /dev/sd[bcdef]1 -c 128 -n 5 -l 5
+mdadm -C /dev/md1 /dev/sd[ghijk]1 -c 128 -n 5 -l 5
+cryptsetup -c aes-cbc-essiv:sha256 -s 128 -h sha256 --align-payload=1024 luksFormat /dev/md0
+cryptsetup -c aes-cbc-essiv:sha256 -s 128 -h sha256 --align-payload=1024 luksFormat /dev/md1
+cryptsetup luksOpen /dev/md0 r0
+cryptsetup luksOpen /dev/md1 r1
+pvcreate --metadatasize 506k /dev/mapper/r0
+pvs /dev/mapper/r0 -o+pe_start
+vgcreate -s 1g v0 /dev/mapper/r0
+pvcreate --metadatasize 506k /dev/mapper/r1
+pvs /dev/mapper/r1 -o+pe_start
+vgcreate -s 1g v1 /dev/mapper/r1</pre>
+
+<p>
+# /tv
+</p>
+<ul>
+<li class="level1"><div class="li"> lvcreate -L 8t -n tv v0</div>
+</li>
+<li class="level1"><div class="li"> mke2fs -t ext4 -i1048576 -m0 -E stride=32,stripe-width=128 /dev/mapper/v0-tv</div>
+</li>
+<li class="level1"><div class="li"> mkdir /tv</div>
+</li>
+<li class="level1"><div class="li"> mount -o noatime,nodiratime /dev/mapper/v0-tv /tv</div>
+</li>
+</ul>
+
+<p>
+
+# /video
+</p>
+<ul>
+<li class="level1"><div class="li"> lvcreate -L 4t -n video v1</div>
+</li>
+<li class="level1"><div class="li"> mke2fs -t ext4 -i1048576 -m0 -E stride=32,stripe-width=128 /dev/mapper/v1-video</div>
+</li>
+<li class="level1"><div class="li"> mkdir /video</div>
+</li>
+<li class="level1"><div class="li"> mount -o noatime,nodiratime /dev/mapper/v1-video /video</div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "setup" [1869-3113] -->
+<h2><a name="legacy_old_hydra_in_rack-mount_chassis" id="legacy_old_hydra_in_rack-mount_chassis">Legacy (old hydra in rack-mount chassis)</a></h2>
+<div class="level2">
+
+</div>
+<!-- SECTION "Legacy (old hydra in rack-mount chassis)" [3114-3168] -->
+<h3><a name="drives1" id="drives1">Drives</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> Hitachi PN 0F10311 2TB 5V@400mA 12V@850mA SATA3.0Gb/s 7200RPM Oct-2009 FW 20N</div>
+<ul>
+<li class="level2"><div class="li"> SN YAGM5BRT Warranty expires 2012-11-13</div>
+</li>
+<li class="level2"><div class="li"> SN YAGL1HYT</div>
+</li>
+<li class="level2"><div class="li"> SN YAGLG4GT</div>
+</li>
+<li class="level2"><div class="li"> SN YAGK7RNT</div>
+</li>
+<li class="level2"><div class="li"> SN YAGMGYUT</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Western Digital WD20EURS WD AV-GP MDL WD20EURS-63S48Y0 2.0TB 5VDC@0.70A 12VDC@0.55A</div>
+<ul>
+<li class="level2"><div class="li"> SN WCAZA3449153 08JAN2011 badblocks failed &lt; 10% twice. RMA</div>
+</li>
+<li class="level2"><div class="li"> SN WCAZA3519420 O8JAN2011 DOA RMA</div>
+</li>
+<li class="level2"><div class="li"> SN WCAZA3531785 08JAN2011</div>
+</li>
+<li class="level2"><div class="li"> SN WCAZA3531987 08JAN2011 &gt; 400m bad blocks.  RMA.</div>
+</li>
+<li class="level2"><div class="li"> SN WCAZA3519368 08JAN2011</div>
+</li>
+<li class="level2"><div class="li"> SN WCAZA3624918 13JAN2011 (replaced RMA drive)</div>
+</li>
+<li class="level2"><div class="li"> SN WCAZA3604669 13JAN2011 (replaced RMA drive; rma&#039;d to WD in June)</div>
+</li>
+<li class="level2"><div class="li"> SN WCAZA3604878 13JAN2011 (replaced RMA drive)</div>
+</li>
+<li class="level2"><div class="li"> SN WCAVY6819200 05MAY2011 (replaced RMA drive from WD)</div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+<h4><a name="setup2" id="setup2">Setup</a></h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> Using fdisk -H 224 -S 56, make one partition on each drive.</div>
+</li>
+<li class="level1"><div class="li"> fdisk -lu /dev/sdf</div>
+</li>
+</ul>
+<pre class="code">Disk /dev/sdf: 2000.3 GB, 2000398934016 bytes
+224 heads, 56 sectors/track, 311465 cylinders, total 3907029168 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Disk identifier: 0x95d56811
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sdf1              56  3907016959  1953508452   83  Linux</pre>
+<ul>
+<li class="level1"><div class="li"> Run badblocks -b 4096 -s -v -w -c 1024 -t random on each partition.</div>
+</li>
+<li class="level1"><div class="li"> Using mvsas version 0.8.9: mdadm -C /dev/md_d0 /dev/sd[bcdef]1 -c 128 -n 5 -l 5</div>
+</li>
+<li class="level1"><div class="li"> cryptsetup -c aes-cbc-essiv:sha256 -s 128 -h sha256 &ndash;align-payload=1024 luksFormat /dev/md_d0</div>
+</li>
+<li class="level1"><div class="li"> cryptsetup luksOpen /dev/md_d0 r0</div>
+</li>
+<li class="level1"><div class="li"> pvcreate &ndash;metadatasize 506k /dev/mapper/r0 </div>
+</li>
+<li class="level1"><div class="li"> pvs /dev/mapper/r0 -o+pe_start</div>
+</li>
+</ul>
+<pre class="code">PV             VG   Fmt  Attr PSize PFree 1st PE 
+/dev/mapper/r0      lvm2 --   7.28T 7.28T 512.00K</pre>
+<ul>
+<li class="level1"><div class="li"> vgcreate -s 1g v0 /dev/mapper/r0</div>
+</li>
+<li class="level1"><div class="li"> /video</div>
+<ul>
+<li class="level2"><div class="li"> lvcreate -L 2t -n video v0</div>
+</li>
+<li class="level2"><div class="li"> mke2fs -t ext4 -i1048576 -m0 -E stride=32,stripe-width=128 /dev/mapper/v0-video</div>
+</li>
+<li class="level2"><div class="li"> mkdir /video</div>
+</li>
+<li class="level2"><div class="li"> mount -o noatime,nodiratime /dev/mapper/v0-video /video</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> /audio</div>
+<ul>
+<li class="level2"><div class="li"> lvcreate -L 500g -n audio v0</div>
+</li>
+<li class="level2"><div class="li"> mke2fs -t ext4 -i1048576 -m0 -E stride=32,stripe-width=128 /dev/mapper/v0-audio</div>
+</li>
+<li class="level2"><div class="li"> mkdir /audio</div>
+</li>
+<li class="level2"><div class="li"> mount -o noatime,nodiratime /dev/mapper/v0-audio /audio</div>
+</li>
+<li class="level2"><div class="li"> lvresize -L +200g /dev/v0/audio /dev/mapper/r0</div>
+</li>
+<li class="level2"><div class="li"> resize2fs /dev/v0/audio</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> /text</div>
+<ul>
+<li class="level2"><div class="li"> lvcreate -L 200g -n text v0</div>
+</li>
+<li class="level2"><div class="li"> mke2fs -t ext4 -i65536 -m0 -E stride=32,stripe-width=128 /dev/mapper/v0-text</div>
+</li>
+<li class="level2"><div class="li"> mkdir /text</div>
+</li>
+<li class="level2"><div class="li"> mount -o noatime,nodiratime /dev/mapper/v0-text /text</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> /playpen</div>
+<ul>
+<li class="level2"><div class="li"> lvcreate -L 400g -n playpen v0</div>
+</li>
+<li class="level2"><div class="li"> mke2fs -t ext4 -i65536 -m0 -E stride=32,stripe-width=128 /dev/mapper/v0-playpen</div>
+</li>
+<li class="level2"><div class="li"> mkdir /playpen</div>
+</li>
+<li class="level2"><div class="li"> mount -o noatime,nodiratime /dev/mapper/v0-playpen /playpen</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> /misc</div>
+<ul>
+<li class="level2"><div class="li"> lvcreate -L 300g -n misc v0</div>
+</li>
+<li class="level2"><div class="li"> mke2fs -t ext4 -i65536 -m0 -E stride=32,stripe-width=128 /dev/mapper/v0-misc</div>
+</li>
+<li class="level2"><div class="li"> mkdir /misc</div>
+</li>
+<li class="level2"><div class="li"> mount -o noatime,nodiratime /dev/mapper/v0-misc /misc</div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Drives" [3169-6033] -->
+<h3><a name="copy" id="copy">Copy</a></h3>
+<div class="level3">
+<pre class="code">rsync -Pavv lethe:/video/video /video
+rsync -Pavv lethe:/video/other /video
+rsync -Pavv --exclude &#039;text/&#039; lethe:/audio/ /audio
+rsync -Pavv lethe:/audio/text/ /text
+rsync -Pavv lethe:/playpen/ /playpen
+rsync -Pavv --exclude &#039;video/&#039; --exclude &#039;other/&#039; lethe:/video/ /misc</pre>
+
+</div>
+<!-- SECTION "Copy" [6034-] -->

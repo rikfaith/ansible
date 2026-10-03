@@ -1,0 +1,14 @@
+[[recipes: | Recipes]]\\
+[[garden: | Gardening]]\\
+[[linux: | Linux]]\\
+[[weather: | Weather]]\\
+[[dict: | Dictionary]]\\
+[[hw: | Halloween]]\\
+[[friends: | Friends]]\\
+[[notes: | Notes]]\\
+[[photos: | Photos]]\\
+[[private: | Non-public Pages]]\\
+\\
+[[wiki:syntax | Help with wiki syntax]]\\
+\\
+<html><a href="http://alephnull.com/weather"><b><font size="+1">Real Time Weather</font></b></a></html>

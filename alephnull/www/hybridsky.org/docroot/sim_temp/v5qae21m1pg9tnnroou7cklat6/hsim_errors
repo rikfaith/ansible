@@ -1,0 +1,4 @@
+Error: N2O Flux (1.5) is higher than threshold (0.8)
+Error: Core to Throat area ratio (1.8) less than threshold (2.0)
+Error: Injector pressure drop (51.5) less than 0.3 times chamber pressure (360.7)
+WARNING: Supply tank to flight tank pressure drop (7 psi) is less than 100 psi

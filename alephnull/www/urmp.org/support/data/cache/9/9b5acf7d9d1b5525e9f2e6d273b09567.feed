@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://urmp.org/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://urmp.org/feed.php">
+        <title>urmp: the ur music player download</title>
+        <description></description>
+        <link>http://urmp.org/</link>
+        <image rdf:resource="http://urmp.org/lib/tpl/urmp/images/favicon.ico" />
+       <dc:date>2020-11-27T18:57:04-05:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://urmp.org/download/start?rev=1246273345&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://urmp.org/lib/tpl/urmp/images/favicon.ico">
+        <title>urmp: the ur music player</title>
+        <link>http://urmp.org/</link>
+        <url>http://urmp.org/lib/tpl/urmp/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://urmp.org/download/start?rev=1246273345&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-06-29T07:02:25-05:00</dc:date>
+        <title>download:start</title>
+        <link>http://urmp.org/download/start?rev=1246273345&amp;do=diff</link>
+        <description>urmp is currently in beta testing and development is not yet feature complete.
+
+urmp opens all .mp3 files read-only and write only to files under ~/.urmp, or to the directoy specified using the -c or --config options.  However, this is untested software and should not be used except by beta testers.</description>
+    </item>
+</rdf:RDF>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="https://shared2-smtp3.our-ns.com/w/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://shared2-smtp3.our-ns.com/w/feed.php">
+        <title>alephnull.com linux</title>
+        <description></description>
+        <link>https://shared2-smtp3.our-ns.com/w/</link>
+        <image rdf:resource="https://shared2-smtp3.our-ns.com/w/lib/tpl/alephnull/images/favicon.ico" />
+       <dc:date>2024-02-16T04:20:34-0500</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://shared2-smtp3.our-ns.com/w/linux/axim?rev=1208628339&amp;do=diff"/>
+                <rdf:li rdf:resource="https://shared2-smtp3.our-ns.com/w/linux/evo?rev=1241050459&amp;do=diff"/>
+                <rdf:li rdf:resource="https://shared2-smtp3.our-ns.com/w/linux/perf?rev=1203254161&amp;do=diff"/>
+                <rdf:li rdf:resource="https://shared2-smtp3.our-ns.com/w/linux/serial?rev=1221404198&amp;do=diff"/>
+                <rdf:li rdf:resource="https://shared2-smtp3.our-ns.com/w/linux/start?rev=1245752483&amp;do=diff"/>
+                <rdf:li rdf:resource="https://shared2-smtp3.our-ns.com/w/linux/ur?rev=1241064020&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://shared2-smtp3.our-ns.com/w/lib/tpl/alephnull/images/favicon.ico">
+        <title>alephnull.com</title>
+        <link>https://shared2-smtp3.our-ns.com/w/</link>
+        <url>https://shared2-smtp3.our-ns.com/w/lib/tpl/alephnull/images/favicon.ico</url>
+    </image>
+    <item rdf:about="https://shared2-smtp3.our-ns.com/w/linux/axim?rev=1208628339&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-04-19T14:05:39-0500</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>linux:axim</title>
+        <link>https://shared2-smtp3.our-ns.com/w/linux/axim?rev=1208628339&amp;do=diff</link>
+        <description>The Dell Axim X5
+
+	*   Howto boot Linux.  This didn't work, but it appears outdated.  You put the initrd and the zImage on the DOS parition.  I got it to boot as far as the Tux, then it hung.
+	*  The guys on #opie suggests another  Howto boot Linux
+	*  The 40-pin connector  pinout.</description>
+    </item>
+    <item rdf:about="https://shared2-smtp3.our-ns.com/w/linux/evo?rev=1241050459&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-29T20:14:19-0500</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>linux:evo</title>
+        <link>https://shared2-smtp3.our-ns.com/w/linux/evo?rev=1241050459&amp;do=diff</link>
+        <description>Compaq Evo T30
+
+Introduction
+
+The  Compaq Evo T30 is a thin client.  One day, while shopping at  Weird Stuff, I happened to pick up several of these for a great price.  About half didn't boot, but I think this is because they don't have a plugin memory card.  My goal is to install Linux on them.</description>
+    </item>
+    <item rdf:about="https://shared2-smtp3.our-ns.com/w/linux/perf?rev=1203254161&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-02-17T08:16:01-0500</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>linux:perf</title>
+        <link>https://shared2-smtp3.our-ns.com/w/linux/perf?rev=1203254161&amp;do=diff</link>
+        <description>Linux Performance and Development Tools
+
+For now, see the old web page,  here</description>
+    </item>
+    <item rdf:about="https://shared2-smtp3.our-ns.com/w/linux/serial?rev=1221404198&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-09-14T10:56:38-0500</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>linux:serial</title>
+        <link>https://shared2-smtp3.our-ns.com/w/linux/serial?rev=1221404198&amp;do=diff</link>
+        <description>Cable Pinouts
+
+Ethernet
+
+The house ethernet standard is T568B:
+ RJ45 Pin  Color         Pair  1         White/orange  2  2         Orange        2  3         White/Green   3  4         Blue          1  5         White/Blue    1  6         Green</description>
+    </item>
+    <item rdf:about="https://shared2-smtp3.our-ns.com/w/linux/start?rev=1245752483&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-06-23T06:21:23-0500</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>linux:start</title>
+        <link>https://shared2-smtp3.our-ns.com/w/linux/start?rev=1245752483&amp;do=diff</link>
+        <description>Linux
+
+	*  Summary of my  Linux Work
+	*  C code for printing a symbolic stack  backtrace inside a program (i.e., at runtime)
+		*  Download  backtrace.c
+		*  See also HP's  libunwind
+
+	*   Linux Software Development and Performance Analysis Tools
+	*   The ur library
+	*   The Compaq Evo T30
+	*   The Dell Axim X5
+	*   Serial Cable Pinouts
+	*  Other Pinouts
+		*  &lt;http://www.allpinouts.com/&gt;
+		*  &lt;http://www.hardwarebook.info/&gt;
+		*  &lt;http://pinouts.ru/&gt;</description>
+    </item>
+    <item rdf:about="https://shared2-smtp3.our-ns.com/w/linux/ur?rev=1241064020&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-30T00:00:20-0500</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>linux:ur</title>
+        <link>https://shared2-smtp3.our-ns.com/w/linux/ur?rev=1241064020&amp;do=diff</link>
+        <description>The ur library
+
+The ur library of data structures and algorithms is now hosted at the web site for urmp: The Ur Music Player.
+
+Notes and Resources
+
+	*  BSD-licensed  SHA-2 implementation</description>
+    </item>
+</rdf:RDF>

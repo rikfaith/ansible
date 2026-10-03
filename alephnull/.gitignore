@@ -1,0 +1,26 @@
+# Heavy media: kept in the working tree on the build host, excluded from
+# git (GitHub file-size limits). See MANIFEST.txt (sha256/size/mtime for
+# every listed path) and RESTORE.md (how to re-materialize on a fresh clone).
+
+# Large content directories
+www/alephnull.com/docroot/redwoods/
+www/alephnull.com/docroot/rockets/
+www/alephnull.com/docroot/house/
+www/alephnull.com/docroot/gd/
+www/alephnull.com/docroot/mountains/
+www/hybridsky.org/docroot/20220326/
+www/pineview82.org/docroot/raw/
+www/pineview82.org/docroot/30th/
+www/pineview82.org/docroot/20th/
+
+# Individual files over 20 MB (full list with hashes in MANIFEST.txt)
+www/alephnull.com/support/d07.db
+www/alephnull.com/docroot/mountains.iso
+www/alephnull.com/docroot/hp2009/blue-cross.pdf
+www/alephnull.com/docroot/hpam/hpamdraft.zip
+www/alephnull.com/docroot/hpam/duke-packet.zip
+www/alephnull.com/docroot/tmp/The.Golden.Book.of.Chemistry.Experiments.pdf
+www/alephnull.com/docroot/rh/Routledge Press Ancient Cities, The Archaeology of Urban Life in the Ancient Near East and Egypt Greece and Rome 2nd (2011).pdf
+www/hillsboroughpeds.com/docroot/duke/duke-packet.zip
+www/hybridsky.org/docroot/MarkIII/MIIIdSN1T1.mov
+www/hybridsky.org/docroot/MarkIII/Movies/sn2f1 large.avi

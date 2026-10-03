@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://alephnull.com/w/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://alephnull.com/w/feed.php">
+        <title>alephnull.com linux</title>
+        <description></description>
+        <link>http://alephnull.com/w/</link>
+        <image rdf:resource="http://alephnull.com/w/lib/tpl/alephnull/images/favicon.ico" />
+       <dc:date>2020-12-12T15:58:15-05:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://alephnull.com/w/linux/axim?rev=1208628339&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/linux/evo?rev=1241050459&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/linux/perf?rev=1203254161&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/linux/serial?rev=1221404198&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/linux/start?rev=1245752483&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/linux/ur?rev=1241064020&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://alephnull.com/w/lib/tpl/alephnull/images/favicon.ico">
+        <title>alephnull.com</title>
+        <link>http://alephnull.com/w/</link>
+        <url>http://alephnull.com/w/lib/tpl/alephnull/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://alephnull.com/w/linux/axim?rev=1208628339&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-04-19T14:05:39-05:00</dc:date>
+        <title>linux:axim</title>
+        <link>http://alephnull.com/w/linux/axim?rev=1208628339&amp;do=diff</link>
+        <description>*   Howto boot Linux.  This didn't work, but it appears outdated.  You put the initrd and the zImage on the DOS parition.  I got it to boot as far as the Tux, then it hung.
+	*  The guys on #opie suggests another  Howto boot Linux
+	*  The 40-pin connector  pinout.</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/linux/evo?rev=1241050459&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-29T20:14:19-05:00</dc:date>
+        <title>linux:evo</title>
+        <link>http://alephnull.com/w/linux/evo?rev=1241050459&amp;do=diff</link>
+        <description>Introduction
+
+The  Compaq Evo T30 is a thin client.  One day, while shopping at  Weird Stuff, I happened to pick up several of these for a great price.  About half didn't boot, but I think this is because they don't have a plugin memory card.  My goal is to install Linux on them.</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/linux/perf?rev=1203254161&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-02-17T08:16:01-05:00</dc:date>
+        <title>linux:perf</title>
+        <link>http://alephnull.com/w/linux/perf?rev=1203254161&amp;do=diff</link>
+        <description>For now, see the old web page,  here</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/linux/serial?rev=1221404198&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-09-14T10:56:38-05:00</dc:date>
+        <title>linux:serial</title>
+        <link>http://alephnull.com/w/linux/serial?rev=1221404198&amp;do=diff</link>
+        <description>Ethernet
+
+The house ethernet standard is T568B:
+ RJ45 Pin  Color         Pair  1         White/orange  2  2         Orange        2  3         White/Green   3  4         Blue          1  5         White/Blue    1  6         Green         3  7         White/Brown   4  8         Brown         4 
+Serial
+
+NULL
+
+This mapping is the same for male and female connectors.</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/linux/start?rev=1245752483&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-06-23T06:21:23-05:00</dc:date>
+        <title>linux:start</title>
+        <link>http://alephnull.com/w/linux/start?rev=1245752483&amp;do=diff</link>
+        <description>*  Summary of my  Linux Work
+	*  C code for printing a symbolic stack  backtrace inside a program (i.e., at runtime)
+		*  Download  backtrace.c
+		*  See also HP's  libunwind
+
+	*   Linux Software Development and Performance Analysis Tools
+	*   The ur library
+	*   The Compaq Evo T30
+	*   The Dell Axim X5
+	*   Serial Cable Pinouts
+	*  Other Pinouts
+		*  &lt;http://www.allpinouts.com/&gt;
+		*  &lt;http://www.hardwarebook.info/&gt;
+		*  &lt;http://pinouts.ru/&gt;</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/linux/ur?rev=1241064020&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-30T00:00:20-05:00</dc:date>
+        <title>linux:ur</title>
+        <link>http://alephnull.com/w/linux/ur?rev=1241064020&amp;do=diff</link>
+        <description>The ur library of data structures and algorithms is now hosted at the web site for urmp: The Ur Music Player.
+
+Notes and Resources
+
+	*  BSD-licensed  SHA-2 implementation</description>
+    </item>
+</rdf:RDF>

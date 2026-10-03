@@ -1,0 +1,30 @@
+====== El's Chocolate Chip Cookies ======
+
+This is the closest recipe I've found that produces the same thick Toll House Cookies I remember as child.
+
+===== Ingredients =====
+
+  * 1/2 cup unsalted butter
+  * 1/2 cup brown sugar
+  * 1/4 cup granulated sugar
+  * 1 tsp vanilla
+  * 1 large egg, room temp
+  * 1 1/2 cup flour
+  * 1/2 tsp baking soda
+  * 1/2 tsp salt
+  * 1 cup chocolate chips (or 1/2 cup large chocolate chips; or 3/4 cup chopped walnuts and 1/4 cup chocolate chips)
+
+===== Preparation =====
+
+  * Preheat oven to 350°F
+  * Melt butter (not too hot)
+  * Combine sugars
+  * Add butter, vanilla, and egg to sugars
+  * Sift in flour with baking soda and salt mixed in
+  * Stir until flour *almost* disappeared and then stir in chocolate chips and/or walnuts
+  * Bake 11-12 minutes (only 10 minutes in convection oven)
+
+===== Original =====
+
+{{recipes:els-chocolate-chip-cookies-0001.png?360}}
+{{recipes:els-chocolate-chip-cookies-0002.png?360}}

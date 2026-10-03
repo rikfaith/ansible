@@ -1,0 +1,37 @@
+
+
+
+<h1><a name="home" id="home">home</a></h1>
+<div class="level1">
+
+<p>
+<a href="/w/_detail/private/m2n-vm.jpg?id=private%3Ahome" class="media" title="private:m2n-vm.jpg"><img src="/w/_media/private/m2n-vm.jpg" class="media" title="m2n-vm dvi" alt="m2n-vm dvi" /></a>
+</p>
+
+<p>
+* Setup of new <acronym title="Redundant Array of Inexpensive Disks">RAID</acronym>-1
+</p>
+<ul>
+<li class="level1"><div class="li"> badblocks -b 4096 -s -v -w -p 1 -t random</div>
+</li>
+<li class="level1"><div class="li"> fdisk -H 224 -S 56</div>
+</li>
+<li class="level1"><div class="li"> mdadm -C /dev/md_d1 /dev/sd[cd]1 -c 128 -n 2 -l 1</div>
+</li>
+<li class="level1"><div class="li"> cryptsetup -c aes-cbc-essiv:sha256 -s 128 -h sha256 &ndash;align-payload=256 luksFormat /dev/md_d1</div>
+</li>
+<li class="level1"><div class="li"> cryptsetup luksOpen /dev/md_d1 r1</div>
+</li>
+<li class="level1"><div class="li"> pvcreate &ndash;metadatasize 506k /dev/mapper/r1</div>
+</li>
+<li class="level1"><div class="li"> pvs /dev/mapper/r1 -o+pe_start</div>
+</li>
+<li class="level1"><div class="li"> vgcreate -s 1g v1 /dev/mapper/r1</div>
+</li>
+<li class="level1"><div class="li"> lvcreate -L 500g -n home v1</div>
+</li>
+<li class="level1"><div class="li"> mke2fs -t ext4 -m0 -E stride=32,stripe-width=128 /dev/mapper/v1-home</div>
+</li>
+</ul>
+
+</div>

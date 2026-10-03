@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="https://shared2-smtp3.our-ns.com/w/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://shared2-smtp3.our-ns.com/w/feed.php">
+        <title>alephnull.com photos</title>
+        <description></description>
+        <link>https://shared2-smtp3.our-ns.com/w/</link>
+        <image rdf:resource="https://shared2-smtp3.our-ns.com/w/lib/tpl/alephnull/images/favicon.ico" />
+       <dc:date>2024-02-16T04:20:38-0500</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://shared2-smtp3.our-ns.com/w/photos/start?rev=1254785552&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://shared2-smtp3.our-ns.com/w/lib/tpl/alephnull/images/favicon.ico">
+        <title>alephnull.com</title>
+        <link>https://shared2-smtp3.our-ns.com/w/</link>
+        <url>https://shared2-smtp3.our-ns.com/w/lib/tpl/alephnull/images/favicon.ico</url>
+    </image>
+    <item rdf:about="https://shared2-smtp3.our-ns.com/w/photos/start?rev=1254785552&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-10-05T19:32:32-0500</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>photos:start</title>
+        <link>https://shared2-smtp3.our-ns.com/w/photos/start?rev=1254785552&amp;do=diff</link>
+        <description>Photos
+
+Strawberry bush
+
+Along the trails at  Medoc Mountain, we were stuck by the Euonymus_americanus bush, with orange berries that apparently had burst from a strawberry-like structure.  These evergreen shrubs are in the Celastraceae family and very different from eatable stawberries (which are in the</description>
+    </item>
+</rdf:RDF>

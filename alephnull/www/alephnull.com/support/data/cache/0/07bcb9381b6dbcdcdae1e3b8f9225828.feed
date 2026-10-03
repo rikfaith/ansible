@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://alephnull.com/w/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://alephnull.com/w/feed.php">
+        <title>alephnull.com garden</title>
+        <description></description>
+        <link>http://alephnull.com/w/</link>
+        <image rdf:resource="http://alephnull.com/w/lib/images/favicon.ico" />
+       <dc:date>2008-08-06T13:26:35-04:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://alephnull.com/w/garden/garden?rev=1213528922"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/garden/orchard?rev=1210446966"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/garden/plantings?rev=1211822451"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/garden/sidebar?rev=1204514244"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/garden/start?rev=1203867025"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://alephnull.com/w/lib/images/favicon.ico">
+        <title>alephnull.com</title>
+        <link>http://alephnull.com/w/</link>
+        <url>http://alephnull.com/w/lib/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://alephnull.com/w/garden/garden?rev=1213528922">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-06-15T07:22:02-04:00</dc:date>
+        <title>garden:garden</title>
+        <link>http://alephnull.com/w/garden/garden?rev=1213528922</link>
+        <description>Raised Beds 2007: Bed 1, near garage, near house: Tomatoes Brandywine, (Seeds of Change). Grew well, many tomatoes initially, then with drought, had problems with decreased production and blossom end rot. Note:  leave more room for plants and stake them well.   Purple de Milpa Tomatillos, 2 plants, tomatillos were very small and were not used. Also needed more staking.</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/garden/orchard?rev=1210446966">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-05-10T15:16:06-04:00</dc:date>
+        <title>garden:orchard</title>
+        <link>http://alephnull.com/w/garden/orchard?rev=1210446966</link>
+        <description>04-07  planted Dwarf Patio Peach in contained round bed by garage, surrounded by mints. ( Peach: dwarf ornamental form with double pink flowers; fruit is red/gold with small white-fleshed freestone. Leaves are long slender brilliant reddish purple throughout the season. Deciduous. Useful as accent or container plant. Hardiness zone 5-9. grown by Holland Nursery, Franklin, VA 23851.  Bought at Harris teeter, Chapel Hill, $29.99.)</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/garden/plantings?rev=1211822451">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-05-26T13:20:51-04:00</dc:date>
+        <title>garden:plantings</title>
+        <link>http://alephnull.com/w/garden/plantings?rev=1211822451</link>
+        <description>3-13-08 Walkway edge by patio
+
+	*  Cilantro (coriander), Cooks Garden
+	*  Garlic Chives (Chinese Leeks), Seeds of Change
+	*  Viola Johnny-Jump-Up, Viola tricolor, Botanical Interests
+	*  Thymus serpyllum (mother of thyme), Park seed
+
+ 3-21-08 walkway edge on side far from house:  Strawberries red and yellow Wonder Alpine, John Scheepers Kitchen Garden Seeds</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/garden/sidebar?rev=1204514244">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-03-02T22:17:24-04:00</dc:date>
+        <title>garden:sidebar</title>
+        <link>http://alephnull.com/w/garden/sidebar?rev=1204514244</link>
+        <description>Garden
+  Orchard
+  Plantings</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/garden/start?rev=1203867025">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-02-24T10:30:25-04:00</dc:date>
+        <title>garden:start</title>
+        <link>http://alephnull.com/w/garden/start?rev=1203867025</link>
+        <description>*   Garden
+	*   Orchard
+	*   Plantings</description>
+    </item>
+</rdf:RDF>

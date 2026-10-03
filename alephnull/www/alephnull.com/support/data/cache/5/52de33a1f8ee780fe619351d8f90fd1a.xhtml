@@ -1,0 +1,155 @@
+
+<h1 class="sectionedit1"><a name="lethe" id="lethe">lethe</a></h1>
+<div class="level1">
+
+<p>
+<a href="/w/_detail/private/m4a785td-v.jpg?id=private%3Alethe" class="media" title="private:m4a785td-v.jpg"><img src="/w/_media/private/m4a785td-v.jpg" class="media" alt="" /></a>
+</p>
+
+</div>
+<!-- EDIT1 SECTION "lethe" [1-50] -->
+<h2 class="sectionedit2"><a name="disks" id="disks">Disks</a></h2>
+<div class="level2">
+
+<p>
+28 Jan 2015 Lower <acronym title="Redundant Array of Inexpensive Disks">RAID</acronym>
+* Z301XMN6 1F2168 Expiration 27-Nov-2016  
+* S300QHT5 1F2168 Expiration 26-Sep-2016 
+* Z301NRW5 1F2168 Expiration 19-Sep-2016  
+* Z302EP68 1F2168 Expiration 05-Feb-2017
+* Z302FD1A 1F2168 Expiration 05-Feb-2017  
+</p>
+
+<p>
+Upper <acronym title="Redundant Array of Inexpensive Disks">RAID</acronym>
+</p>
+<ul>
+<li class="level1"><div class="li"> Was 500GB Hitachi HDT725050VLA360 FEB-2007 5V 730mA, 12V 640mA</div>
+<ul>
+<li class="level2"><div class="li"> SN R40HWW9C Warrenty through 2010-03-17 (given away)</div>
+</li>
+<li class="level2"><div class="li"> SN R40HW14C (given away)</div>
+</li>
+<li class="level2"><div class="li"> SN R40HX9SC (given away)</div>
+</li>
+<li class="level2"><div class="li"> SN R40E5J6C (given away)</div>
+</li>
+<li class="level2"><div class="li"> SN R40H2SWC (dropped)</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> 9 October 2010: Hitachi PN 0F10311 Model HDS722020ALA330 5V 400mA, 12V 850mA JUL-2010 (warranty check via hitachigst.com)</div>
+<ul>
+<li class="level2"><div class="li"> SN YBKEVBAF Warranty through 2013-07-24</div>
+</li>
+<li class="level2"><div class="li"> SN YAKGZAMV Warranty through 2013-07-24</div>
+</li>
+<li class="level2"><div class="li"> SN YAKH1L5V Warranty through 2013-07-24</div>
+</li>
+<li class="level2"><div class="li"> SN YAKH2GXV Warranty through 2013-07-24</div>
+</li>
+<li class="level2"><div class="li"> SN YBKAYSGF Warranty through 2013-07-24</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> fdisk -H 224 -S 56</div>
+</li>
+<li class="level1"><div class="li"> badblocks -b 4096 -s -v -w -p 1 -t random </div>
+</li>
+<li class="level1"><div class="li"> mdadm -C /dev/md_d1 /dev/sd[bcdef]1 -c 128 -n 5 -l 5</div>
+</li>
+<li class="level1"><div class="li"> cryptsetup -c aes-cbc-essiv:sha256 -s 128 -h sha256 –align-payload=1024 luksFormat /dev/md_d1 (two dashes in align-payload)</div>
+</li>
+<li class="level1"><div class="li"> cryptsetup luksOpen /dev/md_d1 r1</div>
+</li>
+<li class="level1"><div class="li"> pvcreate –metadatasize 506k /dev/mapper/r1</div>
+</li>
+<li class="level1"><div class="li"> pvs /dev/mapper/r1 -o+pe_start</div>
+</li>
+<li class="level1"><div class="li"> vgcreate -s 1g v1 /dev/mapper/r1</div>
+</li>
+<li class="level1"><div class="li"> lvcreate -L 2.6t -n scratch v1</div>
+</li>
+<li class="level1"><div class="li"> mke2fs -t ext4 -i262144 -m0 -E stride=32,stripe-width=128 /dev/mapper/v1-scratch</div>
+</li>
+</ul>
+
+<p>
+Lower <acronym title="Redundant Array of Inexpensive Disks">RAID</acronym> (replaces 500GB Seagate):
+</p>
+<ul>
+<li class="level1"><div class="li"> Hitachi PN: H3D20003272S 0F10311 2TB 7200RPM Jan2010 5V 400mA 12V 850mA</div>
+<ul>
+<li class="level2"><div class="li"> SN: YAHHN3RT Warranty through 2013-02-01</div>
+</li>
+<li class="level2"><div class="li"> SN: YAHJ1KJT Warranty through 2013-02-06</div>
+</li>
+<li class="level2"><div class="li"> SN: YAHE2K9T Warranty through 2013-02-06</div>
+</li>
+<li class="level2"><div class="li"> SN: YAHH9W9T Warranty through 2013-02-06</div>
+</li>
+<li class="level2"><div class="li"> SN: YAHDJANT Warranty through 2013-02-06</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> fdisk -H 224 -S 56</div>
+</li>
+<li class="level1"><div class="li"> badblocks -b 4096 -s -v -w -p 1 -t random </div>
+</li>
+<li class="level1"><div class="li"> mdadm -C /dev/md_d1 /dev/sd[ghijk]1 -c 128 -n 5 -l 5</div>
+</li>
+<li class="level1"><div class="li"> cryptsetup -c aes-cbc-essiv:sha256 -s 128 -h sha256 –align-payload=1024 luksFormat /dev/md_d0</div>
+</li>
+<li class="level1"><div class="li"> cryptsetup luksOpen /dev/md_d0 r0</div>
+</li>
+<li class="level1"><div class="li"> pvcreate –metadatasize 506k /dev/mapper/r0</div>
+</li>
+<li class="level1"><div class="li"> pvs /dev/mapper/r0 -o+pe_start</div>
+</li>
+<li class="level1"><div class="li"> vgcreate -s 1g v0 /dev/mapper/r0</div>
+</li>
+<li class="level1"><div class="li"> lvcreate -L 2.6t -n p2 v0</div>
+</li>
+<li class="level1"><div class="li"> mke2fs -t ext4 -i262144 -m0 -E stride=32,stripe-width=128 /dev/mapper/v0-p2</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT2 SECTION "Disks" [51-2302] -->
+<h2 class="sectionedit3"><a name="package_setup" id="package_setup">Package Setup</a></h2>
+<div class="level2">
+<pre class="code">apt-get update
+apt-get upgrade
+apt-get dist-upgrade
+apt-get install lftp sysstat iotop curl bc cpufrequtils
+apt-get install nfs-common nfs-kernel-server
+apt-get install cryptsetup mdadm lvm2 smartmontools
+apt-get autoremove</pre>
+
+</div>
+<!-- EDIT3 SECTION "Package Setup" [2303-2568] -->
+<h2 class="sectionedit4"><a name="driver_setup" id="driver_setup">Driver Setup</a></h2>
+<div class="level2">
+<pre class="code">apt-get install build-essential autoconf automake libtool flex bison gdb
+apt-get build-dep linux
+apt-get build-dep --no-install-recommends linux-image-$(uname -r)
+apt-get install libncurses5 libncurses5-dev
+cd
+apt-get source linux-image-$(uname -r)
+cd linux-2.6.31
+? cp /boot/config-2.6.31-20-server .config
+? make oldconfig
+? make menuconfig
+cd drivers/scsi/mvsas
+patch -p1 &lt; ~/mvsas.diff2
+make -C /usr/src/linux-headers-`uname -r` M=`pwd`
+mv /lib/modules/$(uname -r)/kernel/drivers/scsi/mvsas/mvsas.ko /lib/modules/$(uname -r)/kernel/drivers/scsi/mvsas/mvsas_old.ko
+cp mvsas.ko /lib/modules/$(uname -r)/kernel/drivers/scsi/mvsas/mvsas.ko
+update-initramfs -u -k $(uname -r)</pre>
+
+</div>
+<!-- EDIT4 SECTION "Driver Setup" [2569-] -->

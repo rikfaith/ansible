@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="https://alephnull.com/w/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://alephnull.com/w/feed.php">
+        <title>alephnull.com (SELECT (CASE WHEN (9026=9121) THEN '' ELSE (SELECT 9121 UNION SELECT 2947) END))</title>
+        <description></description>
+        <link>https://alephnull.com/w/</link>
+        <image rdf:resource="https://alephnull.com/w/lib/tpl/alephnull/images/favicon.ico" />
+       <dc:date>2024-07-10T13:32:22-0400</dc:date>
+        <items>
+            <rdf:Seq>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://alephnull.com/w/lib/tpl/alephnull/images/favicon.ico">
+        <title>alephnull.com</title>
+        <link>https://alephnull.com/w/</link>
+        <url>https://alephnull.com/w/lib/tpl/alephnull/images/favicon.ico</url>
+    </image>
+</rdf:RDF>

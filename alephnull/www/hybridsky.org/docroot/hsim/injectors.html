@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Nitrous Hybrid Simulator -- Tank Geometry</title>
+<link href="../styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<table width="998">
+  <tr>
+    <td colspan="2"><a href="../index.html"><img src="../hybridsky.png" width="499" height="112" border="0" /></a></td>
+  </tr>
+  <tr>
+    <td colspan="2"><h3 align="center">HSIM -- An Open Source Simulator for Amateur Nitrous Hybrid Rocket Motors</h3>
+    <hr/>
+    </td>
+  </tr>
+  <tr>
+    <td height="64" colspan="2" class="ParameterName"><blockquote>
+        <h3>Injector  Parameters</h3>
+    </blockquote></td>
+  </tr>
+  <tr>
+    <td width="16">&nbsp;</td>
+    <td><table width="512" border="1" cellpadding="5" cellspacing="0">
+        <tr>
+          <td width="128" valign="top" class="ParameterName"><a name="InjectorDiameter" id="InjectorDiameter"></a>Injector Diameter </td>
+          <td><p class="Normal">Injectors are modeled as orifices of known diameter.</p>
+            <p class="Normal">If you are using a UC-valve hybrid then this is the inner diameter of the fill tube. </p></td>
+        </tr>
+        <tr>
+          <td valign="top" class="ParameterName"><a name="NumberOfInjectors" id="NumberOfInjectors"></a>Number of Injectors </td>
+          <td class="Normal"><p>How many injectors? All injectors are assumed to have the same diameter and Cd. </p></td>
+        </tr>
+        <tr>
+          <td valign="top" class="ParameterName"><a name="InjectorCd" id="InjectorCd"></a>Injector Cd </td>
+          <td class="Normal"><p>This parameter attempts to model how liquid nitrous flows through the injector. Unfortunately accurate modeling  the flow of saturated nitrous through a hot injector is beyond the scope of this simulator. The approximation of a constant Cd is used instead of a more accurate physical model. </p>
+            <p>I've seen recommendations for a value in the range 0.25 to 0.40 for UC valve injector Cd. Our injectors are small holes drilled in brass fittings and appear to have a measured Cd value of 0.7.</p>
+            <p>The value of this parameter will change as a function of the flight tank temperature. </p></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="https://alephnull.com/w/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://alephnull.com/w/feed.php">
+        <title>alephnull.com</title>
+        <description></description>
+        <link>https://alephnull.com/w/</link>
+        <image rdf:resource="https://alephnull.com/w/lib/tpl/alephnull/images/favicon.ico" />
+       <dc:date>2023-04-22T03:33:26-0400</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://alephnull.com/w/wiki/dokuwiki?rev=1182882435&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://alephnull.com/w/lib/tpl/alephnull/images/favicon.ico">
+        <title>alephnull.com</title>
+        <link>https://alephnull.com/w/</link>
+        <url>https://alephnull.com/w/lib/tpl/alephnull/images/favicon.ico</url>
+    </image>
+    <item rdf:about="https://alephnull.com/w/wiki/dokuwiki?rev=1182882435&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2007-06-26T14:27:15-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>wiki:dokuwiki</title>
+        <link>https://alephnull.com/w/wiki/dokuwiki?rev=1182882435&amp;do=diff</link>
+        <description>DokuWiki
+
+wiki:dokuwiki DokuWiki is a standards compliant, simple to use Wiki, mainly aimed at creating documentation of any kind. It is targeted at developer teams, workgroups and small companies. It has a simple but powerful syntax which makes sure the datafiles remain readable outside the Wiki and eases the creation of structured texts. All data is stored in plain text files</description>
+    </item>
+</rdf:RDF>

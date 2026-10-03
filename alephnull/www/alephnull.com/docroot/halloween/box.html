@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>Halloween 2005: The Ghost Box</title>
+  </head>
+
+  <body>
+    <h1>Halloween 2005: The Ghost Box</h1>
+    <h3>The Ghost Box</h3>
+    <p>
+      The ghost box is an old trunk with chains containing an entity
+      that is trying to get out.
+    </p>
+    <p>
+    </p>
+    <hr>
+      <h3>Notes</h3>
+      <p>
+        The left hand DIP socket is wired as follows, with connections
+        to the right hand DIP socket (RHD):
+        <ul>
+          <li>Pin 1: Fogger.  Left 5V relay switching RHD 1 and RHD 2.</li>
+          <li>Pin 2: In fan.  Upper right transistor supplying 12V to RHD 5
+          (-) and RHD 6 (+).  Replaced 10K resistor with 5.6K resistor
+          (see pin 3).</li>
+          <li>Pin 3: Out fan.  Lower right transistor supplying 12V to RHD 3
+          (+) and RHD 4 (-).  This had trouble switching from the 5V TTL
+          output line, so the 10K resistor on the base was replaced with
+          a 5.6K.  At 5V, this is < 1mA of current.</li>
+          <li>Pin 4: Lights. Middle 5V relay supplying 12V to high
+          voltage relay via RHD 7 and RHD 8.  High voltage relay
+          switches 120V hot lead on white outlet.</li>
+          <li>Pin 5</li>
+          <li>Pin 6: Lid. Right 5V relay supplying 12V to high current
+          relay via RHD 9 and RHD 10.  High current relay switches 4A 5V
+          supply (terminal strip pins 9 (+5V) and 10 (-)) to <a
+          href="http://www.allelectronics.com/cgi-bin/category.cgi?category=search&item=DLA-2&type=store">door-lock
+          actuator</a>, which draws about 2.5A at 5V, via terminal strip
+          pins 7 (-) and 8 (+).  Cheaper than a solenoid with sufficient
+          power to raise the lid -- but can it last all night?</li>
+          <li>Pin 6:</li>
+          <li>Pin 8: +5V supply</li>
+          <li>Pin 9: 12V ground to timer box</li>
+          <li>Pin 10: +12V supply to timer box</li>
+          <li>Pin 11:</li>
+          <li>Pin 12: 5V sound activation signal from timer box to voice
+          box</li>
+          <li>Pin 13: 12V ground from timer box to voice box</li>
+          <li>Pin 14: +12V supply from timer box to voice box</li>
+        </ul>
+      </p>
+      <p>
+        Right hand DIP and terminal strip:
+        <ul>
+          <li>Pin 1: to <a href="fogger.html">fogger</a></li>
+          <li>Pin 2: to <a href="fogger.html">fogger</a></li>
+          <li>Pin 3: Exhaust fan (upper) (+).</li>
+          <li>Pin 4: Exhaust fan (upper) (-).</li>
+          <li>Pin 5: Intake fan (lower) (-).</li>
+          <li>Pin 6: Intake fan (lower) (+).</li>
+          <li>Pin 11: 12V ground from <a
+          href="http://jameco.com/webapp/wcs/stores/servlet/ProductDisplay?langId=-1&storeId=10001&catalogId=10001&productId=190650&searchValue=sw300">AULT GVP #SW300</a> (black wire on 4 pin connector)</li>
+          <li>Pin 12: +12V 1A from <a
+          href="http://jameco.com/webapp/wcs/stores/servlet/ProductDisplay?langId=-1&storeId=10001&catalogId=10001&productId=190650&searchValue=sw300">AULT GVP #SW300</a> (red wire on 4 pin connector)</li>
+        </ul>
+      </p>
+      <p>
+        Right hand DIP:
+        <ul>
+          <li>Pin 7: High voltage relay coil (+, switched from middle 5V
+          relay).</li>
+          <li>Pin 8: High voltage relay coil (-).</li>
+          <li>Pin 9: High current relay coil (+, switched from right 5V
+          relay).</li> 
+          <li>Pin 10: High current relay coil.</li>
+        </ul>
+      </p>
+      <p>
+        Terminal strip:
+        <ul>
+          <li>Pin 7: Lid (-).</li>
+          <li>Pin 8: Lid (+).</li>
+          <li>Pin 9: +5V 4A from <a
+          href="http://jameco.com/webapp/wcs/stores/servlet/ProductDisplay?langId=-1&storeId=10001&catalogId=10001&productId=190650&searchValue=sw300">AULT GVP #SW300</a> (orange wire on 4 pin connector)</li>
+          <li>Pin 10: 5V ground from <a
+          href="http://jameco.com/webapp/wcs/stores/servlet/ProductDisplay?langId=-1&storeId=10001&catalogId=10001&productId=190650&searchValue=sw300">AULT GVP #SW300</a> (brown wire on 4 pin connector)</li>
+        </ul>
+        The motor generated enough noise to activate one of the 555
+        timers.  I added a 0.1uF capacitor close to the motor and
+        twisted the power leads to the motor.  This resolved the issue.
+      </p>
+
+      <p>
+        Relays and transistors that switch relays are protected using a diode, as shown
+        below: <br><img src="relay.png">
+      </p>
+
+
+  </body>
+</html>

@@ -1,0 +1,2870 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="https://www.alephnull.org/w/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://www.alephnull.org/w/feed.php">
+        <title>alephnull.com recipes</title>
+        <description></description>
+        <link>https://www.alephnull.org/w/</link>
+        <image rdf:resource="https://www.alephnull.org/w/lib/tpl/alephnull/images/favicon.ico" />
+       <dc:date>2026-08-30T11:25:24-0400</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/almond_crescent_cookies?rev=1670945929&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/baked_potato_soup?rev=1676832891&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/beef_mushroom_barley_soup?rev=1644420284&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/beefy_mushroom_barley_soup?rev=1607802014&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/beet_salad_with_feta?rev=1607803448&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/bell_pepper_fettuccine?rev=1282484739&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/best_low-carb_coleslaw?rev=1605745239&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/bisquick_substitute?rev=1599346828&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/black_beans_and_rice?rev=1236715267&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/bon_appetit_veggie_burger?rev=1646232213&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/braised_chard_with_gnochi?rev=1687395085&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/breakfast_spinach_and_gruyere_casserole?rev=1703183345&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/broccoli_and_cauliflower_gratin?rev=1645101264&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/broccoli_cheddar_soup?rev=1643747432&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/broccoli_salad_with_olives?rev=1637458391&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/broccoli_with_asian_garlic_sauce?rev=1521305396&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/brownies?rev=1239890630&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/butter_lettuce_with_nuts_sherry_vinaigrette?rev=1434474312&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/caramelized_zucchini_pasta?rev=1631056790&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/carrot_cake?rev=1680915253&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/cauliflower_pasta?rev=1685901202&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/chapel_hill_toffee_pecan_pie?rev=1667490742&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/cherry-pecan_brie?rev=1551474986&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/cherry_almond_cake?rev=1688665592&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/chess_pie?rev=1682025873&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/chia_seed_pumpkin_pudding?rev=1701025842&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/chicken_and_wild_rice_soup?rev=1652276312&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/chicken_with_tarragon?rev=1262912178&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/chili?rev=1605883659&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/chilli?rev=1205104683&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/chinese_brown_sauce?rev=1641268703&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/chocolate_chip_cookies?rev=1730553156&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/chocolate_peanut_butter_cake?rev=1620488428&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/christmas_stollen?rev=1639688645&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/cinnamon_rolls?rev=1641607106&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/classic_blueberry_pie?rev=1620489118&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/classic_spanish_lentil_stew?rev=1677355823&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/classic_sweet_potato_casserole?rev=1434057348&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/coconut_cream_pie?rev=1641268563&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/cold_noodle_salad_with_spicy_peanut_sauce?rev=1717343620&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/collard_greens_in_olive_oil_slow-cooked?rev=1614443127&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/coquilles_st_jacques?rev=1614865664&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/corn_and_zucchini_fritters?rev=1659036399&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/cornell_triple_rich_formula_for_bread?rev=1588123877&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/crab_cakes?rev=1239638841&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/crab_spinach_quiche?rev=1646616076&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/cranberry_orange_muffins?rev=1647732719&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/cranberry_sauce_with_orange?rev=1637458521&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/cream_cheese_frosting?rev=1644463349&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/daddychicken?rev=1205111031&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/deviled_eggs?rev=1605823750&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/earl_grey_cookies?rev=1644704744&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/einkorn_chocolate_chip_cookies?rev=1730553350&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/el_s_chocolate_chip_cookies?rev=1730552819&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/fanouropita?rev=1688137584&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/farro_with_mushrooms?rev=1633637056&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/fettuccine_al_barese?rev=1329701412&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/flaherty_s_maple_pecan_scones?rev=1329699636&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/flan?rev=1262359485&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/fresh_arugula_salad_dressing?rev=1641268416&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/gado_gado?rev=1625791090&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/garbanzo_cauliflower_coconut_curry?rev=1677529010&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/goat_cheese_pasta_salad?rev=1497913187&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/grandma_moog_s_gingersnap_cookies?rev=1646062413&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/granola?rev=1644875082&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/greens_and_chicken_with_peanuts?rev=1243466744&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/habas_verdes_con_queso_lima_bean_dip?rev=1589408582&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/herbs?rev=1205104822&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/honeycakes?rev=1691770776&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/hungarian_mushroom_soup?rev=1687463108&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/italian_pesto_chicken_salad?rev=1518035307&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/jamaican_sweet_potato_pudding?rev=1640910152&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/katherine_hepburn_s_brownies?rev=1341260681&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/khichdi?rev=1637872120&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/kimchi_grilled_cheese_sandwich?rev=1684520843&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/kuku_paka_chicken_with_coconut?rev=1629229698&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/lambburgers?rev=1205703880&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/lima_beans_with_ham_hock?rev=1649082547&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/macaroni_and_cheese?rev=1546818153&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/magic_cookie_bars?rev=1262359847&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/malai_garbanzo_curry?rev=1677529110&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/maryland_crab_cakes?rev=1271008025&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/meatloaf?rev=1259275306&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/mediterranean_lentil_salad?rev=1519341864&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/merlin_s_magic_sourdough_bread?rev=1589293831&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/minty_garlic_potatoes?rev=1416264481&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/miso_salmon?rev=1643381436&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/mozzarella_with_charred_radicchio_and_salsa_verde?rev=1614655623&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/mushroom_bourguignon?rev=1633636671&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/naan_bread?rev=1643746576&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/new-style_old-fashioned_chocolate_pudding?rev=1620835947&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/no-knead_crusty_white_bread?rev=1644245231&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/not_deep-fried_fish?rev=1614531740&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/one-pan_coconut_milk-braised_chicken?rev=1613009149&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/oyster_mushroom_pasta?rev=1644247832&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/pan-charred_asparagus?rev=1637457674&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/pan-charred_green_beans_with_tarragon?rev=1637457939&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/pan_fried_tofu?rev=1645638288&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/pancakes?rev=1240009454&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/peach_and_blueberry_crisp?rev=1434055957&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/peanut_butter_ramen?rev=1710035287&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/pearl_millet_porridge_bajra_khichdi?rev=1638837111&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/penne_with_greens_olives_and_feta?rev=1328386711&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/pinto_beans_and_ham?rev=1643410771&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/platanos_maduros?rev=1642637099&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/pumpkin_pie?rev=1240929093&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/red_beans_and_rice_congri_tampa_style?rev=1676678533&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/rigatoni_al_forno?rev=1614656127&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/ritz-carlton_blueberry_muffins?rev=1685720911&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/roasted_cauliflower_and_farro?rev=1638472479&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/roasted_cauliflower_gratin_with_goat_cheese?rev=1614289108&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/roasted_cauliflower_with_olives?rev=1593626771&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/roasted_red_bell_pepper_and_bean_soup?rev=1434056465&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/rolled_flank_steak?rev=1635862004&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/russian_dressing?rev=1647723463&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/saffron_orzo?rev=1262995222&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/salmon_marinades?rev=1499275186&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/scottish_oatcakes?rev=1434056845&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/selena_s_stir_fry?rev=1278183407&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/shakshuka?rev=1677202376&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/sharkuaska?rev=1676897822&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/sheet_pan_bibimbap?rev=1687465483&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/sheet_pan_fried_rice?rev=1679148552&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/sizzling_szechuan_chicken?rev=1442573595&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/sliced_sirloin_with_shallots_and_chive_sauce?rev=1416264192&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/slow-cooker_cauliflower_potato_and_white_bean_soup?rev=1641227410&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/slow_cooker_chinese_beef_and_bok_choy?rev=1434058012&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/slow_cooker_pulled_chicken?rev=1720646114&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/smoky_pinto_beans_with_bacon?rev=1700535124&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/southern_black-eyed_peas?rev=1588127683&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/spagetti_sauce?rev=1537577994&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/spinach_and_goat_cheese_quiche?rev=1646855856&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/split_pea_soup_with_horseradish_cream?rev=1680971330&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/start?rev=1734279959&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/sticky_ginger_toffee_bread?rev=1711401770&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/stir_fry_shrimp_with_basil?rev=1256409385&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/strawberry_farro_salad?rev=1690659300&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/stuffed_mushrooms?rev=1637071367&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/stuffed_zucchini_squash?rev=1593646161&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/sunken_berry_almond_cake?rev=1734280192&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/thai_curry_chicken?rev=1626877414&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/thai_shrimp_curry?rev=1718811304&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/tiramisu?rev=1632971668&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/tossed_greens_and_grapes_salad?rev=1551475266&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/turkey_pot_pie?rev=1262563907&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/tzatziki_sauce?rev=1643747036&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/upside_down_peach_cobbler?rev=1691023037&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/vegan_bulgogi?rev=1620489381&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/verzada?rev=1236783234&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/walnut_picadillo?rev=1701552513&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/white_bean_soup?rev=1240929679&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/wilted_spinach_salad?rev=1595172366&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/recipes/zucchini_lasagna?rev=1641269477&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://www.alephnull.org/w/lib/tpl/alephnull/images/favicon.ico">
+        <title>alephnull.com</title>
+        <link>https://www.alephnull.org/w/</link>
+        <url>https://www.alephnull.org/w/lib/tpl/alephnull/images/favicon.ico</url>
+    </image>
+    <item rdf:about="https://www.alephnull.org/w/recipes/almond_crescent_cookies?rev=1670945929&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-12-13T10:38:49-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:almond_crescent_cookies</title>
+        <link>https://www.alephnull.org/w/recipes/almond_crescent_cookies?rev=1670945929&amp;do=diff</link>
+        <description>Almond Crescent Cookies (Christmas Cookies)- Rosemary Molloy
+(Makes about 40 cookies). 
+
+Ingredients
+
+	*  1 cup butter, softened
+	*  3/4 cup sugar
+	*  1 pinch salt (if you use unsalted butter, use 1/4 teaspoon salt)
+	*  3/4 cup finely chopped fresh almonds(or walnuts or pecans)</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/baked_potato_soup?rev=1676832891&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-02-19T13:54:51-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:baked_potato_soup</title>
+        <link>https://www.alephnull.org/w/recipes/baked_potato_soup?rev=1676832891&amp;do=diff</link>
+        <description>Baked Potato Soup, By Ali Slagle
+
+If we’re being honest, a baked potato isn’t really about the potato. It’s about the toppings: plush sour cream, butter, cheese, salty bacon, bright scallions. This soup version doesn’t skimp on those extras: The potatoes simmer in milk with garlic and scallions until just tender, then they join sour cream and Cheddar in the pot before the toppings — including potato skins — are added. It’s potatoey, creamy and adaptable. Make it smooth or textured, skip the baco…</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/beef_mushroom_barley_soup?rev=1644420284&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-02-09T10:24:44-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:beef_mushroom_barley_soup</title>
+        <link>https://www.alephnull.org/w/recipes/beef_mushroom_barley_soup?rev=1644420284&amp;do=diff</link>
+        <description>Beef Mushroom Barley Soup
+(from: Penzey's Spices)
+
+Ingredients
+
+	*  1-1 1/2 lb beef chuck, cut into 1 inch cubes
+	*  2 tablespoons olive oil
+	*  3 medium onions, chopped
+	*  16 oz fresh mushrooms, sliced
+	*  3 carrots, sliced
+	*  1/2 cup pearl barley</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/beefy_mushroom_barley_soup?rev=1607802014&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-12-12T14:40:14-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:beefy_mushroom_barley_soup</title>
+        <link>https://www.alephnull.org/w/recipes/beefy_mushroom_barley_soup?rev=1607802014&amp;do=diff</link>
+        <description>Beefy Mushroom Barley Soup
+from: Penzey's Spices
+
+Ingredients:
+
+	*  1 lb lean beef chuck (beef stew meat), cut into 1 inch cubes
+	*  2 tablespoons olive oil
+	*  3 medium or 2 large onions, coarsely chopped
+	*  10 oz fresh mushrooms, sliced
+	*  3 large carrots, sliced</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/beet_salad_with_feta?rev=1607803448&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-12-12T15:04:08-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:beet_salad_with_feta</title>
+        <link>https://www.alephnull.org/w/recipes/beet_salad_with_feta?rev=1607803448&amp;do=diff</link>
+        <description>Beet salad with Feta, from William Sonoma's “Mediterranean Cooking”,1997; recipes by Joyce Goldstein.
+
+Ingredients:
+
+	*  4 large or 8 small beets
+	*  1/2 cup extra-virgin olive oil
+	*  3 tablespoons red wine vinegar (or 1.4 cup fresh lemon juice)</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/bell_pepper_fettuccine?rev=1282484739&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-08-22T09:45:39-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:bell_pepper_fettuccine</title>
+        <link>https://www.alephnull.org/w/recipes/bell_pepper_fettuccine?rev=1282484739&amp;do=diff</link>
+        <description>Bell Pepper Fettuccine “Confetti Fettuccine”, from Elaine Tait, Knight-Ridder Newspapers (Tampa Tribune?)
+
+	*  1/4 cup olive oil
+	*  1 large chicken breast, skinned, boned, cut into thin strips
+	*  1 large onion, coarsely chopped, or in rings if preferred</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/best_low-carb_coleslaw?rev=1605745239&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-11-18T19:20:39-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:best_low-carb_coleslaw</title>
+        <link>https://www.alephnull.org/w/recipes/best_low-carb_coleslaw?rev=1605745239&amp;do=diff</link>
+        <description>Best Low-carb Coleslaw (Food.com)
+
+	*  16 ounces shredded cabbage (about 1 small to medium cabbage)
+	*  1 small onion, thinly sliced
+	*  1/4 cup Splenda
+	*  1/2 teaspoon salt
+	*  1/2 teaspoon fresh ground black pepper
+	*  1/2 cup mayonnaise
+	*  1/2 cup whipping cream OR half-and-half OR buttermilk OR plain kefir</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/bisquick_substitute?rev=1599346828&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-09-05T19:00:28-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:bisquick_substitute</title>
+        <link>https://www.alephnull.org/w/recipes/bisquick_substitute?rev=1599346828&amp;do=diff</link>
+        <description>Bisquick® Substitute
+Yield: 1 cup
+
+INGREDIENTS
+1 cup all-purpose flour
+1 ½ teaspoons baking powder
+¼ teaspoon salt
+1 tablespoon butter
+
+Step 1
+Sift flour into a bowl; add baking powder and salt and whisk until fully incorporated. Cut butter into flour mixture using a pastry cutter until evenly combined.
+Shortening or oil can be used in place of the butter, if desired. If using melted butter, be sure to evenly disperse the butter as much as possible.</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/black_beans_and_rice?rev=1236715267&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-03-10T16:01:07-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:black_beans_and_rice</title>
+        <link>https://www.alephnull.org/w/recipes/black_beans_and_rice?rev=1236715267&amp;do=diff</link>
+        <description>Black Beans and Rice
+ from “A Taste of Old Cuba”, by Maria Josefa LLuria de O'Higgins.
+
+8 Servings
+
+Ingredients: 
+1. For cooking the beans:
+
+	*  1 pound dry black beans
+	*  2.5 quarts water
+	*  1 green bell pepper, cored, seeded and cut into strips</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/bon_appetit_veggie_burger?rev=1646232213&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-03-02T09:43:33-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:bon_appetit_veggie_burger</title>
+        <link>https://www.alephnull.org/w/recipes/bon_appetit_veggie_burger?rev=1646232213&amp;do=diff</link>
+        <description>Bon Appétit Veggie Burger
+
+Ingredients
+
+	*  ¼ cup pearl barley
+	*  Kosher salt
+	*  1 pound shiitake mushrooms, stemmed
+	*  2 tablespoons olive oil, divided
+	*  Freshly ground black pepper
+	*  1 14.5-ounce can black beans, drained
+	*  1 medium onion, finely chopped</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/braised_chard_with_gnochi?rev=1687395085&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-06-21T20:51:25-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:braised_chard_with_gnochi</title>
+        <link>https://www.alephnull.org/w/recipes/braised_chard_with_gnochi?rev=1687395085&amp;do=diff</link>
+        <description>One-Pot Braised Chard With Gnocchi, Peas and Leeks
+By Melissa Clark
+
+Read community notes
+Adding a package of prepared potato gnocchi to a pot of braised greens turns a side dish into a vibrant one-pot meal fit for weeknights. The chard stems, leeks and peas are nubby and colorful next to the pillowy gnocchi, while a combination of butter and white wine makes the sauce rich and tangy. For extra creaminess, serve this with dollops of fresh ricotta stirred in at the last minute. Or skip the ricott…</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/breakfast_spinach_and_gruyere_casserole?rev=1703183345&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-12-21T13:29:05-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:breakfast_spinach_and_gruyere_casserole</title>
+        <link>https://www.alephnull.org/w/recipes/breakfast_spinach_and_gruyere_casserole?rev=1703183345&amp;do=diff</link>
+        <description>Spinach and Gruyère Breakfast Casserole
+By Melissa Clark
+Updated Dec. 19, 2023
+
+Total Time
+1 hour 50 minutes, plus at least 8 hours chilling and 10 minutes resting
+Prep Time
+10 minutes
+Cook Time
+1 hour 40 minutes, plus at least 8 hours chilling and 10 minutes resting</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/broccoli_and_cauliflower_gratin?rev=1645101264&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-02-17T07:34:24-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:broccoli_and_cauliflower_gratin</title>
+        <link>https://www.alephnull.org/w/recipes/broccoli_and_cauliflower_gratin?rev=1645101264&amp;do=diff</link>
+        <description>Broccoli and Cauliflower Gratin
+
+Ingredients
+
+	*  4 tbsp. (1/2 stick) unsalted butter, plus more for pan
+	*  1 medium head cauliflower (about 2 pounds), cored and sliced 1/4-inch thick
+	*  1 large head broccoli (about 1 1/2 pounds), trimmed and sliced 1/4-inch thick</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/broccoli_cheddar_soup?rev=1643747432&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-02-01T15:30:32-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:broccoli_cheddar_soup</title>
+        <link>https://www.alephnull.org/w/recipes/broccoli_cheddar_soup?rev=1643747432&amp;do=diff</link>
+        <description>Broccoli cheddar soup 
+
+Yield: 6 servings 
+I made this for my QVS house of 6 people and doubled the recipe, we had some leftovers but definitely not 6 servings worth of leftovers. 
+
+Total time: 30-50 minutes 
+
+Ingredients:
+
+	*  1/4 cup butter
+	*  1/2 medium chopped onion</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/broccoli_salad_with_olives?rev=1637458391&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-11-20T20:33:11-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:broccoli_salad_with_olives</title>
+        <link>https://www.alephnull.org/w/recipes/broccoli_salad_with_olives?rev=1637458391&amp;do=diff</link>
+        <description>Broccoli Salad with Olives
+(Atkins)
+
+Ingredients
+
+	*  2 medium scallions or green onions, chopped
+	*  3 cups broccoli flowerets
+	*  1/2 teaspoon garlic, chopped
+	*  2 Tablespoons white wine vinegar
+	*  1 Tablespoon capers, drained
+	*  1/2 teaspoon salt</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/broccoli_with_asian_garlic_sauce?rev=1521305396&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2018-03-17T12:49:56-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:broccoli_with_asian_garlic_sauce</title>
+        <link>https://www.alephnull.org/w/recipes/broccoli_with_asian_garlic_sauce?rev=1521305396&amp;do=diff</link>
+        <description>Broccoli with Asian Garlic Sauce
+
+Serves 4 as side serving
+
+Ingredients
+
+	*  4 cups broccoli florets and peeled stem slices
+		*  3 garlic cloves, minced
+		*  2 tablespoons sesame oil
+		*  2 tablespoons soy sauce
+		*  1/2 cup vegetable or chicken broth</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/brownies?rev=1239890630&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-16T10:03:50-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:brownies</title>
+        <link>https://www.alephnull.org/w/recipes/brownies?rev=1239890630&amp;do=diff</link>
+        <description>Katherine Hepburn's Brownies
+
+Temp:325 degrees
+
+Ingredients:
+
+	*  2 squares unsweetened chocolate
+	*  1/4 pound butter
+	*  1 cup granulated sugar
+	*  2 eggs
+	*  1/2 teaspoon vanilla extract
+	*  1/4 cup flour
+	*  1 cup walnuts, chopped
+	*  1/4 teaspoon</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/butter_lettuce_with_nuts_sherry_vinaigrette?rev=1434474312&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-06-16T13:05:12-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:butter_lettuce_with_nuts_sherry_vinaigrette</title>
+        <link>https://www.alephnull.org/w/recipes/butter_lettuce_with_nuts_sherry_vinaigrette?rev=1434474312&amp;do=diff</link>
+        <description>Butter Lettuce with nuts, bacon, cheese, egg and sherry vinaigrette
+
+LAtimes.com 10-19-2011
+
+Ingredients:
+
+	*  2 tablespoons minced shallots
+	*  2 tablespoons Spanish sherry vinegar
+	*  1 1/2 teaspoons lemon juice
+	*  1/2 teaspoon salt
+	*  1/4 teaspoon freshly ground black pepper</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/caramelized_zucchini_pasta?rev=1631056790&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-09-07T19:19:50-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:caramelized_zucchini_pasta</title>
+        <link>https://www.alephnull.org/w/recipes/caramelized_zucchini_pasta?rev=1631056790&amp;do=diff</link>
+        <description>Caramelized Zucchini Pasta
+By Ali Slagle
+
+YIELD:4 servings
+
+TIME:50 minutes
+
+Bryan Gardner for The New York Times
+
+INGREDIENTS
+
+	*  2 tablespoons unsalted butter
+	*  2 tablespoons extra-virgin olive oil
+	*  2 pounds zucchini, coarsely grated (about 3 large zucchini)</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/carrot_cake?rev=1680915253&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-04-07T20:54:13-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:carrot_cake</title>
+        <link>https://www.alephnull.org/w/recipes/carrot_cake?rev=1680915253&amp;do=diff</link>
+        <description>Carrot Cake (NYT Recipes)
+By Dorie Greenspan
+
+1 hour 30 minutes, plus at least 15 minutes' refrigeration
+Yield: 8 to 12 servings
+
+INGREDIENTS
+For the Cake
+
+	*  2 cups all-purpose flour
+	*  2 teaspoons baking powder
+	*  2 teaspoons baking soda
+	*  2 teaspoons ground cinnamon</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/cauliflower_pasta?rev=1685901202&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-06-04T13:53:22-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:cauliflower_pasta</title>
+        <link>https://www.alephnull.org/w/recipes/cauliflower_pasta?rev=1685901202&amp;do=diff</link>
+        <description>Cauliflower Pasta With Anchovies and Bread Crumbs (Pasta alla Paolina con cavolfiore)
+By Anna Francese Gass
+The New York Times. 
+
+This simple pasta, named Pasta alla Paolina con cavolfiore, from Palermo, Italy, layers flavor upon flavor: It begins with oil-packed anchovies melted in a hot pan, then combines them with tomato sauce and a blend of cinnamon and cloves, pantry staples in Sicilian cuisine. It’s finished with a crunchy, almond-studded bread crumb mixture that comes together while the p…</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/chapel_hill_toffee_pecan_pie?rev=1667490742&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-11-03T11:52:22-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:chapel_hill_toffee_pecan_pie</title>
+        <link>https://www.alephnull.org/w/recipes/chapel_hill_toffee_pecan_pie?rev=1667490742&amp;do=diff</link>
+        <description>Chapel Hill Toffee Pecan Pie
+
+
+Ingredients
+
+	*  1 5-ounce box of Chapel Hill Toffee, divided
+	*  1 cup chopped pecans
+	*  3 eggs
+	*  1 teaspoon vanilla extract
+	*  1 cup light corn syrup
+	*  2 tablespoons melted butter
+	*  ¾ cup sugar
+	*  Pinch of salt</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/cherry-pecan_brie?rev=1551474986&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2019-03-01T16:16:26-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:cherry-pecan_brie</title>
+        <link>https://www.alephnull.org/w/recipes/cherry-pecan_brie?rev=1551474986&amp;do=diff</link>
+        <description>Cherry-Pecan Baked Brie
+
+	*  1/3 cup cherry preserves
+	*  1 tablespoon balsamic vinegar
+	*  1/8 teaspoon black pepper, ground
+	*  1/8 teaspoon salt
+	*  16 ounce round Brie cheese
+	*  1/3 to 1/2 cup chopped pecans
+
+	*  Remove top layer from the brie.</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/cherry_almond_cake?rev=1688665592&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-07-06T13:46:32-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:cherry_almond_cake</title>
+        <link>https://www.alephnull.org/w/recipes/cherry_almond_cake?rev=1688665592&amp;do=diff</link>
+        <description>Cherry Almond Cake
+
+By Samantha Seneviratne
+The New York Times. 
+
+Read community notes
+Using frozen fruit is a great way to bring some summer sunshine to your baking all year round. It’s dependably sweet, delicious and usually affordable. Frozen fruit does tend to let off a lot juice, so it’s a good idea to thaw it first and let some of the liquid drain before adding it in. If you don’t have time to thaw your fruit, you can still bake this cake, but the fruit will sink to the bottom. Cherry and …</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/chess_pie?rev=1682025873&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-04-20T17:24:33-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:chess_pie</title>
+        <link>https://www.alephnull.org/w/recipes/chess_pie?rev=1682025873&amp;do=diff</link>
+        <description>Chess Pie
+By Yewande Komolafe
+Chess Pie
+Kelly Marshall for The New York Times. Food Stylist: Roscoe Betsill. Prop Stylist: Getteline Rene.
+
+With a sparkling bright lemon flavor, this classic Southern buttermilk chess pie filling is poured into a shortbread crust with hints of spice from freshly ground black pepper. The coarse cornmeal gives the beautiful custardy filling the slightest bit of texture once baked. Consider the baking time below as a guide: The pie is done when it jiggles slowly whe…</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/chia_seed_pumpkin_pudding?rev=1701025842&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-11-26T14:10:42-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:chia_seed_pumpkin_pudding</title>
+        <link>https://www.alephnull.org/w/recipes/chia_seed_pumpkin_pudding?rev=1701025842&amp;do=diff</link>
+        <description>Pumpkin Spice Chia Seed Pudding, from Mountain Rose Herbs
+Makes about 1 1/2 cups.
+
+Ingredients
+
+	*  1 cup organic oat milk or milk choice
+	*  2 Tbsp. (or to taste) organic agave or maple syrup
+	*  3 Tbsp. organic pumpkin Puree
+	*  1/2 tsp. organic pumpkin pie spice</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/chicken_and_wild_rice_soup?rev=1652276312&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-05-11T09:38:32-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:chicken_and_wild_rice_soup</title>
+        <link>https://www.alephnull.org/w/recipes/chicken_and_wild_rice_soup?rev=1652276312&amp;do=diff</link>
+        <description>Chicken and Wild Rice Soup
+
+(From Nestle's Carnation evaporated milk can)
+
+Ingredients:
+
+	*  1 box (6 ounces) long grain and wild rice mix, prepared according to package instructions
+	*  1 Tablespoon olive oil
+	*  8 ounces boneless, skinless chicken breast, cut into bite-size pieces</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/chicken_with_tarragon?rev=1262912178&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-01-07T19:56:18-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:chicken_with_tarragon</title>
+        <link>https://www.alephnull.org/w/recipes/chicken_with_tarragon?rev=1262912178&amp;do=diff</link>
+        <description>Chicken with Tarragon (Poulet a l'estragon) 
+from 60 minute gourmet
+
+	*  2 to 3 lb chicken in pieces, or legs and thighs
+	*  salt and pepper
+	*  1 tablespoon butter or olive oil
+	*  2 tablespoon finely chopped shallots, or 1 teaspoon dried onion
+	*  2 teaspoon finely chopped fresh tarragon, or 1 teaspoon dried tarragon</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/chili?rev=1605883659&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-11-20T09:47:39-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:chili</title>
+        <link>https://www.alephnull.org/w/recipes/chili?rev=1605883659&amp;do=diff</link>
+        <description>Chili
+
+These recipes are all based on Rik's Mom's Chili recipe.
+
+Original
+
+
+
+	*  1/2 pound, ground chuck
+	*  chopped onion
+	*  8oz tomato sauce
+	*  1 can tomato soup
+	*  15oz red kidney beans
+	*  1 tsp flour
+	*  2-3 tsp chili powder
+	*  1 tsp brown sugar</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/chilli?rev=1205104683&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-03-09T19:18:03-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:chilli</title>
+        <link>https://www.alephnull.org/w/recipes/chilli?rev=1205104683&amp;do=diff</link>
+        <description>Chili
+
+These recipes are all based on Rik's Mom's Chili recipe.
+
+Original
+
+
+
+	*  1/2 pound, ground chuck
+	*  chopped onion
+	*  8oz tomato sauce
+	*  1 can tomato soup
+	*  15oz red kidney beans
+	*  1 tsp flour
+	*  2-3 tsp chili powder
+	*  1 tsp brown sugar</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/chinese_brown_sauce?rev=1641268703&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-01-03T22:58:23-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:chinese_brown_sauce</title>
+        <link>https://www.alephnull.org/w/recipes/chinese_brown_sauce?rev=1641268703&amp;do=diff</link>
+        <description>Chinese brown sauce
+
+	*  3 parts soy sauce
+	*  2 parts Chinese cooking wine / rice wine vinegar
+	*  2 parts hoisin (optional)
+	*  1 part honey
+	*  1 part sesame oil
+	*  4-6 parts chicken stock / vegetable stock
+	*  1 part corn starch
+	*  1 part gochujang or chili oil (optional)</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/chocolate_chip_cookies?rev=1730553156&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2024-11-02T09:12:36-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:chocolate_chip_cookies</title>
+        <link>https://www.alephnull.org/w/recipes/chocolate_chip_cookies?rev=1730553156&amp;do=diff</link>
+        <description>Chocolate Chip Cookies (Reconstructed)
+
+When I was a kid, we used to make Toll House Cookies, but with a variation of the recipe that was then on the back of each package of Toll House chocolate chips.  I was never able to find that recipe, but this is a close reconstruction.</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/chocolate_peanut_butter_cake?rev=1620488428&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-05-08T11:40:28-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:chocolate_peanut_butter_cake</title>
+        <link>https://www.alephnull.org/w/recipes/chocolate_peanut_butter_cake?rev=1620488428&amp;do=diff</link>
+        <description>Chocolate Peanut Butter Cake
+(Epicurious)
+
+YIELDMakes 16 servings
+
+INGREDIENTS
+
+Chocolate cake:
+
+	*  Nonstick vegetable oil spray
+	*  1 1/4 cups all-purpose flour
+	*  1 cup sugar
+	*  3/4 cup natural unsweetened cocoa powder
+	*  1 1/2 teaspoons kosher salt</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/christmas_stollen?rev=1639688645&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-12-16T16:04:05-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:christmas_stollen</title>
+        <link>https://www.alephnull.org/w/recipes/christmas_stollen?rev=1639688645&amp;do=diff</link>
+        <description>Christmas Stollen, (from Bon Appetit, 12-20-2012)
+
+ Hot Bread Kitchen Head Baker Ben Hershberger's Stollen
+Makes 2 loaves
+
+INGREDIENTS
+
+FRUIT MIX (Make three days ahead of time)
+
+1 cup raisins
+1/2 cup dried cherries
+1/4 cup candied lemon peel
+1/4 cup candied orange peel
+1 teaspoon vanilla extract
+1/2 cup Meyers Rum
+1/2 cup brandy
+Enough hot water to cover mixture</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/cinnamon_rolls?rev=1641607106&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-01-07T20:58:26-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:cinnamon_rolls</title>
+        <link>https://www.alephnull.org/w/recipes/cinnamon_rolls?rev=1641607106&amp;do=diff</link>
+        <description>Cinnamon Rolls
+
+by (Mama's friend from Burdine's department store, 1983 or 1984)
+
+Oven: 350 degrees
+
+Ingredients:
+
+	*  1 package dry yeast (or 1 tablespoon loose yeast)
+	*  1/4 cup warm water and a sprinkle of sugar
+	*  1 cup milk, scalded
+	*  1/4 cup butter, softened</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/classic_blueberry_pie?rev=1620489118&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-05-08T11:51:58-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:classic_blueberry_pie</title>
+        <link>https://www.alephnull.org/w/recipes/classic_blueberry_pie?rev=1620489118&amp;do=diff</link>
+        <description>Classic Blueberry Pie 
+(Betty Crocker.com)
+
+Ingredients
+
+Pastry
+
+	*  2 cups all-purpose flour
+	*  1 teaspoon salt
+	*  2/3 cup shortening (cold butter or margarine)
+	*  4 to 6 tablespoons cold water
+
+Filling
+
+	*  3/4 cup sugar
+	*  1/2 cup Gold Medal™ all-purpose flour</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/classic_spanish_lentil_stew?rev=1677355823&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-02-25T15:10:23-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:classic_spanish_lentil_stew</title>
+        <link>https://www.alephnull.org/w/recipes/classic_spanish_lentil_stew?rev=1677355823&amp;do=diff</link>
+        <description>Classic Spanish Lentil Stew
+
+ Prep Time 10 minutes
+ Cook Time 45 minutes
+ Servings 4
+ Calories 348 kcal
+
+ Author Albert Bevia @ Spain on a Fork
+
+Ingredients
+
+	*  Tbsp extra virgin olive oil 30 ml
+	*  1/2 onion finely diced
+	*  1/2 green bell pepper finely chopped</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/classic_sweet_potato_casserole?rev=1434057348&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-06-11T17:15:48-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:classic_sweet_potato_casserole</title>
+        <link>https://www.alephnull.org/w/recipes/classic_sweet_potato_casserole?rev=1434057348&amp;do=diff</link>
+        <description>Classic Sweet Potato Casserole (Thanksgiving)
+
+Southern Living December 2009
+
+Ingredients:
+
+	*  4 1/2 pounds sweet potatoes
+	*  1 cup granulated sugar
+	*  1/2 cup butter,softened
+	*  1/4 cup milk
+	*  2 large eggs
+	*  1 teaspoon vanilla extract
+	*  1/4 teaspoon salt</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/coconut_cream_pie?rev=1641268563&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-01-03T22:56:03-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:coconut_cream_pie</title>
+        <link>https://www.alephnull.org/w/recipes/coconut_cream_pie?rev=1641268563&amp;do=diff</link>
+        <description>Coconut cream pie!
+
+Pie crust:
+
+	*  1 cup very cold butter cut into small cubes
+	*  2 ½ cups flour
+	*  ½ tsp salt
+	*  1/4 cup to 1/3 ice water, Only enough to make a dough form.
+
+Coconut cream filling
+
+	*  3 cups whole milk
+	*  1/3 cup flour
+	*  2/3 cup sugar</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/cold_noodle_salad_with_spicy_peanut_sauce?rev=1717343620&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2024-06-02T11:53:40-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:cold_noodle_salad_with_spicy_peanut_sauce</title>
+        <link>https://www.alephnull.org/w/recipes/cold_noodle_salad_with_spicy_peanut_sauce?rev=1717343620&amp;do=diff</link>
+        <description>Cold Noodle Salad With Spicy Peanut Sauce
+
+By Hetty Lui McKinnon
+
+Soba, Japanese buckwheat noodles, are ideal for salads because they taste particularly great when served cold. Crunchy vegetables are highlighted here, adding lots of crisp, fresh texture. Substitute with any raw vegetables you have on hand, such as cabbage, carrot, fennel, asparagus, broccoli or cauliflower. The spicy peanut sauce is very adaptable: If you don’t want to use peanut butter, you can use any nut or seed butter, like …</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/collard_greens_in_olive_oil_slow-cooked?rev=1614443127&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-02-27T11:25:27-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:collard_greens_in_olive_oil_slow-cooked</title>
+        <link>https://www.alephnull.org/w/recipes/collard_greens_in_olive_oil_slow-cooked?rev=1614443127&amp;do=diff</link>
+        <description>Slow-cooked Collard Greens in Olive Oil 
+by Claire Saffitz (Epicurious, from Bon Appetit, November 2017)
+
+YIELD:4 servings
+
+INGREDIENTS
+
+	*  1/2 cup extra-virgin olive oil, plus more for drizzling
+	*  8 garlic cloves, thinly sliced
+	*  1/2 teaspoon crushed red pepper flakes</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/coquilles_st_jacques?rev=1614865664&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-03-04T08:47:44-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:coquilles_st_jacques</title>
+        <link>https://www.alephnull.org/w/recipes/coquilles_st_jacques?rev=1614865664&amp;do=diff</link>
+        <description>Coquilles St Jacques
+
+To serve 2:
+
+	*  1 cup sliced mushrooms
+
+	* 2 tablespoons finely chopped shallot or green onion
+	* 3 tablespoons butter
+	* 1 pound scallops
+	* 1/2 cup dry white wine
+	* 1 tablespoon lemon juice
+	* 1/8 teaspoon dried crushed thyme</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/corn_and_zucchini_fritters?rev=1659036399&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-07-28T15:26:39-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:corn_and_zucchini_fritters</title>
+        <link>https://www.alephnull.org/w/recipes/corn_and_zucchini_fritters?rev=1659036399&amp;do=diff</link>
+        <description>Corn and Zucchini Fritters
+
+Recipe by: Betty Rosbottom
+
+Ingredients:
+
+	*  2 small zucchini(about 1/2 pound), cleaned but unpeeled, ends trimmed and discarded
+	*  2 teaspoons salt, divided
+	*  1 cup fresh corn kernels (scraped form 2 to 3 ears od corn)</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/cornell_triple_rich_formula_for_bread?rev=1588123877&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-04-28T21:31:17-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:cornell_triple_rich_formula_for_bread</title>
+        <link>https://www.alephnull.org/w/recipes/cornell_triple_rich_formula_for_bread?rev=1588123877&amp;do=diff</link>
+        <description>Cornell triple-Rich Formula for bread supplementation
+(to increase nutrient value of bread)
+
+Ingredients:
+
+	*  1 tablespoon soy flour
+	*  1 tablespoon nonfat dry milk
+	*  1 teaspoon raw wheat germ
+
+Place these ingredients in the bottom of the measuring cup before adding flour. Then add flour to make one cup.</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/crab_cakes?rev=1239638841&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-13T12:07:21-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:crab_cakes</title>
+        <link>https://www.alephnull.org/w/recipes/crab_cakes?rev=1239638841&amp;do=diff</link>
+        <description>Maryland Crab Cakes, recipe from Whole Foods
+
+Serves 4
+
+Ingredients:
+
+	*  1 pound jumbo lump crabmeat
+	*  2/3 cup dry plain breadcrumbs
+	*  2 teaspoons Old Bay seasoning or other seafood seasoning
+	*  1/3 cup finely diced red pepper (optional)
+	*  1/4 cup  finely sliced scallion</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/crab_spinach_quiche?rev=1646616076&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-03-06T20:21:16-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:crab_spinach_quiche</title>
+        <link>https://www.alephnull.org/w/recipes/crab_spinach_quiche?rev=1646616076&amp;do=diff</link>
+        <description>Crab and Spinach Quiche
+
+Ingredients:
+
+	*  1/2 package pie crust mix (or your own pie crust recipe)
+	*  1 package (10 ounces) frozen chopped spinach
+	*  2 eggs, lightly beaten
+	*  8 ounces plain yogurt
+	*  1 tablespoon flour
+	*  1/4 teaspoon salt
+	*</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/cranberry_orange_muffins?rev=1647732719&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-03-19T19:31:59-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:cranberry_orange_muffins</title>
+        <link>https://www.alephnull.org/w/recipes/cranberry_orange_muffins?rev=1647732719&amp;do=diff</link>
+        <description>Cranberry Orange Muffins
+by: Burt Wolf
+
+Ingredients:
+
+	*  2 cups flour (can substitute 1/2 cup with oat flour)
+	*  1 1/2 teaspoons baking powder
+	*  1/2 teaspoon baking soda
+	*  2/3 to 1 cup sugar
+	*  1 teaspoon grated orange peel
+	*  1/4 teaspoon salt</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/cranberry_sauce_with_orange?rev=1637458521&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-11-20T20:35:21-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:cranberry_sauce_with_orange</title>
+        <link>https://www.alephnull.org/w/recipes/cranberry_sauce_with_orange?rev=1637458521&amp;do=diff</link>
+        <description>Cranberry Sauce with Orange
+
+(Bon Appetit, November 1997, pg. 164.)
+
+Ingredients:
+
+	*  3/4 cup water
+	*  1/2 cup packed golden brown sugar
+	*  1 12 ounce package cranberries, about 3 cups
+	*  2 teaspoons grated orange peel, or 2/3 teaspoons dried orange peel</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/cream_cheese_frosting?rev=1644463349&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-02-09T22:22:29-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:cream_cheese_frosting</title>
+        <link>https://www.alephnull.org/w/recipes/cream_cheese_frosting?rev=1644463349&amp;do=diff</link>
+        <description>Cream cheese frosting
+Makes about 3 cups
+
+Ingredients
+
+	*  12oz full fat cream cheese, softened
+	*  6 Tbsp unsalted butter, softened
+	*  4 tsp sour cream
+	*  1 tsp vanilla extract
+	*  1/4 tsp salt
+	*  1 3/4 cups (7oz) confectioners' sugar
+
+Food processor method:</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/daddychicken?rev=1205111031&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-03-09T21:03:51-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:daddychicken</title>
+        <link>https://www.alephnull.org/w/recipes/daddychicken?rev=1205111031&amp;do=diff</link>
+        <description>Daddy Chicken
+
+	*  Preheat oven to 360°F
+	*  Obtain 4 whole chicken legs, cut in half
+	*  Place legs and thighs in pan, removing excess skin where possible
+	*  Drizzle olive oil over chicken
+	*  Cover first side of chicken with salt, pepper,  Fines Herbes, and basil (resist all temptation to add additional herbs)</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/deviled_eggs?rev=1605823750&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-11-19T17:09:10-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:deviled_eggs</title>
+        <link>https://www.alephnull.org/w/recipes/deviled_eggs?rev=1605823750&amp;do=diff</link>
+        <description>Deviled eggs, variations.
+
+1.Cover 1 dozen eggs with water and bring to a boil. Turn to low and let sit for 15 minutes. Turn off heat, let sit for 10 minutes, then drain water.
+2. Peel eggs, cut in half lengthwise and remove all yolks.
+3. Add yolks to bowl along with 1/4 cup mayonnaise.</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/earl_grey_cookies?rev=1644704744&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-02-12T17:25:44-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:earl_grey_cookies</title>
+        <link>https://www.alephnull.org/w/recipes/earl_grey_cookies?rev=1644704744&amp;do=diff</link>
+        <description>Earl Grey Sablés
+
+Ingredients
+
+	*  2 tablespoons Earl Grey tea leaves
+	*  2 cups all-purpose flour
+	*  16 tablespoons unsalted butter, room temperature
+	*  3/4 cup cane sugar, divided
+	*  1/4 cup powdered sugar
+	*  3/4 teaspoon sea salt
+	*  2 egg yolks, room temperature</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/einkorn_chocolate_chip_cookies?rev=1730553350&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2024-11-02T09:15:50-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:einkorn_chocolate_chip_cookies</title>
+        <link>https://www.alephnull.org/w/recipes/einkorn_chocolate_chip_cookies?rev=1730553350&amp;do=diff</link>
+        <description>Einkorn Chocolate Chip Cookies
+
+From Live Simply
+
+Ingredients
+
+	*  8 TB (= 1 stick) unsalted butter, room temp
+	*  1/2 cup brown sugar, packed
+	*  1/4 cup granulated sugar
+	*  2 eggs
+	*  1 1/2 tsp vanilla extract
+	*  2 1/2 cups einkorn flour
+	*  1 tsp salt
+	*  1/2 tsp baking soda</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/el_s_chocolate_chip_cookies?rev=1730552819&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2024-11-02T09:06:59-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:el_s_chocolate_chip_cookies</title>
+        <link>https://www.alephnull.org/w/recipes/el_s_chocolate_chip_cookies?rev=1730552819&amp;do=diff</link>
+        <description>El's Chocolate Chip Cookies
+
+This is the closest recipe I've found that produces the same thick Toll House Cookies I remember as child.
+
+Ingredients
+
+	*  1/2 cup unsalted butter
+	*  1/2 cup brown sugar
+	*  1/4 cup granulated sugar
+	*  1 tsp vanilla
+	*</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/fanouropita?rev=1688137584&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-06-30T11:06:24-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:fanouropita</title>
+        <link>https://www.alephnull.org/w/recipes/fanouropita?rev=1688137584&amp;do=diff</link>
+        <description>Fanouropita
+
+Ingredients
+
+	*  1 3/4 cup (210g) flour
+	*  1/2 teaspoon baking soda
+	*  1 1/2 teaspoon baking powder
+	*  1/4 teaspoon salt
+	*  1 teaspoon cinnamon
+	*  1/4 teaspoon cloves
+	*  1/2 cup (99g) neutral oil
+	*  1/2 cup (113g) water
+	*  1/2 cup (113g) orange juice</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/farro_with_mushrooms?rev=1633637056&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-10-07T16:04:16-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:farro_with_mushrooms</title>
+        <link>https://www.alephnull.org/w/recipes/farro_with_mushrooms?rev=1633637056&amp;do=diff</link>
+        <description>Farro with Mushrooms By: Martha Rose Shulman (NYT)
+
+YIELD: 6 servings
+
+Farro is chewier than Italian rice and doesn’t release starch when it’s cooked, so there’s no need to stir it the way you’d stir a risotto. This hearty dish has a rich, earthy flavor. Although it takes about twice as long as a risotto to cook, it doesn’t require tending.</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/fettuccine_al_barese?rev=1329701412&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2012-02-19T20:30:12-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:fettuccine_al_barese</title>
+        <link>https://www.alephnull.org/w/recipes/fettuccine_al_barese?rev=1329701412&amp;do=diff</link>
+        <description>Fettuccine al Barese
+from: The Mediterranean Kitchen (Joyce Goldstein)
+
+	*  3/4 pound medium shrimp, shelled and deveined
+	*  freshly ground pepper
+	*  1/4 cup(or less) olive oil
+	*  4 teaspoons finely minced garlic
+	*  1 teaspoon (or to taste) red pepper flakes</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/flaherty_s_maple_pecan_scones?rev=1329699636&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2012-02-19T20:00:36-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:flaherty_s_maple_pecan_scones</title>
+        <link>https://www.alephnull.org/w/recipes/flaherty_s_maple_pecan_scones?rev=1329699636&amp;do=diff</link>
+        <description>Flaherty's Maple Pecan Scones
+
+ from: Sheila Lukin's “USA Cookbook”
+
+Oven: 425 degrees
+
+Ingredients:
+* 3 1/2 cups all purpose or white whole wheat flour
+* 4 teaspoons baking powder
+* 1 teaspoon salt
+* 2/3 cup butter
+* 1 cup plus 1 tablespoon milk
+* 1/2 cup maple syrup</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/flan?rev=1262359485&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-01-01T10:24:45-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:flan</title>
+        <link>https://www.alephnull.org/w/recipes/flan?rev=1262359485&amp;do=diff</link>
+        <description>Flan
+
+Oven 350 degrees
+
+	*  6 eggs
+	*  2 cups milk
+	*  1 teaspoon vanilla extract
+	*  1.5 cups sugar
+
+	*  Caramelize half cup sugar in nonstick skillet, stirring constantly. When melted, pour into the bottom of a Pyrex dish.
+		*  Beat 6 eggs, or mix in blender. Add milk, vanilla and 1 cup sugar. Beat thoroughly; pour into dish on top of caramelized sugar.</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/fresh_arugula_salad_dressing?rev=1641268416&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-01-03T22:53:36-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:fresh_arugula_salad_dressing</title>
+        <link>https://www.alephnull.org/w/recipes/fresh_arugula_salad_dressing?rev=1641268416&amp;do=diff</link>
+        <description>Arugula salad dressing
+
+	*  Fresh lemon juice
+	*  Olive oil
+	*  Minced Garlic
+	*  Finely grated parmesan
+	*  Fresh pepper
+	*  Salt
+
+Whisk together lemon, oil, and garlic. Add parmesan and mix. Add salt and pepper to taste and mix. Serve!
+Make salad with arugula, sliced cherry tomatoes, and avocado.</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/gado_gado?rev=1625791090&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-07-08T20:38:10-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:gado_gado</title>
+        <link>https://www.alephnull.org/w/recipes/gado_gado?rev=1625791090&amp;do=diff</link>
+        <description>Gado-Gado
+
+By Hetty McKinnon (in NYT) 7-8-21
+YIELD6 to 8 servings
+TIME45 minutes
+
+Gado-gado is a beloved dish across Indonesia. Each region has a different spin: In Jakarta, it is a “double-carb” dish, featuring both potato and lontong (rice cakes). In West Java, it is known as lotek atah or karedok and served with raw vegetables. At the heart of any gado-gado is the spicy peanut sauce: Some versions call for tamarind, lime, terasi (shrimp paste) or coconut milk. Others use peanut butter instead…</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/garbanzo_cauliflower_coconut_curry?rev=1677529010&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-02-27T15:16:50-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:garbanzo_cauliflower_coconut_curry</title>
+        <link>https://www.alephnull.org/w/recipes/garbanzo_cauliflower_coconut_curry?rev=1677529010&amp;do=diff</link>
+        <description>Chickpea, cauliflower and coconut curry
+This curry is even nicer reheated and served the next day.
+
+Prep 15 min
+Cook 30 min
+Serves 4
+
+2 tbsp neutral oil
+1 tsp cumin seeds
+1 onion, peeled and finely chopped
+5cm piece fresh ginger, peeled and grated
+2 garlic cloves, peeled and grated
+1 heaped tsp ground cumin
+1 heaped tsp ground coriander
+½ tsp ground turmeric
+1 tsp crushed chillies
+1 tsp sea salt flakes
+1 x 400g tin coconut milk
+1 cauliflower, cut into small florets
+1 x 400g tin chickpeas, draine…</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/goat_cheese_pasta_salad?rev=1497913187&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-06-19T18:59:47-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:goat_cheese_pasta_salad</title>
+        <link>https://www.alephnull.org/w/recipes/goat_cheese_pasta_salad?rev=1497913187&amp;do=diff</link>
+        <description>Ingredients
+
+	*  8 ounces fusilli pasta
+	*  8 tablespoons olive oil
+	*  4 tablespoons Sherry wine vinegar
+	*  2 tablespoons balsalmic or red wine vinegar
+	*  4 plum tomatoes (seeded, chopped, chilled)
+	*  2 green onions (sliced very thin, chilled)
+	*</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/grandma_moog_s_gingersnap_cookies?rev=1646062413&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-02-28T10:33:33-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:grandma_moog_s_gingersnap_cookies</title>
+        <link>https://www.alephnull.org/w/recipes/grandma_moog_s_gingersnap_cookies?rev=1646062413&amp;do=diff</link>
+        <description>Grandma Moog's Gingersnap Cookies
+from: Penzey's Spices
+
+Ingredients
+
+	*  2 Cups flour
+	*  2 tsp. baking soda
+	*  1/4 tsp. salt
+	*  3/4 Cup butter (or vegetable shortening)
+	*  1 Cup sugar
+	*  1 large egg
+	*  1/4 Cup molasses
+	*  1 tsp. GINGER, powdered</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/granola?rev=1644875082&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-02-14T16:44:42-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:granola</title>
+        <link>https://www.alephnull.org/w/recipes/granola?rev=1644875082&amp;do=diff</link>
+        <description>Granola! From Pro Home Cooks on YouTube (&lt;https://www.youtube.com/watch?v=xAIerfe3m8U&gt;)
+
+	*  3C rolled oats
+	*  2C shaved coconut
+	*  1/4C sliced almonts
+	*  1/8C chia seeds
+	*  1/8C quinoa 
+	*  1/2C coconut oil or butter
+	*  1/2C honey or agave or maple syrup or brown sugar
+	*  A few pinches of salt for flavor contrast</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/greens_and_chicken_with_peanuts?rev=1243466744&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-05-27T19:25:44-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:greens_and_chicken_with_peanuts</title>
+        <link>https://www.alephnull.org/w/recipes/greens_and_chicken_with_peanuts?rev=1243466744&amp;do=diff</link>
+        <description>Stir-fried Greens and Chicken with Peanuts
+
+Bon Appetit, April 2008
+
+Ingredients:
+
+	*  2 to 3 tablespoons soy sauce, divided
+	*  2 tablespoons dry sherry, divided
+	*  3 teaspoons sesame oil, divided
+	*  2 teaspoons brown sugar, divided
+	*  1 1/2 pounds skinless boneless chicken breast, cut crosswise into thin strips</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/habas_verdes_con_queso_lima_bean_dip?rev=1589408582&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-05-13T18:23:02-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:habas_verdes_con_queso_lima_bean_dip</title>
+        <link>https://www.alephnull.org/w/recipes/habas_verdes_con_queso_lima_bean_dip?rev=1589408582&amp;do=diff</link>
+        <description>Habas Verdes con Queso (Lima Bean Dip)
+from New Recipes from Moosewood Restaurant
+
+Ingredients
+
+	*  6 cups cooked lima beans
+	*  8 ounces cream cheese
+	*  2 tablespoons vegetable oil 
+	*  2 cups chopped onions
+	*  2 large garlic cloves, minced
+	*  2 or 3 bell peppers(red or green), chopped</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/herbs?rev=1205104822&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-03-09T19:20:22-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:herbs</title>
+        <link>https://www.alephnull.org/w/recipes/herbs?rev=1205104822&amp;do=diff</link>
+        <description>Herbs
+
+Basil
+
+California Sweet Basil from  Penzeys Spices.
+
+Chipotle
+
+Ground Red Chipotle from  Penzeys Spices.
+
+Fines Herbes
+
+From  Penzeys Spices, containing chervil, parsley, tarragon, and chives.
+
+Southwest Seasoning
+
+From  Penzeys Spices, containing salt, several kinds ofpepper, garlic, oregano, cumin, chipotle, and cilantro.</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/honeycakes?rev=1691770776&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-08-11T12:19:36-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:honeycakes</title>
+        <link>https://www.alephnull.org/w/recipes/honeycakes?rev=1691770776&amp;do=diff</link>
+        <description>Honeycakes (Banini cakes)
+
+(From Aleksa, August 2023)
+
+	*  150g (5.2oz) of butter
+	*  150g (5.2oz) of sugar 
+	*  1 egg
+	*  4 spoons of milk
+	*  4 spoons of honey
+	*  1 teaspoon baking soda
+	*  cinnamon, per taste
+	*  flour, if needed
+
+Mix all ingredients and form a batter. Make shapes with cookie cutters. Bake at 350F until done.</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/hungarian_mushroom_soup?rev=1687463108&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-06-22T15:45:08-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:hungarian_mushroom_soup</title>
+        <link>https://www.alephnull.org/w/recipes/hungarian_mushroom_soup?rev=1687463108&amp;do=diff</link>
+        <description>Hungarian Mushroom Soup
+(bellyfull.net)
+
+Ingredients
+
+	*  4 tablespoons unsalted butter
+	*  2 cups diced onions
+	*  1 pound fresh button mushrooms, sliced (reserve and sauté 1 cup for garnish)
+	*  2 teaspoons dried dill weed
+	*  1 tablespoon Hungarian sweet paprika</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/italian_pesto_chicken_salad?rev=1518035307&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2018-02-07T15:28:27-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:italian_pesto_chicken_salad</title>
+        <link>https://www.alephnull.org/w/recipes/italian_pesto_chicken_salad?rev=1518035307&amp;do=diff</link>
+        <description>Italian Pesto Chicken Salad
+From: “Eating Well” Magazine 6-2016
+
+Ingredients:
+
+	*  1/2 cup nonfat plain Greek yogurt
+	*  1/3 cup mayonnaise
+	*  2 tablespoons minced shallot
+	*  2 tablespoons pesto
+	*  2 teaspoons lemon juice
+	*  1/2 teaspoon salt</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/jamaican_sweet_potato_pudding?rev=1640910152&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-12-30T19:22:32-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:jamaican_sweet_potato_pudding</title>
+        <link>https://www.alephnull.org/w/recipes/jamaican_sweet_potato_pudding?rev=1640910152&amp;do=diff</link>
+        <description>Jamaican Sweet Potato Pudding
+(Weaver St Recipes)
+
+This terrific pudding uses versatile and economical sweet potatoes. Full of dried fruit and spices, it is a perfect dessert. We are using orange sweet potatoes here. Traditionally, white sweet potatoes are used.</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/katherine_hepburn_s_brownies?rev=1341260681&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2012-07-02T16:24:41-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:katherine_hepburn_s_brownies</title>
+        <link>https://www.alephnull.org/w/recipes/katherine_hepburn_s_brownies?rev=1341260681&amp;do=diff</link>
+        <description>Katherine Hepburn's Brownies: (12 squares)
+
+Preheat Oven to 325°
+
+•2 squares unsweetened chocolate (
+•¼ lb. butter
+•1 cup granulated sugar
+•2 eggs
+•½ tsp. vanilla
+•¼ cup flour 
+•¼ tsp. salt
+•1 cup chopped walnuts (optional)
+
+Melt chocolate with butter in saucepan over very low heat. Remove from heat and stir in sugar. Beat in eggs and vanilla. Quickly stir in flour, salt, and walnuts. Spread batter in a well-greased</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/khichdi?rev=1637872120&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-11-25T15:28:40-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:khichdi</title>
+        <link>https://www.alephnull.org/w/recipes/khichdi?rev=1637872120&amp;do=diff</link>
+        <description>Khichdi to the Rescue!
+By Tejal Rao
+
+After a few days of intense, almost athletic eating and drinking with my family, I crave something delicious but basic. So after all the big, celebratory holiday dinners this week, and after several days of happily eating leftover pie for breakfast, it’ll be time for … a big pot of khichdi.</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/kimchi_grilled_cheese_sandwich?rev=1684520843&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-05-19T14:27:23-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:kimchi_grilled_cheese_sandwich</title>
+        <link>https://www.alephnull.org/w/recipes/kimchi_grilled_cheese_sandwich?rev=1684520843&amp;do=diff</link>
+        <description>Kimchi Grilled Cheese
+
+By Ali Slagle (NYT)
+
+INGREDIENTS
+
+	*  2 slices bread, either soft sandwich bread or large rustic slices, not more than ½-inch thick
+	*  1 tablespoon mayonnaise
+	*  ½ cup grated mozzarella, Cheddar or other mild, semifirm cheese</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/kuku_paka_chicken_with_coconut?rev=1629229698&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-08-17T15:48:18-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:kuku_paka_chicken_with_coconut</title>
+        <link>https://www.alephnull.org/w/recipes/kuku_paka_chicken_with_coconut?rev=1629229698&amp;do=diff</link>
+        <description>Kuku Paka (Chicken With Coconut)
+ (NYT, 8-17-21)
+
+Ingredients:
+
+	*  4 pounds chicken thighs and drumsticks on the bone
+	*  3 plum tomatoes
+	*  1 white onion, peeled and quartered 
+	*  1 2-inch piece ginger, peeled
+	*  4 garlic cloves, peeled
+	*  4 serrano chiles, stemmed and seeded (use fewer if you prefer a mild dish)</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/lambburgers?rev=1205703880&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-03-16T17:44:40-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:lambburgers</title>
+        <link>https://www.alephnull.org/w/recipes/lambburgers?rev=1205703880&amp;do=diff</link>
+        <description>Spicy Lamb Burgers
+
+	*  1 lb. ground lamb
+	*  1 tbsp. soy sauce
+	*  1 HEAPING tbsp.  Lan Chi Chili Paste with Garlic (Chili, Salt, Soy Bean Oil, Garlic):
+
+
+
+	*  Mix well.  Form in to 4 patties.  Grill.</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/lima_beans_with_ham_hock?rev=1649082547&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-04-04T10:29:07-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:lima_beans_with_ham_hock</title>
+        <link>https://www.alephnull.org/w/recipes/lima_beans_with_ham_hock?rev=1649082547&amp;do=diff</link>
+        <description>Lima Beans with ham hock
+
+Instant Pot Southern Large Limas with Ham Hocks
+4 stars37
+rate this recipeprint this recipe
+Ingredients:
+1 (1-pound) package Camellia Brand Large Limas (large butter beans), rinsed and sorted
+2 tablespoons olive oil
+3 medium onions, chopped, about 3 cups
+1 stalk celery, leaves removed, chopped, about 1/2 cup
+6 cloves garlic, minced
+1 large ham hock, meat scored
+2 bay leaves
+6 cups water
+2 tablespoons hot sauce
+2 teaspoons kosher salt
+1/2 teaspoon ground black pepper
+Cho…</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/macaroni_and_cheese?rev=1546818153&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2019-01-06T18:42:33-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:macaroni_and_cheese</title>
+        <link>https://www.alephnull.org/w/recipes/macaroni_and_cheese?rev=1546818153&amp;do=diff</link>
+        <description>Macaroni and Cheese
+
+ Ingredients:
+
+	*  1/2 lb macaroni or fusilli pasta
+	*  1/4 lb butter= 1 stick
+	*  2 -2 1/2 cups milk
+	*  8 ounces cheddar cheese, grated
+	*  6 tablespoons flour
+	*  1 tablespoon Grey Poupon mustard
+
+Preheat oven to 350 degrees.</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/magic_cookie_bars?rev=1262359847&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-01-01T10:30:47-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:magic_cookie_bars</title>
+        <link>https://www.alephnull.org/w/recipes/magic_cookie_bars?rev=1262359847&amp;do=diff</link>
+        <description>Magic Cookie Bars
+
+Oven: 350 degrees
+
+	*  1/2 cup (1 stick) butter
+	*  1 1/2 cups graham cracker crumbs
+	*  1  (14) oz can sweetened condensed milk
+	*  2 cups (12 oz) semi sweet chocolate chips, or butterscotch chips
+	*  1 1/3 cups flaked coconut
+	*</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/malai_garbanzo_curry?rev=1677529110&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-02-27T15:18:30-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:malai_garbanzo_curry</title>
+        <link>https://www.alephnull.org/w/recipes/malai_garbanzo_curry?rev=1677529110&amp;do=diff</link>
+        <description>Malai Garbanzo Curry
+Rukmini Iyer’s Malai chickpea curry.
+Prep 15 min
+Cook 60 min
+Serves 4 generously
+
+2 tbsp neutral oil
+1 onion, peeled and roughly chopped
+1 green pepper, stem, pith and seeds removed, flesh roughly chopped
+250g chestnut mushrooms, roughly chopped
+2 tsp ground cumin
+1 heaped tsp ground coriander
+½ tsp ground turmeric
+1 tsp ground ginger
+1 tsp crushed chillies, or to taste
+1 tsp sea salt flakes
+1 x 400g tin chickpeas, drained and rinsed
+2 x 400g tins chopped tomatoes
+150ml sing…</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/maryland_crab_cakes?rev=1271008025&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-04-11T13:47:05-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:maryland_crab_cakes</title>
+        <link>https://www.alephnull.org/w/recipes/maryland_crab_cakes?rev=1271008025&amp;do=diff</link>
+        <description>Maryland Crab Cakes
+
+	*  1 lb lump crab meat
+	*  2/3  cup dry plain breadcrumbs
+	*  2 teaspoon Old bay seasoning or other seafood seasoning
+	*  (1/3 cup finely diced red pepper)
+	*  1/4 cup finely sliced scallion or green onion
+	*  (1/4 cup finely chopped parsley)</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/meatloaf?rev=1259275306&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-11-26T17:41:46-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:meatloaf</title>
+        <link>https://www.alephnull.org/w/recipes/meatloaf?rev=1259275306&amp;do=diff</link>
+        <description>Meatloaf
+
+350 degrees
+
+	*  1 pound ground turkey thigh
+	*  1/2 pound ground beef
+	*  1 cup tomato or V8 juice
+	*  3/4 cup oatmeal, uncooked
+	*  1 egg, beaten
+	*  1/4 cup chopped onion
+	*  1 and 1/2  teaspoons Southwest seasoning, or salt/pepper to taste</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/mediterranean_lentil_salad?rev=1519341864&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2018-02-22T18:24:24-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:mediterranean_lentil_salad</title>
+        <link>https://www.alephnull.org/w/recipes/mediterranean_lentil_salad?rev=1519341864&amp;do=diff</link>
+        <description>Mediterranean Lentil Salad, from “Moosewood Restaurant Cooks at Home”
+1994
+
+Serves 4.
+
+Ingredients:
+
+	*  1 cup brown or green lentils
+	*  4 cups water
+	*  2 bay leaves
+	*  1 teaspoon fresh thyme or 1/2 teaspoon dried
+	*  2 garlic cloves, peeled</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/merlin_s_magic_sourdough_bread?rev=1589293831&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-05-12T10:30:31-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:merlin_s_magic_sourdough_bread</title>
+        <link>https://www.alephnull.org/w/recipes/merlin_s_magic_sourdough_bread?rev=1589293831&amp;do=diff</link>
+        <description>Merlin's Magic Sourdough Bread
+(2 large loaves)
+
+Ingredients
+
+	*  1 cup (227 gm) sourdough starter, ripe (fed)
+	*  1 2/3 cups (379 gm) warm water
+	*  5 1/2 cups (659 gm) King Arthur Unbleached All-Purpose flour (or mixture of all-purpose and bread flour)</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/minty_garlic_potatoes?rev=1416264481&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-11-17T17:48:01-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:minty_garlic_potatoes</title>
+        <link>https://www.alephnull.org/w/recipes/minty_garlic_potatoes?rev=1416264481&amp;do=diff</link>
+        <description>Minty Garlic Potatoes
+
+from: Parade Magazine 2-28-1988
+
+# 8 to 12 red-skinned new potatoes, washed
+# 1/4 cup olive oil
+# Coarse salt to taste
+# Black pepper to taste
+# 4 cloves of garlic, peeled and finely chopped
+# (2 tablespoons coarsely chopped mint leaves or Italian parsley)</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/miso_salmon?rev=1643381436&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-01-28T09:50:36-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:miso_salmon</title>
+        <link>https://www.alephnull.org/w/recipes/miso_salmon?rev=1643381436&amp;do=diff</link>
+        <description>Miso salmon!
+
+Glaze:
+
+	*  Tablespoon miso paste
+	*  Tablespoon soy sauce
+	*  1.5 tsp - 1 Tbsp honey
+	*  “ ” rice wine vinegar
+	*  1 tsp gochugang or chili flakes in oil
+	*  1-3 cloves of chopped or grated garlic
+	*  grated ginger
+	*  1 tsp sesame oil</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/mozzarella_with_charred_radicchio_and_salsa_verde?rev=1614655623&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-03-01T22:27:03-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:mozzarella_with_charred_radicchio_and_salsa_verde</title>
+        <link>https://www.alephnull.org/w/recipes/mozzarella_with_charred_radicchio_and_salsa_verde?rev=1614655623&amp;do=diff</link>
+        <description>Mozzarella With Charred Radicchio and Salsa Verde
+By David Tanis
+YIELD:4 to 6 servings
+TIME:20 minutes
+
+Mozzarella With Charred Radicchio and Salsa Verde
+David Malosh for The New York Times. 
+
+INGREDIENTS
+
+	*  2 radicchio heads, outer leaves removed</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/mushroom_bourguignon?rev=1633636671&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-10-07T15:57:51-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:mushroom_bourguignon</title>
+        <link>https://www.alephnull.org/w/recipes/mushroom_bourguignon?rev=1633636671&amp;do=diff</link>
+        <description>Mushroom Bourguignon By Melissa Clark (NYT)
+
+YIELD: 4 to 6 servings
+
+INGREDIENTS
+
+	*  6 tablespoons butter or extra-virgin olive oil, plus more as needed
+	*  2 pounds mixed mushrooms, such as portobello, cremini, white button, shiitake or oyster, cut into 1-inch chunks (about 10 cups)</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/naan_bread?rev=1643746576&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-02-01T15:16:16-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:naan_bread</title>
+        <link>https://www.alephnull.org/w/recipes/naan_bread?rev=1643746576&amp;do=diff</link>
+        <description>Naan bread recipe! 
+
+Makes: about 8 pieces
+
+Prep: 1 hour 20 minutes
+
+Ingredients:
+
+	*  1 tsp sugar
+	*  1/2 cup warm water
+	*  1/4oz (2 1/4 tsp) active dry yeast
+	*  2 1/4 cups all-purpose flour
+	*  1/2 cup plain yogurt (greek is fine, or regular)
+	*</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/new-style_old-fashioned_chocolate_pudding?rev=1620835947&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-05-12T12:12:27-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:new-style_old-fashioned_chocolate_pudding</title>
+        <link>https://www.alephnull.org/w/recipes/new-style_old-fashioned_chocolate_pudding?rev=1620835947&amp;do=diff</link>
+        <description>New-Style Old-Fashioned Chocolate Pudding
+Bon Appetit, April 1997
+
+Ingredients 
+
+	*  1/2 cup sugar
+	*  1/3 cup unsweetened cocoa powder
+	*  2 tablespoons (packed) cornstarch
+	*  1 teaspoon all purpose flour
+	*  Pinch of salt
+	*  2 cups low-fat (1%) milk OR: 11/2 cups evaporated milk + 1/2 cup half and half or water or milk</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/no-knead_crusty_white_bread?rev=1644245231&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-02-07T09:47:11-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:no-knead_crusty_white_bread</title>
+        <link>https://www.alephnull.org/w/recipes/no-knead_crusty_white_bread?rev=1644245231&amp;do=diff</link>
+        <description>King Arthur Flour No-Knead Crusty White Bread!
+
+Super easy, made three loafs the first time I tried it. Housemates loved it. 
+
+&lt;https://www.kingarthurbaking.com/recipes/no-knead-crusty-white-bread-recipe&gt;
+
+Baking in a dutch oven (which I haven't tried yet, but sounds delightful):
+&lt;https://www.kingarthurbaking.com/blog/2017/02/21/bread-baking-dutch-oven&gt;</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/not_deep-fried_fish?rev=1614531740&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-02-28T12:02:20-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:not_deep-fried_fish</title>
+        <link>https://www.alephnull.org/w/recipes/not_deep-fried_fish?rev=1614531740&amp;do=diff</link>
+        <description>Not Deep-fried Fish
+by Gretchen Lang
+
+Ingredients
+
+	*  4 catfish, tilapia or other white fish fillets
+	*  2 tablespoons cornmeal
+	*  2 tablespoons flour
+	*  Cayenne or other pepper to taste
+	*  1/2 teaspoon dried thyme, or 1 teaspoon minced fresh
+	*</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/one-pan_coconut_milk-braised_chicken?rev=1613009149&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-02-10T21:05:49-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:one-pan_coconut_milk-braised_chicken</title>
+        <link>https://www.alephnull.org/w/recipes/one-pan_coconut_milk-braised_chicken?rev=1613009149&amp;do=diff</link>
+        <description>One-Pan Coconut Milk-Braised Chicken
+
+Yield: Serves 4
+Prep Time: 20 minutes
+Cook Time: 25 minutes to 30 minutes
+
+Ingredients
+
+	*  2 cloves garlic
+	*  1 (3-inch) piece fresh ginger
+	*  2 pounds bone-in, skin-on chicken thighs (4 to 6)
+	*  1 1/2 teaspoons kosher salt, divided</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/oyster_mushroom_pasta?rev=1644247832&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-02-07T10:30:32-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:oyster_mushroom_pasta</title>
+        <link>https://www.alephnull.org/w/recipes/oyster_mushroom_pasta?rev=1644247832&amp;do=diff</link>
+        <description>From notes app on phone:
+
+	*  Fry oyster mushrooms in water with garlic
+	*  Squeeze lemon juice over 
+	*  Add spices (salt, pepper, garlic powder, etc.)
+	*  Sauté until browned
+	*  Add chopped onion/shallot 
+	*  Add shrimp and cook both sides
+	*  Add massaged and sliced/torn kale and more garlic</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/pan-charred_asparagus?rev=1637457674&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-11-20T20:21:14-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:pan-charred_asparagus</title>
+        <link>https://www.alephnull.org/w/recipes/pan-charred_asparagus?rev=1637457674&amp;do=diff</link>
+        <description>Pan-charred Asparagus  
+
+(Cooking Light, April 2014)
+
+Ingredients
+
+	*  8 ounces asparagus spears, cut into 2.5 inch pieces
+	*  Cooking spray
+	*  1 1/2 teaspoons walnut oil
+	*  2 teaspoons lemon juice
+	*  2 teaspoons chopped fresh tarragon
+	*  1/4 teaspoon kosher salt</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/pan-charred_green_beans_with_tarragon?rev=1637457939&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-11-20T20:25:39-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:pan-charred_green_beans_with_tarragon</title>
+        <link>https://www.alephnull.org/w/recipes/pan-charred_green_beans_with_tarragon?rev=1637457939&amp;do=diff</link>
+        <description>Pan-charred green beans with Tarragon  
+
+(Cooking Light, April 2014)
+
+Ingredients
+
+	*  8 ounces fresh green beans washed and trimmed
+	*  Cooking spray
+	*  1 1/2 teaspoons butter
+	*  1 Tablespoon apple cider vinegar
+	*  2 teaspoons chopped fresh tarragon</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/pan_fried_tofu?rev=1645638288&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-02-23T12:44:48-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:pan_fried_tofu</title>
+        <link>https://www.alephnull.org/w/recipes/pan_fried_tofu?rev=1645638288&amp;do=diff</link>
+        <description>Pan fried tofu
+
+Ingredients:
+
+	*  14oz (1 package) extra firm tofu
+	*  2 Tbsp cornstarch
+	*  1/2 Tbsp sesame oil
+	*  1 Tbsp vegetable oil
+
+For sauce:
+
+	*  1/4 cup low-sodium soy sauce
+	*  1/4 cup water (or chicken/veggie broth, low sodium)
+	*  2 tsp honey</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/pancakes?rev=1240009454&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-17T19:04:14-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:pancakes</title>
+        <link>https://www.alephnull.org/w/recipes/pancakes?rev=1240009454&amp;do=diff</link>
+        <description>Blueberry  Buttermilk Pancakes (revised by Elaine Magee, Recipe Doctor)
+4 Servings
+
+Ingredients:
+
+	*  1 cup flour
+	*  1 teaspoon baking powder
+	*  1/2 teaspoon baking soda
+	*  1/4 teaspoon salt
+	*  1 tablespoon sugar
+	*  1 large beaten egg
+	*  1 and 1/4 cup buttermilk</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/peach_and_blueberry_crisp?rev=1434055957&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-06-11T16:52:37-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:peach_and_blueberry_crisp</title>
+        <link>https://www.alephnull.org/w/recipes/peach_and_blueberry_crisp?rev=1434055957&amp;do=diff</link>
+        <description>Peach and Blueberry Crisp
+
+Bon Appetit, June 1993
+
+350 degrees oven
+
+Topping:
+
+	*  3/4 cup firmly packed brown sugar
+	*  3/4 cup all purpose flour
+	*  1/2 cup (1 stick) unsalted butter,cold, cut into pieces
+	*  1 cup old-fashioned oats(oatmeal)
+	*  3/4 cup chopped toasted pecans or walnuts</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/peanut_butter_ramen?rev=1710035287&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2024-03-09T20:48:07-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:peanut_butter_ramen</title>
+        <link>https://www.alephnull.org/w/recipes/peanut_butter_ramen?rev=1710035287&amp;do=diff</link>
+        <description>Peanut butter ramen
+
+Prep 15 min
+Cook 50 min
+Serves 4
+
+For the curry paste
+3 banana shallots, peeled and chopped to get 100g
+2 lemongrass stalks, bottom two-thirds sliced, the rest discarded
+10 garlic cloves (30g), peeled and roughly chopped
+8cm x 8cm piece fresh ginger (60g), peeled and roughly chopped
+2½ tbsp gochujang paste
+1¾ tsp salt, plus ½ tsp extra for the tempeh
+Rapeseed oil</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/pearl_millet_porridge_bajra_khichdi?rev=1638837111&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-12-06T19:31:51-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:pearl_millet_porridge_bajra_khichdi</title>
+        <link>https://www.alephnull.org/w/recipes/pearl_millet_porridge_bajra_khichdi?rev=1638837111&amp;do=diff</link>
+        <description>Pearl Millet Porridge(Bajra Khichdi)
+by: Nandita (Saffron Trail)
+
+INGREDIENTS
+
+	*  2/3 cup pearl millet bajra
+	*  1/3 cup moong dal
+	*  2 tsp ghee or coconut oil
+	*  1 tsp cumin seeds
+	*  4 cloves garlic finely chopped
+	*  2 medium potatoes peeled and quartered</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/penne_with_greens_olives_and_feta?rev=1328386711&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2012-02-04T15:18:31-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:penne_with_greens_olives_and_feta</title>
+        <link>https://www.alephnull.org/w/recipes/penne_with_greens_olives_and_feta?rev=1328386711&amp;do=diff</link>
+        <description>Penne with Greens, Olives and Feta
+
+	* from: bon Appetit April 2008.
+	* 4 to 6 servings.
+
+Ingredients:
+
+	* (1/4 cup chopped fresh Italian parsley)
+	* 1 teaspoon finely grated lemon peel, or splash of lemon juice
+	* 1 to 2 garlic cloves, minced
+	* 1 large bunch greens (spinach, mustards, kale, broccoli raab, young collards, about 1 pound), thick stems removed; washed; cut into 1 inch strips.</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/pinto_beans_and_ham?rev=1643410771&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-01-28T17:59:31-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:pinto_beans_and_ham</title>
+        <link>https://www.alephnull.org/w/recipes/pinto_beans_and_ham?rev=1643410771&amp;do=diff</link>
+        <description>Pinto Beans and Ham
+
+From Field Peas to Foie Gras: Southern Recipes with a French Accent by Jennifer Hill Booker, (Pelican Publishing, 2014)
+
+Ingredients:
+
+	*  1 pound Camellia Brand Pinto Beans
+	*  1 large smoked ham hock
+	*  1 large yellow onion, finely chopped</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/platanos_maduros?rev=1642637099&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-01-19T19:04:59-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:platanos_maduros</title>
+        <link>https://www.alephnull.org/w/recipes/platanos_maduros?rev=1642637099&amp;do=diff</link>
+        <description>Platanos Maduros
+
+by: Maria Josefa Lluria de O'Higgins, “ A Taste of Old Cuba”
+
+Ingredients
+
+	*  3 large, very ripe (black) plantains
+	*  Vegetable oil
+
+Preparation
+
+	*  Peel the plantains as you would bananas, and slice each one on the diagonal into 1/2 inch slices.</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/pumpkin_pie?rev=1240929093&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-28T10:31:33-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:pumpkin_pie</title>
+        <link>https://www.alephnull.org/w/recipes/pumpkin_pie?rev=1240929093&amp;do=diff</link>
+        <description>Libby's famous Pumpkin Pie
+8 servings
+
+Ingredients:
+
+	*  3/4 cup sugar
+	*  1/2 teaspoon salt
+	*  1 teaspoon ground cinnamon
+	*  1/2 teaspoon ground ginger
+	*  1/4 teaspoon ground cloves
+	*  2 large eggs
+	*  1 can (15 oz) pumpkin
+	*  1 can (12 fl oz) evaporated milk</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/red_beans_and_rice_congri_tampa_style?rev=1676678533&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-02-17T19:02:13-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:red_beans_and_rice_congri_tampa_style</title>
+        <link>https://www.alephnull.org/w/recipes/red_beans_and_rice_congri_tampa_style?rev=1676678533&amp;do=diff</link>
+        <description>Red Beans and Rice (Congri, Tampa style) (Nana's recipe)
+
+Ingredients
+
+	*  1 lb dried red kidney beans
+	*  Salt pork or ham hock slice (or tosino)
+	*  1 chorizo
+	*  Ham, 1 piece
+	*  Olive oil
+	*  Garlic, 2 to 3 cloves, minced
+	*  1 medium onion, diced</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/rigatoni_al_forno?rev=1614656127&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-03-01T22:35:27-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:rigatoni_al_forno</title>
+        <link>https://www.alephnull.org/w/recipes/rigatoni_al_forno?rev=1614656127&amp;do=diff</link>
+        <description>Rigatoni al Forno With Cauliflower and Broccoli Rabe
+By David Tanis
+YIELD:6 servings
+TIME:1 1/2 hours
+David Malosh for The New York Times. 
+
+INGREDIENTS
+
+FOR THE BÉCHAMEL:
+
+	*  3 tablespoons extra-virgin olive oil
+	*  3 tablespoons all-purpose flour</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/ritz-carlton_blueberry_muffins?rev=1685720911&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-06-02T11:48:31-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:ritz-carlton_blueberry_muffins</title>
+        <link>https://www.alephnull.org/w/recipes/ritz-carlton_blueberry_muffins?rev=1685720911&amp;do=diff</link>
+        <description>The Ritz-Carlton’s Blueberry Muffins
+
+By Marian Burros
+The New York Times
+
+Yield: 15 to 16 large muffins
+
+INGREDIENTS
+
+	*  3½ cups sifted all-purpose flour
+	*  2 tablespoons baking powder
+	*  ¾ cup sugar
+	*  Pinch salt, optional
+	*  5 eggs, slightly beaten</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/roasted_cauliflower_and_farro?rev=1638472479&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-12-02T14:14:39-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:roasted_cauliflower_and_farro</title>
+        <link>https://www.alephnull.org/w/recipes/roasted_cauliflower_and_farro?rev=1638472479&amp;do=diff</link>
+        <description>Farro and Cauliflower Parmesan
+By Sarah DiGregorio
+
+YIELD:8 servings
+TIME:1 hour and 5 minutes
+
+This dish has all of the crispy-melty-tomatoey appeal of a chicken or eggplant Parmesan, but it uses only one pot. Olive oil provides richness, and broiling lends a cheesy crunch without the mess of breading and frying. The pizzalike flavors and mellow cauliflower make it a (potentially) kid-friendly meal. Feel free to omit the olives if that makes more sense for your family. In fact, this dish is hig…</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/roasted_cauliflower_gratin_with_goat_cheese?rev=1614289108&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-02-25T16:38:28-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:roasted_cauliflower_gratin_with_goat_cheese</title>
+        <link>https://www.alephnull.org/w/recipes/roasted_cauliflower_gratin_with_goat_cheese?rev=1614289108&amp;do=diff</link>
+        <description>Roasted Cauliflower Gratin with Tomatoes and Goat Cheese
+by Martha Rose Shulman (NYT, 2-21)
+
+Yield: serves 4-6
+
+Time: about 1 hour 10 minutes, plus 10 minutes cooling time
+
+Ingredients
+
+	*  1 medium sized head of cauliflower
+	*  Salt and freshly ground black pepper</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/roasted_cauliflower_with_olives?rev=1593626771&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-07-01T14:06:11-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:roasted_cauliflower_with_olives</title>
+        <link>https://www.alephnull.org/w/recipes/roasted_cauliflower_with_olives?rev=1593626771&amp;do=diff</link>
+        <description>Roasted Cauliflower with Olives
+
+Ingredients:
+
+	*  3 pounds (1 large) cauliflower, cut in small flowerettes or slices
+	*  4 tablespoons olive oil
+	*  pinch of salt
+	*  1/2 teaspoon freshly grated black pepper
+	*  2 or 3 garlic cloves, minced
+	*  1/3 to 1/2 cup Kalamata olives, pitted and chopped</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/roasted_red_bell_pepper_and_bean_soup?rev=1434056465&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-06-11T17:01:05-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:roasted_red_bell_pepper_and_bean_soup</title>
+        <link>https://www.alephnull.org/w/recipes/roasted_red_bell_pepper_and_bean_soup?rev=1434056465&amp;do=diff</link>
+        <description>Roasted Red Bell Pepper and Bean Soup
+
+Bon Appetit July 1994
+
+Ingredients:
+
+	*  3 yellow, orange or red bell peppers (can buy already roasted)
+	*  1 tablespoon olive oil
+	*  1 small onion, chopped
+	*  1/8 teaspoon dried crushed red pepper
+	*  2 cans low salt chicken broth; 14 1/2 oz each,(equals 29 oz total)</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/rolled_flank_steak?rev=1635862004&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-11-02T10:06:44-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:rolled_flank_steak</title>
+        <link>https://www.alephnull.org/w/recipes/rolled_flank_steak?rev=1635862004&amp;do=diff</link>
+        <description>Rolled Flank steak
+ From: “The Mediterranean Diet Cookbook”, Rockridge Press, 2013
+
+Ingredients:
+
+	*  2 pounds flank steak
+	*  Salt and freshly ground black pepper
+	*  1 Tablespoon olive oil
+	*  1/4 cup onion, diced
+	*  1 clove garlic, minced
+	*</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/russian_dressing?rev=1647723463&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-03-19T16:57:43-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:russian_dressing</title>
+        <link>https://www.alephnull.org/w/recipes/russian_dressing?rev=1647723463&amp;do=diff</link>
+        <description>Russian dressing  (from Epicurious)
+Yield: Makes about 1¼ cups
+
+Ingredients:
+
+	*  1 tablespoon finely chopped onion
+	*  1 cup purchased or homemade mayonnaise
+	*  ¼ cup ketchup-style chili sauce or ketchup
+	*  4 teaspoons bottled (regular; not packed in beet juice) horseradish, or to taste</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/saffron_orzo?rev=1262995222&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-01-08T19:00:22-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:saffron_orzo</title>
+        <link>https://www.alephnull.org/w/recipes/saffron_orzo?rev=1262995222&amp;do=diff</link>
+        <description>Saffron Orzo, from “Moosewood Restaurant Cooks at Home”
+
+	*  Generous pinch of saffron, crumbled (about 1/2 teaspoon)
+	*  1/2 pound orzo
+	*  1/2 cup grated Parmesan or Pecorino cheese
+	*  salt and ground black pepper to taste
+
+	*  Bring 3 quarts water to boil in a big pot. Crumble the saffron into a small bowl and add about 3 tablespoons of the hot water, stirring well.</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/salmon_marinades?rev=1499275186&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-07-05T13:19:46-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:salmon_marinades</title>
+        <link>https://www.alephnull.org/w/recipes/salmon_marinades?rev=1499275186&amp;do=diff</link>
+        <description>Salmon Marinades:
+
+1. Sesame marinade:
+
+	*  4 tablespoons sesami oil
+	*  2 tablespoons tamari or soy sauce
+	*  2 tablespoons lime juice
+	*  1 clove garlic, minced
+	*  3 green onions (scallions), chopped
+
+Blend all ingredients and pour over salmon fillets or steaks to marinade.</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/scottish_oatcakes?rev=1434056845&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-06-11T17:07:25-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:scottish_oatcakes</title>
+        <link>https://www.alephnull.org/w/recipes/scottish_oatcakes?rev=1434056845&amp;do=diff</link>
+        <description>Scottish Oatcakes
+
+Bon Appetit, November 1998
+
+Ingredients:
+
+	*  1 1/2 cups old-fashioned oats
+	*  1 cup all purpose flour
+	*  1/2 cup sugar
+	*  1/2 teaspoon baking soda
+	*  1/4 teaspoon salt
+	*  1/2 cup chilled butter, cut into pieces
+	*  1/4 cup buttermilk</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/selena_s_stir_fry?rev=1278183407&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-07-03T14:56:47-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:selena_s_stir_fry</title>
+        <link>https://www.alephnull.org/w/recipes/selena_s_stir_fry?rev=1278183407&amp;do=diff</link>
+        <description>Selena's Stir fry chicken (aka Sizzlin' Szechuan Chicken)
+from: “A Guy's Guide to great eating” by Don Mauer
+  Marinade and chicken
+* 1 tablespoon soy sauce
+* 1 tablespoon cornstarch
+* 1/2 teaspoon sugar
+* 1 garlic clove, minced
+* 1 whole skinless boneless chicken breast, cut into thin strips (or 1 pound shrimp, peeled and deveined)</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/shakshuka?rev=1677202376&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-02-23T20:32:56-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:shakshuka</title>
+        <link>https://www.alephnull.org/w/recipes/shakshuka?rev=1677202376&amp;do=diff</link>
+        <description>Shakshuka
+
+Have you ever had Shakshuka? It’s as fun to eat as it is to say! It’s basically a Middle Eastern recipe, that originated in Tunisia. It’s made with poached eggs in a spicy tomato sauce. The best thing about a Shakshuka recipe for me is the sauce. It has simple vegetables (usually just onions and red peppers) and a variation of spices, commonly paprika, cumin and cayenne pepper.</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/sharkuaska?rev=1676897822&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-02-20T07:57:02-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:sharkuaska</title>
+        <link>https://www.alephnull.org/w/recipes/sharkuaska?rev=1676897822&amp;do=diff</link>
+        <description>Shakshuka
+
+Ingredients
+
+	*  1 tablespoon olive oil
+	*  1 medium onion sliced
+	*  1 medium red bell pepper sliced
+	*  2 cloves garlic minced
+	*  2 14 ounce cans diced tomatoes
+	*  1 teaspoon ground cumin
+	*  1 teaspoon paprika
+	*  1 teaspoon coriander</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/sheet_pan_bibimbap?rev=1687465483&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-06-22T16:24:43-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:sheet_pan_bibimbap</title>
+        <link>https://www.alephnull.org/w/recipes/sheet_pan_bibimbap?rev=1687465483&amp;do=diff</link>
+        <description>Sheet Pan Bibimbap
+
+NYT Cooking, Eric Kim
+
+Ingredients
+
+	*  6 oz oyster mushrooms, torn into bite-size pieces
+	*  1 medium sweet potato, scrubbed and thinly sliced into half moons
+	*  1 small red onion, thinly sliced crosswise into half moons
+	*  3 packed cups coarsely chopped kale (1 bunch)</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/sheet_pan_fried_rice?rev=1679148552&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-03-18T10:09:12-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:sheet_pan_fried_rice</title>
+        <link>https://www.alephnull.org/w/recipes/sheet_pan_fried_rice?rev=1679148552&amp;do=diff</link>
+        <description>Sheet-Pan Fried Rice With Vegan ‘XO’ Sauce
+By Hetty McKinnon (NYT Cooking)
+
+While making fried rice the traditional way isn’t hard, this sheet-pan version is an excellent alternative method: It uses the oven for the heavy lifting and produces the perfect amount of crisping. Fried rice is the ultimate adaptable dish, and here, frozen mixed vegetables — that bag of corn, carrots, peas and beans that home cooks should always keep in the freezer — create a colorful canvas for an XO-inspired vegan mu…</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/sizzling_szechuan_chicken?rev=1442573595&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-09-18T06:53:15-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:sizzling_szechuan_chicken</title>
+        <link>https://www.alephnull.org/w/recipes/sizzling_szechuan_chicken?rev=1442573595&amp;do=diff</link>
+        <description>Sizzling Szechuan Chicken
+
+From : Don Mauer, “A Guy's Guide to Great Eating”
+
+4 servings
+
+Ingredients:
+ Marinade and chicken: 
+ 
+* 1 tablespoon soy sauce
+* 1 tablespoon cornstarch
+* 1/2 teaspoon sugar
+* 1 garlic clove, minced
+* 1 whole skinless boneless chicken breast, cut into thin strips or pieces</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/sliced_sirloin_with_shallots_and_chive_sauce?rev=1416264192&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-11-17T17:43:12-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:sliced_sirloin_with_shallots_and_chive_sauce</title>
+        <link>https://www.alephnull.org/w/recipes/sliced_sirloin_with_shallots_and_chive_sauce?rev=1416264192&amp;do=diff</link>
+        <description>Sliced Sirloin with Shallots and Chive Sauce 
+
+from Parade magazine: 2-28-1988
+
+ # 3 tablespoons unsalted butter 
+ # 2 tablespoons olive oil
+ # 1 Sirloin or London Broil steak, 2 lbs, trimmed
+ # 1/2 cup peeled and chopped shallots
+ # 1/4 cup chopped chives (save some for garnish)
+ # 1 tablespoon red wine vinegar
+ # 3/4 cup dry red wine
+ # salt and pepper to taste</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/slow-cooker_cauliflower_potato_and_white_bean_soup?rev=1641227410&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-01-03T11:30:10-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:slow-cooker_cauliflower_potato_and_white_bean_soup</title>
+        <link>https://www.alephnull.org/w/recipes/slow-cooker_cauliflower_potato_and_white_bean_soup?rev=1641227410&amp;do=diff</link>
+        <description>Slow-Cooker Cauliflower, Potato and White Bean Soup  (NYT)
+
+YIELD:6 servings 
+TIME:8 hours and 25 minutes 
+
+INGREDIENTS
+
+	*  1 pound Yukon gold potatoes, scrubbed, peeled and cut into 1- to 2-inch chunks 
+	*  1 pound cauliflower, chopped into large bite-sized florets and stems</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/slow_cooker_chinese_beef_and_bok_choy?rev=1434058012&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-06-11T17:26:52-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:slow_cooker_chinese_beef_and_bok_choy</title>
+        <link>https://www.alephnull.org/w/recipes/slow_cooker_chinese_beef_and_bok_choy?rev=1434058012&amp;do=diff</link>
+        <description>Slow Cooker Chinese Beef and Bok Choy
+
+Food Network Magazine 2015
+
+Ingredients:
+
+	*  4 leeks; use the white and light green parts. Trim them, cut in half lengthwise, rinse very well! then chop into 1 inch pieces.
+	*  6 cloves garlic, unpeeled, washed</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/slow_cooker_pulled_chicken?rev=1720646114&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2024-07-10T17:15:14-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:slow_cooker_pulled_chicken</title>
+        <link>https://www.alephnull.org/w/recipes/slow_cooker_pulled_chicken?rev=1720646114&amp;do=diff</link>
+        <description>Slow-Cooker BBQ Pulled Chicken
+By Ali Slagle
+Published July 2, 2024
+
+Yield:
+8 servings
+
+INGREDIENTS
+
+	*  1½ cups tomato-based barbecue sauce (homemade or store-bought)
+	*  1 to 2 chipotle chiles in adobo (depending on heat tolerance), plus 2 tablespoons adobo sauce</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/smoky_pinto_beans_with_bacon?rev=1700535124&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-11-20T21:52:04-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:smoky_pinto_beans_with_bacon</title>
+        <link>https://www.alephnull.org/w/recipes/smoky_pinto_beans_with_bacon?rev=1700535124&amp;do=diff</link>
+        <description>Red Wine Pinto Beans With Smoky Bacon
+
+By Jamelle Bouie
+Opinion Columnist
+
+All right, so obviously, this isn’t a vegetarian recipe. It’s easy enough to make vegetarian — just omit the bacon. But if you are a meat eater, let me make the case for treating these beans as if they were meat. With the right ingredients and the right technique, I think you can produce a pot of beans that rivals a beef stew. Admittedly, you’ll want to use a good beef stock (I happened to have some beef stock in the free…</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/southern_black-eyed_peas?rev=1588127683&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-04-28T22:34:43-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:southern_black-eyed_peas</title>
+        <link>https://www.alephnull.org/w/recipes/southern_black-eyed_peas?rev=1588127683&amp;do=diff</link>
+        <description>Southern Black-eyed Peas
+Ingredients:
+
+	*  1 pound (453 gms) dry black-eyed peas
+	*  4-5 thick slices of (turkey) bacon
+	*  1 cup smoked sausage or turkey, diced
+	*  1 large onion, diced
+	*  2-3 teaspoons minced garlic
+	*  1 jalapeno, minced, or replace with cayenne pepper (optional)</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/spagetti_sauce?rev=1537577994&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2018-09-21T20:59:54-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:spagetti_sauce</title>
+        <link>https://www.alephnull.org/w/recipes/spagetti_sauce?rev=1537577994&amp;do=diff</link>
+        <description>Spagetti Sauce
+
+Ingredients
+
+	*  1 yellow onion, diced
+	*  1 green or red bell pepper, diced
+	*  garlic, 2 to 3 cloves, crushed and peeled
+	*  Carrots, 2 medium, diced
+	*  Olive oil
+	*  28 ounce can tomato sauce
+	*  28 ounce can tomato puree
+	*  dried basil (a spoonful or two0</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/spinach_and_goat_cheese_quiche?rev=1646855856&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-03-09T14:57:36-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:spinach_and_goat_cheese_quiche</title>
+        <link>https://www.alephnull.org/w/recipes/spinach_and_goat_cheese_quiche?rev=1646855856&amp;do=diff</link>
+        <description>Spinach and Goat Cheese Quiche
+(Weaver St Blog)
+
+A fluffy quiche made with local goat cheese. Make it in muffin tins for an appetizer or in a pie pan for breakfast.
+
+Ingredients:
+
+	*  cooking spray or 1 tbsp. olive oil
+	*  ½ c. panko
+	*  6 eggs
+	*  1 c. half and half</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/split_pea_soup_with_horseradish_cream?rev=1680971330&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-04-08T12:28:50-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:split_pea_soup_with_horseradish_cream</title>
+        <link>https://www.alephnull.org/w/recipes/split_pea_soup_with_horseradish_cream?rev=1680971330&amp;do=diff</link>
+        <description>Slow Cooker Split Pea Soup With Horseradish Cream (NYT)
+By Sarah DiGregorio
+
+Yield: 6 to 8 servings 
+
+INGREDIENTS
+
+	*  3 tablespoons olive oil
+	*  1 yellow or red onion, minced
+	*  3 celery stalks, thinly sliced
+	*  1 large carrot, chopped
+	*  5 large garlic cloves, smashed and chopped</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/start?rev=1734279959&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2024-12-15T11:25:59-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:start</title>
+        <link>https://www.alephnull.org/w/recipes/start?rev=1734279959&amp;do=diff</link>
+        <description>Recipes
+
+Selena Go-to:
+
+	*   Chinese brown sauce
+	*  Tzatziki sauce
+	*   Arugula salad dressing
+
+	*   Zucchini lasagna
+	*  Broccoli cheddar soup
+	*  Oyster mushroom pasta
+	*  Miso salmon
+	*   Pan fried tofu
+	*   BA Veggie Burger
+	*   Butter Chicken/vegetarian
+
+	*   Camp Celo harvest bars
+	*   Granola
+
+	*  Naan bread
+	*   No-Knead Crusty White Bread
+
+	*   Coconut cream pie
+	*   Cream cheese frosting
+	*   1/2 birthday cake 2022
+	*   Earl Grey Cookies
+
+Main Dishes: Chicken
+
+	*   Daddy Chicken
+	*   …</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/sticky_ginger_toffee_bread?rev=1711401770&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2024-03-25T17:22:50-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:sticky_ginger_toffee_bread</title>
+        <link>https://www.alephnull.org/w/recipes/sticky_ginger_toffee_bread?rev=1711401770&amp;do=diff</link>
+        <description>Sticky Ginger Loaf Cake
+
+This is one of those rare recipes where you can use gluten-free flour directly instead of regular plain flour, and it works perfectly.
+
+Prep 5 min
+Cook 1 hr 20 min, plus cooling time
+Makes 1 x 1kg loaf, to serve 8
+
+Ingredients</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/stir_fry_shrimp_with_basil?rev=1256409385&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-10-24T14:36:25-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:stir_fry_shrimp_with_basil</title>
+        <link>https://www.alephnull.org/w/recipes/stir_fry_shrimp_with_basil?rev=1256409385&amp;do=diff</link>
+        <description>Stir-fried Shrimp with Basil
+
+	* from: News and Observer, April 2000
+
+	* 2 tablespoons peanut or other oil, divided
+	* 1 pound large shrimp, shelled and deveined
+	* 1 small onion, halved and thinly sliced
+	* 2 tablespoons red curry paste
+	* 1 medium red bell pepper, cut into thin strips</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/strawberry_farro_salad?rev=1690659300&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-07-29T15:35:00-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:strawberry_farro_salad</title>
+        <link>https://www.alephnull.org/w/recipes/strawberry_farro_salad?rev=1690659300&amp;do=diff</link>
+        <description>Strawberry Basil Farro Salad
+Bob's Red Mill Recipes
+
+SERVINGS4-8 Servings
+
+Ingredients
+
+	*  Farro
+	*  2 cups Organic Farro
+	*  4 cup Water
+
+	*  Dressing
+	*  2 Tbsp Minced Shallot about 3/4 oz
+	*  2 Tbsp Lemon Juice
+	*  1 Tbsp Balsamic Vinegar
+	*  1 Tbsp Honey</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/stuffed_mushrooms?rev=1637071367&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-11-16T09:02:47-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:stuffed_mushrooms</title>
+        <link>https://www.alephnull.org/w/recipes/stuffed_mushrooms?rev=1637071367&amp;do=diff</link>
+        <description>Stuffed Mushrooms
+By Kay Chun
+YIELD4 servings
+TIME25 minutes
+
+These fun hors d’oeuvres turn humble mushrooms into rich, savory bites with the flavors of escargots, the classic French delicacy of snails cooked in garlic butter. Here, fragrant and buttery bread crumbs infused with garlic, shallots and parsley fill mushroom caps. The roasted cremini mushrooms emerge from the oven juicy, with a garlicky topping that’s golden and crispy. Make use of your trimmings: The mushroom stems can be frozen fo…</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/stuffed_zucchini_squash?rev=1593646161&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-07-01T19:29:21-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:stuffed_zucchini_squash</title>
+        <link>https://www.alephnull.org/w/recipes/stuffed_zucchini_squash?rev=1593646161&amp;do=diff</link>
+        <description>Stuffed Zucchini Squash
+
+Ingredients:
+
+	*  4 medium  zucchini squash (about 1.5 pounds)
+	*  1/2 cup water
+	*  1/2 teaspoon salt
+	*  2 tablespoons butter
+	*  1 tomato, diced
+	*  1/2 cup soft bread crumbs
+	*  1/2 cup cottage cheese
+	*  1 egg, beaten
+	*</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/sunken_berry_almond_cake?rev=1734280192&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2024-12-15T11:29:52-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:sunken_berry_almond_cake</title>
+        <link>https://www.alephnull.org/w/recipes/sunken_berry_almond_cake?rev=1734280192&amp;do=diff</link>
+        <description>King Arthur Baking Company
+
+Sunken Berry Almond Cake
+
+PREP
+10 mins -BAKE 35 to 40 mins
+
+YIELD
+one 8“ cake
+
+Ingredients
+
+	*  2 cups (192g) King Arthur Almond Flour
+	*  2 tablespoons (14g) cornstarch
+	*  2 teaspoons baking powder
+	*  1/4 teaspoon table salt</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/thai_curry_chicken?rev=1626877414&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-07-21T10:23:34-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:thai_curry_chicken</title>
+        <link>https://www.alephnull.org/w/recipes/thai_curry_chicken?rev=1626877414&amp;do=diff</link>
+        <description>Thai Curry Chicken
+
+(This is based on Thira's recipe from the late 1980's.)
+
+Ingredients
+
+	*  4 potatoes, diced
+	*  2 sweet onions, diced
+	*  1 pound boneless skinless chicken breast, diced
+	*  1 head of garlic, minced
+	*  1 4oz can curry (e.g., Maesri brand panang, or other)</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/thai_shrimp_curry?rev=1718811304&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2024-06-19T11:35:04-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:thai_shrimp_curry</title>
+        <link>https://www.alephnull.org/w/recipes/thai_shrimp_curry?rev=1718811304&amp;do=diff</link>
+        <description>Thai Red Curry with Shrimp, Vegetables, and Infused Rice
+
+Author Molly | Spices in My DNA
+
+Ingredients
+
+For the infused rice
+
+	*  1 3/4 cups water
+	*  1 cup basmati or Jasmine rice
+	*  3 cardamom pods, crushed with the back of a knife*
+	*  2 star anise pods*</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/tiramisu?rev=1632971668&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-09-29T23:14:28-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:tiramisu</title>
+        <link>https://www.alephnull.org/w/recipes/tiramisu?rev=1632971668&amp;do=diff</link>
+        <description>How to make tiramisu – recipe
+
+Wed 29 Sep 2021 07.00 EDT
+
+238
+Jonathan Coe was once “politely” reprimanded by an Italian journalist for sending a character in his novel Expo 58 to a Soho trattoria for lasagne and tiramisu, a year before (depending on who you believe) the boozy dessert first appeared on menus in northern Italy. Soothingly creamy, but spiked with coffee, this little pick-me-up (as its name translates) is a true modern classic.</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/tossed_greens_and_grapes_salad?rev=1551475266&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2019-03-01T16:21:06-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:tossed_greens_and_grapes_salad</title>
+        <link>https://www.alephnull.org/w/recipes/tossed_greens_and_grapes_salad?rev=1551475266&amp;do=diff</link>
+        <description>Tossed Greens and Grapes Salad
+
+	*  3/4 cup olive oil
+	*  1/4 cup red wine vinegar
+	*  1 1/2 tablespoon Dijon mustard
+	*  1 1/2 teaspoon honey
+	*  1/8 teaspoon salt
+	*  1/8 teaspoon pepper
+	*  1 (5 ounce) package Spring greens or baby greens
+	*  2 cups seedless red grapes, halved and rinsed well</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/turkey_pot_pie?rev=1262563907&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-01-03T19:11:47-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:turkey_pot_pie</title>
+        <link>https://www.alephnull.org/w/recipes/turkey_pot_pie?rev=1262563907&amp;do=diff</link>
+        <description>Turkey Pot Pie
+
+ Bon Appetit, November 2009
+
+Oven 400F.
+
+	*  2 tablespoons olive oil
+	*  1 cup chopped onion
+	*  6-8 oz sliced mushrooms
+	*  1 cup thinly sliced peeled carrots, about 3 
+	*  1/2 cup diced leftover cooked veges
+	*  1 1/2 cups cubed cooked turkey</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/tzatziki_sauce?rev=1643747036&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-02-01T15:23:56-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:tzatziki_sauce</title>
+        <link>https://www.alephnull.org/w/recipes/tzatziki_sauce?rev=1643747036&amp;do=diff</link>
+        <description>__Tzatziki sauce
+
+Ingredients:
+
+	*  2 cups grated cucumber (approx 1 medium-large sized cucumber)
+	*  1 1/2 cups plain greek yogurt
+	*  2 Tbsp extra-virgin olive oil
+	*  2 Tbsp fresh minced dill
+	*  1 Tbsp lemon juice (or white wine vinegar, but lemon juice adds more flavor)</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/upside_down_peach_cobbler?rev=1691023037&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-08-02T20:37:17-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:upside_down_peach_cobbler</title>
+        <link>https://www.alephnull.org/w/recipes/upside_down_peach_cobbler?rev=1691023037&amp;do=diff</link>
+        <description>Upside-Down Peach Cobbler
+By Melissa Clark
+
+This juicy pastry crosses a peach cobbler with a caramel-coated apple tarte Tatin. To make it, the peaches are caramelized with sugar in a skillet just like apples are in a classic tarte Tatin. But then, instead of being covered with pie dough or puff pastry, the fruit is topped with fluffy biscuit dough. While baking, the biscuits rise and brown, creating a golden, tender pillow on which the jammy fruit lands when it’s all unmolded. The whole thing is…</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/vegan_bulgogi?rev=1620489381&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-05-08T11:56:21-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:vegan_bulgogi</title>
+        <link>https://www.alephnull.org/w/recipes/vegan_bulgogi?rev=1620489381&amp;do=diff</link>
+        <description>Vegan Bulgogi
+(The Guardian 5-8-21)
+
+Ingredients
+
+	*  280g extra-ﬁrm tofu
+	*  4 tbsp light soy sauce
+	*  1½ tbsp brown rice syrup
+	*  5 garlic cloves, peeled and crushed
+	*  3cm piece fresh ginger, peeled and grated
+	*  1 pear, coarsely grated
+	*</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/verzada?rev=1236783234&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-03-11T10:53:54-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:verzada</title>
+        <link>https://www.alephnull.org/w/recipes/verzada?rev=1236783234&amp;do=diff</link>
+        <description>Verzada Asturiana
+
+from“Clarita's Cocina”
+ by Clarita del Palacio Valdes de Garcia
+
+Ingredients:
+
+	*  1 small ham hock (optional)
+	*  2 chorizo sausages
+	*  Quarter pound  slab smoked bacon (optional) 
+	*  2 morzillas(pork blood sausage, optional)</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/walnut_picadillo?rev=1701552513&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-12-02T16:28:33-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:walnut_picadillo</title>
+        <link>https://www.alephnull.org/w/recipes/walnut_picadillo?rev=1701552513&amp;do=diff</link>
+        <description>Walnut Picadillo
+By Jocelyn Ramirez
+ The New York Times. 
+
+Read community notes
+Picadillo is a dish that spans Latin American and Filipino food cultures with ingredients that vary from country to region. It’s a simple dish that highlights ground meat with bold flavors from tomato, onion, garlic, olives and capers, and is often paired with starches like potatoes and rice for a filling main dish, or even a taco filling. In this plant-based version, ground walnuts take on a meaty texture that absor…</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/white_bean_soup?rev=1240929679&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-28T10:41:19-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:white_bean_soup</title>
+        <link>https://www.alephnull.org/w/recipes/white_bean_soup?rev=1240929679&amp;do=diff</link>
+        <description>White Bean Soup with Bacon
+from:“Not your mother's Slow Cooker Cookbook” by Beth Hensperger and Julie Kaufmann
+
+Ingredients:
+
+	*  2 cups dried navy or Great Northern beans, rinsed, picked over
+	*  2 to 3 strips bacon, fried and dried on towels, crumbled; or 1 sausage, or ham bone.</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/wilted_spinach_salad?rev=1595172366&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-07-19T11:26:06-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:wilted_spinach_salad</title>
+        <link>https://www.alephnull.org/w/recipes/wilted_spinach_salad?rev=1595172366&amp;do=diff</link>
+        <description>Wilted spinach salad
+
+This salad has been on the menu since the restaurant opened and is still a
+favourite we make every day. The spinach is tossed with very hot olive oil, which
+cooks it slightly, sweetening and softening the leaves. As the feta cheese and the
+olives are both salty, no additional salt is needed.</description>
+    </item>
+    <item rdf:about="https://www.alephnull.org/w/recipes/zucchini_lasagna?rev=1641269477&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-01-03T23:11:17-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:zucchini_lasagna</title>
+        <link>https://www.alephnull.org/w/recipes/zucchini_lasagna?rev=1641269477&amp;do=diff</link>
+        <description>Zucchini lasagna
+
+	*  For sauce (or use a jar of sauce)
+		*  3 large garlic cloves
+		*  2 tablespoons unsalted butter
+		*  15-ounce can crushed tomatoes, fire roasted if possible
+		*  15-ounce can tomato sauce, fire roasted if possible
+		*  1 teaspoon dried or fresh basil</description>
+    </item>
+</rdf:RDF>

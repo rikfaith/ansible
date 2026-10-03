@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="https://www.alephnull.org/w/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://www.alephnull.org/w/feed.php">
+        <title>alephnull.com playground</title>
+        <description></description>
+        <link>https://www.alephnull.org/w/</link>
+        <image rdf:resource="https://www.alephnull.org/w/lib/tpl/alephnull/images/favicon.ico" />
+       <dc:date>2026-08-19T22:01:59-0400</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://www.alephnull.org/w/playground/playground?rev=1182882441&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://www.alephnull.org/w/lib/tpl/alephnull/images/favicon.ico">
+        <title>alephnull.com</title>
+        <link>https://www.alephnull.org/w/</link>
+        <url>https://www.alephnull.org/w/lib/tpl/alephnull/images/favicon.ico</url>
+    </image>
+    <item rdf:about="https://www.alephnull.org/w/playground/playground?rev=1182882441&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2007-06-26T14:27:21-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>playground:playground</title>
+        <link>https://www.alephnull.org/w/playground/playground?rev=1182882441&amp;do=diff</link>
+        <description>PlayGround</description>
+    </item>
+</rdf:RDF>

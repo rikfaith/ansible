@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Project P1</title>
+<style type="text/css">
+<!--
+li {
+	font-family: Arial, Helvetica, sans-serif;
+}
+td {
+	font-family: Arial, Helvetica, sans-serif;
+}
+-->
+</style>
+<link href="../styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<table width="768">
+  <tr>
+    <td colspan="2"><a href="../index.html"><img src="../hybridsky.png" width="499" height="112" border="0" /></a> </td>
+  </tr>
+  <tr>
+    <td  align="center"><h3><a href="index.html">GSE, Instrumentation and Test Equipment</a></h3>
+      <h3><a href="DAQ.php">Digital Data Acquisition (DAQ) System</a></h3>
+      <h2>Firmware Page </h2>
+      <p>Last Update, February 27, 2009, by Stephen Daniel </p></td>
+  </tr>
+  <tr>
+    <td><h3>Data Capture Firmware </h3>
+      <p>The DAQ system is built around a <a href="http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en010273">PIC 18F2455 </a>microprocessor from <a href="http://www.microchip.com">Microchip</a>. </p>
+      <p>The process was chosen for the following reasons:</p>
+      <ul>
+        <li>We had familiarity with the PIC 18 line, including a significant investment in development tools.</li>
+        <li>This chip is available in a through-hole (DIP) package, avoiding the need to fabricate a complex surface-mount PCB</li>
+        <li>This chip has both a USB module and an SPI module to facilite communication with other parts of the system.</li>
+      </ul>
+      <p>Unfortunately the chip has relatively little program and data memory. The memory limitations provided some challenges to the firmware design.</p>
+      <h3>High Level Architecture </h3>
+      <p>After some experimentation we settled on the following high-level architecture for the firmware. </p>
+      <ul>
+        <li>
+          <p> The first 2KB of program memory are used as a USB bootstrap. This code is a lightly modified version of Microchip's USB bootloader. This code is never used during normal operation of the DAQ system. </p>
+        </li>
+        <li>
+          <p> The next 4KB of program memory is a flash-memory bootstrap. During normal operation when the PIC comes out of reset this code examines the position of the mode switch and selects a firmware package to load. The firmware is read off flash and run.</p>
+        </li>
+        <li>The last 18 KB of program memory are used to implement the various operating modes of the DAQ system. At present the following modes are implemented:
+          <ul>
+            <li>Mode 0: Run the UBS boot loader. This is mode is used to update the flash bootloader.</li>
+            <li>Mode 1: Runs a module that makes the contents of flash memory available over the USB as a USB mass storage device. A PC can see the flash memory as a small external hard drive.</li>
+            <li>Mode 2: Runs a module that implements a USB comm port. A PC can connect to this using a tool such as <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/">PuTTY</a> or Hyperterminal. Users can interact with the DAQ system to control and configure it.</li>
+            <li>Mode 3: Runs a module that captures data onto the flash memory.  </li>
+          </ul>
+        </li>
+      </ul>
+    <p>The various firmware modules do not directly interact except during system initialization.</p>
+    <h3>Firmware Availability</h3>
+    <p>The modules in the firmware that communicate over the USB are using Microchip's USB framework. Microchip's licensing allows me to freely distribute the binaries. I am unclear if I can distribute the sources. More work is needed.</p>
+    <p>The source code to mode 3, the data capture code, is free of licensing restrictions and my intent is to make it avaliable under a GPL.  </p>
+    <p>I have not yet done the work to package up the binaries or the available sources, so I am not providing a link here. Interested parties should contact me directly.</p>
+    <h3>PIC Tool Chains</h3>
+    <p>The modules that use the USB hardware use Microchip's C compiler. However due to budget constraints, I use that C compiler in its free mode, which limits some object code optimization. The code has been carefully written to fit within the size limits listed above even with the optimization partially disabled.</p>
+    <p>The code to capture and store data was written using the <a href="http://www.bknd.com/cc8e/index.shtml">BKND CC8E compiler</a>, which I purchased. For small PIC 18 projects this compiler generates excellent code and is very easy to work with. Unfortunately code written for this compiler is not compatible with Microchip's compiler, or vice versa. (Both compilers extend the C language in useful and incompatible ways.) </p></td>
+  </tr>
+</table>
+</body>
+</html>

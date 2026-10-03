@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="https://alephnull.org/w/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://alephnull.org/w/feed.php">
+        <title>alephnull.com</title>
+        <description></description>
+        <link>https://alephnull.org/w/</link>
+        <image rdf:resource="https://alephnull.org/w/lib/tpl/alephnull/images/favicon.ico" />
+       <dc:date>2022-11-27T16:41:12-0500</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://alephnull.org/w/garden/garden?rev=1647658471&amp;do=diff"/>
+                <rdf:li rdf:resource="https://alephnull.org/w/garden/plantings?rev=1650322586&amp;do=diff"/>
+                <rdf:li rdf:resource="https://alephnull.org/w/recipes/start?rev=1667490553&amp;do=diff"/>
+                <rdf:li rdf:resource="https://alephnull.org/w/1/2_birthday_cake_2022?rev=1644463776&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://alephnull.org/w/lib/tpl/alephnull/images/favicon.ico">
+        <title>alephnull.com</title>
+        <link>https://alephnull.org/w/</link>
+        <url>https://alephnull.org/w/lib/tpl/alephnull/images/favicon.ico</url>
+    </image>
+    <item rdf:about="https://alephnull.org/w/garden/garden?rev=1647658471&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-03-18T22:54:31-0500</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>garden:garden</title>
+        <link>https://alephnull.org/w/garden/garden?rev=1647658471&amp;do=diff</link>
+        <description>Garden 2007
+
+Raised Beds 2007:
+Bed 1, near garage, near house:
+Tomatoes Brandywine, (Seeds of Change). Grew well, many tomatoes initially, then with drought, had problems with decreased production and blossom end rot. Note:  leave more room for plants and stake them well.</description>
+    </item>
+    <item rdf:about="https://alephnull.org/w/garden/plantings?rev=1650322586&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-04-18T18:56:26-0500</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>garden:plantings</title>
+        <link>https://alephnull.org/w/garden/plantings?rev=1650322586&amp;do=diff</link>
+        <description>Strike-through Text
+
+Garden: Plantings 2008
+
+2007 or 2008: Corylus avellana 'contorted', “Harry lauder's Walking stick”, by garage, next to walkway to garden.
+2007 or 2008, planted 2 Honeysuckle,“halls”, on either side of back porch stairs. (Direct Gardening). By 2009, they are covering the trellises there and are cold hardy. Many perfumed flowers in Spring.</description>
+    </item>
+    <item rdf:about="https://alephnull.org/w/recipes/start?rev=1667490553&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-11-03T11:49:13-0500</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>recipes:start</title>
+        <link>https://alephnull.org/w/recipes/start?rev=1667490553&amp;do=diff</link>
+        <description>Recipes
+
+Selena Go-to:
+
+	*   Chinese brown sauce
+	*  Tzatziki sauce
+	*   Arugula salad dressing
+
+	*   Zucchini lasagna
+	*  Broccoli cheddar soup
+	*  Oyster mushroom pasta
+	*  Miso salmon
+	*   Pan fried tofu
+	*   BA Veggie Burger
+	*   Butter Chicken/vegetarian
+
+	*   Camp Celo harvest bars
+	*   Granola
+
+	*  Naan bread
+	*   No-Knead Crusty White Bread
+
+	*   Coconut cream pie
+	*   Cream cheese frosting
+	*   1/2 birthday cake 2022
+	*   Earl Grey Cookies
+
+Main Dishes: Chicken
+
+	*   Daddy Chicken
+	*   …</description>
+    </item>
+    <item rdf:about="https://alephnull.org/w/1/2_birthday_cake_2022?rev=1644463776&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-02-09T22:29:36-0500</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>1:2_birthday_cake_2022</title>
+        <link>https://alephnull.org/w/1/2_birthday_cake_2022?rev=1644463776&amp;do=diff</link>
+        <description>Ideas for 1/2 birthday cake 2022 in Atlanta:
+
+&lt;https://www.livewellbakeoften.com/red-velvet-cupcakes/#wprm-recipe-container-18093&gt;
+
+&lt;https://www.cookingclassy.com/red-velvet-cake/&gt;
+
+Cake flour contains the perfect amount of protein to give your cake structure and create the texture you're after.
+Cake flour will result in lighter, fluffy cupcake. AP flour will be denser.</description>
+    </item>
+</rdf:RDF>

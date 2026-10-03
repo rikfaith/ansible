@@ -1,0 +1,74 @@
+
+<h1 class="sectionedit1" id="documentation">Documentation</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Documentation&quot;,&quot;hid&quot;:&quot;documentation&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-29&quot;} -->
+<h2 class="sectionedit2" id="building">Building</h2>
+<div class="level2">
+<pre class="code">./bootstrap
+./configure
+make</pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Building&quot;,&quot;hid&quot;:&quot;building&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;30-87&quot;} -->
+<h2 class="sectionedit3" id="required_packages">Required Packages</h2>
+<div class="level2">
+
+<p>
+To build, it may be necessary to install additional software:
+</p>
+<pre class="code">apt-get install autoconf automake pkg-config libtool
+apt-get install libgtk2.0-dev
+apt-get install libpcre3-dev</pre>
+
+<p>
+urmp will not build on an Ubuntu 7.10 (Gutsy Gibbon), or earlier, system.
+</p>
+
+<p>
+mplayer is required to actually play music.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Required Packages&quot;,&quot;hid&quot;:&quot;required_packages&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;88-419&quot;} -->
+<h2 class="sectionedit4" id="building_the_database">Building the Database</h2>
+<div class="level2">
+<pre class="code">./urmp --ignore --build /audio/mp3</pre>
+
+<p>
+where /audio/mp3 is a directory tree containing .mp3 files.  Files of other types will be ignored.  Files will be opened read-only by a number of concurrent processes.  Status will be reported as the build progresses.  At this time, this process can only be run from the command line – there is no <abbr title="Graphical User Interface">GUI</abbr> verison.  The database and other files are stored in ~/.urmp.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Building the Database&quot;,&quot;hid&quot;:&quot;building_the_database&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;420-858&quot;} -->
+<h2 class="sectionedit5" id="running_the_gui">Running the GUI</h2>
+<div class="level2">
+<pre class="code">./urmp -g</pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Running the GUI&quot;,&quot;hid&quot;:&quot;running_the_gui&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;859-900&quot;} -->
+<h2 class="sectionedit6" id="debugging">Debugging</h2>
+<div class="level2">
+
+<p>
+To debug the build, run with
+</p>
+<pre class="code">./urmp --ignore --build /audio/mp3 --procs 1 -t worker</pre>
+
+<p>
+To analyze an mp3 file:
+</p>
+<pre class="code">./urmp --parse &lt;filename&gt;</pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Debugging&quot;,&quot;hid&quot;:&quot;debugging&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:6,&quot;range&quot;:&quot;901-1063&quot;} -->
+<h2 class="sectionedit7" id="audio_decompression_and_licenses">Audio Decompression and Licenses</h2>
+<div class="level2">
+
+<p>
+Currently, urmp uses mplayer to play music, so mplayer must be installed.  Therefore, urmp does not contain any mp3 decompression technology – all it does it read mp3 and id3 headers.  Because of this limitation, urmp can be distributed under an MIT license.  If urmp is ever linked against a library such as libmad, then it would fall under the mroe restrictive <abbr title="GNU General Public License">GPL</abbr>.  In any case, the data structures and library code in the Ur library would remain under an MIT license.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Audio Decompression and Licenses&quot;,&quot;hid&quot;:&quot;audio_decompression_and_licenses&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:7,&quot;range&quot;:&quot;1064-&quot;} -->

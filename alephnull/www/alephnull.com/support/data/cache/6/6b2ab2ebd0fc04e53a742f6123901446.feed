@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="https://www.hybridsky.org/w/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://www.hybridsky.org/w/feed.php">
+        <title>alephnull.com weather</title>
+        <description></description>
+        <link>https://www.hybridsky.org/w/</link>
+        <image rdf:resource="https://www.hybridsky.org/w/lib/tpl/alephnull/images/favicon.ico" />
+       <dc:date>2021-07-26T12:19:36-0400</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://www.hybridsky.org/w/weather/start?rev=1204028894&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://www.hybridsky.org/w/lib/tpl/alephnull/images/favicon.ico">
+        <title>alephnull.com</title>
+        <link>https://www.hybridsky.org/w/</link>
+        <url>https://www.hybridsky.org/w/lib/tpl/alephnull/images/favicon.ico</url>
+    </image>
+    <item rdf:about="https://www.hybridsky.org/w/weather/start?rev=1204028894&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-02-26T07:28:14-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>weather:start</title>
+        <link>https://www.hybridsky.org/w/weather/start?rev=1204028894&amp;do=diff</link>
+        <description>Weather
+
+Other Interesting Weather Stations
+
+	*   Banner Elk, NC; elevation 4000 ft
+
+Davis Weather Station
+
+* Vantage Pro2(tm) Plus
+
+	*   Quick Reference Guide local cache
+	*   Sensor Suite local cache
+	*   Console local cache
+	*  Spec Sheet local cache
+	*  Ethernet Appnote  local cache
+	*  Serial Protocol  local cache
+	*  Archive Format  local cache
+
+Other Links
+
+	*   Weather Reports for KB4ID
+	*   Error List for KB4ID
+	*  APRS Protocol Reference
+	*   CWOPS Main Site
+
+Weather Software for Linux…</description>
+    </item>
+</rdf:RDF>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="https://199.48.130.3/w/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://199.48.130.3/w/feed.php">
+        <title>alephnull.com notes</title>
+        <description></description>
+        <link>https://199.48.130.3/w/</link>
+        <image rdf:resource="https://199.48.130.3/w/lib/tpl/alephnull/images/favicon.ico" />
+       <dc:date>2026-09-25T09:46:09-0400</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://199.48.130.3/w/notes/8glasses?rev=1242900317&amp;do=diff"/>
+                <rdf:li rdf:resource="https://199.48.130.3/w/notes/start?rev=1242899851&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://199.48.130.3/w/lib/tpl/alephnull/images/favicon.ico">
+        <title>alephnull.com</title>
+        <link>https://199.48.130.3/w/</link>
+        <url>https://199.48.130.3/w/lib/tpl/alephnull/images/favicon.ico</url>
+    </image>
+    <item rdf:about="https://199.48.130.3/w/notes/8glasses?rev=1242900317&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-05-21T06:05:17-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>notes:8glasses</title>
+        <link>https://199.48.130.3/w/notes/8glasses?rev=1242900317&amp;do=diff</link>
+        <description>The Myth of 8-10 Glasses of Water per Day
+
+There is a persistent recommendation on the net that people should drink 8-10 glasses of water per day; and that that water should be in the form of water and not any other kind of beverage.  This is an overestimate and misinterpretation.  The</description>
+    </item>
+    <item rdf:about="https://199.48.130.3/w/notes/start?rev=1242899851&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-05-21T05:57:31-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>notes:start</title>
+        <link>https://199.48.130.3/w/notes/start?rev=1242899851&amp;do=diff</link>
+        <description>Notes
+
+	*  The Myth of &quot;8-10&quot; glasses of water a day</description>
+    </item>
+</rdf:RDF>

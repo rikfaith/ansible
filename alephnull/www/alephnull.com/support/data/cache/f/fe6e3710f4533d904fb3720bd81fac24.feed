@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://alephnull.com/w/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://alephnull.com/w/feed.php">
+        <title>alephnull.com recipes</title>
+        <description></description>
+        <link>http://alephnull.com/w/</link>
+        <image rdf:resource="http://alephnull.com/w/lib/images/favicon.ico" />
+       <dc:date>2011-12-30T09:16:57-05:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://alephnull.com/w/recipes/bell_pepper_fettuccine?rev=1282484739&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/recipes/black_beans_and_rice?rev=1236715267&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/recipes/brownies?rev=1239890630&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/recipes/chicken_with_tarragon?rev=1262912178&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/recipes/chilli?rev=1205104683&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/recipes/coquilles_st_jacques?rev=1205198938&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/recipes/crab_cakes?rev=1239638841&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/recipes/cranberry_sauce_with_orange?rev=1259275704&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/recipes/daddychicken?rev=1205111031&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/recipes/flan?rev=1262359485&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/recipes/greens_and_chicken_with_peanuts?rev=1243466744&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/recipes/herbs?rev=1205104822&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/recipes/lambburgers?rev=1205703880&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/recipes/magic_cookie_bars?rev=1262359847&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/recipes/maryland_crab_cakes?rev=1271008025&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/recipes/meatloaf?rev=1259275306&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/recipes/pancakes?rev=1240009454&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/recipes/pumpkin_pie?rev=1240929093&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/recipes/saffron_orzo?rev=1262995222&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/recipes/selena_s_stir_fry?rev=1278183407&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/recipes/start?rev=1316275775&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/recipes/stir_fry_shrimp_with_basil?rev=1256409385&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/recipes/turkey_pot_pie?rev=1262563907&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/recipes/verzada?rev=1236783234&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/recipes/white_bean_soup?rev=1240929679&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://alephnull.com/w/lib/images/favicon.ico">
+        <title>alephnull.com</title>
+        <link>http://alephnull.com/w/</link>
+        <url>http://alephnull.com/w/lib/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://alephnull.com/w/recipes/bell_pepper_fettuccine?rev=1282484739&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-08-22T09:45:39-05:00</dc:date>
+        <title>recipes:bell_pepper_fettuccine</title>
+        <link>http://alephnull.com/w/recipes/bell_pepper_fettuccine?rev=1282484739&amp;do=diff</link>
+        <description>Bell Pepper Fettuccine “Confetti Fettuccine”, from Elaine Tait, Knight-Ridder Newspapers (Tampa Tribune?)
+
+
+	*  1/4 cup olive oil
+	*  1 large chicken breast, skinned, boned, cut into thin strips
+	*  1 large onion, coarsely chopped, or in rings if preferred
+	*  1 sweet red bell pepper, cut in strips
+	*  1 sweet green bell pepper, cut in strips
+	*  2 cloves garlic, minced
+	*  (1/4 to 1 teaspoon red pepper flakes, per taste)
+	*  2 or 3 large ripe tomatoes, seeded and cored, diced
+	*  1 pound cooked…</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/recipes/black_beans_and_rice?rev=1236715267&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-03-10T16:01:07-05:00</dc:date>
+        <title>recipes:black_beans_and_rice</title>
+        <link>http://alephnull.com/w/recipes/black_beans_and_rice?rev=1236715267&amp;do=diff</link>
+        <description>Black Beans and Rice
+ from “A Taste of Old Cuba”, by Maria Josefa LLuria de O'Higgins.
+
+8 Servings
+
+Ingredients: 
+1. For cooking the beans:
+
+	*  1 pound dry black beans
+	*  2.5 quarts water
+	*  1 green bell pepper, cored, seeded and cut into strips
+	*  2 garlic cloves, peeled and lightly crushed but left whole
+	*  1 large slice of onion (optional)</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/recipes/brownies?rev=1239890630&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-16T10:03:50-05:00</dc:date>
+        <title>recipes:brownies</title>
+        <link>http://alephnull.com/w/recipes/brownies?rev=1239890630&amp;do=diff</link>
+        <description>Katherine Hepburn's Brownies
+
+Temp:325 degrees
+
+Ingredients:
+
+	*  2 squares unsweetened chocolate
+	*  1/4 pound butter
+	*  1 cup granulated sugar
+	*  2 eggs
+	*  1/2 teaspoon vanilla extract
+	*  1/4 cup flour
+	*  1 cup walnuts, chopped
+	*  1/4 teaspoon</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/recipes/chicken_with_tarragon?rev=1262912178&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-01-07T19:56:18-05:00</dc:date>
+        <title>recipes:chicken_with_tarragon</title>
+        <link>http://alephnull.com/w/recipes/chicken_with_tarragon?rev=1262912178&amp;do=diff</link>
+        <description>Chicken with Tarragon (Poulet a l'estragon) 
+from 60 minute gourmet
+
+
+	*  2 to 3 lb chicken in pieces, or legs and thighs
+	*  salt and pepper
+	*  1 tablespoon butter or olive oil
+	*  2 tablespoon finely chopped shallots, or 1 teaspoon dried onion
+	*  2 teaspoon finely chopped fresh tarragon, or 1 teaspoon dried tarragon
+	*  1/2 to 3/4 cup dry white wine
+	*  (1/4 cup water)</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/recipes/chilli?rev=1205104683&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-03-09T19:18:03-05:00</dc:date>
+        <title>recipes:chilli</title>
+        <link>http://alephnull.com/w/recipes/chilli?rev=1205104683&amp;do=diff</link>
+        <description>These recipes are all based on Rik's Mom's Chili recipe.
+
+Original
+
+
+
+
+	*  1/2 pound, ground chuck
+	*  chopped onion
+	*  8oz tomato sauce
+	*  1 can tomato soup
+	*  15oz red kidney beans
+	*  1 tsp flour
+	*  2-3 tsp chili powder
+	*  1 tsp brown sugar
+	*  cook 25 minutes</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/recipes/coquilles_st_jacques?rev=1205198938&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-03-10T21:28:58-05:00</dc:date>
+        <title>recipes:coquilles_st_jacques</title>
+        <link>http://alephnull.com/w/recipes/coquilles_st_jacques?rev=1205198938&amp;do=diff</link>
+        <description>Coquilles St Jacques
+
+To serve 2:
+
+1 cup sliced mushrooms
+2 tablespoons finely chopped shallot or green onion
+3 tablespoons butter
+1 pound scallops
+one half cup dry white wine
+1 tablespoon lemon juice
+one eighth teaspoon dried crushed thyme
+2 tablespoons flour
+one half cup milk or half-n-half
+salt, pepper to taste
+bread crumbs, grated Parmesan cheese</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/recipes/crab_cakes?rev=1239638841&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-13T12:07:21-05:00</dc:date>
+        <title>recipes:crab_cakes</title>
+        <link>http://alephnull.com/w/recipes/crab_cakes?rev=1239638841&amp;do=diff</link>
+        <description>Maryland Crab Cakes, recipe from Whole Foods
+
+Serves 4
+
+Ingredients: 
+
+	*  1 pound jumbo lump crabmeat
+	*  2/3 cup dry plain breadcrumbs
+	*  2 teaspoons Old Bay seasoning or other seafood seasoning
+	*  1/3 cup finely diced red pepper (optional)
+	*  1/4 cup  finely sliced scallion
+	*  1/4 cup finely chopped parsley
+	*  freshly ground black pepper
+	*  2 tablespoons mayonnaise
+	*  1 egg plus 1 egg white
+	*  oil for frying (olive)</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/recipes/cranberry_sauce_with_orange?rev=1259275704&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-11-26T17:48:24-05:00</dc:date>
+        <title>recipes:cranberry_sauce_with_orange</title>
+        <link>http://alephnull.com/w/recipes/cranberry_sauce_with_orange?rev=1259275704&amp;do=diff</link>
+        <description>Cranberry Sauce with Orange
+
+(Bon Appetit, November 1997, pg. 164.)
+
+	*  3/4 cup water
+	*  1/2 cup packed golden brown sugar
+	*  1 12 ounce package cranberries, about 3 cups
+	*  2 teaspoons grated orange peel, or 2/3 teaspoons dried orange peel
+1. Stir water and sugar in heavy saucepan over medium heat until sugar dissolves. Bring mixture to a boil.2. Add cranberries and orange peel.3. Reduce heat and simmer till cranberries burst, about 5 minutes. Remove from heat. Mixture will thicken as it co…</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/recipes/daddychicken?rev=1205111031&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-03-09T21:03:51-05:00</dc:date>
+        <title>recipes:daddychicken</title>
+        <link>http://alephnull.com/w/recipes/daddychicken?rev=1205111031&amp;do=diff</link>
+        <description>*  Preheat oven to 360°F
+	*  Obtain 4 whole chicken legs, cut in half
+	*  Place legs and thighs in pan, removing excess skin where possible
+	*  Drizzle olive oil over chicken
+	*  Cover first side of chicken with salt, pepper,  Fines Herbes, and basil (resist all temptation to add additional herbs)
+	*  Cover pan with aluminum foil</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/recipes/flan?rev=1262359485&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-01-01T10:24:45-05:00</dc:date>
+        <title>recipes:flan</title>
+        <link>http://alephnull.com/w/recipes/flan?rev=1262359485&amp;do=diff</link>
+        <description>Flan
+
+Oven 350 degrees
+
+
+	*  6 eggs
+	*  2 cups milk
+	*  1 teaspoon vanilla extract
+	*  1.5 cups sugar
+
+	*  Caramelize half cup sugar in nonstick skillet, stirring constantly. When melted, pour into the bottom of a Pyrex dish.
+		*  Beat 6 eggs, or mix in blender. Add milk, vanilla and 1 cup sugar. Beat thoroughly; pour into dish on top of caramelized sugar.
+		*  Place Pyrex dish in a larger dish. Add water to the larger dish to half cover the contents of the Pyrex dish. (“Bano Maria”)
+		*  Bake 4…</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/recipes/greens_and_chicken_with_peanuts?rev=1243466744&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-05-27T19:25:44-05:00</dc:date>
+        <title>recipes:greens_and_chicken_with_peanuts</title>
+        <link>http://alephnull.com/w/recipes/greens_and_chicken_with_peanuts?rev=1243466744&amp;do=diff</link>
+        <description>Stir-fried Greens and Chicken with Peanuts
+
+Bon Appetit, April 2008
+
+Ingredients:
+
+	*  2 to 3 tablespoons soy sauce, divided
+	*  2 tablespoons dry sherry, divided
+	*  3 teaspoons sesame oil, divided
+	*  2 teaspoons brown sugar, divided
+	*  1 1/2 pounds skinless boneless chicken breast, cut crosswise into thin strips
+	*  1 can straw mushrooms, drained
+	*  3 tablespoons peanut oil
+	*  4 to 6 green onions, chopped, white and green parts separated
+	*  2 teaspoons chopped seeded serrano chiles, or dr…</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/recipes/herbs?rev=1205104822&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-03-09T19:20:22-05:00</dc:date>
+        <title>recipes:herbs</title>
+        <link>http://alephnull.com/w/recipes/herbs?rev=1205104822&amp;do=diff</link>
+        <description>Basil
+
+
+California Sweet Basil from  Penzeys Spices.
+
+Chipotle
+
+
+Ground Red Chipotle from  Penzeys Spices.
+
+Fines Herbes
+
+
+From  Penzeys Spices, containing chervil, parsley, tarragon, and chives.
+
+Southwest Seasoning
+
+
+From  Penzeys Spices, containing salt, several kinds ofpepper, garlic, oregano, cumin, chipotle, and cilantro.</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/recipes/lambburgers?rev=1205703880&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-03-16T17:44:40-05:00</dc:date>
+        <title>recipes:lambburgers</title>
+        <link>http://alephnull.com/w/recipes/lambburgers?rev=1205703880&amp;do=diff</link>
+        <description>*  1 lb. ground lamb
+	*  1 tbsp. soy sauce
+	*  1 HEAPING tbsp.  Lan Chi Chili Paste with Garlic (Chili, Salt, Soy Bean Oil, Garlic):
+
+
+
+	*  Mix well.  Form in to 4 patties.  Grill.</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/recipes/magic_cookie_bars?rev=1262359847&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-01-01T10:30:47-05:00</dc:date>
+        <title>recipes:magic_cookie_bars</title>
+        <link>http://alephnull.com/w/recipes/magic_cookie_bars?rev=1262359847&amp;do=diff</link>
+        <description>Magic Cookie Bars
+
+Oven: 350 degrees
+
+
+	*  1/2 cup (1 stick) butter
+	*  1 1/2 cups graham cracker crumbs
+	*  1  (14) oz can sweetened condensed milk
+	*  2 cups (12 oz) semi sweet chocolate chips, or butterscotch chips
+	*  1 1/3 cups flaked coconut
+	*  1 cup chopped nuts</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/recipes/maryland_crab_cakes?rev=1271008025&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-04-11T13:47:05-05:00</dc:date>
+        <title>recipes:maryland_crab_cakes</title>
+        <link>http://alephnull.com/w/recipes/maryland_crab_cakes?rev=1271008025&amp;do=diff</link>
+        <description>Maryland Crab Cakes
+
+
+	*  1 lb lump crab meat
+	*  2/3  cup dry plain breadcrumbs
+	*  2 teaspoon Old bay seasoning or other seafood seasoning
+	*  (1/3 cup finely diced red pepper)
+	*  1/4 cup finely sliced scallion or green onion
+	*  (1/4 cup finely chopped parsley)
+	*  freshly ground black pepper
+	*  2 tablespoons mayonnaise
+	*  1 egg plus 1 egg white
+	*  (chipotle to taste)
+	*  oil for frying, olive
+	*  Tartar sauce, lemon wedges</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/recipes/meatloaf?rev=1259275306&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-11-26T17:41:46-05:00</dc:date>
+        <title>recipes:meatloaf</title>
+        <link>http://alephnull.com/w/recipes/meatloaf?rev=1259275306&amp;do=diff</link>
+        <description>Meatloaf
+
+350 degrees
+
+
+	*  1 pound ground turkey thigh
+	*  1/2 pound ground beef
+	*  1 cup tomato or V8 juice
+	*  3/4 cup oatmeal, uncooked
+	*  1 egg, beaten
+	*  1/4 cup chopped onion
+	*  1 and 1/2  teaspoons Southwest seasoning, or salt/pepper to taste</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/recipes/pancakes?rev=1240009454&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-17T19:04:14-05:00</dc:date>
+        <title>recipes:pancakes</title>
+        <link>http://alephnull.com/w/recipes/pancakes?rev=1240009454&amp;do=diff</link>
+        <description>Blueberry  Buttermilk Pancakes (revised by Elaine Magee, Recipe Doctor)
+4 Servings
+
+Ingredients:
+
+	*  1 cup flour
+	*  1 teaspoon baking powder
+	*  1/2 teaspoon baking soda
+	*  1/4 teaspoon salt
+	*  1 tablespoon sugar
+	*  1 large beaten egg
+	*  1 and 1/4 cup buttermilk
+	*  1 tablespoon canola oil or melted butter
+	*  1 tablespoon maple syrup
+	*  1 teaspoon vanilla extract
+	*  1 cup fresh or frozen blueberries</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/recipes/pumpkin_pie?rev=1240929093&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-28T10:31:33-05:00</dc:date>
+        <title>recipes:pumpkin_pie</title>
+        <link>http://alephnull.com/w/recipes/pumpkin_pie?rev=1240929093&amp;do=diff</link>
+        <description>Libby's famous Pumpkin Pie
+8 servings
+
+Ingredients:
+
+	*  3/4 cup sugar
+	*  1/2 teaspoon salt
+	*  1 teaspoon ground cinnamon
+	*  1/2 teaspoon ground ginger
+	*  1/4 teaspoon ground cloves
+	*  2 large eggs
+	*  1 can (15 oz) pumpkin
+	*  1 can (12 fl oz) evaporated milk
+	*  1 pie shell</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/recipes/saffron_orzo?rev=1262995222&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-01-08T19:00:22-05:00</dc:date>
+        <title>recipes:saffron_orzo</title>
+        <link>http://alephnull.com/w/recipes/saffron_orzo?rev=1262995222&amp;do=diff</link>
+        <description>Saffron Orzo, from “Moosewood Restaurant Cooks at Home”
+
+
+	*  Generous pinch of saffron, crumbled (about 1/2 teaspoon)
+	*  1/2 pound orzo
+	*  1/2 cup grated Parmesan or Pecorino cheese
+	*  salt and ground black pepper to taste
+
+	*  Bring 3 quarts water to boil in a big pot. Crumble the saffron into a small bowl and add about 3 tablespoons of the hot water, stirring well.
+	*  Stir the orzo into the big pot of boiling water and cook till al dente, about 8 minutes.
+	*  Drain the orzo and quickly to…</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/recipes/selena_s_stir_fry?rev=1278183407&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-07-03T14:56:47-05:00</dc:date>
+        <title>recipes:selena_s_stir_fry</title>
+        <link>http://alephnull.com/w/recipes/selena_s_stir_fry?rev=1278183407&amp;do=diff</link>
+        <description>Selena's Stir fry chicken (aka Sizzlin' Szechuan Chicken)
+from: “A Guy's Guide to great eating” by Don Mauer
+
+  Marinade and chicken
+* 1 tablespoon soy sauce
+* 1 tablespoon cornstarch
+* 1/2 teaspoon sugar
+* 1 garlic clove, minced
+* 1 whole skinless boneless chicken breast, cut into thin strips (or 1 pound shrimp, peeled and deveined)
+
+Sauce</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/recipes/start?rev=1316275775&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2011-09-17T12:09:35-05:00</dc:date>
+        <title>recipes:start</title>
+        <link>http://alephnull.com/w/recipes/start?rev=1316275775&amp;do=diff</link>
+        <description>*   Daddy Chicken
+	*   Chili
+	*   Coquilles St Jacques
+	*   Spicy Lamb Burgers
+	*   Black Beans and Rice (Frijoles Negros)
+	*   Verzada Asturiana 
+	*   Maryland Crab Cakes
+	*   Katherine Hepburn's Brownies
+	*   Blueberry Buttermilk Pancakes 
+	*   Pumpkin Pie
+	*   White Bean Soup with bacon
+	*   Stir-fried chicken and greens with peanuts
+	*   Stir-fried shrimp with basil
+	*   Meatloaf
+	*   Cranberry sauce with Orange
+	*   Flan
+	*   Magic Cookie Bars
+	*   Turkey Pot Pie
+	*   Chicken with Tarragon
+…</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/recipes/stir_fry_shrimp_with_basil?rev=1256409385&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-10-24T14:36:25-05:00</dc:date>
+        <title>recipes:stir_fry_shrimp_with_basil</title>
+        <link>http://alephnull.com/w/recipes/stir_fry_shrimp_with_basil?rev=1256409385&amp;do=diff</link>
+        <description>Stir-fried Shrimp with Basil
+
+	* from: News and Observer, April 2000
+
+	* 2 tablespoons peanut or other oil, divided
+	* 1 pound large shrimp, shelled and deveined
+	* 1 small onion, halved and thinly sliced
+	* 2 tablespoons red curry paste
+	* 1 medium red bell pepper, cut into thin strips
+	* 3/4 cup chopped seeded plum tomatoes
+	* 2 tablespoons Asian fish sauce
+	* 1 &amp; 1/2 teaspoons light brown sugar
+	* 1 cup fresh basil leaves, rinsed and patted dry</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/recipes/turkey_pot_pie?rev=1262563907&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-01-03T19:11:47-05:00</dc:date>
+        <title>recipes:turkey_pot_pie</title>
+        <link>http://alephnull.com/w/recipes/turkey_pot_pie?rev=1262563907&amp;do=diff</link>
+        <description>Turkey Pot Pie
+
+ Bon Appetit, November 2009
+
+Oven 400F.
+
+
+	*  2 tablespoons olive oil
+	*  1 cup chopped onion
+	*  6-8 oz sliced mushrooms
+	*  1 cup thinly sliced peeled carrots, about 3 
+	*  1/2 cup diced leftover cooked veges
+	*  1 1/2 cups cubed cooked turkey
+	*  1 to 1 1/4 cup gravy
+	*  1 teaspoon chopped fresh thyme, or 1/4 teaspoon dried thyme
+	*  1/4 cup peas (optional)
+	*  chopped parsley, fresh (optional)
+	*  1 egg white beaten with 1 teaspoon water
+	*  1 pie crust (see Joy of Cooking)</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/recipes/verzada?rev=1236783234&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-03-11T10:53:54-05:00</dc:date>
+        <title>recipes:verzada</title>
+        <link>http://alephnull.com/w/recipes/verzada?rev=1236783234&amp;do=diff</link>
+        <description>Verzada Asturiana
+
+from”Clarita's Cocina”
+ by Clarita del Palacio Valdes de Garcia
+
+Ingredients:
+
+	*  1 small ham hock (optional)
+	*  2 chorizo sausages
+	*  Quarter pound  slab smoked bacon (optional) 
+	*  2 morzillas(pork blood sausage, optional)
+	*  2 to 4 short ribs, fat removed, or: 1.5 pounds beef stew meat and 2 beef marrow bones
+	*  Half medium onion
+	*  Half medium green bell pepper
+	*  1 medium ripe tomato, or 2 dried tomatoes
+	*  1 garlic clove, crushed
+	*  1 bay leaf
+	*  2 pounds gree…</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/recipes/white_bean_soup?rev=1240929679&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-28T10:41:19-05:00</dc:date>
+        <title>recipes:white_bean_soup</title>
+        <link>http://alephnull.com/w/recipes/white_bean_soup?rev=1240929679&amp;do=diff</link>
+        <description>White Bean Soup with Bacon
+from:“Not your mother's Slow Cooker Cookbook” by Beth Hensperger and Julie Kaufmann
+
+Ingredients:
+
+	*  2 cups dried navy or Great Northern beans, rinsed, picked over
+	*  2 to 3 strips bacon, fried and dried on towels, crumbled; or 1 sausage, or ham bone.
+	*  1 small yellow onion, finely chopped
+	*  (1 rib celery, minced, optional)
+	*  1 small carrot, minced
+	*  1 bouquet garni: oregano sprig, 3 sprigs flat leaf parsley, 1 fresh sage leaf, and 1 bay leaf, tied together …</description>
+    </item>
+</rdf:RDF>

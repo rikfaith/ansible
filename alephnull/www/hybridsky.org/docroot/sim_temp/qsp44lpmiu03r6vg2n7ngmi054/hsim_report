@@ -1,0 +1,73 @@
+<pre>
+THERE IS NO WARRANTY FOR THIS PROGRAM, TO THE EXTENT PERMITTED
+BY APPLICABLE LAW.  THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES
+PROVIDE THIS PROGRAM "AS IS" WITHOUT WARRANTY OF ANY KIND,
+EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO,
+THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND
+PERFORMANCE OF THE PROGRAM IS WITH YOU.
+
+Specifically, while this simulator has been somewhat tested
+and appears to give reasonable results over a useful range
+of inputs, the authors make no claims of correctness or even
+reasonableness.
+
+
+Section 1: Geometry
+	Tank Height         0.470 meters
+	Tank Volume         2.143 liters
+	Ullage Height       0.013 meters
+	Grain Length        0.457 meters
+	Nozzle Throat       1.000 inches
+	Nozzle Exit         1.600 inches
+	Nozzle Half Angle   15.0 degrees
+	C* Adjustment       0.95
+	Cf Adjustment       0.90
+	Ambient Pressure    1.0  atm
+
+Section 2: Fill Conditions
+	N2O Supply Pressure 904.8 psi
+	Init Pressure       801.4 psi
+	Init Temp              75 F
+	Init N2O Mass        1.58 kg
+	Init N2O Density     0.75 g/cc
+	N2O Vented to chill  0.17 kg
+	                     0.38 lbs
+	Total N2O Consumed   3.86 lbs
+	Fuel                 PVC
+
+Section 3: Empty Conditions
+	Final Pressure      474.1 psi
+	Final Temp             35 F
+	Ullage N2O Mass      0.19 kg
+	Ullage Percentage    12.2 %
+
+Section 4: Chamber Summary   Init  Final   Average
+	Grain Port           2.300  2.455  2.381 inches
+	Grain Mass           0.882  0.664 kg
+	Fuel Consumed               0.219 kg
+			      Min     Max     Average
+	Chamber Pressure     275.96  367.12  323.49 psi
+	O/F Ratio              6.0    6.6    6.3
+
+Section 5: Injector Summary 
+	Injector Diameter     4.83  mm
+	                      0.190 inches
+	Injector Cd           0.70
+	Tank/Chamber Pressure Ratio
+	                        Min     Max    Average
+	                        1.72    2.18    1.94
+
+Section 6: Nozzle Summary        Min     Max    Average
+	Exit Pressure           1.41    1.87    1.65 atm
+
+Section 7: Performance Summary  Init   Min    Max    Average
+	Thrust                  391    287    391    341 lbf
+	                       1740   1275   1740   1517 N
+	Delivered ISP          1758   1725   1758   1744 meters/sec
+	Delivered ISP           179    176    179    178 seconds
+	Burn Time             1.844 seconds
+	Total Impulse          2798 N-seconds
+	Motor Designation     L-1517 (9%)
+</pre>
+

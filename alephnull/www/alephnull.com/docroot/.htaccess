@@ -1,0 +1,14 @@
+<Files ~ "^[\._]ht">
+ Order allow,deny
+ Deny from all
+ Satisfy All
+</Files>
+
+RedirectPermanent /party</a><br> http://alephnull.com/party/
+
+RewriteEngine on
+
+RewriteRule   ^$ /w/? [R,L]
+
+RewriteRule   ^/$ /w/? [R,L]
+

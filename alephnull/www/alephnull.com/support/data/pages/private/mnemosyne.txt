@@ -1,0 +1,78 @@
+====== mnemosyne ======
+
+{{private:m4a89gtd.jpg}}
+
+====New Configuration=====
+
+  * Boot disk: 9VM6ZGVS 9SL142-302 In Warranty Expiration 17-Nov-2012
+  * Hitachi 0F10311 2TB MAR-2011 3.0Gb/s 7200RPM 5V 400mA 12V 850mA
+    * B9KMPVJF
+    * B9KMKD1F
+    * B9KL52LF
+    * B9KL489F
+    * B9KL4G3F
+
+Use
+  fdisk -H 224 -S 56
+to make one partition per drive.
+
+Create new RAID5:
+  mdadm -C /dev/md_d0 -c 128 -n 5 -l 5 /dev/sd[bcdef]1
+
+Setup crypto:
+  cryptsetup -c aes-cbc-essiv:sha256 -s 128 -h sha256 --align-payload=1024 luksFormat /dev/md_d0
+
+Setup LVM:
+  cryptsetup luksOpen /dev/md_d0 r0
+  pvcreate --metadatasize 506k /dev/mapper/r0 
+  pvs /dev/mapper/r0 -o+pe_start
+  
+  PV         VG   Fmt  Attr PSize PFree 1st PE 
+  /dev/dm-0       lvm2 a-   7.28t 7.28t 512.00k
+  
+  vgcreate -s 1g v0 /dev/mapper/r0
+  
+Setup partitions:
+  lvcreate -L 7t -n tv v0
+  mke2fs -t ext4 -i1048576 -m0 -E stride=32,stripe-width=128 /dev/mapper/v0-tv
+  mkdir /tv
+  mount -o noatime,nodiratime /dev/mapper/v0-tv /tv
+
+====Old Configuration====
+  md1 : active raid5 sdf[0] sdj[4] sdi[3] sdh[2] sdg[1]
+      2930278144 blocks level 5, 64k chunk, algorithm 2 [5/5] [UUUUU]
+  md0 : active raid5 sda[0] sde[4] sdd[3] sdc[5](F) sdb[1]
+      3907030784 blocks level 5, 64k chunk, algorithm 2 [5/4] [UU_UU]
+
+  PV             VG   Fmt  Attr PSize PFree 
+  /dev/mapper/r0 v0   lvm2 a-   3.64T 16.03G
+  /dev/mapper/r1 v1   lvm2 a-   2.73T     0 
+
+  LV       VG   Attr   LSize   Origin Snap%  Move Log Copy% 
+  apollo2  v0   -wi-ao 160.00G                              
+  audio2   v0   -wi-ao 800.00G                              
+  home2    v0   -wi-ao 300.00G                              
+  playpen2 v0   -wi-ao 500.00G                              
+  video2   v0   -wi-ao   1.90T                              
+  miranda2 v1   -wi-ao 730.00G                              
+  p2       v1   -wi-ao   2.02T                              
+
+
+  * md0: Seagate Barracude 7200.11 1000Gbytes, ST31000340AS, 5V 0.65A, 12V 0.6A
+    * 08496: 9QJ0Z8MZ, 9QJ11W1V, 9QJ0L07P, 9QJ107QP, 9QJ0MFDB
+    * sdb kicked out of raid, failed badblocks test, and failed SeaTools
+      * RMA'd week of August 10, 2009
+      * S/N 9QJ107QP P/N 9BX158-303 F/W SD15
+      * warranty expires 10-Jun-2013
+      * Replacement drive (new, not the refurb): 7200.12 1TB S/N 6VP085MB ST31000528AS P/N 9SL154-300
+    * sde kicked out of raid, failed badblocks test with clicking
+      * RMA'd week of December 6, 2009
+      * S/N 9QJ0Z8MZ P/N ST31000340AS/9BX158-303
+      * warranty expires 10-Jun-2013
+      * Replaces with empty-disk-3 (7200.12 1TB S/N 6VP0M986 ST31000528AS)
+  * md1: Western Digital WD Caviar SE16 WD7500AAKS, 750.0GB
+    * 24 NOV 2007: WCAPT0604506
+    * 28 JUN 2007: WCAPT0192719
+    * 24 NOV 2007: WCAPT0604029
+    * 23 NOV 2007: WCAPT0625812
+    * 24 NOV 2007: WCAPT0620921

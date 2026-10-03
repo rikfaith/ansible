@@ -1,0 +1,12 @@
+a:32:{i:0;a:3:{i:0;s:14:"document_start";i:1;a:0:{}i:2;i:0;}i:1;a:3:{i:0;s:6:"p_open";i:1;a:0:{}i:2;i:0;}i:2;a:3:{i:0;s:4:"html";i:1;a:1:{i:0;s:364:"
+The price of reliability is the pursuit of the utmost simplicity.
+<br/>
+--C.A.R. Hoare (1980 ACM Turing Award Lecture)
+<br/>&nbsp;<br/>
+Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.
+<br/>
+--Brian W. Kernighan
+<hr size="1"/>
+<br/>
+";}i:2;i:7;}i:3;a:3:{i:0;s:5:"cdata";i:1;a:1:{i:0;s:1:"
+";}i:2;i:378;}i:4;a:3:{i:0;s:7:"p_close";i:1;a:0:{}i:2;i:379;}i:5;a:3:{i:0;s:10:"listu_open";i:1;a:0:{}i:2;i:379;}i:6;a:3:{i:0;s:13:"listitem_open";i:1;a:1:{i:0;i:1;}i:2;i:379;}i:7;a:3:{i:0;s:16:"listcontent_open";i:1;a:0:{}i:2;i:379;}i:8;a:3:{i:0;s:5:"cdata";i:1;a:1:{i:0;s:1:" ";}i:2;i:383;}i:9;a:3:{i:0;s:12:"externallink";i:1;a:2:{i:0;s:28:"http://hillsboroughpeds.com/";i:1;s:46:" Hillsborough Pediatrics & Adolescent Medicine";}i:2;i:384;}i:10;a:3:{i:0;s:17:"listcontent_close";i:1;a:0:{}i:2;i:464;}i:11;a:3:{i:0;s:14:"listitem_close";i:1;a:0:{}i:2;i:464;}i:12;a:3:{i:0;s:13:"listitem_open";i:1;a:1:{i:0;i:1;}i:2;i:464;}i:13;a:3:{i:0;s:16:"listcontent_open";i:1;a:0:{}i:2;i:464;}i:14;a:3:{i:0;s:5:"cdata";i:1;a:1:{i:0;s:1:" ";}i:2;i:468;}i:15;a:3:{i:0;s:12:"externallink";i:1;a:2:{i:0;s:29:"http://www.cs.unc.edu/~faith/";i:1;s:33:" The Other Home Page of Rik Faith";}i:2;i:469;}i:16;a:3:{i:0;s:17:"listcontent_close";i:1;a:0:{}i:2;i:537;}i:17;a:3:{i:0;s:14:"listitem_close";i:1;a:0:{}i:2;i:537;}i:18;a:3:{i:0;s:13:"listitem_open";i:1;a:1:{i:0;i:1;}i:2;i:537;}i:19;a:3:{i:0;s:16:"listcontent_open";i:1;a:0:{}i:2;i:537;}i:20;a:3:{i:0;s:5:"cdata";i:1;a:1:{i:0;s:1:" ";}i:2;i:541;}i:21;a:3:{i:0;s:12:"externallink";i:1;a:2:{i:0;s:20:"http://www.dict.org/";i:1;s:65:" The DICT Development Group (freely-redistributable dictionaries)";}i:2;i:542;}i:22;a:3:{i:0;s:17:"listcontent_close";i:1;a:0:{}i:2;i:633;}i:23;a:3:{i:0;s:14:"listitem_close";i:1;a:0:{}i:2;i:633;}i:24;a:3:{i:0;s:13:"listitem_open";i:1;a:1:{i:0;i:1;}i:2;i:633;}i:25;a:3:{i:0;s:16:"listcontent_open";i:1;a:0:{}i:2;i:633;}i:26;a:3:{i:0;s:5:"cdata";i:1;a:1:{i:0;s:1:" ";}i:2;i:637;}i:27;a:3:{i:0;s:12:"externallink";i:1;a:2:{i:0;s:16:"http://urmp.org/";i:1;s:26:" urmp: The Ur Music Player";}i:2;i:638;}i:28;a:3:{i:0;s:17:"listcontent_close";i:1;a:0:{}i:2;i:686;}i:29;a:3:{i:0;s:14:"listitem_close";i:1;a:0:{}i:2;i:686;}i:30;a:3:{i:0;s:11:"listu_close";i:1;a:0:{}i:2;i:686;}i:31;a:3:{i:0;s:12:"document_end";i:1;a:0:{}i:2;i:686;}}

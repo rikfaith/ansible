@@ -1,0 +1,111 @@
+====== Nut ======
+
+^ Machine ^ UPS       ^ Voltage ^ upslogger ^ upsshutdown ^ raid-control ^
+| home    | apcups1   | Yes     | Yes       | No (server) |              |
+| char    | apcups1   | Yes     | Yes       | Yes         |              |
+| hydra   | apcups1   | Yes     | Yes       | No (server) | Yes          |
+| charts  | localhost | Yes     | Yes       | Yes         | Yes          |
+| phoebus | localhost | Yes     | Yes       | No (server) | |
+
+
+
+===== Installation =====
+
+  apt-get install nut
+  
+===== Changes to /etc/nut configuration files =====
+==== nut.conf ====
+ 
+  MODE=standalone
+  
+==== ups.conf ====
+=== Serial ===
+
+This is used on phoebus:
+
+  [phoebus]
+        driver = apcsmart
+        port = /dev/ttyS0
+
+In this case, we also need /etc/udev/rules.d/99_nut-serialups.rules:
+
+  KERNEL=="ttyS0", GROUP="nut"
+
+
+=== USB ===
+
+This is used on charts, mnemosyne:
+
+  [localhost]
+        driver = usbhid-ups
+        port = auto
+        vendorid = 051d
+        
+=== SNMP ===
+
+This is used on char, home:
+
+  [apcups1]
+        driver = snmp-ups
+        port = apcups1
+        mibs = apcc
+        community = public
+
+==== upsd.conf ====
+
+This is used on UPS servers mnemosyne, charts, phoebus:
+  LISTEN 0.0.0.0
+
+This is used on UPS clients, but isn't required:
+  LISTEN 127.0.0.1
+
+==== upsd.users ====
+
+This is used on char, charts, home, phoebus:
+
+  [upsmon]
+        password  = upsmon
+        upsmon master
+        actions = ALL
+        instcmds = ALL
+
+==== upsmon.conf ====
+
+This is used on charts, home:
+
+  MONITOR localhost@localhost 1 upsmon upsmon master
+  SHUTDOWNCMD "/sbin/halt"
+  NOTIFYCMD "/etc/nut/upslogger"
+  NOTIFYFLAG ONLINE       EXEC
+  NOTIFYFLAG ONBATT       EXEC
+  NOTIFYFLAG LOWBATT      EXEC
+  NOTIFYFLAG FSD  EXEC
+  NOTIFYFLAG COMMOK       EXEC
+  NOTIFYFLAG COMMBAD      EXEC
+  NOTIFYFLAG SHUTDOWN     EXEC
+  NOTIFYFLAG REPLBATT     EXEC
+  NOTIFYFLAG NOCOMM       EXEC
+  NOTIFYFLAG NOPARENT     EXEC
+
+defaults are:
+
+  MINSUPPLIES 1
+  POLLFREQ 5
+  POLLFREQALERT 5
+  HOSTSYNC 15
+  DEADTIME 15
+  POWERDOWNFLAG /etc/killpower
+  NOTIFYMSG ONLINE        "UPS %s on line power"
+  NOTIFYMSG ONBATT        "UPS %s on battery"
+  NOTIFYMSG LOWBATT       "UPS %s battery is low"
+  NOTIFYMSG FSD           "UPS %s: forced shutdown in progress"
+  NOTIFYMSG COMMOK        "Communications with UPS %s established"
+  NOTIFYMSG COMMBAD       "Communications with UPS %s lost"
+  NOTIFYMSG SHUTDOWN      "Auto logout and shutdown proceeding"
+  NOTIFYMSG REPLBATT      "UPS %s battery needs to be replaced"
+  NOTIFYMSG NOCOMM        "UPS %s is unavailable"
+  NOTIFYMSG NOPARENT      "upsmon parent process died - shutdown impossible"
+  RBWARNTIME 43200
+  NOCOMMWARNTIME 300
+  FINALDELAY 5
+

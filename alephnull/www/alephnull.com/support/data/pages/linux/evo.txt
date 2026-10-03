@@ -1,0 +1,77 @@
+====== Compaq Evo T30 ======
+
+
+
+
+===== Introduction =====
+The [[http://h18004.www1.hp.com/products/quickspecs/11058_div/11058_div.HTML | Compaq Evo T30]] is a thin client.  One day, while shopping at [[http://weirdstuff.com | Weird Stuff]], I happened to pick up several of these for a great price.  About half didn't boot, but I think this is because they don't have a plugin memory card.  My goal is to install Linux on them.
+
+The ones I have don't appear to be a standard version:
+  * Model No.: T30
+  * Part No.: 238622-001
+  * Spare No.: 292238-001
+  * Date Manufactured: November 2002
+  * Licenced for Windows CE.NET v4.0
+
+From powering up into the OS:
+  * RAM: 64MB
+  * Flash Memory, Device 1: 32MB
+
+From cracking the case:
+  * National Geode CS5530A-UCE (this is the southbridge, now made by AMD)
+  * Geode processor under heat sink on bottom of board
+
+This suggests the model I have is similar to the 238617-xxx (DK408A)
+
+{{gallery>linux/evo}}
+
+===== Power Up Sequence =====
+
+Using a 12V power supply, 500mA is drawn after applying power.  The LED is orange and will flash once before turning off.  After a short period, the LED turns off and current draw drops to 300mA.  Pressing the button for about 3 seconds will make the LED green and will return the current draw to 500mA.
+
+===== Resources =====
+
+  * Booting Linux from the 44-pin IDE connector on versions with 4MBit of flash (not the kind I have): http://www.bastianello.it/en_evo_t30.php
+  * Booting DSL on WinNT-based T20s (not the kind I have): http://mowson.org/karl/evo_t20/
+  * Booting Linux on WinCE.NET-based T20s (close to what I have): http://thunderlord.net.pl/evo/
+  * [[http://open-evot20.sourceforge.net/wiki/ | SourceForge T20 Resources]]
+  * [[http://h20000.www2.hp.com/bizsupport/TechSupport/SoftwareIndex.jsp?lang=en&cc=us&prodNameId=97153&prodTypeId=12454&prodSeriesId=96324&swLang=13&taskId=135&swEnvOID=1054 | Evo T30 with WinCE.NET support site]]
+
+
+
+
+
+
+
+===== Actual Steps =====
+==== Preparation ====
+
+Using the [[http://thunderlord.net.pl/evo/ | WinCE.NET T20 instructions]] I prepared as follows:
+  * Got the [[an>evo/sp22454.exe | Evo T20 and T30 Netxfer Tool for Loading Firmware 2.18 A 9 Oct 2002]] from [[http://h20000.www2.hp.com/bizsupport/TechSupport/SoftwareDescription.jsp?lang=en&cc=us&prodTypeId=12454&prodSeriesId=96324&prodNameId=97153&swEnvOID=1054&swLang=13&mode=2&taskId=135&swItem=PSG_I16129-38624 | HP]] -- this isn't needed.
+  * Got [[an>evo/netxfer.sh]] from http://thunderlord.net.pl/evo/files/netxfer.sh
+  * Got the [[an>evo/sp27933.exe | Evo T30 32/64 Rapport Package to Add CE.NET Firmware 4.0 B472.6 29 Apr 2004]] from [[http://h20000.www2.hp.com/bizsupport/TechSupport/SoftwareDescription.jsp?lang=en&cc=us&prodTypeId=12454&prodSeriesId=96324&prodNameId=97153&swEnvOID=1054&swLang=13&mode=2&taskId=135&swItem=PSG_I20941-104856 | HP]]
+
+
+==== Initial Firmware Download ====
+Set up for initial transfer of standard firmware:
+  * Make /tmp/evo and chmod 777.
+  * Execute sp27933.exe (under vmware) and copy ''Rapport_4.X/Push_472-6-14-6Cme7D_T30_CEN/P472_6_14_6_Cme7D.bin'' to /tmp/evo/bootp.bin
+  * ''/etc/init.d/tftpd stop''
+  * ''apt-get install dhcp3-server''
+  * Edit ''netxfer.sh'' to change all /home/blah to /tmp/evo.
+  * Power up the Evo T30 while pressing the 'p' key (while the LED is orange), getting to the screen shown above.
+  * sh ''netxfer.sh'' (I tried with my normal dhcpd and tftp setup, but that's not good enough.  We need to be running on special ports for the Evo to communicate -- these ports are set up by this script.  I did not have to configure any special IP addresses.)
+  * After the servers started and a few seconds passed, the T30 started printing stuff.
+    * If you get the "error: not a tagged image" error, you might have used sp27933.exe directly instead of extracting its contents.
+    * If you get errors about how the file cannot be read, perhaps you didn't chmod the file.
+  * The T30 printed a lot of stuff and rebooted itself.  It ended up in a configuration utility, and I played around and set up a 1024x768 mode.  It then rebooted itself again.
+
+
+==== Generate a new firmware ====
+This section follows the [[http://thunderlord.net.pl/evo/ | preparing new firmware instructions]] noted above:
+  * Get [[an>evo/fw_builder.tar.gz]] from http://thunderlord.net.pl/evo/files/fw_builder.tar.gz
+  * Untar and put the original firmware from the last step into the ''fw_builder''.  Name it ''orig.bin''
+  * ''apt-get install bin86''
+  * ''./createfw''
+  * Note the new file ''../bootp.bin''
+  * Then power up while pressing 'p', as above.  This time, the process has different messages and goes faster, almost immediately rebooting into Linux.

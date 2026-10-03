@@ -1,0 +1,76 @@
+
+
+
+<h1><a name="char" id="char">char</a></h1>
+<div class="level1">
+
+<p>
+
+<a href="/w/_detail/private/crosshair.jpg?id=private%3Achar" class="media wikilink2" title="private:crosshair.jpg"><img src="/w/_media/private/crosshair.jpg" class="media" alt="" /></a>
+</p>
+
+<p>
+<acronym title="Redundant Array of Inexpensive Disks">RAID</acronym>
+</p>
+<ul>
+<li class="level1"><div class="li"> Was Hitachi Deskstar HDT725050VLA360 500GB 7200RPM SATA 3.0 Gb/s, 5V 730mA, 12V 640mA</div>
+<ul>
+<li class="level2"><div class="li"> FEB-2007 </div>
+</li>
+<li class="level2"><div class="li"> SN R40HRZSC Warranty exp 2010-03-17</div>
+</li>
+<li class="level2"><div class="li"> SN R40HW8VC ”</div>
+</li>
+<li class="level2"><div class="li"> SN R40HXGPC ”</div>
+</li>
+<li class="level2"><div class="li"> SN R40HW28C ”</div>
+</li>
+<li class="level2"><div class="li"> SN R40H67BC ”</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> 13 November 2010: Western Digital MD WM20EURS-6379B1 5V 0.60A, 12V 0.45A</div>
+<ul>
+<li class="level2"><div class="li"> SN WCAVY5895135 11OCT2010 Warranty exp 11/11/2013</div>
+</li>
+<li class="level2"><div class="li"> SN WCAVY5888340 11OCT2010 Warranty exp 11/11/2013</div>
+</li>
+<li class="level2"><div class="li"> SN WCAVY5888880 11OCT2010 Warranty exp 11/11/2013</div>
+</li>
+<li class="level2"><div class="li"> SN WCAVY5949694 13OCT2010 Warranty exp 11/13/2013</div>
+</li>
+<li class="level2"><div class="li"> SN WCAVY5949390 13OCT2010 Warranty exp 11/13/2013</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> fdisk -H 224 -S 56</div>
+</li>
+<li class="level1"><div class="li"> badblocks -b 4096 -s -v -w -p 1 -t random </div>
+</li>
+<li class="level1"><div class="li"> mdadm -C /dev/md_d0 /dev/sd[bcdef]1 -c 128 -n 5 -l 5</div>
+</li>
+<li class="level1"><div class="li"> cryptsetup -c aes-cbc-essiv:sha256 -s 128 -h sha256 &ndash;align-payload=1024 luksFormat /dev/md_d0 (two dashes in align-payload)</div>
+</li>
+<li class="level1"><div class="li"> cryptsetup luksOpen /dev/md_d0 r0</div>
+</li>
+<li class="level1"><div class="li"> pvcreate &ndash;metadatasize 506k /dev/mapper/r0</div>
+</li>
+<li class="level1"><div class="li"> pvs /dev/mapper/r0 -o+pe_start</div>
+</li>
+<li class="level1"><div class="li"> vgcreate -s 1g v0 /dev/mapper/r0</div>
+</li>
+<li class="level1"><div class="li"> lvcreate -L 2.6t -n scratch v0</div>
+</li>
+<li class="level1"><div class="li"> mke2fs -t ext4 -i262144 -m0 -E stride=32,stripe-width=128 /dev/mapper/v0-scratch</div>
+</li>
+<li class="level1"><div class="li"> March 2011</div>
+<ul>
+<li class="level2"><div class="li"> lvcreate -L 800g -n playpen v0</div>
+</li>
+<li class="level2"><div class="li"> mke2fs -t ext4 -i65536 -m0 -E stride=32,stripe-width=128 /dev/mapper/v0-playpen</div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>

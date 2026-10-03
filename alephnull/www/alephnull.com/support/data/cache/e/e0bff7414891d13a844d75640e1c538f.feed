@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://alephnull.com/w/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://alephnull.com/w/feed.php">
+        <title>alephnull.com recipes</title>
+        <description></description>
+        <link>http://alephnull.com/w/</link>
+        <image rdf:resource="http://alephnull.com/w/lib/tpl/alephnull/images/favicon.ico" />
+       <dc:date>2017-10-20T12:34:12-04:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://alephnull.com/w/recipes/start?rev=1499275227&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/recipes/salmon_marinades?rev=1499275186&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/recipes/goat_cheese_pasta_salad?rev=1497913187&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://alephnull.com/w/lib/tpl/alephnull/images/favicon.ico">
+        <title>alephnull.com</title>
+        <link>http://alephnull.com/w/</link>
+        <url>http://alephnull.com/w/lib/tpl/alephnull/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://alephnull.com/w/recipes/start?rev=1499275227&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-07-05T13:20:27-04:00</dc:date>
+        <dc:creator>mcf</dc:creator>
+        <title>recipes:start</title>
+        <link>http://alephnull.com/w/recipes/start?rev=1499275227&amp;do=diff</link>
+        <description>*   Daddy Chicken
+	*   Chili
+	*   Coquilles St Jacques
+	*   Spicy Lamb Burgers
+	*   Black Beans and Rice (Frijoles Negros)
+	*   Verzada Asturiana 
+	*   Maryland Crab Cakes
+	*   Katherine Hepburn's Brownies
+	*   Blueberry Buttermilk Pancakes 
+	*   Pumpkin Pie
+	*   White Bean Soup with bacon
+	*   Stir-fried chicken and greens with peanuts
+	*   Stir-fried shrimp with basil
+	*   Meatloaf
+	*   Cranberry sauce with Orange
+	*   Flan
+	*   Magic Cookie Bars
+	*   Turkey Pot Pie
+	*   Chicken with Tarragon
+…</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/recipes/salmon_marinades?rev=1499275186&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-07-05T13:19:46-04:00</dc:date>
+        <dc:creator>mcf</dc:creator>
+        <title>recipes:salmon_marinades - created</title>
+        <link>http://alephnull.com/w/recipes/salmon_marinades?rev=1499275186&amp;do=diff</link>
+        <description>Salmon Marinades:
+
+1. Sesame marinade:
+
+	*  4 tablespoons sesami oil
+	*  2 tablespoons tamari or soy sauce
+	*  2 tablespoons lime juice
+	*  1 clove garlic, minced
+	*  3 green onions (scallions), chopped
+
+Blend all ingredients and pour over salmon fillets or steaks to marinade.</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/recipes/goat_cheese_pasta_salad?rev=1497913187&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-06-19T18:59:47-04:00</dc:date>
+        <dc:creator>faith</dc:creator>
+        <title>recipes:goat_cheese_pasta_salad</title>
+        <link>http://alephnull.com/w/recipes/goat_cheese_pasta_salad?rev=1497913187&amp;do=diff</link>
+        <description>*  8 ounces fusilli pasta
+	*  8 tablespoons olive oil
+	*  4 tablespoons Sherry wine vinegar
+	*  2 tablespoons balsalmic or red wine vinegar
+	*  4 plum tomatoes (seeded, chopped, chilled)
+	*  2 green onions (sliced very thin, chilled)
+	*  5 ounces pitted Kalamata olives (chilled)
+	*  8 ounces goat cheese (cut into chunks)
+	*  5 basil leaves (cut into thin strips)
+	*  1/4 teaspoon salt and/or crushed red pepper (optional)</description>
+    </item>
+</rdf:RDF>

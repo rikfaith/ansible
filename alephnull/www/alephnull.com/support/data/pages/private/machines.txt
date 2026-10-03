@@ -1,0 +1,26 @@
+====== In-Service Machine Configurations ======
+^ Machine ^ CPU ^ Socket ^ Motherboard ^ RAM ^ Maximum Ram ^ Case ^ PSU ^
+^ [[hypnos]] (201510) | | | | | | | | 
+^ [[xbmc]] (201408) | CuBox-i | ARM | | | | | |
+^ [[db]] (201310) | 4.2GHz AMD FX 4350 | AM3+ | ASUS M5A78L-M/USB3 760G | 32GB 4*Corsair DDR3 1600MHz | 32GB | Thermaltake WingMA | SSR-450RM |
+^ [[dho]] (201209) | 3.3GHz Opteron 480 | C32 | | 64GB | 128GB DDR3 | Lian Li | Seasonic| 
+^ [[hydra]] (201107) | 3.2GHz Phenom II X4 840 | AM3 | [[http://alephnull.com/manuals/Asus/E6071_Crosshair_IV_Extreme.pdf | Crosshair IV Formula]] | 16GB 4*KVR1333D3N9/4G | 16GB DDR3 1333 | Lian Li PC-A17 | Seasonic M12II-620Bronze |
+^ [[hp-server]] (201106) | 3.2GHz Phenom II X4 840 | AM3 | [[http://alephnull.com/manuals/Asus/E6071_Crosshair_IV_Extreme.pdf | Crosshair IV Formula]] | 16GB 4*KVR1333D3N9/4G | 16GB DDR3 1333 | Lian Li | Seasonic M12II-620Bronze |
+^ [[char]] | 3.3GHz Phenom II X6 1100T | AM3 | [[http://alephnull.com/manuals/Asus/E6071_Crosshair_IV_Extreme.pdf | Crosshair IV Formula]] | 16GB 4*KVR1333D3N9/4G | 16GB DDR3 1333 | Lian Li PC-A17A | SS-550HT |
+^ [[lethe]] (201003) | 2.8GHz Athlon II X2 240 | AM3 | [[http://alephnull.com/manuals/Asus/E4820_M4A785TD-V EVO.pdf | M4A785TD-V EVO]] | 4GB 2*KVR1333D3N9/2G | 16GB DDR3 1333 | Lian Li PC-A16 | SS-550HT |
+^ [[mnemosyne]] | 3.2GHz Phenom II X4 840 | AM3 | [[http://alephnull.com/manuals/Asus/E5741_M4A89GTD_PRO_Series.pdf | M4A89GTD-PRO/USB3]] | 4GB KVR400X64C3A | 4GB DDR400 | Lian Li PC-A16 | SS-550HT |
+^ [[home]] | 2.4GHz Athlon64 LE-1620 45W | AM2 | [[http://alephnull.com/manuals/Asus/e3388b_m2n-vm_dvi.pdf | M2N-VM DVI]] | 2GB KVR800D2N5K2/2G | 8GB DDR800 | Antec NSK1380 | 350W |
+^ [[phel]] | 2.6GHz Phenom 9950 | AM2+ | [[http://alephnull.com/manuals/Asus/e3455_m3a32-mvp_deluxe_series.pdf | M3A32-MVP]] | 8GB KVR800D2N5 | 8GB DDR2 800| Lian Li PC60USB | Antec SP-500 |
+^ pallas | 2.4GHz P4 | | [[http://alephnull.com/manuals/Asus/9n756bk0.pdf | DIM4500]] | 1GB KTD4400/512 | 1GB DDR266 | Dell | |
+
+
+====== Legacy Machine Configurations ======
+^ [[lethe-old]] | 2.2GHz Athlon64 3700+ | 939 | [[http://alephnull.com/manuals/Asus/Vintage-AH1 | A8R-MX/SI]] | 2GB KVR400X64C3AK2/2G | 4GB DDR400 | Lian Li PC-A16 | SS-550HT |
+^ [[geexbox]] | 2.2GHz Athlon64 3700+ | 939 | [[http://alephnull.com/manuals/Asus/Vintage-AH1 | A8R-MX/SI]] | 3GB 2*KVR400X64C3A/1G 2*KVR400X64C3A/512| 4GB DDR400 | Antec NSK2400 | 380W |
+^ [[phel]] ([[particle]]) | 2GHz Athlon64 3200+ | 754 | [[http://alephnull.com/manuals/Asus/e1421b_k8v_deluxe.pdf | K8V Deluxe]] | 2GB KVR400X64C3A/1G | 2GB DDR400 | Lian Li PC60USB | EG475P-VE-SFMA |
+^ pallas | 2.4GHz P4 | | [[http://alephnull.com/manuals/Asus/9n756bk0.pdf | DIM4500]] | 1GB KTD4400/512 | 1GB DDR266 | Dell | |
+^ alpha | 1GHz P3 | | OptiPlex GX150 | 512MB | 512MB | Dell | |
+^ [[char]] | 2.6GHz Phenom 9950 | AM2+ | [[http://alephnull.com/manuals/Asus/e3455_m3a32-mvp_deluxe_series.pdf | M3A32-MVP]] | 8GB KVR800D2N5 | 8GB DDR2 800| Lian Li PC-A17A | SS-550HT |
+^ [[dho-old]] | Dual Dual-Core 2.4GHz Opteron 280 | 940 | [[http://alephnull.com/manuals/Asus/e2129_k8n-dre.pdf | K8N-DRE]] | 12GB | 16GB | Lian Li PC-A70A | SS-550HT |
+^ [[hydra]] | Dual 1.8GHz Opteron 244 | 940 | [[http://alephnull.com/manuals/Asus/e2129_k8n-dre.pdf | K8N-DRE]] | 8GB | 16GB | RPC-4020 | SS-550HT |
+^ [[syn0]] | Synology 411j | | | | | | |

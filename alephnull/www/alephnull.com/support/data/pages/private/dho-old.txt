@@ -1,0 +1,11 @@
+====== dho ======
+
+{{:private:k8n-dre.jpg|}}
+
+  * Seagate Barracuda 7200.11 1000Gbytes, 5V 0.72A, 12V 0.52A
+    * S/N 9TE18LFP, ST31000333AS, P/N 9FZ136-301, Firmware CC1H, Date Code 09244, Site Code TK
+    * S/N 9TE18Y1P, ST31000333AS, P/N 9FZ136-301, Firmware CC1H, Date Code 09244, Site Code TK
+    * S/N 9TE13MCW, ST31000333AS, P/N 9FZ136-301, Firmware CC1H, Date Code 09244, Site Code TK
+    * S/N 9TE1963X, ST31000333AS, P/N 9FZ136-301, Firmware CC1H, Date Code 09244, Site Code TK
+    * S/N 9TE18GGD, ST31000333AS, P/N 9FZ136-301, Firmware CC1H, Date Code 09244, Site Code TK
+

@@ -1,0 +1,9 @@
+a:2:{s:7:"current";a:9:{s:4:"date";a:2:{s:7:"created";i:1235246964;s:8:"modified";i:1421028077;}s:7:"creator";s:9:"Rik Faith";s:11:"last_change";a:7:{s:4:"date";i:1421028077;s:2:"ip";s:12:"71.52.254.25";s:4:"type";s:1:"E";s:2:"id";s:11:"private:dho";s:4:"user";s:5:"faith";s:3:"sum";s:0:"";s:5:"extra";s:0:"";}s:11:"contributor";a:1:{s:5:"faith";s:9:"Rik Faith";}s:4:"user";s:0:"";s:5:"title";s:3:"dho";s:11:"description";a:2:{s:15:"tableofcontents";a:1:{i:0;a:4:{s:3:"hid";s:3:"dho";s:5:"title";s:3:"dho";s:4:"type";s:2:"ul";s:5:"level";i:1;}}s:8:"abstract";s:252:"* Boot Disk: Intel SSD 320 Series 80GB
+
+	*  SSDDA2BW080G3 2.5” 3Gb/s SATA SSD 80GB 5V 1A ISN=BTPR146101ZT080BGN
+
+* Cache Disk: Intel SSH 330 Series 120GB
+
+	*  SSDSC2CT120A3 2.5” 6GB/s SATA SSD 120G 5V 1A ISM=CVMP231102HC120BGN
+
+* External 4+1 RAID5";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}s:8:"relation";a:1:{s:10:"firstimage";s:0:"";}}s:10:"persistent";a:5:{s:4:"date";a:2:{s:7:"created";i:1235246964;s:8:"modified";i:1421028077;}s:7:"creator";s:9:"Rik Faith";s:11:"last_change";a:7:{s:4:"date";i:1421028077;s:2:"ip";s:12:"71.52.254.25";s:4:"type";s:1:"E";s:2:"id";s:11:"private:dho";s:4:"user";s:5:"faith";s:3:"sum";s:0:"";s:5:"extra";s:0:"";}s:11:"contributor";a:1:{s:5:"faith";s:9:"Rik Faith";}s:4:"user";s:0:"";}}

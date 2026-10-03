@@ -1,0 +1,144 @@
+
+
+
+<h1><a name="mnemosyne" id="mnemosyne">mnemosyne</a></h1>
+<div class="level1">
+
+<p>
+
+<a href="/w/_detail/private/m4a89gtd.jpg?id=private%3Amnemosyne" class="media" title="private:m4a89gtd.jpg"><img src="/w/_media/private/m4a89gtd.jpg" class="media" title="m4a89gtd.jpg" alt="m4a89gtd.jpg" /></a>
+</p>
+
+</div>
+<!-- SECTION "mnemosyne" [1-51] -->
+<h3><a name="new_configuration" id="new_configuration">New Configuration</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> Boot disk: 9VM6ZGVS 9SL142-302 In Warranty Expiration 17-Nov-2012</div>
+</li>
+<li class="level1"><div class="li"> Hitachi 0F10311 2TB MAR-2011 3.0Gb/s 7200RPM 5V 400mA 12V 850mA</div>
+<ul>
+<li class="level2"><div class="li"> B9KMPVJF</div>
+</li>
+<li class="level2"><div class="li"> B9KMKD1F</div>
+</li>
+<li class="level2"><div class="li"> B9KL52LF</div>
+</li>
+<li class="level2"><div class="li"> B9KL489F</div>
+</li>
+<li class="level2"><div class="li"> B9KL4G3F</div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+
+Use
+</p>
+<pre class="code">fdisk -H 224 -S 56</pre>
+
+<p>
+to make one partition per drive.
+</p>
+
+<p>
+Create new RAID5:
+</p>
+<pre class="code">mdadm -C /dev/md_d0 -c 128 -n 5 -l 5 /dev/sd[bcdef]1</pre>
+
+<p>
+
+Setup crypto:
+</p>
+<pre class="code">cryptsetup -c aes-cbc-essiv:sha256 -s 128 -h sha256 --align-payload=1024 luksFormat /dev/md_d0</pre>
+
+<p>
+
+Setup LVM:
+</p>
+<pre class="code">cryptsetup luksOpen /dev/md_d0 r0
+pvcreate --metadatasize 506k /dev/mapper/r0 
+pvs /dev/mapper/r0 -o+pe_start
+
+PV         VG   Fmt  Attr PSize PFree 1st PE 
+/dev/dm-0       lvm2 a-   7.28t 7.28t 512.00k
+
+vgcreate -s 1g v0 /dev/mapper/r0</pre>
+
+<p>
+Setup partitions:
+</p>
+<pre class="code">lvcreate -L 7t -n tv v0
+mke2fs -t ext4 -i1048576 -m0 -E stride=32,stripe-width=128 /dev/mapper/v0-tv
+mkdir /tv
+mount -o noatime,nodiratime /dev/mapper/v0-tv /tv</pre>
+
+</div>
+<!-- SECTION "New Configuration" [52-993] -->
+<h3><a name="old_configuration" id="old_configuration">Old Configuration</a></h3>
+<div class="level3">
+<pre class="code">md1 : active raid5 sdf[0] sdj[4] sdi[3] sdh[2] sdg[1]
+    2930278144 blocks level 5, 64k chunk, algorithm 2 [5/5] [UUUUU]
+md0 : active raid5 sda[0] sde[4] sdd[3] sdc[5](F) sdb[1]
+    3907030784 blocks level 5, 64k chunk, algorithm 2 [5/4] [UU_UU]</pre>
+<pre class="code">PV             VG   Fmt  Attr PSize PFree 
+/dev/mapper/r0 v0   lvm2 a-   3.64T 16.03G
+/dev/mapper/r1 v1   lvm2 a-   2.73T     0 </pre>
+<pre class="code">LV       VG   Attr   LSize   Origin Snap%  Move Log Copy% 
+apollo2  v0   -wi-ao 160.00G                              
+audio2   v0   -wi-ao 800.00G                              
+home2    v0   -wi-ao 300.00G                              
+playpen2 v0   -wi-ao 500.00G                              
+video2   v0   -wi-ao   1.90T                              
+miranda2 v1   -wi-ao 730.00G                              
+p2       v1   -wi-ao   2.02T                              </pre>
+<ul>
+<li class="level1"><div class="li"> md0: Seagate Barracude 7200.11 1000Gbytes, ST31000340AS, 5V 0.65A, 12V 0.6A</div>
+<ul>
+<li class="level2"><div class="li"> 08496: 9QJ0Z8MZ, 9QJ11W1V, 9QJ0L07P, 9QJ107QP, 9QJ0MFDB</div>
+</li>
+<li class="level2"><div class="li"> sdb kicked out of raid, failed badblocks test, and failed SeaTools</div>
+<ul>
+<li class="level3"><div class="li"> RMA&#039;d week of August 10, 2009</div>
+</li>
+<li class="level3"><div class="li"> S/N 9QJ107QP P/N 9BX158-303 F/W SD15</div>
+</li>
+<li class="level3"><div class="li"> warranty expires 10-Jun-2013</div>
+</li>
+<li class="level3"><div class="li"> Replacement drive (new, not the refurb): 7200.12 1TB S/N 6VP085MB ST31000528AS P/N 9SL154-300</div>
+</li>
+</ul>
+</li>
+<li class="level2"><div class="li"> sde kicked out of raid, failed badblocks test with clicking</div>
+<ul>
+<li class="level3"><div class="li"> RMA&#039;d week of December 6, 2009</div>
+</li>
+<li class="level3"><div class="li"> S/N 9QJ0Z8MZ P/N ST31000340AS/9BX158-303</div>
+</li>
+<li class="level3"><div class="li"> warranty expires 10-Jun-2013</div>
+</li>
+<li class="level3"><div class="li"> Replaces with empty-disk-3 (7200.12 1TB S/N 6VP0M986 ST31000528AS)</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> md1: Western Digital WD Caviar SE16 WD7500AAKS, 750.0GB</div>
+<ul>
+<li class="level2"><div class="li"> 24 NOV 2007: WCAPT0604506</div>
+</li>
+<li class="level2"><div class="li"> 28 JUN 2007: WCAPT0192719</div>
+</li>
+<li class="level2"><div class="li"> 24 NOV 2007: WCAPT0604029</div>
+</li>
+<li class="level2"><div class="li"> 23 NOV 2007: WCAPT0625812</div>
+</li>
+<li class="level2"><div class="li"> 24 NOV 2007: WCAPT0620921</div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Old Configuration" [994-] -->

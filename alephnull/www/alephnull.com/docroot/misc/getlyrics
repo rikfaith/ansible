@@ -1,0 +1,113 @@
+#!/bin/zsh
+# -*- ksh -*-
+
+dir=`pwd`
+
+if [[ ! -z "$1" ]]; then
+  Artist="$1"
+else
+  Artist=`echo $dir \
+   | sed 's,/audio/mp3/,,' \
+   | sed 's,/.*$,,'`
+fi
+artist=`echo $Artist | tr 'A-Z ' 'a-z_'`
+Album=`echo $dir \
+ | sed 's,.*/,,' \
+ | sed 's,  *,_,g'`
+
+l=`echo $artist[1] | tr 'a-z' 'A-Z'`
+l=`printf '%d\n' "'$l'"`
+l=$(($l-64))
+
+get () {
+  echo "GET: http://www.lyricsdomain.com/$l/$1.html"
+  webget http://www.lyricsdomain.com/$l/$1.html \
+   | gawk 'BEGIN {s=0;} \
+   /id="cnt_bdy"/ {s=1;} \
+   /./ {if (s==1) {print $0;}} \
+   /<.div>/ {if (s==1) {s=0;}}' \
+   | sed 's,<div id="cnt_bdy">,,' \
+   | sed 's,<br>,,g' \
+   | sed 's,</div>,,' \
+   | sed 's, *$,,' \
+   | sed 's,	*,,g' \
+   > $2.txt
+  if [[ ! -s $2.txt ]]; then
+    echo "FAILED: $2"
+    rm $2.txt
+  else
+    mv $2.txt $2.tmp
+    echo "$Artist" > $2.txt
+    echo "$3" >> $2.txt
+    cat $2.tmp | sed 's,&#34;,",g' >> $2.txt
+    rm $2.tmp
+  fi
+}
+
+if [[ ! -z "$1" && ! -z "$2" ]]; then
+  Title=`echo $3 | sed 's,[^-]* - ,,'`
+  echo get "$artist/$2" "$3" "$Title"
+  get "$artist/$2" "$3" "$Title"
+  exit
+fi
+
+for i in *.mp3; do
+  t=`echo $i | sed 's,.mp3$,,'`
+  if [[ -f $t.txt ]]; then
+    continue
+  fi
+  Title=`echo $t \
+   | sed 's,^ *,,' \
+   | sed 's,  *, ,g' \
+   | sed 's,[^-]* - ,,'`
+  title=`echo $Title \
+   | tr 'A-Z ' 'a-z_' \
+   | sed "s,[-'?(),],,g"`
+
+  get "$artist/$title" "$t" "$Title"
+
+done
+
+if [[ -f cover.jpg ]]; then
+  exit
+fi
+
+echo "Fetching $Album"
+cover=`lynx -source http://en.wikipedia.org/wiki/$Album \
+ | fgrep cover \
+ | fgrep /wiki/Image: \
+ | sed 's,.*/wiki/Image:,,' \
+ | sed 's," .*$,,' \
+ | head -1`
+if [[ -z "$cover" ]]; then
+  Album=`echo ${Album} | sed 's,_(.*),,'`
+  echo "Fetching $Album"
+  cover=`lynx -source http://en.wikipedia.org/wiki/$Album \
+   | fgrep cover \
+   | fgrep /wiki/Image: \
+   | sed 's,.*/wiki/Image:,,' \
+   | sed 's," .*$,,' \
+   | head -1`
+fi
+if [[ -z "$cover" ]]; then
+  Album="${Album}_(album)"
+  echo "Fetching $Album"
+  cover=`lynx -source http://en.wikipedia.org/wiki/$Album \
+   | fgrep cover \
+   | fgrep /wiki/Image: \
+   | sed 's,.*/wiki/Image:,,' \
+   | sed 's," .*$,,' \
+   | head -1`
+fi
+if [[ -z "$cover" ]]; then
+  echo "FAIL: cover"
+  exit
+fi
+echo "Fetching $cover"
+cover=`lynx -source "http://en.wikipedia.org/wiki/Image:$cover" \
+ | fgrep fullImageLink \
+ | sed 's,^.*src=",,' \
+ | sed 's," .*$,,'`
+echo "Fetching $cover"
+webget "$cover" cover.jpg
+xv cover.jpg

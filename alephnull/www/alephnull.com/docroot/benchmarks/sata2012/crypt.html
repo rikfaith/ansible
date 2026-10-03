@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>A Comparison of Software RAID-5 With and Without Encryption
+    and Ext4fs</title>
+  </head>
+
+  <body>
+    <h1>A Comparison of Software RAID-5 With and Without Encryption</h1>
+    <b><a href="index.html">Linux Software RAID Performance Comparisons (2012)</a></b>
+
+    <h2>The Problem</h2>
+    The use of encrypted RAID-5 has historicaly halved throughput when
+    compared with unencrypted IO.  Here we look at the performance
+    degradation imposed by cryptography on an otherwise unloaded system.
+
+    <h2>The Controller</h2>
+    <ul><li>LSI SAS9211-8i (SAS2008)
+        <ul><li>8 6Gbph ports
+            <li>PCIe 2.0
+            <li>Chipset: Fusion-MPT
+            <li>Linux driver: mpt2sas
+            <li>Cost: about $230 from amazon.com
+            <li>Configuration: JBOD
+        </ul>
+    </ul>
+
+    <h2>The Test System</h2>
+    <ul><li>Motherboard: Supermicro MBD-H8DCL-IF-O
+        <li>Processors: Two 3.3GHz Opteron 4238 (Socket C32)
+        <li>RAM: 64GB 1600MHz DDR3 (PC3-12800)
+        <li>Slots: PCIe x8 (4000MB/s)
+        <li>Drives: Seagate Barracuda 7200 3000Gbytes ST3000DM001
+        <li>Drive cage: Supermicro CSE-M35T-1B 5-Bay Enclosure (fits in
+        three 5-inch chassis bays; sells for about $100-$120 from
+        newegg.com)
+        <li>Debian Wheezy, Linux 3.2.0-3-amd64
+    </ul>
+
+    <h2>The Test Matrix</h2>
+    <ul><li>Read Percentage: 100% (pure read), 0% (pure write)
+        <li>Random Percentage: 100% (random)
+        <li>Thread counts: 1
+        <li>Small block sizes: 4k, 8k, 16k, 32k, 64k, 128k, 256k, 512k,
+        1m, 2m, 4m
+        <li>Large block sizes: 4k, 8k, 16k, 32k, 64k, 128k, 256k, 512k,
+        1m, 2m, 4m, 8m, 16m, 32m, 64m, 128m, 256m, 512m, 1024m
+        <li>Targets: All 5 driver were tested simultaneously, as well as
+        each drive individually.
+        <li>All small block I/Os are issued using the O_DIRECT flag.
+        <li>All large block I/Os use a sequence of 8KB blocks, followed
+        by an fsync, followed by a seek to the next "large block".  This
+        simulates random I/O at small block sizes and sequential I/O at
+        large block sizes.  By not using O_DIRECT and calling fsync
+        instead, the Linux block system is tested, which simulated
+        real-world NFS performance.
+        <li>All tests last 30 seconds.
+    </ul>
+
+    <h2>Conclusion</h2>
+
+    <p>The degradation in performance for encryption is about 5% for
+    small block random reads, rising to 20% for large sequential
+    writes.  This is improved over earlier systems, which degraded by as
+    much as 50%, probably because of improved memory bandwith.
+
+    <h2>Legend</h2>
+
+      <p><b>RAID-5</b> means IO to the raw /dev/md0 device created with
+      'mdadm -C /dev/md0 /dev/sd[bcdef]2 -n 5 -l 5'
+
+      <p><b>Encrypted RAID-5</b> means IO to the cryptographic device /dev/mapper/r0,
+      created using 'cryptsetup -c aes-cbc-essiv:sha256 -s 256 -h
+      sha256'
+
+      <p><b>Ext4fs over Encrypted RAID-5</b> means IO to a 1TB file
+      created with 'dd if=/dev/zero of=/mnt/file bs=1024k count=1400000'
+      on an ext4fs file system created with 'mke2fs -t ext4 -E
+      stride=128,stripe-width=512 /dev/mapper/r0' that was mounted with
+      'mount /dev/mapper/r0 /mnt -o noatime,nodiratime'
+
+    <h2>Small Block Tests</h2>
+    <br>
+    <img src="ext4fs-small-read.png"><img src="ext4fs-small-write.png"><br>
+
+    <h2>Large Block Tests</h2>
+    <br>
+    <img src="ext4fs-large-read.png"><img src="ext4fs-large-write.png"><br>
+
+  </body>
+</html>

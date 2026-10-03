@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>tarball.org</title>
+  </head>
+
+  <body>
+    <h1>tarball.org: Example configurations</h1>
+
+    <h2>Notes</h2>
+    <ul>
+    	<li>The LSI SAS9211-8i is the cheapest (8-port) controller from LSI.  All of the LSI products seem to have good Linux drivers.  <b>Use LSI controllers.</b>
+	<li>The Supermicro SATA card was a nice cheap solution for low-end performance, but the Linux drivers are unstable and, over the last 5 years, Marvell has been unwilling to spend the time to make them good.  <b>Avoid Marvell-based controllers.</b>
+	<li>The Supermicro driver trays are excellent and highly recommended.  Three 5.25" external bays are required (and then support 5 spindles).  I've used many of these for years without any problem.  <b>Use Supermicro drive trays.</b>
+	<li>There is a lack of options in good mid-tower cases that support 6 or 9 open 5.25" bays.  The Lian-Li cases are excellent, but currently only support 3 or 4 5.25" bays, unless you go to a (huge) full tower.  There's no reason for this lack of options -- the cases are very similar, only a few pieces need to change to support 9 open bays (which can be used to mount 15 spindles, supported by 2 LSI cards, for 48TB usable RAID5-protected storage). <b>Lian-Li needs to update their product line.</b>
+    </ul>
+
+    <h2>Ad Hoc Workstation Solution ($264/TB): September 2012</h2>
+    <table border="1">
+      <tr><td>Item<td>Price<td>Quantity<td>Total</tr>
+      <tr><td><a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16813182320">Supermicro MBD-H8DCL-IF-O</a><td>272.69<td>1<td>272.69</tr>
+      <tr><td><a href="http://www.provantage.com/amd-os4238wlu6kguwof~7AAMD2N7.htm">Opteron Model 4238 6-Core 3.3GHz</a><td>269.19<td>2<td>538.38</tr>
+      <tr><td><a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16835608022">Noctua NH-U9DO Cooler</a><td>75.99<td>2<td>151.98</tr>
+      <tr><td><a href="http://www.provantage.com/kingston-technology-kvr16r11d4-16~7KIN91W5.htm">Kingston 16GB 1600MHz DDR3 ECC KVR16R11D4/16</a><td>177.07<td>4<td>708.28</tr>
+      <tr><td><a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16817151105">SeaSonic Platinum-1000 1000W</a><td>186.99<td>1<td>186.99</tr>
+      <tr><td><a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16811112346">Lian-Li PC-60FN</a><td>99.99<td>1<td>99.99</tr>
+
+      <tr><td><a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16820167066">Intel 320 Series SSDSA2BW080G301 2.5" 80GB</a><td>139.99<td>1<td>139.99</tr>
+      <tr><td><a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16817121405">Supermicro CSE-M35T-1B</a> (drive trays)<td>99.99<td>1<td>99.99</tr>
+      <tr><td><a href="http://www.amazon.com/SAS9211-8I-8PORT-Int-Sata-Pcie/dp/B002RL8I7M">LSI SAS9211-8I 8PORT</a><td>229.94<td>1<td>229.94</tr>
+      <tr><td><a
+      href="http://www.newegg.com/Product/Product.aspx?Item=N82E16822148844">Seagate Barracuda ST3000DM001 3TB 7200RPM</a><td>149.99<td>5<td>749.95</tr>
+      <tr><td>Total with 2CPU, 64GB, and 12GB RAID-5 storage<td colspan="3" align="right">3178.18</tr>
+      <tr><td>Total with 1CPU, 32GB, and no RAID storage<td colspan="3" align="right">1744.16</tr>
+      
+      
+    </table>
+
+    <h2>24TB Usable RAID-Protected Storage: August 2011</h2>
+
+    <h3>Synology Solution: $120/TB</h3>
+    <table border="1">
+        <tr><td>Item<td>Price<td>Quantity<td>Total</tr>
+
+        <tr><td><a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16822108072">Synology DS1511+</a><td>829.99<td>1<td>829.99</tr>
+        <tr><td><a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16822108087">Synology DX510</a><td>549.99<td>1<td>549.99</tr>
+        <tr><td><a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16822145493">Hitachi Deskstar 3TB 5400RPM 32MB</a><td>149.99<td>10<td>1499.99</tr>
+        <tr><td>Total for 24TB RAID-5 storage
+          <td colspan="3" align="right">2879.88</tr>
+    </table>
+
+    <h3>Ad Hoc Solution: $110/TB</h3>
+    <table border="1">
+        <tr><td>Item<td>Price<td>Quantity<td>Total</tr>
+        <tr><td><a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16813131644">ASUS Crosshair IV Formula</a><td>209.99<td>1<td>209.99</tr>
+        <tr><td><a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16819103921">AMD Phenom II X4 840 3.2GHz</a><td>104.99<td>1<td>104.99</tr>
+        <tr><td><a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16835185097">Scythe SCSK-1100 100mm Shuriken</a> <b>(not recommended -- broke in under a year)</b><td>34.99<td>1<td>34.99</tr>
+        <tr><td><a
+        href="http://www.newegg.com/Product/Product.aspx?Item=N82E16820139046">Kingston 4GB DDR3 1333<td>23.99<td>4<td>95.96</tr>
+        <tr><td><a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16817151095">SeaSonic M12II 620</a><td>104.99<td>1<td>104.99</tr>
+        <tr><td><a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16811112163">Lian-Li PC-A17</a><td>149.99<td>1<td>149.99</tr>
+        <tr><td><a href="http://www.provantage.com/supermicro-aoc-sas2lp-mv8~7SUP92PM.htm">Supermicro AOC-SAS2LP-MV</a> (8-port SATA) <b>(not recommended -- bad linux drivers -- use LSI instead)</b><td>91.02<td>2<td>182.04</tr>
+        <tr><td><a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16822145493">Hitachi Deskstar 3TB 5400RPM 32MB</a><td>149.99<td>10<td>1499.99</tr>
+        <tr><td><a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16817121405">Supermicro CSE-M35T</a> (drive trays)<td>99.99<td>2<td>199.98</tr>
+        <tr><td><a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16835608005">Noctua NF-B9-1600 92mm Case Fan (for drive trays)</a><td>19.99<td>2<td>39.98</tr>
+        <tr><td>Total for 24GB RAID-5 storage <td colspan="3" align="right">2622.90</tr>
+        <tr><td>Total without RAID storage <td colspan="3" align="right">700.91</tr>
+    </table>
+
+    <p>Notes: The Supermicro drive drive trays allow 5 drives to be
+    mounted in 3 bays.  The trays come with fans, but replacing them
+    with Noctua fans makes them quieter.  The Shuriken CPU fan replaces
+    the AMD-supplied fan because it is quieter (but I now (2012) have had 4 of
+    these fans fail within a year of purchase).  The Crosshair IV can
+    run 2 PCIe slots in a 16x configuration, allowing full spindle
+    bandwidth from all spindles simultaneously from the 8-port SATA
+    controllers.  These controllers do not ship with cables and they
+    require a Linux kernel patch for reliable operation.  A USB
+    CDROM/DVD drive is required for installation.  A cheap recycled PCI
+    video card is required for installation and for a local console.
+    
+
+    <h2>Old Content</h2>
+    <ul>
+      <li><a href="old.html">The Tarball Linux Distribution</a></li>
+      <li><a href="htpc.html">Example HTPC Configuration</a></li>
+      <li><a href="hardware.html">Example Hardware ($645/TB in May
+      2007)</a></li>
+    </ul>
+  </body>
+</html>

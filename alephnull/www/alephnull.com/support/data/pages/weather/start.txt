@@ -1,0 +1,36 @@
+====== Weather ======
+===== Other Interesting Weather Stations =====
+  * [[http://home.earthlink.net/~johnmkramer/kramerstest.htm | Banner Elk, NC; elevation 4000 ft]]
+
+===== Davis Weather Station =====
+* Vantage Pro2(tm) Plus
+  * [[http://www.davisnet.com/product_documents/weather/manuals/VP2_Quick_Ref_Guide_Rev_A.pdf | Quick Reference Guide]] [[vantage>VP2_Quick_Ref_Guide_Rev_A.pdf|local cache]]
+  * [[http://www.davisnet.com/product_documents/weather/manuals/VP2_ISS_Installation.pdf | Sensor Suite]] [[vantage>VP2_ISS_Installation.pdf|local cache]]
+  * [[http://http://www.davisnet.com/product_documents/weather/manuals/VP2_Console_Manual.pdf | Console]] [[vantage>VP2_Console_Manual.pdf|local cache]]
+  * [[http://www.davisnet.com/product_documents/weather/spec_sheets/6152-62-53-63_VP2Spec_C.pdf|Spec Sheet]] [[vantage>6152-62-53-63_VP2Spec_C.pdf|local cache]]
+  * [[http://www.davisnet.com/product_documents/weather/app_notes/apnote33.pdf|Ethernet Appnote]] [[vantage>apnote33.pdf | local cache]]
+  * [[http://www.wviewweather.com/vpro-docs/VTECHREF.txt|Serial Protocol]] [[vantage>VTECHREF.txt| local cache]]
+  * [[http://www.wviewweather.com/vpro-docs/binary_file_format-5.4.txt|Archive Format]] [[vantage>binary_file_format-5.4.txt | local cache]]
+
+
+===== Other Links =====
+
+  * [[http://www.findu.com/cgi-bin/wx.cgi?call=KB4ID | Weather Reports for KB4ID]]
+  * [[http://findu.com/cgi-bin/errorlist.cgi?call=KB4ID&last=6 | Error List for KB4ID]]
+  * [[ftp://ftp.tapr.org/aprssig/aprsspec/spec/aprs101/APRS101.pdf|APRS Protocol Reference]]
+  * [[http://www.wxqa.com/index.html | CWOPS Main Site]]
+
+===== Weather Software for Linux =====
+  * [[http://www.wviewweather.com/ | wxview]] is the most comprehensive open source program available for the Davis.
+  * [[http://www.joejaworski.com/weather/ | vproweather ]] a much simpler system -- the one I'm using.
+
+===== Location =====
+  * Rounded long/lat/height: 36.139,-79.007, 172 meters
+  * Weather station is located in Orange County, North Carolina:
+    * 11km NE of Hillsborough, NC
+    * 11.4km SW of Rougemont, NC
+    * 12.1km WxSW of Bahama, NC
+
+===== Very Old Out-of-Date Links =====
+  * [[http://alephnull.com/therm/therm.html | Local Temperature Information]]
+  * [[http://alephnull.com/mrtg/ | Real-Time Data]]

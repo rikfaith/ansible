@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Nitrous Hybrid Simulator -- Tank Geometry</title>
+<link href="../styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<table width="998">
+  <tr>
+    <td colspan="2"><a href="../index.html"><img src="../hybridsky.png" width="499" height="112" border="0" /></a> </td>
+  </tr>
+  <tr>
+    <td colspan="2"><h3 align="center">HSIM -- An Open Source Simulator for Amateur Nitrous Hybrid Rocket Motors</h3>
+    <hr/>
+    </td>
+  </tr>
+  <tr>
+    <td height="64" colspan="2" class="ParameterName"><blockquote>
+        <h3>Nitrous Fill Conditions</h3>
+    </blockquote></td>
+  </tr>
+  <tr>
+    <td width="16">&nbsp;</td>
+    <td><table width="512" border="1" cellpadding="5" cellspacing="0">
+        <tr>
+          <td colspan="2" valign="top" class="Normal"><p>HSIM supports two models for filling the flight tank. The first mode is typical of tanks that are filled with a pin-hole vent. Flight-tank pressure will be somewhat less than supply-tank pressure, but both are highly dependent on ambient pressure.</p>
+            <p>In this model, HSIM requires the pressure of the supply tank and a pressure drop between the supply tank and the flight tank.</p>
+            <p>Hsim's second model assumes that the pressure of the nitrous in the flight tank is regulated by a pressure relief valve. For this model, HSIM requires the pressure of the nitrous supply tank and the pressure of the flight tank.</p>
+            <p>In both models the pressure of the supply tank is provided by giving a temperature of that tank. HSIM then calculates the supply pressure by assuming the tank is at saturation conditions.</p></td>
+        </tr>
+        <tr>
+          <td width="128" valign="top" class="ParameterName"><a name="FlightTankPressure" id="FlightTankPressure"></a>Initial Flight Tank Pressure </td>
+          <td class="Normal"><p>Specifies the pressure of the regulated flight tank. Use this parameter when you have a pressure regulator on your flight tank that sets the pressure to a known value. </p></td>
+        </tr>
+        <tr>
+          <td valign="top" class="ParameterName"><a name="FlightPressureDrop" id="FlightPressureDrop"></a>Flight Tank Pressure Drop </td>
+          <td class="Normal">Specifies the flight tank pressure relative to the supply tank pressure. Use this parameter when you are using an unregulated flight tank with a pin-hole vent. </td>
+        </tr>
+        <tr>
+          <td valign="top" class="ParameterName"><a name="SupplyTankTemperature" id="SupplyTankTemperature"></a>Supply Tank Temperature </td>
+          <td class="Normal"><p>The supply tank is presumed to be in gas/liquid equilibrium (saturation). Supply tank pressure is calculated from this temperature. </p></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+</body>
+</html>

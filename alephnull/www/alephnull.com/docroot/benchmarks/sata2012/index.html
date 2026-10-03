@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>Linux Software RAID Performance Comparisons (2012)</title>
+  </head>
+
+  <body>
+    <h1>Linux Software RAID Performance Comparisons (2012)</h1>
+
+    <p>
+    The goal of this study is to determine the best configuration
+    parameters for a 5-spindle software RAID using Linux as an NFS file
+    server for Big Data analysis and (mostly write) backup storage.
+    <p>
+    Large sequential read and write access of files ranging from about
+    512mb to 4gb is particularly interesting.
+    <p> Those with more spindles, more users, or more complex I/O
+    patterns should <b>not</b> expect these results to apply to or scale
+    to their environment.
+
+    <p> Experimental details are provided below.  Here is a summary of
+    the recommendations.
+
+	<h2><a href="chunk.html">A Comparison of Chunk Size for Software
+	RAID-5</a></h2>
+
+	<h2><a href="cache.html">A Comparison of Cache Size for Software
+	RAID-5</a></h2>
+
+	<h2><a href="align.html">A Comparison of Payload Align Size for
+	Cryptosetup Over Software RAID-5</a></h2>
+
+	<h2><a href="crypt.html">A Comparison of Software RAID-5 With
+	and Without Encryption and Ext4fs</a></h2>
+
+	<h2><a href="e4opts.html">A Comparison of Various Ext4fs Options</a></h2>
+
+	<h2><a href="nfsv4.html">A Comparison of NFSv4 rsize and wsize Values</a></h2>
+
+  </body>
+</html>

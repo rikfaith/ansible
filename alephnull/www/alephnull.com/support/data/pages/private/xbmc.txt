@@ -1,0 +1,7 @@
+====== xbmc on CuBox ======
+
+* Drives, Seagate Barracude 3000GB, model ST3000DM001
+  * Certified Repaired HDD SN Z1F4M0TG, warranty expiration 31-May-2015
+  * (old) SN W1F0W811, out of warranty
+  * (new) SN Z500707A, warranty expiration 26-Sep-2016
+  * (new) SN Z5006GZD, warranty expiration 26-Sep-2016

@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+  <head>
+    <title>Linux Software Development and Performance Analysis Tools</title>
+  </head>
+
+  <body>
+    <h1>Linux Performance and Development Tools</h1>
+    <blockquote>
+      "Debugging is twice as hard as writing the code in the first
+      place.
+      Therefore, if you write the code as cleverly as possible, you are,
+      by definition, not smart enough to debug it." - Brian W. Kernighan
+    </blockquote>
+    <hr>
+    <ul>
+      <li>Performance Analysis Tools
+        <ul>
+          <li>Benchmarks
+            <ul>
+              <li><a
+                  href="http://www.bitmover.com/lmbench/">LMbench</a>. Low-level
+                performance benchmark tools.
+              <li><a href="http://www.cs.virginia.edu/stream/">STREAM</a>.
+                Sustainable memory bandwidth benchmark.
+	      <li><a href="http://www.cwi.nl/~manegold/Calibrator/calibrator.shtml">calibrator</a>. 
+	      A cache-memory and TLB latency measurement tool.
+              <li><a href="http://www.coker.com.au/bonnie++/">Bonnie++.</a>
+                A disk I/O benchmark.
+            </ul>
+          <li>System Analysis
+            <ul>
+	      <li><a href="http://kcachegrind.sourceforge.net/">KCachegrind</a>.
+ 		Source intermixed with profiling data.
+              <li><a href="http://oprofile.sourceforge.net/">OProfile</a>.
+                A system-wide profiler.
+              <li><a href="http://www.opersys.com/LTT/index.html">The Linux
+                  Trace Toolkit</a>.  A kernel-level tracer.
+	      <li><a href="http://syscalltrack.sourceforge.net/">syscalltrack</a>. 
+	        Track invocations of system calls (a system-wide strace).
+	      <li><a href="http://dprobes.sourceforge.net/">Dynamic Probes</a> is a Linux debugger
+	      that can be used to insert software probes dynamically into executing code.
+            </ul>
+        </ul>
+        <p>
+      <li>Software Development Tools
+        <ul>
+	  <li>Important Libaries
+	    <ul>
+	      <li><a href="http://www.and.org/vstr/">vstr</a> is the world's
+	      best general purpose string libary for C.  Use it.
+              <li><a
+              href="http://www.hpl.hp.com/research/linux/libunwind/">libunwind</a>, a call-chain API that has functionality that overlaps with my <a
+              href="backtrace.html">backtrace</a> program (download <a href="backtrace.c">backtrace.c</a>).
+	    </ul>
+          <li>Static Code Analysis
+            <ul>
+              <li><a href="http://www.splint.org/">Splint</a>. A static
+                checker (was called clint).
+              <li>Gimpel Software's <a href="http://www.gimpel.com/html/flex.htm">flexelint</a> is available as a commercial product for Linux.
+              <li><a
+              href="http://www.securesoftware.com/download_rats.htm">RATS</a>. Rough
+              Auditing Tool for Security.  Similar to Flawfinder.
+	      <li><a href="http://www.dwheeler.com/flawfinder/">Flawfinder</a>, a program that
+	      examines source code for security issues.  Similar to RATS.
+	      <li><a
+	      href="http://smatch.sourceforge.net/">Smatch</a>. The Source Matcher,
+	      based on papers about the <a href="http://metacomp.stanford.edu/">Stanford
+	      Checker</a>.  <a href="http://www.coverity.com">Coverity</a>
+	      has commercialized this technology.
+	      <li><a href="http://tree.celinuxforum.org/pubwiki/moin.cgi/Sparse">Sparse</a>,
+	      a static type-checking tool for the Linux kernel (written by Linus Torvalds).  (<a href="http://www.codemonkey.org.uk/projects/git-snapshots/sparse/">snapshots from code monkey</a>)
+	      <li><a href="http://spinroot.com/uno/">Uno</a>, a simple tool for code analysis.
+            </ul>
+          <li>Dynamic Debugging
+            <ul>
+              <li><a href="http://dmalloc.com/">Dmalloc</a>. Debug
+                malloc library.
+	      <li><a href="http://www.cbmamiga.demon.co.uk/mpatrol/">mpatrol</a>,
+	          another debugging malloc library.
+              <li><a
+                  href="http://developer.kde.org/~sewardj/">Valgrind</a>. An
+                open-source memory debugger.
+              <li><a href="ftp://ftp.perens.com/pub/ElectricFence/">Electric
+                  Fence</a>.  A memory bounds checker.
+	      <li><a href="http://sourceforge.net/projects/bfbtester/">BFBTester</a>.
+	          A tool that does quick proactive security checks of binaries.
+            </ul>
+          <li>Compilation and Documentation Tools
+            <ul>
+              <li><a href="http://ccache.samba.org/">ccache</a>.  A compiler
+                cache.  This is a MUST HAVE.
+              <li><a href="http://www.doxygen.org/">Doxygen</a>. A
+                documentation system.
+            </ul>
+	  <li>Code Coverage Tools
+	    <ul>
+	      <li><a href="http://gcc.gnu.org/onlinedocs/gcc-3.0/gcc_8.html">gcov</a>.
+	      A code coverage tool that works with gcc
+	      <li><a href="http://www.alphalink.com.au/~gnb/ggcov/">ggcov</a>.
+	      A GUI for gcov
+	    </ul>
+	  </li>
+        </ul>
+        <p>
+      <li>Other Possibly Interesting Stuff
+        <ul>
+          <li><a href="http://lsm.immunix.org/">LSM</a>. Linux Security
+            Modules.
+          <li>Mudflap and Libmudflap.  Patches for gcc/egcs.
+          <li>Static Code Analysis
+            <ul>
+              <li><a
+              href="http://www.dwheeler.com/flawfinder/">Flawfinder</a>. Static
+              security analysis tool (written in Python).
+              <li><a
+              href="http://www.cigital.com/its4/">ITS4</a>. Software
+              Security Tool.  <b>Not</b> under GPL.
+              <li><a
+              href="http://www.cs.berkeley.edu/~jfoster/cqual/">Cqual</a>. A
+              tool for adding type qualifiers to C.
+              <li><a
+              href="http://www.cs.berkeley.edu/~daw/mops/">MOPS</a>. MOdelchecking
+              Programs for Security properties.
+              <li><a
+              href="http://www.cs.berkeley.edu/~daw/boon/">BOON</a>. Buffer
+              Overrun detectiON.
+	      <li><a href="http://cm.bell-labs.com/cm/cs/what/orion/">Orion</a>, a C and C++ analyzer using gcc and techniques from Uno.
+            </ul>
+	  <li>Test Suites
+	    <ul>
+	      <li><a href="http://ltp.sourceforge.net/">Linux Test Project</a>
+	      <li><a href="http://posixtest.sourceforge.net/">Open POSIX Test
+	      Suite</a>
+	      <li><a href="http://www.opensourcetesting.org/performance.php">Open source tools for software testing professionals</a>
+	    </ul>
+        </ul>
+    </ul>
+
+<!-- Created: Fri Nov 22 11:02:16 EST 2002 -->
+  </body>
+</html>

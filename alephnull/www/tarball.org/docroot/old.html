@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>The Tarball Linux Distribution</title>
+  </head>
+
+  <body>
+    <h1>The Tarball Linux Distribution</h1>
+
+    <h2>Introduction to Tarball</h2>
+
+    Tarball is a new pristine-source-plus-patches, boot-strapping,
+    self-hosting Linux distribution designed for purpose-built Linux
+    machines.<sup>1</sup>
+
+    The build stages are:
+    <ul>
+      <li>
+        <b>Stage 1 (boot-strapping, part 1)</b>: Build from a host
+        system (e.g., Fedora Core).
+      </li>
+      <li>
+        <b>Stage 2 (boot-strapping, part 2)</b>: Build from a chroot
+        environment composed only of Stage 1 packages.  This completes
+        boot-strapping.
+      </li>
+      <li>
+        <b>Stage 3 (self-hosting)</b>: Build from a chroot environment
+        composed only of Stage 2 packages.  Stage 3 packages are used to
+        boot the actual target hardware.  All stage 3 and stage 3+n
+        builds are self-hosting -- everything is built from binaries
+        that were compiled using the Tarball distribution.
+      </li>
+    </ul>
+
+    <h2>Tarball Goals</h2>
+
+    The goals of the distribution are:
+    <ul>
+      <li>
+        <b>Be small.</b> The installed system should not depend on
+        interpretive languages, such as perl, php, or python.  (Of
+        necessity, any build system may require these languages, but
+        they should not be required on the target system, unless in
+        support of some specific and optional software.)
+      </li>
+      <li>
+        <b>Boot from a CF disk.</b>  (I originally though about booting from
+        a USB stick, but my BIOS is so fiddly, I decided it wasn't worth
+        it.  Fortunately, I found <a
+        href="http://www.newegg.com/Product/Product.aspx?Item=N82E16812186002">CF
+        to IDE converter</a>).
+      </li>
+      <li>
+        <b>Support on-disk encryption.</b>
+      </li>
+    </ul>
+
+    <h2>Example Hardware</h2>
+
+    Some <a href="hardware.html">hardware examples</a> are provided,
+    using prices from newegg.com, mostly from March 2007.  It is
+    possible to build a 2TB server for under $2k, 4TB for under $3k, and
+    6TB for under $4k.  These are all bare-bones servers.
+    
+    <h2>Alternatives to Tarball</h2>
+
+    If Tarball sounds interesting, there are other distributions that
+    might be interesting and/or more suitable for your project:
+    <ul>
+      <li>
+        <a href="http://www.rocklinux.org">ROCK Linux</a>
+      </li>
+      <li>
+        The <a href="http://www.t2-project.org/">T2 System Development
+          Environment</a>
+      </li>
+      <li>
+        <a href="http://www.openembedded.org/">Open Embedded</a>
+      </li>
+      <li>
+        <a href="http://www.rpath.com/">rPath</a> ("the only platform
+        that transforms applications into software appliances")
+      </li>
+      <li>
+        Several general purpose distributions have smaller, embedded
+        versions, such as gentoo and debian.
+      </li>
+      <li>
+        Many other "small Linux" distributions, designed for a variety
+        of purposes and needs. YMMV.
+      </li>
+    </ul>
+
+    If your goal is to build a RAID system or a NAS box, there are other
+    distributions that might be interesting and/or more suitable for
+    your project.  I recommend FreeNAS (I started working on tarball
+    before FreeNAS supported encryption, or I'd likely be using
+    FreeNAS).
+    <ul>
+      <li>
+        <a href="http://www.freenas.org/">FreeNAS: The Free NAS
+          Server</a> (built on FreeBSD, based on <a
+          href="http://www.m0n0.ch/wall/">m0n0wall</a>; USB stick
+          support; latest release supports encryption!)
+      </li>
+      <li>
+        <a href="http://cryptobox.org/">CryptoBox</a> (Debian-based, no
+        USB stick support at present)
+      </li>
+      <li>
+        <a href="http://www.serverelements.com/">NASLite</a> (some
+        proprietary elements?)
+      </li>
+      <li>
+        <a href="http://www.openfiler.com/">Openfiler</a> (rPath-based)
+    </ul>
+
+    <hr>
+    <p>
+      <sup>1</sup>The <a href="http://bogus.org/">Bogus Linux
+      Release</a>, available in 1994, was the very first
+      pristine-source-plus-patches, boot-strapping, self-hosting Linux
+      distribution.  In 1995, pristine-source-plus-patches technology
+      was introduced to Red Hat's RPM package manager.  Most
+      distributions today (2007) are based on a
+      pristine-source-plus-patches model, and some are both
+      bootstrapping and self-hosting.  Small, purpose-built, Linux
+      distributions are numerous, bumbering in the hundreds, but most
+      appear to lack the boot-strapping or self-hosting qualities and
+      are, instead, built by using pieces of larger distributions.
+    </p>
+  </body>
+</html>

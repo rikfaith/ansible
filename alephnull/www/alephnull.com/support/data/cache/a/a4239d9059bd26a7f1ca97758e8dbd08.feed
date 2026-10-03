@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="https://199.48.130.3/w/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://199.48.130.3/w/feed.php">
+        <title>alephnull.com garden</title>
+        <description></description>
+        <link>https://199.48.130.3/w/</link>
+        <image rdf:resource="https://199.48.130.3/w/lib/tpl/alephnull/images/favicon.ico" />
+       <dc:date>2026-09-25T09:46:03-0400</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://199.48.130.3/w/garden/garden?rev=1739726169&amp;do=diff"/>
+                <rdf:li rdf:resource="https://199.48.130.3/w/garden/orchard?rev=1620515809&amp;do=diff"/>
+                <rdf:li rdf:resource="https://199.48.130.3/w/garden/plantings?rev=1739744245&amp;do=diff"/>
+                <rdf:li rdf:resource="https://199.48.130.3/w/garden/sidebar?rev=1204514244&amp;do=diff"/>
+                <rdf:li rdf:resource="https://199.48.130.3/w/garden/start?rev=1203867025&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://199.48.130.3/w/lib/tpl/alephnull/images/favicon.ico">
+        <title>alephnull.com</title>
+        <link>https://199.48.130.3/w/</link>
+        <url>https://199.48.130.3/w/lib/tpl/alephnull/images/favicon.ico</url>
+    </image>
+    <item rdf:about="https://199.48.130.3/w/garden/garden?rev=1739726169&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2025-02-16T12:16:09-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>garden:garden</title>
+        <link>https://199.48.130.3/w/garden/garden?rev=1739726169&amp;do=diff</link>
+        <description>Garden 2007
+
+Raised Beds 2007:
+Bed 1, near garage, near house:
+Tomatoes Brandywine, (Seeds of Change). Grew well, many tomatoes initially, then with drought, had problems with decreased production and blossom end rot. Note:  leave more room for plants and stake them well.</description>
+    </item>
+    <item rdf:about="https://199.48.130.3/w/garden/orchard?rev=1620515809&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2021-05-08T19:16:49-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>garden:orchard</title>
+        <link>https://199.48.130.3/w/garden/orchard?rev=1620515809&amp;do=diff</link>
+        <description>Garden: Orchard
+
+04-07  planted Dwarf Patio Peach in contained round bed by garage, surrounded by mints.
+( Peach: dwarf ornamental form with double pink flowers; fruit is red/gold with small white-fleshed freestone. Leaves are long slender brilliant reddish purple throughout the season. Deciduous. Useful as accent or container plant. Hardiness zone 5-9. grown by Holland Nursery, Franklin, VA 23851.  Bought at Harris teeter, Chapel Hill, $29.99.)</description>
+    </item>
+    <item rdf:about="https://199.48.130.3/w/garden/plantings?rev=1739744245&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2025-02-16T17:17:25-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>garden:plantings</title>
+        <link>https://199.48.130.3/w/garden/plantings?rev=1739744245&amp;do=diff</link>
+        <description>Strike-through Text
+
+Garden: Plantings 2008
+
+2007 or 2008: Corylus avellana 'contorted', “Harry lauder's Walking stick”, by garage, next to walkway to garden.
+2007 or 2008, planted 2 Honeysuckle,“halls”, on either side of back porch stairs. (Direct Gardening). By 2009, they are covering the trellises there and are cold hardy. Many perfumed flowers in Spring.</description>
+    </item>
+    <item rdf:about="https://199.48.130.3/w/garden/sidebar?rev=1204514244&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-03-02T22:17:24-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>garden:sidebar</title>
+        <link>https://199.48.130.3/w/garden/sidebar?rev=1204514244&amp;do=diff</link>
+        <description>Gardening
+
+ Garden
+
+ Orchard
+
+ Plantings</description>
+    </item>
+    <item rdf:about="https://199.48.130.3/w/garden/start?rev=1203867025&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-02-24T10:30:25-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>garden:start</title>
+        <link>https://199.48.130.3/w/garden/start?rev=1203867025&amp;do=diff</link>
+        <description>Gardening
+
+	*   Garden
+	*   Orchard
+	*   Plantings</description>
+    </item>
+</rdf:RDF>

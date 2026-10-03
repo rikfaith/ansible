@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Nitrous Hybrid Simulator -- Tank Geometry</title>
+<link href="../styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<table width="998">
+  <tr>
+    <td colspan="2"><a href="../index.html"><img src="../hybridsky.png" width="499" height="112" border="0" /></a> </td>
+  </tr>
+  <tr>
+    <td colspan="2"><h3 align="center">HSIM -- An Open Source Simulator for Amateur Nitrous Hybrid Rocket Motors</h3>
+    <hr/>
+    </td>
+  </tr>
+  <tr>
+    <td height="64" colspan="2" class="ParameterName"><blockquote>
+        <h3>Physical Parameters for Rocksim </h3>
+    </blockquote></td>
+  </tr>
+  <tr>
+    <td width="16">&nbsp;</td>
+    <td><table width="512" border="1" cellpadding="5" cellspacing="0">
+        <tr>
+          <td colspan="2" valign="top" class="Normal"><p>HSIM can generate simple .RSE files for Rocksim Version 8. Future versions of HSIM will generate more complete Rocksim files providing the flight simulator with moment-by-moment analysis of the motor's mass and center-of-gravity.</p>
+            <p>The present Rocksim model is very simple. The dry-mass of the motor is supplied by the designer. HSIM adds the ullage mass of the nitrous and the mass of unburnt fuel to this and supplies that as the motor's weight. Propellant weight is the total weight of nitrous and fuel that are consumed.</p>
+            <p>Rocksim then makes its own assumptions about the rate that propellents are consumed and where the center-of-gravity is located.</p>
+            <p>Future versions of hsim will allow the specification of a more complete set of physical design parameters for the motor, which will be passed to Rocksim for use in flight simulations. </p></td>
+        </tr>
+        <tr>
+          <td width="128" valign="top" class="ParameterName"><a name="DryMass" id="DryMass"></a>Dry Mass </td>
+          <td class="Normal"><p>Specifies the motor's mass when no propellants are loaded. </p></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+</body>
+</html>

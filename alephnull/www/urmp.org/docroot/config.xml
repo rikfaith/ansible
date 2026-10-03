@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site
+  base_url="http://urmp.org/"
+  store_into="/www/urmp.org/docroot/sitemap.xml"
+  verbose="1"
+  >
+
+  <url href="http://urmp.org/" changefreq="weekly" priority="1.0" />
+  <url href="http://urmp.org/gitweb/" changefreq="weekly" priority="0.8" />
+  <url href="http://urmp.org/download/start" changefreq="weekly" priority="0.8" />
+  <url href="http://urmp.org/docs/" changefreq="weekly" priority="0.5" />
+  <url href="http://urmp.org/screen/" changefreq="weekly" priority="0.5" />
+  <url href="http://urmp.org/todo/" changefreq="weekly" priority="0.5" />
+  <url href="http://urmp.org/bugs/" changefreq="weekly" priority="0.5" />
+
+  <directory
+    path="/www/urmp.org/docroot/download/"
+    url="http://urmp.org/download/"
+    default_file="index.html" />
+
+  <filter  action="drop"  type="wildcard"  pattern="*~" />
+  <filter  action="drop"  type="regexp"    pattern="/\.[^/]*" />
+  <filter  action="drop"  type="wildcard"  pattern="*.txt" />
+  <filter  action="drop"  type="wildcard"  pattern="*.xml" />
+  <filter  action="drop"  type="wildcard"  pattern="*table.html*" />
+  <filter  action="drop"  type="regexp"    pattern="/lib/" />
+  <filter  action="drop"  type="regexp"    pattern="/gitweb/..*" />
+  <filter  action="drop"  type="regexp"    pattern="ChangeLog..*" />
+
+</site>

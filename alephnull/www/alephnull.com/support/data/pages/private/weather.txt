@@ -1,0 +1,16 @@
+====== Weather Station Notes ======
+
+
+===== Location =====
+  * Canonical location: 172m above sea level, 36.139, -79.007 [[http://maps.google.com/maps?f=q&hl=en&geocode=&q=36.139,+-79.007&ie=UTF8&z=17&iwloc=addr | via google]], [[http://mapper.acme.com/?ll=36.13900,-79.00701&z=17&t=M&marker0=36.13900%2C-79.00701%2C36.139%5C%2C%20-79.007 | via acme.com]]
+  * For CWOP: 360834N 0790044W
+  * From GPS: 36N 8.341', 79W 0.439' => 38N 8' 20.46", 79W 0' 26.34" => 36.139017, -79.007317
+  * From Teraserver:
+    * Latitude: 36N 08' 6.53" - 36N 08' 19.50" => 36.13515 - 36.13875
+    * Longitude: 79W 00' 13.34" - 79W 00' 29.34" => 79.00407 - 79.00851
+  * From Orange County GIS:
+    * Elevation: 565 feet = 172 meters
+  * From Google Maps:
+    * +36 8' 20", -79 0' 26" => 36.138889, -79.007222 => Global UTM (WGS84/NAD83), Zone 17S Northing 4001192 Easting 679299
+  * From [[http://www.ngdc.noaa.gov/seg/geomag/jsp/Declination.jsp | NOAA's Magnetic Declination Site]]:
+    * Declination = 8° 39' W changing by 0° 2' W/year

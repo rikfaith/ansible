@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Nitrous Hybrid Simulator -- Tank Geometry</title>
+<link href="../styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<table width="998">
+  <tr>
+    <td colspan="2"><a href="tank.html"><img src="../hybridsky.png" width="499" height="112" border="0" /></a> </td>
+  </tr>
+  <tr>
+    <td colspan="2"><h3 align="center">HSIM -- An Open Source Simulator for Amateur Nitrous Hybrid Rocket Motors</h3>
+    <hr/>
+    </td>
+  </tr>
+  <tr>
+    <td height="64" colspan="2" class="ParameterName"><blockquote>
+        <h3>Flight Tank Physical Parameters</h3>
+    </blockquote></td>
+  </tr>
+  <tr>
+    <td width="16">&nbsp;</td>
+    <td><table width="512" border="1" cellpadding="5" cellspacing="0">
+        <tr>
+          <td width="128" valign="top" class="ParameterName"><a name="TankHeight" id="TankHeight"></a>Tank Height</td>
+          <td><p class="Normal">The flight tank model assumes that nitrous is stored in a cylindrical tank with a flat top and bottom. This parameter specifies the interior height of that cylinder.</p></td>
+        </tr>
+        <tr>
+          <td valign="top" class="ParameterName"><a name="UllageHeight" id="UllageHeight"></a>Ullage Height </td>
+          <td class="Normal"><p>Tanks holding nitrous in a blend of liquid and gas at saturation conditions can never be completely full of liquid. Filling the tank completely with liquid risks severe overpressure should the temperature rise.</p>
+            <p>The Ullage Height parameter specifies the amount of gas at the top of the tank when it is full. For tanks that use a pin-hole vent this is the distance between the vent and the top of the tank.</p>
+            <p>The total height of liquid nitrous is the Tank Height less the Ullage Height. </p></td>
+        </tr>
+        <tr>
+          <td valign="top" class="ParameterName"><a name="TankDiameter" id="TankDiameter"></a>Tank Diameter </td>
+          <td class="Normal">This is interior diameter of the flight tank. </td>
+        </tr>
+        <tr>
+          <td valign="top" class="ParameterName"><a name="VentDiameter" id="VentDiameter"></a>Vent Diameter </td>
+          <td class="Normal"><p>This parameter specifies the diameter of the pin-hole vent. The simulator will model the amount of nitrous lost through the pin-hole vent during the flight.</p>
+            <p>The simulator does not use the vent geometry to model tank fill, nor does it model the amount of nitrous lost to through the vent between when the tank is filled and the motor is ignited.</p>
+            <p>This model can be disabled by setting the diameter to zero. </p></td>
+        </tr>
+        <tr>
+          <td valign="top" class="ParameterName"><a name="VentCd" id="VentCd"></a>Vent Cd </td>
+          <td class="Normal">This unitless parameter describes the ease with which nitrous runs through the vent. Typical values are in the range 0.2 to 0.4. This parameter is ignored if the vent diameter is set to zero. </td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+</body>
+</html>

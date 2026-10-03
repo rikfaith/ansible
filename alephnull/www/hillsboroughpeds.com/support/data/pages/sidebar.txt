@@ -1,0 +1,16 @@
+[[legal: | Legal]]\\
+[[insurance: | Insurance]]\\
+[[finance: | Finance]]\\
+[[equipment: | Equipment]]\\
+[[computer: | Computer]]\\
+[[office: | Office]]\\
+[[marketing: | Marketing]]\\
+[[staff: | Staff]]\\
+[[contacts: | Contacts]]\\
+\\
+[[wiki:syntax | Help with wiki syntax]]\\
+[[drug reps: | Drug Reps]]\\
+[[practice consultant: | Practice consultant]]
+
+[[magazines: | Magazines]]\\
+[[referrals | Referral physicians]]\\

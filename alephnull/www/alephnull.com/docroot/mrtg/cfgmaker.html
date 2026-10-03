@@ -1,0 +1,219 @@
+<HTML>
+<HEAD>
+<TITLE>doc/cfgmaker</TITLE>
+<LINK REV="made" HREF="mailto:karrer@iis.ee.ethz.ch">
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#990200" VLINK="#006342"><P><IMG SRC="mrtg-l.png"><IMG SRC="mrtg-m.png"><IMG SRC="mrtg-r.gif"></P>
+
+<A NAME="__index__"></A>
+<!-- INDEX BEGIN -->
+<!--
+
+<UL>
+
+	<LI><A HREF="#name">NAME</A></LI>
+	<LI><A HREF="#synopsis">SYNOPSIS</A></LI>
+	<LI><A HREF="#options">OPTIONS</A></LI>
+	<LI><A HREF="#description">DESCRIPTION</A></LI>
+	<LI><A HREF="#example">EXAMPLE</A></LI>
+	<LI><A HREF="#see also">SEE ALSO</A></LI>
+	<LI><A HREF="#author">AUTHOR</A></LI>
+	<LI><A HREF="#license">LICENSE</A></LI>
+	<LI><A HREF="#copyright">COPYRIGHT</A></LI>
+</UL>
+-->
+<!-- INDEX END -->
+
+<P>
+<H1><A NAME="name">NAME</A></H1>
+<P>cfgmaker - Creates mrtg.cfg files (for mrtg-2.9.6)</P>
+<P>
+<HR>
+<H1><A NAME="synopsis">SYNOPSIS</A></H1>
+<P>cfgmaker [options] community@router [community@router ...]</P>
+<P>
+<HR>
+<H1><A NAME="options">OPTIONS</A></H1>
+<PRE>
+ --ifref=nr        interface references by Interface Number (default)
+ --ifref=ip                         ... by Ip Address
+ --ifref=eth                        ... by Ethernet Number
+ --ifref=descr                      ... by Interface Description
+ --ifref=name                       ... by Interface Name
+ --ifref=type                       ... by Interface Type</PRE>
+<PRE>
+ --ifdesc=nr      interface description uses Interface Number (default)
+ --ifdesc=ip                        ... uses Ip Address
+ --ifdesc=eth                       ... uses Ethernet Number
+ --ifdesc=descr                     ... uses Interface Description
+ --ifdesc=name                      ... uses Interface Name
+ --ifdesc=alias                     ... uses Interface Alias
+ --ifdesc=type                      ... uses Interface Type</PRE>
+<PRE>
+ --global &quot;x: a&quot;   add global config entries</PRE>
+<PRE>
+ --no-down         do not look at admin or opr status of interfaces</PRE>
+<PRE>
+ --descint         describe interface instead of just 'Traffic Analysis for'</PRE>
+<PRE>
+ --subdirs=format  give each router its own subdirectory, naming each per 
+                   &quot;format&quot;, in which HOSTNAME and SNMPNAME will be 
+                   replaced by the values of those items -- for instance,  
+                   --subdirs=HOSTNAME or --subdirs=&quot;HOSTNAME (SNMPNAME)&quot;</PRE>
+<PRE>
+ --noreversedns    do not reverse lookup ip numbers</PRE>
+<PRE>
+ --help            brief help message
+ --man             full documentation
+ --version         print the version of cfgmaker</PRE>
+<PRE>
+ --output=file     output filename default is STDOUT</PRE>
+<P>
+<HR>
+<H1><A NAME="description">DESCRIPTION</A></H1>
+<P><STRONG>Cfgmaker</STRONG> creates MRTG configuration files based on information
+pulled from a router or another SNMP manageable device.</P>
+<DL>
+<DT><STRONG><A NAME="item_community%40router"><EM>community</EM><STRONG>@</STRONG><EM>router</EM></A></STRONG><BR>
+<DD>
+<EM>Community</EM> is the community name of the device you want to create a
+configuration for. The default community name is '<STRONG>public</STRONG>'; you might
+want to try this first if you do not know the community name of a
+device. If you are using the wrong comunity name you will get no
+response from the device.
+<P><EM>Router</EM> is the DNS name or the IP number of an SNMP-managable device.           
+Following the name you can specify 6 further options separated by                 
+colons.  The full syntax looks like this:                                         
+</P>
+<PRE>
+
+   B&lt;router&gt;[:[B&lt;port&gt;][:[B&lt;timeout&gt;][:[B&lt;retries&gt;][:[B&lt;backoff&gt;][:B&lt;version&gt;]]]]]</PRE>
+<P>Of special interest may be the last parameter, <STRONG>version</STRONG>.  If you set            
+this to '2' then your device will be queried with SNMP version 2                  
+requests. This allows to poll the 64 bit traffic counters in the device           
+and will thus work much better with fast interfaces (no more counter              
+overrun).</P>
+<P></P>
+<DT><STRONG><A NAME="item_%2D%2Dhelp"><STRONG>--help</STRONG></A></STRONG><BR>
+<DD>
+Print a brief help message and exit.
+<P></P>
+<DT><STRONG><A NAME="item_%2D%2Dman"><STRONG>--man</STRONG></A></STRONG><BR>
+<DD>
+Prints the manual page and exits.
+<P></P>
+<DT><STRONG><A NAME="item_%2D%2Dversion"><STRONG>--version</STRONG></A></STRONG><BR>
+<DD>
+Print the version of cfgmaker.  This should match the version of MRTG
+for which config files are being created.
+<P></P>
+<DT><STRONG><A NAME="item_%2D%2Difref_nr%7Cip%7Ceth%7Cdescr%7Cname"><STRONG>--ifref</STRONG> <STRONG>nr</STRONG>|<STRONG>ip</STRONG>|<STRONG>eth</STRONG>|<STRONG>descr</STRONG>|<STRONG>name</STRONG></A></STRONG><BR>
+<DD>
+Select the interface identification method.  Default is <STRONG>nr</STRONG> which
+identifies the router interfaces by their number.  Unfortunately the
+interface numbering scheme in an SNMP tree can change. Some routers
+change their numbering when new interfaces are added, others change
+thier numbering every full moon just for fun.
+<P>To work around this sad problem MRTG can identify interfaces by 3
+other properties. None of these works for all interfaces, but you
+should be able to find one which does fine for you. Note that
+especially ethernet addrsses can be problematic as some routers have
+the same ethernet address on most of their interface cards.</P>
+<P>Select <STRONG>ip</STRONG> to identify the interface by its IP number. Use <STRONG>eth</STRONG> to
+use the ethernet address for identification. Or use <STRONG>descr</STRONG> to use
+the Interface description.</P>
+<P>If your chosen method does not allow unique interface identification on           
+the device you are querying, <STRONG>cfgmaker</STRONG> will tell you about it.                  
+</P>
+<PRE>
+
+=item B&lt;--ifdesc&gt; B&lt;nr&gt;|B&lt;ip&gt;|B&lt;eth&gt;|B&lt;descr&gt;|B&lt;name&gt;|B&lt;type&gt;|B&lt;alias&gt;</PRE>
+<P>Select what to use as the description of the interface.  The description
+appears in the Title[] property for the target as well as the text header
+in the HTML code defined in the target's PageTop[].  Default is to use
+<STRONG>nr</STRONG> which is just the interface number which isn't always useful
+to the viewer of the graphs.</P>
+<P>There are 6 other properties which could be used.  Use <STRONG>ip</STRONG> if you want
+to use the interface's IP-address.  Use <STRONG>eth</STRONG> if you want to use the
+interface's ethernet address.  If you want a better description, you can
+use either <STRONG>descr</STRONG>, <STRONG>name</STRONG> or <STRONG>alias</STRONG>.  Exactly what each of these do
+varies between different equipment so you might need to experiment.  For
+instance, for a serial interface on a Cisco router running IOS using <STRONG>name</STRONG>
+might result in ``S0'' being the interface description , <STRONG>descr</STRONG> might result
+in ``Serial0'' and <STRONG>alias</STRONG> might result in ``Link to HQ'' (provided that is
+what is used as the interface's ``description'' in the router's configuration).</P>
+<P>Finally, if you want to describe the interface by it's type
+(i.e ``ethernetCSMA'', ``propPointtoPoint'' etc) you can use <STRONG>type</STRONG>.  This is
+roughly equivalent to the <STRONG>--descint</STRONG> option above.
+</P>
+<PRE>
+
+=item B&lt;--global&gt; B&lt;&quot;&gt;I&lt;bla: abc&gt;B&lt;&quot;&gt;</PRE>
+<P>Use this to add global options to the generated config file. 
+You can call <STRONG>--global</STRONG> several times to add multiple options.</P>
+<PRE>
+ --global &quot;workdir: /home/mrtg&quot;</PRE>
+<P>If you want some default Options you might want to put</P>
+<PRE>
+ --global &quot;options[_]: growright,bits&quot;</PRE>
+<P></P>
+<DT><STRONG><A NAME="item_%2D%2Dnoreversedns"><STRONG>--noreversedns</STRONG></A></STRONG><BR>
+<DD>
+Do not try to reverse lookup IP numbers ... a must for DNS free environments.
+<P></P>
+<DT><STRONG><A NAME="item_%2D%2Dno%2Ddown"><STRONG>--no-down</STRONG></A></STRONG><BR>
+<DD>
+Normally cfgmaker will not include interfaces which are marked
+anything but administratively and operationally UP. With this
+switch you get them all.
+<P></P>
+<DT><STRONG><A NAME="item_%2D%2Dsubdirs_format"><STRONG>--subdirs</STRONG> <EM>format</EM></A></STRONG><BR>
+<DD>
+Give each router its own subdirectory for the HTML and graphics (or
+.rrd) files.  The directory name is the given <EM>format</EM> string with a
+couple of pattern replacements.  The string ``HOSTNAME'' will be
+replaced by the hostname of the router (however you specified it on
+the <STRONG>cfgmaker</STRONG> commandline -- it may be an actual hostname or just an
+IP address), and ``SNMPNAME'' will be replaced with the device's idea of
+its own name (the same name that appears on the right side of the
+``Title'' lines).  For instance, a call like:
+<PRE>
+ cfgmaker --subdirs=HOSTNAME__SNMPNAME public@10.10.0.18</PRE>
+<P>would result in the generation of lines looking something like:</P>
+<PRE>
+ Directory[10.10.0.18_1]: 10.10.0.18__fp2200-bothrip-1.3</PRE>
+<P></P></DL>
+<P>
+<HR>
+<H1><A NAME="example">EXAMPLE</A></H1>
+<P>This example creates a config file for <EM>router.place.xyz</EM>:  the router           
+has the community name <EM>public</EM>.  Interfaces get identified by their             
+IP number.  Two global options get added to the config file.  The                 
+config file gets redirected to <EM>mrtg.conf</EM>.  The '\' signs at the end            
+of the line mean that this command should be written on a single line.</P>
+<PRE>
+ cfgmaker --global &quot;WorkDir: /home/tobi&quot;           \
+          --global &quot;Options[_]: growright,bits&quot;    \
+          --ifref=ip                               \
+          public@router.place.xyz &gt; mrtg.cfg</PRE>
+<P>
+<HR>
+<H1><A NAME="see also">SEE ALSO</A></H1>
+<P><A HREF="reference.html">the reference manpage</A></P>
+<P>
+<HR>
+<H1><A NAME="author">AUTHOR</A></H1>
+<P>Tobias Oetiker &lt;<A HREF="mailto:tobi@oetiker.ch">tobi@oetiker.ch</A>&gt;</P>
+<P>
+<HR>
+<H1><A NAME="license">LICENSE</A></H1>
+<P>GNU General Public License</P>
+<P>
+<HR>
+<H1><A NAME="copyright">COPYRIGHT</A></H1>
+<P>Cfgmaker is Copyright 2000 by Tobias Oetiker &lt;<A HREF="mailto:tobi@oetiker.ch">tobi@oetiker.ch</A>&gt;</P>
+
+</BODY>
+
+</HTML>

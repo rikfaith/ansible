@@ -1,0 +1,36 @@
+<?php
+      require 'header.php';
+      if (!strcmp("$REQUEST_URI", "/home.html")) $target=1;
+      if (!strcmp("$REQUEST_URI", "/index.html")) $target=1;
+      if (!strcmp("$REQUEST_URI", "/")) $target=1;
+      if (!strncmp("$REQUEST_URI", "/page", 5)) {
+          $target=preg_replace("/.*page ([0-9]+).html/",
+                               "\\1",
+                               rawurldecode($REQUEST_URI));
+      }
+      if (!($fp = fopen("../support/layout.txt", "r"))) return;
+      $count = 0;
+?>
+
+    <table cellpadding="10" cellspacing="10" align="center">
+      <tr>
+<?php
+      while ($line = fgets($fp)) {
+          list($page, $tok) = split(" ", $line);
+          if (trim($page) == $target) {
+             print '<td width="150" valign="top">';
+             print '<a href="/'
+                   . getsmallhtml($tok)
+                   . '"><img src="/'
+                   . getthumb($tok)
+                   . '"></a>'
+                   . "\n";
+             print "<br>&nbsp;<br>" . getname(getthumb($tok)) . "\n";
+             print "</td>\n";
+             if ($count++ && !($count % 3)) print "\n</tr><tr>\n";
+          }
+      }
+?>
+  </tr>
+  </table>
+<?php require 'footer.php'; ?>

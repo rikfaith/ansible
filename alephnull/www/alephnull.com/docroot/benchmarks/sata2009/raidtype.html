@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>A Comparison of Software RAID Types</title>
+  </head>
+
+  <body>
+    <h1>A Comparison of Software RAID Types</h1>
+    <b><a href="index.html">Linux Software RAID Performance Comparisons</a></b>
+
+    <h2>The Problem</h2>
+
+    We expect RAID-0 to be faster than RAID-5 and that RAID-6 will be
+    slower than RAID-5, but by how much?  Here, we compare 5 spindles in
+    each configuration, as well as the same number of data spindles in
+    each configuration.
+
+    <h2>The Controller</h2>
+    <ul><li>Supermicro AOC-SAT2-MV8
+        <ul><li>8 SATA II ports
+            <li>64-bit PCI-X133MHz (tested in 32-bit PCI slot)
+            <li>Chipset: MV88SX6081
+            <li>Linux driver: sata_mv
+            <li>Cost: $99.99 from newegg.com
+            <li>Configuration: JBOD
+        </ul>
+    </ul>
+
+    <h2>The Test System</h2>
+    <ul><li>Motherboard: Asus K8N-DRE
+        <li>Processors: Two 1.8GHz Opteron 244
+        <li>RAM: 8GB DDR400 running at 333MHz
+        <li>Slots: 1 32-bit PCI; 1 PCI Express x16
+        <li>Drives: Seagate Barracuda 7200.11 1000Gbytes ST31000333AS
+        <li>Drive cage: Supermicro CSE-M35T-1B 5-Bay Enclosure (fits in
+        three 5-inch chassis bays; sells for about $100-$120 from
+        newegg.com)
+    </ul>
+
+    <h2>The Test Matrix</h2>
+    <ul><li>Read Percentage: 100% (pure read), 50% (mixed), 0% (pure write)
+        <li>Random Percentage: 0% (sequential), 100% (random)
+        <li>Thread counts: 1 and 20
+        <li>Block sizes: 4k, 8k, 32k, 64k, 256k, 1m, 4m, 8m, 64m
+        <li>Targets: All 5 driver were tested simultaneously, as well as
+        each drive individually.
+        <li>All I/Os are issued using the O_DIRECT flag.
+        <li>All tests last 20 seconds.
+    </ul>
+
+    <h2>Conclusion</h2>
+
+    RAID-0 lacks parity protection and is only significantly faster than
+    RAID-5 and RAID-6 for write-based workloads.  While it is typical to
+    use RAID-0 for read-only workloads, there is no compelling
+    performance reasons to do so -- on read-only workloads, RAID-5 and
+    RAID-6 perform nearly as well (or better).
+    <p>
+    RAID-6 must compute twice the parity information as RAID-5, so one
+    typically expects it to perform significantly worse than RAID-5.
+    <b>This is not the case.</b>  Indeed, RAID-6 performance is nearly
+    identical to RAID-5 performance for I/O sizes under 256KB.  Capacity
+    and reliability issues -- not performance issues -- should guide the
+    selection between RAID-5 and RAID-6.  (This likely assumes
+    sufficient CPU, but the test system is I/O bound, not CPU bound.)
+    <p>
+    My recommendation is to never use RAID-0, and to select between
+    RAID-5 and RAID-6 based on available capacity, data-recovery, and
+    reliability needs.
+
+    <h2>Sequential Single Threaded Tests</h2>
+
+    For sequential reads, all RAID types have comparable performance up
+    through 64KB I/O sizes.  After that, RAID-0 saturates the controller
+    and RAID-5 and -6 remain comparable.  For workloads including
+    writes, RAID-0 clearly has higher performance (because no parity
+    computation is required); but RAID-5 and -6 are, again, comparable.
+
+    <br>
+    <img src="sp3-types/1-100-0.png"><img src="sp4-types/1-100-0.png"><img src="sp5-all/1-100-0.png"><br>
+    <img src="sp3-types/1-50-0.png"><img src="sp4-types/1-50-0.png"><img src="sp5-all/1-50-0.png"><br>
+    <img src="sp3-types/1-0-0.png"><img src="sp4-types/1-0-0.png"><img src="sp5-all/1-0-0.png"><br>
+
+    <h2>Random Single Threaded Tests</h2>
+
+    For random reads, all RAID types are comparabe, with RAID-0 having
+    slightly higher performance.  Writes show RAID-0's performance
+    superiority, but RAID-5 and -6 are very similar up through 256KB
+    I/O sizes, after which RAID-5 is superior.
+
+    <br>
+    <img src="sp3-types/1-100-100.png"><img src="sp4-types/1-100-100.png"><img src="sp5-all/1-100-100.png"><br>
+    <img src="sp3-types/1-50-100.png"><img src="sp4-types/1-50-100.png"><img src="sp5-all/1-50-100.png"><br>
+    <img src="sp3-types/1-0-100.png"><img src="sp4-types/1-0-100.png"><img src="sp5-all/1-0-100.png"><br>
+
+    <h2>Sequential Multi-Threaded Tests</h2>
+
+    All RAID types have comparable performance for mutli-threaded
+    sequential reads up through 64KB I/O sizes, with RAID-5 and -6
+    actually outperforming RAID-0 for small I/O sizes.  RAID-0 is
+    superior for larger I/O sizes, and, as expected, for writes.
+
+    <br>
+    <img src="sp3-types/20-100-0.png"><img src="sp4-types/20-100-0.png"><img src="sp5-all/20-100-0.png"><br>
+    <img src="sp3-types/20-50-0.png"><img src="sp4-types/20-50-0.png"><img src="sp5-all/20-50-0.png"><br>
+    <img src="sp3-types/20-0-0.png"><img src="sp4-types/20-0-0.png"><img src="sp5-all/20-0-0.png"><br>
+
+    <h2>Random Multi-Threaded Tests</h2>
+
+    Multi-threaded random reads perform similarly across RAID types,
+    nearly identially through 64KB I/O sizes.  Again, RAID-0 has higher
+    performance for workloads including writes, but RAID-5 and -6 are,
+    again, nearly identical through 256KB I/O sizes.
+                                                                                  
+    <br>
+    <img src="sp3-types/20-100-100.png"><img src="sp4-types/20-100-100.png"><img src="sp5-all/20-100-100.png"><br>
+    <img src="sp3-types/20-50-100.png"><img src="sp4-types/20-50-100.png"><img src="sp5-all/20-50-100.png"><br>
+    <img src="sp3-types/20-0-100.png"><img src="sp4-types/20-0-100.png"><img src="sp5-all/20-0-100.png"><br>
+
+  </body>
+</html>

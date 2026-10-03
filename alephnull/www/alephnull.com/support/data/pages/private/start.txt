@@ -1,0 +1,11 @@
+====== Private ======
+
+Pages in this section are not viewable unless one logs in.
+
+The pages are still stored on miranda.org, and their content still moves over the Internet, so they are not completely "private".  They may be viewed by people with "guest" accounts.
+
+  * Notes on [[private:weather | weather station]]
+  * Notes on [[private:machines | machine configurations]]
+  * Notes on [[private:drives | random drives]]
+  * Notes on [[private:nut | nut]]
+  * Notes on [[private:pan | pan]]

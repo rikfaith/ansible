@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>Simple RAID Tests</title>
+  </head>
+
+  <body>
+    <h1>Simple RAID Tests</h1>
+
+    
+<h2>Setup</h2>
+<p>
+4 Seagate spindles from same drive family.  2 SATA on MB controller, 2
+PATA on PCI controller.  Asus K8V MB with 2GHz AMD Athlon 64.
+<p>
+Linux 2.6.9-1.667 from FC3.
+
+<h2>Tests</h2>
+Tests used a single 140GB or 130GB pre-zero'd file with 1 or 4 threads.
+Aggregate reads or writes are 64KB sequential.  Random reads or writes are 4K
+at random locations in the file.
+
+
+<h2>Test deficiencies</h2>
+<p>
+Only one thread was used in most tests.  This is the case I care about
+most.
+<p>
+Tests were only run for 5 minutes each.
+
+<h2>Results</h2>
+
+
+<h3>mdadm chunk size</h3>
+<p>
+The chunk size defaults to 64K.  Comparisons were done with 4K, 8K, 16K,
+32K, 64K, and 128K chunks.  The most interesting comparison is with 4K
+chunks, with provided significant improvements in read performance,
+without write degradation when using both 1 and 4 threads.  These
+results were confirmed with an ext3fs file system present.
+<p>
+RECOMMENDATION: Use a chunk size of 4K.  Do not use an ext3fs stripe
+size.  (This result is unexpected and should be confirmed for RAIDs
+composed of more than 4 spindles.)
+
+<h3>Encryption</h3>
+<p>
+Encryption with twofish slows throughput by 30-75%.
+
+
+<h3>ext3fs with noatime</h3>
+<p>
+The noatime option appears to improve read performance, but only by
+about 1-2%.  (Inexplicably, it degraded ext2fs aggregate writes by about
+2%.)
+<p>
+<b>RECOMMENDATION</b>: Use noatime.
+
+
+
+<h3>ext3fs with ordered, writeback, and journal</h3>
+<p>
+ordered (data before metadata) is the default.
+<br>      
+writeback (unordered writes) is expected to be faster.
+<br>
+journal (data is written to journal with metadata) is expected to be slower.
+<p>
+When the journal was stored on the same RAID device as the data, ordered
+was almost 100% faster than journal for aggregate writes.  This is
+expected, since journal writes the data twice.  With the journal option,
+random reads were about 8% faster than ordered -- this result is
+unexpected.  The writeback option was nearly equivalent to the ordered
+option.
+<p>
+<b>RECOMMENDATION</b>: When the journal is stored on the RAID device, use
+data=ordered.
+<p>
+When the journal was stored on a spindle separate from the RAID device,
+the data=journal option provided at least 100% improvement in all
+metrics (with 200% improvement in random reads, perhaps because atime
+was on?).  In this case, ordered and writeback were less than 2%
+improved.
+<p>
+<b>RECOMMENDATION</b>: When the journal is stored separate from the RAID
+device, use data=journal.  (This is unexpected and should be verified by
+more experimentation.)
+
+<h2>Raw data</h2>
+<p>
+An OpenOffice spread sheet containing the data is <a
+href="raidtest.sxc">here</a>
+
+  </body>
+</html>

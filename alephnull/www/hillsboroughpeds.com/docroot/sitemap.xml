@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.google.com/schemas/sitemap/0.84"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.google.com/schemas/sitemap/0.84
+                      http://www.google.com/schemas/sitemap/0.84/sitemap.xsd">
+ <url>
+  <loc>http://hillsboroughpeds.com/</loc>
+  <lastmod>2009-07-08T02:24:54Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://hillsboroughpeds.com/about.html</loc>
+  <lastmod>2009-07-08T01:30:57Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://hillsboroughpeds.com/directions.html</loc>
+  <lastmod>2009-07-08T01:30:57Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://hillsboroughpeds.com/forms.html</loc>
+  <lastmod>2009-07-08T01:30:55Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://hillsboroughpeds.com/index.html</loc>
+  <lastmod>2009-07-08T01:29:44Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+</urlset>

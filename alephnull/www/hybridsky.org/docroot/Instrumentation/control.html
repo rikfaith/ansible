@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Hybrid GSE Plumbing</title>
+<style type="text/css">
+<!--
+li {
+	font-family: Arial, Helvetica, sans-serif;
+}
+td {
+	font-family: Arial, Helvetica, sans-serif;
+}
+-->
+</style>
+<link href="../styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<table width="1024">
+  <tr>
+    <td colspan="2"><a href="../index.html"><img src="../hybridsky.png" width="499" height="112" border="0" /></a> </td>
+  </tr>
+  <tr>
+    <td  align="center"><h3> <a href="../p1/index.html">P1</a>: Nitrous at Balls in '08</h3>
+      <h2>Hybrid Launch Control</h2>
+      <p>Last Update, 5/30/08 by Stephen Daniel </p></td>
+  </tr>
+  <tr>
+    <td><h2>Project Summary</h2>
+      <p>The goal of this project is to provide the LCO with the ability to control each valve, the quick-disconnect, and ignition circuit. In the test stand the valves include fire-suppression and possibly water cooling for the chamber pressure port.</p>
+      <p>This project does not control the nitrous tank chill system nor any aspect of the data capture system.</p>
+      <p>Essentially, there are two boxes. At the launch table there are a set of control switches. At the launch tower / test stand, we have a break-out box where each valve plugs in.</p>
+      <p><a href="controlfinished.php">Photos of the finished control system can be seen here</a>. </p>
+      <h3>Design Goals</h3>
+      <ul>
+        <li>Very high reliability</li>
+        <li>Reusable across multiple projects</li>
+        <li>Capable of either 12V or 24V DC operation</li>
+      </ul>
+      <h3>High-Level Design Decisions</h3>
+      <ul>
+        <li>All connectors will be high-performance AMP connectors. These cost more than cheaper connectors, but experience has shown they just plain work.</li>
+        <li>All high-current paths will be local to the launch/test site. High-current does not run to the LCO table. </li>
+        <li>Connection to the LCO table will be wired, not wireless.</li>
+        <li>The entire circuit will be simple, very simple. No programmable parts. </li>
+        <li>All controls will be solid-state. High-current MOSFETs provide much higher price/performance than relays</li>
+        <li>The state of all outputs will be indicated by LEDs visible at the break-out box, but not at the control panel.</li>
+        <li>All control circuits will be identical. The only exception is the ignition circuit, which differs as follows:
+          <ul>
+            <li>The ignition circuit has a key-switch interlock on the control panel.</li>
+            <li>The ignition circuit uses banana-jacks as the connector, not AMP connectors. This allows us to measure connectivity to the igniter and igniter integrity after all connections have been made.</li>
+          </ul>
+        </li>
+        <li>We will have 7 contol circuits. This allows us to use the 9-pin AMP connector to connect the boxes and provides all we can imagine needing.  If we need more, we will build another box (possibly with fewer than 7 channels).  Channels:
+          <ol start="0">
+            <li>Fill (tank-top) </li>
+            <li>Line purge (tank-top) </li>
+            <li>Quick-disconnect (vehicle external) </li>
+            <li>Flight-tank dump (vehicle internal) </li>
+            <li>Fire-suppression (test stand only) </li>
+            <li>Pressure-port cooling supply (test stand only)</li>
+            <li>Ignition (vehicle internal) </li>
+          </ol>
+        </li>
+    </ul>      
+      <h3>Break-out Box</h3>
+    <p>Documents:</p>
+    <ul>
+      <li><a href="breakoutnotes.html">Design Notes</a></li>
+      <li><a href="docs/BreakoutV10.sch">Schematic</a> (uses <a href="http://www.expresspcb.com/ExpressPCBHtm/Free_schematic_software.htm">Express PCB's Schematic Editor</a>) </li>
+      <li><a href="docs/BreakoutV10.pcb">PCB Layout</a> (uses <a href="http://www.expresspcb.com/ExpressPCBHtm/Free_pcb_layout_software.htm">Express PCB's Layout Editor</a>) </li>
+      <li><a href="breakoutparts.html">Parts List</a> </li>
+      <li><a href="controlfinished.php">Final Photos</a>. </li>
+    </ul></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,6 @@
+====== Insurance ======
+[[insurance:malpractice | Malpractice]]\\
+[[insurance:health | Health]]\\
+[[insurance:life | Life]]\\
+[[insurance:disability | Disability]]\\
+[[insurance:contracted | Contracted]]\\

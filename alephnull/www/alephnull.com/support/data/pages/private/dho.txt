@@ -1,0 +1,31 @@
+====== dho ======
+
+* Boot Disk: Intel SSD 320 Series 80GB
+  * SSDDA2BW080G3 2.5" 3Gb/s SATA SSD 80GB 5V 1A ISN=BTPR146101ZT080BGN
+* Cache Disk: Intel SSH 330 Series 120GB
+  * SSDSC2CT120A3 2.5" 6GB/s SATA SSD 120G 5V 1A ISM=CVMP231102HC120BGN
+* External 4+1 RAID5
+  * Seagate Barracuda 3000GB ST3000DM001 5V 0.75A 12V 0.75A (left to right)
+    * SN S1F0JS97 (amazon) 12464 SU; warranty expiration 18-aug-2013
+    * SN W1F0VNCT (newegg) 12406 WU
+    * SN W1F0XG7X (newegg1) 12516 WU
+    * SN W1F0W811 (newegg) 12506 WU
+    * SN W1G0WAC1 (newegg) 12506 WU
+* Internal 2+1 RAID5
+  * Seagate Barracuda 3000GB ST3000DM001 5V 0.75A 12V 0.75A (bottom to top)
+    * SN Z1F0YMTX (amazon2) 13093 TK
+    * SN Z1F116PY (amazon2) 13092 TK; warranty expiration 01-dev-2014
+    * SN S1F0WJ1P (amazon2) 13067 SU; warranty expiration 30-nov-2014
+
+* Other drives for new hydra/char
+    * SN S1FOJ10F (amazon) 12464 SU
+    * SN S1FOJ18C (amazon) 12464 SU
+    * SN S1F0JS97 (amazon) 12464 SU; warranty expiration 18-aug-2013
+    * SN S1F0JV7J (amazon) 12363 SU
+    * SN Z1F11RE1 (newegg2) 13075 TK (replacement for RMA'd drive); warranty expiration 29-nov-2014
+
+* New 4+1
+  * S300YJ07 ST4000DM000 Expiration 17-Jan-2017
+  * Z301YGG2 ST4000DM000 Expiration 22-Nov-2016
+  * Z301XLTP ST4000DM000 Expiration 22-Nov-2016
+  * Z301YG6K ST4000DM000 Expiration 22-Nov-2016

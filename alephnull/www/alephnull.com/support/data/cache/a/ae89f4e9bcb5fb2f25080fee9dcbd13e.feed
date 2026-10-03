@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="https://alephnull.com/w/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://alephnull.com/w/feed.php">
+        <title>alephnull.com ,(',,)&quot;,.,</title>
+        <description></description>
+        <link>https://alephnull.com/w/</link>
+        <image rdf:resource="https://alephnull.com/w/lib/tpl/alephnull/images/favicon.ico" />
+       <dc:date>2024-07-11T05:59:50-0400</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://alephnull.com/w/sidebar?rev=1607970078&amp;do=diff"/>
+                <rdf:li rdf:resource="https://alephnull.com/w/start?rev=1598650020&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://alephnull.com/w/lib/tpl/alephnull/images/favicon.ico">
+        <title>alephnull.com</title>
+        <link>https://alephnull.com/w/</link>
+        <url>https://alephnull.com/w/lib/tpl/alephnull/images/favicon.ico</url>
+    </image>
+    <item rdf:about="https://alephnull.com/w/sidebar?rev=1607970078&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-12-14T13:21:18-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>sidebar</title>
+        <link>https://alephnull.com/w/sidebar?rev=1607970078&amp;do=diff</link>
+        <description>Recipes
+
+ Gardening
+
+ Linux
+
+ Weather
+
+ Dictionary
+
+ Halloween
+
+ Friends
+
+ Notes
+
+ Photos
+
+ Non-public Pages
+
+
+
+ Help with wiki syntax</description>
+    </item>
+    <item rdf:about="https://alephnull.com/w/start?rev=1598650020&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-08-28T17:27:00-0400</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>start</title>
+        <link>https://alephnull.com/w/start?rev=1598650020&amp;do=diff</link>
+        <description>“Selection bias is a hell of a drug.” -F. Perry Wilson, MD, MSCE
+
+	*   Hillsborough Pediatrics &amp; Adolescent Medicine
+	*   The Other Home Page of Rik Faith
+	*   The DICT Development Group (freely-redistributable dictionaries)
+	*   urmp: The Ur Music Player</description>
+    </item>
+</rdf:RDF>

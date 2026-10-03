@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://alephnull.com/w/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://alephnull.com/w/feed.php">
+        <title>alephnull.com</title>
+        <description></description>
+        <link>http://alephnull.com/w/</link>
+        <image rdf:resource="http://alephnull.com/w/lib/images/favicon.ico" />
+       <dc:date>2011-12-30T08:11:46-05:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://alephnull.com/w/garden/plantings?rev=1322359590&amp;do=diff"/>
+                <rdf:li rdf:resource="http://alephnull.com/w/garden/garden?rev=1322359015&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://alephnull.com/w/lib/images/favicon.ico">
+        <title>alephnull.com</title>
+        <link>http://alephnull.com/w/</link>
+        <url>http://alephnull.com/w/lib/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://alephnull.com/w/garden/plantings?rev=1322359590&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2011-11-26T21:06:30-05:00</dc:date>
+        <dc:creator>Melissa Clepper-Faith</dc:creator>
+        <title>garden:plantings</title>
+        <link>http://alephnull.com/w/garden/plantings?rev=1322359590&amp;do=diff</link>
+        <description>2007 or 2008: Corylus avellana 'contorted', “Harry lauder's Walking stick”, by garage, next to walkway to garden.
+2007 or 2008, planted 2 Honeysuckle,”halls”, on either side of back porch stairs. (Direct Gardening). By 2009, they are covering the trellises there and are cold hardy. Many perfumed flowers in Spring.</description>
+    </item>
+    <item rdf:about="http://alephnull.com/w/garden/garden?rev=1322359015&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2011-11-26T20:56:55-05:00</dc:date>
+        <dc:creator>Melissa Clepper-Faith</dc:creator>
+        <title>garden:garden</title>
+        <link>http://alephnull.com/w/garden/garden?rev=1322359015&amp;do=diff</link>
+        <description>Raised Beds 2007:
+Bed 1, near garage, near house:
+Tomatoes Brandywine, (Seeds of Change). Grew well, many tomatoes initially, then with drought, had problems with decreased production and blossom end rot. Note:  leave more room for plants and stake them well.</description>
+    </item>
+</rdf:RDF>

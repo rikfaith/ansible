@@ -1,0 +1,31 @@
+
+<h1 class="sectionedit1"><a name="pan" id="pan">Pan</a></h1>
+<div class="level1">
+
+</div>
+<!-- EDIT1 SECTION "Pan" [1-19] -->
+<h2 class="sectionedit2"><a name="packages_installed" id="packages_installed">Packages Installed</a></h2>
+<div class="level2">
+<pre class="code">apt-get install lftp
+apt-get install smartmontools
+apt-get install ntp
+apt-get install sysstat
+badblocks -b 4096 -s -v -w -t random /dev/sdb1
+apt-get install mdadm
+apt-get install cryptsetup
+apt-get install lvm2
+cryptsetup -c aes-cbc-essiv:sha256
+           -s 128 -h sha256
+           --align-payload=1024
+           luksFormat /dev/sdb1
+cryptsetup luksOpen /dev/sdb1 r0
+pvcreate --metadatasize 506k /dev/mapper/r0
+vgcreate -s 1g v0 /dev/mapper/r0
+lvcreate -L 100g -n home v0
+mke2fs -t ext4 -m0 /dev/mapper/v0-home</pre>
+<pre class="code">apt-get install bind9
+apt-get install rng-tools
+Edit /etc/rc.local</pre>
+
+</div>
+<!-- EDIT2 SECTION "Packages Installed" [20-] -->

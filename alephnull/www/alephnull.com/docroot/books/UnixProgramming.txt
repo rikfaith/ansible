@@ -1,0 +1,77 @@
+
+You may distribute these notes under the terms of the OpenContent
+License (http://opencontent.org/opl.shtml).
+
+Please remember to remove the headers if you forward outside the
+company!
+
+UNIX PROGRAMMING
+
+    W. Richard Stevens
+    Advanced Programming in the UNIX Environment
+
+        If you program in C for Unix or Linux, this book is absolutely
+        a MUST HAVE.  If you don't own it, but it now.  You will use it
+        again and again as you try to figure out the intricacies of the
+        Unix operating system from a programmer's viewpoint.
+
+
+    Michael K. Johnson
+    Erik H. Troan
+    Linux Application Development
+
+        This book is both similar to and complementary to Stevens'
+        APitUE.  While it ignores the cross-platform knowledge that
+        Stevens provides, it provides deep information about
+        Linux-specific programming.  Much of the book is motivated by
+        the creation of a tiny shell -- making this book an interesting
+        read as well as a useful reference.
+
+
+    Douglas E. Comer
+    David L. Stevens
+    Internetworking with TCP/IP, Volume III: Client-Server Programming
+    and Applications
+
+    W. Richard Stevens
+    UNIX Network Programming
+
+        These two books are the standard reference works for
+        socket-based programming (be sure to get the right "version" of
+        Comer & Stevens -- the one that covers BSD Sockets and not,
+        e.g., VMS or Windows).  If you are interested in the underlying
+        TCP/IP protocol, Volume I & II of Comer & Stevens' series are
+        quite good.  [Note that Stevens' UNP is now a 2 volume set and
+        that I've only used the older 1 volume version.  Note also that
+        there are two different people named Stevens.]
+
+    John Viega
+    Gary McGraw
+    Building Secure Software: How to Avoid Security Problems the Right Way
+
+        This book is SO IMPORTANT that I'll list it here and in the
+        security section.  There are a lot of books on security and
+        cryptography, but this is the only modern book that talks
+        directly to programmers.  It describes how to write code that is
+        susceptible to buffer overflow, race, and statistical attacks --
+        and methods for detecting and eliminating that kind of code from
+        the programs that you write.  GET IT.  READ IT.  READ IT AGAIN.
+
+
+PREVIOUS TOPICS
+
+    C Programming Basics
+    Programming Practice (Style)
+    Algorithms
+
+FUTURE TOPICS
+    Unix Tools
+    Software Engineering
+    Security and Testing
+    C++ Programming (?)
+    Design Patterns (?)
+    Database and Information Retrieval (?)
+    Compilers and Little Languages (?)
+    Threads (?)
+    Linux Kernel Programming (?)
+    ? -- send me email and suggest a topic...

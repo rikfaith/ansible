@@ -1,0 +1,3 @@
+Error: N2O Flux (1.1) is higher than threshold (0.8)
+Error: Injector pressure drop (132.7) less than 0.3 times chamber pressure (662.5)
+WARNING: Supply tank to flight tank pressure drop (-166 psi) is less than 100 psi

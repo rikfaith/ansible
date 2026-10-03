@@ -1,0 +1,95 @@
+- hosts: image
+  vars_files:
+    - passwords.yml
+  vars:
+    vm_installation: true
+    using_devuan: true
+    install_unstable: false
+    install_local_time_source: false
+    configure_cloud_init: true
+    configured_port: 22
+    whitelistip0: 174.138.108.162
+
+    # sites served by tasks/update_alephnull.yml (vhosts, fpm pools, wikis)
+    # aliases: extra names served by the vhost (test.* lets the new VM be
+    # verified while the old one still owns the apex A records)
+    serving_sites:
+      - { name: alephnull.com,        cert: alephnull.com,        docroot: /www/alephnull.com/docroot,        support: /www/alephnull.com/support,        wiki: true,  php: true,  pool: alephnull.com,        aliases: ["test.alephnull.com"] }
+      - { name: bogus.org,            cert: bogus.org,            docroot: /www/bogus.org/docroot,            wiki: false, php: false, aliases: ["test.bogus.org", "so.bogus.org"] }
+      - { name: hillsboroughpeds.com, cert: hillsboroughpeds.com, docroot: /www/hillsboroughpeds.com/docroot, support: /www/hillsboroughpeds.com/support, wiki: true,  php: true,  pool: hillsboroughpeds.com, aliases: ["test.hillsboroughpeds.com"] }
+      - { name: hybridsky.org,        cert: hybridsky.org,        docroot: /www/hybridsky.org/docroot,        support: /www/hybridsky.org/support,        wiki: true,  php: true,  pool: hybridsky.org,        aliases: ["test.hybridsky.org"] }
+      - { name: pineview82.org,       cert: pineview82.org,       docroot: /www/pineview82.org/docroot,       wiki: false, php: false, aliases: ["test.pineview82.org"] }
+      - { name: tarball.org,          cert: tarball.org,          docroot: /www/tarball.org/docroot,          wiki: false, php: false, aliases: ["test.tarball.org"] }
+      - { name: urmp.org,             cert: urmp.org,             docroot: /www/urmp.org/docroot,             support: /www/urmp.org/support,             wiki: true,  php: true,  pool: urmp.org,             aliases: ["test.urmp.org"] }
+    redirect_sites:
+      - { name: clepperfaith.com,  cert: clepperfaith.com, redirect_to: "https://hillsboroughpeds.com/" }
+      - { name: clepper-faith.com, cert: clepperfaith.com, redirect_to: "https://hillsboroughpeds.com/" }
+    all_sites: "{{ serving_sites + redirect_sites }}"
+    wiki_sites: "{{ serving_sites | selectattr('wiki', 'equalto', true) | map(attribute='name') | list }}"
+
+  tasks:
+    - import_tasks: tasks/update_apt.yml
+    - import_tasks: tasks/update_network_vm.yml
+    - import_tasks: tasks/update_sudo.yml
+    - import_tasks: tasks/update_chrony.yml
+    - import_tasks: tasks/update_keymap.yml
+    - import_tasks: tasks/update_sysctl_simple.yml
+    - import_tasks: tasks/update_crontab.yml
+    - import_tasks: tasks/update_bashrc.yml
+    - import_tasks: tasks/update_dash.yml
+    - import_tasks: tasks/update_ssh_remote_keys.yml
+    - import_tasks: tasks/update_user_login.yml
+    - import_tasks: tasks/update_localization.yml
+    - import_tasks: tasks/update_grub.yml
+    - import_tasks: tasks/update_virtiofs.yml
+    - import_tasks: tasks/update_cloud_init.yml
+    - import_tasks: tasks/update_sshguard.yml
+    - import_tasks: tasks/update_alephnull.yml
+
+    - name: Set hostname
+      copy:
+        dest: /etc/hostname
+        owner: root
+        group: root
+        mode: '0644'
+        content: "{{ vm_hostname }}"
+
+    - name: Populate domainname
+      copy:
+        dest: /etc/domainname
+        owner: root
+        group: root
+        mode: '0644'
+        content: |
+          {{ vm_domain }}
+
+    - name: Populate resolv.conf
+      copy:
+        dest: /etc/resolv.conf
+        owner: root
+        group: root
+        mode: '0644'
+        content: |
+          domain {{ vm_domain }}
+          search {{ vm_domain_list }}
+          nameserver 1.1.1.1
+          nameserver 9.9.9.9
+
+    - name: Add local machine name to /etc/hosts
+      lineinfile: path=/etc/hosts
+                  regexp='127.0.1.1'
+                  line='127.0.1.1       {{ vm_hostname }}.{{ vm_domain }} {{ vm_hostname }}'
+                  state=present
+                  insertafter='127.0.0.1'
+
+    - name: Remove pcscd
+      apt:
+        name: pcscd
+        state: absent
+
+    - name: Disable rpcbind
+      shell: update-rc.d -f rpcbind remove
+
+    - name: Disable nfs-common
+      shell: update-rc.d -f nfs-common remove
+

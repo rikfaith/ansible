@@ -1,0 +1,5 @@
+====== The Dell Axim X5 ======
+
+  * [[http://zap.eltrast.ru/en/dell-linux-download.html | Howto boot Linux]].  This didn't work, but it appears outdated.  You put the initrd and the zImage on the DOS parition.  I got it to boot as far as the Tux, then it hung.
+  * The guys on #opie suggests another [[http://www.handhelds.org/moin/moin.cgi/DellAximX5 | Howto boot Linux]]
+  * The 40-pin connector [[http://pinouts.ru/PDA/dell_axim_x5_pinout.shtml | pinout]].

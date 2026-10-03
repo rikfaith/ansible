@@ -1,0 +1,13 @@
+====== Known Bugs ======
+  * Error when using -b on an empty directory
+  * Ability to link directories into loop
+  * -b should take a filename as well as a directory
+  * dbsplit --help doesn't work
+  * CFLAGS=-g ./configure doesn't work
+  * -b will hang if a process dies unexpectedly
+  * urmp doesn't handle kill -STOP <mplayer> well
+  * Adding an album doesn't work if the songs are by differnt artists
+
+
+=Fixed=
+  * When building for more than one directory, last few lines of timing information is wrong

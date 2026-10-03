@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="https://shared2-smtp3.our-ns.com/w/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://shared2-smtp3.our-ns.com/w/feed.php">
+        <title>alephnull.com butter_chicken</title>
+        <description></description>
+        <link>https://shared2-smtp3.our-ns.com/w/</link>
+        <image rdf:resource="https://shared2-smtp3.our-ns.com/w/lib/tpl/alephnull/images/favicon.ico" />
+       <dc:date>2024-02-16T04:21:48-0500</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://shared2-smtp3.our-ns.com/w/butter_chicken/vegetarian?rev=1649534731&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://shared2-smtp3.our-ns.com/w/lib/tpl/alephnull/images/favicon.ico">
+        <title>alephnull.com</title>
+        <link>https://shared2-smtp3.our-ns.com/w/</link>
+        <url>https://shared2-smtp3.our-ns.com/w/lib/tpl/alephnull/images/favicon.ico</url>
+    </image>
+    <item rdf:about="https://shared2-smtp3.our-ns.com/w/butter_chicken/vegetarian?rev=1649534731&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-04-09T16:05:31-0500</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>butter_chicken:vegetarian</title>
+        <link>https://shared2-smtp3.our-ns.com/w/butter_chicken/vegetarian?rev=1649534731&amp;do=diff</link>
+        <description>Butter Chicken (vegetarian)
+
+Marinade for chicken/tofu:
+
+	*  1 Tbsp cornstarch
+	*  1-2 Tbsp garam or tandoori masala
+	*  1/2 tsp ground ginger
+	*  1/2 tsp garlic powder
+	*  1/2 tsp turmeric
+	*  Optional: curry powder, coconut oil, chili powder, salt</description>
+    </item>
+</rdf:RDF>
