@@ -76,8 +76,10 @@
   Alias {{ wiki_alias }} {{ item.support }}/
   {% endfor %}
   <Directory {{ item.support }}>
+    # AllowOverride All: the instance root .htaccess (pretty URLs, see
+    # the "Enable pretty URLs" task) and its <Files> denies need it
     Options -Indexes +FollowSymLinks
-    AllowOverride None
+    AllowOverride All
     Require all granted
   </Directory>
   <Directory {{ item.support }}/conf>

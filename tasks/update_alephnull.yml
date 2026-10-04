@@ -115,10 +115,12 @@
 
 - name: Replace the packaged default site
   # Fallback vhost for names that match no site. 000-default sorts first
-  # in sites-enabled, so it is the default :80 vhost. (The packaged one
-  # serves "Apache2 Debian Default Page" from /var/www/html.) The page
-  # itself lives in the repo at alephnull/www/default/ and is placed by
-  # the vmdb copy-dir step.
+   # in sites-enabled, so it is the default :80 AND :443 vhost (without
+   # it, unmatched HTTPS names fall through to the alphabetically first
+   # 443 site vhost and get that site's content/redirects). (The packaged
+   # one serves "Apache2 Debian Default Page" from /var/www/html.) The
+   # page itself lives in the repo at alephnull/www/default/ and is
+   # placed by the vmdb copy-dir step.
   copy:
     dest: /etc/apache2/sites-available/000-default.conf
     owner: root
@@ -128,6 +130,19 @@
       <VirtualHost *:80>
         ServerAdmin faith@alephnull.com
         DocumentRoot /www/default/docroot
+      </VirtualHost>
+
+      <VirtualHost *:443>
+        # The first vhost on a port determines that port's protocol:
+        # without a cert here, port 443 falls back to plain HTTP
+        # (mod_ssl: "You configured HTTP(80) on the standard HTTPS
+        # port"). Uses the alephnull.com cert; SNI mismatch for other
+        # names is acceptable for a fallback page.
+        ServerAdmin faith@alephnull.com
+        DocumentRoot /www/default/docroot
+        SSLEngine on
+        SSLCertificateFile /etc/letsencrypt/live/alephnull.com/fullchain.pem
+        SSLCertificateKeyFile /etc/letsencrypt/live/alephnull.com/privkey.pem
       </VirtualHost>
 
 - name: Enable the default site
@@ -237,10 +252,16 @@
 
 - name: Install core dokuwiki extensions into per-site instances
   # The Debian package bundles no extensions. This is the curated core
-  # set from the official 2026-07-14c "Mort" tarball (the version apt
-  # installs from the Devuan testing repo). authplain is the cryptplain
-  # successor and reads the migrated conf/users.auth.php as-is (its
-  # PassHash supports the md5/md5crypt/bcrypt hashes in it). Note the
+   # set from the official 2026-07-14c "Mort" tarball (the version apt
+   # installs from the Devuan testing repo) plus the third-party htmlok
+   # plugin (github.com/saggi-dw/dokuwiki-plugin-htmlok, 2024-01-11):
+   # core support for <html>...</html> blocks was removed in "Jack
+   # Jackrum" (2023-04-04), and the migrated pages use them; enabled
+   # per-site via $conf['plugin']['htmlok']['htmlok'] = 1 in
+   # conf/local.php. authplain is
+   # the cryptplain successor and reads the migrated conf/users.auth.php
+   # as-is (its PassHash supports the md5/md5crypt/bcrypt hashes in it).
+   # Note the
   # support/passwords files are a different thing: Apache htpasswd files
   # for Basic auth, used via .htaccess (30th/, 20th/, raw/, downloads/
   # on pineview82.org).
@@ -252,6 +273,42 @@
   unarchive:
     src: alephnull/dokuwiki-plugins.tar.gz
     dest: "/www/{{ item }}/support/lib/plugins/"
+  with_items: "{{ wiki_sites }}"
+
+- name: Enable pretty URLs in per-site instances
+  # The migrated sites run with userewrite=1; the instance root needs
+  # dokuwiki's .htaccess (from the packaged .htaccess.dist, userewrite
+  # rules uncommented). All substitutions are relative, so every alias
+  # prefix (/wiki, /w) works without a RewriteBase.
+  copy:
+    dest: "/www/{{ item }}/support/.htaccess"
+    owner: root
+    group: root
+    mode: '0644'
+    content: |
+      <Files ~ "^([\._]ht|README$|VERSION$|COPYING$)">
+          <IfModule mod_authz_core.c>
+              Require all denied
+          </IfModule>
+          <IfModule !mod_authz_core.c>
+              Order allow,deny
+              Deny from all
+          </IfModule>
+      </Files>
+
+      <IfModule alias_module>
+          RedirectMatch 404 /\.git
+      </IfModule>
+
+      RewriteEngine on
+      RewriteRule ^_media/(.*)              lib/exe/fetch.php?media=$1  [QSA,L,B]
+      RewriteRule ^_detail/(.*)             lib/exe/detail.php?media=$1  [QSA,L,B]
+      RewriteRule ^_export/([^/]+)/(.*)     doku.php?do=export_$1&id=$2  [QSA,L,B]
+      RewriteRule ^$                        doku.php  [L]
+      RewriteCond %{REQUEST_FILENAME}       !-f
+      RewriteCond %{REQUEST_FILENAME}       !-d
+      RewriteRule (.*)                      doku.php?id=$1  [QSA,L,B]
+      RewriteRule ^index.php$               doku.php
   with_items: "{{ wiki_sites }}"
 
 - name: Create per-site ACL files
