@@ -51,6 +51,9 @@
 {% endif %}
   ServerAdmin faith@alephnull.com
   DocumentRoot {{ item.docroot }}
+{% if item.redirect_root_to_wiki is defined and item.redirect_root_to_wiki %}
+  RedirectMatch 301 ^/$ /wiki/
+{% endif %}
 
   TransferLog "|/usr/bin/cronolog /var/log/httpd/{{ item.name }}/%Y/%m/access.%Y%m%d.log"
   ErrorLog "|/usr/bin/cronolog /var/log/httpd/{{ item.name }}/%Y/%m/error.%Y%m%d.log"

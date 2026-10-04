@@ -14,7 +14,7 @@
     # aliases: extra names served by the vhost (test.* lets the new VM be
     # verified while the old one still owns the apex A records)
     serving_sites:
-      - { name: alephnull.com,        cert: alephnull.com,        docroot: /www/alephnull.com/docroot,        support: /www/alephnull.com/support,        wiki: true,  php: true,  pool: alephnull.com,        aliases: ["test.alephnull.com"] }
+      - { name: alephnull.com,        cert: alephnull.com,        docroot: /www/alephnull.com/docroot,        support: /www/alephnull.com/support,        wiki: true,  php: true,  pool: alephnull.com,        aliases: ["test.alephnull.com"], redirect_root_to_wiki: true }
       - { name: bogus.org,            cert: bogus.org,            docroot: /www/bogus.org/docroot,            wiki: false, php: false, aliases: ["test.bogus.org", "so.bogus.org"] }
       - { name: hillsboroughpeds.com, cert: hillsboroughpeds.com, docroot: /www/hillsboroughpeds.com/docroot, support: /www/hillsboroughpeds.com/support, wiki: true,  php: true,  pool: hillsboroughpeds.com, aliases: ["test.hillsboroughpeds.com"] }
       - { name: hybridsky.org,        cert: hybridsky.org,        docroot: /www/hybridsky.org/docroot,        support: /www/hybridsky.org/support,        wiki: true,  php: true,  pool: hybridsky.org,        aliases: ["test.hybridsky.org"] }
