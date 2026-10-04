@@ -1,111 +1,113 @@
 {# alephnull per-site Apache vhost.
-   vars: name, docroot, wiki (bool), php (bool), pool (fpm pool name),
-         cert (letsencrypt live dir), aliases (list, extra names such as
-         test.<name> for testing the VM before cutover),
-         redirect_to ("" for normal sites) #}
-{% if redirect_to %}
-<VirtualHost {{ name }}:443>
-  ServerName {{ name }}
+   rendered by tasks/update_alephnull.yml via with_items over all_sites;
+   the site entry is the loop variable `item`, with keys:
+   name, docroot, wiki (bool), php (bool), pool (fpm pool name),
+   support (dokuwiki instance dir), cert (letsencrypt live dir),
+   aliases (list, extra names such as test.<name> for testing the VM
+   before cutover), redirect_to (redirect-only sites) #}
+ {% if item.redirect_to is defined and item.redirect_to %}
+<VirtualHost {{ item.name }}:443>
+  ServerName {{ item.name }}
   ServerAdmin faith@alephnull.com
-  RedirectPermanent / {{ redirect_to }}
+  RedirectPermanent / {{ item.redirect_to }}
 
   SSLEngine on
-  SSLCertificateFile /etc/letsencrypt/live/{{ cert }}/fullchain.pem
-  SSLCertificateKeyFile /etc/letsencrypt/live/{{ cert }}/privkey.pem
+  SSLCertificateFile /etc/letsencrypt/live/{{ item.cert }}/fullchain.pem
+  SSLCertificateKeyFile /etc/letsencrypt/live/{{ item.cert }}/privkey.pem
   Include /etc/letsencrypt/options-ssl-apache.conf
 
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
 </VirtualHost>
 
-<VirtualHost www.{{ name }}:443>
-  ServerName www.{{ name }}
-  RedirectPermanent / {{ redirect_to }}
+<VirtualHost www.{{ item.name }}:443>
+  ServerName www.{{ item.name }}
+  RedirectPermanent / {{ item.redirect_to }}
 
   SSLEngine on
-  SSLCertificateFile /etc/letsencrypt/live/{{ cert }}/fullchain.pem
-  SSLCertificateKeyFile /etc/letsencrypt/live/{{ cert }}/privkey.pem
+  SSLCertificateFile /etc/letsencrypt/live/{{ item.cert }}/fullchain.pem
+  SSLCertificateKeyFile /etc/letsencrypt/live/{{ item.cert }}/privkey.pem
   Include /etc/letsencrypt/options-ssl-apache.conf
 
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
 </VirtualHost>
 
-<VirtualHost {{ name }}:80>
-  ServerName {{ name }}
-  RedirectPermanent / {{ redirect_to }}
+<VirtualHost {{ item.name }}:80>
+  ServerName {{ item.name }}
+  RedirectPermanent / {{ item.redirect_to }}
 </VirtualHost>
 
-<VirtualHost www.{{ name }}:80>
-  ServerName www.{{ name }}
-  RedirectPermanent / {{ redirect_to }}
+<VirtualHost www.{{ item.name }}:80>
+  ServerName www.{{ item.name }}
+  RedirectPermanent / {{ item.redirect_to }}
 </VirtualHost>
 {% else %}
-<VirtualHost {{ name }}:443>
-  ServerName {{ name }}
-{% if aliases is defined and aliases %}
-  ServerAlias {{ aliases | join(' ') }}
+<VirtualHost {{ item.name }}:443>
+  ServerName {{ item.name }}
+{% if item.aliases is defined and item.aliases %}
+  ServerAlias {{ item.aliases | join(' ') }}
 {% endif %}
   ServerAdmin faith@alephnull.com
-  DocumentRoot {{ docroot }}
+  DocumentRoot {{ item.docroot }}
 
-  TransferLog "|/usr/bin/cronolog /var/log/httpd/{{ name }}/%Y/%m/access.%Y%m%d.log"
-  ErrorLog "|/usr/bin/cronolog /var/log/httpd/{{ name }}/%Y/%m/error.%Y%m%d.log"
+  TransferLog "|/usr/bin/cronolog /var/log/httpd/{{ item.name }}/%Y/%m/access.%Y%m%d.log"
+  ErrorLog "|/usr/bin/cronolog /var/log/httpd/{{ item.name }}/%Y/%m/error.%Y%m%d.log"
 
-  <Directory {{ docroot }}>
+  <Directory {{ item.docroot }}>
     Options FollowSymLinks
     AllowOverride None
     Require all granted
   </Directory>
-{% if wiki %}
-  Alias /wiki {{ support }}/
-  <Directory {{ support }}>
+{% if item.wiki %}
+  Alias /wiki {{ item.support }}/
+  <Directory {{ item.support }}>
     Options -Indexes +FollowSymLinks
     AllowOverride None
     Require all granted
   </Directory>
-  <Directory {{ support }}/conf>
+  <Directory {{ item.support }}/conf>
     Require all denied
   </Directory>
   <FilesMatch "\.db$">
     Require all denied
   </FilesMatch>
 {% endif %}
-{% if php %}
+{% if item.php %}
   <FilesMatch "\.php$">
-    SetHandler "proxy:unix:/run/php/php-fpm-{{ pool }}.sock|fcgi:///"
+    SetHandler "proxy:unix:/run/php/php-fpm-{{ item.pool }}.sock|fcgi:///"
   </FilesMatch>
 {% endif %}
   SSLEngine on
-  SSLCertificateFile /etc/letsencrypt/live/{{ cert }}/fullchain.pem
-  SSLCertificateKeyFile /etc/letsencrypt/live/{{ cert }}/privkey.pem
+  SSLCertificateFile /etc/letsencrypt/live/{{ item.cert }}/fullchain.pem
+  SSLCertificateKeyFile /etc/letsencrypt/live/{{ item.cert }}/privkey.pem
   Include /etc/letsencrypt/options-ssl-apache.conf
 
   LimitRequestBody 65536
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
 </VirtualHost>
 
-<VirtualHost www.{{ name }}:443>
-  ServerName www.{{ name }}
-  RedirectPermanent / https://{{ name }}/
+<VirtualHost www.{{ item.name }}:443>
+  ServerName www.{{ item.name }}
+  RedirectPermanent / https://{{ item.name }}/
 
   SSLEngine on
-  SSLCertificateFile /etc/letsencrypt/live/{{ cert }}/fullchain.pem
-  SSLCertificateKeyFile /etc/letsencrypt/live/{{ cert }}/privkey.pem
+  SSLCertificateFile /etc/letsencrypt/live/{{ item.cert }}/fullchain.pem
+  SSLCertificateKeyFile /etc/letsencrypt/live/{{ item.cert }}/privkey.pem
   Include /etc/letsencrypt/options-ssl-apache.conf
 
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
 </VirtualHost>
 
-<VirtualHost {{ name }}:80>
-  ServerName {{ name }}
-{% if aliases is defined and aliases %}
-  ServerAlias {{ aliases | join(' ') }}
+<VirtualHost {{ item.name }}:80>
+  ServerName {{ item.name }}
+{% if item.aliases is defined and item.aliases %}
+  ServerAlias {{ item.aliases | join(' ') }}
 {% endif %}
   RewriteEngine on
   RewriteRule ^ https://%{HTTP_HOST}/ [R=301,L]
 </VirtualHost>
 
-<VirtualHost www.{{ name }}:80>
-  ServerName www.{{ name }}
-  RedirectPermanent / https://{{ name }}/
+<VirtualHost www.{{ item.name }}:80>
+  ServerName www.{{ item.name }}
+  RedirectPermanent / https://{{ item.name }}/
 </VirtualHost>
 {% endif %}

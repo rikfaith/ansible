@@ -25,9 +25,9 @@
     pkg:
     - apache2
     - cronolog
-    - dict
     - dokuwiki
     - gcc
+    - libaugeas-dev
     - libpython3-dev
     - libpython3.13-dev
     - php-cli
@@ -43,6 +43,7 @@
     - python3-certbot-apache
     - python3-certbot-dns-digitalocean
     - python3-dev
+    - python3-packaging
     - python3-virtualenv
     - sqlite3
 
@@ -181,14 +182,23 @@
     state: present
 
 - name: Install dokuwiki code into per-site instances
-  # Merges the packaged (current stable) dokuwiki code into each site's
+  # Merges the packaged (current stable) dokuwiki into each site's
   # support/ directory, where the migrated conf/ and data/ already are.
-  # The site's own lib/tpl custom templates and lib/plugins additions are
-  # kept (tar only overwrites same-named files).
+  # The Debian package splits the instance three ways: code in
+  # /usr/share/dokuwiki, config in /etc/dokuwiki, writable dirs in
+  # /var/lib/dokuwiki. The lib/tpl and lib/plugins symlinks (which point
+  # at the global /var/lib/dokuwiki dirs) are excluded so each site keeps
+  # its own real lib/tpl (migrated custom templates + the default one)
+  # and its own lib/plugins. The package conf (dokuwiki.php, *.conf,
+  # *.dist) is merged over the site conf; the site's local.php and
+  # users.auth.php have no name clash and are kept.
+  # tar -C is used (rather than cd subshells) so the tar stream can't be
+  # polluted if a parent shell exports CDPATH (bash cd prints in that case).
+  # The acl.auth.php/users.auth.php package entries are symlinks into the
+  # global /var/lib/dokuwiki/acl/; they are excluded so each site keeps
+  # its own real auth files.
   shell: >
-    (cd /usr/share/dokuwiki &&
-     tar cf - bin doku.php feed.php index.php install.php inc lib tpl) |
-    (cd /www/{{ item }}/support && tar xf -)
+    tar cf - -C /usr/share/dokuwiki --exclude=lib/tpl --exclude=lib/plugins .htaccess.dist .htaccess.dist.md5sum VERSION bin doku.php feed.php index.php inc lib vendor | tar xf - -C /www/{{ item }}/support && cp -a /var/lib/dokuwiki/lib/tpl/dokuwiki /www/{{ item }}/support/lib/tpl/ && tar cf - -C /etc/dokuwiki --exclude=acl.auth.php --exclude=users.auth.php . | tar xf - -C /www/{{ item }}/support/conf/ && mkdir -p /www/{{ item }}/support/data/attic /www/{{ item }}/support/data/cache /www/{{ item }}/support/data/index /www/{{ item }}/support/data/locks /www/{{ item }}/support/data/log /www/{{ item }}/support/data/media /www/{{ item }}/support/data/media_attic /www/{{ item }}/support/data/media_meta /www/{{ item }}/support/data/meta /www/{{ item }}/support/data/pages /www/{{ item }}/support/data/tmp
   with_items: "{{ wiki_sites }}"
 
 - name: Drop stale per-site prepend.php
@@ -201,8 +211,12 @@
     state: absent
   with_items: "{{ wiki_sites }}"
 
-- name: Make wiki data writable by fpm
-  shell: chown -R www-data:www-data /www/{{ item }}/support/data
+- name: Make wiki data and conf writable by fpm
+  # conf must be writable so dokuwiki can create acl.auth.php (sites run
+  # with useacl=1) and edit users.auth.php via the admin UI.
+  shell: >
+    chown -R www-data:www-data
+    /www/{{ item }}/support/data /www/{{ item }}/support/conf
   with_items: "{{ wiki_sites }}"
 
 - name: Point urmp.org docroot entry points at the support/ instance

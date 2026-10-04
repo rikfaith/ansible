@@ -1,9 +1,10 @@
 {# per-site php-fpm pool (one per PHP-serving site).
-   vars: name (also the socket suffix) #}
-[{{ name }}]
+   rendered by tasks/update_alephnull.yml via with_items over
+   serving_sites; the site entry is the loop variable `item` #}
+[{{ item.name }}]
 user = www-data
 group = www-data
-listen = /run/php/php-fpm-{{ name }}.sock
+listen = /run/php/php-fpm-{{ item.name }}.sock
 listen.owner = www-data
 listen.group = www-data
 pm = dynamic
@@ -11,6 +12,6 @@ pm.max_children = 4
 pm.start_servers = 1
 pm.min_spare_servers = 1
 pm.max_spare_servers = 2
-php_value[include_path] = ".:/www/{{ name }}/support"
+php_value[include_path] = ".:/www/{{ item.name }}/support"
 php_admin_flag[log_errors] = on
-php_admin_value[error_log] = /var/log/php-fpm/{{ name }}.log
+php_admin_value[error_log] = /var/log/php-fpm/{{ item.name }}.log

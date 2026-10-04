@@ -168,15 +168,35 @@ the vhost/pool templates.
    (alephnull.com, hillsboroughpeds.com, hybridsky.org, urmp.org) with
    `php_value[include_path] = /www/<site>/support`; vhosts route `.php` to
    the right pool. `php-fpm.conf`/`www.conf` left at packaged defaults.
-4. **DokuWiki instances** (per wiki site):
-   - `cp -r /usr/share/dokuwiki/*` into the site's `support/` (current
-     stable code), then remove the packaged `support/prepend.php` (the
-     site's own `prepend.php` — already in place — defines
-     `DOKU_CONF`/`DOKU_INC`).
-   - `chown -R www-data:www-data support/data` (writable), `conf/`
-     root-readable.
-   - result: self-contained modern instances whose content is byte-for-byte
-     the old content.
+4. **DokuWiki instances** (per wiki site). The Debian package splits the
+   instance three ways (code `/usr/share/dokuwiki`, config `/etc/dokuwiki`,
+   writable dirs `/var/lib/dokuwiki`); the build merges a self-contained
+   modern instance into each site's `support/` (where the migrated
+   `conf/` and `data/` already are):
+   - tar-merge the code (`bin doku.php feed.php index.php inc lib vendor
+     VERSION .htaccess.dist*`), excluding the `lib/tpl` and `lib/plugins`
+     symlinks that point at the global `/var/lib/dokuwiki` dirs, so each
+     site keeps its own real `lib/tpl` (migrated custom templates —
+     alephnull/hybridsky/hp/urmp + arctic — plus the packaged default
+     `dokuwiki` template copied in) and its own `lib/plugins`
+     (hybridsky + hillsboroughpeds kept their Greebo plugins; the rest are
+     lost — see below).
+   - merge the package conf over the site conf; the package's
+     `acl.auth.php`/`users.auth.php` are symlinks into the global
+     `/var/lib/dokuwiki/acl/` and are excluded so each site keeps its own
+     real auth files. Site `local.php` (per-site `$conf[]` settings,
+     including `savedir` pointing at the new location) and
+     `users.auth.php` (cryptplain) have no name clash and are kept;
+     cryptplain users carry over as-is.
+   - `mkdir -p` the modern data subdirs (Greebo layout already has most;
+     only `log` is missing), then `chown -R www-data:www-data
+     support/data support/conf` (fpm writes data; conf must be writable
+     for ACL + user admin).
+   - delete the stale site `prepend.php` (its bare `define('DOKU_INC')`
+     is fatal on modern PHP; modern `doku.php` resolves
+     `DOKU_CONF`/`DOKU_DATA` relative to its own dir, which matches the
+     per-site layout).
+   - result: self-contained modern instances, one code copy per site.
 5. **local.conf** for `/www`: `Options FollowSymLinks`, `AllowOverride None`
    (the old `AllowOverride All` + 2.2-era `order allow,deny` dokuwiki
    apache.conf are dropped).
