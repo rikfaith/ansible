@@ -12,7 +12,14 @@ pm.max_children = 4
 pm.start_servers = 1
 pm.min_spare_servers = 1
 pm.max_spare_servers = 2
+{% if item.wiki %}
 php_value[include_path] = ".:/www/{{ item.name }}/support"
+{% else %}
+; the old vhost set this to the wiki's support dir, which held the
+; project's shared pixsmall.php thumbnail helper; it now lives in the
+; docroot (the wiki instance is gone)
+php_value[include_path] = ".:/www/{{ item.name }}/docroot"
+{% endif %}
 ; the old per-site wiki .htaccess files set these; the instances now run
 ; from support/ without them, so set them on the pool instead
 php_value[upload_max_filesize] = 50M

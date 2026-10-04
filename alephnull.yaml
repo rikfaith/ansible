@@ -21,7 +21,10 @@
       - { name: alephnull.com,        cert: alephnull.com,        docroot: /www/alephnull.com/docroot,        support: /www/alephnull.com/support,        wiki: true,  php: true,  pool: alephnull.com,        aliases: ["test.alephnull.com"], wiki_aliases: ["/wiki", "/w"], root_redirect: "/w/" }
       - { name: bogus.org,            cert: bogus.org,            docroot: /www/bogus.org/docroot,            wiki: false, php: false, aliases: ["test.bogus.org", "so.bogus.org"] }
       - { name: hillsboroughpeds.com, cert: hillsboroughpeds.com, docroot: /www/hillsboroughpeds.com/docroot, wiki: false, php: false, aliases: ["test.hillsboroughpeds.com"] }
-      - { name: hybridsky.org,        cert: hybridsky.org,        docroot: /www/hybridsky.org/docroot,        support: /www/hybridsky.org/support,        wiki: true,  php: true,  pool: hybridsky.org,        aliases: ["test.hybridsky.org"] }
+      # wiki instance dropped (never used; the static site is what
+      # remains). php stays on: the docroot carries ~34 project scripts
+      # (hsim/, TestStand/, MarkIII/).
+      - { name: hybridsky.org,        cert: hybridsky.org,        docroot: /www/hybridsky.org/docroot,        wiki: false, php: true,  pool: hybridsky.org,        aliases: ["test.hybridsky.org"] }
       - { name: pineview82.org,       cert: pineview82.org,       docroot: /www/pineview82.org/docroot,       wiki: false, php: false, aliases: ["test.pineview82.org"], allow_override: "All" }
     redirect_sites:
       - { name: clepperfaith.com,  cert: clepperfaith.com, redirect_to: "https://hillsboroughpeds.com/", aliases: ["test.clepperfaith.com"] }

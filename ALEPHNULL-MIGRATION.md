@@ -77,12 +77,12 @@ fate later). The `alephnull/www` working tree was trimmed accordingly
 | bogus.org | Everything (unchanged). |
 | clepperfaith.com | Content dropped; 301 -> hillsboroughpeds.com (as before). |
 | hillsboroughpeds.com | Just `docroot/index.html` + its linked assets (`favicon.ico`, `style.css`, `menu.js`, `images/{banner,background}.jpg`). Wiki and the rest of the 214M dropped. |
-| hybridsky.org | Everything (unchanged; wiki at `/wiki/`). |
+| hybridsky.org | Static site only. The DokuWiki instance (`support/`) and the `w/` facade are dropped — the owner determined the wiki was never used. PHP stays on (the docroot carries ~34 project scripts in `hsim/`, `TestStand/`, `MarkIII/`). |
 | pineview82.org | Everything (unchanged; Basic-auth photo dirs live via `.htaccess`, so this is the only site with `AllowOverride All`). |
 | tarball.org | Content dropped; 301 -> alephnull.com. |
 | urmp.org | Content dropped (wiki conf+data included); 301 -> alephnull.com. The `Alias /wiki` + docroot wrappers described below no longer apply. |
 
-`wiki_sites` is now just `alephnull.com` + `hybridsky.org`. The redirect
+`wiki_sites` is now just `alephnull.com`. The redirect
 vhosts carry their `test.<site>` aliases too, so all 9 vhosts remain testable
 while the old VM owns the apex A records.
 
@@ -177,7 +177,7 @@ the vhost/pool templates.
      `so.bogus.org`. The apex-80 vhost redirects with
      `RewriteRule ^ https://%{HTTP_HOST}/ [R=301,L]` so `test.<site>`
      lands back on `https://test.<site>/`, not on the apex.
-    - wiki sites (alephnull.com, hybridsky.org — see Scope reduction):
+     - the wiki site (alephnull.com — see Scope reduction):
       `Alias /wiki /www/<site>/support/` (alephnull.com additionally at the
       historical `/w/`, with `/` 301 -> `/w/`) and `<Directory>` guards:
       `conf/`, `data/` denied, `*.db` denied, `Options -Indexes`.
@@ -187,8 +187,8 @@ the vhost/pool templates.
      both names on one certificate.
    - no `ScriptAlias /bin/` anywhere (the old one exposed an entire wiki
      support dir — including a 109M sqlite — as live CGI).
-3. **fpm pools**: default pool (www) + one pool per PHP site
-   (alephnull.com, hillsboroughpeds.com, hybridsky.org, urmp.org) with
+ 3. **fpm pools**: default pool (www) + one pool per PHP site
+    (alephnull.com, hybridsky.org) with
    `php_value[include_path] = /www/<site>/support`; vhosts route `.php` to
    the right pool. `php-fpm.conf`/`www.conf` left at packaged defaults.
 4. **DokuWiki instances** (per wiki site). The Debian package splits the

@@ -32,7 +32,7 @@ function thumbnailreference($picturename, $size)
  */
 function get_path()
 {
-	$info = pathinfo($_SERVER["PATH_TRANSLATED"]);
+	$info = pathinfo($_SERVER["PATH_TRANSLATED"] ?? $_SERVER["SCRIPT_FILENAME"]);
 	$path = $info["dirname"] . "/";
 	return $path;
 }

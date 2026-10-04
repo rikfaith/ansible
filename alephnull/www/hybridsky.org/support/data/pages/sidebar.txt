@@ -1,3 +1,0 @@
-[[docs: | Documentation]]\\
-\\
-[[wiki:syntax | Help with wiki syntax]]
