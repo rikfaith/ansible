@@ -25,6 +25,7 @@ $conf['useslash'] = 1;
 $conf['rss_content'] = 'abstract';
 $conf['xsendfile'] = '0';
 $conf['plugin']['captcha']['mode'] = 'image';
+$conf['savedir'] = '/www/hybridsky.org/support/data';
 $conf['tpl']['hybridsky']['sidebar'] = 'both';
 $conf['tpl']['hybridsky']['left_sidebar_content'] = 'main,user,group';
 $conf['tpl']['hybridsky']['right_sidebar_content'] = 'user,group,namespace';

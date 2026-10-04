@@ -1,17 +1,17 @@
 {# alephnull per-site Apache vhost.
-   rendered by tasks/update_alephnull.yml via with_items over all_sites;
+   Rendered by tasks/update_alephnull.yml via with_items over all_sites;
    the site entry is the loop variable `item`, with keys:
+   name, docroot, wiki (bool), php (bool), pool (fpm pool name),
+   support (dokuwiki instance dir), cert (letsencrypt live dir),
+   aliases (list, extra names such as test.<name> for testing the VM
+   before cutover), redirect_to (redirect-only sites),
+   wiki_aliases (list, URL prefixes for the wiki instance; default
+   /wiki), root_redirect (path / is 301-redirected to).
    Vhosts bind *:<port> (not the hostname): a <VirtualHost name:port>
    makes Apache resolve `name` at startup, which during the transition
    points at the OLD VM, so no request to the new VM would match. #}
-   name, docroot, wiki (bool), php (bool), pool (fpm pool name),
-    support (dokuwiki instance dir), cert (letsencrypt live dir),
-    aliases (list, extra names such as test.<name> for testing the VM
-    before cutover), redirect_to (redirect-only sites),
-    wiki_aliases (list, URL prefixes for the wiki instance; default
-    /wiki), root_redirect (path / is 301-redirected to) #}
- {% if item.redirect_to is defined and item.redirect_to %}
- <VirtualHost *:443>
+{% if item.redirect_to is defined and item.redirect_to %}
+<VirtualHost *:443>
    ServerName {{ item.name }}
 {% if item.aliases is defined and item.aliases %}
    ServerAlias {{ item.aliases | join(' ') }}
@@ -39,17 +39,17 @@
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
 </VirtualHost>
 
- <VirtualHost *:80>
-   ServerName {{ item.name }}
+<VirtualHost *:80>
+    ServerName {{ item.name }}
 {% if item.aliases is defined and item.aliases %}
-   ServerAlias {{ item.aliases | join(' ') }}
+    ServerAlias {{ item.aliases | join(' ') }}
 {% endif %}
-   RedirectPermanent / {{ item.redirect_to }}
- </VirtualHost>
+    RedirectPermanent / {{ item.redirect_to }}
+</VirtualHost>
 
 <VirtualHost *:80>
-  ServerName www.{{ item.name }}
-  RedirectPermanent / {{ item.redirect_to }}
+   ServerName www.{{ item.name }}
+   RedirectPermanent / {{ item.redirect_to }}
 </VirtualHost>
 {% else %}
 <VirtualHost *:443>

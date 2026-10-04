@@ -204,17 +204,27 @@
   # /usr/share/dokuwiki, config in /etc/dokuwiki, writable dirs in
   # /var/lib/dokuwiki. The lib/tpl and lib/plugins symlinks (which point
   # at the global /var/lib/dokuwiki dirs) are excluded so each site keeps
-  # its own real lib/tpl (migrated custom templates + the default one)
-  # and its own lib/plugins. The package conf (dokuwiki.php, *.conf,
-  # *.dist) is merged over the site conf; the site's local.php and
-  # users.auth.php have no name clash and are kept.
+  # its own real lib/tpl (the default template; the migrated per-site
+  # custom templates were lost with the old /www/dokuwiki code dir, so
+  # dokuwiki falls back to the default one) and its own lib/plugins.
+  # The package conf (dokuwiki.php, *.conf, *.dist) is merged over the
+  # site conf. Three exclusions keep the merged instance per-site:
+  #  - inc/preload.php (Debian packaging only; vanilla Mort has none):
+  #    without a farm animal it points DOKU_CONF at /etc/dokuwiki/, so
+  #    the per-site conf/ (and thus local.php, users.auth.php,
+  #    acl.auth.php, savedir) would never be read
+  #  - local.php (from /etc/dokuwiki): the migrated site local.php is
+  #    the real per-site config; it carries the absolute savedir
+  #  - acl.auth.php/users.auth.php: package symlinks into the global
+  #    /var/lib/dokuwiki/acl/; each site keeps its own real auth files
+  # The Greebo-era data/cache and data/index are derived data: stale
+  # rendered pages (e.g. a 2018 "Permission Denied" start page) are
+  # served as current because the page sources predate the caches, so
+  # both are cleared; dokuwiki rebuilds them on demand.
   # tar -C is used (rather than cd subshells) so the tar stream can't be
   # polluted if a parent shell exports CDPATH (bash cd prints in that case).
-  # The acl.auth.php/users.auth.php package entries are symlinks into the
-  # global /var/lib/dokuwiki/acl/; they are excluded so each site keeps
-  # its own real auth files.
   shell: >
-    tar cf - -C /usr/share/dokuwiki --exclude=lib/tpl --exclude=lib/plugins .htaccess.dist .htaccess.dist.md5sum VERSION bin doku.php feed.php index.php inc lib vendor | tar xf - -C /www/{{ item }}/support && cp -a /var/lib/dokuwiki/lib/tpl/dokuwiki /www/{{ item }}/support/lib/tpl/ && tar cf - -C /etc/dokuwiki --exclude=acl.auth.php --exclude=users.auth.php . | tar xf - -C /www/{{ item }}/support/conf/ && mkdir -p /www/{{ item }}/support/data/attic /www/{{ item }}/support/data/cache /www/{{ item }}/support/data/index /www/{{ item }}/support/data/locks /www/{{ item }}/support/data/log /www/{{ item }}/support/data/media /www/{{ item }}/support/data/media_attic /www/{{ item }}/support/data/media_meta /www/{{ item }}/support/data/meta /www/{{ item }}/support/data/pages /www/{{ item }}/support/data/tmp
+    tar cf - -C /usr/share/dokuwiki --exclude=lib/tpl --exclude=lib/plugins --exclude=inc/preload.php .htaccess.dist .htaccess.dist.md5sum VERSION bin doku.php feed.php index.php inc lib vendor | tar xf - -C /www/{{ item }}/support && cp -a /var/lib/dokuwiki/lib/tpl/dokuwiki /www/{{ item }}/support/lib/tpl/ && tar cf - -C /etc/dokuwiki --exclude=acl.auth.php --exclude=users.auth.php --exclude=local.php . | tar xf - -C /www/{{ item }}/support/conf/ && rm -rf /www/{{ item }}/support/data/cache /www/{{ item }}/support/data/index && mkdir -p /www/{{ item }}/support/data/attic /www/{{ item }}/support/data/cache /www/{{ item }}/support/data/index /www/{{ item }}/support/data/locks /www/{{ item }}/support/data/log /www/{{ item }}/support/data/media /www/{{ item }}/support/data/media_attic /www/{{ item }}/support/data/media_meta /www/{{ item }}/support/data/meta /www/{{ item }}/support/data/pages /www/{{ item }}/support/data/tmp
   with_items: "{{ wiki_sites }}"
 
 - name: Ensure per-site plugin directories exist
