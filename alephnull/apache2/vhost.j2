@@ -1,12 +1,15 @@
 {# alephnull per-site Apache vhost.
    rendered by tasks/update_alephnull.yml via with_items over all_sites;
    the site entry is the loop variable `item`, with keys:
+   Vhosts bind *:<port> (not the hostname): a <VirtualHost name:port>
+   makes Apache resolve `name` at startup, which during the transition
+   points at the OLD VM, so no request to the new VM would match. #}
    name, docroot, wiki (bool), php (bool), pool (fpm pool name),
    support (dokuwiki instance dir), cert (letsencrypt live dir),
    aliases (list, extra names such as test.<name> for testing the VM
    before cutover), redirect_to (redirect-only sites) #}
  {% if item.redirect_to is defined and item.redirect_to %}
-<VirtualHost {{ item.name }}:443>
+<VirtualHost *:443>
   ServerName {{ item.name }}
   ServerAdmin faith@alephnull.com
   RedirectPermanent / {{ item.redirect_to }}
@@ -19,7 +22,7 @@
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
 </VirtualHost>
 
-<VirtualHost www.{{ item.name }}:443>
+<VirtualHost *:443>
   ServerName www.{{ item.name }}
   RedirectPermanent / {{ item.redirect_to }}
 
@@ -31,17 +34,17 @@
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
 </VirtualHost>
 
-<VirtualHost {{ item.name }}:80>
+<VirtualHost *:80>
   ServerName {{ item.name }}
   RedirectPermanent / {{ item.redirect_to }}
 </VirtualHost>
 
-<VirtualHost www.{{ item.name }}:80>
+<VirtualHost *:80>
   ServerName www.{{ item.name }}
   RedirectPermanent / {{ item.redirect_to }}
 </VirtualHost>
 {% else %}
-<VirtualHost {{ item.name }}:443>
+<VirtualHost *:443>
   ServerName {{ item.name }}
 {% if item.aliases is defined and item.aliases %}
   ServerAlias {{ item.aliases | join(' ') }}
@@ -85,7 +88,7 @@
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
 </VirtualHost>
 
-<VirtualHost www.{{ item.name }}:443>
+<VirtualHost *:443>
   ServerName www.{{ item.name }}
   RedirectPermanent / https://{{ item.name }}/
 
@@ -97,7 +100,7 @@
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
 </VirtualHost>
 
-<VirtualHost {{ item.name }}:80>
+<VirtualHost *:80>
   ServerName {{ item.name }}
 {% if item.aliases is defined and item.aliases %}
   ServerAlias {{ item.aliases | join(' ') }}
@@ -106,7 +109,7 @@
   RewriteRule ^ https://%{HTTP_HOST}/ [R=301,L]
 </VirtualHost>
 
-<VirtualHost www.{{ item.name }}:80>
+<VirtualHost *:80>
   ServerName www.{{ item.name }}
   RedirectPermanent / https://{{ item.name }}/
 </VirtualHost>

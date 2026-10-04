@@ -115,8 +115,25 @@
   shell: a2ensite {{ item.name }}
   with_items: "{{ all_sites }}"
 
-- name: Disable the packaged default site
-  shell: a2dissite 000-default
+- name: Replace the packaged default site
+  # Fallback vhost for names that match no site. 000-default sorts first
+  # in sites-enabled, so it is the default :80 vhost. (The packaged one
+  # serves "Apache2 Debian Default Page" from /var/www/html.) The page
+  # itself lives in the repo at alephnull/www/default/ and is placed by
+  # the vmdb copy-dir step.
+  copy:
+    dest: /etc/apache2/sites-available/000-default.conf
+    owner: root
+    group: root
+    mode: '0644'
+    content: |
+      <VirtualHost *:80>
+        ServerAdmin faith@alephnull.com
+        DocumentRoot /www/default/docroot
+      </VirtualHost>
+
+- name: Enable the default site
+  shell: a2ensite 000-default
 
 - name: Enable required modules
   shell: a2enmod {{ item }}
