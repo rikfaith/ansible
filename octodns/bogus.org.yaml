@@ -24,6 +24,10 @@ so:
   ttl: 900
   type: A
   value: 199.48.130.2
+test:
+  ttl: 300
+  type: A
+  value: 165.227.82.43
 www:
   ttl: 900
   type: A

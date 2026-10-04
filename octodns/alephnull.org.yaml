@@ -65,10 +65,6 @@ mute:
   ttl: 90
   type: A
   value: 173.244.238.236
-ns2:
-  ttl: 3600
-  type: A
-  value: 199.48.130.2
 ntp:
   ttl: 3600
   type: A
@@ -85,10 +81,14 @@ shadow-i:
   ttl: 3600
   type: A
   value: 104.225.0.186
+test:
+  ttl: 300
+  type: A
+  value: 165.227.82.43
 winter:
   ttl: 900
   type: A
-  value: 174.109.66.74
+  value: 65.187.168.226
 www:
   ttl: 3600
   type: A

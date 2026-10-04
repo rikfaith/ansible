@@ -14,6 +14,10 @@
     - ns1.digitalocean.com.
     - ns2.digitalocean.com.
     - ns3.digitalocean.com.
+test:
+  tty: 300
+  type: A
+  value: 165.227.82.43
 www:
   ttl: 900
   type: A
