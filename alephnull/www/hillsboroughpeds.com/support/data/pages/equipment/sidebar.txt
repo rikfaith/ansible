@@ -1,6 +1,0 @@
-====== Equipment ======
-[[equipment:scale | Scale]]\\
-[[equipment:table | Table]]\\
-[[equipment:instruments | Instruments]]\\
-
-

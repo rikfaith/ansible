@@ -1,8 +1,0 @@
-User-agent: *
-Disallow: /Converse
-
-User-agent: ia_archiver
-Disallow: /house
-
-User-agent: *
-Disallow: /house

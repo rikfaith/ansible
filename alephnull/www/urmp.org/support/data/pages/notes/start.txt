@@ -1,5 +1,0 @@
-====== Notes ======
-
-  * MD5 and SHA-1 verification: http://www.nsrl.nist.gov/testdata/
-  * Open source SHA-2 implementation: http://www.ouah.org/ogay/sha2/
-  * djb's public domain SHA-1: http://cr.yp.to/nearsha.html

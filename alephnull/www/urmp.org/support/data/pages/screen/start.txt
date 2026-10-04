@@ -1,7 +1,0 @@
-On the left, is the full database with incremental search.
-
-On the bottom right is the current playlist.  A ~ before the rate means VBR.
-
-On the top right is information about the song being played, and some controls for that song and the playlist.
-
-{{:screen:screen1.png?600}}

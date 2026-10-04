@@ -1,4 +1,0 @@
-====== Legal ======
-[[ legal:attorney | Attorney]]\\
-[[ legal:accountant | Accountant]]\\
-[[ legal:licensure | Licensure]]\\

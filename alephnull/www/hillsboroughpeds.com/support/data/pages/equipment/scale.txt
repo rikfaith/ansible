@@ -1,6 +1,0 @@
-====== Scale: seca 700 ======
-  * {{:equipment:seca700.pdf|Scan of Manual}}
-  * [[https://www.seca-online.com/seca-700.seca700.0.html?&L=1&C=us|Manufacturer's Web Site]]
-  * {{:equipment:ba_700_17-10-06-299e06.pdf|Manual from Manufacturer's Web Site}}
-
-{{:equipment:700_600x600_detail-weights_11.jpg?300x300}}

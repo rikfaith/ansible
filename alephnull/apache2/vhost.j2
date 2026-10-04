@@ -5,14 +5,19 @@
    makes Apache resolve `name` at startup, which during the transition
    points at the OLD VM, so no request to the new VM would match. #}
    name, docroot, wiki (bool), php (bool), pool (fpm pool name),
-   support (dokuwiki instance dir), cert (letsencrypt live dir),
-   aliases (list, extra names such as test.<name> for testing the VM
-   before cutover), redirect_to (redirect-only sites) #}
+    support (dokuwiki instance dir), cert (letsencrypt live dir),
+    aliases (list, extra names such as test.<name> for testing the VM
+    before cutover), redirect_to (redirect-only sites),
+    wiki_aliases (list, URL prefixes for the wiki instance; default
+    /wiki), root_redirect (path / is 301-redirected to) #}
  {% if item.redirect_to is defined and item.redirect_to %}
-<VirtualHost *:443>
-  ServerName {{ item.name }}
-  ServerAdmin faith@alephnull.com
-  RedirectPermanent / {{ item.redirect_to }}
+ <VirtualHost *:443>
+   ServerName {{ item.name }}
+{% if item.aliases is defined and item.aliases %}
+   ServerAlias {{ item.aliases | join(' ') }}
+{% endif %}
+   ServerAdmin faith@alephnull.com
+   RedirectPermanent / {{ item.redirect_to }}
 
   SSLEngine on
   SSLCertificateFile /etc/letsencrypt/live/{{ item.cert }}/fullchain.pem
@@ -34,10 +39,13 @@
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
 </VirtualHost>
 
-<VirtualHost *:80>
-  ServerName {{ item.name }}
-  RedirectPermanent / {{ item.redirect_to }}
-</VirtualHost>
+ <VirtualHost *:80>
+   ServerName {{ item.name }}
+{% if item.aliases is defined and item.aliases %}
+   ServerAlias {{ item.aliases | join(' ') }}
+{% endif %}
+   RedirectPermanent / {{ item.redirect_to }}
+ </VirtualHost>
 
 <VirtualHost *:80>
   ServerName www.{{ item.name }}
@@ -51,8 +59,8 @@
 {% endif %}
   ServerAdmin faith@alephnull.com
   DocumentRoot {{ item.docroot }}
-{% if item.redirect_root_to_wiki is defined and item.redirect_root_to_wiki %}
-  RedirectMatch 301 ^/$ /wiki/
+{% if item.root_redirect is defined and item.root_redirect %}
+  RedirectMatch 301 ^/$ {{ item.root_redirect }}
 {% endif %}
 
   TransferLog "|/usr/bin/cronolog /var/log/httpd/{{ item.name }}/%Y/%m/access.%Y%m%d.log"
@@ -60,17 +68,22 @@
 
   <Directory {{ item.docroot }}>
     Options FollowSymLinks
-    AllowOverride None
+    AllowOverride {{ item.allow_override | default('None') }}
     Require all granted
   </Directory>
 {% if item.wiki %}
-  Alias /wiki {{ item.support }}/
+  {% for wiki_alias in item.wiki_aliases | default(['/wiki']) %}
+  Alias {{ wiki_alias }} {{ item.support }}/
+  {% endfor %}
   <Directory {{ item.support }}>
     Options -Indexes +FollowSymLinks
     AllowOverride None
     Require all granted
   </Directory>
   <Directory {{ item.support }}/conf>
+    Require all denied
+  </Directory>
+  <Directory {{ item.support }}/data>
     Require all denied
   </Directory>
   <FilesMatch "\.db$">

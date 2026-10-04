@@ -89,8 +89,6 @@
   - /var/log/httpd/hillsboroughpeds.com
   - /var/log/httpd/hybridsky.org
   - /var/log/httpd/pineview82.org
-  - /var/log/httpd/tarball.org
-  - /var/log/httpd/urmp.org
   - /var/log/php-fpm
 
 - name: Render per-site php-fpm pools
@@ -138,6 +136,7 @@
 - name: Enable required modules
   shell: a2enmod {{ item }}
   with_items:
+  - access_compat
   - headers
   - proxy
   - proxy_fcgi
@@ -218,6 +217,51 @@
     tar cf - -C /usr/share/dokuwiki --exclude=lib/tpl --exclude=lib/plugins .htaccess.dist .htaccess.dist.md5sum VERSION bin doku.php feed.php index.php inc lib vendor | tar xf - -C /www/{{ item }}/support && cp -a /var/lib/dokuwiki/lib/tpl/dokuwiki /www/{{ item }}/support/lib/tpl/ && tar cf - -C /etc/dokuwiki --exclude=acl.auth.php --exclude=users.auth.php . | tar xf - -C /www/{{ item }}/support/conf/ && mkdir -p /www/{{ item }}/support/data/attic /www/{{ item }}/support/data/cache /www/{{ item }}/support/data/index /www/{{ item }}/support/data/locks /www/{{ item }}/support/data/log /www/{{ item }}/support/data/media /www/{{ item }}/support/data/media_attic /www/{{ item }}/support/data/media_meta /www/{{ item }}/support/data/meta /www/{{ item }}/support/data/pages /www/{{ item }}/support/data/tmp
   with_items: "{{ wiki_sites }}"
 
+- name: Ensure per-site plugin directories exist
+  # lib/plugins did not exist after the code merge: in the Debian
+  # package it is a symlink, excluded from the merge.
+  file:
+    path: "/www/{{ item }}/support/lib/plugins"
+    state: directory
+  with_items: "{{ wiki_sites }}"
+
+- name: Install core dokuwiki extensions into per-site instances
+  # The Debian package bundles no extensions. This is the curated core
+  # set from the official 2026-07-14c "Mort" tarball (the version apt
+  # installs from the Devuan testing repo). authplain is the cryptplain
+  # successor and reads the migrated conf/users.auth.php as-is (its
+  # PassHash supports the md5/md5crypt/bcrypt hashes in it). Note the
+  # support/passwords files are a different thing: Apache htpasswd files
+  # for Basic auth, used via .htaccess (30th/, 20th/, raw/, downloads/
+  # on pineview82.org).
+  # unarchive (not copy) because the build host's ansible 2.20 copy
+  # module dropped the recurse parameter, and synchronize does not work
+  # over the chroot connection. The tarball is a snapshot of
+  # alephnull/dokuwiki-plugins/ (regenerate with:
+  # tar czf dokuwiki-plugins.tar.gz -C dokuwiki-plugins .).
+  unarchive:
+    src: alephnull/dokuwiki-plugins.tar.gz
+    dest: "/www/{{ item }}/support/lib/plugins/"
+  with_items: "{{ wiki_sites }}"
+
+- name: Create per-site ACL files
+  # The migrated sites run with useacl=1 but had no acl file; in this
+  # dokuwiki a missing acl file means AUTH_NONE (nothing readable), so
+  # give a baseline: everyone reads, the user group edits/uploads, the
+  # admin group has full control. Adjust permissions here if needed.
+  copy:
+    dest: "/www/{{ item }}/support/conf/acl.auth.php"
+    owner: root
+    group: root
+    mode: '0644'
+    content: |
+      # <namespace> <user or @group> <permissions>
+      # 1=read 2=edit 4=upload 8=delete 16=create 128=configure 255=admin
+      * @ALL 1
+      * @user 6
+      * @admin 255
+  with_items: "{{ wiki_sites }}"
+
 - name: Drop stale per-site prepend.php
   # The migrated prepend.php redefined DOKU_CONF/DOKU_INC in the old style
   # (a bare define of the already-defined DOKU_INC is fatal on modern
@@ -228,30 +272,13 @@
     state: absent
   with_items: "{{ wiki_sites }}"
 
-- name: Make wiki data and conf writable by fpm
-  # conf must be writable so dokuwiki can create acl.auth.php (sites run
-  # with useacl=1) and edit users.auth.php via the admin UI.
+- name: Make wiki data, conf and extensions owned by fpm
+  # conf must be writable so dokuwiki can edit acl.auth.php (sites run
+  # with useacl=1) and users.auth.php via the admin UI.
   shell: >
     chown -R www-data:www-data
-    /www/{{ item }}/support/data /www/{{ item }}/support/conf
+    /www/{{ item }}/support/data /www/{{ item }}/support/conf /www/{{ item }}/support/lib/plugins
   with_items: "{{ wiki_sites }}"
-
-- name: Point urmp.org docroot entry points at the support/ instance
-  # The old VM ran DokuWiki from the docroot itself; the migrated instance
-  # lives in support/. Wrappers keep the historical
-  # https://urmp.org/doku.php?id=... URLs working.
-  copy:
-    dest: "/www/urmp.org/docroot/{{ item }}"
-    owner: root
-    group: root
-    mode: '0644'
-    content: |
-      <?php
-      require '/www/urmp.org/support/{{ item }}';
-  with_items:
-  - doku.php
-  - index.php
-  - feed.php
 
 - name: Create logrotate config for cronolog and php-fpm logs
   copy:

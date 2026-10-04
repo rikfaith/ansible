@@ -1,9 +1,0 @@
-====== urmp: The Ur Music Player ======
-
-The goals of urmp are to provide an MP3 music player that can do the following:
-  * incrementally search a 60k song playlist in under 50ms per keystroke;
-  * process mp3 files, extracting ID3 and MP3 data, at a rate of thousands of songs per minute;
-  * maintain a database in the face of failed or moved NFS mounts;
-  * attain performance goals without reliance on an external database server.
-
-Other MP3 players, such as amarok, do not have these performance characteristics; and my frustration with using them led to the creation of urmp.  Because performance is a key goal, other goals, such as a beautiful user interface, are secondary -- eye-candy and cool functionality is much easier to add after performance (this is not premature optimization, since some of the key performance problems depend on how GUI objects are used).

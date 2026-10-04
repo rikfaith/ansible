@@ -82,6 +82,12 @@ steps:
     tag: rootfs
     unless: rootfs_unpacked
 
+  # The cached base tarball may carry a stale /www from an earlier
+  # build, and copy-dir overlays without deleting: clear it first so
+  # /www in the image is exactly the repo tree.
+  - shell: rm -rf $ROOT/www
+    root-fs: rootfs
+
   - copy-dir: /www
     src: alephnull/www
     user: www-data
