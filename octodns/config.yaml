@@ -2,15 +2,6 @@ providers:
   config:
     class: octodns.provider.yaml.YamlProvider
     directory: .
-  bind:
-    class: octodns_bind.Rfc2136Provider
-    host: ns2.alephnull.com
-    port: 53
-    ipv6: False
-    timeout: 10
-    key_name: mute.alephnull.com
-    key_secret: !include /home/faith/.mute-bind-key
-    key_algorithm: hmac-sha512
   digitalocean:
     class: octodns_digitalocean.DigitalOceanProvider
     token: !include /home/faith/.digital-ocean-token

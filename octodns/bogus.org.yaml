@@ -27,7 +27,7 @@ so:
 test:
   ttl: 300
   type: A
-  value: 165.227.82.43
+  value: 209.38.2.219
 www:
   ttl: 900
   type: A

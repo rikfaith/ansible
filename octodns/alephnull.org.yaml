@@ -84,7 +84,11 @@ shadow-i:
 test:
   ttl: 300
   type: A
-  value: 165.227.82.43
+  value: 209.38.2.219
+vm0:
+  ttl: 300
+  type: A
+  value: 138.197.130.75
 winter:
   ttl: 900
   type: A

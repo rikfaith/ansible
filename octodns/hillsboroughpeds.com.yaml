@@ -47,6 +47,10 @@ sites:
   ttl: 900
   type: CNAME
   value: ghs.googlehosted.com.
+test:
+  ttl: 300
+  type: A
+  value: 209.38.2.219
 video:
   ttl: 900
   type: CNAME
