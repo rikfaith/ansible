@@ -128,6 +128,11 @@
     mode: '0644'
     content: |
       <VirtualHost *:80>
+        # Explicit ServerName: an unnamed first vhost inherits the global
+        # ServerName (alephnull.com) and would shadow the real
+        # alephnull.com vhost. It remains the fallback default for
+        # unmatched names.
+        ServerName default.alephnull.com
         ServerAdmin faith@alephnull.com
         DocumentRoot /www/default/docroot
       </VirtualHost>
@@ -138,6 +143,7 @@
         # (mod_ssl: "You configured HTTP(80) on the standard HTTPS
         # port"). Uses the alephnull.com cert; SNI mismatch for other
         # names is acceptable for a fallback page.
+        ServerName default.alephnull.com
         ServerAdmin faith@alephnull.com
         DocumentRoot /www/default/docroot
         SSLEngine on

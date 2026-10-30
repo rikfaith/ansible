@@ -299,3 +299,24 @@ DNS back to 199.48.130.3; the old VM is untouched and running.
 - If the lost per-site DokuWiki plugins ever matter (gallery/loglog/etc.),
   they'd have to be re-installed from dokuwiki.org per instance; data
   compatibility is not an issue.
+
+## Post-deployment fix (2026-10-30): fallback vhost shadowed alephnull.com
+
+After cutover, `https://alephnull.com/w/` 404'd and `/` served the
+fallback page. Cause: the `000-default.conf` fallback vhosts had no
+`ServerName` of their own, and the playbook sets a global
+`ServerName alephnull.com` (the `servername.conf` task, to silence the
+FQDN warning). Apache gives an unnamed *first* vhost on a listener the
+global ServerName, and `000-default` sorts first in `sites-enabled` —
+so it registered as the namevhost for `alephnull.com`, shadowing the
+real vhost (`alephnull.com.conf:1`). `Host: alephnull.com` requests
+landed in `/www/default/docroot` ("No Thing" page; 404 at `/w/`). The
+other 7 sites were unaffected: their names were claimed only by their
+own vhosts. Fix: explicit `ServerName default.alephnull.com` on both
+fallback vhosts (it still serves as the default for unmatched names).
+Applied on the live VM and in `tasks/update_alephnull.yml` so a
+rebuild keeps it. (The dict and tools-web playbooks already use
+explicit ServerNames on their fallback vhosts.) Verified afterwards:
+`/` 301 -> `/w/`, `/w/` + `/wiki/` render DokuWiki, `test.`/`www.`
+aliases, the redirect sites, HSTS/`Server: Apache` headers and the
+unmatched-name fallback all correct.
