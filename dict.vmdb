@@ -49,6 +49,7 @@ steps:
     - htop
     - jq
     - libpam-modules
+    - libpam-wtmpdb
     - linux-image-amd64
     - locales
     - lshw
@@ -67,8 +68,8 @@ steps:
     - ripgrep
     - rsync
     - strace
-    - sysv-rc-conf
     - sudo
+    - sysv-rc-conf
     - time
     - tmux
     - traceroute
@@ -77,6 +78,7 @@ steps:
     - vim
     - vnstat
     - whois
+    - wtmpdb
     - zip
     - zsh
     tag: rootfs

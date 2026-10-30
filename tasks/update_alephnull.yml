@@ -28,8 +28,8 @@
     - dokuwiki
     - gcc
     - libaugeas-dev
-    - libpython3-dev
     - libpython3.13-dev
+    - libpython3-dev
     - php-cli
     - php-fpm
     - php-gd
