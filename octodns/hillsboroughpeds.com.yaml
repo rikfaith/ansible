@@ -2,7 +2,7 @@
 ? ''
 : - ttl: 900
     type: A
-    value: 199.48.130.3
+    value: 209.38.2.219
   - ttl: 900
     type: CAA
     value:
@@ -47,15 +47,11 @@ sites:
   ttl: 900
   type: CNAME
   value: ghs.googlehosted.com.
-test:
-  ttl: 300
-  type: A
-  value: 209.38.2.219
 video:
   ttl: 900
   type: CNAME
   value: ghs.googlehosted.com.
 www:
   ttl: 900
-  type: A
-  value: 199.48.130.3
+  type: CNAME
+  value: hillsboroughpeds.com.

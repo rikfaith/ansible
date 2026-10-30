@@ -2,7 +2,7 @@
 ? ''
 : - ttl: 3600
     type: A
-    value: 199.48.130.3
+    value: 209.38.2.219
   - ttl: 3600
     type: CAA
     value:
@@ -53,10 +53,6 @@ _xmpp-server._tcp:
     priority: 0
     target: raven.toroid.org.
     weight: 0
-alephnull:
-  ttl: 3600
-  type: A
-  value: 199.48.130.3
 em464438:
   ttl: 3600
   type: CNAME
@@ -65,10 +61,6 @@ mute:
   ttl: 90
   type: A
   value: 173.244.238.236
-ntp:
-  ttl: 3600
-  type: A
-  value: 199.48.130.2
 s464438._domainkey:
   ttl: 3600
   type: CNAME
@@ -81,19 +73,15 @@ shadow-i:
   ttl: 3600
   type: A
   value: 104.225.0.186
-test:
-  ttl: 300
-  type: A
-  value: 209.38.2.219
 vm0:
   ttl: 300
   type: A
-  value: 138.197.130.75
+  value: 209.38.2.219
 winter:
   ttl: 900
   type: A
   value: 65.187.168.226
 www:
   ttl: 3600
-  type: A
-  value: 199.48.130.3
+  type: CNAME
+  value: alephnull.com.

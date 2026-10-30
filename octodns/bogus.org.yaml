@@ -2,7 +2,7 @@
 ? ''
 : - ttl: 3600
     type: A
-    value: 199.48.130.3
+    value: 209.38.2.219
   - ttl: 3600
     type: CAA
     value:
@@ -23,12 +23,8 @@
 so:
   ttl: 900
   type: A
-  value: 199.48.130.2
-test:
-  ttl: 300
-  type: A
   value: 209.38.2.219
 www:
   ttl: 900
-  type: A
-  value: 199.48.130.3
+  type: CNAME
+  value: bogus.org.

@@ -2,7 +2,7 @@
 ? ''
 : - ttl: 900
     type: A
-    value: 199.48.130.3
+    value: 209.38.2.219
   - ttl: 900
     type: MX
     value:
@@ -14,11 +14,7 @@
     - ns1.digitalocean.com.
     - ns2.digitalocean.com.
     - ns3.digitalocean.com.
-test:
-  ttl: 300
-  type: A
-  value: 209.38.2.219
 www:
   ttl: 900
-  type: A
-  value: 199.48.130.3
+  type: CNAME
+  value: tarball.org.
