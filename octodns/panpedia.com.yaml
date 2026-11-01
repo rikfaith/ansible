@@ -2,7 +2,7 @@
 ? ''
 : - ttl: 900
     type: A
-    value: 129.212.135.231
+    value: 173.244.238.236
   - type: CAA
     value:
       flags: 0
@@ -22,18 +22,14 @@
 em464438:
   type: CNAME
   value: return.smtp2go.net.
-m:
-  ttl: 43200
-  type: CNAME
-  value: mute.panpedia.org.
-mute:
-  ttl: 900
-  type: A
-  value: 173.244.238.236
 s464438._domainkey:
   type: CNAME
   value: dkim.smtp2go.net.
 winter:
   ttl: 900
   type: A
-  value: 174.109.66.74
+  value: 65.187.168.226
+www:
+  ttl: 1800
+  type: CNAME
+  value: panpedia.org.
