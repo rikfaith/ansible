@@ -17,7 +17,7 @@ HAQCOW2=~/Downloads/haos_ova-17.1.qcow2
 
 RAM=$((16*1024))
 VCPUS=4
-VARIANT=debiantesting  # closet to devuan ceres
+VARIANT=debiantesting  # closest to devuan ceres
 EXTRA=""
 QCOW2=/tmp/$TARGET.qcow2
 BASEQCOW2=$(basename $QCOW2 .qcow2).qcow2

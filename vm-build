@@ -4,7 +4,7 @@
 TARGET=/tmp
 
 if [[ $1 == "" ]]; then
-    echo "usage: build.sh <VM>"
+    echo "usage: $0 <VM>"
     exit 1
 fi
 
