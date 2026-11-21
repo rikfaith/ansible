@@ -1,14 +1,17 @@
 ---
 - name: Get latest kernel version
+  when: install_gpu_tools is defined and install_gpu_tools
   shell: dpkg --list | fgrep linux-image | sed 's,.*linux-image-,,' | sed 's, .*,,' | grep '^[0-9]' | sort -V | tail -1
   register: kernver
 
 - name: Install kernel headers
+  when: install_gpu_tools is defined and install_gpu_tools
   apt:
     pkg: linux-headers-{{ kernver.stdout }}
     state: present
 
 - name: Install build tools
+  when: install_gpu_tools is defined and install_gpu_tools
   apt:
     pkg:
       - python3-dev
@@ -16,31 +19,38 @@
     state: present
 
 - name: Fetch nvidia repo keys
+  when: install_gpu_tools is defined and install_gpu_tools
   shell: wget https://developer.download.nvidia.com/compute/cuda/repos/debian13/x86_64/cuda-keyring_1.1-1_all.deb
 
 - name: Install nvidia repo keys
+  when: install_gpu_tools is defined and install_gpu_tools
   shell: dpkg -i cuda-keyring_1.1-1_all.deb
 
 - name: Update repo information
+  when: install_gpu_tools is defined and install_gpu_tools
   command: apt-get update
 
 - name: Update distribution
+  when: install_gpu_tools is defined and install_gpu_tools
   apt:
     upgrade: dist
     update_cache: no
     autoremove: yes
 
 - name: Install pahole
+  when: install_gpu_tools is defined and install_gpu_tools
   apt:
     pkg: pahole
     state: present
 
 - name: Install nvidia-open
+  when: install_gpu_tools is defined and install_gpu_tools
   apt:
     pkg: nvidia-open
     state: present
 
 - name: Install nvtop etc.
+  when: install_gpu_tools is defined and install_gpu_tools
   apt:
     pkg:
       - cuda-nvcc-13-3
@@ -56,6 +66,7 @@
     state: present
 
 - name: Add user to docker group
+  when: install_gpu_tools is defined and install_gpu_tools
   user:
     name: "{{ default.nonroot_user }}"
     create_home: no
@@ -63,6 +74,7 @@
     groups: "docker"
 
 - name: Download and execute the official uv installer
+  when: install_gpu_tools is defined and install_gpu_tools
   ansible.builtin.shell:
     cmd: curl -LsSf https://astral.sh/uv/install.sh | bash
   environment:
@@ -72,20 +84,24 @@
   changed_when: "'Installing uv' in uv_install_result.stderr or 'downloading uv' in uv_install_result.stdout"
 
 - name: Verify uv installation
+  when: install_gpu_tools is defined and install_gpu_tools
   ansible.builtin.command: uv --version
   register: uv_version
   changed_when: false
 
 - name: Display installed uv version
+  when: install_gpu_tools is defined and install_gpu_tools
   ansible.builtin.debug:
     msg: "Successfully installed {{ uv_version.stdout }}"
 
 - name: Add HuggingFace token
+  when: install_gpu_tools is defined and install_gpu_tools
   copy:
     dest: "/home/{{ default.nonroot_user }}/.hf-token"
     content: "{{ default.hf_token }}"
 
 - name: Create vllm directory
+  when: install_gpu_tools is defined and install_gpu_tools
   file:
     path: "/home/{{ default.nonroot_user }}/vllm"
     state: directory
@@ -93,6 +109,7 @@
     group: "{{ default.nonroot_user }}"
 
 - name: Installing vllm
+  when: install_gpu_tools is defined and install_gpu_tools
   become: true
   become_user: "{{ default.nonroot_user }}"
   shell: |
@@ -105,9 +122,11 @@
     uv pip install vllm --extra-index-url https://vllm.ai
 
 - name: Copy vllm scripts
+  when: install_gpu_tools is defined and install_gpu_tools
   ansible.posix.synchronize:
     src: scripts-ai/*
     dest: "/home/{{ default.nonroot_user }}/vllm"
 
 - name: Install nvidia-gpu-exporter
+  when: install_gpu_tools is defined and install_gpu_tools
   fixme:
