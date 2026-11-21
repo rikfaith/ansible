@@ -30,33 +30,37 @@
       become_user: postgres
       community.postgresql.postgresql_user:
         name: postgres
-        password: "{{ postgres.postgres_password }}"
+        password: "{{ secret.postgres_password }}"
         encrypted: true
 
     - name: Create new user
+      when: vm_purpose is defined and vm_purpose == "timescale"
       become: true
       become_user: postgres
       community.postgresql.postgresql_user:
-        name: "{{ postgres.db_user }}"
-        password: "{{ postgres.db_password }}"
+        name: "{{ default.db_user }}"
+        password: "{{ secret.db_password }}"
         encrypted: true
         role_attr_flags: SUPERUSER
 
     - name: Create new database
+      when: vm_purpose is defined and vm_purpose == "timescale"
       become: true
       become_user: postgres
       community.postgresql.postgresql_db:
         state: present
-        name: "{{ postgres.db_name }}"
+        name: "{{ default.db_name }}"
         encoding: UTF-8
 
     - name: Grant user access to database
+      when: vm_purpose is defined and vm_purpose == "timescale"
       become: true
       become_user: postgres
       community.postgresql.postgresql_privs:
+        login_db: postgres
         type: database
-        database: "{{ postgres.db_name }}"
-        roles: "{{ postgres.db_user }}"
+        objs: "{{ default.db_name }}"
+        roles: "{{ default.db_user }}"
         grant_option: no
         privs: all
 
@@ -66,7 +70,7 @@
       become_user: postgres
       community.postgresql.postgresql_user:
         name: urweb
-        password: "{{ postgres.urweb_password }}"
+        password: "{{ secret.urweb_password }}"
         encrypted: true
         role_attr_flags: SUPERUSER
 
@@ -85,8 +89,9 @@
       become: true
       become_user: postgres
       community.postgresql.postgresql_privs:
+        login_db: postgres
         type: database
-        database: urweb
+        objs: urweb
         roles: urweb
         grant_option: no
         privs: all
@@ -109,6 +114,10 @@
         name: postgresql
         state: stopped
 
+# To initialize:
+# sudo mkdir -p /pgsql/postgresql/18/main
+# sudo chown postgres:postgres -R /pgsql/postgresql/18/main
+# sudo -u postgres /usr/lib/postgresql/18/bin/initdb -D /pgsql/postgresql/18/main
 - name: Create new database directory
   when: vm_purpose is defined and (vm_purpose == "timescale" or vm_purpose == "pgsql")
   file:
@@ -166,7 +175,6 @@
               state=present
               insertafter=EOF
   with_items:
-    - { regexp: "shared_preload_libraries", line: "shared_preload_libraries = 'timescaledb'" }
     - { regexp: "data_directory", line: "data_directory = '/{{ vm_hostname }}/postgresql/18/main'" }
     - { regexp: "listen_addresses", line: "listen_addresses = '*'" }
     - { regexp: "shared_buffers", line: "shared_buffers = 64GB" }
