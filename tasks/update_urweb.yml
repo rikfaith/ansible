@@ -45,9 +45,11 @@
         dest: /usr/local/bin
         remote_src: yes
         mode: '0755'
-        includes:
+        include:
           - uv
           - uvx
+        extra_opts:
+        - --no-anchored
 
     - name: Remove uv tarball
       file:
@@ -57,22 +59,24 @@
 - name: Install gitlab key for urweb checkout
   when: vm_purpose is defined and vm_purpose == "web"
   copy:
-    src: /root/gitlab-rikfaith
+    src: "/home/{{ default.nonroot_user }}/.ssh/{{ item }}"
     remote_src: yes
     dest: /root/.ssh/gitlab-rikfaith
     owner: root
     group: root
     mode: '0600'
+  with_items:
+  - gitlab-rikfaith
+  - gitlab-rikfaith.pub
 
 - name: Checkout urweb
   when: vm_purpose is defined and vm_purpose == "web"
   git:
-    repo: 'git@gitlab.com:rikfaith/urweb.git'
+    repo: "git@gitlab.com:rikfaith/urweb.git"
     dest: /web.baseline/urweb
     version: main
     key_file: /root/.ssh/gitlab-rikfaith
     accept_hostkey: yes
-    submodule: true
     recursive: yes
 
 - name: Give urweb ownership of its tree
@@ -169,6 +173,10 @@
         Include               /etc/letsencrypt/options-ssl-apache.conf
 
         Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains"
+
+        # Forward the client IP to the WSGI app, which trusts the
+        # first X-Forwarded-For entry (ProxyFix) for login logging.
+        RequestHeader set X-Forwarded-For "%{REMOTE_ADDR}s"
 
         WSGIDaemonProcess urweb processes=2 threads=15 user=urweb group=urweb python-home=/web/urweb/.venv python-path=/web/urweb
         WSGIProcessGroup urweb
