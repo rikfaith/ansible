@@ -102,7 +102,7 @@
               insertafter=EOF
   with_items:
     - { regexp: "shared_preload_libraries", line: "shared_preload_libraries = 'timescaledb'" }
-    - { regexp: "data_directory", line: "/{{ vm_hostname }}/postgresql/18/main'" }
+    - { regexp: "data_directory", line: "data_directory = '/{{ vm_hostname }}/postgresql/18/main'" }
     - { regexp: "listen_addresses", line: "listen_addresses = '*'" }
     - { regexp: "shared_buffers", line: "shared_buffers = 64GB" }
     - { regexp: "effective_cache_size", line: "effective_cache_size = 200GB" }
@@ -136,7 +136,7 @@
               insertafter=EOF
   with_items:
     - { regexp: "shared_preload_libraries", line: "shared_preload_libraries = 'timescaledb'" }
-    - { regexp: "data_directory", line: "/{{ vm_hostname }}/postgresql/18/main'" }
+    - { regexp: "data_directory", line: "data_directory = '/{{ vm_hostname }}/postgresql/18/main'" }
     - { regexp: "listen_addresses", line: "listen_addresses = '*'" }
     - { regexp: "shared_buffers", line: "shared_buffers = 64GB" }
     - { regexp: "effective_cache_size", line: "effective_cache_size = 200GB" }
