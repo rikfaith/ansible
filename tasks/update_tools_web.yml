@@ -87,8 +87,14 @@
   when: vm_purpose is defined and vm_purpose == "dict"
   shell: certbot certonly --agree-tos -n --preferred-challenges dns -d dict.org,www.dict.org,alt0.dict.org,alt1.dict.org,test.dict.org --dns-digitalocean --dns-digitalocean-credentials /root/digitalocean-dict.ini
 
+# Certificate issuance is deliberately NOT part of the image build:
+# each build starts with an empty /etc/letsencrypt, so every build
+# attempt would consume one of Let's Encrypt's ~60 certs/week per
+# registered domain.  It is issued at first boot instead (see
+# FIRST-BOOT.md in the urweb repo); set web_cert_at_build: true as an
+# extra var to do it in the build if you prefer.
 - name: Get certificate for panpedia.org
-  when: vm_purpose is defined and vm_purpose == "web"
+  when: vm_purpose is defined and vm_purpose == "web" and web_cert_at_build | default(false)
   shell: certbot certonly --agree-tos -n --preferred-challenges dns -d panpedia.org,www.panpedia.org,local.panpedia.org,panpedia.panpedia.org -m lukem1900@gmail.com --dns-digitalocean --dns-digitalocean-credentials /root/digitalocean-panpedia.ini
 
 - name: Add cert renewal to /etc/crontab
@@ -233,7 +239,6 @@
   when: vm_purpose is defined and vm_purpose == "web"
   shell: a2dismod "{{ item }}"
   with_items:
-  - autoindex
   - cgi
   - status
   - userdir
