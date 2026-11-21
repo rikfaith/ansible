@@ -14,4 +14,4 @@
       append: yes
       shell: /bin/zsh
       create_home: yes
-      password: "{{ default.nonroot_password }}"
+      password: "{{ secret.nonroot_password }}"

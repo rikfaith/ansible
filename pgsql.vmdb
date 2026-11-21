@@ -36,6 +36,7 @@ steps:
     packages:
     - build-essential
     - dnsutils
+    - elogind
     - file
     - gawk
     - git

@@ -15,26 +15,26 @@ laptops:
           br0port: eth0
           ansible_host: 10.42.93.100
           ansible_port: 993
-          ansible_password: "{{ default.setup_password }}"
-          ansible_become_password: "{{ default.setup_password }}"
+          ansible_password: "{{ secret.setup_password }}"
+          ansible_become_password: "{{ secret.setup_password }}"
 
         ariel-compute:
           br0port: eth0
           ansible_host: 10.42.93.110
           ansible_port: 993
-          ansible_password: "{{ default.setup_password }}"
-          ansible_become_password: "{{ default.setup_password }}"
+          ansible_password: "{{ secret.setup_password }}"
+          ansible_become_password: "{{ secret.setup_password }}"
 
         puck-debian:
           ansible_host: 10.42.93.111
-          ansible_password: "{{ passwords.rickard_faith_password }}"
-          ansible_become_password: "{{ passwords.rickard_faith_password }}"
+          ansible_password: "{{ secret.rickard_faith_password }}"
+          ansible_become_password: "{{ secret.rickard_faith_password }}"
           br0port: eth
         puck-compute:
           ansible_host: 10.42.93.111
           br0port: eth
-          ansible_password: "{{ passwords.puck_password }}"
-          ansible_become_password: "{{ passwords.puck_password }}"
+          ansible_password: "{{ secret.puck_password }}"
+          ansible_become_password: "{{ secret.puck_password }}"
     vars:
         ansible_port: 993
         install_laptop_ssh: true
@@ -45,8 +45,8 @@ desktops:
     hosts:
       silenus:
         ansible_host: 10.42.93.47
-        ansible_password: "{{ default.setup_password }}"
-        ansible_become_password: "{{ default.setup_password }}"
+        ansible_password: "{{ secret.setup_password }}"
+        ansible_become_password: "{{ secret.setup_password }}"
         br0port: eth2
         br0ip: 10.42.93.47
         br0gw: 10.42.93.1
@@ -79,8 +79,8 @@ compute:
     hosts:
         thoth:
           ansible_host: 10.42.93.91
-          ansible_password: "{{ default.setup_password }}"
-          ansible_become_password: "{{ default.setup_password }}"
+          ansible_password: "{{ secret.setup_password }}"
+          ansible_become_password: "{{ secret.setup_password }}"
           br0ip: 10.42.93.91
           br0gw: 10.42.93.1
           br0port: eth0
@@ -90,8 +90,8 @@ compute:
           rsyncd_mount: thoth
         node0:
           ansible_host: 10.42.93.80
-          ansible_password: "{{ default.setup_password }}"
-          ansible_become_password: "{{ default.setup_password }}"
+          ansible_password: "{{ secret.setup_password }}"
+          ansible_become_password: "{{ secret.setup_password }}"
           br0ip: 10.42.93.80
           br0gw: 10.42.93.1
           br0port: eth0
@@ -101,11 +101,11 @@ compute:
           rsyncd_mount: node0
         hp0:
           ansible_host: 10.42.93.123
-          ansible_password: "{{ default.setup_password }}"
-          ansible_become_password: "{{ default.setup_password }}"
+          ansible_password: "{{ secret.setup_password }}"
+          ansible_become_password: "{{ secret.setup_password }}"
         upsmon0-compute:
           ansible_user: devuan
-          ansible_password: "{{ passwords.pi_password_devuan }}"
+          ansible_password: "{{ secret.pi_password_devuan }}"
           ansible_host: 10.42.93.139
     vars:
         ansible_port: 22
@@ -123,8 +123,8 @@ storage:
     hosts:
         anna0:
           ansible_host: 10.42.93.73
-          ansible_password: "{{ default.setup_password }}"
-          ansible_become_password: "{{ default.setup_password }}"
+          ansible_password: "{{ secret.setup_password }}"
+          ansible_become_password: "{{ secret.setup_password }}"
           br0ip: 10.42.93.73
           br0gw: 10.42.93.1
           br0port: eth0
@@ -133,8 +133,8 @@ storage:
           rsyncd_mount: anna0
         anna1:
           ansible_host: 10.42.93.74
-          ansible_password: "{{ default.setup_password }}"
-          ansible_become_password: "{{ default.setup_password }}"
+          ansible_password: "{{ secret.setup_password }}"
+          ansible_become_password: "{{ secret.setup_password }}"
           br0ip: 10.42.93.74
           br0gw: 10.42.93.1
           br0port: eth0
@@ -143,8 +143,8 @@ storage:
           rsyncd_mount: anna2
         beast:
           ansible_host: 10.42.93.90
-          ansible_password: "{{ default.setup_password }}"
-          ansible_become_password: "{{ default.setup_password }}"
+          ansible_password: "{{ secret.setup_password }}"
+          ansible_become_password: "{{ secret.setup_password }}"
           br0gw: 10.42.93.1
           br0ip: 10.42.93.90
           br0port: eth2
@@ -153,8 +153,8 @@ storage:
           rsyncd_mount: stage
         node2:
           ansible_host: 10.42.93.82
-          ansible_password: "{{ default.setup_password }}"
-          ansible_become_password: "{{ default.setup_password }}"
+          ansible_password: "{{ secret.setup_password }}"
+          ansible_become_password: "{{ secret.setup_password }}"
           br0ip: 10.42.93.82
           br0gw: 10.42.93.1
           br0port: eth4
@@ -163,8 +163,8 @@ storage:
           rsyncd_mount: local
         control0:
           ansible_host: 10.42.0.2
-          ansible_password: "{{ default.setup_password }}"
-          ansible_become_password: "{{ default.setup_password }}"
+          ansible_password: "{{ secret.setup_password }}"
+          ansible_become_password: "{{ secret.setup_password }}"
           br0ip: 10.42.0.2
           br0gw: 10.42.0.1
           br0port: eth0
@@ -174,20 +174,20 @@ storage:
           ntp3: 10.42.93.80
         home2:
             ansible_user: pi
-            ansible_password: "{{ passwords.pi_password }}"
+            ansible_password: "{{ secret.pi_password }}"
         therm0-compute:
             ansible_user: pi
-            ansible_password: "{{ passwords.pi_password }}"
+            ansible_password: "{{ secret.pi_password }}"
         therm1-compute:
             ansible_user: pi
-            ansible_password: "{{ passwords.pi_password }}"
+            ansible_password: "{{ secret.pi_password }}"
         therm2-compute:
             ansible_user: pi
-            ansible_password: "{{ passwords.pi_password }}"
+            ansible_password: "{{ secret.pi_password }}"
         filer2:
           ansible_host: 10.42.93.70
-          ansible_password: "{{ default.setup_password }}"
-          ansible_become_password: "{{ default.setup_password }}"
+          ansible_password: "{{ secret.setup_password }}"
+          ansible_become_password: "{{ secret.setup_password }}"
           eth0ip: 10.42.93.70
           eth0gw: 10.42.93.1
           br0ip: 10.42.11.70
@@ -213,15 +213,15 @@ nutanix:
         ubvm:
             ansible_host: 10.48.215.56 # rickard-faith.ubvm.nutanix.com
             ansible_user: rickard.faith
-            ansible_password: "{{ passwords.rickard_faith_password }}"
+            ansible_password: "{{ secret.rickard_faith_password }}"
         rickard-faith.r8.ubvm.nutanix.com:
             ansible_host: 10.41.57.242 # rickard-faith.r8.ubvm.nutanix.com
             ansible_user: rickard.faith
-            ansible_password: "{{ passwords.rickard_faith_password }}"
+            ansible_password: "{{ secret.rickard_faith_password }}"
         rickard-faith-1.r8.ubvm.nutanix.com:
             ansible_host: 10.111.57.99 # rickard-faith-1.r8.ubvm.nutanix.com
             ansible_user: rickard.faith
-            ansible_password: "{{ passwords.rickard_faith_password }}"
+            ansible_password: "{{ secret.rickard_faith_password }}"
     vars:
         ansible_port: 22
         br0port: eth0

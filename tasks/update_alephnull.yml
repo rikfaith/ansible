@@ -384,7 +384,7 @@
     group: root
     mode: '0600'
     content: |
-      dns_digitalocean_token = "{{ default.web_alephnull_token }}"
+      dns_digitalocean_token = "{{ secret.web_alephnull_token }}"
 
 - name: Get Let's Encrypt certificates (DigitalOcean DNS)
   shell: >

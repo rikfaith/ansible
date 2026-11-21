@@ -71,7 +71,7 @@
     group: root
     mode: '0600'
     content: |
-      dns_digitalocean_token = "{{ default.web_panpedia_token }}"
+      dns_digitalocean_token = "{{ secret.web_panpedia_token }}"
 
 - name: Install DigitalOcean credentials for dict.org
   when: vm_purpose is defined and vm_purpose == "dict"
@@ -81,33 +81,15 @@
     group: root
     mode: '0600'
     content: |
-      dns_digitalocean_token = "{{ default.web_dict_token }}"
-
-- name: Install RFC-2136 credentials for web.alephnull.com
-  when: vm_purpose is defined and vm_purpose == "web"
-  copy:
-    dest: "/root/rfc2136-alephnull.ini"
-    owner: root
-    group: root
-    mode: '0600'
-    content: |
-      dns_rfc2136_server = "{{ default.web_alephnull_com_server }}"
-      dns_rfc2136_port = 53
-      dns_rfc2136_name = web.alephnull.com
-      dns_rfc2136_secret = "{{ default.web_alephnull_com_secret }}"
-      dns_rfc2136_algorithm = HMAC-SHA512
+      dns_digitalocean_token = "{{ secret.web_dict_token }}"
 
 - name: Get certificate for dict.org
   when: vm_purpose is defined and vm_purpose == "dict"
   shell: certbot certonly --agree-tos -n --preferred-challenges dns -d dict.org,www.dict.org,alt0.dict.org,alt1.dict.org,test.dict.org --dns-digitalocean --dns-digitalocean-credentials /root/digitalocean-dict.ini
 
-- name: Get certificate for m.panpedia.org
+- name: Get certificate for *.panpedia.org
   when: vm_purpose is defined and vm_purpose == "web"
-  shell: certbot certonly --agree-tos -n --preferred-challenges dns -d m.panpedia.org,panpedia.org,www.panpedia.org -m rikfaith@gmail.com --dns-digitalocean --dns-digitalocean-credentials /root/digitalocean-panpedia.ini
-
-- name: Get certificate for web.alephnull.com
-  when: vm_purpose is defined and vm_purpose == "web"
-  shell: certbot certonly --agree-tos -n --preferred-challenges dns -d web.alephnull.com,alephnull.com,www.alephnull.com -m rikfaith@gmail.com --dns-rfc2136 --dns-rfc2136-credentials /root/rfc2136-alephnull.ini
+  shell: certbot certonly --agree-tos -n --preferred-challenges dns -d panpedia.org,www.panpedia.org,web.panpedia.org -m lukem1900@gmail.com --dns-digitalocean --dns-digitalocean-credentials /root/digitalocean-panpedia.ini
 
 - name: Add cert renewal to /etc/crontab
   when: vm_purpose is defined and vm_purpose == "web"

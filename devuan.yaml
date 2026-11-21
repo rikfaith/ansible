@@ -1,6 +1,7 @@
 - hosts: image
   vars_files:
     - passwords.yml
+    - nonpasswords.yml
   vars:
     vm_installation: true
     using_devuan: true
@@ -40,9 +41,19 @@
     - import_tasks: tasks/update_cache.yml
     - import_tasks: tasks/update_samba.yml
 
+    - name: Remove turnstile
+      apt:
+        name: turnstile
+        state: absent
+
     - name: Remove pcscd
       apt:
         name: pcscd
+        state: absent
+
+    - name: Remove cups
+      apt:
+        name: cups
         state: absent
 
     - name: Disable rpcbind

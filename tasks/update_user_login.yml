@@ -10,7 +10,7 @@
   become: true
   user:
     name: "{{ default.nonroot_user }}"
-    password: "{{ default.nonroot_password }}"
+    password: "{{ secret.nonroot_password }}"
     groups: "sudo"
     shell: "/bin/bash"
 
@@ -82,9 +82,9 @@
 - name: Update non-root user password
   user:
     name: "{{ default.nonroot_user }}"
-    password: "{{ default.nonroot_password }}"
+    password: "{{ secret.nonroot_password }}"
 
 - name: Update root user password
   user:
     name: "root"
-    password: "{{ default.root_password }}"
+    password: "{{ secret.root_password }}"

@@ -45,7 +45,7 @@
       - lftp
       - libimage-exiftool-perl
       - libkf5wallet-bin
-      - libtorrent21t64
+      - libtorrent47
       - lm-sensors
       - lshw
       - lsof
