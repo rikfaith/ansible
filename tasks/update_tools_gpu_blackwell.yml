@@ -127,6 +127,10 @@
     src: scripts-ai/*
     dest: "/home/{{ default.nonroot_user }}/vllm"
 
+- name: Fetch nvidia-gpu-exporter
+  when: install_gpu_tools is defined and install_gpu_tools
+  shell: wget https://github.com/utkuozdemir/nvidia_gpu_exporter/releases/download/v1.18.0/nvidia-gpu-exporter_1.18.0_linux_amd64.deb
+
 - name: Install nvidia-gpu-exporter
   when: install_gpu_tools is defined and install_gpu_tools
-  fixme:
+  shell: dpkg -i nvidia-gpu-exporter_1.18.0_linux_amd64.deb
