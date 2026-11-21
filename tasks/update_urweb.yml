@@ -1,0 +1,192 @@
+---
+# /web is a plain directory at image-build time, but a mountpoint on a
+# file server (persistent storage) when the VM is running. Everything
+# below is therefore provisioned into /web.baseline; on first boot the
+# baseline is copied into /web, and all later changes happen in /web.
+# The apache vhost points at the runtime paths under /web/urweb.
+
+- name: Install apache wsgi module
+  when: vm_purpose is defined and vm_purpose == "web"
+  apt:
+    pkg:
+      - libapache2-mod-wsgi-py3
+
+- name: Create urweb system user
+  when: vm_purpose is defined and vm_purpose == "web"
+  user:
+    name: urweb
+    system: true
+    shell: /usr/sbin/nologin
+    create_home: true
+    home: /home/urweb
+
+- name: Create urweb web root
+  when: vm_purpose is defined and vm_purpose == "web"
+  file:
+    path: /web.baseline/urweb
+    state: directory
+    owner: urweb
+    group: urweb
+    mode: '0755'
+
+- name: Install uv
+  when: vm_purpose is defined and vm_purpose == "web"
+  block:
+    - name: Download uv release tarball
+      get_url:
+        url: "https://github.com/astral-sh/uv/releases/download/0.13.9/uv-x86_64-unknown-linux-gnu.tar.gz"
+        dest: /usr/local/src/uv-0.13.9.tar.gz
+        checksum: "sha256:a7fbaff2b9a271d85c1bdb540941090fd1ce011797b4abeb48e4dcd39c2471d5"
+        mode: '0644'
+
+    - name: Install uv binaries
+      unarchive:
+        src: /usr/local/src/uv-0.13.9.tar.gz
+        dest: /usr/local/bin
+        remote_src: yes
+        mode: '0755'
+        includes:
+          - uv
+          - uvx
+
+    - name: Remove uv tarball
+      file:
+        path: /usr/local/src/uv-0.13.9.tar.gz
+        state: absent
+
+- name: Install gitlab key for urweb checkout
+  when: vm_purpose is defined and vm_purpose == "web"
+  copy:
+    src: /root/gitlab-rikfaith
+    remote_src: yes
+    dest: /root/.ssh/gitlab-rikfaith
+    owner: root
+    group: root
+    mode: '0600'
+
+- name: Checkout urweb
+  when: vm_purpose is defined and vm_purpose == "web"
+  git:
+    repo: 'git@gitlab.com:rikfaith/urweb.git'
+    dest: /web.baseline/urweb
+    version: main
+    key_file: /root/.ssh/gitlab-rikfaith
+    accept_hostkey: yes
+    submodule: true
+    recursive: yes
+
+- name: Give urweb ownership of its tree
+  when: vm_purpose is defined and vm_purpose == "web"
+  file:
+    path: /web.baseline/urweb
+    state: directory
+    owner: urweb
+    group: urweb
+    recurse: true
+
+- name: Build urweb venv
+  when: vm_purpose is defined and vm_purpose == "web"
+  command: uv sync --no-dev
+  args:
+    chdir: /web.baseline/urweb
+  become: true
+  become_user: urweb
+
+- name: Create urweb session directory
+  when: vm_purpose is defined and vm_purpose == "web"
+  file:
+    path: /web.baseline/urweb/.flask_sessions
+    state: directory
+    owner: urweb
+    group: urweb
+    mode: '0700'
+
+- name: Create urweb config directory
+  when: vm_purpose is defined and vm_purpose == "web"
+  file:
+    path: /etc/urweb
+    state: directory
+    owner: urweb
+    group: urweb
+    mode: '0755'
+
+- name: Install urweb config from build host
+  when: vm_purpose is defined and vm_purpose == "web"
+  copy:
+    src: /root/urweb-config.toml
+    remote_src: yes
+    dest: /etc/urweb/config.toml
+    owner: urweb
+    group: urweb
+    mode: '0600'
+
+- name: Point urweb config at the remote database
+  when: vm_purpose is defined and vm_purpose == "web"
+  block:
+    - name: Set database host in urweb config
+      lineinfile:
+        path: /etc/urweb/config.toml
+        regexp: '^host = '
+        line: 'host = "pgsql.alephnull.com"'
+
+    - name: Set database password in urweb config
+      lineinfile:
+        path: /etc/urweb/config.toml
+        regexp: '^password = '
+        line: 'password = "{{ secret.urweb_password }}"'
+
+- name: Remove staged urweb config
+  when: vm_purpose is defined and vm_purpose == "web"
+  file:
+    path: /root/urweb-config.toml
+    state: absent
+
+- name: Create urweb log directory
+  when: vm_purpose is defined and vm_purpose == "web"
+  file:
+    path: /var/log/httpd/panpedia.org
+    state: directory
+    owner: root
+    group: root
+    mode: '0755'
+
+- name: Add urweb vhost to apache
+  when: vm_purpose is defined and vm_purpose == "web"
+  copy:
+    dest: /etc/apache2/sites-available/panpedia.org.conf
+    owner: root
+    group: root
+    mode: '0644'
+    content: |
+      <VirtualHost *:443>
+        ServerName panpedia.org
+        ServerAlias www.panpedia.org local.panpedia.org panpedia.panpedia.org
+        ServerAdmin webadmin@panpedia.org
+
+        SSLEngine on
+        SSLCertificateFile    /etc/letsencrypt/live/panpedia.org/fullchain.pem
+        SSLCertificateKeyFile /etc/letsencrypt/live/panpedia.org/privkey.pem
+        Include               /etc/letsencrypt/options-ssl-apache.conf
+
+        Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains"
+
+        WSGIDaemonProcess urweb processes=2 threads=15 user=urweb group=urweb python-home=/web/urweb/.venv python-path=/web/urweb
+        WSGIProcessGroup urweb
+        WSGIScriptAlias / /web/urweb/wsgi.py
+        SetEnv URWEB_CONFIG /etc/urweb/config.toml
+
+        <Directory /web/urweb>
+          Require all granted
+        </Directory>
+
+        TransferLog "|/usr/bin/cronolog /var/log/httpd/panpedia.org/%Y/%m/access.%Y%m%d.log"
+        ErrorLog "|/usr/bin/cronolog /var/log/httpd/panpedia.org/%Y/%m/error.%Y%m%d.log"
+      </VirtualHost>
+
+- name: Activate urweb vhost
+  when: vm_purpose is defined and vm_purpose == "web"
+  shell: a2ensite panpedia.org
+
+- name: Activate wsgi module
+  when: vm_purpose is defined and vm_purpose == "web"
+  shell: a2enmod wsgi

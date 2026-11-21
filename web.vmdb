@@ -71,6 +71,14 @@ steps:
     src: /home/faith/.ansible-vault
     perm: 0600
 
+  - copy-file: /root/urweb-config.toml
+    src: /home/faith/.config/urweb/config.toml
+    perm: 0600
+
+  - copy-file: /root/gitlab-rikfaith
+    src: /home/faith/.ssh/gitlab-rikfaith
+    perm: 0600
+
   - ansible: rootfs
     playbook: devuan.yaml
     config_file: ansible.cfg

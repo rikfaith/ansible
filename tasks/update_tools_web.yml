@@ -63,7 +63,7 @@
       SSLHonorCipherOrder     off
       SSLSessionTickets       off
 
-- name: Install DigitalOcean credentials for m.panpedia.org
+- name: Install DigitalOcean credentials for panpedia.org
   when: vm_purpose is defined and vm_purpose == "web"
   copy:
     dest: "/root/digitalocean-panpedia.ini"
@@ -87,9 +87,9 @@
   when: vm_purpose is defined and vm_purpose == "dict"
   shell: certbot certonly --agree-tos -n --preferred-challenges dns -d dict.org,www.dict.org,alt0.dict.org,alt1.dict.org,test.dict.org --dns-digitalocean --dns-digitalocean-credentials /root/digitalocean-dict.ini
 
-- name: Get certificate for *.panpedia.org
+- name: Get certificate for panpedia.org
   when: vm_purpose is defined and vm_purpose == "web"
-  shell: certbot certonly --agree-tos -n --preferred-challenges dns -d panpedia.org,www.panpedia.org,web.panpedia.org -m lukem1900@gmail.com --dns-digitalocean --dns-digitalocean-credentials /root/digitalocean-panpedia.ini
+  shell: certbot certonly --agree-tos -n --preferred-challenges dns -d panpedia.org,www.panpedia.org,local.panpedia.org,panpedia.panpedia.org -m lukem1900@gmail.com --dns-digitalocean --dns-digitalocean-credentials /root/digitalocean-panpedia.ini
 
 - name: Add cert renewal to /etc/crontab
   when: vm_purpose is defined and vm_purpose == "web"
@@ -107,12 +107,88 @@
     mode: '0644'
     content: |
       <Directory /www>
-          Options Indexes FollowSymLinks
-          AllowOverride All
+          Options FollowSymLinks
+          AllowOverride None
           Require all granted
       </Directory>
 
-- name: Add default http/https config to apache
+- name: Reduce apache server version disclosure
+  when: vm_purpose is defined and (vm_purpose == "web" or vm_purpose == "dict")
+  block:
+    - name: Set ServerTokens to Prod
+      lineinfile:
+        path: /etc/apache2/conf-available/security.conf
+        regexp: '^ServerTokens'
+        line: 'ServerTokens Prod'
+        state: present
+
+    - name: Turn off server signature
+      lineinfile:
+        path: /etc/apache2/conf-available/security.conf
+        regexp: '^ServerSignature'
+        line: 'ServerSignature Off'
+        state: present
+
+    - name: Disable TRACE and limit request body size
+      blockinfile:
+        path: /etc/apache2/conf-available/security.conf
+        block: |
+          TraceEnable Off
+          LimitRequestBody 10485760
+
+- name: Listen only on port 443
+  when: vm_purpose is defined and vm_purpose == "web"
+  copy:
+    dest: /etc/apache2/ports.conf
+    owner: root
+    group: root
+    mode: '0644'
+    content: |
+      Listen 443
+
+      <IfModule ssl_module>
+          SSLSessionCache "shmcb:/var/run/apache2/ssl_scache(512000)"
+          SSLSessionCacheTimeout  300
+      </IfModule>
+
+- name: Create default docroot placeholder page
+  when: vm_purpose is defined and vm_purpose == "web"
+  block:
+    - name: Create default docroot
+      file:
+        path: /www/default/docroot
+        state: directory
+        owner: root
+        group: root
+        mode: '0755'
+
+    - name: Write placeholder index.html
+      copy:
+        dest: /www/default/docroot/index.html
+        owner: root
+        group: root
+        mode: '0644'
+        content: |
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <title>Nothing is here yet</title>
+          </head>
+          <body>
+            <h1>Nothing is here yet</h1>
+          </body>
+          </html>
+
+- name: Create default log directory
+  when: vm_purpose is defined and vm_purpose == "web"
+  file:
+    path: /var/log/httpd/default
+    state: directory
+    owner: root
+    group: root
+    mode: '0755'
+
+- name: Add default https config to apache
   when: vm_purpose is defined and vm_purpose == "web"
   copy:
     dest: "/etc/apache2/sites-available/000-default.conf"
@@ -120,66 +196,47 @@
     group: root
     mode: '0644'
     content: |
-      <VirtualHost *:80>
-        ServerAdmin webmaster@localhost
-        DocumentRoot /www/default/docroot
-
-        TransferLog "|/usr/bin/cronolog /var/log/httpd/default/%Y/%m/access.%Y%m%d.log"
-        ErrorLog "|/usr/bin/cronolog /var/log/httpd/default/%Y/%m/error.%Y%m%d.log"
-      </VirtualHost>
-
-      <VirtualHost *:443>
-        ServerAdmin webmaster@localhost
-        DocumentRoot /www/default/docroot
-
-        SSLEngine on
-        SSLCertificateFile    /etc/letsencrypt/live/web.alephnull.com/fullchain.pem
-        SSLCertificateKeyFile /etc/letsencrypt/live/web.alephnull.com/privkey.pem
-        Include               /etc/letsencrypt/options-ssl-apache.conf
-
-        TransferLog "|/usr/bin/cronolog /var/log/httpd/default/%Y/%m/access.%Y%m%d.log"
-        ErrorLog "|/usr/bin/cronolog /var/log/httpd/default/%Y/%m/error.%Y%m%d.log"
-      </VirtualHost>
-
-- name: Add config to apache
-  when: vm_purpose is defined and vm_purpose == "web"
-  copy:
-    dest: "/etc/apache2/sites-available/m.panpedia.org.conf"
-    owner: root
-    group: root
-    mode: '0644'
-    content: |
-      <VirtualHost m.panpedia.org:443>
-        ServerName m.panpedia.org
+      <VirtualHost _default_:443>
         ServerAdmin webadmin@panpedia.org
-        DocumentRoot /www/m.panpedia.org/docroot
+        DocumentRoot /www/default/docroot
 
         SSLEngine on
-        SSLCertificateFile    /etc/letsencrypt/live/m.panpedia.org/fullchain.pem
-        SSLCertificateKeyFile /etc/letsencrypt/live/m.panpedia.org/privkey.pem
+        SSLCertificateFile    /etc/letsencrypt/live/panpedia.org/fullchain.pem
+        SSLCertificateKeyFile /etc/letsencrypt/live/panpedia.org/privkey.pem
         Include               /etc/letsencrypt/options-ssl-apache.conf
 
-        TransferLog "|/usr/bin/cronolog /var/log/httpd/m.panpedia.org/%Y/%m/access.%Y%m%d.log"
-        ErrorLog "|/usr/bin/cronolog /var/log/httpd/m.panpedia.org/%Y/%m/error.%Y%m%d.log"
-        ScriptAlias /bin/ /www/m.panpedia.org/support/
+        Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains"
+
+        TransferLog "|/usr/bin/cronolog /var/log/httpd/default/%Y/%m/access.%Y%m%d.log"
+        ErrorLog "|/usr/bin/cronolog /var/log/httpd/default/%Y/%m/error.%Y%m%d.log"
       </VirtualHost>
 
-      <VirtualHost m.panpedia.org:80>
-        ServerName m.panpedia.org
-        RedirectPermanent / https://m.panpedia.org/
-      </VirtualHost>
+- name: Remove retired m.panpedia.org site
+  when: vm_purpose is defined and vm_purpose == "web"
+  file:
+    path: "{{ item }}"
+    state: absent
+  with_items:
+    - /etc/apache2/sites-available/m.panpedia.org.conf
+    - /etc/apache2/sites-enabled/m.panpedia.org.conf
 
 - name: Activate modules
   when: vm_purpose is defined and (vm_purpose == "web" or vm_purpose == "dict")
   shell: a2enmod "{{ item }}"
   with_items:
   - cgi
+  - headers
   - rewrite
   - ssl
 
-- name: Activate m.panpedia.org
+- name: Disable unneeded modules
   when: vm_purpose is defined and vm_purpose == "web"
-  shell: a2ensite m.panpedia.org
+  shell: a2dismod "{{ item }}"
+  with_items:
+  - autoindex
+  - cgi
+  - status
+  - userdir
 
 - name: Activate local.conf
   when: vm_purpose is defined and (vm_purpose == "web" or vm_purpose == "dict")

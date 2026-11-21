@@ -29,6 +29,7 @@
     - import_tasks: tasks/update_tools_gpu_blackwell.yml
     - import_tasks: tasks/update_tools_guest_vm.yml
     - import_tasks: tasks/update_tools_web.yml
+    - import_tasks: tasks/update_urweb.yml
     - import_tasks: tasks/update_timescaledb.yml
     - import_tasks: tasks/update_bt.yml
     - import_tasks: tasks/update_grafana.yml
