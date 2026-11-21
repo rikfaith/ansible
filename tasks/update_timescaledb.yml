@@ -60,6 +60,37 @@
         grant_option: no
         privs: all
 
+    - name: Create urweb user
+      when: vm_purpose is defined and vm_purpose == "pgsql"
+      become: true
+      become_user: postgres
+      community.postgresql.postgresql_user:
+        name: urweb
+        password: "{{ postgres.urweb_password }}"
+        encrypted: true
+        role_attr_flags: SUPERUSER
+
+    - name: Create urweb database
+      when: vm_purpose is defined and vm_purpose == "pgsql"
+      become: true
+      become_user: postgres
+      community.postgresql.postgresql_db:
+        state: present
+        name: urweb
+        owner: urweb
+        encoding: UTF-8
+
+    - name: Grant urweb access to database
+      when: vm_purpose is defined and vm_purpose == "pgsql"
+      become: true
+      become_user: postgres
+      community.postgresql.postgresql_privs:
+        type: database
+        database: urweb
+        roles: urweb
+        grant_option: no
+        privs: all
+
     - name: Allow external connections
       become: true
       become_user: postgres
