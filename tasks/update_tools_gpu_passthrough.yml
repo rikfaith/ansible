@@ -1,0 +1,12 @@
+---
+# Thoth is a bare-metal VM server (ai0/ai1): keep the GPU (and its
+# audio codec) unloaded on the host so the hardware is free for the VMs.
+- name: Blacklist modules for VM passthrough
+  community.general.kernel_blacklist:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - nouveau
+    - nvidia
+    - nvidia_drm
+    - snd_hda_intel
