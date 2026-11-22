@@ -60,14 +60,19 @@
   when: vm_purpose is defined and vm_purpose == "web"
   copy:
     src: "/home/{{ default.nonroot_user }}/.ssh/{{ item }}"
-    remote_src: yes
-    dest: /root/.ssh/gitlab-rikfaith
+    dest: "/root/.ssh"
     owner: root
     group: root
     mode: '0600'
   with_items:
   - gitlab-rikfaith
   - gitlab-rikfaith.pub
+
+- name: Remove stale urweb checkout from a previously cached rootfs
+  when: vm_purpose is defined and vm_purpose == "web"
+  file:
+    path: /web.baseline/urweb
+    state: absent
 
 - name: Checkout urweb
   when: vm_purpose is defined and vm_purpose == "web"
