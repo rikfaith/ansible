@@ -30,6 +30,35 @@
   - gitlab-rikfaith
   - gitlab-rikfaith.pub
 
+# The web VM's urweb checkout is cloned from git@gitlab.com. The
+# default identity is not registered on gitlab, so select the
+# gitlab-rikfaith key for direct gitlab.com connections, and
+# pre-accept the host key (the known_hosts copied from the build
+# host has hashed entries for the build host's IP, which do not
+# match the VM's).
+- name: Select gitlab-rikfaith key for gitlab.com pulls
+  when: vm_purpose is defined and vm_purpose == "web"
+  blockinfile:
+    path: "/home/{{ default.nonroot_user }}/.ssh/config"
+    owner: "{{ default.nonroot_user }}"
+    group: "{{ default.nonroot_user }}"
+    mode: '0600'
+    insertafter: BOF
+    block: |
+      Host gitlab.com
+          Hostname gitlab.com
+          IdentityFile ~/.ssh/gitlab-rikfaith
+          User git
+          IdentitiesOnly yes
+          ForwardAgent no
+
+- name: Accept gitlab.com host key for git pull
+  when: vm_purpose is defined and vm_purpose == "web"
+  become: true
+  become_user: "{{ default.nonroot_user }}"
+  shell: ssh-keyscan -t ed25519,rsa,ecdsa gitlab.com >> ~/.ssh/known_hosts 2>/dev/null
+  changed_when: false
+
 - name: Checkout dotfiles2
   git:
     repo: "{{ default.dotfiles_repo }}"
