@@ -91,7 +91,7 @@
 # each build starts with an empty /etc/letsencrypt, so every build
 # attempt would consume one of Let's Encrypt's ~60 certs/week per
 # registered domain.  It is issued at first boot instead (see
-# FIRST-BOOT.md in the urweb repo); set web_cert_at_build: true as an
+# WEB-FIRSTBOOT.md in this repo); set web_cert_at_build: true as an
 # extra var to do it in the build if you prefer.
 - name: Get certificate for panpedia.org
   when: vm_purpose is defined and vm_purpose == "web" and web_cert_at_build | default(false)

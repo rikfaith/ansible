@@ -87,3 +87,4 @@ steps:
       vm_purpose: "web"
       grub_options: "audit=0"
       install_unstable: true
+      web_cert_at_build: false

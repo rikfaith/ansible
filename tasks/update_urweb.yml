@@ -1,9 +1,45 @@
 ---
 # /web is a plain directory at image-build time, but a mountpoint on a
 # file server (persistent storage) when the VM is running. Everything
-# below is therefore provisioned into /web.baseline; on first boot the
-# baseline is copied into /web, and all later changes happen in /web.
-# The apache vhost points at the runtime paths under /web/urweb.
+# below is therefore provisioned into /web.baseline; on first boot
+# /root/firstboot.sh copies the baseline into /web, and all later
+# changes happen in /web. The apache vhost points at the runtime paths
+# under /web/urweb.
+
+- name: Install firstboot.sh
+  when: vm_purpose is defined and vm_purpose == "web"
+  copy:
+    dest: /root/firstboot.sh
+    owner: root
+    group: root
+    mode: '0755'
+    content: |
+      #!/bin/sh
+      # First boot for the web VM: issue the TLS certificate, copy the
+      # built baseline into the persistent /web mount, then restart
+      # apache.
+      set -eu
+
+      # Issued here, not during the image build, so failed builds do
+      # not consume Let's Encrypt's weekly per-domain quota. This runs
+      # before the /web/urweb check on purpose: after a rebuild,
+      # /etc/letsencrypt is empty again while /web persists, and the
+      # cert still needs re-issuing. A no-op if a valid cert exists.
+      certbot certonly --agree-tos -n --preferred-challenges dns \
+          -d panpedia.org,www.panpedia.org,local.panpedia.org,panpedia.panpedia.org \
+          -m lukem1900@gmail.com \
+          --dns-digitalocean \
+          --dns-digitalocean-credentials /root/digitalocean-panpedia.ini
+
+      if [ -e /web/urweb ]; then
+          echo "firstboot.sh: /web/urweb already exists." >&2
+          echo "It will not be overwritten. To update the live tree:" >&2
+          echo "    cd /web/urweb && git pull" >&2
+          exit 1
+      fi
+
+      cp -a /web.baseline/. /web/
+      /etc/init.d/apache2 restart
 
 - name: Install apache wsgi module
   when: vm_purpose is defined and vm_purpose == "web"
