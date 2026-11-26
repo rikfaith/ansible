@@ -77,6 +77,7 @@
           - uvx
         extra_opts:
         - --no-anchored
+        - --strip-components=1
 
     - name: Remove uv tarball
       file:
