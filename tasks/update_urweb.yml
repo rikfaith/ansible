@@ -47,22 +47,13 @@
     pkg:
       - libapache2-mod-wsgi-py3
 
-- name: Create urweb system user
-  when: vm_purpose is defined and vm_purpose == "web"
-  user:
-    name: urweb
-    system: true
-    shell: /usr/sbin/nologin
-    create_home: true
-    home: /home/urweb
-
 - name: Create urweb web root
   when: vm_purpose is defined and vm_purpose == "web"
   file:
     path: /web.baseline/urweb
     state: directory
-    owner: urweb
-    group: urweb
+    owner: "{{ default.nonroot_user }}"
+    group: "{{ default.nonroot_user }}"
     mode: '0755'
 
 - name: Install uv
@@ -125,8 +116,8 @@
   file:
     path: /web.baseline/urweb
     state: directory
-    owner: urweb
-    group: urweb
+    owner: "{{ default.nonroot_user }}"
+    group: "{{ default.nonroot_user }}"
     recurse: true
 
 - name: Build urweb venv
@@ -135,15 +126,15 @@
   args:
     chdir: /web.baseline/urweb
   become: true
-  become_user: urweb
+  become_user: "{{ default.nonroot_user }}"
 
 - name: Create urweb session directory
   when: vm_purpose is defined and vm_purpose == "web"
   file:
     path: /web.baseline/urweb/.flask_sessions
     state: directory
-    owner: urweb
-    group: urweb
+    owner: "{{ default.nonroot_user }}"
+    group: "{{ default.nonroot_user }}"
     mode: '0700'
 
 - name: Create urweb config directory
@@ -151,8 +142,8 @@
   file:
     path: /etc/urweb
     state: directory
-    owner: urweb
-    group: urweb
+    owner: "{{ default.nonroot_user }}"
+    group: "{{ default.nonroot_user }}"
     mode: '0755'
 
 - name: Install urweb config from build host
@@ -161,8 +152,8 @@
     src: /root/urweb-config.toml
     remote_src: yes
     dest: /etc/urweb/config.toml
-    owner: urweb
-    group: urweb
+    owner: "{{ default.nonroot_user }}"
+    group: "{{ default.nonroot_user }}"
     mode: '0600'
 
 - name: Point urweb config at the remote database
@@ -219,7 +210,7 @@
         # first X-Forwarded-For entry (ProxyFix) for login logging.
         RequestHeader set X-Forwarded-For "%{REMOTE_ADDR}s"
 
-        WSGIDaemonProcess urweb processes=2 threads=15 user=urweb group=urweb python-home=/web/urweb/.venv python-path=/web/urweb
+        WSGIDaemonProcess urweb processes=2 threads=15 user={{ default.nonroot_user }} group={{ default.nonroot_user }} python-home=/web/urweb/.venv python-path=/web/urweb
         WSGIProcessGroup urweb
         WSGIScriptAlias / /web/urweb/wsgi.py
         SetEnv URWEB_CONFIG /etc/urweb/config.toml
