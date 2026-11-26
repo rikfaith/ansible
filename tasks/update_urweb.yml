@@ -186,6 +186,19 @@
     group: root
     mode: '0755'
 
+- name: Pass URWEB_CONFIG to the mod_wsgi daemon
+  when: vm_purpose is defined and vm_purpose == "web"
+  # The WSGI daemon process inherits its environment from the apache
+  # parent; SetEnv in the vhost does not reach it, and there is no
+  # env= option on WSGIDaemonProcess. /etc/apache2/envvars is sourced
+  # by apachectl / the init script at startup. Changing it requires a
+  # full 'service apache2 restart' (a SIGHUP restart reuses the
+  # master's environment).
+  lineinfile:
+    path: /etc/apache2/envvars
+    regexp: '^export URWEB_CONFIG='
+    line: 'export URWEB_CONFIG=/etc/urweb/config.toml'
+
 - name: Add urweb vhost to apache
   when: vm_purpose is defined and vm_purpose == "web"
   copy:
@@ -213,7 +226,8 @@
         WSGIDaemonProcess urweb processes=2 threads=15 user={{ default.nonroot_user }} group={{ default.nonroot_user }} python-home=/web/urweb/.venv python-path=/web/urweb
         WSGIProcessGroup urweb
         WSGIScriptAlias / /web/urweb/wsgi.py
-        SetEnv URWEB_CONFIG /etc/urweb/config.toml
+        # URWEB_CONFIG is passed via /etc/apache2/envvars; SetEnv
+        # does not reach a mod_wsgi daemon process.
 
         <Directory /web/urweb>
           Require all granted
