@@ -1,4 +1,6 @@
 - hosts: image
+  environment:
+    PATH: "/usr/local/bin:{{ ansible_env.PATH }}"
   vars_files:
     - passwords.yml
     - nonpasswords.yml
